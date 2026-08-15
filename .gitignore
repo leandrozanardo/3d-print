@@ -34,6 +34,5 @@ Desktop.ini
 *.pem
 credentials.json
 
-# Nested git backups / archives (do not publish as nested repos)
-**/.git_ebook_backup/
-**/.git/
+# Nested git backups (do not publish nested repos)
+docs/_arquivo/ebook/.git_ebook_backup/
