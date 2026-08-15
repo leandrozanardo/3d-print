@@ -2,7 +2,7 @@
 
 ## Summary
 
-Hybrid **mode B**: light analysis via `core`, decisions from this wiki, recipe in **Bambu Studio**, artifact in `3ds/upgraded/` + `3ds/plan/<basename>.md`. No full auto-optimizer; no heavy remesh unless authorized.
+Hybrid **mode B**: light analysis via `core`, decisions from this wiki, recipe in **Bambu Studio**, artifact in `3ds/upgraded/<basename>.(stl|3mf)` + `3ds/plan/<basename>.md` (**PT-BR**). **`basename` is always the stem of the file under `3ds/original/`** (e.g. `one+Piece.3mf` → `one+Piece`). No full auto-optimizer; no heavy remesh unless authorized.
 
 This is the main operational page for agents and humans running the playbook.
 
@@ -31,8 +31,8 @@ This is the main operational page for agents and humans running the playbook.
 | 5 | Pick profile | [perfis-a1-mini/INDEX](../perfis-a1-mini/INDEX.md) |
 | 6 | Orientation / supports / brim | [fatiamento/INDEX](../fatiamento/INDEX.md) |
 | 7 | Light mesh ops only if allowed | [quando-editar-malha](quando-editar-malha.md) |
-| 8 | Emit artifact under `3ds/upgraded/` | Studio `.3mf` preferred |
-| 9 | Write `3ds/plan/<basename>.md` | [3ds/plan/_template.md](../../../3ds/plan/_template.md) |
+| 8 | Emit under `3ds/upgraded/` using **original stem** as basename | Studio `.3mf` preferred; keep `.stl` if mesh ops ran |
+| 9 | Write `3ds/plan/<basename>.md` in **PT-BR** (same stem) | [3ds/plan/_template.md](../../../3ds/plan/_template.md) |
 | 10 | Self-check | [checklist-qualidade](checklist-qualidade.md) |
 
 ## Decision tree

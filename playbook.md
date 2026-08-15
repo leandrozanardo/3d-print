@@ -13,8 +13,9 @@
 ## Project premises
 - System **C (hybrid)**: wiki + agent decide; `core/` inspects/repairs lightly
 - Optimization **B**: print recipe + light mesh ops — no heavy remodel unless parametric source or explicit request
-- Docs language: **English** for project wiki / playbook / plans
-- Never mutate `3ds/original/`; outputs → `3ds/upgraded/` + `3ds/plan/<basename>.md`
+- Docs language: **English** for project wiki / playbook; **`3ds/plan/*.md` in Brazilian Portuguese (PT-BR)**
+- Never mutate `3ds/original/`
+- **Basename rule (mandatory for every job):** `basename = Path(3ds/original/<file>).stem` — e.g. `one+Piece.3mf` → `one+Piece`. All outputs use that stem only: `3ds/upgraded/<basename>.stl`, `3ds/upgraded/<basename>.3mf`, `3ds/plan/<basename>.md`. Never invent a parallel name (`_sample_cube`, `hero-mini`, etc.) for a different original.
 - New printers: copy `docs/printers/_TEMPLATE/`, register in printers INDEX — do not invent specs
 - New materials: add a page under `materiais/` using `_TEMPLATE.md`, register in materials INDEX
 
@@ -28,11 +29,12 @@
 6. **Pick profile** → [A1 Mini profiles](docs/projeto/perfis-a1-mini/INDEX.md)
 7. **Orientation / supports / brim** → [slicing](docs/projeto/fatiamento/INDEX.md)
 8. **Light mesh ops if needed** → [when to edit mesh](docs/projeto/workflow/quando-editar-malha.md)
-9. **Emit** `3ds/upgraded/` + `3ds/plan/<basename>.md` from [template](3ds/plan/_template.md)
+9. **Emit** `3ds/upgraded/<basename>.stl` and/or `<basename>.3mf` + `3ds/plan/<basename>.md` (PT-BR) from [template](3ds/plan/_template.md) — matching basename
 10. **Self-check** → [checklist](docs/projeto/workflow/checklist-qualidade.md)
 
 ## Golden rules
 - Never write under `3ds/original/`
+- **Basename = original stem** for STL + 3MF + plan (see premises) — no exceptions
 - Cite wiki pages in every `3ds/plan/*.md`
 - Prefer firm removable supports over “zero support” if quality drops
 - Mark uncertain numbers **validate on printer**
@@ -57,8 +59,10 @@ python -m core repair-mesh in.stl out.stl --json
 ```
 
 ## Outputs
-- `3ds/upgraded/<name>.*`
-- `3ds/plan/<name>.md`
+- Source: `3ds/original/<basename>.(stl|3mf|…)`
+- `3ds/upgraded/<basename>.stl` and/or `3ds/upgraded/<basename>.3mf` (prefer Studio `.3mf` when available)
+- `3ds/plan/<basename>.md` (PT-BR)
+- All three share **exactly** the original file stem
 
 ## Wiki hub
 - [Project hub](docs/projeto/INDEX.md)

@@ -4,6 +4,10 @@
 
 Each artifact in `3ds/upgraded/` gets a **same-basename** report in `3ds/plan/` explaining decisions and citing wiki pages. Start from [3ds/plan/_template.md](../../../3ds/plan/_template.md). Plans are the audit trail for hybrid mode B — not optional fluff.
 
+**Language:** write `3ds/plan/*.md` bodies in **Brazilian Portuguese (PT-BR)**. Wiki / playbook stay English.
+
+**Naming (mandatory):** `basename = Path(3ds/original/<input>).stem`. Example: `3ds/original/one+Piece.3mf` → `one+Piece.stl` / `one+Piece.3mf` / `one+Piece.md`. Never invent a different stem. Prefer Studio `.3mf` as the primary upgraded deliverable; keep repaired `.stl` when mesh ops ran.
+
 ## When to use
 
 | Trigger | Action |
@@ -35,9 +39,9 @@ Each artifact in `3ds/upgraded/` gets a **same-basename** report in `3ds/plan/` 
 ## Decision tree
 
 ```text
-Same basename as upgraded artifact?
-  ├─ NO → rename to match
-  └─ YES → template sections filled?
+basename == Path(3ds/original/input).stem for .stl / .3mf / plan .md?
+  ├─ NO → rename to original stem (never invent a second name)
+  └─ YES → plan written in PT-BR + template sections filled?
         ├─ Missing profile link → stop; add
         ├─ Missing validate list → add even if empty (“none”)
         └─ PETG without dry note → add dry state

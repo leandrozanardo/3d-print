@@ -1,42 +1,49 @@
-# Optimization plan — <file-basename>
+# Plano de otimização — <basename = stem do original>
 
-## Input
-- File: `3ds/original/...`
-- Format: STL | 3MF
-- Target material: PLA | PETG
-- Purpose:
-- Geometry summary:
+> **Regra:** se o original é `3ds/original/one+Piece.3mf`, este arquivo é `3ds/plan/one+Piece.md` e os upgraded são `3ds/upgraded/one+Piece.stl` / `one+Piece.3mf`. Nunca trocar o stem.
 
-## Diagnosis
-- Likely failure modes:
-- Constraints (cosmetics, fit tolerances, time budget):
-- `core` report (paste JSON summary):
+## Entrada
+- Arquivo: `3ds/original/<basename>.(stl|3mf)`
+- Formato: STL | 3MF
+- Material alvo: PLA | PETG
+- Propósito:
+- Resumo da geometria:
 
-## Changes applied
-| # | Change | Why | Wiki page |
+## Diagnóstico
+- Modos de falha prováveis:
+- Restrições (estética, tolerância de encaixe, orçamento de tempo):
+- Relatório `core` (colar resumo JSON):
+
+## Alterações aplicadas
+| # | Alteração | Por quê | Página da wiki |
 |---|---|---|---|
 | 1 |  |  |  |
 
-## Bambu Studio profile
-- Profile page:
-- Deviations from profile (if any):
+## Perfil Bambu Studio
+- Página do perfil:
+- Desvios do perfil (se houver):
 
-## Mesh
-- Light ops:
-- Command:
+## Malha
+- Ops leves:
+- Comando:
 
-## Expected outcome
-- Surface quality:
-- Supports (type / removability):
-- Residual risks:
+## Artefatos (mesmo basename = stem do original)
+- `3ds/upgraded/<basename>.stl` (se houver)
+- `3ds/upgraded/<basename>.3mf` (preferencial no Studio)
+- `3ds/plan/<basename>.md` (este arquivo)
 
-## How to print / validate
-1. Open upgraded artifact in Bambu Studio (A1 Mini / 0.4)
-2. Apply cited profile
-3. Review support painting
-4. Print test or full part
-5. Feed new failure patterns back into the wiki
+## Resultado esperado
+- Qualidade de superfície:
+- Suportes (tipo / removibilidade):
+- Riscos residuais:
 
-## Related
+## Como imprimir / validar
+1. Abrir o artefato em `3ds/upgraded/` no Bambu Studio (A1 Mini / 0.4)
+2. Aplicar o perfil citado
+3. Revisar pintura de suportes
+4. Imprimir teste ou peça completa
+5. Devolver padrões de falha novos para a wiki
+
+## Relacionados
 - [Playbook](../../playbook.md)
-- [Quality checklist](../../docs/projeto/workflow/checklist-qualidade.md)
+- [Checklist de qualidade](../../docs/projeto/workflow/checklist-qualidade.md)

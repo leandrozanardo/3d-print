@@ -1,18 +1,17 @@
 # Chat summary — 3d-print project
 
-> F.2 structured summary · Updated: 2026-08-15 (command `/summarize` → `docs/context.md`)
+> F.2 structured summary · Updated: 2026-08-15 (closeout SaaS + upgrade_v1)
 
 ---
 
 ## 1. Task atual
 
-- **[OK]** Sistema híbrido de otimização 3D (wiki + playbook + `core/`) implantado conforme `start_plan.md` / fases engineer 0–4.
-- **[OK]** Documentação operacional em **inglês**, densificada; ebook (Guia Maker) permanece em PT (CC BY-SA) com meta em EN.
-- **[OK]** Multi-impressora preparado (`docs/printers/`); só **A1 Mini** preenchida.
-- **[OK]** Biblioteca de materiais expandida (PLA/PETG + TPU/ABS-ASA/PA/PC/composites) com capability gates.
-- **Último pedido:** `/summarize` gravado neste arquivo.
-
-Nada em execução agora; sessão estável pós-validação de links.
+- **[OK]** Sistema híbrido local (wiki + playbook + `core/`).
+- **[OK]** Plano SaaS completo em `project_plans/saas/` — veredito **VALIDATE FIRST**.
+- **[OK]** Entrevistas puladas; memo comunitário **assinado**; pack Phase 0 ops pronto.
+- **[OK]** `project_plans/upgrade_v1_plan.md` — próximo código local = ruleset JSON (Task 1).
+- **[IN_PROGRESS / founder]** 5 pilots concierge pagos.
+- **[BLOCKED]** Implementação SaaS web até P0c.
 
 ---
 
@@ -20,94 +19,60 @@ Nada em execução agora; sessão estável pós-validação de links.
 
 | Tema | Decisão |
 |---|---|
-| Sistema | **C** — híbrido: agente/wiki decidem; `core/` inspeciona/repara leve |
-| Otimização | **B** — receita Bambu Studio + malha leve (não remodelagem pesada) |
-| Fatiador | **Bambu Studio** (Orca opcional depois) |
-| Hardware ativo | **Bambu Lab A1 Mini** / bico **0.4 mm** |
-| Materiais | **PLA** default; **PETG** day-1; demais documentados com risk/capability gate |
-| Docs path | `Documentações` → **`docs/`** |
-| Tooling path | `tools/` → **`core/`** (`python -m core …`) |
-| Idioma wiki/playbook/plan | **English** |
-| Ebook capítulos | **Português** (fonte CC BY-SA); README/CREDITOS em EN |
-| Originais | Arquivar em `docs/_arquivo/` (não hard-delete) |
-| Manuais A1 Mini | `docs/printers/A1mini/` · PDFs em `docs/_arquivo/printers/A1mini/` |
-| Outras impressoras | Só **estrutura** (`printers/INDEX` + `_TEMPLATE`); sem conteúdo inventado |
-| 3MF settings Bambu | Best-effort; se opaco → documentar no `3ds/plan/*.md` + Studio UI |
-| Planos 3D | `3ds/plan/` (por modelo; pasta gitignored exceto templates) |
-| Planos do projeto | `project_plans/` |
-| Commits | Só quando o usuário pedir |
+| Sistema local | **C** híbrido · otimização **B** |
+| SaaS | VALIDATE FIRST · BR · Hobby+Microfarm · AI halo + rules core |
+| Entrevistas | **Skip** (D-20) · dor = internet |
+| WTP gate | **5 pilots pagos** |
+| Printer MVP | A1 Mini gold-path |
+| `3ds/plan` | PT-BR · basename = stem do original |
+| Commits | Só se usuário pedir |
 
 ---
 
-## 3. Arquivos / árvore relevante
+## 3. Árvore relevante
 
-### Entrada operacional
-- `playbook.md` — SOP (active printer + pipeline)
-- `3ds/plan/_template.md`, `3ds/plan/_exemplo-dry-run.md` — planos por modelo 3D
-- `project_plans/start_plan.md` — planos do projeto (+ errata docs/core)
-- `docs/context.md` — este resumo (F.2)
-
-### Core (Python)
-- `core/` — `validate-wiki`, `inspect-mesh`, `inspect-3mf`, `repair-mesh`
-- `core/requirements.txt`, `core/README.md`
-- `core/convert_ebook_adoc.py`, `core/convert_a1_pdfs.py` (stub OCR-only)
-- `tests/` — 10 testes (pytest green na última corrida)
-
-### Docs
-- `docs/projeto/` — wiki neural (**71** MD): hardware, materiais, geometria, proposito, fatiamento, qualidade, troubleshooting, perfis-a1-mini, profiles/, workflow
-- `docs/projeto/materiais/` — **12** MD (INDEX, template, choosing, PLA, PETG, drying, temps, TPU, ABS/ASA, PA, PC, composites)
-- `docs/printers/INDEX.md` + `A1mini/` + `_TEMPLATE/`
-- `docs/ebook/` — MD convertido + `imagens/` + `assets/`
-- `docs/_arquivo/ebook/`, `docs/_arquivo/printers/A1mini/`
-
-### Modelos
-- `3ds/original/_sample_cube.stl`
-- `3ds/upgraded/_sample_cube.stl` (dry-run)
-
-### Removido / migrado
-- `Documentações/` → `docs/`
-- `docs/A1mini/` → `docs/printers/A1mini/`
-- pasta `tools/` consolidada em `core/`
+- `playbook.md` · `core/` · `docs/projeto/` · `docs/printers/`
+- `project_plans/saas/` (MASTER + 00–14 + phase0/)
+- `project_plans/saas_plan.md` · `project_plans/upgrade_v1_plan.md`
+- `docs/context.md` (este arquivo)
 
 ---
 
-## 4. TODO / status (sessão)
+## 4. TODO
 
-| ID | Item | Status |
-|---|---|---|
-| Implantação fases 0–4 | core + wiki + conversões + playbook | **[OK]** |
-| Docs EN + densificar | projeto wiki | **[OK]** |
-| printers/A1mini + refs | multi-printer ready | **[OK]** |
-| Materiais densos + template | PLA…composites | **[OK]** |
-| `validate-wiki` + pytest | última verificação | **[OK]** |
-| Commit git | não pedido | **[WARNING]** pendente se/quando usuário pedir |
-| Traduzir ebook PT→EN | opcional, não pedido agora | — |
-| Otimizar modelo real do usuário | aguardando arquivo em `3ds/original/` | — |
-
----
-
-## 5. Próximos passos (sugeridos)
-
-1. Colocar um modelo real em `3ds/original/` e apontar `playbook.md` para a primeira otimização real.
-2. (Opcional) `git commit` do estado atual — só se autorizado.
-3. (Opcional) Traduzir capítulos do ebook para EN sob CC BY-SA.
-4. Quando comprar PETG/outra máquina: preencher registry / risk plan conforme wiki.
+| Item | Status |
+|---|---|
+| Wiki/core implantados | **[OK]** |
+| Plano SaaS | **[OK]** |
+| Phase 0 templates | **[OK]** |
+| upgrade_v1_plan | **[OK]** |
+| 5 pilots pagos | **[ ] founder** |
+| Ruleset JSON Task 1 | **[ ]** próximo prompt código |
+| SaaS apps/ | **[BLOCKED]** |
+| git commit | **[WARNING]** só se pedir |
 
 ---
 
-## 6. Contexto / atenção
+## 5. Próximos passos
 
-- **Comando de uso:** `playbook.md` + path do modelo; nunca escrever em `3ds/original/`.
-- **CLI:** `python -m core validate-wiki docs` · `inspect-mesh` · `inspect-3mf` · `repair-mesh`.
-- **ABS/ASA/PA/PC** no A1 Mini open-frame = documentados mas **capability-gated** (risk plan).
-- Subagents tardios de densificação EN terminaram sem quebrar paths `printers/` nem a library de materiais.
-- PDFs A1 Mini são Illustrator (sem text layer) → OCR; não re-rodar `convert_a1_pdfs.py` (stub exit 2).
-- Números de processo: marcar **validate on printer** quando incerto.
+1. Enviar `project_plans/saas/phase0/concierge-offer.md` e fechar 5 pagos.  
+2. Logar em `phase0/outcome-log.csv`.  
+3. Kill/go em `saas/00-executive-decision.md`.  
+4. (Opcional) Prompt novo: Task 1 ruleset do `upgrade_v1_plan.md`.  
+5. (Opcional) `git commit` se autorizar.
 
 ---
 
-## 7. Verificação (última evidência da sessão)
+## 6. Atenção
 
-- `python -m pytest tests/ -q` → **10 passed**
-- `python -m core validate-wiki docs` → **OK (exit 0)**
-- Wiki `docs/projeto`: **71** páginas MD; materiais: **12** arquivos
+- Nunca escrever em `3ds/original/`.  
+- Sem Bambu cloud / AGPL headless no MVP.  
+- Sem guarantee de print success na copy.
+
+---
+
+## 7. Verificação
+
+- Pacote `project_plans/saas/`: MASTER + 00–14 + sources/assumptions/decisions + phase0/  
+- `upgrade_v1_plan.md` preenchido  
+- Sessão de planejamento: **ENCERRADA**

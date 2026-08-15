@@ -1,0 +1,2 @@
+job_id,date,paid_brl,file_stem,purpose,material,actionability_1_5,result,hours_spent,filament_waste_est_g,notes
+P001,2026-08-15,0,_sample_cube,tool,PLA,5,dry-run_only,0.5,0,internal smoke — not a paid pilot
