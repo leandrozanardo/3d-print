@@ -2,7 +2,7 @@
 
 ## Summary
 
-English knowledge network for hybrid optimization (**mode B**): print recipe + light mesh ops. Humans and agents navigate indexes and backlinks; every `plan/*.md` must cite pages used.
+English knowledge network for hybrid optimization (**mode B**): print recipe + light mesh ops. Humans and agents navigate indexes and backlinks; every `3ds/plan/*.md` must cite pages used.
 
 ## When to use
 
@@ -18,7 +18,7 @@ English knowledge network for hybrid optimization (**mode B**): print recipe + l
 4. Page shape: Summary → When to use → A1 Mini rules → PLA/PETG tables (if applicable) → Related → Sources. Profiles also list **when NOT to use** + concrete Studio fields.
 5. No orphans: inbound link via section INDEX + hub; outbound Related links.
 6. Uncertain values: mark **validate on printer**.
-7. In `plan/<model>.md`, list relative paths of pages consulted.
+7. In `3ds/plan/<model>.md`, list relative paths of pages consulted.
 8. After wiki edits: `python -m core validate-wiki docs`.
 
 ## How to navigate

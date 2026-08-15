@@ -2,7 +2,7 @@
 
 ## Summary
 
-Quick pick for A1 Mini in Bambu Studio: **tree** for organics/minis/characters; **normal / snug** for flat faces, slots, and mechanical parts. Always set **interface + top Z gap**; paint tips off noble surfaces; document choice in `plan/*.md`.
+Quick pick for A1 Mini in Bambu Studio: **tree** for organics/minis/characters; **normal / snug** for flat faces, slots, and mechanical parts. Always set **interface + top Z gap**; paint tips off noble surfaces; document choice in `3ds/plan/*.md`.
 
 Supports are part of the print recipe (mode B), not an afterthought.
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-Operational SOP for mode **C hybrid / B optimize**: inspect model with `python -m core`, classify via wiki, pick A1 Mini profile, light mesh ops if allowed, emit `3ds/upgraded/` + `plan/<name>.md`. Entry ritual: [playbook.md](../../../playbook.md) + a file under `3ds/original/`.
+Operational SOP for mode **C hybrid / B optimize**: inspect model with `python -m core`, classify via wiki, pick A1 Mini profile, light mesh ops if allowed, emit `3ds/upgraded/` + `3ds/plan/<name>.md`. Entry ritual: [playbook.md](../../../playbook.md) + a file under `3ds/original/`.
 
 Never mutate originals. Cite wiki pages in every plan.
 
@@ -25,7 +25,7 @@ playbook + 3ds/original/<file>
   → pick profile (PLA/PETG)
   → orientation / supports / brim
   → light mesh? (only if allowed)
-  → upgraded artifact + plan.md
+  → upgraded artifact + 3ds/plan/<name>.md
   → checklist gate
 ```
 

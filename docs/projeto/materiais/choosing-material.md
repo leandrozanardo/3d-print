@@ -54,7 +54,7 @@ Before selecting ABS/ASA/PA/PC (or aggressive composites) on the **active** prin
 
 1. Read the material page **Printer capability matrix**
 2. Confirm dryer, ventilation, plate adhesion strategy
-3. Write residual risks in `plan/<name>.md`
+3. Write residual risks in `3ds/plan/<name>.md`
 4. Print a sacrificial coupon before the real part
 5. Prefer registering a more suitable printer under [`docs/printers/`](../../printers/INDEX.md) when hardware arrives
 

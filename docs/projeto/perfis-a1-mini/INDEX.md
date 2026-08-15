@@ -2,7 +2,7 @@
 
 ## Summary
 
-Named, purpose-bound recipes for the playbook and every `plan/*.md`. Start from **Bambu Lab filament + process presets for A1 Mini 0.4**, then specialize. Each child page lists concrete Studio fields, **when NOT to use**, PLA vs PETG notes, failure modes, and **validate on printer** gates.
+Named, purpose-bound recipes for the playbook and every `3ds/plan/*.md`. Start from **Bambu Lab filament + process presets for A1 Mini 0.4**, then specialize. Each child page lists concrete Studio fields, **when NOT to use**, PLA vs PETG notes, failure modes, and **validate on printer** gates.
 
 Do not invent orphan presets. If geometry + purpose already map to a named profile, cite that path.
 
@@ -12,7 +12,7 @@ Do not invent orphan presets. If geometry + purpose already map to a named profi
 |---|---|
 | After geometry + purpose classification | Open matching profile below |
 | Before ad-hoc slicer knobs | Clone Bambu preset → apply profile table |
-| Writing `plan/<name>.md` | Link exact profile markdown path |
+| Writing `3ds/plan/<name>.md` | Link exact profile markdown path |
 | Switching material PLA ↔ PETG | Change filament *and* process family — never bump PLA temps only |
 
 ## Decision tree — pick a profile

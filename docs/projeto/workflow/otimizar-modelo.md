@@ -2,7 +2,7 @@
 
 ## Summary
 
-Hybrid **mode B**: light analysis via `core`, decisions from this wiki, recipe in **Bambu Studio**, artifact in `3ds/upgraded/` + `plan/<basename>.md`. No full auto-optimizer; no heavy remesh unless authorized.
+Hybrid **mode B**: light analysis via `core`, decisions from this wiki, recipe in **Bambu Studio**, artifact in `3ds/upgraded/` + `3ds/plan/<basename>.md`. No full auto-optimizer; no heavy remesh unless authorized.
 
 This is the main operational page for agents and humans running the playbook.
 
@@ -32,7 +32,7 @@ This is the main operational page for agents and humans running the playbook.
 | 6 | Orientation / supports / brim | [fatiamento/INDEX](../fatiamento/INDEX.md) |
 | 7 | Light mesh ops only if allowed | [quando-editar-malha](quando-editar-malha.md) |
 | 8 | Emit artifact under `3ds/upgraded/` | Studio `.3mf` preferred |
-| 9 | Write `plan/<basename>.md` | [plan/_template.md](../../../plan/_template.md) |
+| 9 | Write `3ds/plan/<basename>.md` | [3ds/plan/_template.md](../../../3ds/plan/_template.md) |
 | 10 | Self-check | [checklist-qualidade](checklist-qualidade.md) |
 
 ## Decision tree

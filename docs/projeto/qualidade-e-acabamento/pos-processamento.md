@@ -39,7 +39,7 @@ Paint?
 3. Sand PLA 400–1000; PETG gums — light pressure only.  
 4. Light wash before primer.  
 5. No acetone vapor on PLA.  
-6. Log post time in `plan/*.md` when it affects SOP.  
+6. Log post time in `3ds/plan/*.md` when it affects SOP.  
 7. Bad scars → fix [support interface](../fatiamento/suportes-face-e-interface.md).  
 8. Wear eye protection when clipping supports.  
 9. Don’t sand off dimensional fits you still need — measure first.

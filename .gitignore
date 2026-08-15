@@ -36,3 +36,10 @@ credentials.json
 
 # Nested git backups (do not publish nested repos)
 docs/_arquivo/ebook/.git_ebook_backup/
+
+# Local 3D assets and per-model plans (templates below stay tracked)
+3ds/original/
+3ds/upgraded/
+3ds/plan/*
+!3ds/plan/_template.md
+!3ds/plan/_exemplo-dry-run.md

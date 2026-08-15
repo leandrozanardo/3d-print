@@ -45,7 +45,7 @@ geometry tags known?
 | Scope | A1 Mini, 0.4 mm, Bambu Studio |
 | Materials | PLA primary; PETG documented for functional |
 | False precision | Mark **validate on printer** |
-| Cite in plan | Every `plan/*.md` lists purpose + profile pages used |
+| Cite in plan | Every `3ds/plan/*.md` lists purpose + profile pages used |
 | Firm supports | Prefer removable firm supports over ruined overhangs |
 
 ### Pages

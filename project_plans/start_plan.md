@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a dense, cross-linked Portuguese (PT-BR) knowledge wiki for Bambu Lab A1 Mini + a hybrid agent playbook that reads a model from `3ds/original`, consults the wiki, and delivers an optimized artifact in `3ds/upgraded` with a matching change log in `plan/`.
+**Goal:** Build a dense, cross-linked Portuguese (PT-BR) knowledge wiki for Bambu Lab A1 Mini + a hybrid agent playbook that reads a model from `3ds/original`, consults the wiki, and delivers an optimized artifact in `3ds/upgraded` with a matching change log in `3ds/plan/`.
 
 **Architecture:** Documentation-first neural wiki under `docs/projeto` (hub + topic nodes + backlinks). Operational entrypoint is `playbook.md`. Conversion of existing sources (ebook AsciiDoc, A1 Mini PDFs) into Markdown with originals moved to `docs/_arquivo/`. Light Python toolkit in `core/` validates wiki links and inspects/repairs STL/3MF; heavy geometry remeshing is out of scope (optimization mode B).
 
@@ -18,9 +18,9 @@
 - Materials: **PLA primary**; **PETG** fully documented and profiled from day 1 even before purchase.
 - Hardware-specific content: **Bambu Lab A1 Mini** only. General FFF knowledge is allowed and encouraged.
 - Part intents to prioritize: miniatures, tools, decorative parts, vases, characters/figurines.
-- Language: wiki, playbook, and `plan/*.md` in **English**; ebook chapter bodies may remain Portuguese source (CC BY-SA) with English meta; all code/comments/identifiers in **English**.
+- Language: wiki, playbook, and `3ds/plan/*.md` in **English**; ebook chapter bodies may remain Portuguese source (CC BY-SA) with English meta; all code/comments/identifiers in **English**.
 - Source handling: convert to MD, **archive** originals under `Documentações/_arquivo/` (do not hard-delete). Ebook is **CC BY-SA 4.0** — keep attribution, license copy, and ShareAlike on derived MD.
-- Model I/O: read from `3ds/original/`; write optimized to `3ds/upgraded/`; write rationale to `plan/<same-basename>.md`.
+- Model I/O: read from `3ds/original/`; write optimized to `3ds/upgraded/`; write rationale to `3ds/plan/<same-basename>.md`.
 - Entry ritual: user always points `playbook.md` + the target 3D file to start an optimization run.
 - Wiki rule: every new doc must have inbound link from an index/hub and outbound links to related nodes (no orphan pages).
 - YAGNI: no web UI, no database, no cloud sync in v1.
@@ -50,38 +50,21 @@
 ```text
 3d-print/
 ├── playbook.md                          # agent entry SOP
-├── start_plan.md                        # this plan
+├── project_plans/                       # project implantation / governance plans
+│   └── start_plan.md                    # this plan
 ├── 3ds/
-│   ├── original/                        # inputs (untouched)
-│   └── upgraded/                        # optimized outputs
-├── plan/
-│   └── _template.md                     # upgrade report template
-├── tools/                               # Python validators/inspectors
-│   ├── requirements.txt
-│   ├── validate_wiki_links.py
-│   ├── inspect_mesh.py                  # phase 2
-│   └── inspect_3mf.py                   # phase 2
+│   ├── original/                        # inputs (untouched; gitignored)
+│   ├── upgraded/                        # optimized outputs (gitignored)
+│   └── plan/                            # per-model plans (gitignored except templates)
+│       ├── _template.md
+│       └── _exemplo-dry-run.md
+├── core/                                # Python validators/inspectors
 ├── tests/
-│   ├── test_validate_wiki_links.py
-│   ├── test_inspect_mesh.py
-│   └── fixtures/
-└── Documentações/
-    ├── _arquivo/                        # originals (adoc, pdf, ebook git bits)
-    ├── A1mini/                          # converted MD + assets
-    ├── ebook/                           # converted MD + assets (CC BY-SA)
-    └── projeto/                         # NEW dense wiki hub
-        ├── INDEX.md
-        ├── 00-como-usar-esta-wiki.md
-        ├── fontes-e-atribuicao.md
-        ├── hardware/
-        ├── materiais/
-        ├── geometria/
-        ├── proposito/
-        ├── fatiamento/
-        ├── qualidade-e-acabamento/
-        ├── troubleshooting/
-        ├── perfis-a1-mini/
-        └── workflow/
+└── docs/
+    ├── _arquivo/
+    ├── printers/
+    ├── ebook/
+    └── projeto/                         # dense wiki hub
 ```
 
 ---
@@ -413,7 +396,7 @@ Must include:
 
 - [ ] **Step 2: Write `00-como-usar-esta-wiki.md`**
 
-Explain: how agents/humans traverse links; rule that every page has “Relacionados” and “Voltar ao hub”; how `plan/*.md` must cite wiki pages used.
+Explain: how agents/humans traverse links; rule that every page has “Relacionados” and “Voltar ao hub”; how `3ds/plan/*.md` must cite wiki pages used.
 
 - [ ] **Step 3: Write `fontes-e-atribuicao.md`**
 
@@ -596,7 +579,7 @@ git commit -m "docs: add dense A1 Mini project wiki corpus"
 
 **Interfaces:**
 - Consumes: Task 5 corpus
-- Produces: named profile recipes referenced by playbook and `plan/*.md`
+- Produces: named profile recipes referenced by playbook and `3ds/plan/*.md`
 
 Each profile page must include concrete Bambu Studio fields:
 - layer height, first layer height
@@ -631,7 +614,7 @@ git commit -m "docs: add A1 Mini Bambu Studio profile sheets"
 
 **Files:**
 - Modify: `playbook.md` (fill completely — this is the agent entrypoint)
-- Create: `plan/_template.md`
+- Create: `3ds/plan/_template.md`
 - Create: `Documentações/projeto/workflow/otimizar-modelo.md`
 - Create: `Documentações/projeto/workflow/checklist-qualidade.md`
 - Create: `Documentações/projeto/workflow/quando-editar-malha.md`
@@ -663,7 +646,7 @@ git commit -m "docs: add A1 Mini Bambu Studio profile sheets"
 5. Decidir orientação / suportes / brim
 6. Intervenções leves de malha (se necessário) — ver workflow
 7. Gerar artefato em `3ds/upgraded/`
-8. Escrever `plan/<basename>.md` a partir de `_template.md`
+8. Escrever `3ds/plan/<basename>.md` a partir de `_template.md`
 9. Autocheck contra `checklist-qualidade.md`
 
 ## Regras de ouro
@@ -674,10 +657,10 @@ git commit -m "docs: add A1 Mini Bambu Studio profile sheets"
 
 ## Saídas
 - `3ds/upgraded/<nome>.*`
-- `plan/<nome>.md`
+- `3ds/plan/<nome>.md`
 ```
 
-- [ ] **Step 2: Write `plan/_template.md`**
+- [ ] **Step 2: Write `3ds/plan/_template.md`**
 
 ```markdown
 # Plano de otimização — <nome-do-arquivo>
@@ -724,7 +707,7 @@ Also open `playbook.md` and confirm every mentioned path exists.
 - [ ] **Step 5: Commit** (only if user asks)
 
 ```bash
-git add playbook.md plan/_template.md Documentações/projeto/workflow
+git add playbook.md 3ds/plan/_template.md Documentações/projeto/workflow
 git commit -m "docs: add optimization playbook and plan template"
 ```
 
@@ -818,17 +801,17 @@ git commit -m "feat: add STL and 3MF inspection tools"
 
 **Files:**
 - Create: `Documentações/projeto/workflow/dry-run-exemplo.md`
-- Create: `plan/_exemplo-dry-run.md` (sample filled plan)
+- Create: `3ds/plan/_exemplo-dry-run.md` (sample filled plan)
 - Optional fixture: if user has no model yet, generate a simple STL cube into `3ds/original/_sample_cube.stl` via trimesh for pipeline rehearsal, and produce `3ds/upgraded/_sample_cube.3mf` notes **or** upgraded STL + plan explaining Bambu Studio steps the human must click (v1 may not binary-edit complex Bambu project 3MF settings — document honest limit)
 
 **Honest v1 deliverable rule (must appear in playbook + dry-run doc):**
-- Agent produces: orientation decision, support strategy, profile choice, optional repaired/scaled mesh, and a complete `plan/<name>.md`.
+- Agent produces: orientation decision, support strategy, profile choice, optional repaired/scaled mesh, and a complete `3ds/plan/<name>.md`.
 - Agent produces upgraded file as: repaired/oriented STL/3MF mesh **and/or** instructions to save a Bambu Studio project 3MF with the chosen profile.
-- Full programmatic rewriting of proprietary Bambu process settings inside 3MF is **best-effort**; if schema is opaque, do not fake it — put settings in `plan/*.md` and wiki profile page.
+- Full programmatic rewriting of proprietary Bambu process settings inside 3MF is **best-effort**; if schema is opaque, do not fake it — put settings in `3ds/plan/*.md` and wiki profile page.
 
 - [ ] **Step 1: Generate sample cube in `3ds/original/` for rehearsal**
 
-- [ ] **Step 2: Execute playbook mentally/ practically; write `plan/_exemplo-dry-run.md`**
+- [ ] **Step 2: Execute playbook mentally/ practically; write `3ds/plan/_exemplo-dry-run.md`**
 
 - [ ] **Step 3: Place upgraded sample outputs under `3ds/upgraded/`**
 
@@ -898,7 +881,7 @@ Expected: exit 0 / all PASS
 - [ ] Existing ebook + A1 Mini PDFs converted to MD; originals only under `Documentações/_arquivo/`
 - [ ] `Documentações/projeto` is a dense cross-linked wiki covering hardware, materials (PLA+PETG), geometry, purpose (miniatures/tools/decorative/vases/characters), slicing, quality, troubleshooting, profiles
 - [ ] Community sources cited in `fontes-e-atribuicao.md`
-- [ ] `plan/_template.md` exists; upgraded outputs go to `3ds/upgraded/`
+- [ ] `3ds/plan/_template.md` exists; upgraded outputs go to `3ds/upgraded/`
 - [ ] `python tools/validate_wiki_links.py Documentações` exits 0
 - [ ] pytest suite green
 - [ ] Honest limit documented for proprietary 3MF process settings

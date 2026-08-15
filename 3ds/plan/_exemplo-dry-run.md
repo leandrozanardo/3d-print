@@ -15,9 +15,9 @@
 ## Changes applied
 | # | Change | Why | Wiki page |
 |---|---|---|---|
-| 1 | Light `repair-mesh` → `3ds/upgraded/_sample_cube.stl` | Exercise write-guards + cleanup | [when to edit mesh](../docs/projeto/workflow/quando-editar-malha.md) |
-| 2 | Profile: PLA tough tool 0.4 | Simple functional brick | [pla-ferramenta-resistente-0.4](../docs/projeto/perfis-a1-mini/pla-ferramenta-resistente-0.4.md) |
-| 3 | No supports; brim off | Flat base on PEI is enough | [brim / raft / skirt](../docs/projeto/fatiamento/brim-raft-saia.md) |
+| 1 | Light `repair-mesh` → `3ds/upgraded/_sample_cube.stl` | Exercise write-guards + cleanup | [when to edit mesh](../../docs/projeto/workflow/quando-editar-malha.md) |
+| 2 | Profile: PLA tough tool 0.4 | Simple functional brick | [pla-ferramenta-resistente-0.4](../../docs/projeto/perfis-a1-mini/pla-ferramenta-resistente-0.4.md) |
+| 3 | No supports; brim off | Flat base on PEI is enough | [brim / raft / skirt](../../docs/projeto/fatiamento/brim-raft-saia.md) |
 
 ## Bambu Studio profile
 - Profile page: `docs/projeto/perfis-a1-mini/pla-ferramenta-resistente-0.4.md`
@@ -39,5 +39,5 @@
 4. Optional: print as PEI adhesion smoke test
 
 ## Related
-- [Playbook](../playbook.md)
-- [Dry-run workflow](../docs/projeto/workflow/dry-run-exemplo.md)
+- [Playbook](../../playbook.md)
+- [Dry-run workflow](../../docs/projeto/workflow/dry-run-exemplo.md)

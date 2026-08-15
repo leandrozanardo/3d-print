@@ -1,8 +1,8 @@
-# How to write `plan/*.md`
+# How to write `3ds/plan/*.md`
 
 ## Summary
 
-Each artifact in `3ds/upgraded/` gets a **same-basename** report in `plan/` explaining decisions and citing wiki pages. Start from [plan/_template.md](../../../plan/_template.md). Plans are the audit trail for hybrid mode B — not optional fluff.
+Each artifact in `3ds/upgraded/` gets a **same-basename** report in `3ds/plan/` explaining decisions and citing wiki pages. Start from [3ds/plan/_template.md](../../../3ds/plan/_template.md). Plans are the audit trail for hybrid mode B — not optional fluff.
 
 ## When to use
 
@@ -111,11 +111,11 @@ python -m core repair-mesh 3ds/original/<file>.stl 3ds/upgraded/<file>.stl --jso
 
 - [Optimize model](otimizar-modelo.md)
 - [Dry-run](dry-run-exemplo.md)
-- [Template](../../../plan/_template.md)
+- [Template](../../../3ds/plan/_template.md)
 - [Checklist](checklist-qualidade.md)
 - [Hub](../INDEX.md)
 
 ## Sources
 
 - Playbook / start_plan I/O rules
-- `plan/_template.md`
+- `3ds/plan/_template.md`

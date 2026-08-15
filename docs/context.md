@@ -32,7 +32,9 @@ Nada em execução agora; sessão estável pós-validação de links.
 | Originais | Arquivar em `docs/_arquivo/` (não hard-delete) |
 | Manuais A1 Mini | `docs/printers/A1mini/` · PDFs em `docs/_arquivo/printers/A1mini/` |
 | Outras impressoras | Só **estrutura** (`printers/INDEX` + `_TEMPLATE`); sem conteúdo inventado |
-| 3MF settings Bambu | Best-effort; se opaco → documentar no `plan/*.md` + Studio UI |
+| 3MF settings Bambu | Best-effort; se opaco → documentar no `3ds/plan/*.md` + Studio UI |
+| Planos 3D | `3ds/plan/` (por modelo; pasta gitignored exceto templates) |
+| Planos do projeto | `project_plans/` |
 | Commits | Só quando o usuário pedir |
 
 ---
@@ -41,8 +43,8 @@ Nada em execução agora; sessão estável pós-validação de links.
 
 ### Entrada operacional
 - `playbook.md` — SOP (active printer + pipeline)
-- `plan/_template.md`, `plan/_exemplo-dry-run.md`
-- `start_plan.md` — plano original (+ errata docs/core)
+- `3ds/plan/_template.md`, `3ds/plan/_exemplo-dry-run.md` — planos por modelo 3D
+- `project_plans/start_plan.md` — planos do projeto (+ errata docs/core)
 - `docs/context.md` — este resumo (F.2)
 
 ### Core (Python)

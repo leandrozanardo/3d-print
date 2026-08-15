@@ -38,5 +38,5 @@
 5. Feed new failure patterns back into the wiki
 
 ## Related
-- [Playbook](../playbook.md)
-- [Quality checklist](../docs/projeto/workflow/checklist-qualidade.md)
+- [Playbook](../../playbook.md)
+- [Quality checklist](../../docs/projeto/workflow/checklist-qualidade.md)

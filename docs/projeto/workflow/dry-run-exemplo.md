@@ -72,7 +72,7 @@ Studio project → `3ds/upgraded/hero-mini.3mf` (and repaired STL only if step 1
 
 ### 10 — Plan
 
-Write `plan/hero-mini.md` with wiki links + CLI summary ([como-escrever-plan-md](como-escrever-plan-md.md)).
+Write `3ds/plan/hero-mini.md` with wiki links + CLI summary ([como-escrever-plan-md](como-escrever-plan-md.md)).
 
 ### 11 — Optional light repair
 

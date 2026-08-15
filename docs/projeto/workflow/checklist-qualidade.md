@@ -10,7 +10,7 @@ Gate before declaring an optimization **done**. Fail any item → return to trou
 |---|---|
 | After Bambu Studio preview | Pre-print list |
 | After first test print | Post-print list |
-| Before closing `plan/<name>.md` | Both |
+| Before closing `3ds/plan/<name>.md` | Both |
 
 ## When NOT to use
 
@@ -52,7 +52,7 @@ Gate before declaring an optimization **done**. Fail any item → return to trou
 - [ ] Critical dimensions (± clearance) OK  
 - [ ] Stringing acceptable for purpose  
 - [ ] Detail acceptable for purpose (minis)  
-- [ ] Update `plan.md` with real deviations (**validate** → final values)  
+- [ ] Update `3ds/plan/<name>.md` with real deviations (**validate** → final values)  
 
 ## Decision tree on fail
 

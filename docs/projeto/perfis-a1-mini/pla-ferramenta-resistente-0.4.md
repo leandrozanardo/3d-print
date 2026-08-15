@@ -44,7 +44,7 @@ Fits critical?
 2. Orient primary load in XY ([orientacao](../fatiamento/orientacao.md)).
 3. Compensate elephant foot on tolerance-critical bases — **validate**.
 4. Prefer **normal/snug** supports for straight slots and flat mating faces.
-5. Document clearances and test fit in `plan/*.md`.
+5. Document clearances and test fit in `3ds/plan/*.md`.
 6. No raft unless brim failed twice.
 7. Moderate cooling: high fan can weaken layer bond on thick walls.
 8. If part snaps at layers under flex → try orientation/walls first, then PETG.

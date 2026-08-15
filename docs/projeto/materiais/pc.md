@@ -35,7 +35,7 @@ PC brings high heat resistance and toughness used in engineering enclosures and 
 
 If ever attempted on A1 Mini (discouraged):
 
-1. Written risk acceptance in `plan/*.md`
+1. Written risk acceptance in `3ds/plan/*.md`
 2. Max practical bed/nozzle within machine limits — **validate**
 3. Tent + slow + huge brim
 4. Prefer moving the job to a capable printer when available

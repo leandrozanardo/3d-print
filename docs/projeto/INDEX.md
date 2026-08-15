@@ -22,7 +22,7 @@ python -m core validate-wiki docs
 | Quality | [qualidade-e-acabamento/INDEX](qualidade-e-acabamento/INDEX.md) | Seam, stringing, first layer, post |
 | Troubleshooting | [troubleshooting/INDEX](troubleshooting/INDEX.md) | Symptom → cause → fix |
 | A1 Mini profiles | [perfis-a1-mini/INDEX](perfis-a1-mini/INDEX.md) | Named 0.4 mm recipes |
-| Workflow | [workflow/INDEX](workflow/INDEX.md) | CLI, checklist, `plan/*.md` |
+| Workflow | [workflow/INDEX](workflow/INDEX.md) | CLI, checklist, `3ds/plan/*.md` |
 
 ## Meta & sources
 

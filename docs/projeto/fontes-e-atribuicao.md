@@ -8,7 +8,7 @@ This wiki synthesizes general FFF knowledge and A1 Mini-specific practice. It do
 
 - Before republishing wiki excerpts.
 - When adding a new process number (local calibration vs external source).
-- In `plan/*.md` when justifying a decision with a reference.
+- In `3ds/plan/*.md` when justifying a decision with a reference.
 
 ## A1 Mini rules
 

@@ -43,7 +43,7 @@ Missão: peças com qualidade superior — adesão estável, detalhe preservado,
 2. Classifique geometria e propósito
 3. Escolha um perfil em [perfis-a1-mini](perfis-a1-mini/INDEX.md)
 4. Use `python -m core ...` para inspecionar/reparar malha
-5. Entregue em `3ds/upgraded/` + `plan/<nome>.md`
+5. Entregue em `3ds/upgraded/` + `3ds/plan/<nome>.md`
 
 ## Mapa
 - [Como usar esta wiki](00-como-usar-esta-wiki.md)
@@ -78,7 +78,7 @@ Sempre que iniciar pelo `playbook.md`, ou ao investigar falha pós-impressão.
 1. Entre pelo [INDEX](INDEX.md)
 2. Classifique geometria → propósito → perfil
 3. Cada página termina em **Relacionados** (sem órfãos)
-4. `plan/*.md` deve linkar as páginas usadas
+4. `3ds/plan/*.md` deve linkar as páginas usadas
 5. Números marcados “validar na impressora” não são dogma
 
 ## Navegação sugerida
@@ -320,7 +320,7 @@ Procedimento canônico alinhado ao `playbook.md`.
 2. Classificar geometria/propósito
 3. Escolher perfil
 4. `repair-mesh` se necessário (saída em `3ds/upgraded`)
-5. Documentar em `plan/<nome>.md`
+5. Documentar em `3ds/plan/<nome>.md`
 6. `python -m core validate-wiki docs` após editar docs
 
 ## Limite honesto
@@ -347,8 +347,8 @@ Non-manifold, buracos, escala errada (mm vs inches).
 ## Comando
 `python -m core repair-mesh 3ds/original/X.stl 3ds/upgraded/X.stl`
 """),
-        ("como-escrever-plan-md.md", "Como escrever plan/*.md", """## Resumo
-Use `plan/_template.md`. Cada alteração: o quê / por quê / link wiki.
+        ("como-escrever-plan-md.md", "Como escrever 3ds/plan/*.md", """## Resumo
+Use `3ds/plan/_template.md`. Cada alteração: o quê / por quê / link wiki.
 """),
         ("dry-run-exemplo.md", "Dry-run exemplo", """## Resumo
 Peça `_sample_cube` exerce o pipeline sem impressão obrigatória.
@@ -356,7 +356,7 @@ Peça `_sample_cube` exerce o pipeline sem impressão obrigatória.
 ## Artefatos
 - `3ds/original/_sample_cube.stl`
 - `3ds/upgraded/_sample_cube.stl`
-- `plan/_exemplo-dry-run.md`
+- `3ds/plan/_exemplo-dry-run.md`
 """),
     ]
     wlinks = "\n".join(f"- [{t}]({f})" for f, t, _ in workflows)
