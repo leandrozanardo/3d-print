@@ -1,0 +1,5 @@
+# Core package dependencies (Python 3.11+)
+pytest>=8.0.0
+trimesh>=4.0.0
+numpy>=1.26.0
+pypdf>=5.0.0
