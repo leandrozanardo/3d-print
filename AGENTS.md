@@ -27,3 +27,11 @@
 - Never mutate `3ds/original/**`
 - Path writes must pass `@fix-my-print/repo-guard`
 - Python toolkit retired under mission MIGRATION-AND-RETIREMENT (see `project_plans/execution/phase-14/DELETION_MANIFEST.json`)
+
+## Product recovery context
+
+After REAL-3MF-PRODUCT-RECOVERY (`978e61c`), continue from:
+
+- `project_plans/execution/product-recovery/CHAT_CONTEXT.md` — frozen chat + decisions (transcript `1b17dd9a-04cb-4ace-bb20-5a4aa27dd453`)
+- `project_plans/execution/product-recovery/IMPROVEMENTS_ROADMAP.md` — deferred gaps (P0–P2)
+- `project_plans/execution/product-recovery/TRACEABILITY.md` — acceptance matrix
