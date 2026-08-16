@@ -116,11 +116,11 @@ Z-hop: pode **aumentar** strings em alguns setups — teste on/off.
 
 ## Ordem de ataque (resumo)
 
-1. Secar  
-2. −5 °C se hairs (dentro do range)  
-3. Torre de retract a partir do preset  
-4. Combing / evitar travel em pele  
-5. Z-hop por último  
+1. Secar
+2. −5 °C se hairs (dentro do range)
+3. Torre de retract a partir do preset
+4. Combing / evitar travel em pele
+5. Z-hop por último
 
 Detalhe diagnóstico: [stringing](../../12-problemas-e-diagnostico/fff/stringing.md).
 

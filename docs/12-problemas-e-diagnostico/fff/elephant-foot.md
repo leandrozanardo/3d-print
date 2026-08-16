@@ -116,10 +116,10 @@ Fits críticos?
 
 ## Heurísticas A1 Mini (partida)
 
-- First layer height frequentemente ≥ layer nominal  
-- First layer speed baixa  
-- Bed no range do material (PETG ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) )  
-- Compensation só após squish correto  
+- First layer height frequentemente ≥ layer nominal
+- First layer speed baixa
+- Bed no range do material (PETG ≤ 80 °C ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md)))
+- Compensation só após squish correto
 
 Legado EN: [elephant-foot-e-primeira-camada.md](../../projeto/qualidade-e-acabamento/elephant-foot-e-primeira-camada.md).
 
@@ -129,16 +129,16 @@ Cupom com furo/pino; medir base vs altura média.
 
 ## Prevenção
 
-- Design com filete/chamfer inferior  
-- Não perseguir adesão com crush extremo  
-- Placa limpa antes de números  
+- Design com filete/chamfer inferior
+- Não perseguir adesão com crush extremo
+- Placa limpa antes de números
 
 ## Relações com outros conceitos
 
-- opposite-of → first layer too high  
-- depends-on → [process.fff.first-layer](../../10-processo-de-impressao/fff/primeira-camada.md)  
-- related-to → bed temp, first layer flow  
-- not-for → mid-print dimensional drift  
+- opposite-of → first layer too high
+- depends-on → [process.fff.first-layer](../../10-processo-de-impressao/fff/primeira-camada.md)
+- related-to → bed temp, first layer flow
+- not-for → mid-print dimensional drift
 
 ## Veja também
 

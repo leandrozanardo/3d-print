@@ -24,7 +24,8 @@ safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 12-months
-sources: []
+sources:
+- source.bambu-a1-mini-tech-specs
 related:
 - printer.bambu-lab-a1-mini
 - material.pla
@@ -41,7 +42,7 @@ tags:
 - fff
 supersedes: []
 ---
-# Nozzle 0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`)  em FFF
+# Nozzle 0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) em FFF
 
 Hub pai: [Componentes](INDEX.md)
 
@@ -54,7 +55,7 @@ O **nozzle** (bico) define o diâmetro de saída do polímero fundido. Em FFF de
 - Escolher altura de camada e largura de extrusão
 - Avaliar detalhe fino versus tempo
 - Diagnosticar subextrusão / clog / desgaste
-- Decidir se miniatura exige 0,2 mm (fonte oficial/fabricante/heuristic; ver sources)  (fora do escopo profundo atual)
+- Decidir se miniatura exige 0,2 mm (heurística editorial (sem fonte pinada); fora do escopo profundo atual)
 
 ## Mecanismo e dependências
 
@@ -64,7 +65,7 @@ Heurística comum de partida (não é lei física universal): altura de camada f
 
 ## O que fazer
 
-1. Manter perfis nomeados para 0,4 mm (fonte oficial/fabricante/heuristic; ver sources) ; criar família nova ao trocar diâmetro.
+1. Manter perfis nomeados para 0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)); criar família nova ao trocar diâmetro.
 2. Filamentos abrasivos (CF/GF, filled): avaliar desgaste — latão/aço inox/hardened diferem; fabricante A1 Mini lista vários reforçados como Not Recommended.
 3. Em falhas de vazão, distinguir: clog parcial, limite volumétrico, umidade, grind do extrusor.
 4. Não “compensar” nozzle errado só com flow ratio.

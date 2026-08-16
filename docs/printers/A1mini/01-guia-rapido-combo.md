@@ -1,8 +1,8 @@
 # A1 Mini — Quick Start — Combo (with AMS Lite)
 
-> **Hardware:** Bambu Lab A1 Mini  
-> **Nota:** PDF arquivado removido com `docs/_arquivo/`.  
-> **Official wiki:** https://wiki.bambulab.com/en/a1-mini/manual  
+> **Hardware:** Bambu Lab A1 Mini
+> **Nota:** PDF arquivado removido com `docs/_arquivo/`.
+> **Official wiki:** https://wiki.bambulab.com/en/a1-mini/manual
 > **Conversion note:** Adobe Illustrator PDF (vector text); `pypdf` text layer empty — recovered via OCR. Original document language preserved in extracted body.
 
 ## Extracted content (by page)

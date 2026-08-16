@@ -133,11 +133,11 @@ Larguras numéricas: partir do preset / legado operacional validado na máquina 
 
 ## Ordem de ataque (resumo)
 
-1. Validar first layer  
-2. Skirt para observar extrusão  
-3. Brim se warp de borda  
-4. ↓ early fan / bed no range  
-5. Raft só após falhas controladas  
+1. Validar first layer
+2. Skirt para observar extrusão
+3. Brim se warp de borda
+4. ↓ early fan / bed no range
+5. Raft só após falhas controladas
 
 ## Relações com outros conceitos
 

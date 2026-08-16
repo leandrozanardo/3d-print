@@ -95,22 +95,22 @@ Strength needed?
 
 ## Surface priority ladder
 
-1. Orientation (hide seam + overhangs)  
-2. Outer wall speed  
-3. Seam position  
-4. Flow calibration  
-5. Ironing (optional)  
-6. Post sand/paint ([pos-processamento](../qualidade-e-acabamento/pos-processamento.md))  
+1. Orientation (hide seam + overhangs)
+2. Outer wall speed
+3. Seam position
+4. Flow calibration
+5. Ironing (optional)
+6. Post sand/paint ([pos-processamento](../qualidade-e-acabamento/pos-processamento.md))
 
 Do not sand forever to hide a bad seam placement.
 
 ## Plan.md must cite
 
-- This profile + [decorativas](../proposito/decorativas.md)  
-- Seam strategy  
-- Support yes/no + type  
-- Ironing yes/no  
-- **validate on printer** for outer speed / PA if touched  
+- This profile + [decorativas](../proposito/decorativas.md)
+- Seam strategy
+- Support yes/no + type
+- Ironing yes/no
+- **validate on printer** for outer speed / PA if touched
 
 ## Related
 

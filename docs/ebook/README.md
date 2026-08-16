@@ -4,8 +4,8 @@ Portuguese source book converted to Markdown for offline reference. **Project op
 
 ## License
 
-**CC BY-SA 4.0** — Cláudio Luís Marques Sampaio, MSc.  
-Original: http://www.makerlinux.com.br/ebook  
+**CC BY-SA 4.0** — Cláudio Luís Marques Sampaio, MSc.
+Original: http://www.makerlinux.com.br/ebook
 Attribution required; ShareAlike for derivatives. See [LICENSE](LICENSE) and [CREDITOS.md](CREDITOS.md).
 
 ## How it was converted

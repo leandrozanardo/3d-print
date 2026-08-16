@@ -51,13 +51,13 @@ Supports?
 
 ## A1 Mini rules
 
-1. Never mutate `3ds/original/`.  
-2. Link geometry + purpose + named 0.4 profile in the plan.  
-3. Prefer firm removable supports over zero-support if surface dies.  
-4. Hardware = A1 Mini; materials PLA/PETG per decision.  
-5. Do not invent precision — mark **validate on printer**.  
-6. One profile family; don’t mix PLA process with PETG filament.  
-7. Bed volume **180×180×180** mm — leave margin for brim.  
+1. Never mutate `3ds/original/`.
+2. Link geometry + purpose + named 0.4 profile in the plan.
+3. Prefer firm removable supports over zero-support if surface dies.
+4. Hardware = A1 Mini; materials PLA/PETG per decision.
+5. Do not invent precision — mark **validate on printer**.
+6. One profile family; don’t mix PLA process with PETG filament.
+7. Bed volume **180×180×180** mm — leave margin for brim.
 8. After Studio preview fails checklist, do not emit “done.”
 
 ## CLI — `python -m core`

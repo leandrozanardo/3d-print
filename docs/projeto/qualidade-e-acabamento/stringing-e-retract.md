@@ -32,13 +32,13 @@ Hairs between towers: **wet filament**, **hot nozzle**, bad **retract**, or trav
 
 ## A1 Mini rules
 
-1. Dry before retract towers ([secagem](../materiais/secagem-e-umidade.md)).  
-2. Direct drive lengths are short — Bowden 5–8 mm will grind/jam.  
-3. One variable per test.  
-4. Prefer filament-profile retract over process hacks.  
-5. Z-hop is optional and may increase strings — **validate**.  
-6. PETG: expect more hairs even when “tuned”; cosmetics secondary on functional parts.  
-7. AMS: wet slot or low wipe looks like bad retract.  
+1. Dry before retract towers ([secagem](../materiais/secagem-e-umidade.md)).
+2. Direct drive lengths are short — Bowden 5–8 mm will grind/jam.
+3. One variable per test.
+4. Prefer filament-profile retract over process hacks.
+5. Z-hop is optional and may increase strings — **validate**.
+6. PETG: expect more hairs even when “tuned”; cosmetics secondary on functional parts.
+7. AMS: wet slot or low wipe looks like bad retract.
 8. Uncertain retract → tower coupon — **validate on printer**.
 
 ## Retract starting ranges (order of magnitude)

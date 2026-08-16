@@ -127,11 +127,11 @@ Valores oficiais da página de Technical Specifications ([source.bambu-a1-mini-t
 | Capability | Valor oficial | Papel |
 |---|---|---|
 | Build volume | 180 × 180 × 180 mm | envelope máximo; deixar margem operacional |
-| Nozzle incluso | 0,4 mm (fonte oficial/fabricante/heuristic; ver sources)  | também lista 0,2 / 0,6 / 0,8 mm (fonte oficial/fabricante/heuristic; ver sources)  |
-| Max hotend temp | 300 °C (fonte oficial/fabricante/heuristic; ver sources)  | capability ≠ compatibilidade de polímero |
-| Max bed temp | 80 °C (fonte oficial/fabricante/heuristic; ver sources)  | limite duro desta máquina |
-| Max toolhead speed | 500 mm (fonte oficial/fabricante/heuristic; ver sources) /s (fonte oficial/fabricante/heuristic; ver sources)  | marketing/capability |
-| Max acceleration | 10 000 mm (fonte oficial/fabricante/heuristic; ver sources) /s² (fonte oficial/fabricante/heuristic; ver sources)  | marketing/capability |
+| Nozzle incluso | 0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | também lista 0,2 / 0,6 / 0,8 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) |
+| Max hotend temp | 300 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | capability ≠ compatibilidade de polímero |
+| Max bed temp | 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | limite duro desta máquina |
+| Max toolhead speed | 500 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))/s ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | marketing/capability |
+| Max acceleration | 10 000 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))/s² ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | marketing/capability |
 
 ## Tecnologia
 
@@ -226,12 +226,15 @@ Pesquisa oficial Bambu Wiki (acesso 2026-08-16). Comunidade não misturada como 
 
 ## Lacunas
 
+### Residual (não bloqueia troubleshooting-mapped)
+
+Known issues oficiais (wiki) já mapeados acima; itens abaixo são gaps de inventário/pinagem, não ausência de troubleshooting.
+
 - model_number / SKU regionais pinados
 - Firmware version + release notes datados
 - Service manual / error code map completo
 - Hardware revision por serial
 - AMS lite como página atômica
-- Troubleshooting-mapped com pesquisa oficial + comunitária classificada
 - Medições locais (volumetric max / resonance) nesta unidade
 
 ## Relação com legado

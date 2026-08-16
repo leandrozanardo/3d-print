@@ -62,18 +62,18 @@ Failed on bed (layer 1–3)?
 
 ## Priority order when symptoms stack
 
-1. Safety / nozzle crash risk (shift, detached part)  
-2. Adhesion / warp (part must survive)  
-3. Extrusion health (gaps, clogs, wet)  
-4. Supports removable  
-5. Detail / seam / stringing cosmetics  
+1. Safety / nozzle crash risk (shift, detached part)
+2. Adhesion / warp (part must survive)
+3. Extrusion health (gaps, clogs, wet)
+4. Supports removable
+5. Detail / seam / stringing cosmetics
 
 ## A1 Mini rules
 
-1. One variable per test.  
-2. Log before/after in `plan.md` when debugging a real job.  
-3. Uncertain numbers → **validate on printer**.  
-4. Don’t raise flow >~1.05 to “fix” gaps — hides clogs.  
+1. One variable per test.
+2. Log before/after in `plan.md` when debugging a real job.
+3. Uncertain numbers → **validate on printer**.
+4. Don’t raise flow >~1.05 to “fix” gaps — hides clogs.
 5. Open frame: treat drafts as a real cause for warp/uneven cooling.
 
 ## Profile-aware shortcuts

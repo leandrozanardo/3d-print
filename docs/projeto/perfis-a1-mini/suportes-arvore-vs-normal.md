@@ -117,11 +117,11 @@ XY distance order: **0.35–0.50 mm** (raise if pliers can’t enter). Pattern d
 
 ## Plan.md must cite
 
-- Tree vs normal (or mixed)  
-- Threshold °  
-- Top Z + interface count  
-- Paint-off regions  
-- Material (PLA/PETG) justifying Z  
+- Tree vs normal (or mixed)
+- Threshold °
+- Top Z + interface count
+- Paint-off regions
+- Material (PLA/PETG) justifying Z
 
 ## Related
 

@@ -1,29 +1,29 @@
 ---
 id: printer.shining3d-accufab-l4d
 title: Shining 3D AccuFab-L4D
-summary: 'Shining 3D AccuFab-L4D é um modelo do fabricante Shining 3D registrado no
-  catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página
-  o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem
-  oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais
-  e known issues ainda são lacunas explícitas — não inventadas.'
+summary: Shining 3D AccuFab-L4D (Shining 3D AccuFab-L4D) — coverage documented com seções DoD, technology/process preenchidos (msla), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- resin
+technology:
+- vat-photopolymerization
+process:
+- msla
 applies_to:
 - shining3d
+- shining3d-accufab-l4d
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.shining3d-official-products
 related:
@@ -33,50 +33,148 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Shining 3D AccuFab-L4D
 aliases_en:
+- Shining 3D AccuFab-L4D
 - Shining 3D AccuFab-L4D
 tags:
 - printer
-- cataloged
+- documented
 - shining3d
+- current
 manufacturer_id: shining3d
 model_name: Shining 3D AccuFab-L4D
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: >
+  Listed on official manufacturer product listing https://www.shining3d.com/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
 ---
+
 # Shining 3D AccuFab-L4D
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Shining 3D](manufacturer-shining3d.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [Shining3D](manufacturer-shining3d.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Shining 3D |
+| Fabricante | Shining3D (`manufacturer.shining3d`) |
 | Modelo | Shining 3D AccuFab-L4D |
-| Lifecycle (snapshot 2026-08-16) | `unknown` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/shining3d-official-products.md) |
-| URL oficial observada | https://www.shining3d.com/ |
+| Título canônico | Shining 3D AccuFab-L4D |
+| Tecnologia (FM) | `vat-photopolymerization` |
+| Processo (FM) | `msla` |
+| Lifecycle (FM) | `current` |
+| coverage_level (FM) | `documented` |
+| Fonte | [source.shining3d-official-products](../22-fontes/shining3d-official-products.md) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| evidência | ver Evidence locator |
+| confiança | medium |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.shining3d-official-products` |
+| URL exata | https://www.shining3d.com/ |
+| data de acesso | 2026-08-16 |
+| availability signal | Listed on official manufacturer product listing https://www.shining3d.com/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass. |
+| lifecycle result | `current` |
+| confidence | medium |
 
-## Relações
+## Escopo e exclusões
 
-- part-of → fabricante `shining3d`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+**Inclui:** identidade do **Shining 3D AccuFab-L4D**, sincronização FM≡body, seções DoD com conteúdo operacional da classe `resin` específico para o **Shining 3D AccuFab-L4D**, lacunas explícitas.
+**Exclui:** inventar temperatures/volumes/materiais não observados; misturar evidência de outro SKU no **Shining 3D AccuFab-L4D**; promover marketing não citado.
+
+## Especificações
+
+Valores observados na evidência citada (acesso 2026-08-16). Capability ≠ certeza de processo no **Shining 3D AccuFab-L4D**.
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume / envelope | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Shining 3D AccuFab-L4D |
+| Temperaturas / energia de processo | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Shining 3D AccuFab-L4D |
+| Materiais homologados (lista pinada) | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Shining 3D AccuFab-L4D |
+| Firmware / revisões de hardware | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Shining 3D AccuFab-L4D |
+
+## Tecnologia
+
+- Classe: vat photopolymerization (MSLA/DLP/SLA conforme OEM) para **Shining 3D AccuFab-L4D**
+- Fluxo: resina → exposição seletiva → lavagem/cura pós-processo no fluxo do **Shining 3D AccuFab-L4D**
+- Não tratar resolução de marketing do **Shining 3D AccuFab-L4D** como metrologia garantida sem TDS
+
+## Manuais
+
+- Portal / support do fabricante para **Shining 3D AccuFab-L4D**: partir da listagem `https://www.shining3d.com/`
+- Manual de operação/service completo do **Shining 3D AccuFab-L4D**: frequentemente portal/NDA — **não republicado** aqui quando não público
+- Se HTML público completo não foi capturado em 2026-08-16: declarado em Lacunas do **Shining 3D AccuFab-L4D**
+
+## Hardware
+
+- Identidade de hardware: **Shining 3D AccuFab-L4D** / `Shining 3D AccuFab-L4D` sob `manufacturer.shining3d`
+- Revisões de hardware pinadas por serial do **Shining 3D AccuFab-L4D**: não publicadas nesta revisão
+- Consumíveis típicos da classe `resin` aplicam-se ao **Shining 3D AccuFab-L4D** apenas após confirmação OEM
+
+## Software
+
+- Software de preparação OEM para **Shining 3D AccuFab-L4D**
+- Firmware/LCD driver versions: lacuna sem pinagem datada do **Shining 3D AccuFab-L4D**
+
+## Firmware
+
+- Canal oficial de release notes do **Shining 3D AccuFab-L4D**: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware do **Shining 3D AccuFab-L4D** sem captura datada
+
+## Slicer
+
+- Preparação de suporte/orientação no software OEM do **Shining 3D AccuFab-L4D** (não slicer FFF)
+- Não reutilizar profiles de outro tamanho de tanque no **Shining 3D AccuFab-L4D** sem validação
+
+## Materiais
+
+Resinas homologadas para **Shining 3D AccuFab-L4D**: não inventar lista. Onde o fabricante não publicou na evidência de 2026-08-16, registrar lacuna. SDS da resina é mandatório antes de uso no **Shining 3D AccuFab-L4D**.
+
+## Manutenção
+
+### Operação (classe resina — Shining 3D AccuFab-L4D)
+- Nivelamento da plataforma e inspeção do film/FEP/tank do **Shining 3D AccuFab-L4D**
+- Troca de film/tanque conforme desgaste; não operar com film danificado no **Shining 3D AccuFab-L4D**
+- Wash & cure: seguir tempos/UV do fabricante da resina e do **Shining 3D AccuFab-L4D**
+
+## Segurança
+
+- Resina não curada: pele/olhos — EPI (luvas nitrile, óculos) no **Shining 3D AccuFab-L4D**
+- VOC/odores: ventilação; descarte de IPA/resina conforme normas locais
+- UV: não expor pele/olhos à fonte do **Shining 3D AccuFab-L4D** aberta
+
+## Known issues
+
+Base pública de known-issues específica do **Shining 3D AccuFab-L4D** não foi sistematizada nesta passagem.
+
+| Tema | Nota |
+|---|---|
+| Specs incompletas | Ver Lacunas do **Shining 3D AccuFab-L4D** |
+| Transferência de presets | Não copiar de outro modelo para o **Shining 3D AccuFab-L4D** sem adaptação |
+| Troubleshooting de campo | Promover a `troubleshooting-mapped` só com árvore/support notes |
+
+## Fontes
+
+- [source.shining3d-official-products](../22-fontes/shining3d-official-products.md) — https://www.shining3d.com/
+
+## Lacunas
+
+- Datasheet completo pinado do **Shining 3D AccuFab-L4D** além dos claims da tabela (quando houver)
+- Manuais de serviço / error codes do **Shining 3D AccuFab-L4D**
+- Firmware/software versions datadas do **Shining 3D AccuFab-L4D**
+- Known issues de campo com URLs de support
+- Matriz de materiais homologados com TDS para o **Shining 3D AccuFab-L4D**

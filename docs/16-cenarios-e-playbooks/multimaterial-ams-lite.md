@@ -127,7 +127,7 @@ Precisa ≥2 cores ou troca automática?
 
 ## Fontes
 
-- [Bambu Wiki A1 mini](../22-fontes/bambu-wiki-a1-mini.md) — primeiro print AMS lite / manuais  
+- [Bambu Wiki A1 mini](../22-fontes/bambu-wiki-a1-mini.md) — primeiro print AMS lite / manuais
   https://wiki.bambulab.com/en/a1-mini/manual
 - [Tech specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 - Legado: [a1-mini-ams-lite.md](../projeto/hardware/a1-mini-ams-lite.md)

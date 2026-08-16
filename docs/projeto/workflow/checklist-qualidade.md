@@ -22,37 +22,37 @@ Gate before declaring an optimization **done**. Fail any item → return to trou
 
 ### Geometry & machine
 
-- [ ] BBox fits **180×180×180** mm with brim/margin  
-- [ ] Orientation documented (why this way)  
-- [ ] Units treated as mm (scale sanity)  
+- [ ] BBox fits **180×180×180** mm with brim/margin
+- [ ] Orientation documented (why this way)
+- [ ] Units treated as mm (scale sanity)
 
 ### Recipe
 
-- [ ] Named profile chosen and linked (`perfis-a1-mini/…`)  
-- [ ] Material PLA or PETG explicit (+ dry state for PETG)  
-- [ ] Supports: type + top Z + interface reviewed  
-- [ ] Walls/infill match purpose  
-- [ ] Brim/skirt/raft decided  
-- [ ] Seam placed if cosmetic  
-- [ ] Temps/cooling/speeds match material page  
-- [ ] Spiral vase: single contour confirmed (if applicable)  
+- [ ] Named profile chosen and linked (`perfis-a1-mini/…`)
+- [ ] Material PLA or PETG explicit (+ dry state for PETG)
+- [ ] Supports: type + top Z + interface reviewed
+- [ ] Walls/infill match purpose
+- [ ] Brim/skirt/raft decided
+- [ ] Seam placed if cosmetic
+- [ ] Temps/cooling/speeds match material page
+- [ ] Spiral vase: single contour confirmed (if applicable)
 
 ### Artifacts
 
-- [ ] `plan.md` drafted with wiki links  
-- [ ] `python -m core inspect-*` notes pasted or summarized  
-- [ ] Output path under `3ds/upgraded/` only  
-- [ ] Open **validate on printer** items listed  
+- [ ] `plan.md` drafted with wiki links
+- [ ] `python -m core inspect-*` notes pasted or summarized
+- [ ] Output path under `3ds/upgraded/` only
+- [ ] Open **validate on printer** items listed
 
 ## Post-print
 
-- [ ] First layer OK (kiss, no peel)  
-- [ ] No layer shift  
-- [ ] Supports removable without ripping noble faces  
-- [ ] Critical dimensions (± clearance) OK  
-- [ ] Stringing acceptable for purpose  
-- [ ] Detail acceptable for purpose (minis)  
-- [ ] Update `3ds/plan/<name>.md` with real deviations (**validate** → final values)  
+- [ ] First layer OK (kiss, no peel)
+- [ ] No layer shift
+- [ ] Supports removable without ripping noble faces
+- [ ] Critical dimensions (± clearance) OK
+- [ ] Stringing acceptable for purpose
+- [ ] Detail acceptable for purpose (minis)
+- [ ] Update `3ds/plan/<name>.md` with real deviations (**validate** → final values)
 
 ## Decision tree on fail
 
@@ -93,9 +93,9 @@ Which gate failed?
 
 ## A1 Mini rules
 
-1. Preview pass ≠ print pass — always run post-print when hardware available.  
-2. One failed critical item blocks “done.”  
-3. Don’t clear **validate on printer** without evidence.  
+1. Preview pass ≠ print pass — always run post-print when hardware available.
+2. One failed critical item blocks “done.”
+3. Don’t clear **validate on printer** without evidence.
 4. Log which checklist revision was used in the plan if iterating.
 
 ## Related

@@ -1,82 +1,165 @@
 ---
 id: printer.anycubic-kobra-s1
 title: Anycubic Kobra S1
-summary: 'Anycubic Kobra S1 é um modelo do fabricante Anycubic registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: Anycubic Kobra S1 é FFF CoreXY enclosed (250³ mm), hotend 320 °C / bed 120 °C, listada para compra na loja oficial Anycubic em 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
-- anycubic
+- anycubic-kobra-s1
 not_for:
-- treat-as-documented-specs
-- invented-compatibility
+- invent-missing-specs
+- blind-profile-transfer
 knowledge_status: draft
+lifecycle: current
+coverage_level: documented
 evidence_status: manufacturer-specific
 safety_level: caution
-confidence: medium
+confidence: high
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
 sources:
 - source.anycubic-official-products
+- source.anycubic-kobra-s1
 related:
 - manufacturer.anycubic
 - hub.impressoras
-- meta.printer-global-catalog
+- tech.fff
 prerequisites:
-- hub.impressoras
+- tech.fff
 supersedes: []
 aliases_pt_br: []
 aliases_en:
 - Anycubic Kobra S1
+- Kobra S1
 tags:
 - printer
-- cataloged
 - anycubic
+- fff
+- documented
+- kobra-s1-series
 manufacturer_id: anycubic
 model_name: Kobra S1
-family_status: unknown
+family_status: kobra-s1-series
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- Global
+availability_evidence: Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-s1 (accessed 2026-08-16).
 ---
 # Anycubic Kobra S1
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Anycubic](manufacturer-anycubic.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [Anycubic](manufacturer-anycubic.md)
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Anycubic |
-| Modelo | Anycubic Kobra S1 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/anycubic-official-products.md) |
-| URL oficial observada | https://store.anycubic.com/collections/3d-printers |
+| Fabricante | Anycubic (`manufacturer.anycubic`) |
+| Modelo | Kobra S1 |
+| Família | kobra-s1-series |
+| coverage_level | `documented` |
+| Regiões | Global |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| observed_at | 2026-08-16 |
+| evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-s1 (accessed 2026-08-16). |
+| URL produto | https://store.anycubic.com/products/kobra-s1 |
 
-## Lacunas (obrigatórias)
+## Especificações
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+Valores observados na evidência citada (acesso 2026-08-16). Capability observada ≠ resultado de processo em qualquer material.
 
-## Relações
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 250 × 250 × 250 mm³ | loja (oficial) |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s | loja (oficial) |
+| Acceleration | Recommended 10 000 mm/s²; Maximum 20 000 mm/s² | loja (oficial) |
+| Max nozzle | 320 °C (0.4 mm std; 0.25/0.6/0.8 opcional) | loja (oficial) |
+| Max heatbed | 120 °C, PEI spring steel | loja (oficial) |
+| Filaments (specs) | PLA, PETG, TPU, ABS, ASA | loja (oficial) |
+| Construction | CoreXY enclosed; Kobra OS | loja (oficial) |
+| Camera | HD standard, 480P | loja (oficial) |
+| Machine size / weight | 400 × 410 × 490 mm³; 9.37 kg | loja (oficial) |
 
-- part-of → fabricante `anycubic`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+Cells não listadas na evidência: **não publicado pelo fabricante na evidência consultada em 2026-08-16**.
+
+## Tecnologia
+
+Claims do fabricante (fonte oficial; evidência datada):
+
+- Categoria: material extrusion
+- Processo: FFF (fabricante também usa FDM em marketing)
+- Arquitetura: CoreXY fully enclosed; LeviQ3.0 + Z-offset
+- Multicolor: ACE Pro opcional (até 8 cores com 2× ACE Pro) — FAQ
+
+## Manuais
+
+- Página produto/manual links: https://store.anycubic.com/products/kobra-s1
+- Service manual completo pinado: lacuna se não linkado na evidência
+
+## Hardware
+
+- Quick-release hotend; ceramic composite throat (marketing)
+- 4.3" capacitive touchscreen; activated carbon included in box
+- AI spaghetti detection (requer câmera; incluída)
+
+## Software
+
+- Ecossistema oficial do fabricante (app/cloud/LAN conforme página)
+- Não expandir política de conta sem evidência
+
+## Firmware
+
+- Versão pinada: não publicado pelo fabricante na evidência consultada em 2026-08-16
+
+## Slicer
+
+- Usar preset/perfil do **modelo**; não colar perfil de outra família sem revisão
+
+## Materiais
+
+- Specs: PLA, PETG, TPU, ABS, ASA
+- FAQ: também menciona PC, PA, CF/GF — tratar como suporte avançado, não preset automático
+- TPU: single-color only com ACE Pro (FAQ [1])
+
+TDS/SDS do filamento/resina não são substituídos por esta página.
+
+## Manutenção
+
+- Calibração: seguir fluxo oficial (auto-level / first-layer checks) antes de produção
+- Limpeza de bico/mesa: conforme manual; não inventar intervalos sem evidência
+- Lubrificação e tensionamento: lacuna procedural local se não pinado pelo OEM
+
+## Segurança
+
+- Superfícies quentes (hotend/bed): risco de queimadura
+- Peças móveis: manter mãos fora da área de movimento durante print
+- ABS/ASA/engenharia: ventilação / filtragem conforme SDS e enclosure
+- Critérios de parada: odor forte anômalo, smoke, layer-shift grave, spaghetti não contido
+
+## Known issues
+
+- FAQ anota ruído medido a 1 m — variação unitária esperada
+- Marketing de velocidade máxima ≠ velocidade recomendada de qualidade
+- Transferência de perfil entre famílias/modelos sem revisão: risco alto
+
+## Fontes
+
+- [source.anycubic-official-products](../22-fontes/anycubic-official-products.md)
+- [source.anycubic-kobra-s1](../22-fontes/anycubic-kobra-s1.md)
+- URL oficial: https://store.anycubic.com/products/kobra-s1
+
+## Lacunas
+
+- Firmware pinado com hash/versão datada
+- Service manual completo / BOM por serial
+- Troubleshooting-mapped por sintoma

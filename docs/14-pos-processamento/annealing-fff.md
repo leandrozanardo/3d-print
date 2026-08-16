@@ -130,7 +130,7 @@ A1 Mini: ABS/ASA são **Not Recommended** pelo fabricante para print — ver [AB
 
 ## Aplicabilidade e exclusão
 
-**Aplica-se a:** discussão responsável de recozimento FFF.  
+**Aplica-se a:** discussão responsável de recozimento FFF.
 **Não se aplica a:** tratamento térmico de metal PBF; tempera de resina UV (é pós-cura, outra página).
 
 ## Relações
@@ -141,9 +141,9 @@ A1 Mini: ABS/ASA são **Not Recommended** pelo fabricante para print — ver [AB
 ## Fontes
 
 - TDS/SDS do filamento (primário para qualquer ciclo)
-- [NIOSH AM](../22-fontes/niosh-additive-manufacturing.md) — contexto de exposição  
+- [NIOSH AM](../22-fontes/niosh-additive-manufacturing.md) — contexto de exposição
   https://www.cdc.gov/niosh/manufacturing/additive/index.html
-- [EPA 3D research](../22-fontes/epa-3d-printing-research.md)  
+- [EPA 3D research](../22-fontes/epa-3d-printing-research.md)
   https://www.epa.gov/chemical-research/3d-printing-research-epa
 
 ## Lacunas

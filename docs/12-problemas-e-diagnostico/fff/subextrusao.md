@@ -100,7 +100,7 @@ Gaps / paredes ocas? Verifique **secagem** e **purge/clog** antes de subir flow.
 | Alta | Umidade | [Secagem](../../05-materiais/fff/secagem-e-armazenamento.md) |
 | Alta | Clog parcial / resíduo | Purge, cold pull, nozzle |
 | Alta | Speed > volumetric | [Velocidades](../../08-slicers-e-configuracoes/settings/velocidades.md) ↓ |
-| Média | Temp baixa | +5 °C (fonte oficial / fabricante / heuristic; ver `sources`)  no range — [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md) |
+| Média | Temp baixa | +5 °C no range (heurística editorial (sem fonte pinada)) — [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md) |
 | Média | Path/AMS fricção | Desembaraçar PTFE/path |
 | Média | Nozzle gasto (CF/GF) | Trocar hardened |
 | Baixa-primeira | Flow “baixo” sem medir | Calibrar só após path limpo |
@@ -114,22 +114,22 @@ Filamento seco / sem pops?
         ├─ NÃO → cold pull / nozzle; purge PLA↔PETG
         └─ SIM → só em alta velocidade?
               ├─ SIM → −20% speed / ↓ max volumetric
-              └─ NÃO → +5 °C (fonte oficial/fabricante/heuristic; ver sources) ; cupom single-wall; flow 0,95–1,00
+              └─ NÃO → +5 °C (heurística editorial (sem fonte pinada)); cupom single-wall; flow 0,95–1,00
 AMS envolvido? → checar kink/tangle antes de flow no Studio
 ```
 
 ## Testes
 
-1. Purge visual (corda consistente?)  
-2. Cupom de parede única  
-3. Mesmo modelo a −20% speed  
-4. Inspecionar nozzle se abrasivo  
+1. Purge visual (corda consistente?)
+2. Cupom de parede única
+3. Mesmo modelo a −20% speed
+4. Inspecionar nozzle se abrasivo
 
 ## Não faça
 
-- Flow alto crônico para “corrigir” gaps  
-- Mudar retract e flow e temp juntos  
-- Ignorar clicks  
+- Flow alto crônico para “corrigir” gaps
+- Mudar retract e flow e temp juntos
+- Ignorar clicks
 
 ## Validação
 
@@ -137,17 +137,17 @@ Cupom antes/depois; registrar temp/speed/flow/secagem.
 
 ## Prevenção
 
-- Purge em troca de material  
-- Secar PETG/TPU  
-- Hardened nozzle com filled  
-- Presets A1 Mini  
+- Purge em troca de material
+- Secar PETG/TPU
+- Hardened nozzle com filled
+- Presets A1 Mini
 
 ## Relações com outros conceitos
 
-- caused-by → clog, moisture, cold, volumetric, friction, wear  
-- settings → speeds, temperatures, line width  
-- worsened-by → CF/GF em brass  
-- related-to → [delaminação](delaminacao.md) se bonding falha por frio/úmido  
+- caused-by → clog, moisture, cold, volumetric, friction, wear
+- settings → speeds, temperatures, line width
+- worsened-by → CF/GF em brass
+- related-to → [delaminação](delaminacao.md) se bonding falha por frio/úmido
 
 ## Veja também
 

@@ -88,11 +88,11 @@ Latex fino e “luva de cozinha” improvisada **não** são default.
 
 ## Práticas de bancada
 
-1. Área dedicada, sem comida/bebida  
-2. Papel absorvente; kit de derrame  
-3. Tampas fechadas; não deixar tanque aberto ocioso  
-4. Remover luvas sem contaminação cruzada; lavar pele se contato (SDS)  
-5. Contato ocular: lavagem conforme SDS + atendimento  
+1. Área dedicada, sem comida/bebida
+2. Papel absorvente; kit de derrame
+3. Tampas fechadas; não deixar tanque aberto ocioso
+4. Remover luvas sem contaminação cruzada; lavar pele se contato (SDS)
+5. Contato ocular: lavagem conforme SDS + atendimento
 
 ## Descarte — princípios
 
@@ -108,15 +108,15 @@ Latex fino e “luva de cozinha” improvisada **não** são default.
 
 ## O que esta página proíbe afirmar
 
-- “Depois de curar pode usar na boca/comida” → [claims](claims-food-contact-e-medico.md)  
-- “Resina dental do Mercado Livre = clínico”  
-- “Luva qualquer serve”  
+- “Depois de curar pode usar na boca/comida” → [claims](claims-food-contact-e-medico.md)
+- “Resina dental do Mercado Livre = clínico”
+- “Luva qualquer serve”
 
 ## Ligação operacional
 
-- Processo: [SLA/DLP/MSLA](../02-tecnologias/vat-photopolymerization/sla-dlp-msla.md)  
-- Pós: [lavagem e pós-cura](../14-pos-processamento/lavagem-e-pos-cura-resina.md)  
-- Falhas: [índice](../12-problemas-e-diagnostico/resina/indice-falhas-resina.md)  
+- Processo: [SLA/DLP/MSLA](../02-tecnologias/vat-photopolymerization/sla-dlp-msla.md)
+- Pós: [lavagem e pós-cura](../14-pos-processamento/lavagem-e-pos-cura-resina.md)
+- Falhas: [índice](../12-problemas-e-diagnostico/resina/indice-falhas-resina.md)
 
 ## Lacunas
 

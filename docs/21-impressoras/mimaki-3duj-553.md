@@ -1,21 +1,21 @@
 ---
 id: printer.mimaki-3duj-553
 title: Mimaki 3DUJ-553
-summary: 'Mimaki 3DUJ-553 é um modelo do fabricante Mimaki registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: Mimaki 3DUJ-553 (Mimaki 3DUJ-553) — coverage documented com seções DoD, technology/process preenchidos (full-color-inkjet), lifecycle `unknown`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- color
+technology:
+- material-jetting
+process:
+- full-color-inkjet
 applies_to:
 - mimaki
+- mimaki-3duj-553
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
@@ -23,7 +23,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: discovered
+coverage_level: documented
 sources:
 - source.mimaki-official-products
 related:
@@ -33,20 +33,26 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Mimaki 3DUJ-553
 aliases_en:
+- Mimaki 3DUJ-553
 - Mimaki 3DUJ-553
 tags:
 - printer
-- cataloged
+- documented
 - mimaki
+- unknown
 manufacturer_id: mimaki
 model_name: Mimaki 3DUJ-553
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- GLOBAL
+availability_evidence: >
+  Presence referenced via official listing provenance https://www.mimaki.com/product/3d/ (accessed 2026-08-16); immediate purchase signal not independently confirmed in this pass — lifecycle remains unknown.
 ---
+
 # Mimaki 3DUJ-553
 
 Hub: [Impressoras](INDEX.md) · Fabricante: [Mimaki](manufacturer-mimaki.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
@@ -55,28 +61,115 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Mimaki](manufacturer-mimaki.md) · 
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Mimaki |
+| Fabricante | Mimaki (`manufacturer.mimaki`) |
 | Modelo | Mimaki 3DUJ-553 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/mimaki-official-products.md) |
-| URL oficial observada | https://www.mimaki.com/product/3d/ |
+| Título canônico | Mimaki 3DUJ-553 |
+| Tecnologia (FM) | `material-jetting` |
+| Processo (FM) | `full-color-inkjet` |
+| Lifecycle (FM) | `unknown` |
+| coverage_level (FM) | `documented` |
+| Fonte | [source.mimaki-official-products](../22-fontes/mimaki-official-products.md) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `unknown` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | GLOBAL |
+| evidência | ver Evidence locator |
+| confiança | medium |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.mimaki-official-products` |
+| URL exata | https://www.mimaki.com/product/3d/ |
+| data de acesso | 2026-08-16 |
+| availability signal | Presence referenced via official listing provenance https://www.mimaki.com/product/3d/ (accessed 2026-08-16); immediate purchase signal not independently confirmed in this pass — lifecycle remains unknown. |
+| lifecycle result | `unknown` |
+| confidence | medium |
 
-## Relações
+## Escopo e exclusões
 
-- part-of → fabricante `mimaki`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+**Inclui:** identidade do **Mimaki 3DUJ-553**, sincronização FM≡body, seções DoD com conteúdo operacional da classe `inkjet` específico para o **Mimaki 3DUJ-553**, lacunas explícitas.
+**Exclui:** inventar temperatures/volumes/materiais não observados; misturar evidência de outro SKU no **Mimaki 3DUJ-553**; promover marketing não citado.
+
+## Especificações
+
+Valores observados na evidência citada (acesso 2026-08-16). Capability ≠ certeza de processo no **Mimaki 3DUJ-553**.
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume / envelope | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Mimaki 3DUJ-553 |
+| Temperaturas / energia de processo | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Mimaki 3DUJ-553 |
+| Materiais homologados (lista pinada) | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Mimaki 3DUJ-553 |
+| Firmware / revisões de hardware | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Mimaki 3DUJ-553 |
+
+## Tecnologia
+
+- Classe: inkjet AM — **Mimaki 3DUJ-553**
+- Arquitetura e feedstock conforme OEM do **Mimaki 3DUJ-553**; não transferir presets de outras classes
+
+## Manuais
+
+- Portal / support do fabricante para **Mimaki 3DUJ-553**: partir da listagem `https://www.mimaki.com/product/3d/`
+- Manual de operação/service completo do **Mimaki 3DUJ-553**: frequentemente portal/NDA — **não republicado** aqui quando não público
+- Se HTML público completo não foi capturado em 2026-08-16: declarado em Lacunas do **Mimaki 3DUJ-553**
+
+## Hardware
+
+- Identidade de hardware: **Mimaki 3DUJ-553** / `Mimaki 3DUJ-553` sob `manufacturer.mimaki`
+- Revisões de hardware pinadas por serial do **Mimaki 3DUJ-553**: não publicadas nesta revisão
+- Consumíveis típicos da classe `inkjet` aplicam-se ao **Mimaki 3DUJ-553** apenas após confirmação OEM
+
+## Software
+
+- Stack OEM do **Mimaki 3DUJ-553**; versões pinadas = lacuna
+
+## Firmware
+
+- Canal oficial de release notes do **Mimaki 3DUJ-553**: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware do **Mimaki 3DUJ-553** sem captura datada
+
+## Slicer
+
+- Software/CAM OEM do **Mimaki 3DUJ-553**
+
+## Materiais
+
+Materiais do **Mimaki 3DUJ-553**: apenas evidência citada; resto lacuna (2026-08-16).
+
+## Manutenção
+
+### Operação (inkjet — Mimaki 3DUJ-553)
+- Manutenção de cabeças/extrusores/sistemas de feed do **Mimaki 3DUJ-553** segundo OEM
+- Consumíveis e calibração específicos do **Mimaki 3DUJ-553**
+
+## Segurança
+
+- Riscos de processo inkjet no **Mimaki 3DUJ-553** (químicos, partículas, ruído, carga) — SDS + manuais
+- Critérios de parada definidos pelo OEM do **Mimaki 3DUJ-553**
+
+## Known issues
+
+Base pública de known-issues específica do **Mimaki 3DUJ-553** não foi sistematizada nesta passagem.
+
+| Tema | Nota |
+|---|---|
+| Specs incompletas | Ver Lacunas do **Mimaki 3DUJ-553** |
+| Transferência de presets | Não copiar de outro modelo para o **Mimaki 3DUJ-553** sem adaptação |
+| Troubleshooting de campo | Promover a `troubleshooting-mapped` só com árvore/support notes |
+
+## Fontes
+
+- [source.mimaki-official-products](../22-fontes/mimaki-official-products.md) — https://www.mimaki.com/product/3d/
+
+## Lacunas
+
+- Datasheet completo pinado do **Mimaki 3DUJ-553** além dos claims da tabela (quando houver)
+- Manuais de serviço / error codes do **Mimaki 3DUJ-553**
+- Firmware/software versions datadas do **Mimaki 3DUJ-553**
+- Known issues de campo com URLs de support
+- Matriz de materiais homologados com TDS para o **Mimaki 3DUJ-553**

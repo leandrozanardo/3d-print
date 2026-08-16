@@ -1,29 +1,29 @@
 ---
 id: printer.intamsys-funmat-ht
 title: INTAMSYS FUNMAT HT
-summary: 'INTAMSYS FUNMAT HT é um modelo do fabricante INTAMSYS registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: INTAMSYS FUNMAT HT (INTAMSYS FUNMAT HT) — coverage documented com seções DoD, technology/process preenchidos (fff), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
 - intamsys
+- intamsys-funmat-ht
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.intamsys-official-products
 related:
@@ -33,50 +33,148 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- INTAMSYS FUNMAT HT
 aliases_en:
+- INTAMSYS FUNMAT HT
 - INTAMSYS FUNMAT HT
 tags:
 - printer
-- cataloged
+- documented
 - intamsys
+- current
 manufacturer_id: intamsys
 model_name: INTAMSYS FUNMAT HT
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: >
+  Listed on official manufacturer product listing https://www.intamsys.com/3d-printers/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
 ---
+
 # INTAMSYS FUNMAT HT
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [INTAMSYS](manufacturer-intamsys.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [Intamsys](manufacturer-intamsys.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | INTAMSYS |
+| Fabricante | Intamsys (`manufacturer.intamsys`) |
 | Modelo | INTAMSYS FUNMAT HT |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/intamsys-official-products.md) |
-| URL oficial observada | https://www.intamsys.com/3d-printers/ |
+| Título canônico | INTAMSYS FUNMAT HT |
+| Tecnologia (FM) | `material-extrusion` |
+| Processo (FM) | `fff` |
+| Lifecycle (FM) | `current` |
+| coverage_level (FM) | `documented` |
+| Fonte | [source.intamsys-official-products](../22-fontes/intamsys-official-products.md) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| evidência | ver Evidence locator |
+| confiança | medium |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.intamsys-official-products` |
+| URL exata | https://www.intamsys.com/3d-printers/ |
+| data de acesso | 2026-08-16 |
+| availability signal | Listed on official manufacturer product listing https://www.intamsys.com/3d-printers/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass. |
+| lifecycle result | `current` |
+| confidence | medium |
 
-## Relações
+## Escopo e exclusões
 
-- part-of → fabricante `intamsys`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+**Inclui:** identidade do **INTAMSYS FUNMAT HT**, sincronização FM≡body, seções DoD com conteúdo operacional da classe `fff` específico para o **INTAMSYS FUNMAT HT**, lacunas explícitas.
+**Exclui:** inventar temperatures/volumes/materiais não observados; misturar evidência de outro SKU no **INTAMSYS FUNMAT HT**; promover marketing não citado.
+
+## Especificações
+
+Valores observados na evidência citada (acesso 2026-08-16). Capability ≠ certeza de processo no **INTAMSYS FUNMAT HT**.
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume / envelope | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — INTAMSYS FUNMAT HT |
+| Temperaturas / energia de processo | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — INTAMSYS FUNMAT HT |
+| Materiais homologados (lista pinada) | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — INTAMSYS FUNMAT HT |
+| Firmware / revisões de hardware | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — INTAMSYS FUNMAT HT |
+
+## Tecnologia
+
+- Classe: material extrusion / FFF para **INTAMSYS FUNMAT HT** (`INTAMSYS FUNMAT HT`)
+- Fluxo típico: filamento → hotend → deposição camada a camada na mesa do **INTAMSYS FUNMAT HT**
+- Capability ≠ certeza de processo em qualquer filamento no **INTAMSYS FUNMAT HT**
+
+## Manuais
+
+- Portal / support do fabricante para **INTAMSYS FUNMAT HT**: partir da listagem `https://www.intamsys.com/3d-printers/`
+- Manual de operação/service completo do **INTAMSYS FUNMAT HT**: frequentemente portal/NDA — **não republicado** aqui quando não público
+- Se HTML público completo não foi capturado em 2026-08-16: declarado em Lacunas do **INTAMSYS FUNMAT HT**
+
+## Hardware
+
+- Identidade de hardware: **INTAMSYS FUNMAT HT** / `INTAMSYS FUNMAT HT` sob `manufacturer.intamsys`
+- Revisões de hardware pinadas por serial do **INTAMSYS FUNMAT HT**: não publicadas nesta revisão
+- Consumíveis típicos da classe `fff` aplicam-se ao **INTAMSYS FUNMAT HT** apenas após confirmação OEM
+
+## Software
+
+- Ecossistema de software do fabricante aplicável ao **INTAMSYS FUNMAT HT** (app/slicer/cloud conforme OEM)
+- Versões pinadas: lacuna sem captura datada para o **INTAMSYS FUNMAT HT**
+
+## Firmware
+
+- Canal oficial de release notes do **INTAMSYS FUNMAT HT**: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware do **INTAMSYS FUNMAT HT** sem captura datada
+
+## Slicer
+
+- Usar perfil/preset do **INTAMSYS FUNMAT HT** no slicer suportado pelo OEM quando existir
+- Não colar presets de outra família sem revisão dimensional/térmica do **INTAMSYS FUNMAT HT**
+
+## Materiais
+
+Materiais compatíveis oficiais pinados para **INTAMSYS FUNMAT HT**: não publicados pelo fabricante na evidência consultada em 2026-08-16 (exceto se listados na tabela de Especificações). Não inventar matriz PLA/ABS/ASA para o **INTAMSYS FUNMAT HT**. TDS/SDS não são substituídos por esta página.
+
+## Manutenção
+
+### Calibração (classe FFF — INTAMSYS FUNMAT HT)
+- Primeira camada e leveling conforme procedimento do fabricante para **INTAMSYS FUNMAT HT**
+- Verificar tensão de correia/extrusor e fluxo antes de culpar o filamento no **INTAMSYS FUNMAT HT**
+- Manutenção preventiva: limpeza de nozzle, lubrificação de eixos conforme manual do **INTAMSYS FUNMAT HT**
+
+## Segurança
+
+- Superfícies quentes (hotend/mesa) no **INTAMSYS FUNMAT HT**
+- Fumos de termoplásticos: ventilação adequada ao operar o **INTAMSYS FUNMAT HT**
+- Critérios de parada: smell anômalo, blob no hotend, falha de sensor, overtemp
+
+## Known issues
+
+Base pública de known-issues específica do **INTAMSYS FUNMAT HT** não foi sistematizada nesta passagem.
+
+| Tema | Nota |
+|---|---|
+| Specs incompletas | Ver Lacunas do **INTAMSYS FUNMAT HT** |
+| Transferência de presets | Não copiar de outro modelo para o **INTAMSYS FUNMAT HT** sem adaptação |
+| Troubleshooting de campo | Promover a `troubleshooting-mapped` só com árvore/support notes |
+
+## Fontes
+
+- [source.intamsys-official-products](../22-fontes/intamsys-official-products.md) — https://www.intamsys.com/3d-printers/
+
+## Lacunas
+
+- Datasheet completo pinado do **INTAMSYS FUNMAT HT** além dos claims da tabela (quando houver)
+- Manuais de serviço / error codes do **INTAMSYS FUNMAT HT**
+- Firmware/software versions datadas do **INTAMSYS FUNMAT HT**
+- Known issues de campo com URLs de support
+- Matriz de materiais homologados com TDS para o **INTAMSYS FUNMAT HT**

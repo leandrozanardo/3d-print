@@ -59,7 +59,7 @@ Base on bed; optional ~10° tilt if it cuts support — **validate** in preview 
 
 ### 7 — Supports
 
-Tree, threshold ~32°, top Z **0.20 mm**, interface **2–4**, paint off face  
+Tree, threshold ~32°, top Z **0.20 mm**, interface **2–4**, paint off face
 ([tree vs normal](../perfis-a1-mini/suportes-arvore-vs-normal.md)).
 
 ### 8 — Brim

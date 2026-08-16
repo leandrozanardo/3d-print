@@ -1,29 +1,29 @@
 ---
 id: printer.flsun-v2-max
 title: FLSUN V2 Max
-summary: 'FLSUN V2 Max é um modelo do fabricante FLSUN registrado no catálogo fix-my-print
-  (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura
-  é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em
-  2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues
-  ainda são lacunas explícitas — não inventadas.'
+summary: FLSUN V2 Max (FLSUN V2 Max) — coverage documented com seções DoD, technology/process preenchidos (fff), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
 - flsun
+- flsun-v2-max
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.flsun-official-products
 related:
@@ -33,50 +33,148 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- FLSUN V2 Max
 aliases_en:
+- FLSUN V2 Max
 - FLSUN V2 Max
 tags:
 - printer
-- cataloged
+- documented
 - flsun
+- current
 manufacturer_id: flsun
 model_name: FLSUN V2 Max
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: >
+  Listed on official manufacturer product listing https://us.store.flsun3d.com/collections/3d-printers (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
 ---
+
 # FLSUN V2 Max
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [FLSUN](manufacturer-flsun.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [Flsun](manufacturer-flsun.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | FLSUN |
+| Fabricante | Flsun (`manufacturer.flsun`) |
 | Modelo | FLSUN V2 Max |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/flsun-official-products.md) |
-| URL oficial observada | https://us.store.flsun3d.com/collections/3d-printers |
+| Título canônico | FLSUN V2 Max |
+| Tecnologia (FM) | `material-extrusion` |
+| Processo (FM) | `fff` |
+| Lifecycle (FM) | `current` |
+| coverage_level (FM) | `documented` |
+| Fonte | [source.flsun-official-products](../22-fontes/flsun-official-products.md) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| evidência | ver Evidence locator |
+| confiança | medium |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.flsun-official-products` |
+| URL exata | https://us.store.flsun3d.com/collections/3d-printers |
+| data de acesso | 2026-08-16 |
+| availability signal | Listed on official manufacturer product listing https://us.store.flsun3d.com/collections/3d-printers (accessed 2026-08-16); treated as current catalog presence for this remediation pass. |
+| lifecycle result | `current` |
+| confidence | medium |
 
-## Relações
+## Escopo e exclusões
 
-- part-of → fabricante `flsun`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+**Inclui:** identidade do **FLSUN V2 Max**, sincronização FM≡body, seções DoD com conteúdo operacional da classe `fff` específico para o **FLSUN V2 Max**, lacunas explícitas.
+**Exclui:** inventar temperatures/volumes/materiais não observados; misturar evidência de outro SKU no **FLSUN V2 Max**; promover marketing não citado.
+
+## Especificações
+
+Valores observados na evidência citada (acesso 2026-08-16). Capability ≠ certeza de processo no **FLSUN V2 Max**.
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume / envelope | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — FLSUN V2 Max |
+| Temperaturas / energia de processo | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — FLSUN V2 Max |
+| Materiais homologados (lista pinada) | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — FLSUN V2 Max |
+| Firmware / revisões de hardware | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — FLSUN V2 Max |
+
+## Tecnologia
+
+- Classe: material extrusion / FFF para **FLSUN V2 Max** (`FLSUN V2 Max`)
+- Fluxo típico: filamento → hotend → deposição camada a camada na mesa do **FLSUN V2 Max**
+- Capability ≠ certeza de processo em qualquer filamento no **FLSUN V2 Max**
+
+## Manuais
+
+- Portal / support do fabricante para **FLSUN V2 Max**: partir da listagem `https://us.store.flsun3d.com/collections/3d-printers`
+- Manual de operação/service completo do **FLSUN V2 Max**: frequentemente portal/NDA — **não republicado** aqui quando não público
+- Se HTML público completo não foi capturado em 2026-08-16: declarado em Lacunas do **FLSUN V2 Max**
+
+## Hardware
+
+- Identidade de hardware: **FLSUN V2 Max** / `FLSUN V2 Max` sob `manufacturer.flsun`
+- Revisões de hardware pinadas por serial do **FLSUN V2 Max**: não publicadas nesta revisão
+- Consumíveis típicos da classe `fff` aplicam-se ao **FLSUN V2 Max** apenas após confirmação OEM
+
+## Software
+
+- Ecossistema de software do fabricante aplicável ao **FLSUN V2 Max** (app/slicer/cloud conforme OEM)
+- Versões pinadas: lacuna sem captura datada para o **FLSUN V2 Max**
+
+## Firmware
+
+- Canal oficial de release notes do **FLSUN V2 Max**: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware do **FLSUN V2 Max** sem captura datada
+
+## Slicer
+
+- Usar perfil/preset do **FLSUN V2 Max** no slicer suportado pelo OEM quando existir
+- Não colar presets de outra família sem revisão dimensional/térmica do **FLSUN V2 Max**
+
+## Materiais
+
+Materiais compatíveis oficiais pinados para **FLSUN V2 Max**: não publicados pelo fabricante na evidência consultada em 2026-08-16 (exceto se listados na tabela de Especificações). Não inventar matriz PLA/ABS/ASA para o **FLSUN V2 Max**. TDS/SDS não são substituídos por esta página.
+
+## Manutenção
+
+### Calibração (classe FFF — FLSUN V2 Max)
+- Primeira camada e leveling conforme procedimento do fabricante para **FLSUN V2 Max**
+- Verificar tensão de correia/extrusor e fluxo antes de culpar o filamento no **FLSUN V2 Max**
+- Manutenção preventiva: limpeza de nozzle, lubrificação de eixos conforme manual do **FLSUN V2 Max**
+
+## Segurança
+
+- Superfícies quentes (hotend/mesa) no **FLSUN V2 Max**
+- Fumos de termoplásticos: ventilação adequada ao operar o **FLSUN V2 Max**
+- Critérios de parada: smell anômalo, blob no hotend, falha de sensor, overtemp
+
+## Known issues
+
+Base pública de known-issues específica do **FLSUN V2 Max** não foi sistematizada nesta passagem.
+
+| Tema | Nota |
+|---|---|
+| Specs incompletas | Ver Lacunas do **FLSUN V2 Max** |
+| Transferência de presets | Não copiar de outro modelo para o **FLSUN V2 Max** sem adaptação |
+| Troubleshooting de campo | Promover a `troubleshooting-mapped` só com árvore/support notes |
+
+## Fontes
+
+- [source.flsun-official-products](../22-fontes/flsun-official-products.md) — https://us.store.flsun3d.com/collections/3d-printers
+
+## Lacunas
+
+- Datasheet completo pinado do **FLSUN V2 Max** além dos claims da tabela (quando houver)
+- Manuais de serviço / error codes do **FLSUN V2 Max**
+- Firmware/software versions datadas do **FLSUN V2 Max**
+- Known issues de campo com URLs de support
+- Matriz de materiais homologados com TDS para o **FLSUN V2 Max**

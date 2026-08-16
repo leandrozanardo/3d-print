@@ -103,21 +103,21 @@ Plate?
 
 ## Calibration order (PETG)
 
-1. Dry → first layer on textured PEI  
-2. Temp tower (5 °C steps)  
-3. Retract tower  
-4. Cooling tweak (overhang vs strength)  
-5. Support Z coupon  
-6. Flow ±2–5% if needed  
-7. Speed last  
+1. Dry → first layer on textured PEI
+2. Temp tower (5 °C steps)
+3. Retract tower
+4. Cooling tweak (overhang vs strength)
+5. Support Z coupon
+6. Flow ±2–5% if needed
+7. Speed last
 
 ## Plan.md must cite
 
-- This profile + [petg.md](../materiais/petg.md)  
-- Dry state / dryer settings used  
-- Plate type (textured vs smooth)  
-- Support Z + interface  
-- Service temp assumption + **validate on printer**  
+- This profile + [petg.md](../materiais/petg.md)
+- Dry state / dryer settings used
+- Plate type (textured vs smooth)
+- Support Z + interface
+- Service temp assumption + **validate on printer**
 
 ## Related
 

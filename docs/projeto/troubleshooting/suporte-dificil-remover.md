@@ -47,13 +47,13 @@ Trapped in cavity?
 
 ## A1 Mini rules
 
-1. Top Z distance +0.05 mm per test.  
-2. Guarantee interface layers on noble/mating faces.  
-3. Lower contact density if scarring.  
-4. Swap tree ↔ normal per geometry.  
-5. PETG: larger gaps than PLA — non-negotiable.  
-6. Remove **cold**; cut internal supports in sections.  
-7. Never pry across faces — parallel cuts.  
+1. Top Z distance +0.05 mm per test.
+2. Guarantee interface layers on noble/mating faces.
+3. Lower contact density if scarring.
+4. Swap tree ↔ normal per geometry.
+5. PETG: larger gaps than PLA — non-negotiable.
+6. Remove **cold**; cut internal supports in sections.
+7. Never pry across faces — parallel cuts.
 8. Coupon test before hero print — **validate on printer**.
 
 ## Suggested presets (PLA)

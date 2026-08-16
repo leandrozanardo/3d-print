@@ -95,11 +95,11 @@ python -m core repair-mesh 3ds/original/<file>.stl 3ds/upgraded/<file>.stl --jso
 
 ## Quality bar
 
-- [ ] Paths exist (no orphans)  
-- [ ] Profile matches purpose  
-- [ ] Numbers not hand-waved  
-- [ ] Validate list honest  
-- [ ] Checklist referenced or completed  
+- [ ] Paths exist (no orphans)
+- [ ] Profile matches purpose
+- [ ] Numbers not hand-waved
+- [ ] Validate list honest
+- [ ] Checklist referenced or completed
 
 ## Failure modes
 

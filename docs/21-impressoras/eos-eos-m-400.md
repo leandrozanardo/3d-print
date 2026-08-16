@@ -1,53 +1,64 @@
 ---
 id: printer.eos-eos-m-400
-title: EOS EOS M 400
-summary: 'EOS EOS M 400 é um modelo do fabricante EOS registrado no catálogo fix-my-print
-  (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura
-  é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em
-  2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues
-  ainda são lacunas explícitas — não inventadas.'
+title: EOS M 400
+summary: >
+ EOS M 400 (EOS M 400 Series) é sistema DMLS metálico EOS listado na página oficial de
+ metal printers (acesso 2026-08-16). Build volume 400 × 400 × 400 mm. Lifecycle current;
+ coverage documented. Fonte source.eos-official-metal-printers (não polymer listing).
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- metal
+- powder-bed-fusion
+technology:
+- powder-bed-fusion
+process:
+- dmls
+- metal-lpbf
 applies_to:
 - eos
+- eos-eos-m-400
 not_for:
-- treat-as-documented-specs
+- polymer-printer-evidence
 - invented-compatibility
 knowledge_status: draft
 evidence_status: manufacturer-specific
-safety_level: caution
+safety_level: high
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.eos-official-metal-printers
 related:
 - manufacturer.eos
 - hub.impressoras
-- meta.printer-global-catalog
+- source.eos-official-products
 prerequisites:
 - hub.impressoras
 supersedes: []
 aliases_pt_br: []
 aliases_en:
-- EOS EOS M 400
+- EOS M 400 Series
+- EOS M 400
 tags:
 - printer
-- cataloged
+- documented
 - eos
+- metal
+- dmls
 manufacturer_id: eos
-model_name: EOS M 400
-family_status: unknown
+model_name: EOS M 400 Series
+family_status: metal-dmls
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- global
+availability_evidence: Listed on official EOS metal printers page
+  https://www.eos.info/metal-solutions/metal-printers (accessed 2026-08-16).
 ---
-# EOS EOS M 400
+
+# EOS M 400
 
 Hub: [Impressoras](INDEX.md) · Fabricante: [EOS](manufacturer-eos.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
 
@@ -56,27 +67,116 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [EOS](manufacturer-eos.md) · Catál
 | Campo | Valor |
 |---|---|
 | Fabricante | EOS |
-| Modelo | EOS EOS M 400 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/eos-official-products.md) |
-| URL oficial observada | https://www.eos.info/polymer-solutions/polymer-printers |
+| Modelo | EOS M 400 Series |
+| Processo | DMLS / metal laser powder bed fusion |
+| Lifecycle | `current` |
+| coverage_level | `documented` |
+| Fonte | [source.eos-official-metal-printers](../22-fontes/eos-official-metal-printers.md) |
+| URL oficial | https://www.eos.info/metal-solutions/metal-printers
+| Classe | metal / DMLS |
+| Tags de processo | `dmls`, `metal`, `powder-bed-fusion` |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| evidência | ver Evidence locator |
+| confiança | medium–high (listagem/product page oficial) |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.eos-official-metal-printers` |
+| URL exata | https://www.eos.info/metal-solutions/metal-printers |
+| data de acesso | 2026-08-16 |
+| availability signal | listagem / product page oficial |
+| lifecycle result | `current` |
 
-## Relações
 
-- part-of → fabricante `eos`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade, lifecycle, claims publicados na fonte citada, seções DoD com conteúdo operacional honesto da classe.
+**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero.
+
+## Especificações
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume (mm) | 400 × 400 × 400 mm ([source](../22-fontes/eos-official-metal-printers.md))| EOS metal printers compare table |
+| Lasers | 1× Yb-fiber — 4× Yb-fiber ([source](../22-fontes/eos-official-metal-printers.md))| EOS metal printers compare table |
+| Machine dimensions (mm) | 4181 × 1613 × 2355 — 5140 × 2490 × 2625 mm ([source](../22-fontes/eos-official-metal-printers.md))| EOS metal printers compare table |
+| Weight (kg) | 4900 kg ([source](../22-fontes/eos-official-metal-printers.md))| EOS metal printers compare table |
+
+Claims numéricos além da tabela: **não inventados**. Onde o fabricante não publicou detalhe pinável nesta revisão, ver Lacunas.
+
+## Tecnologia
+
+- Processo: DMLS (Direct Metal Laser Solidification) — metal PBF
+- Evidência primária: listagem metálica EOS (não usar URL de polímeros)
+- Production platform for large metal parts (claim listing).
+
+## Manuais
+
+- Portal / documentação do fabricante: mapear a partir da página de produto/listagem
+- Manuais de operação/service completos: frequentemente sob NDA / customer portal — não republicados aqui
+- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas
+
+## Hardware
+
+- Série: EOS M 400 Series
+- Plataforma industrial com integração em chão de fábrica (claim institucional EOS)
+- Variantes dual-laser / AMCM podem existir — confirmar SKU com EOS/AMCM
+
+## Software
+
+- EOSPRINT / EOSCONNECT e stack industrial EOS (nomes de módulos conforme contrato cliente)
+- Versões pinadas: lacuna sem captura datada
+
+## Firmware
+
+- Versão de firmware/controller pinada: não publicada nesta página sem captura datada do fabricante
+- Atualizações: canal oficial do OEM (customer portal / release notes)
+
+## Slicer
+
+- Build preparation EOS (não slicer FFF)
+- Não reutilizar perfis de polímero SLS nesta máquina metálica
+
+## Materiais
+
+Portfólio de pós metálicos EOS / parâmetros certificados: **consultar** páginas de materiais EOS — não inventar ligas ou densidades aqui. Listagem afirma amplo portfolio na série M 290.
+
+## Manutenção
+
+### Classe metal PBF
+- Troca de filtro, handling de pó metálico, recoater e calibragens ópticas: seguir manuais EOS
+- Intervalos e peças: tipicamente customer portal — não republicados aqui
+- Contaminação cruzada entre materiais: procedimento OEM obrigatório
+
+## Segurança
+
+- Pó metálico: risco de inalação, explosividade/combustibilidade conforme SDS da liga
+- Laser classe industrial: interlocks e EPI
+- Atmosfera inerte / O₂ monitoring conforme sistema
+- Critérios de parada: alarmes de O₂, filtro, laser, smell anômalo, fire detection
+
+## Known issues
+
+Known issues públicos pinados por serial: **não publicados** nesta listagem.
+
+Operacional: falhas típicas de classe (recoater streaks, lack of fusion, filter loading) exigem playbooks EOS + metalurgia — não inventar root-cause aqui.
+
+## Fontes
+
+- [source.eos-official-metal-printers](../22-fontes/eos-official-metal-printers.md) — https://www.eos.info/metal-solutions/metal-printers
+
+## Lacunas
+
+- Datasheet por SKU (potência laser exata da variante)
+- Manuais / error codes públicos
+- Lista de materiais certificados pinada
+- Firmware versions
+- Troubleshooting-mapped

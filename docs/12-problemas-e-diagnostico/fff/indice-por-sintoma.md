@@ -63,10 +63,10 @@ Hub pai: [Problemas FFF](INDEX.md) · [Problemas](../INDEX.md)
 
 ## Prioridade quando sintomas empilham
 
-1. Segurança / colisão (shift, peça solta)  
-2. Adesão / warp (peça precisa sobreviver)  
-3. Saúde de extrusão (gaps, clogs, umidade)  
-4. Cosmética (stringing, seam, ringing, pillowing, detalhe)  
+1. Segurança / colisão (shift, peça solta)
+2. Adesão / warp (peça precisa sobreviver)
+3. Saúde de extrusão (gaps, clogs, umidade)
+4. Cosmética (stringing, seam, ringing, pillowing, detalhe)
 
 ## Matriz sintoma → página
 

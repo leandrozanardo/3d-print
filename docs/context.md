@@ -55,24 +55,24 @@
 
 ## 5. Próximos passos
 
-1. Enviar `project_plans/saas/phase0/concierge-offer.md` e fechar 5 pagos.  
-2. Logar em `phase0/outcome-log.csv`.  
-3. Kill/go em `saas/00-executive-decision.md`.  
-4. (Opcional) Prompt novo: Task 1 ruleset do `upgrade_v1_plan.md`.  
+1. Enviar `project_plans/saas/phase0/concierge-offer.md` e fechar 5 pagos.
+2. Logar em `phase0/outcome-log.csv`.
+3. Kill/go em `saas/00-executive-decision.md`.
+4. (Opcional) Prompt novo: Task 1 ruleset do `upgrade_v1_plan.md`.
 5. (Opcional) `git commit` se autorizar.
 
 ---
 
 ## 6. Atenção
 
-- Nunca escrever em `3ds/original/`.  
-- Sem Bambu cloud / AGPL headless no MVP.  
+- Nunca escrever em `3ds/original/`.
+- Sem Bambu cloud / AGPL headless no MVP.
 - Sem guarantee de print success na copy.
 
 ---
 
 ## 7. Verificação
 
-- Pacote `project_plans/saas/`: MASTER + 00–14 + sources/assumptions/decisions + phase0/  
-- `upgrade_v1_plan.md` preenchido  
+- Pacote `project_plans/saas/`: MASTER + 00–14 + sources/assumptions/decisions + phase0/
+- `upgrade_v1_plan.md` preenchido
 - Sessão de planejamento: **ENCERRADA**

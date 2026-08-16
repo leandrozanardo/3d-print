@@ -97,11 +97,11 @@ Peça esbelta?
 
 ## Slicer (ordem de mitigação)
 
-1. Âncora de mesa (brim) se a base for pequena  
-2. Outer wall mais lenta que o restante — **validate on printer**  
-3. Presets de accel da máquina como teto; não caçar número de fórum  
-4. Cooling: equilíbrio — fan alto cedo pode piorar warp em alguns materiais  
-5. Se ainda oscila: split da peça  
+1. Âncora de mesa (brim) se a base for pequena
+2. Outer wall mais lenta que o restante — **validate on printer**
+3. Presets de accel da máquina como teto; não caçar número de fórum
+4. Cooling: equilíbrio — fan alto cedo pode piorar warp em alguns materiais
+5. Se ainda oscila: split da peça
 
 Método de leitura de artefatos: [Ellis Print Tuning Guide](../22-fontes/ellis-print-tuning-guide.md) (método, não perfil A1).
 
@@ -132,7 +132,7 @@ Antes de culpar o slicer:
 
 ## Segurança
 
-Peça alta que descola vira obstáculo móvel — risco de colisão e blob.  
+Peça alta que descola vira obstáculo móvel — risco de colisão e blob.
 Não deixe unattended se já houve quase-queda — [elétrico/fogo](../15-seguranca-e-meio-ambiente/eletrico-fogo-e-impressao-desacompanhada.md).
 
 ## Fontes

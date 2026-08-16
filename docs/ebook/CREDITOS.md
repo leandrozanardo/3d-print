@@ -2,7 +2,7 @@
 
 Original work: **Guia Maker de Impressão 3D** — Cláudio Luís Marques Sampaio, MSc.
 
-License: **CC BY-SA 4.0**  
+License: **CC BY-SA 4.0**
 Site: http://www.makerlinux.com.br/ebook
 
 This Markdown tree is an adaptation for the `3d-print` project. AsciiDoc originals previously lived in `docs/_arquivo/ebook/` (removed).

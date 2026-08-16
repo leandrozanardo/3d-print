@@ -46,14 +46,14 @@ Material?
 
 ## A1 Mini checklist (order)
 
-1. Wash plate (soap + water; dry fully).  
-2. Re-run bed calibration / first-layer cal in Bambu flow.  
-3. More first-layer squish (careful — avoid nozzle crash).  
-4. Bed +5–10 °C within material range.  
-5. Brim 5–8 mm (or mouse-ears on corners).  
-6. First layer speed 20–30 mm/s.  
-7. PLA: no AC blast on bed; PETG: same + textured preference.  
-8. Glue stick only if PEI process failed twice — clean residue after.  
+1. Wash plate (soap + water; dry fully).
+2. Re-run bed calibration / first-layer cal in Bambu flow.
+3. More first-layer squish (careful — avoid nozzle crash).
+4. Bed +5–10 °C within material range.
+5. Brim 5–8 mm (or mouse-ears on corners).
+6. First layer speed 20–30 mm/s.
+7. PLA: no AC blast on bed; PETG: same + textured preference.
+8. Glue stick only if PEI process failed twice — clean residue after.
 
 ## Suggested presets (PLA)
 
@@ -88,9 +88,9 @@ Material?
 
 ## Validate on printer
 
-- Exact bed °C for your PEI + brand  
-- Brim width vs cleanup time  
-- Whether glue is ever needed on *your* plate  
+- Exact bed °C for your PEI + brand
+- Brim width vs cleanup time
+- Whether glue is ever needed on *your* plate
 
 ## Related
 

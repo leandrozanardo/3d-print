@@ -96,19 +96,19 @@ If PETG is forced: expect lost mini quality — document as exception in plan.
 
 ## Calibration order (mini)
 
-1. Clean PEI + bed cal → first layer  
-2. Dry PLA  
-3. Print 10–15 mm scrap with tree on a non-critical overhang  
-4. Adjust top Z ±0.05 mm if welded or scarred  
-5. Retract tower only if stringing remains  
-6. Outer wall −10 mm/s if detail soft  
+1. Clean PEI + bed cal → first layer
+2. Dry PLA
+3. Print 10–15 mm scrap with tree on a non-critical overhang
+4. Adjust top Z ±0.05 mm if welded or scarred
+5. Retract tower only if stringing remains
+6. Outer wall −10 mm/s if detail soft
 
 ## Plan.md must cite
 
-- This file path  
-- [miniaturas](../proposito/miniaturas.md) + geometry page  
-- Support type + top Z + interface  
-- Brim yes/no  
+- This file path
+- [miniaturas](../proposito/miniaturas.md) + geometry page
+- Support type + top Z + interface
+- Brim yes/no
 - Any **validate on printer** items (retract, exact temp)
 
 ## Related

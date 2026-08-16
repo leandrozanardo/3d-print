@@ -110,11 +110,11 @@ Câmera low-framerate (capability listada nas specs A1 mini) é auxílio de obse
 
 ## Relação com agências
 
-- [NIOSH — Additive Manufacturing](../22-fontes/niosh-additive-manufacturing.md)  
-  https://www.cdc.gov/niosh/manufacturing/additive/index.html  
+- [NIOSH — Additive Manufacturing](../22-fontes/niosh-additive-manufacturing.md)
+  https://www.cdc.gov/niosh/manufacturing/additive/index.html
   Higiene ocupacional / controles em AM — **não** é checklist elétrico residencial brasileiro.
-- [EPA — 3D Printing Research](../22-fontes/epa-3d-printing-research.md)  
-  https://www.epa.gov/chemical-research/3d-printing-research-epa  
+- [EPA — 3D Printing Research](../22-fontes/epa-3d-printing-research.md)
+  https://www.epa.gov/chemical-research/3d-printing-research-epa
   Pesquisa de emissões/ambiente — **não** certifica operação unattended.
 
 ## O que esta página não faz

@@ -83,7 +83,7 @@ Hub pai: [Problemas e diagnóstico](../INDEX.md)
 
 ## Resumo de emergência
 
-Cantos sobem **depois** de boa adesão inicial? Bloqueie corrente de ar, confirme bed no range (A1 Mini ≤ 80 °C (fonte oficial / fabricante / heuristic; ver `sources`) ), ative brim, reduza cooling nas primeiras camadas. Se **nunca** grudou na camada 1 → [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) primeiro.
+Cantos sobem **depois** de boa adesão inicial? Bloqueie corrente de ar, confirme bed no range (A1 Mini ≤ 80 °C ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md))), ative brim, reduza cooling nas primeiras camadas. Se **nunca** grudou na camada 1 → [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) primeiro.
 
 ## Assinatura
 
@@ -130,7 +130,7 @@ Camada 1 grudou com squish OK?
   └─ SIM → cantos sobem depois?
         ├─ Há draft/AC na mesa? → bloquear fluxo de ar
         ├─ Base longa contínua? → brim + reorientar eixo longo + ↓ fan inicial
-        └─ PETG? → seco? bed 70–80 °C (fonte oficial/fabricante/heuristic; ver sources)  (≤80) + brim + fan moderado
+        └─ PETG? → seco? bed 70–80 °C (≤80 — heurística editorial (sem fonte pinada) para faixa PETG) + brim + fan moderado
 Raft somente se brim falhou em duas tentativas controladas.
 ```
 
@@ -150,7 +150,7 @@ Raft somente se brim falhou em duas tentativas controladas.
 |---|---|---|
 | Draft | Defletor / mudar posição | Subir temp sem medir |
 | Âncora fraca | Brim | Raft imediato |
-| PETG bed baixo | ↑ bed até ≤80 °C (fonte oficial/fabricante/heuristic; ver sources)  | Ultrapassar capability |
+| PETG bed baixo | ↑ bed até ≤80 °C ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md)) | Ultrapassar capability |
 | Cooling cedo | ↓ fan inicial | Max fan + max speed |
 | Geometria | Reorientar | Mudar material na mesma hora |
 

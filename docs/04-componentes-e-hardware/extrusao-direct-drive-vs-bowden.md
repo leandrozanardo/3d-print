@@ -86,7 +86,7 @@ A [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md) usa **direct drive** (posiç
 | Massa no head | Maior | Menor (potencialmente mais dinâmico) |
 | Manutenção | Acesso ao drive no toolhead | Tubo, fittings, atrito |
 
-**Regra desta base:** na A1 Mini, trate retract/PA como valores de **direct drive**. Não copie 4–8 mm (fonte oficial / fabricante / heuristic; ver `sources`)  “clássicos de Bowden” sem validação.
+**Regra desta base:** na A1 Mini, trate retract/PA como valores de **direct drive**. Não copie 4–8 mm “clássicos de Bowden” (heurística editorial (sem fonte pinada)) sem validação.
 
 ## Sinais de falha do caminho
 

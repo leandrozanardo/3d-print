@@ -47,16 +47,16 @@ User authorized thicken/clearance?
 python -m core repair-mesh 3ds/original/X.stl 3ds/upgraded/X.stl --json
 ```
 
-- Documented uniform scale  
-- Base rotation for preferred orientation  
-- Remove loose shells if safe and noted  
+- Documented uniform scale
+- Base rotation for preferred orientation
+- Remove loose shells if safe and noted
 
 **Forbidden without request:**
 
-- New sculpture, heavy remesh  
-- Silent tolerance / clearance changes  
-- Deleting structural bodies without note  
-- Overwriting original  
+- New sculpture, heavy remesh
+- Silent tolerance / clearance changes
+- Deleting structural bodies without note
+- Overwriting original
 
 Always log before/after in `plan.md` (size / bbox / command).
 
@@ -92,8 +92,8 @@ Mesh edits are material-agnostic; recipe still differs after repair.
 
 ## Validate on printer
 
-- Scale assumptions when source units unknown  
-- Fit clearances after any intentional thicken  
+- Scale assumptions when source units unknown
+- Fit clearances after any intentional thicken
 - Orientation bake vs Studio-only rotate (prefer one source of truth)
 
 ## Related

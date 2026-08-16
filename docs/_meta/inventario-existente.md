@@ -23,7 +23,7 @@ tags:
 ---
 # Inventário existente
 
-**Data da auditoria:** 2026-08-15  
+**Data da auditoria:** 2026-08-15
 **Comandos:** `git status --short`, `git log -n 20`, listagem de `docs/**/*.md`, `rg` por TODO/placeholder/absolutos, `python -m core validate-wiki docs --json` → `{"ok": true, "errors": []}`.
 
 ## Contagem
@@ -108,7 +108,7 @@ Não existe ainda a árvore canônica 01–23 (criada nesta wave). Não existe `
 
 ## Validador
 
-`python -m core validate-wiki docs --json` → **ok: true**, errors: [].  
+`python -m core validate-wiki docs --json` → **ok: true**, errors: [].
 Escopo do validador: links relativos. Não valida IDs/front matter (lacuna registrada).
 
 ## Bootstrap

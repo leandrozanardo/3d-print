@@ -78,7 +78,7 @@ Se risco a pessoa/patrimônio alto → **não** trate como hobby print.
 ## Hard constraints
 
 - Sem food/medical ([claims](../15-seguranca-e-meio-ambiente/claims-food-contact-e-medico.md))
-- Bed A1 Mini ≤ 80 °C (fonte oficial / fabricante / heuristic; ver `sources`) 
+- Bed A1 Mini ≤ 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))
 - Validação com [cupom/ensaio](../11-qualidade-e-metrologia/cupons-e-ensaios.md) antes do uso
 
 ## Seleção material

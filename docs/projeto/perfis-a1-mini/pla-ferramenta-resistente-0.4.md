@@ -95,19 +95,19 @@ Fits critical?
 
 ## Strength recipe (order)
 
-1. Orientation (XY load)  
-2. Walls 4–5  
-3. Top/bottom shells 5–6  
-4. Infill 25–40%  
-5. Only then material swap to PETG  
+1. Orientation (XY load)
+2. Walls 4–5
+3. Top/bottom shells 5–6
+4. Infill 25–40%
+5. Only then material swap to PETG
 
 ## Plan.md must cite
 
-- This profile + tools / fits geometry pages  
-- Orientation rationale  
-- Walls / infill / elephant compensation  
-- Clearance targets  
-- **validate on printer** for fit coupons  
+- This profile + tools / fits geometry pages
+- Orientation rationale
+- Walls / infill / elephant compensation
+- Clearance targets
+- **validate on printer** for fit coupons
 
 ## Related
 

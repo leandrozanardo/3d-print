@@ -34,14 +34,14 @@ Paint?
 
 ## A1 Mini rules
 
-1. Needle-nose pliers for supports; never pry across faces.  
-2. Cut brim with blade **parallel** to bed.  
-3. Sand PLA 400–1000; PETG gums — light pressure only.  
-4. Light wash before primer.  
-5. No acetone vapor on PLA.  
-6. Log post time in `3ds/plan/*.md` when it affects SOP.  
-7. Bad scars → fix [support interface](../fatiamento/suportes-face-e-interface.md).  
-8. Wear eye protection when clipping supports.  
+1. Needle-nose pliers for supports; never pry across faces.
+2. Cut brim with blade **parallel** to bed.
+3. Sand PLA 400–1000; PETG gums — light pressure only.
+4. Light wash before primer.
+5. No acetone vapor on PLA.
+6. Log post time in `3ds/plan/*.md` when it affects SOP.
+7. Bad scars → fix [support interface](../fatiamento/suportes-face-e-interface.md).
+8. Wear eye protection when clipping supports.
 9. Don’t sand off dimensional fits you still need — measure first.
 
 ## Workflow checklist
@@ -86,8 +86,8 @@ N/A in slicer for post. If scars are structural, return to:
 
 ## Plan.md notes
 
-- Estimate post minutes when comparing tree vs normal.  
-- Note if next iteration should reduce post via slicer.  
+- Estimate post minutes when comparing tree vs normal.
+- Note if next iteration should reduce post via slicer.
 - Mark paint workflow **validate on printer/paint system**.
 
 ## Related

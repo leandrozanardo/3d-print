@@ -35,13 +35,13 @@ Flat top critical?
 
 ## A1 Mini rules
 
-1. **Seam position:** `Aligned` / `Back` on hidden edge; `Nearest` spreads artifacts — use only if aligned looks worse.  
-2. Drop **outer wall speed** before chasing seam ghosts.  
-3. Calibrate **flow** before chasing ringing/ghosting.  
-4. **Ironing:** flat cosmetic tops only; time cost high — default off.  
-5. **Pressure advance / flow dynamics:** keep Bambu filament profile; change only after Ellis-style understanding — **validate on printer**.  
-6. Slow outer wall beats random PA tweaks for A1 Mini day-1.  
-7. Inner walls can stay faster than outer.  
+1. **Seam position:** `Aligned` / `Back` on hidden edge; `Nearest` spreads artifacts — use only if aligned looks worse.
+2. Drop **outer wall speed** before chasing seam ghosts.
+3. Calibrate **flow** before chasing ringing/ghosting.
+4. **Ironing:** flat cosmetic tops only; time cost high — default off.
+5. **Pressure advance / flow dynamics:** keep Bambu filament profile; change only after Ellis-style understanding — **validate on printer**.
+6. Slow outer wall beats random PA tweaks for A1 Mini day-1.
+7. Inner walls can stay faster than outer.
 8. PETG: even slower outer; don’t max cooling on structural walls.
 
 ## Suggested presets (PLA)
@@ -88,13 +88,13 @@ Flat top critical?
 
 ## Surface priority ladder
 
-1. Orientation (hide seam + overhangs)  
-2. Outer wall speed  
-3. Seam position  
-4. Flow calibration  
-5. Accel / ringing  
-6. PA / flow dynamics (advanced)  
-7. Ironing / post  
+1. Orientation (hide seam + overhangs)
+2. Outer wall speed
+3. Seam position
+4. Flow calibration
+5. Accel / ringing
+6. PA / flow dynamics (advanced)
+7. Ironing / post
 
 ## Related
 

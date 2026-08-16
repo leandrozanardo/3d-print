@@ -1,8 +1,8 @@
 # Design: First real optimization — `one+Piece.3mf` (decorative / scenario 2)
 
-**Date:** 2026-08-15  
-**Status:** Approved in brainstorming (sections 1–3)  
-**Subproject:** A of roadmap A → B → C  
+**Date:** 2026-08-15
+**Status:** Approved in brainstorming (sections 1–3)
+**Subproject:** A of roadmap A → B → C
 **System mode:** C (hybrid) · Optimization mode: B (recipe + light mesh)
 
 ---

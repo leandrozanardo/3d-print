@@ -123,7 +123,7 @@ Após secar ainda ruim?
 
 | Família | Temp. típica de partida | Tempo típico de partida | Notas |
 |---|---|---|---|
-| PLA | ~45–55 °C (fonte oficial / fabricante / heuristic; ver `sources`)  | ~4–6 h | Não exceda limite do spool |
+| PLA | ~45–55 °C — heurística editorial (sem fonte pinada) | ~4–6 h | Não exceda limite do spool |
 | PETG | ~65–70 °C | ~4–8 h | Re-secar após aberto em clima úmido |
 | TPU | seguir TDS (ordem semelhante a PETG em muitos SKUs) | TDS | Não inventar; marca manda |
 | PA | frequentemente mais quente/longo no TDS | TDS | Tratar overnight aberto como molhado |

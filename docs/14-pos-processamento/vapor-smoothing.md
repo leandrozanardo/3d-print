@@ -62,8 +62,8 @@ Hub pai: [Pós-processamento](INDEX.md)
 
 ## Aviso crítico
 
-Este processo envolve **solventes inflamáveis** e **vapores nocivos**.  
-Se não puder garantir ventilação, controle de ignição, SDS e descarte: **não faça**.  
+Este processo envolve **solventes inflamáveis** e **vapores nocivos**.
+Se não puder garantir ventilação, controle de ignição, SDS e descarte: **não faça**.
 Prefira [lixamento](lixamento-e-acabamento.md) / primer.
 
 ## O que é
@@ -102,13 +102,13 @@ Controles gerais de solvente: [IPA e vapores](../15-seguranca-e-meio-ambiente/so
 
 ## Controles mínimos (conceitos — não é DIY tutorial)
 
-1. Ler **SDS** do solvente e do filamento  
-2. Ventilação/exaustão reais; longe de dormitório e de chamas/hotend  
-3. Quantidade mínima de solvente; recipiente compatível; tampa consciente do risco de pressão/vapor  
-4. Peça **cupom** primeiro; tempo curto; inspecionar; iterar  
-5. PPE conforme SDS  
-6. Sem operação unattended  
-7. Descarte de residual conforme regra local  
+1. Ler **SDS** do solvente e do filamento
+2. Ventilação/exaustão reais; longe de dormitório e de chamas/hotend
+3. Quantidade mínima de solvente; recipiente compatível; tampa consciente do risco de pressão/vapor
+4. Peça **cupom** primeiro; tempo curto; inspecionar; iterar
+5. PPE conforme SDS
+6. Sem operação unattended
+7. Descarte de residual conforme regra local
 
 **Esta página deliberadamente não descreve montagem de câmara caseira passo a passo** (reduz incentivo a improvisos perigosos). Equipamentos comerciais existem com instruções próprias.
 
@@ -125,14 +125,14 @@ Controles gerais de solvente: [IPA e vapores](../15-seguranca-e-meio-ambiente/so
 
 ## Fontes de higiene / ambiente
 
-- [NIOSH AM](../22-fontes/niosh-additive-manufacturing.md)  
+- [NIOSH AM](../22-fontes/niosh-additive-manufacturing.md)
   https://www.cdc.gov/niosh/manufacturing/additive/index.html
-- [EPA 3D Printing Research](../22-fontes/epa-3d-printing-research.md)  
+- [EPA 3D Printing Research](../22-fontes/epa-3d-printing-research.md)
   https://www.epa.gov/chemical-research/3d-printing-research-epa
 
 ## Aplicabilidade e exclusão
 
-**Aplica-se a:** decisão de risco e escopo de vapor smoothing.  
+**Aplica-se a:** decisão de risco e escopo de vapor smoothing.
 **Não se aplica a:** receita de tempo/°C; “smooth” mecânico (lixa); epoxy coating (outra química).
 
 ## Relações

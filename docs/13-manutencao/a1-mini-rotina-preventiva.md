@@ -63,9 +63,9 @@ Rotina **preventiva** para reduzir falhas que o slicer não corrige: adesão inc
 
 ## Fontes oficiais (obrigatório seguir)
 
-- Wiki A1 mini (manuais / FAQ): [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md)  
+- Wiki A1 mini (manuais / FAQ): [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md)
   https://wiki.bambulab.com/en/a1-mini/manual · https://wiki.bambulab.com/en/a1-mini/manual/faq
-- Technical Specifications: [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)  
+- Technical Specifications: [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
   https://bambulab.com/en/a1-mini/tech-specs
 - Página canônica da máquina nesta base: [Bambu Lab A1 Mini](../21-impressoras/bambu-lab-a1-mini.md)
 

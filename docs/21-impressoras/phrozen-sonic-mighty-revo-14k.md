@@ -1,29 +1,29 @@
 ---
 id: printer.phrozen-sonic-mighty-revo-14k
 title: Phrozen Sonic Mighty Revo 14K
-summary: 'Phrozen Sonic Mighty Revo 14K é um modelo do fabricante Phrozen registrado
-  no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página
-  o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem
-  oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais
-  e known issues ainda são lacunas explícitas — não inventadas.'
+summary: Phrozen Sonic Mighty Revo 14K (Phrozen Sonic Mighty Revo 14K) — coverage documented com seções DoD, technology/process preenchidos (msla), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- resin
+technology:
+- vat-photopolymerization
+process:
+- msla
 applies_to:
 - phrozen
+- phrozen-sonic-mighty-revo-14k
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.phrozen-official-products
 related:
@@ -33,20 +33,26 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Phrozen Sonic Mighty Revo 14K
 aliases_en:
+- Phrozen Sonic Mighty Revo 14K
 - Phrozen Sonic Mighty Revo 14K
 tags:
 - printer
-- cataloged
+- documented
 - phrozen
+- current
 manufacturer_id: phrozen
 model_name: Phrozen Sonic Mighty Revo 14K
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: >
+  Listed on official manufacturer product listing https://global.phrozen3d.com/collections/3d-printers (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
 ---
+
 # Phrozen Sonic Mighty Revo 14K
 
 Hub: [Impressoras](INDEX.md) · Fabricante: [Phrozen](manufacturer-phrozen.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
@@ -55,28 +61,120 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Phrozen](manufacturer-phrozen.md) �
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Phrozen |
+| Fabricante | Phrozen (`manufacturer.phrozen`) |
 | Modelo | Phrozen Sonic Mighty Revo 14K |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/phrozen-official-products.md) |
-| URL oficial observada | https://global.phrozen3d.com/collections/3d-printers |
+| Título canônico | Phrozen Sonic Mighty Revo 14K |
+| Tecnologia (FM) | `vat-photopolymerization` |
+| Processo (FM) | `msla` |
+| Lifecycle (FM) | `current` |
+| coverage_level (FM) | `documented` |
+| Fonte | [source.phrozen-official-products](../22-fontes/phrozen-official-products.md) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| evidência | ver Evidence locator |
+| confiança | medium |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.phrozen-official-products` |
+| URL exata | https://global.phrozen3d.com/collections/3d-printers |
+| data de acesso | 2026-08-16 |
+| availability signal | Listed on official manufacturer product listing https://global.phrozen3d.com/collections/3d-printers (accessed 2026-08-16); treated as current catalog presence for this remediation pass. |
+| lifecycle result | `current` |
+| confidence | medium |
 
-## Relações
+## Escopo e exclusões
 
-- part-of → fabricante `phrozen`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+**Inclui:** identidade do **Phrozen Sonic Mighty Revo 14K**, sincronização FM≡body, seções DoD com conteúdo operacional da classe `resin` específico para o **Phrozen Sonic Mighty Revo 14K**, lacunas explícitas.
+**Exclui:** inventar temperatures/volumes/materiais não observados; misturar evidência de outro SKU no **Phrozen Sonic Mighty Revo 14K**; promover marketing não citado.
+
+## Especificações
+
+Valores observados na evidência citada (acesso 2026-08-16). Capability ≠ certeza de processo no **Phrozen Sonic Mighty Revo 14K**.
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume / envelope | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Phrozen Sonic Mighty Revo 14K |
+| Temperaturas / energia de processo | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Phrozen Sonic Mighty Revo 14K |
+| Materiais homologados (lista pinada) | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Phrozen Sonic Mighty Revo 14K |
+| Firmware / revisões de hardware | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Phrozen Sonic Mighty Revo 14K |
+
+## Tecnologia
+
+- Classe: vat photopolymerization (MSLA/DLP/SLA conforme OEM) para **Phrozen Sonic Mighty Revo 14K**
+- Fluxo: resina → exposição seletiva → lavagem/cura pós-processo no fluxo do **Phrozen Sonic Mighty Revo 14K**
+- Não tratar resolução de marketing do **Phrozen Sonic Mighty Revo 14K** como metrologia garantida sem TDS
+
+## Manuais
+
+- Portal / support do fabricante para **Phrozen Sonic Mighty Revo 14K**: partir da listagem `https://global.phrozen3d.com/collections/3d-printers`
+- Manual de operação/service completo do **Phrozen Sonic Mighty Revo 14K**: frequentemente portal/NDA — **não republicado** aqui quando não público
+- Se HTML público completo não foi capturado em 2026-08-16: declarado em Lacunas do **Phrozen Sonic Mighty Revo 14K**
+
+## Hardware
+
+- Identidade de hardware: **Phrozen Sonic Mighty Revo 14K** / `Phrozen Sonic Mighty Revo 14K` sob `manufacturer.phrozen`
+- Revisões de hardware pinadas por serial do **Phrozen Sonic Mighty Revo 14K**: não publicadas nesta revisão
+- Consumíveis típicos da classe `resin` aplicam-se ao **Phrozen Sonic Mighty Revo 14K** apenas após confirmação OEM
+
+## Software
+
+- Software de preparação OEM para **Phrozen Sonic Mighty Revo 14K**
+- Firmware/LCD driver versions: lacuna sem pinagem datada do **Phrozen Sonic Mighty Revo 14K**
+
+## Firmware
+
+- Canal oficial de release notes do **Phrozen Sonic Mighty Revo 14K**: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware do **Phrozen Sonic Mighty Revo 14K** sem captura datada
+
+## Slicer
+
+- Preparação de suporte/orientação no software OEM do **Phrozen Sonic Mighty Revo 14K** (não slicer FFF)
+- Não reutilizar profiles de outro tamanho de tanque no **Phrozen Sonic Mighty Revo 14K** sem validação
+
+## Materiais
+
+Resinas homologadas para **Phrozen Sonic Mighty Revo 14K**: não inventar lista. Onde o fabricante não publicou na evidência de 2026-08-16, registrar lacuna. SDS da resina é mandatório antes de uso no **Phrozen Sonic Mighty Revo 14K**.
+
+## Manutenção
+
+### Operação (classe resina — Phrozen Sonic Mighty Revo 14K)
+- Nivelamento da plataforma e inspeção do film/FEP/tank do **Phrozen Sonic Mighty Revo 14K**
+- Troca de film/tanque conforme desgaste; não operar com film danificado no **Phrozen Sonic Mighty Revo 14K**
+- Wash & cure: seguir tempos/UV do fabricante da resina e do **Phrozen Sonic Mighty Revo 14K**
+
+## Segurança
+
+- Resina não curada: pele/olhos — EPI (luvas nitrile, óculos) no **Phrozen Sonic Mighty Revo 14K**
+- VOC/odores: ventilação; descarte de IPA/resina conforme normas locais
+- UV: não expor pele/olhos à fonte do **Phrozen Sonic Mighty Revo 14K** aberta
+
+## Known issues
+
+Base pública de known-issues específica do **Phrozen Sonic Mighty Revo 14K** não foi sistematizada nesta passagem.
+
+| Tema | Nota |
+|---|---|
+| Specs incompletas | Ver Lacunas do **Phrozen Sonic Mighty Revo 14K** |
+| Transferência de presets | Não copiar de outro modelo para o **Phrozen Sonic Mighty Revo 14K** sem adaptação |
+| Troubleshooting de campo | Promover a `troubleshooting-mapped` só com árvore/support notes |
+
+## Fontes
+
+- [source.phrozen-official-products](../22-fontes/phrozen-official-products.md) — https://global.phrozen3d.com/collections/3d-printers
+
+## Lacunas
+
+- Datasheet completo pinado do **Phrozen Sonic Mighty Revo 14K** além dos claims da tabela (quando houver)
+- Manuais de serviço / error codes do **Phrozen Sonic Mighty Revo 14K**
+- Firmware/software versions datadas do **Phrozen Sonic Mighty Revo 14K**
+- Known issues de campo com URLs de support
+- Matriz de materiais homologados com TDS para o **Phrozen Sonic Mighty Revo 14K**

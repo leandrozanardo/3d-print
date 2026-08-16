@@ -99,19 +99,19 @@ Todos geram **vapores** com riscos de inflamabilidade, irritação e exposição
 
 ## Inflamabilidade e ignição
 
-Fontes típicas perto do hobby: bed/hotend quentes, faísca, cigarro, aquecedor, estática em casos extremos.  
+Fontes típicas perto do hobby: bed/hotend quentes, faísca, cigarro, aquecedor, estática em casos extremos.
 **Regra:** solvente aberto e superfície quente **não** compartilham bancada no mesmo momento.
 
 Ver também [elétrico/fogo](eletrico-fogo-e-impressao-desacompanhada.md).
 
 ## Exposição e evidência de agências
 
-- [NIOSH Additive Manufacturing](../22-fontes/niosh-additive-manufacturing.md)  
+- [NIOSH Additive Manufacturing](../22-fontes/niosh-additive-manufacturing.md)
   https://www.cdc.gov/niosh/manufacturing/additive/index.html
-- [EPA 3D Printing Research](../22-fontes/epa-3d-printing-research.md)  
+- [EPA 3D Printing Research](../22-fontes/epa-3d-printing-research.md)
   https://www.epa.gov/chemical-research/3d-printing-research-epa
 
-**Fato:** química de processos AM e solventes associados é objeto de higiene/pesquisa.  
+**Fato:** química de processos AM e solventes associados é objeto de higiene/pesquisa.
 **Não fato:** “IPA é sempre seguro porque evapora rápido”.
 
 Se irritação ocular/respiratória, dor de cabeça ou tontura: **saia**, ventile, reavalie — não “acostume”.
@@ -122,7 +122,7 @@ Solvente na peça **não** cria utensílio food-safe. Ver [claims](claims-food-c
 
 ## Aplicabilidade e exclusão
 
-**Aplica-se a:** limpeza e pós com solventes no escopo desta KB.  
+**Aplica-se a:** limpeza e pós com solventes no escopo desta KB.
 **Não se aplica a:** formulação de thinner automotivo; escolha de respirador sem SDS; legal disposal mapping por município (aponta autoridade local).
 
 ## Relações

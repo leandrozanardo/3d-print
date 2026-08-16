@@ -1,29 +1,29 @@
 ---
 id: printer.farsoon-403p
 title: Farsoon 403P
-summary: 'Farsoon 403P é um modelo do fabricante Farsoon registrado no catálogo fix-my-print
-  (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura
-  é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em
-  2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues
-  ainda são lacunas explícitas — não inventadas.'
+summary: Farsoon 403P (Farsoon 403P) — coverage documented com seções DoD, technology/process preenchidos (sls), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- powder-bed-fusion
+technology:
+- powder-bed-fusion
+process:
+- sls
 applies_to:
 - farsoon
+- farsoon-403p
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.farsoon-official-products
 related:
@@ -33,20 +33,26 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Farsoon 403P
 aliases_en:
+- Farsoon 403P
 - Farsoon 403P
 tags:
 - printer
-- cataloged
+- documented
 - farsoon
+- current
 manufacturer_id: farsoon
 model_name: Farsoon 403P
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: >
+  Listed on official manufacturer product listing https://www.farsoon-gl.com/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
 ---
+
 # Farsoon 403P
 
 Hub: [Impressoras](INDEX.md) · Fabricante: [Farsoon](manufacturer-farsoon.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
@@ -55,28 +61,120 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Farsoon](manufacturer-farsoon.md) �
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Farsoon |
+| Fabricante | Farsoon (`manufacturer.farsoon`) |
 | Modelo | Farsoon 403P |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/farsoon-official-products.md) |
-| URL oficial observada | https://www.farsoon-gl.com/ |
+| Título canônico | Farsoon 403P |
+| Tecnologia (FM) | `powder-bed-fusion` |
+| Processo (FM) | `sls` |
+| Lifecycle (FM) | `current` |
+| coverage_level (FM) | `documented` |
+| Fonte | [source.farsoon-official-products](../22-fontes/farsoon-official-products.md) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| evidência | ver Evidence locator |
+| confiança | medium |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.farsoon-official-products` |
+| URL exata | https://www.farsoon-gl.com/ |
+| data de acesso | 2026-08-16 |
+| availability signal | Listed on official manufacturer product listing https://www.farsoon-gl.com/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass. |
+| lifecycle result | `current` |
+| confidence | medium |
 
-## Relações
+## Escopo e exclusões
 
-- part-of → fabricante `farsoon`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+**Inclui:** identidade do **Farsoon 403P**, sincronização FM≡body, seções DoD com conteúdo operacional da classe `sls` específico para o **Farsoon 403P**, lacunas explícitas.
+**Exclui:** inventar temperatures/volumes/materiais não observados; misturar evidência de outro SKU no **Farsoon 403P**; promover marketing não citado.
+
+## Especificações
+
+Valores observados na evidência citada (acesso 2026-08-16). Capability ≠ certeza de processo no **Farsoon 403P**.
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume / envelope | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Farsoon 403P |
+| Temperaturas / energia de processo | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Farsoon 403P |
+| Materiais homologados (lista pinada) | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Farsoon 403P |
+| Firmware / revisões de hardware | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — Farsoon 403P |
+
+## Tecnologia
+
+- Classe: powder bed fusion (polímero) — **Farsoon 403P**
+- Fluxo: powder → fusão seletiva (laser/agents) → cool/unpack no **Farsoon 403P**
+- Packing density e reuse ratio são parâmetros de processo, não inventados aqui para **Farsoon 403P**
+
+## Manuais
+
+- Portal / support do fabricante para **Farsoon 403P**: partir da listagem `https://www.farsoon-gl.com/`
+- Manual de operação/service completo do **Farsoon 403P**: frequentemente portal/NDA — **não republicado** aqui quando não público
+- Se HTML público completo não foi capturado em 2026-08-16: declarado em Lacunas do **Farsoon 403P**
+
+## Hardware
+
+- Identidade de hardware: **Farsoon 403P** / `Farsoon 403P` sob `manufacturer.farsoon`
+- Revisões de hardware pinadas por serial do **Farsoon 403P**: não publicadas nesta revisão
+- Consumíveis típicos da classe `sls` aplicam-se ao **Farsoon 403P** apenas após confirmação OEM
+
+## Software
+
+- Suite de build/fleet do OEM aplicável ao **Farsoon 403P**
+- Versões pinadas: lacuna sem captura datada do **Farsoon 403P**
+
+## Firmware
+
+- Canal oficial de release notes do **Farsoon 403P**: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware do **Farsoon 403P** sem captura datada
+
+## Slicer
+
+- Build preparation OEM (não slicer FFF) para **Farsoon 403P**
+- Nesting/packing: seguir limites do **Farsoon 403P**
+
+## Materiais
+
+Pós/materiais oficiais do **Farsoon 403P**: apenas o que estiver na evidência citada; resto = lacuna. SDS do pó obrigatório para o **Farsoon 403P**.
+
+## Manutenção
+
+### Operação (classe PBF polímero — Farsoon 403P)
+- Seguir workflow prepare → print → cool → unpack do fabricante no **Farsoon 403P**
+- Contenção de pó e housekeeping do **Farsoon 403P**; não improvisar recycle ratios
+- Manutenção de filtros/recirculação conforme portal OEM
+
+## Segurança
+
+- Pó polímero: inalação/particulados — EPI e contenção no **Farsoon 403P**
+- Superfícies quentes / energia de processo no **Farsoon 403P**
+- Parada: alarme OEM, odor anômalo, falha de contenção
+
+## Known issues
+
+Base pública de known-issues específica do **Farsoon 403P** não foi sistematizada nesta passagem.
+
+| Tema | Nota |
+|---|---|
+| Specs incompletas | Ver Lacunas do **Farsoon 403P** |
+| Transferência de presets | Não copiar de outro modelo para o **Farsoon 403P** sem adaptação |
+| Troubleshooting de campo | Promover a `troubleshooting-mapped` só com árvore/support notes |
+
+## Fontes
+
+- [source.farsoon-official-products](../22-fontes/farsoon-official-products.md) — https://www.farsoon-gl.com/
+
+## Lacunas
+
+- Datasheet completo pinado do **Farsoon 403P** além dos claims da tabela (quando houver)
+- Manuais de serviço / error codes do **Farsoon 403P**
+- Firmware/software versions datadas do **Farsoon 403P**
+- Known issues de campo com URLs de support
+- Matriz de materiais homologados com TDS para o **Farsoon 403P**

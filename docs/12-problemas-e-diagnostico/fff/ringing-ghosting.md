@@ -122,18 +122,18 @@ Capability de speed/accel nas [tech specs](../../22-fontes/bambu-a1-mini-tech-sp
 
 ## Testes barato → caro
 
-1. Foto obliqua de um canto agudo  
-2. Mesmo cupom com só outer speed menor  
-3. Verificar mecánica  
-4. Só então calibração avançada / resonance tools do ecossistema, se existirem na sua revisão  
+1. Foto obliqua de um canto agudo
+2. Mesmo cupom com só outer speed menor
+3. Verificar mecánica
+4. Só então calibração avançada / resonance tools do ecossistema, se existirem na sua revisão
 
 Método geral de leitura: [Ellis Print Tuning Guide](../../22-fontes/ellis-print-tuning-guide.md).
 
 ## Não faça
 
-- Cinco knobs (accel + speed + flow + temp + PA) juntos  
-- Apertar correia “no feeling”  
-- Ignorar layer shift real tratando como ringing  
+- Cinco knobs (accel + speed + flow + temp + PA) juntos
+- Apertar correia “no feeling”
+- Ignorar layer shift real tratando como ringing
 
 ## Validação
 
@@ -152,7 +152,7 @@ Mesmo modelo; mesma distância focal da foto; uma mudança principal.
 
 ## Fontes
 
-- [Ellis Print Tuning Guide](../../22-fontes/ellis-print-tuning-guide.md) — método  
+- [Ellis Print Tuning Guide](../../22-fontes/ellis-print-tuning-guide.md) — método
   https://ellis3dp.com/Print-Tuning-Guide/
 - [Bambu A1 mini tech specs](../../22-fontes/bambu-a1-mini-tech-specs.md) — capabilities ≠ quality targets
 - Legado: [altura-de-camada-e-velocidade](../../projeto/fatiamento/altura-de-camada-e-velocidade.md)

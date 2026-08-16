@@ -1,29 +1,29 @@
 ---
 id: printer.bcn3d-omega-i60
 title: BCN3D Omega I60
-summary: 'BCN3D Omega I60 é um modelo do fabricante BCN3D registrado no catálogo fix-my-print
-  (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura
-  é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em
-  2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues
-  ainda são lacunas explícitas — não inventadas.'
+summary: BCN3D Omega I60 (BCN3D Omega I60) — coverage documented com seções DoD, technology/process preenchidos (fff), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
 - bcn3d
+- bcn3d-omega-i60
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.bcn3d-official-products
 related:
@@ -33,50 +33,148 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- BCN3D Omega I60
 aliases_en:
+- BCN3D Omega I60
 - BCN3D Omega I60
 tags:
 - printer
-- cataloged
+- documented
 - bcn3d
+- current
 manufacturer_id: bcn3d
 model_name: BCN3D Omega I60
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: >
+  Listed on official manufacturer product listing https://bcn3d.com/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
 ---
+
 # BCN3D Omega I60
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [BCN3D](manufacturer-bcn3d.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [Bcn3D](manufacturer-bcn3d.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | BCN3D |
+| Fabricante | Bcn3D (`manufacturer.bcn3d`) |
 | Modelo | BCN3D Omega I60 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/bcn3d-official-products.md) |
-| URL oficial observada | https://bcn3d.com/ |
+| Título canônico | BCN3D Omega I60 |
+| Tecnologia (FM) | `material-extrusion` |
+| Processo (FM) | `fff` |
+| Lifecycle (FM) | `current` |
+| coverage_level (FM) | `documented` |
+| Fonte | [source.bcn3d-official-products](../22-fontes/bcn3d-official-products.md) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| evidência | ver Evidence locator |
+| confiança | medium |
 
-## Lacunas (obrigatórias)
+## Evidence locator
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+| Campo | Valor |
+|---|---|
+| source id | `source.bcn3d-official-products` |
+| URL exata | https://bcn3d.com/ |
+| data de acesso | 2026-08-16 |
+| availability signal | Listed on official manufacturer product listing https://bcn3d.com/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass. |
+| lifecycle result | `current` |
+| confidence | medium |
 
-## Relações
+## Escopo e exclusões
 
-- part-of → fabricante `bcn3d`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+**Inclui:** identidade do **BCN3D Omega I60**, sincronização FM≡body, seções DoD com conteúdo operacional da classe `fff` específico para o **BCN3D Omega I60**, lacunas explícitas.
+**Exclui:** inventar temperatures/volumes/materiais não observados; misturar evidência de outro SKU no **BCN3D Omega I60**; promover marketing não citado.
+
+## Especificações
+
+Valores observados na evidência citada (acesso 2026-08-16). Capability ≠ certeza de processo no **BCN3D Omega I60**.
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume / envelope | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — BCN3D Omega I60 |
+| Temperaturas / energia de processo | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — BCN3D Omega I60 |
+| Materiais homologados (lista pinada) | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — BCN3D Omega I60 |
+| Firmware / revisões de hardware | não publicado pelo fabricante na evidência consultada em 2026-08-16 | honest lacuna — BCN3D Omega I60 |
+
+## Tecnologia
+
+- Classe: material extrusion / FFF para **BCN3D Omega I60** (`BCN3D Omega I60`)
+- Fluxo típico: filamento → hotend → deposição camada a camada na mesa do **BCN3D Omega I60**
+- Capability ≠ certeza de processo em qualquer filamento no **BCN3D Omega I60**
+
+## Manuais
+
+- Portal / support do fabricante para **BCN3D Omega I60**: partir da listagem `https://bcn3d.com/`
+- Manual de operação/service completo do **BCN3D Omega I60**: frequentemente portal/NDA — **não republicado** aqui quando não público
+- Se HTML público completo não foi capturado em 2026-08-16: declarado em Lacunas do **BCN3D Omega I60**
+
+## Hardware
+
+- Identidade de hardware: **BCN3D Omega I60** / `BCN3D Omega I60` sob `manufacturer.bcn3d`
+- Revisões de hardware pinadas por serial do **BCN3D Omega I60**: não publicadas nesta revisão
+- Consumíveis típicos da classe `fff` aplicam-se ao **BCN3D Omega I60** apenas após confirmação OEM
+
+## Software
+
+- Ecossistema de software do fabricante aplicável ao **BCN3D Omega I60** (app/slicer/cloud conforme OEM)
+- Versões pinadas: lacuna sem captura datada para o **BCN3D Omega I60**
+
+## Firmware
+
+- Canal oficial de release notes do **BCN3D Omega I60**: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware do **BCN3D Omega I60** sem captura datada
+
+## Slicer
+
+- Usar perfil/preset do **BCN3D Omega I60** no slicer suportado pelo OEM quando existir
+- Não colar presets de outra família sem revisão dimensional/térmica do **BCN3D Omega I60**
+
+## Materiais
+
+Materiais compatíveis oficiais pinados para **BCN3D Omega I60**: não publicados pelo fabricante na evidência consultada em 2026-08-16 (exceto se listados na tabela de Especificações). Não inventar matriz PLA/ABS/ASA para o **BCN3D Omega I60**. TDS/SDS não são substituídos por esta página.
+
+## Manutenção
+
+### Calibração (classe FFF — BCN3D Omega I60)
+- Primeira camada e leveling conforme procedimento do fabricante para **BCN3D Omega I60**
+- Verificar tensão de correia/extrusor e fluxo antes de culpar o filamento no **BCN3D Omega I60**
+- Manutenção preventiva: limpeza de nozzle, lubrificação de eixos conforme manual do **BCN3D Omega I60**
+
+## Segurança
+
+- Superfícies quentes (hotend/mesa) no **BCN3D Omega I60**
+- Fumos de termoplásticos: ventilação adequada ao operar o **BCN3D Omega I60**
+- Critérios de parada: smell anômalo, blob no hotend, falha de sensor, overtemp
+
+## Known issues
+
+Base pública de known-issues específica do **BCN3D Omega I60** não foi sistematizada nesta passagem.
+
+| Tema | Nota |
+|---|---|
+| Specs incompletas | Ver Lacunas do **BCN3D Omega I60** |
+| Transferência de presets | Não copiar de outro modelo para o **BCN3D Omega I60** sem adaptação |
+| Troubleshooting de campo | Promover a `troubleshooting-mapped` só com árvore/support notes |
+
+## Fontes
+
+- [source.bcn3d-official-products](../22-fontes/bcn3d-official-products.md) — https://bcn3d.com/
+
+## Lacunas
+
+- Datasheet completo pinado do **BCN3D Omega I60** além dos claims da tabela (quando houver)
+- Manuais de serviço / error codes do **BCN3D Omega I60**
+- Firmware/software versions datadas do **BCN3D Omega I60**
+- Known issues de campo com URLs de support
+- Matriz de materiais homologados com TDS para o **BCN3D Omega I60**

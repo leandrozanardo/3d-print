@@ -61,7 +61,7 @@ Hub pai: [Qualidade e metrologia](INDEX.md)
 
 ## O que é
 
-**Cupom:** peça-teste barata que responde a **uma pergunta**.  
+**Cupom:** peça-teste barata que responde a **uma pergunta**.
 **Ensaio funcional:** a peça (ou proxy) sob uso/carga representativa.
 
 ## Quando usar

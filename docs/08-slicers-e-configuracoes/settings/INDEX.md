@@ -56,9 +56,9 @@ Páginas atômicas (conceito primeiro; notas de nome Bambu Studio sem path etern
 
 ## Como usar
 
-1. Partir do preset **A1 Mini** + material no Studio  
-2. Ler o conceito semântico antes de caçar o campo na UI  
-3. Uma variável por teste; secar filamento antes de temp/retract/flow  
+1. Partir do preset **A1 Mini** + material no Studio
+2. Ler o conceito semântico antes de caçar o campo na UI
+3. Uma variável por teste; secar filamento antes de temp/retract/flow
 4. Respeitar bed ≤ 80 °C na A1 Mini ([tech specs](../../22-fontes/bambu-a1-mini-tech-specs.md))
 
 ## Relacionados

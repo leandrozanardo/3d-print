@@ -25,6 +25,7 @@ review_cycle: 6-months
 sources:
 - source.iso-astm-52900-entry
 - source.niosh-am-entry
+- source.bambu-a1-mini-tech-specs
 related:
 - hub.glossario
 - fund.terminology
@@ -158,7 +159,7 @@ Categoria ISO/ASTM: material dispensado por bico. Hub: [material-extrusion](../0
 
 ## Nozzle (bico) {#term-nozzle}
 
-Orifício de saída do hotend; diâmetro limita feature XY e flow. Ex.: [nozzle 0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md).
+Orifício de saída do hotend; diâmetro limita feature XY e flow. Ex.: [nozzle 0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md).
 
 ## Overhang {#term-overhang}
 
