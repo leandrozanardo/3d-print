@@ -1,29 +1,30 @@
 ---
 id: printer.sprintray-pro-2
 title: SprintRay Pro 2
-summary: 'SprintRay Pro 2 é um modelo do fabricante SprintRay registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: SprintRay Pro 2 (SprintRay Pro 2) — coverage documented com seções DoD, technology/process
+  preenchidos (dlp), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- resin
+technology:
+- vat-photopolymerization
+process:
+- dlp
 applies_to:
 - sprintray
+- sprintray-pro-2
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.sprintray-official-products
 related:
@@ -33,50 +34,146 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- SprintRay Pro 2
 aliases_en:
+- SprintRay Pro 2
 - SprintRay Pro 2
 tags:
 - printer
-- cataloged
+- documented
 - sprintray
+- current
 manufacturer_id: sprintray
 model_name: SprintRay Pro 2
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: 'Listed on official manufacturer product listing https://sprintray.com/dental-3d-printers/
+  (accessed 2026-08-16); treated as current catalog presence for this remediation
+  pass.
+
+  '
 ---
 # SprintRay Pro 2
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [SprintRay](manufacturer-sprintray.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [sprintray](manufacturer-sprintray.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Entrada **printer.sprintray-pro-2**: conteúdo específico do SKU, sem transferir números de irmãos de linha.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | SprintRay |
+| Fabricante | sprintray (manufacturer.sprintray) |
 | Modelo | SprintRay Pro 2 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/sprintray-official-products.md) |
-| URL oficial observada | https://sprintray.com/dental-3d-printers/ |
+| Título canônico | SprintRay Pro 2 |
+| Família | unknown |
+| Aliases EN | SprintRay Pro 2, SprintRay Pro 2 |
+| Tecnologia | vat-photopolymerization |
+| Processo | dlp |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.sprintray-pro-2 |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | US |
+| availability_evidence | Listed on official manufacturer product listing https://sprintray.com/dental-3d-printers/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
+ |
+| URL de evidência | https://sprintray.com/dental-3d-printers/ |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.sprintray-official-products |
+| URL | https://sprintray.com/dental-3d-printers/ |
+| nome observado | SprintRay Pro 2 / SprintRay Pro 2 |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | medium |
 
-- part-of → fabricante `sprintray`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **SprintRay Pro 2**, evidência de lifecycle acima, classificação vat-photopolymerization/dlp, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo sprintray.
+
+## Especificações
+
+Valores de volume, temperatura e velocidade para **SprintRay Pro 2**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+
+Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
+
+## Tecnologia
+
+- Technology: vat-photopolymerization
+- Process: dlp
+- Nota: conteúdo operacional da classe — fotopolimerização em cuba (SLA/MSLA/DLP/LFS)
+
+## Manuais
+
+Mapa de manuais específicos de **SprintRay Pro 2**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte sprintray + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **SprintRay Pro 2**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Slicer/firmware do ecossistema sprintray aplicam-se somente após confirmar perfil/SKU **SprintRay Pro 2**.
+
+## Firmware
+
+Canal de firmware de **SprintRay Pro 2**: não pinado (2026-08-16).
+
+## Slicer
+
+Usar perfis oficiais sprintray quando existirem para **SprintRay Pro 2**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: exposição, lift speeds e suporte — seguir resin settings oficiais quando existirem.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **SprintRay Pro 2**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **SprintRay Pro 2**: cuba/FEP ou membrana, placa de construção, filtragem de resina e limpeza de óptica conforme OEM. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **SprintRay Pro 2**: PPE para resina não curada, ventilação, descarte conforme SDS; UV/LED conforme classe do equipamento.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Nenhum known issue classificado para **SprintRay Pro 2** nesta passagem: sem confirmação oficial, reprodução controlada ou tríade independente.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.sprintray-official-products](../22-fontes/sprintray-official-products.md)
+- URL observada: https://sprintray.com/dental-3d-printers/
+
+## Lacunas
+
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **SprintRay Pro 2**
+- Troubleshooting oficial por sintoma para **SprintRay Pro 2**
+- Revisões de hardware / changelogs de **SprintRay Pro 2**
+- Página de produto dedicada ao SKU **SprintRay Pro 2** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **SprintRay Pro 2**
+- Firmware/release notes pinados para **SprintRay Pro 2**

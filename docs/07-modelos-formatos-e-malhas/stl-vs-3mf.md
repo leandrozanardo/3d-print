@@ -61,7 +61,7 @@ Hub pai: [Modelos, formatos e malhas](INDEX.md)
 - **STL** (*stereolithography* file / malha triangular): representa a superfície como triângulos. Formato legado, ubíquo, sem metadados ricos de materiais, cores ou cena multiobjeto.
 - **3MF** (*3D Manufacturing Format*): formato pensado para manufatura aditiva; pode carregar malha e metadados (unidades, objetos, cores/materiais, transformações) quando exportador e consumidor concordam.
 
-**Fato:** ambos descrevem geometria aproximada por malha (quando o fluxo é mesh-based); nenhum “cura” sozinho um modelo não-manifold.  
+**Fato:** ambos descrevem geometria aproximada por malha (quando o fluxo é mesh-based); nenhum “cura” sozinho um modelo não-manifold.
 **Heurística:** no ecossistema Bambu Studio / fluxo desta base, preferir **3MF** como entregável de projeto quando o pipeline preservar o arquivo; usar **STL** quando a origem ou a ferramenta de reparo exigir.
 
 ## Quando importa
@@ -91,7 +91,7 @@ Hub pai: [Modelos, formatos e malhas](INDEX.md)
 
 ## Aplicabilidade e exclusão
 
-**Aplica-se a:** FFF desktop, fluxo digital desta KB, Bambu Studio.  
+**Aplica-se a:** FFF desktop, fluxo digital desta KB, Bambu Studio.
 **Não se aplica a:** afirmação de que 3MF elimina necessidade de reparo; STEP/B-rep como substituto automático (outro tipo de dado); garantia de que todo marketplace entrega 3MF válido.
 
 ## Segurança

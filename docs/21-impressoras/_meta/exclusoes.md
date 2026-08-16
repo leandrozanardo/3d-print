@@ -52,4 +52,4 @@ Modelos `discontinued` / `legacy-supported` relevantes para troubleshooting **pe
 
 ## Exclusões registradas neste batch
 
-Nenhuma exclusão factual de modelo específico ainda (censo não iniciado).
+Censo de impressoras concluído nesta remediação (2026-08-16): 354 modelos canônicos. Nenhuma exclusão factual adicional de SKU específico foi registrada neste batch além das regras gerais acima.

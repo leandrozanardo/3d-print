@@ -1,82 +1,178 @@
 ---
 id: printer.anycubic-kobra-3
 title: Anycubic Kobra 3
-summary: 'Anycubic Kobra 3 é um modelo do fabricante Anycubic registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: Anycubic Kobra 3 é FFF gantry 250×250×260 mm com ACE Pro multicolor (4–8
+  cores), ainda listada via Combo na loja oficial em 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
-- anycubic
+- anycubic-kobra-3
 not_for:
-- treat-as-documented-specs
-- invented-compatibility
+- invent-missing-specs
+- blind-profile-transfer
 knowledge_status: draft
+lifecycle: current
+coverage_level: documented
 evidence_status: manufacturer-specific
 safety_level: caution
-confidence: medium
+confidence: high
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
 sources:
 - source.anycubic-official-products
+- source.anycubic-kobra-3
 related:
 - manufacturer.anycubic
 - hub.impressoras
-- meta.printer-global-catalog
+- tech.fff
 prerequisites:
-- hub.impressoras
+- tech.fff
 supersedes: []
 aliases_pt_br: []
 aliases_en:
 - Anycubic Kobra 3
+- Kobra 3
 tags:
 - printer
-- cataloged
 - anycubic
+- fff
+- documented
+- kobra-3-series
 manufacturer_id: anycubic
 model_name: Kobra 3
-family_status: unknown
+family_status: kobra-3-series
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- Global
+availability_evidence: Listed for purchase (Kobra 3 Combo) with Add to cart on official
+  Anycubic store https://store.anycubic.com/products/kobra-3-combo; page notes free
+  upgrade to Kobra 4 Combo if Kobra 3 Combo out of stock (accessed 2026-08-16).
 ---
 # Anycubic Kobra 3
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Anycubic](manufacturer-anycubic.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [anycubic](manufacturer-anycubic.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Entrada **printer.anycubic-kobra-3**: conteúdo específico do SKU, sem transferir números de irmãos de linha.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Anycubic |
-| Modelo | Anycubic Kobra 3 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/anycubic-official-products.md) |
-| URL oficial observada | https://store.anycubic.com/collections/3d-printers |
+| Fabricante | anycubic (manufacturer.anycubic) |
+| Modelo | Kobra 3 |
+| Título canônico | Anycubic Kobra 3 |
+| Família | kobra-3-series |
+| Aliases EN | Anycubic Kobra 3, Kobra 3 |
+| Tecnologia | material-extrusion |
+| Processo | fff |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.anycubic-kobra-3 |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | Global |
+| availability_evidence | Listed for purchase (Kobra 3 Combo) with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-3-combo; page notes free upgrade to Kobra 4 Combo if Kobra 3 Combo out of stock (accessed 2026-08-16). |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.anycubic-official-products |
+| URL | https://store.anycubic.com/collections/3d-printers |
+| nome observado | Kobra 3 / Anycubic Kobra 3 |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | high |
 
-- part-of → fabricante `anycubic`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Anycubic Kobra 3**, evidência de lifecycle acima, classificação material-extrusion/fff, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo anycubic.
+
+## Especificações
+
+Valores de volume, temperatura e velocidade para **Kobra 3**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+
+Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
+
+## Tecnologia
+
+- Technology: material-extrusion
+- Process: fff
+- Nota: conteúdo operacional da classe — extrusão de filament/pellet (FFF/FDM ou variante)
+
+## Manuais
+
+Mapa de manuais específicos de **Kobra 3**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte anycubic + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Anycubic Kobra 3**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Slicer/firmware do ecossistema anycubic aplicam-se somente após confirmar perfil/SKU **Kobra 3**.
+
+## Firmware
+
+Canal de firmware de **Kobra 3**: não pinado (2026-08-16).
+
+## Slicer
+
+Usar perfis oficiais anycubic quando existirem para **Kobra 3**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: nivelamento/Z-offset, flow e temperaturas por material — não copiar presets de outro modelo.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Kobra 3**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Anycubic Kobra 3**: verificar path de filamento, bico, mesa/adesão e lubrificação de eixos conforme manual OEM. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Kobra 3**: superfícies quentes, partes móveis, risco de blob/incêndio residual se impressão desacompanhada sem monitoramento.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Nenhum known issue classificado para **Kobra 3** nesta passagem: sem confirmação oficial, reprodução controlada ou tríade independente.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.anycubic-kobra-3](../22-fontes/anycubic-kobra-3.md)
+
+- [source.anycubic-official-products](../22-fontes/anycubic-official-products.md)
+- URL observada: https://store.anycubic.com/collections/3d-printers
+
+## Lacunas
+
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Kobra 3**
+- Troubleshooting oficial por sintoma para **Anycubic Kobra 3**
+- Revisões de hardware / changelogs de **Kobra 3**
+- Página de produto dedicada ao SKU **Kobra 3** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **Anycubic Kobra 3**
+- Firmware/release notes pinados para **Kobra 3**

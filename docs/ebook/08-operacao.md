@@ -900,7 +900,10 @@ O Slic3r não é o único fatiador a ter fatiamento adaptativo, mas parece ser o
 
 ### A Importância da Primeira Camada
 
-![O filete de plástico da mesa mal nivelada (esquerda) é depositado flácido e sem aderência nenhuma com a mesa. Mesmo se essa impressão durar mais do que algumas camadas, em algum momento ela falhará. A mesa bem calibrada, à direita, permite uma primeira camada contínua e bem aderida. Note que a impressão é com ABS, no caso do PLA suas características o fariam ser mais "tolerante" a esse tipo de desnivelamento.](imagens/primeiracamadasethi.png)
+O filete de plástico da mesa mal nivelada (esquerda) é depositado flácido e sem aderência nenhuma com a mesa. Mesmo se essa impressão durar mais do que algumas camadas, em algum momento ela falhará. A mesa bem calibrada, à direita, permite uma primeira camada contínua e bem aderida. Note que a impressão é com ABS, no caso do PLA suas características o fariam ser mais "tolerante" a esse tipo de desnivelamento.
+
+*(Imagem referenciada no texto original nao e distribuida neste repositorio; ativo binario excluido da versao controlada. Texto descritivo preservado.)*
+
 
 *O filete de plástico da mesa mal nivelada (esquerda) é depositado flácido e sem aderência nenhuma com a mesa. Mesmo se essa impressão durar mais do que algumas camadas, em algum momento ela falhará. A mesa bem calibrada, à direita, permite uma primeira camada contínua e bem aderida. Note que a impressão é com ABS, no caso do PLA suas características o fariam ser mais "tolerante" a esse tipo de desnivelamento.*
 

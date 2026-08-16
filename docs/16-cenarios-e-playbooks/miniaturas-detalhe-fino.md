@@ -32,6 +32,7 @@ last_reviewed: '2026-08-15'
 review_cycle: 3-months
 sources:
 - source.niosh-am-entry
+- source.bambu-a1-mini-tech-specs
 related:
 - material.pla
 - post.support-removal-fff
@@ -76,7 +77,7 @@ Obter detalhe cosmético aceitável em figura/miniatura (rostos, bordas, textura
 
 - Sem food/medical ([claims](../15-seguranca-e-meio-ambiente/claims-food-contact-e-medico.md))
 - Resina: PPE + ventilação obrigatórios ([resina PPE](../15-seguranca-e-meio-ambiente/resina-ppe-e-descarte.md))
-- A1 Mini FFF: nozzle ref. [0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); detalhe limitado pelo cordão
+- A1 Mini FFF: nozzle ref. [0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); detalhe limitado pelo cordão
 
 ## Seleção tech / material
 

@@ -119,17 +119,17 @@ Faixas **horizontais** repetindo em Z? Diferencie de ringing. Seque filamento, e
 
 ## Testes barato → caro
 
-1. Cilindro ou torre lisa em PLA seco  
-2. Só secar se suspeita de umidade  
-3. Só reduzir variação de speed na pele  
-4. Inspeção mecânica conforme [Wiki A1 mini](../../22-fontes/bambu-wiki-a1-mini.md)  
+1. Cilindro ou torre lisa em PLA seco
+2. Só secar se suspeita de umidade
+3. Só reduzir variação de speed na pele
+4. Inspeção mecânica conforme [Wiki A1 mini](../../22-fontes/bambu-wiki-a1-mini.md)
 5. Calibração avançada só com método ([Ellis](../../22-fontes/ellis-print-tuning-guide.md))
 
 ## Não faça
 
-- Declarar leadscrew “danificado” sem inspeção  
-- Inventar mm de erro de passo  
-- Misturar com cinco mudanças de PA/retract  
+- Declarar leadscrew “danificado” sem inspeção
+- Inventar mm de erro de passo
+- Misturar com cinco mudanças de PA/retract
 
 ## Validação
 
@@ -137,9 +137,9 @@ Mesma geometria; iluminação rasante; before/after com uma causa.
 
 ## Prevenção
 
-- Filamento seco em jobs cosméticos  
-- Parede externa estável  
-- Manutenção preventiva  
+- Filamento seco em jobs cosméticos
+- Parede externa estável
+- Manutenção preventiva
 - Aceitar banding leve em vase como look, se for o caso — [vasos](../../16-cenarios-e-playbooks/vasos-e-recipientes.md)
 
 ## Relações

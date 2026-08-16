@@ -82,7 +82,7 @@ Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.m
 
 ## Resumo de emergência
 
-Fios entre torres/peças? **Seque** o filamento, depois −5 °C (fonte oficial / fabricante / heuristic; ver `sources`)  no range, depois torre de [retração](../../08-slicers-e-configuracoes/settings/retracao.md) curta (direct drive). Não suba retract para 5–8 mm (fonte oficial/fabricante/heuristic; ver sources) .
+Fios entre torres/peças? **Seque** o filamento, depois −5 °C no range (heurística editorial (sem fonte pinada)), depois torre de [retração](../../08-slicers-e-configuracoes/settings/retracao.md) curta (direct drive). Não suba retract para 5–8 mm (heurística editorial (sem fonte pinada)).
 
 ## Assinatura
 
@@ -121,11 +121,11 @@ Fios entre torres/peças? **Seque** o filamento, depois −5 °C (fonte oficial 
 
 ## Testes barato → caro
 
-1. Ouvir pops; secar  
-2. Cupom de duas torres  
-3. Uma mudança de temp  
-4. Torre de retract  
-5. Revisar wipe/AMS só depois  
+1. Ouvir pops; secar
+2. Cupom de duas torres
+3. Uma mudança de temp
+4. Torre de retract
+5. Revisar wipe/AMS só depois
 
 ## PLA vs PETG vs TPU
 
@@ -138,10 +138,10 @@ Fios entre torres/peças? **Seque** o filamento, depois −5 °C (fonte oficial 
 
 ## Não faça
 
-- Cinco knobs de uma vez  
-- Bowden lengths em DD  
-- Max fan em PETG só por stringing  
-- Ignorar umidade  
+- Cinco knobs de uma vez
+- Bowden lengths em DD
+- Max fan em PETG só por stringing
+- Ignorar umidade
 
 ## Validação
 
@@ -149,15 +149,15 @@ Mesmo cupom; foto before/after; registrar temp/retract/secagem.
 
 ## Prevenção
 
-- Estocar seco; secar PETG antes de jobs limpos  
-- Preset do material A1 Mini  
-- Purge em trocas de material  
+- Estocar seco; secar PETG antes de jobs limpos
+- Preset do material A1 Mini
+- Purge em trocas de material
 
 ## Relações com outros conceitos
 
-- caused-by → moisture, high temp, retract, travel  
-- mitigated-by → drying, retract tuning  
-- settings → [retracao](../../08-slicers-e-configuracoes/settings/retracao.md), [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md)  
+- caused-by → moisture, high temp, retract, travel
+- mitigated-by → drying, retract tuning
+- settings → [retracao](../../08-slicers-e-configuracoes/settings/retracao.md), [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md)
 - related-to → [empenamento](empenamento.md) só se draft/cooling extremos (secundário)
 
 ## Veja também

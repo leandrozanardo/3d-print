@@ -109,7 +109,7 @@ Corrigir bonding Z com “mais cola na mesa” é erro de categoria. Térmica: [
 ## O que não fazer
 
 - Afirmar que um spray/cola caseira “resolve qualquer PEI”
-- Subir temperatura sem limite “porque adesão” — [mito](../20-pesquisa-e-mitos/mito-mais-temp-mais-adesao-sempre.md)
+- Subir temperatura sem limite “porque adesão” — [mito](../20-pesquisa-e-mitos/mito-mais-temp-mais-adesao-absoluto.md)
 - Tratar falha no meio da peça como first-layer adhesion
 - Declarar superfície FFF como food-contact limpa — [claims](../15-seguranca-e-meio-ambiente/claims-food-contact-e-medico.md)
 

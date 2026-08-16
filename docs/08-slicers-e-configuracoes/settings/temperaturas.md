@@ -90,8 +90,8 @@ Busque **Nozzle temperature**, **Bed temperature**, first layer overrides, e tem
 
 ## Mecanismo
 
-↑ nozzle → melt mais fluido → melhor flow em speed alto, mais ooze/[stringing](../../12-problemas-e-diagnostico/fff/stringing.md), risco de heat creep em extremos.  
-↓ nozzle → mais definição, risco de [subextrusão](../../12-problemas-e-diagnostico/fff/subextrusao.md) e [delaminação](../../12-problemas-e-diagnostico/fff/delaminacao.md).  
+↑ nozzle → melt mais fluido → melhor flow em speed alto, mais ooze/[stringing](../../12-problemas-e-diagnostico/fff/stringing.md), risco de heat creep em extremos.
+↓ nozzle → mais definição, risco de [subextrusão](../../12-problemas-e-diagnostico/fff/subextrusao.md) e [delaminação](../../12-problemas-e-diagnostico/fff/delaminacao.md).
 ↑ bed (dentro do seguro) → melhor stick; excesso → [elephant foot](../../12-problemas-e-diagnostico/fff/elephant-foot.md).
 
 ## Limite duro A1 Mini
@@ -109,9 +109,9 @@ Bed máximo **80 °C** — [`source.bambu-a1-mini-tech-specs`](../../22-fontes/b
 
 | Material (Ideal A1 Mini) | Nozzle (ordem) | Bed (ordem) |
 |---|---|---|
-| [PLA](../../05-materiais/fff/pla.md) | ~190–220 °C (fonte oficial/fabricante/heuristic; ver sources)  | ~35–60 °C (fonte oficial/fabricante/heuristic; ver sources)  |
-| [PETG](../../05-materiais/fff/petg.md) | ~220–250 °C (fonte oficial/fabricante/heuristic; ver sources)  | ~70–80 °C (fonte oficial/fabricante/heuristic; ver sources)  (≤80) |
-| [TPU](../../05-materiais/fff/tpu.md) | ~210–230 °C (fonte oficial/fabricante/heuristic; ver sources)  | ~30–60 °C |
+| [PLA](../../05-materiais/fff/pla.md) | ~190–220 °C — heurística editorial (sem fonte pinada) | ~35–60 °C — heurística editorial (sem fonte pinada) |
+| [PETG](../../05-materiais/fff/petg.md) | ~220–250 °C — heurística editorial (sem fonte pinada) | ~70–80 °C (≤80) — heurística editorial (sem fonte pinada) |
+| [TPU](../../05-materiais/fff/tpu.md) | ~210–230 °C — heurística editorial (sem fonte pinada) | ~30–60 °C |
 
 Para ABS/ASA/PC/PA: **não** há receita canônica nesta máquina — ver páginas de material e Not Recommended nas specs.
 
@@ -123,10 +123,10 @@ Para ABS/ASA/PC/PA: **não** há receita canônica nesta máquina — ver págin
 
 ## Calibração
 
-1. Secar se necessário  
-2. Torre de temperatura ou cupons (−5 °C (fonte oficial/fabricante/heuristic; ver sources)  passos)  
-3. Uma variável por vez  
-4. Registrar marca/cor/speed  
+1. Secar se necessário
+2. Torre de temperatura ou cupons (−5 °C passos — heurística editorial (sem fonte pinada))
+3. Uma variável por vez
+4. Registrar marca/cor/speed
 
 ## Segurança
 

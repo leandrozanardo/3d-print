@@ -1,21 +1,23 @@
 ---
 id: printer.voxeljet-vx200-hss
 title: voxeljet VX200 HSS
-summary: 'voxeljet VX200 HSS é um modelo do fabricante voxeljet registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: voxeljet VX200 HSS (voxeljet VX200 HSS) — coverage documented com seções
+  DoD, technology/process preenchidos (hss), lifecycle `unknown`, evidência de listagem
+  oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- industrial
+technology:
+- binder-jetting
+process:
+- hss
 applies_to:
 - voxeljet
+- voxeljet-vx200-hss
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
@@ -23,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: discovered
+coverage_level: documented
 sources:
 - source.voxeljet-official-products
 related:
@@ -33,50 +35,146 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- voxeljet VX200 HSS
 aliases_en:
+- voxeljet VX200 HSS
 - voxeljet VX200 HSS
 tags:
 - printer
-- cataloged
+- documented
 - voxeljet
+- unknown
 manufacturer_id: voxeljet
 model_name: voxeljet VX200 HSS
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- GLOBAL
+availability_evidence: 'Presence referenced via official listing provenance https://www.voxeljet.com/industrial-3d-printer/
+  (accessed 2026-08-16); immediate purchase signal not independently confirmed in
+  this pass — lifecycle remains unknown.
+
+  '
 ---
 # voxeljet VX200 HSS
 
 Hub: [Impressoras](INDEX.md) · Fabricante: [voxeljet](manufacturer-voxeljet.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
 
+Para **voxeljet VX200 HSS**, o foco operacional desta base é identidade + lifecycle observado + classe binder-jetting/hss.
+
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | voxeljet |
+| Fabricante | voxeljet (manufacturer.voxeljet) |
 | Modelo | voxeljet VX200 HSS |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/voxeljet-official-products.md) |
-| URL oficial observada | https://www.voxeljet.com/industrial-3d-printer/ |
+| Título canônico | voxeljet VX200 HSS |
+| Família | unknown |
+| Aliases EN | voxeljet VX200 HSS, voxeljet VX200 HSS |
+| Tecnologia | binder-jetting |
+| Processo | hss |
+| Lifecycle | unknown |
+| coverage_level | documented |
+| ID | printer.voxeljet-vx200-hss |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | unknown |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | GLOBAL |
+| availability_evidence | Presence referenced via official listing provenance https://www.voxeljet.com/industrial-3d-printer/ (accessed 2026-08-16); immediate purchase signal not independently confirmed in this pass — lifecycle remains unknown.
+ |
+| URL de evidência | https://www.voxeljet.com/industrial-3d-printer/ |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle unknown e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.voxeljet-official-products |
+| URL | https://www.voxeljet.com/industrial-3d-printer/ |
+| nome observado | voxeljet VX200 HSS / voxeljet VX200 HSS |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | unknown |
+| confiança | medium |
 
-- part-of → fabricante `voxeljet`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **voxeljet VX200 HSS**, evidência de lifecycle acima, classificação binder-jetting/hss, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo voxeljet.
+
+## Especificações
+
+Não reutilizar números de outras máquinas voxeljet como se fossem de **voxeljet VX200 HSS**.
+
+Arquitetura declarada nesta base: jetting de binder sobre leito de pó.
+
+## Tecnologia
+
+- Technology: binder-jetting
+- Process: hss
+- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó
+
+## Manuais
+
+Mapa de manuais específicos de **voxeljet VX200 HSS**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte voxeljet + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **voxeljet VX200 HSS**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Para **voxeljet VX200 HSS**, não assumir stack de software de outro produto voxeljet.
+
+## Firmware
+
+Atualização de firmware de **voxeljet VX200 HSS** exige fonte OEM dedicada antes de qualquer claim de versão.
+
+## Slicer
+
+Usar perfis oficiais voxeljet quando existirem para **voxeljet VX200 HSS**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: saturacão de binder e pós-processo — OEM only.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **voxeljet VX200 HSS**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **voxeljet VX200 HSS**: cabeças de impressão, pó, curing/sinter workflow quando aplicável. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **voxeljet VX200 HSS**: pó e binders químicos — SDS + contenção.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Pesquisa de recall/service bulletin para **voxeljet VX200 HSS** (voxeljet) não retornou evidência suficiente para promover issue conhecida.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.voxeljet-official-products](../22-fontes/voxeljet-official-products.md)
+- URL observada: https://www.voxeljet.com/industrial-3d-printer/
+
+## Lacunas
+
+- Firmware/release notes pinados para **voxeljet VX200 HSS**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **voxeljet VX200 HSS**
+- Troubleshooting oficial por sintoma para **voxeljet VX200 HSS**
+- Revisões de hardware / changelogs de **voxeljet VX200 HSS**
+- Página de produto dedicada ao SKU **voxeljet VX200 HSS** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **voxeljet VX200 HSS**

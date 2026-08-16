@@ -66,13 +66,13 @@ Purpose / geometry?
 
 ## Calibration order (any profile)
 
-1. Plate clean + bed cal → first layer visual  
-2. Dry filament if open/soft/unknown  
-3. Temp tower (material family)  
-4. Retract tower only after dry  
-5. Support Z / interface on a scrap coupon  
-6. Flow ±2–5% if walls need it  
-7. Speed last  
+1. Plate clean + bed cal → first layer visual
+2. Dry filament if open/soft/unknown
+3. Temp tower (material family)
+4. Retract tower only after dry
+5. Support Z / interface on a scrap coupon
+6. Flow ±2–5% if walls need it
+7. Speed last
 
 Mark any step skipped as **validate on printer** in the plan.
 

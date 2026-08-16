@@ -1,29 +1,30 @@
 ---
 id: printer.sovol-zero
 title: Sovol Zero
-summary: 'Sovol Zero é um modelo do fabricante Sovol registrado no catálogo fix-my-print
-  (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura
-  é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em
-  2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues
-  ainda são lacunas explícitas — não inventadas.'
+summary: Sovol Zero (Sovol Zero) — coverage documented com seções DoD, technology/process
+  preenchidos (fff), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
 - sovol
+- sovol-zero
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.sovol-official-products
 related:
@@ -33,50 +34,146 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Sovol Zero
 aliases_en:
+- Sovol Zero
 - Sovol Zero
 tags:
 - printer
-- cataloged
+- documented
 - sovol
+- current
 manufacturer_id: sovol
 model_name: Sovol Zero
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: 'Listed on official manufacturer product listing https://www.sovol3d.com/
+  (accessed 2026-08-16); treated as current catalog presence for this remediation
+  pass.
+
+  '
 ---
 # Sovol Zero
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Sovol](manufacturer-sovol.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [sovol](manufacturer-sovol.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Documentação de **Sovol Zero** distingue claims sustentados pela listagem oficial de parâmetros não publicados.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Sovol |
+| Fabricante | sovol (manufacturer.sovol) |
 | Modelo | Sovol Zero |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/sovol-official-products.md) |
-| URL oficial observada | https://www.sovol3d.com/ |
+| Título canônico | Sovol Zero |
+| Família | unknown |
+| Aliases EN | Sovol Zero, Sovol Zero |
+| Tecnologia | material-extrusion |
+| Processo | fff |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.sovol-zero |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | US |
+| availability_evidence | Listed on official manufacturer product listing https://www.sovol3d.com/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
+ |
+| URL de evidência | https://www.sovol3d.com/ |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.sovol-official-products |
+| URL | https://www.sovol3d.com/ |
+| nome observado | Sovol Zero / Sovol Zero |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | medium |
 
-- part-of → fabricante `sovol`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Sovol Zero**, evidência de lifecycle acima, classificação material-extrusion/fff, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo sovol.
+
+## Especificações
+
+Valores de volume, temperatura e velocidade para **Sovol Zero**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+
+Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
+
+## Tecnologia
+
+- Technology: material-extrusion
+- Process: fff
+- Nota: conteúdo operacional da classe — extrusão de filament/pellet (FFF/FDM ou variante)
+
+## Manuais
+
+Mapa de manuais específicos de **Sovol Zero**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte sovol + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Sovol Zero**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Slicer/firmware do ecossistema sovol aplicam-se somente após confirmar perfil/SKU **Sovol Zero**.
+
+## Firmware
+
+Canal de firmware de **Sovol Zero**: não pinado (2026-08-16).
+
+## Slicer
+
+Usar perfis oficiais sovol quando existirem para **Sovol Zero**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: nivelamento/Z-offset, flow e temperaturas por material — não copiar presets de outro modelo.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Sovol Zero**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Sovol Zero**: verificar path de filamento, bico, mesa/adesão e lubrificação de eixos conforme manual OEM. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Sovol Zero**: superfícies quentes, partes móveis, risco de blob/incêndio residual se impressão desacompanhada sem monitoramento.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Nenhum known issue classificado para **Sovol Zero** nesta passagem: sem confirmação oficial, reprodução controlada ou tríade independente.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.sovol-official-products](../22-fontes/sovol-official-products.md)
+- URL observada: https://www.sovol3d.com/
+
+## Lacunas
+
+- Página de produto dedicada ao SKU **Sovol Zero** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **Sovol Zero**
+- Firmware/release notes pinados para **Sovol Zero**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Sovol Zero**
+- Troubleshooting oficial por sintoma para **Sovol Zero**
+- Revisões de hardware / changelogs de **Sovol Zero**

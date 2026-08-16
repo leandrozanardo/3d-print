@@ -105,11 +105,11 @@ Volume/s ≈ width × height × speed. Se exceder o que o hotend funde → [sube
 
 ## Heurísticas
 
-1. Preset **A1 Mini** do material primeiro  
-2. First layer bem mais lento que o resto — [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md)  
-3. Outer wall mais lento que infill na maioria dos perfis cosméticos  
-4. Se gaps: −20% speed ou ↓ max volumetric **antes** de flow >~1,05  
-5. Uma variável por teste  
+1. Preset **A1 Mini** do material primeiro
+2. First layer bem mais lento que o resto — [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md)
+3. Outer wall mais lento que infill na maioria dos perfis cosméticos
+4. Se gaps: −20% speed ou ↓ max volumetric **antes** de flow >~1,05
+5. Uma variável por teste
 
 ## Relações com outros conceitos
 

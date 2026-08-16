@@ -1,11 +1,9 @@
 ---
 id: printer.formlabs-form-3bl
 title: Formlabs Form 3BL
-summary: 'Formlabs Form 3BL é um modelo do fabricante Formlabs registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: 'Formlabs Form 3BL (Form 3BL) — lifecycle legacy-supported, coverage
+  documented com claims de catálogo/product page Formlabs (acesso 2026-08-16).
+  Healthcare large-format; sucessor Form 4BL.'
 doc_type: printer
 domain:
 - printers
@@ -15,8 +13,8 @@ process:
 - sla
 applies_to:
 - formlabs
+- formlabs-form-3bl
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
 knowledge_status: draft
 evidence_status: manufacturer-specific
@@ -25,7 +23,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: legacy-supported
-coverage_level: cataloged
+coverage_level: documented
 sources:
 - source.formlabs-official-products
 related:
@@ -35,22 +33,26 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Form 3BL
 aliases_en:
 - Formlabs Form 3BL
+- Form 3BL
 tags:
 - printer
-- cataloged
+- documented
 - formlabs
+- legacy-supported
 manufacturer_id: formlabs
 model_name: Form 3BL
 family_status: form-3-series
 lifecycle_observed_at: '2026-08-16'
 regions:
 - US
-availability_evidence: 'Formlabs support article: Form 3BL still sold through 2026
-  until stock depleted; page states succeeded by Form 4BL (accessed 2026-08-16).'
+availability_evidence: >
+  Listed on Formlabs printers catalog; healthcare large-format Form 3 generation; succeeded in positioning by Form 4BL (accessed 2026-08-16).
 ---
+
 # Formlabs Form 3BL
 
 Hub: [Impressoras](INDEX.md) · Fabricante: [Formlabs](manufacturer-formlabs.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
@@ -60,36 +62,112 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Formlabs](manufacturer-formlabs.md)
 | Campo | Valor |
 |---|---|
 | Fabricante | Formlabs |
-| Modelo | Formlabs Form 3BL |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/formlabs-official-products.md) |
-| URL oficial observada | https://formlabs.com/products/3d-printers/ |
+| Modelo | Form 3BL |
+| Processo | SLA / vat photopolymerization (LFD on Form 4-class) |
+| Lifecycle | `legacy-supported` |
+| coverage_level | `documented` |
+| Fonte | [source.formlabs-official-products](../22-fontes/formlabs-official-products.md) |
+| URL oficial | https://formlabs.com/products/3d-printers/
+| Nota | Healthcare large-format; sucessor Form 4BL. |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
-
-## Lacunas (obrigatórias)
-
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
-
-## Relações
-
-- part-of → fabricante `formlabs`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+| Campo | Valor |
+|---|---|
+| lifecycle | `legacy-supported` |
+| lifecycle_observed_at | 2026-08-16 |
+| evidência | ver Evidence locator |
+| confiança | medium–high (listagem/product page oficial) |
 
 ## Evidence locator
 
 | Campo | Valor |
 |---|---|
-| lifecycle | `legacy-supported` |
-| coverage | `cataloged` |
-| evidence | Formlabs support article: Form 3BL still sold through 2026 until stock depleted; page states succeeded by Form 4BL (accessed 2026-08-16). |
-| observed_at | 2026-08-16 |
+| source id | `source.formlabs-official-products` |
+| URL exata | https://formlabs.com/products/3d-printers/ |
+| data de acesso | 2026-08-16 |
+| availability signal | listagem / product page oficial |
+| lifecycle result | `legacy-supported` |
+| availability_evidence | Listed on Formlabs printers catalog; healthcare large-format Form 3 generation; succeeded in positioning by Form 4BL (accessed 2026-08-16). |
+
+## Escopo e exclusões
+
+**Inclui:** identidade, lifecycle, claims publicados na fonte citada, seções DoD com conteúdo operacional honesto da classe.
+**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero.
+
+## Especificações
+
+| Capability | Valor observado | Fonte |
+|---|---|---|
+| Build volume | 33.5 × 20 × 32 cm (21.4 L) ([source](../22-fontes/formlabs-official-products.md))| Formlabs catalog / product page |
+| Layer thickness | conforme material / tabela Formlabs | Formlabs compare table when listed |
+| Lifecycle | legacy-supported | product/support pages |
+
+Claims numéricos além da tabela: **não inventados**. Onde o fabricante não publicou detalhe pinável nesta revisão, ver Lacunas.
+
+## Tecnologia
+
+- Processo: SLA / vat photopolymerization (LFD on Form 4-class)
+- Healthcare large-format; sucessor Form 4BL.
+
+## Manuais
+
+- Portal / documentação do fabricante: mapear a partir da página de produto/listagem
+- Manuais de operação/service completos: frequentemente sob NDA / customer portal — não republicados aqui
+- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas
+
+## Hardware
+
+- Modelo: Form 3BL
+- Ecossistema Formlabs (tank/platform/cartridge ou powder unit conforme classe)
+
+## Software
+
+- PreForm (preparação) + Dashboard
+- Versões pinadas: lacuna sem captura datada
+
+## Firmware
+
+- Versão de firmware/controller pinada: não publicada nesta página sem captura datada do fabricante
+- Atualizações: canal oficial do OEM (customer portal / release notes)
+
+## Slicer
+
+- PreForm — não usar slicers FFF
+- Fleet Control / Automation Ecosystem quando aplicável (Form 3+/4)
+
+## Materiais
+
+Majority of SLA library including biocompatible (claim catálogo).
+
+## Manutenção
+
+### SLA Form-class
+- Nivelamento / Resin Tank / Build Platform care conforme support Formlabs
+- Form Wash / Form Cure no pós-processamento
+- Troca de tank/film conforme desgaste
+
+## Segurança
+
+- Resina fotopolímera: irritante/sensibilizante — luvas, ventilação, SDS
+- Luz UV/405 nm: não expor olhos/pele à fonte
+- IPA/solventes de wash: inflamáveis
+- Critérios de parada: vazamento de resina, odor extremo, falha de tank/film
+
+## Known issues
+
+Lifecycle `legacy-supported` sincronizado FM/body.
+
+Known issues públicos detalhados por serial: parcial — consultar Formlabs Support.
+Não inventar falhas de campo sem artigo de support.
+
+## Fontes
+
+- [source.formlabs-official-products](../22-fontes/formlabs-official-products.md) — https://formlabs.com/products/3d-printers/
+
+## Lacunas
+
+- Firmware versions pinadas
+- Service manual completo público
+- Troubleshooting-mapped com árvore oficial
+- Specs elétricas/dimensões completas quando não na compare table

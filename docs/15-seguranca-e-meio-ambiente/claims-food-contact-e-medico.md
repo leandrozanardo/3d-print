@@ -80,9 +80,9 @@ Se a pergunta do usuário for food/medical: explique limites, peça contexto reg
 
 ## O que fontes de higiene/ambiente cobrem
 
-- [NIOSH AM](../22-fontes/niosh-additive-manufacturing.md) — exposição ocupacional  
+- [NIOSH AM](../22-fontes/niosh-additive-manufacturing.md) — exposição ocupacional
   https://www.cdc.gov/niosh/manufacturing/additive/index.html
-- [EPA 3D research](../22-fontes/epa-3d-printing-research.md) — emissões/pesquisa química  
+- [EPA 3D research](../22-fontes/epa-3d-printing-research.md) — emissões/pesquisa química
   https://www.epa.gov/chemical-research/3d-printing-research-epa
 
 Elas **não** substituem ANVISA/FDA/ISO 10993/regulamentos de materials em contato com alimentos.

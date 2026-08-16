@@ -91,7 +91,7 @@ Anteparo ≠ enclosure aquecido: pode reduzir draft, mas **não** transforma a m
 
 1. Antes de subir bed ou fan no slicer: **eliminar draft**.
 2. First layer: ambiente estável + limpeza PEI — [primeira camada](primeira-camada.md).
-3. PETG: textured + bed no range (cap 80 °C (fonte oficial/fabricante/heuristic; ver sources) ) + fan moderado + brim se base larga.
+3. PETG: textured + bed no range (cap 80 °C ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md))) + fan moderado + brim se base larga.
 4. PLA: mais tolerante, ainda sensível a jato frio direto na first layer.
 5. Não use materiais Not Recommended “com caixa de papelão” como conselho padrão desta base.
 

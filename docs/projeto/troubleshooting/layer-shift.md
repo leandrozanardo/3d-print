@@ -46,13 +46,13 @@ Is the part still bonded where it started?
 
 ## A1 Mini rules
 
-1. Verify part still stuck (false layer shift).  
-2. Clear toolhead cable path.  
-3. Reduce speed/accel on tall parts.  
-4. Check belt tension (official Bambu procedure — don’t overtighten by guess).  
-5. No abnormal gantry play.  
-6. Avoid collision with detached support islands.  
-7. Brim tall/unstable models.  
+1. Verify part still stuck (false layer shift).
+2. Clear toolhead cable path.
+3. Reduce speed/accel on tall parts.
+4. Check belt tension (official Bambu procedure — don’t overtighten by guess).
+5. No abnormal gantry play.
+6. Avoid collision with detached support islands.
+7. Brim tall/unstable models.
 8. After mechanical fix, re-run a small calibration cube — **validate on printer**.
 
 ## Suggested presets (PLA / PETG)
@@ -86,10 +86,10 @@ PLA and PETG share mechanical causes; PETG may peel differently — still rule o
 
 ## Validation coupon (A1 Mini)
 
-1. Print a 20×20×40 mm tower with brim at production speed.  
-2. If shift appears mid-height with base still glued → motion/accel track.  
-3. If base moved → adhesion/warp track (false shift).  
-4. Re-test at −30% speed once; if cured, document speed cap in plan — **validate on printer**.  
+1. Print a 20×20×40 mm tower with brim at production speed.
+2. If shift appears mid-height with base still glued → motion/accel track.
+3. If base moved → adhesion/warp track (false shift).
+4. Re-test at −30% speed once; if cured, document speed cap in plan — **validate on printer**.
 5. Only after coupon fails both stick and slow tests → belt/gantry maintenance.
 
 ## Related

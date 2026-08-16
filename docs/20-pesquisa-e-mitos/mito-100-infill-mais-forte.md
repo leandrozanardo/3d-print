@@ -23,10 +23,14 @@ not_for:
 knowledge_status: draft
 evidence_status: limited
 safety_level: normal
-confidence: medium
+confidence: low
 last_reviewed: '2026-08-16'
 review_cycle: 12-months
-sources: []
+sources:
+- source.bcn3d-fff-mechanical-parameters-study
+- source.markforged-settings-impacting-part-strength
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
 related:
 - tech.fff
 - hub.pesquisa
@@ -56,47 +60,52 @@ Hub pai: [Pesquisa e mitos](./INDEX.md)
 
 ## Origem
 
-Intuição de ‘mais material = mais forte’ + defaults de slicer mal compreendidos + peças maciças de usinagem como analogia falsa.
+Intuição de “mais material = mais forte”, defaults de slicer mal interpretados e analogia incorreta com peças maciças usinadas.
 
 ## Quando parece verdadeiro
 
-- Compressão quase hidroestática em geometria curta
+- Compressão quase hidroestática em geometria curta e compacta
 - Necessidade de massa/inércia, não de resistência específica
-- Pós-usinagem que exige núcleo denso em região local
+- Núcleo localmente denso exigido por pós-usinagem em região restrita
 
 ## Evidência / mecanismos contra a regra universal
 
-| Mecanismo | Efeito |
-|---|---|
-| Falha frequentemente inicia em parede fina / interlayer | Perímetros e orientação > % infill cego |
-| Anisotropia Z | Núcleo sólido não corrige má orientação |
-| Tempo e material | 50–100% pode dobrar custo com ganho pequeno |
-| Tensão térmica | Núcleo maciço pode piorar warp em bases largas |
-| Padrões de infill | Gyroid/cubic em % moderado + paredes extras costuma vencer |
+Não há, nesta base, um único paper canônico que “prove” o mito falso para todos os casos. A rejeição do absoluto apoia-se em mecânica de falha FFF (anisotropia, interlayer) e em guias metodológicos de calibração/processo:
 
-**Heurística suportada (FFF, escopo geral):** aumente **wall loops / perimeters** e escolha orientação antes de empurrar infill para 100%. Valide com teste de carga no eixo real de uso.
+| Mecanismo | Efeito | Apoio metodológico |
+|---|---|---|
+| Falha em parede/interlayer | Perímetros e orientação tendem a dominar % infill cego | prática FFF + método de leitura de falhas em [Ellis Print Tuning Guide](../22-fontes/ellis-print-tuning-guide.md) |
+| Anisotropia Z | Núcleo sólido não corrige má orientação de camadas | mecânica de processo FFF |
+| Tempo/material | Empurrar a 100% pode dobrar custo com ganho marginal | observação de processo; validar com cupom |
+| Padrões de infill | Gyroid/cubic em % moderado + paredes extras frequentemente preferível | heurística de slicing; confirmar no eixo de carga real |
 
-## O que se pode concluir
+**Limite editorial:** isto é **heurística de engenharia FFF**, não consenso científico pinado por estudo controlado nesta wiki.
 
-- 100% não é automaticamente o ótimo de resistência/peso/tempo
-- Densidade local (modificadores) > sólido global em muitos casos
-- Metal PBF “densidade 99%+” é outro problema físico — não use este mito lá
+## O que se pode concluir (escopo limitado)
+
+- “Sempre 100% infill” é **falso como regra universal**
+- Pode ser útil em casos estreitos — somente com teste de carga no eixo real de uso
+- Não transferir este mito para metal PBF / densidade de pó
 
 ## Status
 
-**Mito parcial** — falso como absoluto; verdadeiro só em casos estreitos documentados por teste.
+**Mito parcial** — falso como absoluto; possivelmente útil em nichos, com evidência local insuficiente para promoção de confiança.
 
 ## Fontes
 
-Sem paper único canônico pinado nesta página; claim rejeitado por mecânica de falha FFF bem estabelecida na prática de engenharia. Cupons locais: lacuna.
+- [BCN3D FFF mechanical parameters study](../22-fontes/bcn3d-fff-mechanical-parameters-study.md) — densidade/paredes; retornos decrescentes (ex. ABS 60→80%); padrão de infill não dominante
+- [Markforged: settings impacting part strength](../22-fontes/markforged-settings-impacting-part-strength.md) — shells/orientação vs infill (guia educacional OEM)
+
+
+- [Ellis Print Tuning Guide](../22-fontes/ellis-print-tuning-guide.md) (source.ellis-print-tuning-guide) — método de calibração/leitura de falhas FFF; **não** é paper de resistência de infill
+- [Teaching Tech Calibration](../22-fontes/teaching-tech-calibration.md) (source.teaching-tech-calibration) — método de calibração; **não** sustenta curva universal paredes vs infill
 
 ## Lacunas
 
-- Curvas experimentais A1 Mini PLA/PETG paredes vs infill: ainda não publicadas como `experiment.*`
-- Settings catalog com paths Bambu Studio: wave futura
+- Experimento controlado local (experiment.*) paredes vs infill em A1 Mini PLA/PETG: não publicado
+- Paper primário dedicado pinado: ausente nesta página
 
 ## Status editorial (remediação v2)
 
-- `confidence` reduzido de `high` para `medium` porque não há paper/experimento canônico pinado.
-- Conclusões desta página são **heurística de engenharia FFF** e mecânica de falha estabelecida na prática, não resultado de experimento controlado nesta base.
-- Quando existir `experiment.*` local (paredes vs infill), promover evidência e reavaliar confidence.
+- confidence: low porque não há estudo primário canônico citado
+- Conclusões limitadas explicitamente a heurística FFF

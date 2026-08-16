@@ -66,4 +66,4 @@ Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.
 
 - Portfólio pode ser parcial (JS/region/PDF)
 - Rebrands e SKUs regionais ainda não reconciliados
-- Nível `documented` não atingido para estes modelos
+- Modelos do snapshot acima promovidos a `documented` em 2026-08-16; `troubleshooting-mapped` ainda não

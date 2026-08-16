@@ -1,82 +1,178 @@
 ---
 id: printer.elegoo-neptune-4-plus
 title: Elegoo Neptune 4 Plus
-summary: 'Elegoo Neptune 4 Plus é um modelo do fabricante Elegoo registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: ELEGOO Neptune 4 Plus é FFF large da série Neptune 4 com volume 320×320×385
+  mm, listada na loja oficial US em 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
-- elegoo
+- elegoo-neptune-4-plus
 not_for:
-- treat-as-documented-specs
-- invented-compatibility
+- invent-missing-specs
+- blind-profile-transfer
 knowledge_status: draft
+lifecycle: current
+coverage_level: documented
 evidence_status: manufacturer-specific
 safety_level: caution
-confidence: medium
+confidence: high
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
 sources:
 - source.elegoo-official-products
+- source.elegoo-neptune-4-plus
 related:
 - manufacturer.elegoo
 - hub.impressoras
-- meta.printer-global-catalog
+- tech.fff
 prerequisites:
-- hub.impressoras
+- tech.fff
 supersedes: []
 aliases_pt_br: []
 aliases_en:
 - Elegoo Neptune 4 Plus
+- ELEGOO Neptune 4 Plus
+- Neptune 4 Plus
 tags:
 - printer
-- cataloged
 - elegoo
+- fff
+- documented
+- neptune-4-series
 manufacturer_id: elegoo
 model_name: Neptune 4 Plus
-family_status: unknown
+family_status: neptune-4-series
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/neptune-4-plus-fdm-3d-printer
+  (accessed 2026-08-16).
 ---
 # Elegoo Neptune 4 Plus
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Elegoo](manufacturer-elegoo.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [elegoo](manufacturer-elegoo.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Para **Elegoo Neptune 4 Plus**, o foco operacional desta base é identidade + lifecycle observado + classe material-extrusion/fff.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Elegoo |
-| Modelo | Elegoo Neptune 4 Plus |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/elegoo-official-products.md) |
-| URL oficial observada | https://global.elegoo.com/collections/3d-printers |
+| Fabricante | elegoo (manufacturer.elegoo) |
+| Modelo | Neptune 4 Plus |
+| Título canônico | Elegoo Neptune 4 Plus |
+| Família | neptune-4-series |
+| Aliases EN | Elegoo Neptune 4 Plus, ELEGOO Neptune 4 Plus, Neptune 4 Plus |
+| Tecnologia | material-extrusion |
+| Processo | fff |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.elegoo-neptune-4-plus |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | US |
+| availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/neptune-4-plus-fdm-3d-printer (accessed 2026-08-16). |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.elegoo-official-products |
+| URL | https://global.elegoo.com/collections/3d-printers |
+| nome observado | Neptune 4 Plus / Elegoo Neptune 4 Plus |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | high |
 
-- part-of → fabricante `elegoo`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Elegoo Neptune 4 Plus**, evidência de lifecycle acima, classificação material-extrusion/fff, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo elegoo.
+
+## Especificações
+
+Datasheet numérico de **Elegoo Neptune 4 Plus** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+
+Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
+
+## Tecnologia
+
+- Technology: material-extrusion
+- Process: fff
+- Nota: conteúdo operacional da classe — extrusão de filament/pellet (FFF/FDM ou variante)
+
+## Manuais
+
+Mapa de manuais específicos de **Neptune 4 Plus**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte elegoo + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Elegoo Neptune 4 Plus**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Software declarado para **Elegoo Neptune 4 Plus**: seguir portal OEM; versão pinada: não publicada nesta revisão.
+
+## Firmware
+
+Release notes específicas de **Elegoo Neptune 4 Plus**: não localizadas na superfície de listagem.
+
+## Slicer
+
+Usar perfis oficiais elegoo quando existirem para **Neptune 4 Plus**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: nivelamento/Z-offset, flow e temperaturas por material — não copiar presets de outro modelo.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Neptune 4 Plus**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Elegoo Neptune 4 Plus**: verificar path de filamento, bico, mesa/adesão e lubrificação de eixos conforme manual OEM. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Neptune 4 Plus**: superfícies quentes, partes móveis, risco de blob/incêndio residual se impressão desacompanhada sem monitoramento.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Inventário de falhas de **Elegoo Neptune 4 Plus** permanece vazio consciente até captura de boletim/wiki OEM datada.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.elegoo-neptune-4-plus](../22-fontes/elegoo-neptune-4-plus.md)
+
+- [source.elegoo-official-products](../22-fontes/elegoo-official-products.md)
+- URL observada: https://global.elegoo.com/collections/3d-printers
+
+## Lacunas
+
+- Troubleshooting oficial por sintoma para **Elegoo Neptune 4 Plus**
+- Revisões de hardware / changelogs de **Neptune 4 Plus**
+- Página de produto dedicada ao SKU **Neptune 4 Plus** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **Elegoo Neptune 4 Plus**
+- Firmware/release notes pinados para **Neptune 4 Plus**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Neptune 4 Plus**

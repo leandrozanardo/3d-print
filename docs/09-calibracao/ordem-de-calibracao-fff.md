@@ -37,6 +37,7 @@ review_cycle: 6-months
 sources:
 - source.ellis-print-tuning-guide
 - source.teaching-tech-calibration
+- source.bambu-a1-mini-tech-specs
 related:
 - process.fff.first-layer
 - slicer.bambu-studio
@@ -108,7 +109,7 @@ Inspirada na lógica de [Ellis Print Tuning Guide](../22-fontes/ellis-print-tuni
 ### Constantes durante um teste
 
 - Mesmo filamento, cor e lote se possível
-- Mesmo nozzle (0,4 mm (fonte oficial/fabricante/heuristic; ver sources)  nesta base)
+- Mesmo nozzle (0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) nesta base)
 - Uma variável por cupom
 - Registrar foto + valor + versão Studio
 
@@ -127,7 +128,7 @@ Inspirada na lógica de [Ellis Print Tuning Guide](../22-fontes/ellis-print-tuni
 | Começar por PA/speed | Amplifica erro de Z/flow |
 | Copiar valores Ellis/TT literalmente | Firmwares e hotends diferentes |
 | Calibrar PETG úmido | Stringing e estalo confundem leitura |
-| Bed > 80 °C (fonte oficial/fabricante/heuristic; ver sources)  “porque o guia diz” | Viola capability A1 Mini |
+| Bed > 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) “porque o guia diz” | Viola capability A1 Mini |
 | Mudar 5 settings no mesmo print | Perde causalidade |
 
 ## Frequência

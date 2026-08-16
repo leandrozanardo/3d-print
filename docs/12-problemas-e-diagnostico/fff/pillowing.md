@@ -118,10 +118,10 @@ Topo parece **colchão** sobre o infill? Aumente robustez de **top solid layers*
 
 ## Testes barato → caro
 
-1. Cubo com topo visível; foto rasante  
-2. Só aumentar top solids **ou** só adensar infill superior  
-3. Verificar secagem se PETG/PLA suspeito  
-4. Ironing como cosmético final  
+1. Cubo com topo visível; foto rasante
+2. Só aumentar top solids **ou** só adensar infill superior
+3. Verificar secagem se PETG/PLA suspeito
+4. Ironing como cosmético final
 
 Settings relacionados: [preenchimento](../../08-slicers-e-configuracoes/settings/preenchimento.md) (hub settings).
 
@@ -135,9 +135,9 @@ Settings relacionados: [preenchimento](../../08-slicers-e-configuracoes/settings
 
 ## Não faça
 
-- Subir flow global 10% “no feeling” sem cupom  
-- Esperar topo perfeito com infill ornamental extremo  
-- Confundir com falha de first layer  
+- Subir flow global 10% “no feeling” sem cupom
+- Esperar topo perfeito com infill ornamental extremo
+- Confundir com falha de first layer
 
 ## Validação
 
@@ -145,9 +145,9 @@ Mesmo cubo; mesma iluminação; uma alavanca principal.
 
 ## Prevenção
 
-- Preset do material com tops coerentes ao tamanho do vão  
-- Evitar “oco demais” em faces cosméticas superiores  
-- Secar antes de culpar infill  
+- Preset do material com tops coerentes ao tamanho do vão
+- Evitar “oco demais” em faces cosméticas superiores
+- Secar antes de culpar infill
 
 ## Relações
 
@@ -157,7 +157,7 @@ Mesmo cubo; mesma iluminação; uma alavanca principal.
 
 ## Fontes
 
-- [Ellis Print Tuning Guide](../../22-fontes/ellis-print-tuning-guide.md) — método de leitura de superfície  
+- [Ellis Print Tuning Guide](../../22-fontes/ellis-print-tuning-guide.md) — método de leitura de superfície
   https://ellis3dp.com/Print-Tuning-Guide/
 - Prática de tops/infill do pipeline desta base
 

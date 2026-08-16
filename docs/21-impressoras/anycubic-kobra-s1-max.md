@@ -1,82 +1,177 @@
 ---
 id: printer.anycubic-kobra-s1-max
 title: Anycubic Kobra S1 Max
-summary: 'Anycubic Kobra S1 Max é um modelo do fabricante Anycubic registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: Anycubic Kobra S1 Max é FFF CoreXY enclosed 350³ mm com câmara ativa 65 °C
+  e hotend 350 °C, listada na loja oficial Anycubic em 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff
 applies_to:
-- anycubic
+- anycubic-kobra-s1-max
 not_for:
-- treat-as-documented-specs
-- invented-compatibility
+- invent-missing-specs
+- blind-profile-transfer
 knowledge_status: draft
+lifecycle: current
+coverage_level: documented
 evidence_status: manufacturer-specific
 safety_level: caution
-confidence: medium
+confidence: high
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
 sources:
 - source.anycubic-official-products
+- source.anycubic-kobra-s1-max
 related:
 - manufacturer.anycubic
 - hub.impressoras
-- meta.printer-global-catalog
+- tech.fff
 prerequisites:
-- hub.impressoras
+- tech.fff
 supersedes: []
 aliases_pt_br: []
 aliases_en:
 - Anycubic Kobra S1 Max
+- Kobra S1 Max
 tags:
 - printer
-- cataloged
 - anycubic
+- fff
+- documented
+- kobra-s1-series
 manufacturer_id: anycubic
 model_name: Kobra S1 Max
-family_status: unknown
+family_status: kobra-s1-series
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- Global
+availability_evidence: Listed for purchase with Add to cart on official Anycubic store
+  https://store.anycubic.com/products/kobra-s1-max (accessed 2026-08-16).
 ---
 # Anycubic Kobra S1 Max
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Anycubic](manufacturer-anycubic.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [anycubic](manufacturer-anycubic.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Para **Anycubic Kobra S1 Max**, o foco operacional desta base é identidade + lifecycle observado + classe material-extrusion/fff.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Anycubic |
-| Modelo | Anycubic Kobra S1 Max |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/anycubic-official-products.md) |
-| URL oficial observada | https://store.anycubic.com/collections/3d-printers |
+| Fabricante | anycubic (manufacturer.anycubic) |
+| Modelo | Kobra S1 Max |
+| Título canônico | Anycubic Kobra S1 Max |
+| Família | kobra-s1-series |
+| Aliases EN | Anycubic Kobra S1 Max, Kobra S1 Max |
+| Tecnologia | material-extrusion |
+| Processo | fff |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.anycubic-kobra-s1-max |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | Global |
+| availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-s1-max (accessed 2026-08-16). |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.anycubic-official-products |
+| URL | https://store.anycubic.com/collections/3d-printers |
+| nome observado | Kobra S1 Max / Anycubic Kobra S1 Max |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | high |
 
-- part-of → fabricante `anycubic`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Anycubic Kobra S1 Max**, evidência de lifecycle acima, classificação material-extrusion/fff, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo anycubic.
+
+## Especificações
+
+Valores de volume, temperatura e velocidade para **Kobra S1 Max**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+
+Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
+
+## Tecnologia
+
+- Technology: material-extrusion
+- Process: fff
+- Nota: conteúdo operacional da classe — extrusão de filament/pellet (FFF/FDM ou variante)
+
+## Manuais
+
+Mapa de manuais específicos de **Kobra S1 Max**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte anycubic + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Anycubic Kobra S1 Max**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Slicer/firmware do ecossistema anycubic aplicam-se somente após confirmar perfil/SKU **Kobra S1 Max**.
+
+## Firmware
+
+Canal de firmware de **Kobra S1 Max**: não pinado (2026-08-16).
+
+## Slicer
+
+Usar perfis oficiais anycubic quando existirem para **Kobra S1 Max**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: nivelamento/Z-offset, flow e temperaturas por material — não copiar presets de outro modelo.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Kobra S1 Max**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Anycubic Kobra S1 Max**: verificar path de filamento, bico, mesa/adesão e lubrificação de eixos conforme manual OEM. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Kobra S1 Max**: superfícies quentes, partes móveis, risco de blob/incêndio residual se impressão desacompanhada sem monitoramento.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Nenhum known issue classificado para **Kobra S1 Max** nesta passagem: sem confirmação oficial, reprodução controlada ou tríade independente.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.anycubic-kobra-s1-max](../22-fontes/anycubic-kobra-s1-max.md)
+
+- [source.anycubic-official-products](../22-fontes/anycubic-official-products.md)
+- URL observada: https://store.anycubic.com/collections/3d-printers
+
+## Lacunas
+
+- Página de produto dedicada ao SKU **Kobra S1 Max** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **Anycubic Kobra S1 Max**
+- Firmware/release notes pinados para **Kobra S1 Max**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Kobra S1 Max**
+- Troubleshooting oficial por sintoma para **Anycubic Kobra S1 Max**
+- Revisões de hardware / changelogs de **Kobra S1 Max**

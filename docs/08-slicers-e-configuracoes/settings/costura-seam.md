@@ -99,10 +99,10 @@ Em cada layer change/perímetro: extrusão liga/desliga ou muda path → pequeno
 
 ## Heurísticas
 
-1. Identifique a face que ninguém vê → force seam ali  
-2. Em vasos/cilindros: random ou scarf (se disponível) + aceitar trade-off  
-3. Se a seam “blob”: calibre PA/flow antes de culpar só o seam mode  
-4. Não confunda seam com [layer shift](../../12-problemas-e-diagnostico/fff/layer-shift.md) nem com gap de subextrusão  
+1. Identifique a face que ninguém vê → force seam ali
+2. Em vasos/cilindros: random ou scarf (se disponível) + aceitar trade-off
+3. Se a seam “blob”: calibre PA/flow antes de culpar só o seam mode
+4. Não confunda seam com [layer shift](../../12-problemas-e-diagnostico/fff/layer-shift.md) nem com gap de subextrusão
 
 ## Efeitos
 
@@ -113,11 +113,11 @@ Em cada layer change/perímetro: extrusão liga/desliga ou muda path → pequeno
 
 ## Ordem de ataque (estética)
 
-1. Orientar peça (seam candidate face down/back)  
-2. Escolher posição aligned/rear/paint  
-3. Ajustar wipe/retract se hairs na junção  
-4. PA se blob/gap no ponto  
-5. Pós: lixamento local se necessário ([acabamento](../../14-pos-processamento/lixamento-e-acabamento.md))  
+1. Orientar peça (seam candidate face down/back)
+2. Escolher posição aligned/rear/paint
+3. Ajustar wipe/retract se hairs na junção
+4. PA se blob/gap no ponto
+5. Pós: lixamento local se necessário ([acabamento](../../14-pos-processamento/lixamento-e-acabamento.md))
 
 ## Relações com outros conceitos
 

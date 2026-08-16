@@ -35,13 +35,13 @@ Fits critical?
 
 ## A1 Mini rules
 
-1. First layer lines must **kiss** — no tall ridges, no transparent gaps.  
-2. **Elephant foot compensation:** start 0.1–0.2 mm when base is tolerance-critical — **validate**.  
-3. **First layer height** ≥ normal layer (e.g. 0.20–0.28 mm).  
-4. **First layer speed** 20–40 mm/s.  
-5. Slightly hotter first layer helps stick; excess worsens foot.  
-6. Clean PEI before chasing compensation numbers.  
-7. Don’t use raft to “fix” elephant foot.  
+1. First layer lines must **kiss** — no tall ridges, no transparent gaps.
+2. **Elephant foot compensation:** start 0.1–0.2 mm when base is tolerance-critical — **validate**.
+3. **First layer height** ≥ normal layer (e.g. 0.20–0.28 mm).
+4. **First layer speed** 20–40 mm/s.
+5. Slightly hotter first layer helps stick; excess worsens foot.
+6. Clean PEI before chasing compensation numbers.
+7. Don’t use raft to “fix” elephant foot.
 8. PETG: get stick first on textured plate; then compensate fits.
 
 ## Suggested presets (PLA)
@@ -85,10 +85,10 @@ Fits critical?
 
 ## Fit coupon SOP
 
-1. Print critical hole/boss coupon with same first-layer settings.  
-2. Measure after full cool.  
-3. Adjust elephant compensation ±0.05 mm.  
-4. Only then commit full tool print.  
+1. Print critical hole/boss coupon with same first-layer settings.
+2. Measure after full cool.
+3. Adjust elephant compensation ±0.05 mm.
+4. Only then commit full tool print.
 5. Log numbers in `plan.md` + **validate on printer**.
 
 ## Related

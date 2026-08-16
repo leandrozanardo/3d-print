@@ -119,7 +119,7 @@ Não é:
 
 ## Aplicabilidade e exclusão
 
-**Aplica-se a:** malhas FFF no pipeline desta base.  
+**Aplica-se a:** malhas FFF no pipeline desta base.
 **Não se aplica a:** reparo de arquivos STEP/B-rep; “cura” de G-code; garantia de manifold após qualquer conversão online anônima.
 
 ## Relações

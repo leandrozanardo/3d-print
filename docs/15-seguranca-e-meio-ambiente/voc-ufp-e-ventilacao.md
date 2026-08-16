@@ -69,12 +69,12 @@ Hub pai: [Segurança e meio ambiente](INDEX.md)
 
 ## Evidência (agências)
 
-- [NIOSH — Additive Manufacturing](../22-fontes/niosh-additive-manufacturing.md): higiene ocupacional e controles em AM  
+- [NIOSH — Additive Manufacturing](../22-fontes/niosh-additive-manufacturing.md): higiene ocupacional e controles em AM
   https://www.cdc.gov/niosh/manufacturing/additive/index.html
-- [EPA — 3D Printing Research](../22-fontes/epa-3d-printing-research.md): pesquisa de emissões/impactos  
+- [EPA — 3D Printing Research](../22-fontes/epa-3d-printing-research.md): pesquisa de emissões/impactos
   https://www.epa.gov/chemical-research/3d-printing-research-epa
 
-**Fato:** emissões existem e são objeto de estudo regulatório/pesquisa.  
+**Fato:** emissões existem e são objeto de estudo regulatório/pesquisa.
 **Não fato nesta base:** “PLA não emite nada” / “PETG é sempre pior por fator X sem medição local”.
 
 ## Hierarquia de controles (ordem)

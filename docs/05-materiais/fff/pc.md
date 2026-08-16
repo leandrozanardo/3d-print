@@ -80,7 +80,7 @@ Hub pai: [Materiais FFF](INDEX.md)
 
 ### Por quê não tratar como operacional aqui
 
-1. Janelas típicas de PC desktop pedem **mesa/câmara quentes** acima do que um bed-slinger aberto com teto de 80 °C (fonte oficial/fabricante/heuristic; ver sources)  oferece com margem.
+1. Janelas típicas de PC desktop pedem **mesa/câmara quentes** acima do que um bed-slinger aberto com teto de 80 °C ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md)) oferece com margem.
 2. Warp e delaminação sob draft são severos.
 3. Umidade degrada superfície e bonding.
 4. Risco de falha de adesão → peça solta → colisão/blob.

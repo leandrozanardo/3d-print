@@ -69,7 +69,7 @@ Em builds recentes do Bambu Studio, procure campos de **Layer height** / **First
 
 ## Unidade / tipo
 
-Comprimento (mm). Tipicamente 0,08–0,28 mm (fonte oficial / fabricante / heuristic; ver `sources`)  com nozzle 0,4 mm na prática desktop — **faixa de partida**, não lei.
+Comprimento (mm). Tipicamente 0,08–0,28 mm com nozzle 0,4 mm na prática desktop — **faixa de partida**, heurística editorial (sem fonte pinada), não lei.
 
 ## Mecanismo
 

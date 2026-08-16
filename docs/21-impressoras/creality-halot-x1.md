@@ -1,82 +1,184 @@
 ---
 id: printer.creality-halot-x1
 title: Creality HALOT-X1
-summary: 'Creality HALOT-X1 é um modelo do fabricante Creality registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: Creality HALOT-X1 é impressora de resina MSLA/LCD 16K (10,1") com volume
+  211,68×118,37×200 mm e velocidade máx. 170 mm/h, listada no site oficial Creality
+  em 2026-08-16. Não é FFF.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- resin
+technology:
+- vat-photopolymerization
+process:
+- msla
 applies_to:
-- creality
+- creality-halot-x1
+- halot-box
 not_for:
-- treat-as-documented-specs
-- invented-compatibility
+- fff-settings-transfer
+- disable-door-security-casually
+- third-party-resin-without-tuning
 knowledge_status: draft
+lifecycle: current
+coverage_level: documented
 evidence_status: manufacturer-specific
-safety_level: caution
-confidence: medium
+safety_level: high
+confidence: high
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
 sources:
 - source.creality-official-products
+- source.creality-halot-x1-product
+- source.creality-k2-series-product
 related:
 - manufacturer.creality
 - hub.impressoras
-- meta.printer-global-catalog
+- tech.vat-photopolymerization
+- tech.sla-dlp-msla
 prerequisites:
-- hub.impressoras
+- tech.sla-dlp-msla
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- HALOT-X1
+- Creality Halot X1
 aliases_en:
 - Creality HALOT-X1
+- HALOT-X1 Combo
 tags:
 - printer
-- cataloged
 - creality
+- resin
+- msla
+- documented
 manufacturer_id: creality
 model_name: HALOT-X1
-family_status: unknown
+family_status: halot-series
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- Global
+availability_evidence: Listed on official Creality product page https://www.creality.com/products/halot-x1
+  and store listing https://store.creality.com/products/halot-x1-resin-3d-printer
+  (accessed 2026-08-16).
 ---
 # Creality HALOT-X1
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Creality](manufacturer-creality.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [Creality](manufacturer-creality.md)
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Creality |
+| Fabricante | Creality (`manufacturer.creality`) |
 | Modelo | Creality HALOT-X1 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/creality-official-products.md) |
-| URL oficial observada | https://store.creality.com/collections/3d-printers |
+| Família | halot-series |
+| coverage_level | `documented` |
+| Regiões | Global |
+| Variantes | HALOT-X1; HALOT-X1 Combo (AFU) |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| observed_at | 2026-08-16 |
+| evidence | Listed on official Creality product page https://www.creality.com/products/halot-x1 and store listing https://store.creality.com/products/halot-x1-resin-3d-printer (accessed 2026-08-16). |
+| URL produto | https://www.creality.com/products/halot-x1 |
+| URL loja | https://store.creality.com/products/halot-x1-resin-3d-printer |
 
-## Lacunas (obrigatórias)
+## Especificações
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+Fonte: [source.creality-halot-x1-product](../22-fontes/creality-halot-x1-product.md) — bloco “X1 Specifications” (2026-08-16):
 
-## Relações
+| Capability | Valor oficial observado | Nota |
+|---|---|---|
+| Printing technology | LCD (MSLA) | fabricante |
+| Machine size | 344 × 331 × 434 mm | specs |
+| Printing size | 211,68 × 118,37 × 200 mm | specs |
+| Resolution | 16K (15120 × 6230 px) | specs + marketing |
+| Pixel size | 14 × 19 μm | specs |
+| Z-axis accuracy | 0,01 mm | specs |
+| Layer thickness | 0,01–0,2 mm | specs |
+| Max print speed | 170 mm/h | specs |
+| Exposure intensity | 6500+10% μW/cm² (não ajustável pelo usuário — FAQ) | specs + FAQ |
+| Light source | Honeycomb Matrix | specs |
+| Touch screen | 3,98-inch capacitive | specs |
+| Power | 350 W | specs |
+| N.W. / G.W. | 12,93 kg / 16,19 kg | specs |
+| UV wavelength | 405 nm | FAQ oficial |
+| Data transfer | USB / WIFI | specs |
 
-- part-of → fabricante `creality`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Tecnologia
+
+- Categoria: vat photopolymerization
+- Processo: **msla** (LCD masking); fabricante rotula “LCD”
+- Motion: top-down — vat/fonte se movem, build plate fixa (marketing leveling-free)
+- 92-zone intelligent exposure (marketing)
+
+## Manuais
+
+- Download Manual + PioCreat Studio Tutorial links na página produto
+- FAQ embutido (door security, parameter packs via Creality Cloud)
+- Service manual profundo: lacuna
+
+## Hardware
+
+- 10,1" 16K mono LCD; quick-release vat / twist build plate
+- Dual linear rails + dual lead screws (marketing)
+- AFU (Combo): feed/recycle, RFID resin params, heating 30–35 °C (marketing; faixa 30–45 °C aparece em canais retail — preferir página oficial)
+- Sensors: proximity (lid), Z limit (FAQ)
+
+## Software
+
+- HALOT BOX / Chitu Box (specs); CHITUBOX Pro trial 3 meses (marketing)
+- PioCreat Studio tutorial referenciado no FAQ
+- Creality Cloud para parameter packs
+
+## Firmware
+
+- Versão pinada: **não publicado pelo fabricante na evidência consultada em 2026-08-16**
+
+## Slicer
+
+- HALOT BOX / Chitu Box / PioCreat Studio conforme fluxo oficial
+- Não importar perfis FFF; exposição/lift são específicos HALOT-X1
+
+## Materiais
+
+- 405 nm UV resin
+- Resinas oficiais com RFID (AFU) carregam parâmetros automaticamente
+- Terceiros / jewelry resin: possível, mas exige fine-tune (FAQ); light intensity não ajustável aumenta risco de incompatibilidade
+
+## Manutenção
+
+- True leveling-free claim (placa pré-nivelada)
+- Troca de filme NACF / LCD: lacuna procedural local
+- Não deletar histórico de prints no device (FAQ: overwrite only)
+
+## Segurança
+
+- Resina: PPE (luvas, óculos), ventilação, descarte químico
+- Door security reminder — fabricante **não recomenda** desabilitar
+- Respirator incluso no unboxing marketing — usar conforme SDS da resina
+- Critérios de parada: vazamento de vat, odor intenso, falha de lid sensor, overcure em massa
+
+## Known issues
+
+- Light intensity não ajustável (FAQ) vs expectativa de outras 16K
+- USB lento: fabricante recomenda USB 3.2
+- Confusão PioCreat vs Creality branding em tutoriais
+
+## Fontes
+
+- [Fonte — Creality K2 Series página oficial de produto](../22-fontes/creality-k2-series-product.md)
+
+
+- [source.creality-halot-x1-product](../22-fontes/creality-halot-x1-product.md)
+- [source.creality-official-products](../22-fontes/creality-official-products.md)
+- Loja: https://store.creality.com/products/halot-x1-resin-3d-printer
+
+## Lacunas
+
+- Datasheet PDF revisionado + AFU-only vs base BOM
+- Firmware pinado
+- Troubleshooting-mapped (layer lines, failed plate adhesion, RFID miss)

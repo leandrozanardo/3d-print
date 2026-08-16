@@ -75,6 +75,15 @@ Piloto: [bambu-lab-official-products.md](bambu-lab-official-products.md) · [pru
 | [RegenHU official](regenhu-official-products.md) | `source.regenhu-official-products` |
 | [VORON official](voron-official-products.md) | `source.voron-official-products` |
 | [Rat Rig official](ratrig-official-products.md) | `source.ratrig-official-products` |
+| [Creality official products](creality-official-products.md) | `source.creality-official-products` |
+| [Creality K2 Series product](creality-k2-series-product.md) | `source.creality-k2-series-product` |
+| [Creality K2 store](creality-k2-store.md) | `source.creality-k2-store` |
+| [Creality K2 Pro store](creality-k2-pro-store.md) | `source.creality-k2-pro-store` |
+| [Creality K2 Plus product](creality-k2-plus-product.md) | `source.creality-k2-plus-product` |
+| [Creality K2 SE store](creality-k2-se-store.md) | `source.creality-k2-se-store` |
+| [Creality HALOT-X1 product](creality-halot-x1-product.md) | `source.creality-halot-x1-product` |
+| [Creality SPARKX i7 product](creality-sparkx-i7-product.md) | `source.creality-sparkx-i7-product` |
+| [Creality SPARKX i7 NANO store](creality-sparkx-i7-nano-store.md) | `source.creality-sparkx-i7-nano-store` |
 | [Ellis Print Tuning Guide](ellis-print-tuning-guide.md) | `source.ellis-print-tuning-guide` |
 | [Teaching Tech Calibration](teaching-tech-calibration.md) | `source.teaching-tech-calibration` |
 | [ISO/ASTM 52900 entrada](iso-astm-52900-entry.md) | `source.iso-astm-52900-entry` |
@@ -94,3 +103,5 @@ Atribuição legado: [projeto/fontes-e-atribuicao.md](../projeto/fontes-e-atribu
 ## Lacunas
 
 Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+- [bcn3d-fff-mechanical-parameters-study.md](bcn3d-fff-mechanical-parameters-study.md)
+- [markforged-settings-impacting-part-strength.md](markforged-settings-impacting-part-strength.md)

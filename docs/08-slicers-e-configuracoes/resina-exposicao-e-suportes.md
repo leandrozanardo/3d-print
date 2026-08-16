@@ -60,7 +60,7 @@ Hub pai: [Slicers e configurações](INDEX.md)
 
 ## Conceito
 
-**Exposição:** energia entregue por camada (tempo × irradiância efetiva × espectro).  
+**Exposição:** energia entregue por camada (tempo × irradiância efetiva × espectro).
 **Suportes:** âncoras que resistem ao peel do filme e sustentam overhangs em vat.
 
 ## Nomes típicos em slicers resin
@@ -78,10 +78,10 @@ Paths exatos variam por Chitubox, Lychee, UVTools, etc. — verificar versão.
 
 ## Mecanismo
 
-1. Subexposição → falha de adesão entre camadas / features fracas / falha ao desprender malformada  
-2. Superexposição → sangramento de detalhe, aderência excessiva ao FEP, peça “gorducha”  
-3. Base fraca → print descola da plataforma  
-4. Tips grossos → cicatriz; tips finos demais → falha de suporte  
+1. Subexposição → falha de adesão entre camadas / features fracas / falha ao desprender malformada
+2. Superexposição → sangramento de detalhe, aderência excessiva ao FEP, peça “gorducha”
+3. Base fraca → print descola da plataforma
+4. Tips grossos → cicatriz; tips finos demais → falha de suporte
 
 ## Ordem de calibração (método)
 

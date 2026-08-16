@@ -61,6 +61,7 @@ Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.
 - [Formlabs Fuse 1+ 30W](formlabs-fuse-1-plus-30w.md) (`printer.formlabs-fuse-1-plus-30w`)
 - [Formlabs Fuse X1](formlabs-fuse-x1.md) (`printer.formlabs-fuse-x1`)
 - [Formlabs Form 3](formlabs-form-3.md) (`printer.formlabs-form-3`)
+- [Formlabs Form 3B](formlabs-form-3b.md) (`printer.formlabs-form-3b`)
 - [Formlabs Form 3L](formlabs-form-3l.md) (`printer.formlabs-form-3l`)
 - [Formlabs Form 3BL](formlabs-form-3bl.md) (`printer.formlabs-form-3bl`)
 
@@ -68,4 +69,4 @@ Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.
 
 - Portfólio pode ser parcial (JS/region/PDF)
 - Rebrands e SKUs regionais ainda não reconciliados
-- Nível `documented` não atingido para estes modelos
+- Form 3B page added in remediation; re-check support windows periodically

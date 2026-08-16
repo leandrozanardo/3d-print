@@ -83,7 +83,7 @@ Busque **Fan speed**, min/max fan, “Don’t cool first N layers”, overhang c
 
 ## Mecanismo
 
-↑ fan → cordão congela antes de escorrer; overhang melhora; interface Z mais fria → bonding pior.  
+↑ fan → cordão congela antes de escorrer; overhang melhora; interface Z mais fria → bonding pior.
 ↓ fan → melhor solda; sag em pontes; risco de deformar detalhe fino em PLA.
 
 Frame aberto da A1 Mini ([tech specs](../../22-fontes/bambu-a1-mini-tech-specs.md) / página da impressora): **corrente de ar ambiente** age como cooling assimétrico → [empenamento](../../12-problemas-e-diagnostico/fff/empenamento.md).

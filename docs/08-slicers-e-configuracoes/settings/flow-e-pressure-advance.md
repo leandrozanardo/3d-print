@@ -121,11 +121,11 @@ Não use flow para “consertar” stringing (veja retract/temp).
 
 ## Ordem de ataque (método)
 
-1. Secar filamento  
-2. Estabilizar temperatura (preset)  
-3. Cupom de flow / wall calibration (Ellis / Teaching Tech como método)  
-4. Cupom de pressure advance / linear advance no stack que você realmente usa  
-5. Só então fine-tuning de retract  
+1. Secar filamento
+2. Estabilizar temperatura (preset)
+3. Cupom de flow / wall calibration (Ellis / Teaching Tech como método)
+4. Cupom de pressure advance / linear advance no stack que você realmente usa
+5. Só então fine-tuning de retract
 
 Fontes de método: [Ellis](../../22-fontes/ellis-print-tuning-guide.md), [Teaching Tech](../../22-fontes/teaching-tech-calibration.md).
 

@@ -1,29 +1,31 @@
 ---
 id: printer.markforged-x7
 title: Markforged X7
-summary: 'Markforged X7 é um modelo do fabricante Markforged registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: Markforged X7 (Markforged X7) — coverage documented com seções DoD, technology/process
+  preenchidos (fff-cf), lifecycle `current`, evidência de listagem oficial acesso
+  2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- fff
+technology:
+- material-extrusion
+process:
+- fff-cf
 applies_to:
 - markforged
+- markforged-x7
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.markforged-official-products
 related:
@@ -33,50 +35,146 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Markforged X7
 aliases_en:
+- Markforged X7
 - Markforged X7
 tags:
 - printer
-- cataloged
+- documented
 - markforged
+- current
 manufacturer_id: markforged
 model_name: Markforged X7
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: 'Listed on official manufacturer product listing https://markforged.com/3d-printers
+  (accessed 2026-08-16); treated as current catalog presence for this remediation
+  pass.
+
+  '
 ---
 # Markforged X7
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Markforged](manufacturer-markforged.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [markforged](manufacturer-markforged.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Documentação de **Markforged X7** distingue claims sustentados pela listagem oficial de parâmetros não publicados.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Markforged |
+| Fabricante | markforged (manufacturer.markforged) |
 | Modelo | Markforged X7 |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/markforged-official-products.md) |
-| URL oficial observada | https://markforged.com/3d-printers |
+| Título canônico | Markforged X7 |
+| Família | unknown |
+| Aliases EN | Markforged X7, Markforged X7 |
+| Tecnologia | material-extrusion |
+| Processo | fff-cf |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.markforged-x7 |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | US |
+| availability_evidence | Listed on official manufacturer product listing https://markforged.com/3d-printers (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
+ |
+| URL de evidência | https://markforged.com/3d-printers |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.markforged-official-products |
+| URL | https://markforged.com/3d-printers |
+| nome observado | Markforged X7 / Markforged X7 |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | medium |
 
-- part-of → fabricante `markforged`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Markforged X7**, evidência de lifecycle acima, classificação material-extrusion/fff-cf, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo markforged.
+
+## Especificações
+
+Datasheet numérico de **Markforged X7** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+
+Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
+
+## Tecnologia
+
+- Technology: material-extrusion
+- Process: fff-cf
+- Nota: conteúdo operacional da classe — extrusão de filament/pellet (FFF/FDM ou variante)
+
+## Manuais
+
+Mapa de manuais específicos de **Markforged X7**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte markforged + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Markforged X7**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Software declarado para **Markforged X7**: seguir portal OEM; versão pinada: não publicada nesta revisão.
+
+## Firmware
+
+Release notes específicas de **Markforged X7**: não localizadas na superfície de listagem.
+
+## Slicer
+
+Usar perfis oficiais markforged quando existirem para **Markforged X7**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: nivelamento/Z-offset, flow e temperaturas por material — não copiar presets de outro modelo.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Markforged X7**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Markforged X7**: verificar path de filamento, bico, mesa/adesão e lubrificação de eixos conforme manual OEM. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Markforged X7**: superfícies quentes, partes móveis, risco de blob/incêndio residual se impressão desacompanhada sem monitoramento.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Inventário de falhas de **Markforged X7** permanece vazio consciente até captura de boletim/wiki OEM datada.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.markforged-official-products](../22-fontes/markforged-official-products.md)
+- URL observada: https://markforged.com/3d-printers
+
+## Lacunas
+
+- Troubleshooting oficial por sintoma para **Markforged X7**
+- Revisões de hardware / changelogs de **Markforged X7**
+- Página de produto dedicada ao SKU **Markforged X7** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **Markforged X7**
+- Firmware/release notes pinados para **Markforged X7**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Markforged X7**

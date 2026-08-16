@@ -111,7 +111,7 @@ Correlação ≠ causa: ver [correlacao vs causa](correlacao-vs-causa-troublesho
 
 ## O que não fazer
 
-- Tratar “mais temperatura = sempre mais adesão” como lei — ver [mito](../20-pesquisa-e-mitos/mito-mais-temp-mais-adesao-sempre.md).
+- Tratar “mais temperatura = sempre mais adesão” como lei — ver [mito](../20-pesquisa-e-mitos/mito-mais-temp-mais-adesao-absoluto.md).
 - Copiar tabelas de outro nozzle/máquina/SKU como universais.
 - Subir nozzle até o máximo da UI “para ver se gruda” sem olhar degradação, odores e SDS.
 - Ignorar umidade: água no filamento muda viscosidade, poros e bonding.

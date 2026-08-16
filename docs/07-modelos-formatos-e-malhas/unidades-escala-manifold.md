@@ -116,7 +116,7 @@ Pare impressão se houver impacto ou desprendimento.
 
 ## Aplicabilidade e exclusão
 
-**Aplica-se a:** imports FFF nesta base.  
+**Aplica-se a:** imports FFF nesta base.
 **Não se aplica a:** metrologia de peça acabada (ver qualidade/metrologia); conversão automática sem inspeção.
 
 ## Relações
@@ -131,7 +131,7 @@ Pare impressão se houver impacto ou desprendimento.
 
 ## Fontes
 
-- [Bambu A1 mini Technical Specifications](../22-fontes/bambu-a1-mini-tech-specs.md) — volume 180³ mm  
+- [Bambu A1 mini Technical Specifications](../22-fontes/bambu-a1-mini-tech-specs.md) — volume 180³ mm
   https://bambulab.com/en/a1-mini/tech-specs
 - Prática de importação FFF (unidades mm vs in)
 

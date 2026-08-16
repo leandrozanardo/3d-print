@@ -2,7 +2,7 @@
 
 > Reference: `project_plans/start_plan.md` + locked decisions (system C, optimization B, Bambu Studio, PLA+PETG, `core/`, `docs/`).
 
-**Root problem:** no repeatable SOP or linked corpus; optimization lived in ad-hoc chat memory.  
+**Root problem:** no repeatable SOP or linked corpus; optimization lived in ad-hoc chat memory.
 **Target architecture:** neural wiki in `docs/projeto` + `playbook.md` (decisions) + `core/` (inspect/validate ports; trimesh/zip adapters) + I/O `3ds/` + per-model plans in `3ds/plan/` + project plans in `project_plans/`.
 
 **Docs language:** English for project wiki, playbook, and plans. Ebook chapter bodies may remain Portuguese (CC BY-SA source) with English meta.

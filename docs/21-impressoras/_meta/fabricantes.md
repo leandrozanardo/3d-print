@@ -38,7 +38,7 @@ tags:
 ---
 # Fabricantes — censo
 
-**Snapshot:** `market-snapshot-2026-08-16-census`  
+**Snapshot:** `market-snapshot-2026-08-16-census`
 **Páginas manufacturer:** ver tabela em [catalogo-global.md](catalogo-global.md)
 
 ## Investigados neste snapshot

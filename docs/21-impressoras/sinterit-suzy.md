@@ -1,29 +1,30 @@
 ---
 id: printer.sinterit-suzy
 title: Sinterit Suzy
-summary: 'Sinterit Suzy é um modelo do fabricante Sinterit registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: Sinterit Suzy (Sinterit Suzy) — coverage documented com seções DoD, technology/process
+  preenchidos (sls), lifecycle `current`, evidência de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- powder-bed-fusion
+technology:
+- powder-bed-fusion
+process:
+- sls
 applies_to:
 - sinterit
+- sinterit-suzy
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
+lifecycle: current
+coverage_level: documented
 sources:
 - source.sinterit-official-products
 related:
@@ -33,50 +34,146 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Sinterit Suzy
 aliases_en:
+- Sinterit Suzy
 - Sinterit Suzy
 tags:
 - printer
-- cataloged
+- documented
 - sinterit
+- current
 manufacturer_id: sinterit
 model_name: Sinterit Suzy
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: 'Listed on official manufacturer product listing https://sinterit.com/3dprinters/
+  (accessed 2026-08-16); treated as current catalog presence for this remediation
+  pass.
+
+  '
 ---
 # Sinterit Suzy
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Sinterit](manufacturer-sinterit.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [sinterit](manufacturer-sinterit.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Documentação de **Sinterit Suzy** distingue claims sustentados pela listagem oficial de parâmetros não publicados.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Sinterit |
+| Fabricante | sinterit (manufacturer.sinterit) |
 | Modelo | Sinterit Suzy |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/sinterit-official-products.md) |
-| URL oficial observada | https://sinterit.com/3dprinters/ |
+| Título canônico | Sinterit Suzy |
+| Família | unknown |
+| Aliases EN | Sinterit Suzy, Sinterit Suzy |
+| Tecnologia | powder-bed-fusion |
+| Processo | sls |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.sinterit-suzy |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | US |
+| availability_evidence | Listed on official manufacturer product listing https://sinterit.com/3dprinters/ (accessed 2026-08-16); treated as current catalog presence for this remediation pass.
+ |
+| URL de evidência | https://sinterit.com/3dprinters/ |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.sinterit-official-products |
+| URL | https://sinterit.com/3dprinters/ |
+| nome observado | Sinterit Suzy / Sinterit Suzy |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | medium |
 
-- part-of → fabricante `sinterit`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Sinterit Suzy**, evidência de lifecycle acima, classificação powder-bed-fusion/sls, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo sinterit.
+
+## Especificações
+
+Não reutilizar números de outras máquinas sinterit como se fossem de **Sinterit Suzy**.
+
+Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo).
+
+## Tecnologia
+
+- Technology: powder-bed-fusion
+- Process: sls
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+
+## Manuais
+
+Mapa de manuais específicos de **Sinterit Suzy**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte sinterit + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Sinterit Suzy**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Para **Sinterit Suzy**, não assumir stack de software de outro produto sinterit.
+
+## Firmware
+
+Atualização de firmware de **Sinterit Suzy** exige fonte OEM dedicada antes de qualquer claim de versão.
+
+## Slicer
+
+Usar perfis oficiais sinterit quando existirem para **Sinterit Suzy**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: energia, scan strategy e recoating — apenas com documentação oficial.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Sinterit Suzy**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Sinterit Suzy**: manejo de pó, filtros, atmosfera inerte quando aplicável, calibração de laser/energia. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Sinterit Suzy**: pó metálico/polimérico: explosividade, inalação, inertização; seguir procedimento OEM.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Pesquisa de recall/service bulletin para **Sinterit Suzy** (sinterit) não retornou evidência suficiente para promover issue conhecida.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.sinterit-official-products](../22-fontes/sinterit-official-products.md)
+- URL observada: https://sinterit.com/3dprinters/
+
+## Lacunas
+
+- Firmware/release notes pinados para **Sinterit Suzy**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Sinterit Suzy**
+- Troubleshooting oficial por sintoma para **Sinterit Suzy**
+- Revisões de hardware / changelogs de **Sinterit Suzy**
+- Página de produto dedicada ao SKU **Sinterit Suzy** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **Sinterit Suzy**

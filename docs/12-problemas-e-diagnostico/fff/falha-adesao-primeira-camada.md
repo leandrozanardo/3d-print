@@ -83,7 +83,7 @@ Hub pai: [Problemas e diagnóstico FFF](INDEX.md)
 
 ## Resumo de emergência
 
-Peça **não gruda** ou solta nas camadas 1–3? Pare o job se o nozzle estiver “imprimindo no ar”. Limpe a [PEI](../../04-componentes-e-hardware/placa-pei-fff.md), confira Z/squish, reduza velocidade da first layer, confirme bed no range (**≤ 80 °C (fonte oficial / fabricante / heuristic; ver `sources`) ** na A1 Mini). Não trate como [empenamento](empenamento.md) até a base ter aderido de verdade.
+Peça **não gruda** ou solta nas camadas 1–3? Pare o job se o nozzle estiver “imprimindo no ar”. Limpe a [PEI](../../04-componentes-e-hardware/placa-pei-fff.md), confira Z/squish, reduza velocidade da first layer, confirme bed no range (**≤ 80 °C** ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md)) na A1 Mini). Não trate como [empenamento](empenamento.md) até a base ter aderido de verdade.
 
 ## Assinatura
 
@@ -135,12 +135,12 @@ Bed máximo oficial: **80 °C** ([tech specs](../../22-fontes/bambu-a1-mini-tech
 ```text
 Camada 1 está grudando com squish "kiss"?
   ├─ NÃO → limpar PEI
-  │         → recalibrar assistências / conferir Z
-  │         → ↓ first layer speed (validar na impressora)
-  │         → bed no range do material (≤80 °C)
-  │         → bloquear draft
-  │         → brim se área pequena
-  │         → PETG? textured + filamento seco
+  │ → recalibrar assistências / conferir Z
+  │ → ↓ first layer speed (validar na impressora)
+  │ → bed no range do material (≤80 °C)
+  │ → bloquear draft
+  │ → brim se área pequena
+  │ → PETG? textured + filamento seco
   └─ SIM → se cantos sobem depois → defect.fff.warping
 ```
 
@@ -162,7 +162,7 @@ Método geral: [Ellis](../../22-fontes/ellis-print-tuning-guide.md), [Teaching T
 | Sujeira | Limpeza; reteste |
 | Z alto | Assistência / offset; squish visual |
 | Velocidade | First layer mais lenta no Studio |
-| Bed | Subir/descer **dentro** do range; cap 80 °C (fonte oficial/fabricante/heuristic; ver sources)  |
+| Bed | Subir/descer **dentro** do range; cap 80 °C ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md)) |
 | Draft | Bloquear fluxo; ver ambiente aberto |
 | Contato mínimo | Reorientar / brim |
 | PETG em smooth | Textured; remoção fria se aderiu demais |

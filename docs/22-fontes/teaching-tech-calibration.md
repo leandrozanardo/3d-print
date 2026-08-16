@@ -26,7 +26,7 @@ prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
-source_type: discovery-only
+source_type: community-report
 language: unknown
 version: unknown
 last_verified: '2026-08-16'

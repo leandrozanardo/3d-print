@@ -49,7 +49,7 @@ Páginas por modelo com capabilities reais quando documentadas; entradas `catalo
 - Critérios: [_meta/criterios-de-inclusao.md](_meta/criterios-de-inclusao.md)
 - Fabricantes (seed + investigados): [_meta/fabricantes.md](_meta/fabricantes.md)
 
-**Denominador de mercado:** aberto (censo expandido, não fechado).  
+**Denominador de mercado:** aberto (censo expandido, não fechado).
 **Nível predominante:** `cataloged` — não confundir com `documented` / DoD completo.
 
 ## Governança do catálogo
@@ -68,6 +68,8 @@ Páginas por modelo com capabilities reais quando documentadas; entradas `catalo
 | [Bambu Lab A1 Mini](bambu-lab-a1-mini.md) | `printer.bambu-lab-a1-mini` | `troubleshooting-mapped` | Specs + wiki oficial clog/blob |
 | [Bambu Lab A1](bambu-lab-a1.md) | `printer.bambu-lab-a1` | `documented` | Compra US confirmada |
 | [Bambu Lab P1S](bambu-lab-p1s.md) | `printer.bambu-lab-p1s` | `documented` | Specs do bloco da loja US |
+| [Bambu Lab P2S](bambu-lab-p2s.md) | `printer.bambu-lab-p2s` | `documented` | Loja US current |
+| [Bambu Lab H2D](bambu-lab-h2d.md) | `printer.bambu-lab-h2d` | `documented` | Loja US dual-nozzle |
 
 ## Fabricantes (páginas)
 

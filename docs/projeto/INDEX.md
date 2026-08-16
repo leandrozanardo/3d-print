@@ -7,7 +7,7 @@ Mission: turn models into reliable parts on **Bambu Lab A1 Mini** (**0.4 mm** no
 Open [`playbook.md`](../../playbook.md), point at a file under `3ds/original/`, follow the SOP. This wiki is the decision graph; the playbook orchestrates.
 
 ```bash
-npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --strict
+python -m core validate-wiki docs
 ```
 
 ## Section hubs

@@ -108,11 +108,11 @@ Print falhou
 
 ## Testes barato → caro
 
-1. Inspecionar FEP (nuvens, furos) e nível de resina  
-2. Reimprimir cupom de exposição do fabricante  
-3. Reorientar + retipar suporte  
-4. Trocar film / filtrar resina  
-5. Contatar suporte OEM  
+1. Inspecionar FEP (nuvens, furos) e nível de resina
+2. Reimprimir cupom de exposição do fabricante
+3. Reorientar + retipar suporte
+4. Trocar film / filtrar resina
+5. Contatar suporte OEM
 
 ## Segurança e parada
 

@@ -1,82 +1,180 @@
 ---
 id: printer.elegoo-mars-5-ultra
 title: Elegoo Mars 5 Ultra
-summary: 'Elegoo Mars 5 Ultra é um modelo do fabricante Elegoo registrado no catálogo
-  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
-  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
-  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
-  known issues ainda são lacunas explícitas — não inventadas.'
+summary: ELEGOO Mars 5 Ultra é MSLA 7" 9K volume ~153.36×77.76×165 mm, listada na
+  loja oficial US em 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- resin
+technology:
+- vat-photopolymerization
+process:
+- msla
 applies_to:
-- elegoo
+- elegoo-mars-5-ultra
 not_for:
-- treat-as-documented-specs
-- invented-compatibility
+- fff-settings-transfer
+- invent-exposure-times
 knowledge_status: draft
+lifecycle: current
+coverage_level: documented
 evidence_status: manufacturer-specific
-safety_level: caution
-confidence: medium
+safety_level: high
+confidence: high
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
-lifecycle: unknown
-coverage_level: discovered
 sources:
 - source.elegoo-official-products
+- source.elegoo-mars-5-ultra
 related:
 - manufacturer.elegoo
 - hub.impressoras
-- meta.printer-global-catalog
+- tech.vat-photopolymerization
+- tech.sla-dlp-msla
 prerequisites:
-- hub.impressoras
+- tech.sla-dlp-msla
 supersedes: []
 aliases_pt_br: []
 aliases_en:
 - Elegoo Mars 5 Ultra
+- ELEGOO Mars 5 Ultra
+- Mars 5 Ultra
 tags:
 - printer
-- cataloged
 - elegoo
+- resin
+- msla
+- documented
+- mars-5-series
 manufacturer_id: elegoo
 model_name: Mars 5 Ultra
-family_status: unknown
+family_status: mars-5-series
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- US
+availability_evidence: Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer
+  (accessed 2026-08-16).
 ---
 # Elegoo Mars 5 Ultra
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Elegoo](manufacturer-elegoo.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [elegoo](manufacturer-elegoo.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+Para **Elegoo Mars 5 Ultra**, o foco operacional desta base é identidade + lifecycle observado + classe vat-photopolymerization/msla.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Elegoo |
-| Modelo | Elegoo Mars 5 Ultra |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/elegoo-official-products.md) |
-| URL oficial observada | https://global.elegoo.com/collections/3d-printers |
+| Fabricante | elegoo (manufacturer.elegoo) |
+| Modelo | Mars 5 Ultra |
+| Título canônico | Elegoo Mars 5 Ultra |
+| Família | mars-5-series |
+| Aliases EN | Elegoo Mars 5 Ultra, ELEGOO Mars 5 Ultra, Mars 5 Ultra |
+| Tecnologia | vat-photopolymerization |
+| Processo | msla |
+| Lifecycle | current |
+| coverage_level | documented |
+| ID | printer.elegoo-mars-5-ultra |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | current |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | US |
+| availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/mars-5-ultra-9k-7inch-monochrome-lcd-resin-3d-printer (accessed 2026-08-16). |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.elegoo-official-products |
+| URL | https://global.elegoo.com/collections/3d-printers |
+| nome observado | Mars 5 Ultra / Elegoo Mars 5 Ultra |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | current |
+| confiança | high |
 
-- part-of → fabricante `elegoo`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Elegoo Mars 5 Ultra**, evidência de lifecycle acima, classificação vat-photopolymerization/msla, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo elegoo.
+
+## Especificações
+
+Não reutilizar números de outras máquinas elegoo como se fossem de **Mars 5 Ultra**.
+
+Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
+
+## Tecnologia
+
+- Technology: vat-photopolymerization
+- Process: msla
+- Nota: conteúdo operacional da classe — fotopolimerização em cuba (SLA/MSLA/DLP/LFS)
+
+## Manuais
+
+Mapa de manuais específicos de **Mars 5 Ultra**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte elegoo + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Elegoo Mars 5 Ultra**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Para **Mars 5 Ultra**, não assumir stack de software de outro produto elegoo.
+
+## Firmware
+
+Atualização de firmware de **Mars 5 Ultra** exige fonte OEM dedicada antes de qualquer claim de versão.
+
+## Slicer
+
+Usar perfis oficiais elegoo quando existirem para **Mars 5 Ultra**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: exposição, lift speeds e suporte — seguir resin settings oficiais quando existirem.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Mars 5 Ultra**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Elegoo Mars 5 Ultra**: cuba/FEP ou membrana, placa de construção, filtragem de resina e limpeza de óptica conforme OEM. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Mars 5 Ultra**: PPE para resina não curada, ventilação, descarte conforme SDS; UV/LED conforme classe do equipamento.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Pesquisa de recall/service bulletin para **Mars 5 Ultra** (elegoo) não retornou evidência suficiente para promover issue conhecida.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.elegoo-mars-5-ultra](../22-fontes/elegoo-mars-5-ultra.md)
+
+- [source.elegoo-official-products](../22-fontes/elegoo-official-products.md)
+- URL observada: https://global.elegoo.com/collections/3d-printers
+
+## Lacunas
+
+- Firmware/release notes pinados para **Mars 5 Ultra**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Mars 5 Ultra**
+- Troubleshooting oficial por sintoma para **Elegoo Mars 5 Ultra**
+- Revisões de hardware / changelogs de **Mars 5 Ultra**
+- Página de produto dedicada ao SKU **Mars 5 Ultra** com tabela numérica completa
+- Manual de usuário/serviço PDF específico de **Elegoo Mars 5 Ultra**

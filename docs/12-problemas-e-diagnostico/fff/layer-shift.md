@@ -116,9 +116,9 @@ Peça ainda no pose original?
 
 ## Testes
 
-1. Foto da base: ainda centrada?  
-2. Reimprimir cubo baixo lento  
-3. Só então mecânica de correia  
+1. Foto da base: ainda centrada?
+2. Reimprimir cubo baixo lento
+3. Só então mecânica de correia
 
 ## PLA vs PETG
 
@@ -130,16 +130,16 @@ Cubo de calibração após fix; sem degrau em altura alvo.
 
 ## Prevenção
 
-- Brim em modelos tippy  
-- Draft control (warp → push)  
-- Não maximizar accel de marketing  
-- Manutenção de path de cabo  
+- Brim em modelos tippy
+- Draft control (warp → push)
+- Não maximizar accel de marketing
+- Manutenção de path de cabo
 
 ## Relações com outros conceitos
 
-- mimicked-by → peel-then-push  
-- worsened-by → warp + high speed  
-- not-for → underextrusion gaps  
+- mimicked-by → peel-then-push
+- worsened-by → warp + high speed
+- not-for → underextrusion gaps
 - related-to → [empenamento](empenamento.md), [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md)
 
 ## Veja também

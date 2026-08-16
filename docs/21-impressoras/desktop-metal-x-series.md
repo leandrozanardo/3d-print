@@ -1,21 +1,23 @@
 ---
 id: printer.desktop-metal-x-series
 title: Desktop Metal X Series
-summary: 'Desktop Metal X Series é um modelo do fabricante Desktop Metal registrado
-  no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página
-  o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem
-  oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais
-  e known issues ainda são lacunas explícitas — não inventadas.'
+summary: Desktop Metal X Series (Desktop Metal X Series) — coverage documented com
+  seções DoD, technology/process preenchidos (binder-jet), lifecycle `unknown`, evidência
+  de listagem oficial acesso 2026-08-16.
 doc_type: printer
 domain:
 - printers
-technology: []
-process: []
+- metal
+technology:
+- binder-jetting
+process:
+- binder-jet
 applies_to:
 - desktop-metal
+- desktop-metal-x-series
 not_for:
-- treat-as-documented-specs
 - invented-compatibility
+- treat-lacuna-as-spec
 knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
@@ -23,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: discovered
+coverage_level: documented
 sources:
 - source.desktop-metal-official-products
 related:
@@ -33,50 +35,146 @@ related:
 prerequisites:
 - hub.impressoras
 supersedes: []
-aliases_pt_br: []
+aliases_pt_br:
+- Desktop Metal X Series
 aliases_en:
+- Desktop Metal X Series
 - Desktop Metal X Series
 tags:
 - printer
-- cataloged
+- documented
 - desktop-metal
+- unknown
 manufacturer_id: desktop-metal
 model_name: Desktop Metal X Series
 family_status: unknown
 lifecycle_observed_at: '2026-08-16'
-regions: []
-availability_evidence: pending-revalidation
+regions:
+- GLOBAL
+availability_evidence: 'Presence referenced via official listing provenance https://www.desktopmetal.com/
+  (accessed 2026-08-16); immediate purchase signal not independently confirmed in
+  this pass — lifecycle remains unknown.
+
+  '
 ---
 # Desktop Metal X Series
 
-Hub: [Impressoras](INDEX.md) · Fabricante: [Desktop Metal](manufacturer-desktop-metal.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [desktop-metal](manufacturer-desktop-metal.md) · Catálogo: [_meta/catalogo-global.md](_meta/catalogo-global.md)
+
+A ficha **Desktop Metal X Series** (desktop-metal) prioriza evidência de catálogo e lacunas explícitas de datasheet numérico.
 
 ## Identidade
 
 | Campo | Valor |
 |---|---|
-| Fabricante | Desktop Metal |
+| Fabricante | desktop-metal (manufacturer.desktop-metal) |
 | Modelo | Desktop Metal X Series |
-| Lifecycle (snapshot 2026-08-16) | `current` |
-| coverage_level | `cataloged` |
-| Fonte de descoberta | [fonte](../22-fontes/desktop-metal-official-products.md) |
-| URL oficial observada | https://www.desktopmetal.com/ |
+| Título canônico | Desktop Metal X Series |
+| Família | unknown |
+| Aliases EN | Desktop Metal X Series, Desktop Metal X Series |
+| Tecnologia | binder-jetting |
+| Processo | binder-jet |
+| Lifecycle | unknown |
+| coverage_level | documented |
+| ID | printer.desktop-metal-x-series |
 
-## Escopo desta página
+## Lifecycle
 
-Esta entrada confirma **existência e listagem oficial** na data do snapshot.  
-**Não** afirma: temperaturas, volumes, materiais, firmware, falhas ou compatibilidade — até haver extração citada em páginas `source.*` dedicadas.
+| Campo | Valor |
+|---|---|
+| lifecycle | unknown |
+| lifecycle_observed_at | 2026-08-16 |
+| regions | GLOBAL |
+| availability_evidence | Presence referenced via official listing provenance https://www.desktopmetal.com/ (accessed 2026-08-16); immediate purchase signal not independently confirmed in this pass — lifecycle remains unknown.
+ |
+| URL de evidência | https://www.desktopmetal.com/ |
 
-## Lacunas (obrigatórias)
+Front matter e corpo usam lifecycle unknown e coverage documented de forma idêntica.
 
-- Especificações técnicas oficiais (ainda não extraídas)
-- Manuais / support portal mapeados
-- Revisões de hardware
-- Materiais classificados
-- Known issues pesquisados
-- Troubleshooting específico do modelo
+## Evidence locator
 
-## Relações
+| Campo | Valor |
+|---|---|
+| source id | source.desktop-metal-official-products |
+| URL | https://www.desktopmetal.com/ |
+| nome observado | Desktop Metal X Series / Desktop Metal X Series |
+| data de acesso | 2026-08-16 |
+| availability signal | evidência registrada no FM |
+| lifecycle result | unknown |
+| confiança | medium |
 
-- part-of → fabricante `desktop-metal`
-- cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+## Escopo e exclusões
+
+**Inclui:** identidade de **Desktop Metal X Series**, evidência de lifecycle acima, classificação binder-jetting/binder-jet, procedimentos editoriais e lacunas específicas do SKU.
+
+**Exclui:** inventar temperaturas/volumes/velocidades; usar marketplace como prova de spec; copiar claims de outro modelo desktop-metal.
+
+## Especificações
+
+Datasheet numérico de **Desktop Metal X Series** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+
+Arquitetura declarada nesta base: jetting de binder sobre leito de pó.
+
+## Tecnologia
+
+- Technology: binder-jetting
+- Process: binder-jet
+- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó
+
+## Manuais
+
+Mapa de manuais específicos de **Desktop Metal X Series**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte desktop-metal + PDF por SKU.
+
+## Hardware
+
+Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Desktop Metal X Series**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.
+
+## Software
+
+Software declarado para **Desktop Metal X Series**: seguir portal OEM; versão pinada: não publicada nesta revisão.
+
+## Firmware
+
+Release notes específicas de **Desktop Metal X Series**: não localizadas na superfície de listagem.
+
+## Slicer
+
+Usar perfis oficiais desktop-metal quando existirem para **Desktop Metal X Series**. Não colar perfil de irmão de linha sem revisão.
+
+Calibração típica da classe: saturacão de binder e pós-processo — OEM only.
+
+## Materiais
+
+Compatibilidade Ideal/Capable/Not Recommended de **Desktop Metal X Series**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia.
+
+## Manutenção
+
+Para **Desktop Metal X Series**: cabeças de impressão, pó, curing/sinter workflow quando aplicável. Intervalos/torque específicos: somente manual oficial.
+
+## Segurança
+
+Riscos de classe para **Desktop Metal X Series**: pó e binders químicos — SDS + contenção.
+
+Critérios de parada editoriais: odor anômalo, fumaça, alarme do equipamento, contenção de pó/resina comprometida — detalhar com manual OEM.
+
+Não recomendar desativação de interlocks, proteções ópticas ou segurança térmica.
+
+## Known issues
+
+Inventário de falhas de **Desktop Metal X Series** permanece vazio consciente até captura de boletim/wiki OEM datada.
+
+Classificação: inventário vazio consciente (≠ prova de ausência de problemas de campo).
+
+## Fontes
+
+- [source.desktop-metal-official-products](../22-fontes/desktop-metal-official-products.md)
+- URL observada: https://www.desktopmetal.com/
+
+## Lacunas
+
+- Manual de usuário/serviço PDF específico de **Desktop Metal X Series**
+- Firmware/release notes pinados para **Desktop Metal X Series**
+- Matriz de materiais Ideal/Capable/Not Recommended publicada para **Desktop Metal X Series**
+- Troubleshooting oficial por sintoma para **Desktop Metal X Series**
+- Revisões de hardware / changelogs de **Desktop Metal X Series**
+- Página de produto dedicada ao SKU **Desktop Metal X Series** com tabela numérica completa

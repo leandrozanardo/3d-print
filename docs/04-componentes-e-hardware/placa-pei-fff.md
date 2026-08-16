@@ -106,7 +106,7 @@ PETG pode **aderir tão forte** ao PEI liso que a remoção arranca o coating ou
 1. Usar **textured** quando disponível.
 2. Remover **após esfriar** (contração ajuda a soltar).
 3. Não forçar a quente com alicate na folha.
-4. Bed no range do material, cap **≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) ** na A1 Mini — subir bed “além do necessário” não é alavanca ilimitada nesta máquina.
+4. Bed no range do material, cap **≤ 80 °C** ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) na A1 Mini — subir bed “além do necessário” não é alavanca ilimitada nesta máquina.
 5. Se soldou: esfriar, flexionar a base magnética (se o design permitir) com cuidado; se o coating falhou, trocar a folha — não improvisar com cola permanente como “solução”.
 
 PLA raramente solda com a mesma agressividade, mas over-squish + smooth suja/limpa errado ainda danifica superfície.
@@ -115,7 +115,7 @@ PLA raramente solda com a mesma agressividade, mas over-squish + smooth suja/lim
 
 | Constraint | Implicação |
 |---|---|
-| Bed max **80 °C (fonte oficial/fabricante/heuristic; ver sources) ** | Receitas de outros printers com bed 90–110 °C **não** transferem |
+| Bed max **80 °C** ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | Receitas de outros printers com bed 90–110 °C **não** transferem |
 | Ideal: PLA, PETG, TPU, PVA | PEI + esses materiais é o caminho suportado pelo fabricante |
 | Frame aberto | Corrente de ar fria a mesa “fria localmente” → adesão irregular; não é falha do PEI |
 | Volume 180³ mm | Brim/raft consomem envelope — planejar margem |
@@ -124,7 +124,7 @@ Fonte de capabilities: [bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tec
 
 ## O que a placa resolve / não resolve
 
-**Resolve (com processo):** interface de adesão previsível para PLA/PETG; face de mesa consistente.  
+**Resolve (com processo):** interface de adesão previsível para PLA/PETG; face de mesa consistente.
 **Não resolve:** Z alto sistemático, under-extrusion, filamento úmido, draft severo, geometria sem área de contato, warping tardio (após boa adesão) — ver [empenamento](../12-problemas-e-diagnostico/fff/empenamento.md).
 
 ## Manutenção e sinais de falha

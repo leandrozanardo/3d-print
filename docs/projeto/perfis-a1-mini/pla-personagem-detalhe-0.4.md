@@ -104,20 +104,20 @@ Face support risk?
 
 ## Calibration order (character)
 
-1. First layer + brim decision  
-2. Dry all colors  
-3. Mono face coupon (optional) before full AMS job  
-4. Paint supports; preview tip contact on face  
-5. Flush minimum → raise only if bleed  
-6. Retract only after dry if webs remain  
+1. First layer + brim decision
+2. Dry all colors
+3. Mono face coupon (optional) before full AMS job
+4. Paint supports; preview tip contact on face
+5. Flush minimum → raise only if bleed
+6. Retract only after dry if webs remain
 
 ## Plan.md must cite
 
-- This profile + [personagens](../proposito/personagens.md)  
-- AMS yes/no + flush strategy  
-- Face layer height / modifiers  
-- Support paint notes  
-- **validate on printer** for flush and face speed  
+- This profile + [personagens](../proposito/personagens.md)
+- AMS yes/no + flush strategy
+- Face layer height / modifiers
+- Support paint notes
+- **validate on printer** for flush and face speed
 
 ## Related
 

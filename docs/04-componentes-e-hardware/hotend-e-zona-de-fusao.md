@@ -76,7 +76,7 @@ Na [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md): hotend all-metal, max hote
 
 ## Mecanismo (decisões)
 
-1. **Setpoint vs realidade:** o termistor mede um ponto; o melt pode estar mais frio sob alta vazão → sobe temp **dentro do range do material**, não até o teto de 300 °C (fonte oficial/fabricante/heuristic; ver sources)  por hábito.
+1. **Setpoint vs realidade:** o termistor mede um ponto; o melt pode estar mais frio sob alta vazão → sobe temp **dentro do range do material**, não até o teto de 300 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) por hábito.
 2. **Heat break:** isola o cold side; falha de cooling do heatsink → heat creep → clog em PLA.
 3. **All-metal:** permite temps altas; exige atenção a creep e a materiais abrasivos (vários CF/GF: Not Recommended pelo fabricante na A1 Mini).
 4. **Depende do** [caminho de extrusão](extrusao-direct-drive-vs-bowden.md): pressão de entrada vem do extrusor.
@@ -88,7 +88,7 @@ Na [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md): hotend all-metal, max hote
 | Max 300 °C | Teto de hardware; **não** receita |
 | Ideal PLA/PETG/TPU/PVA | Janela operacional suportada |
 | Not Recommended ABS/ASA/PC/PA… | Não “habilitar” só porque o hotend aguenta |
-| Bed max 80 °C (fonte oficial/fabricante/heuristic; ver sources)  | Limita polímeros que pedem mesa mais quente |
+| Bed max 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | Limita polímeros que pedem mesa mais quente |
 
 ## Sinais de falha
 

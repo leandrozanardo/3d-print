@@ -4,14 +4,14 @@ Portuguese source book converted to Markdown for offline reference. **Project op
 
 ## License
 
-**CC BY-SA 4.0** — Cláudio Luís Marques Sampaio, MSc.  
-Original: http://www.makerlinux.com.br/ebook  
+**CC BY-SA 4.0** — Cláudio Luís Marques Sampaio, MSc.
+Original: http://www.makerlinux.com.br/ebook
 Attribution required; ShareAlike for derivatives. See [LICENSE](LICENSE) and [CREDITOS.md](CREDITOS.md).
 
 ## How it was converted
 
 1. Prefer `pandoc -f asciidoc -t gfm` when available.
-2. Otherwise: `npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js convert-ebook-adoc`
+2. Otherwise: `python core/convert_ebook_adoc.py`
 3. Each chapter keeps a CC BY-SA attribution header (AsciiDoc archive removed from this repo)
 4. Figures remain under `imagens/`; SVG sources also mirrored in `assets/`
 

@@ -32,6 +32,7 @@ last_reviewed: '2026-08-15'
 review_cycle: 3-months
 sources:
 - source.niosh-am-entry
+- source.bambu-a1-mini-tech-specs
 related:
 - hazard.food-medical-claims
 - material.pla
@@ -61,7 +62,7 @@ Hub pai: [Cenários](INDEX.md)
 
 ## Hard rule
 
-**Não food-safe.** Não recomende para utensílio, copo, pote de alimento ou contato oral.  
+**Não food-safe.** Não recomende para utensílio, copo, pote de alimento ou contato oral.
 Ver [claims food-contact e médico](../15-seguranca-e-meio-ambiente/claims-food-contact-e-medico.md).
 
 ## Objetivo
@@ -101,7 +102,7 @@ Parâmetros numéricos de perfil: use o perfil/legado do projeto e **valide na i
 
 - Confirmar unidades/envelope: [unidades e manifold](../07-modelos-formatos-e-malhas/unidades-escala-manifold.md)
 - Spiral exige contorno elegível — preview no Studio é gate
-- Paredes finas demais para o nozzle falham — ver design de paredes / nozzle 0,4 mm (fonte oficial/fabricante/heuristic; ver sources) 
+- Paredes finas demais para o nozzle falham — ver design de paredes / nozzle 0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))
 
 ## Processo FFF (A1 Mini)
 

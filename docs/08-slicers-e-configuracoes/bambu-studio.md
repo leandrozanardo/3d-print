@@ -68,7 +68,7 @@ Hub pai: [Slicers e configurações](INDEX.md)
 
 - Qualquer receita operacional A1 Mini nesta base
 - Diagnóstico “mudei um número e piorou” (versão + família de perfil)
-- Escolha de process profile (0,20 mm (fonte oficial / fabricante / heuristic; ver `sources`)  Standard vs Draft vs Fine, etc.)
+- Escolha de process profile (0,20 mm Standard vs Draft vs Fine, etc. — heurística editorial (sem fonte pinada))
 - Preview de suportes, brim e first layer antes de imprimir
 
 ## Conceitos semânticos (não dump de settings)
@@ -81,7 +81,7 @@ Use estes conceitos ao raciocinar; o **path exato no menu muda por versão**:
 | Filament profile | Temps, cooling defaults, flow/PA se existirem no preset |
 | Process / quality profile | Layer height, paredes, infill, velocidades, first layer |
 | First layer / initial layer | Adesão e squish — ver [primeira camada](../10-processo-de-impressao/fff/primeira-camada.md) |
-| Bed / nozzle temperature | em geral (condicional) dentro do range do filamento **e** bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources)  na A1 Mini |
+| Bed / nozzle temperature | em geral (condicional) dentro do range do filamento **e** bed ≤ 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) na A1 Mini |
 | Part cooling / fan | Overhangs vs Z-bond / warp — ver [cooling de peça](../04-componentes-e-hardware/cooling-de-peca-fff.md) |
 | Brim / raft / skirt | Âncora de borda; raft = último recurso |
 | Supports (normal/tree) | Acesso, cicatrizes — ver [suportes](../06-design-para-impressao-3d/suportes-fff.md) |
@@ -92,8 +92,8 @@ Use estes conceitos ao raciocinar; o **path exato no menu muda por versão**:
 
 ## Famílias de perfil (como decidir)
 
-1. **Máquina:** selecione o modelo **A1 Mini** (não X1C/P1S/A1 full sem revisão). Volume operacional 180 × 180 × 180 mm (fonte oficial/fabricante/heuristic; ver sources) ; deixe margem para brim/suportes.
-2. **Nozzle:** default desta base [0,4 mm (fonte oficial/fabricante/heuristic; ver sources) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); trocar diâmetro = nova família de processo.
+1. **Máquina:** selecione o modelo **A1 Mini** (não X1C/P1S/A1 full sem revisão). Volume operacional 180 × 180 × 180 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)); deixe margem para brim/suportes.
+2. **Nozzle:** default desta base [0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); trocar diâmetro = nova família de processo.
 3. **Filamento:** preset da marca/tipo quando existir; senão, partida do genérico PLA/PETG do Studio **e** TDS do bobina.
 4. **Processo:** comece pelo preset de qualidade “padrão” do pacote; só specialize (0,12 Fine, 0,28 Draft, etc.) com objetivo claro (detalhe vs tempo).
 5. **Placa:** declare smooth vs textured no fluxo se o Studio/firmware exigir — impacta expectativa de adesão ([PEI](../04-componentes-e-hardware/placa-pei-fff.md)).
@@ -121,7 +121,7 @@ Objetivo da peça (cosmético / encaixe / resistência)?
   → Orientar malha (design.orientation-fff)
   → Preset A1 Mini + filamento Ideal
   → Preview: first layer contínua? overhangs sem suporte impossível?
-  → PLA vs PETG: textured preferida para PETG; bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) 
+  → PLA vs PETG: textured preferida para PETG; bed ≤ 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))
   → Imprimir cupom/peça; uma variável por ajuste
 ```
 

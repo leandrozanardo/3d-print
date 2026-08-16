@@ -60,7 +60,7 @@ Imprimir com confiabilidade básica na [A1 Mini](../21-impressoras/bambu-lab-a1-
 
 ## Hard constraints
 
-- Nozzle de referência: [0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md)
+- Nozzle de referência: [0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md)
 - Bed ≤ 80 °C
 - Não certificar food/medical
 - Materiais Not Recommended do fabricante: fora deste playbook como default
@@ -100,7 +100,7 @@ Imprimir com confiabilidade básica na [A1 Mini](../21-impressoras/bambu-lab-a1-
 - [ ] Placa limpa; PETG preferir textured
 - [ ] Draft controlado
 - [ ] Preview: first layer contínua, sem buracos óbvios
-- [ ] Bed/nozzle dentro do range; bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) 
+- [ ] Bed/nozzle dentro do range; bed ≤ 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))
 
 ## Checklist pós
 

@@ -45,13 +45,13 @@ Did first layer kiss and stick?
 
 ## A1 Mini rules
 
-1. More contact (brim) + clean plate.  
-2. Lower cooling on **first layers**; raise later for overhangs.  
-3. Avoid drafts — A1 Mini has **no native enclosure**; manage room air.  
-4. Reorient to shrink continuous long sections when possible.  
-5. PETG: dry + hot bed + brim.  
-6. Raft only if brim failed twice.  
-7. Don’t max part cooling on large PETG flats.  
+1. More contact (brim) + clean plate.
+2. Lower cooling on **first layers**; raise later for overhangs.
+3. Avoid drafts — A1 Mini has **no native enclosure**; manage room air.
+4. Reorient to shrink continuous long sections when possible.
+5. PETG: dry + hot bed + brim.
+6. Raft only if brim failed twice.
+7. Don’t max part cooling on large PETG flats.
 8. Uncertain bed/fan schedule → **validate on printer**.
 
 ## Suggested presets (PLA)

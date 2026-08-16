@@ -1,10 +1,10 @@
 ---
 id: printer.bambu-lab-p1s
 title: Bambu Lab P1S
-summary: Bambu Lab P1S é impressora FFF enclosed 256³ mm com filtro de carvão, listada
-  para compra imediata na loja oficial US (acesso 2026-08-16). Specs de volume, temps
-  e filamentos Ideal/Capable foram observadas no bloco de parâmetros da própria página
-  da loja.
+summary: Bambu Lab P1S é impressora FFF enclosed 256³ mm com filtro de carvão,
+  listada para compra imediata na loja oficial US (acesso 2026-08-16). Specs de
+  volume, temps e filamentos Ideal/Capable observadas no bloco de parâmetros da
+  loja. Lifecycle current; coverage documented.
 doc_type: printer
 domain:
 - printers
@@ -57,9 +57,10 @@ regions:
 availability_evidence: Listed for immediate purchase on official Bambu Lab US store
   https://us.store.bambulab.com/products/p1s (accessed 2026-08-16).
 ---
+
 # Bambu Lab P1S
 
-Hub: [Impressoras](INDEX.md)
+Hub: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.md)
 
 ## Identidade
 
@@ -69,109 +70,138 @@ Hub: [Impressoras](INDEX.md)
 | Modelo | P1S |
 | Família | p1-series |
 | Regiões | US |
-| Variantes | P1S; P1S AMS Combo; P1S AMS 2 Pro Combo |
+| coverage_level (FM) | `documented` |
 
 ## Lifecycle
 
 | Campo | Valor |
 |---|---|
 | lifecycle | `current` |
-| observed_at | 2026-08-16 |
-| evidence | Listed for immediate purchase on official Bambu Lab US store https://us.store.bambulab.com/products/p1s (accessed 2026-08-16). |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| sinal | compra imediata / Add to Cart na loja oficial US |
 | URL | https://us.store.bambulab.com/products/p1s |
+| confiança | high |
 
 ## Evidence locator
 
 | Campo | Valor |
 |---|---|
-| source | loja oficial Bambu Lab US |
+| source | loja oficial Bambu Lab US + [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) |
 | URL exata | https://us.store.bambulab.com/products/p1s |
-| nome observado | Bambu Lab P1S 3D Printer |
 | availability signal | Add to Cart / Buy Now |
-| lifecycle result | current |
+| lifecycle result | `current` |
 | data de acesso | 2026-08-16 |
 
 ## Escopo e exclusões
 
-Inclui identidade, lifecycle US, specs observadas na evidência citada e lacunas.  
-Exclui inventar firmware pinado, transferir presets de outras máquinas Bambu sem adaptação, e claims de materiais fora da tabela do fabricante.
+**Inclui:** identidade, lifecycle US, claims observados na página da loja/listagem, seções operacionais FFF mínimas, lacunas explícitas.
+**Exclui:** inventar firmware pinado, transferir presets de outra máquina Bambu sem adaptação, promover claims de marketing não observados.
 
 ## Especificações
 
-Valores abaixo foram observados no bloco de parâmetros da loja US P1S (acesso 2026-08-16):
+Source cues for numeric claims: official US store product page / [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) (accessed 2026-08-16).
 
-| Capability | Valor oficial observado | Nota |
+Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16. Capability does not equal process suitability for every filament.
+
+| Capability | Valor observado | Fonte |
 |---|---|---|
-| Build volume | 256 × 256 × 256 mm³ | Studio pode limitar altura default a 250 mm |
-| Enclosure | Enclosed (plastic & glass) | vs P1P open frame |
-| Nozzle incluso | 0,4 mm (fonte oficial/fabricante/heuristic; ver sources)  stainless | opções 0,2 / 0,6 / 0,8 |
-| Max hotend | 300 °C (fonte oficial/fabricante/heuristic; ver sources)  | capability |
-| Max bed | 100 °C (fonte oficial/fabricante/heuristic; ver sources)  | |
-| Max toolhead speed | 500 mm (fonte oficial/fabricante/heuristic; ver sources) /s (fonte oficial/fabricante/heuristic; ver sources)  | marketing/capability |
-| Max acceleration | 20 m/s² | |
-| Ideal filaments | PLA, PETG, TPU, PVA, PET, ABS, ASA | posição fabricante |
-| Capable | PA, PC | |
-| Air filter | Activated carbon | |
-
+| Build volume | 256 × 256 × 256 mm³ (Studio default height 250 mm) ([source](../22-fontes/bambu-p1s-us-store.md))| loja US / source.bambu-p1s-us-store |
+| Enclosure | Enclosed (plastic & glass) | loja US |
+| Nozzle incluso | 0,4 mm stainless (opc. 0,2 / 0,6 / 0,8) ([source](../22-fontes/bambu-p1s-us-store.md))| loja US |
+| Max hotend | 300  °C ([source](../22-fontes/bambu-p1s-us-store.md))| loja US |
+| Max bed | 100  °C ([source](../22-fontes/bambu-p1s-us-store.md))| loja US |
+| Max toolhead speed | 500 mm/s ([source](../22-fontes/bambu-p1s-us-store.md))| loja US |
+| Max acceleration | 20 m/s² ([source](../22-fontes/bambu-p1s-us-store.md))| loja US |
+| Air filter | Activated carbon | loja US |
+| Ideal filaments | PLA, PETG, TPU, PVA, PET, ABS, ASA | loja US |
+| Capable | PA, PC | loja US |
 
 ## Tecnologia
 
 - Processo: FFF / material extrusion
 - Arquitetura: CoreXY enclosed (família P1)
-- Extrusão: direct drive (ecossistema Bambu)
+- Extrusão: direct drive
+- Fans closed-loop: auxiliary part cooling, chamber regulator, control board (vs P1P opcional)
 
 ## Manuais
 
-- Wiki / support Bambu Lab (mapear páginas específicas por sintoma)
-- Service manual completo: lacuna
+- Wiki / support Bambu Lab (FAQ loja aponta specs/wiki)
+- [source.bambu-p1s-us-store](../22-fontes/bambu-p1s-us-store.md)
+- Service manual público completo: não publicado pelo fabricante nesta revisão (lacuna consciente)
 
 ## Hardware
 
 - Enclosure + carbon filter
-- Auxiliary part cooling / chamber regulator / control board fans (closed loop)
 - Hotend all-metal
+- Variantes: P1S; P1S AMS Combo; P1S AMS 2 Pro Combo
+- Revisão de hardware pinada por serial: não publicada pelo fabricante nesta revisão
 
 ## Software
 
-- Bambu Studio / app Bambu
+- Ecossistema: Bambu Studio / Bambu Handy
+- Conta cloud / LAN-only: seguir política do fabricante (não expandido aqui)
 
 ## Firmware
 
-- Canal de release notes: lacuna pinada nesta revisão (não inventar versão)
+- Canal oficial de release notes: não pinado com versão datada nesta revisão
+- Não inventar versão de firmware sem captura datada
 
 ## Slicer
 
-- Primário: Bambu Studio — usar preset do modelo, não colar perfil de outra máquina sem revisão
+- Primário: [Bambu Studio](../08-slicers-e-configuracoes/bambu-studio.md) (`slicer.bambu-studio`)
+- Regra: começar do preset do **modelo**, não colar perfil de outra família sem revisão
 
 ## Materiais
 
-- Ideal: PLA, PETG, TPU, PVA, PET, ABS, ASA
-- Capable: PA, PC
-- CF/GF: fabricante recomenda upgrade de extruder/hotend antes (FAQ loja)
+| Classe | Materiais |
+|---|---|
+| Ideal | PLA, PETG, TPU, PVA, PET, ABS, ASA |
+| Capable | PA, PC |
+
+CF/GF: FAQ da loja recomenda upgrade de extruder/hotend antes (diferente do X1C).
+
+TDS/SDS do filamento não são substituídos por esta página.
 
 ## Manutenção
 
-- Seguir wiki oficial de manutenção do modelo; rotinas locais ainda parciais
+### Calibração (classe FFF)
+
+- Auto bed-level / Z-offset / compensação de vibração quando oferecidos pelo firmware — executar após mudança de hotend, transporte ou falha de primeira camada
+- Validar cupom de primeira camada antes de peças longas
+
+### Rotina preventiva
+
+- Limpeza de placa PEI; inspeção de nozzle; verificação de PTFE/path de filamento; remoção de resíduos no enclosure (quando houver)
+- Seguir wiki/support Bambu do modelo quando existir página dedicada
 
 ## Segurança
 
-- Superfícies quentes, partes móveis, risco de blob/hotend wrap
-- Critérios de parada: fumaça, odor anômalo intenso, blob, colisão repetida, overheat reportado
+- Superfícies quentes (hotend/bed) e partes móveis
+- Enclosure: VOC/particulados de ABS/ASA/PC — ventilação/filtro conforme orientação do fabricante; não tratar filtro de carvão como eliminação total de risco
+- Impressão desacompanhada: risco residual de blob/falha catastrófica — monitoramento recomendado
+- Critérios de parada: fumaça, odor anômalo intenso, blob no hotend, colisão repetida, overheat reportado pelo firmware
 
 ## Known issues
 
-- FAQ loja distingue P1S vs P1P vs X1C
-- Marketing aponta sucessor P2S na loja — P1S permanece on-sale (current)
-- Troubleshooting-mapped: ainda não
+Não `troubleshooting-mapped` ainda (sem árvore wiki pinada 1:1 com validação).
+
+| Tema | Classificação | Evidência |
+|---|---|---|
+| P1S vs P1P (enclosure/cooling/filter) | diferenciação de produto | FAQ loja US |
+| P1S vs X1C (lidar/AI/screen; CF sem upgrade) | diferenciação | FAQ loja US |
+| Sucessor P2S em marketing | lifecycle | loja ainda vende P1S como current; FAQ P2S: sem plano de descontinuar P1S no momento |
+| Altura útil Studio 250 mm | processo/segurança | nota loja sobre colisão heatbed |
+
+Comunidade: não usada como root-cause primária.
 
 ## Fontes
 
 - Loja US: https://us.store.bambulab.com/products/p1s
-- Catálogo: [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md)
-- [source.bambu-p1s-us-store](../22-fontes/bambu-p1s-us-store.md)
+- [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md)
 
 ## Lacunas
 
-- Datasheet técnico dedicado `source.*` quando a página de specs estiver acessível sem bloqueio
 - Firmware version pinada
-- Troubleshooting-mapped completo (exceto onde indicado)
+- Service manual / HMS map completo
+- Troubleshooting-mapped com wiki oficial + validação

@@ -95,19 +95,19 @@ PETG vase: viable if dry; lower speed; stabilize temp; expect more cleanup.
 
 ## Preview checklist (mandatory)
 
-- [ ] Single contour per layer  
-- [ ] No support generated  
-- [ ] Bottom solid count ≥4  
-- [ ] BBox fits bed with brim margin  
-- [ ] No sudden overhang beyond printable angle without redesign  
+- [ ] Single contour per layer
+- [ ] No support generated
+- [ ] Bottom solid count ≥4
+- [ ] BBox fits bed with brim margin
+- [ ] No sudden overhang beyond printable angle without redesign
 
 ## Plan.md must cite
 
-- This profile + vase purpose/geometry  
-- Spiralize confirmed single contour  
-- Line width + layer height  
-- Brim yes/no  
-- Any liquid-tight claim marked **validate on printer**  
+- This profile + vase purpose/geometry
+- Spiralize confirmed single contour
+- Line width + layer height
+- Brim yes/no
+- Any liquid-tight claim marked **validate on printer**
 
 ## Related
 

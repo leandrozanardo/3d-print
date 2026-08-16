@@ -47,14 +47,14 @@ Feature width ≥ ~0.4–0.8 mm printable?
 
 ## A1 Mini rules
 
-1. Layer → **0.08–0.12 mm**.  
-2. Outer wall ≤ **60–80 mm/s** (often 40–70 for faces).  
-3. Detect thin walls on; thicken critical <0.8 mm if mesh edit allowed.  
-4. Flow not >1.00 without calibration.  
-5. Paint supports off noble faces.  
-6. Temp −5 °C if blobbing (after dry confirmed).  
-7. Below a size floor, 0.4 mm cannot recover detail.  
-8. Prefer PLA; PETG cosmetic minis are a bad default.  
+1. Layer → **0.08–0.12 mm**.
+2. Outer wall ≤ **60–80 mm/s** (often 40–70 for faces).
+3. Detect thin walls on; thicken critical <0.8 mm if mesh edit allowed.
+4. Flow not >1.00 without calibration.
+5. Paint supports off noble faces.
+6. Temp −5 °C if blobbing (after dry confirmed).
+7. Below a size floor, 0.4 mm cannot recover detail.
+8. Prefer PLA; PETG cosmetic minis are a bad default.
 9. Uncertain minimum feature size → **validate on printer** with a detail coupon.
 
 ## Suggested presets (PLA)

@@ -51,14 +51,14 @@ AMS involved?
 
 ## A1 Mini rules
 
-1. Nozzle / cold pull if material history dirty (PLA after PETG especially).  
-2. Dry filament before retract/flow drama.  
-3. Temp +5 °C, retest.  
-4. Verify PTFE/AMS friction-free.  
-5. Reduce speed / max volumetric.  
-6. Calibrate flow with single-wall coupon.  
-7. Never raise flow >~1.05 without measuring — hides clogs.  
-8. Direct drive: short retract ≠ under-extrusion cause by itself.  
+1. Nozzle / cold pull if material history dirty (PLA after PETG especially).
+2. Dry filament before retract/flow drama.
+3. Temp +5 °C, retest.
+4. Verify PTFE/AMS friction-free.
+5. Reduce speed / max volumetric.
+6. Calibrate flow with single-wall coupon.
+7. Never raise flow >~1.05 without measuring — hides clogs.
+8. Direct drive: short retract ≠ under-extrusion cause by itself.
 9. Uncertain volumetric numbers → **validate on printer**.
 
 ## Suggested presets (PLA)
@@ -92,9 +92,9 @@ AMS involved?
 
 ## Diagnostic coupon
 
-1. Single-wall cube or Teaching Tech style extrusion test.  
-2. Measure wall width vs line width.  
-3. Adjust flow small steps (±0.02).  
+1. Single-wall cube or Teaching Tech style extrusion test.
+2. Measure wall width vs line width.
+3. Adjust flow small steps (±0.02).
 4. Only then change volumetric/speed for production profile.
 
 ## Related

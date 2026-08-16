@@ -117,15 +117,15 @@ Pops / bobina duvidosa?
   └─ NÃO → PETG com fan alto?
         ├─ SIM → ↓ fan; early layers baixos
         └─ NÃO → temp no range? speed moderado?
-              ├─ NÃO → +5 °C (fonte oficial / fabricante / heuristic; ver `sources`)  / −speed (uma variável)
+              ├─ NÃO → +5 °C (heurística editorial (sem fonte pinada)) / −speed (uma variável)
               └─ SIM → bloquear draft; reorientar carga se possível
 ```
 
 ## Testes
 
-1. Cupom de parede / flexão entre layers  
-2. Mesmo G-code com fan −20–40% (PETG)  
-3. Secagem controlada se suspeita  
+1. Cupom de parede / flexão entre layers
+2. Mesmo G-code com fan −20–40% (PETG)
+3. Secagem controlada se suspeita
 
 ## PLA vs PETG
 
@@ -137,8 +137,8 @@ Pops / bobina duvidosa?
 
 ## Segurança
 
-- Peça estrutural delaminada pode falhar em uso — não certifique carga  
-- Se split ocorrer com nozzle ainda imprimindo e peça móvel → risco de colisão  
+- Peça estrutural delaminada pode falhar em uso — não certifique carga
+- Se split ocorrer com nozzle ainda imprimindo e peça móvel → risco de colisão
 
 ## Validação
 
@@ -146,17 +146,17 @@ Cupom flexiona sem abrir layers; superfície sem fendas horizontais.
 
 ## Prevenção
 
-- Preset do material (não PLA fan em PETG)  
-- Secar  
-- Controle de corrente de ar  
-- Orientar cargas no plano XY quando possível  
+- Preset do material (não PLA fan em PETG)
+- Secar
+- Controle de corrente de ar
+- Orientar cargas no plano XY quando possível
 
 ## Relações com outros conceitos
 
-- caused-by → cooling, cold, moisture, draft  
-- related-to → [empenamento](empenamento.md) (ambos térmicos; assinaturas diferentes)  
-- settings → cooling, temperatures, speeds  
-- material-bias → PETG  
+- caused-by → cooling, cold, moisture, draft
+- related-to → [empenamento](empenamento.md) (ambos térmicos; assinaturas diferentes)
+- settings → cooling, temperatures, speeds
+- material-bias → PETG
 
 ## Veja também
 
