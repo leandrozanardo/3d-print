@@ -15,7 +15,7 @@ confidence: "high"
 last_reviewed: "2026-08-15"
 review_cycle: "12-months"
 sources: ["source.fda-am-medical-devices-entry", "source.iso-astm-52900-entry"]
-related: ["myth.pla-food-safe", "tech.lpbf-ebm", "hazard.metal-powder", "hub.aplicacoes"]
+related: ["myth.pla-food-safe", "app.food-contact-limits", "tech.lpbf-ebm", "hazard.metal-powder", "hub.aplicacoes"]
 prerequisites: []
 supersedes: []
 aliases_pt_br: ["qualificação AM", "certificação peça impressa", "limites regulatórios"]
@@ -44,7 +44,7 @@ Conjunto de evidências de que **processo + material + design + inspeção** pro
 |---|---|---|
 | Protótipo visual | Baixa | Orientação de processo |
 | Ferramenta interna não crítica | Média | Boas práticas + testes locais |
-| Food-contact | Alta; material+processo | [mito PLA](../20-pesquisa-e-mitos/mito-pla-food-safe.md); sem certificação |
+| Food-contact | Alta; material+processo | [contato alimentar](contato-alimentar-limites.md); [mito PLA](../20-pesquisa-e-mitos/mito-pla-food-safe.md); sem certificação |
 | Dispositivo médico AM | Muito alta (design controls, etc.) | Apontar [FDA guidance entry](../22-fontes/fda-am-medical-devices-guidance-entry.md) |
 | Aeroespacial | Muito alta (allowables, NDE) | Conceitos; sem allowables inventados |
 | Metal pó | Facility + segurança | [hazard.metal-powder](../15-seguranca-e-meio-ambiente/pos-metais-e-risco-explosao.md) |

@@ -53,6 +53,7 @@ Hub: [fff/INDEX.md](fff/INDEX.md)
 | [PA (nylon)](fff/pa-nylon.md) | `material.pa` |
 | [PC](fff/pc.md) | `material.pc` |
 | [Compósitos / fibra](fff/composites-fibra.md) | `material.composites-fiber` |
+| [PVA / BVOH (suporte)](fff/pva-bvoh-suporte.md) | `material.pva-bvoh-support` |
 | [Secagem e armazenamento](fff/secagem-e-armazenamento.md) | `material.drying-storage` |
 
 ### Resina
@@ -62,6 +63,7 @@ Hub: [resina/INDEX.md](resina/INDEX.md)
 | Página | ID |
 |---|---|
 | [Famílias de resina](resina/familias-de-resina.md) | `material.resin-families` |
+| [Standard vs tough](resina/resina-standard-vs-tough.md) | `material.resin-standard-vs-tough` |
 
 ### Pó
 
@@ -70,6 +72,8 @@ Hub: [po/INDEX.md](po/INDEX.md)
 | Página | ID |
 |---|---|
 | [Feedstocks polímeros e metais](po/feedstocks-polimeros-e-metais.md) | `material.powder-feedstocks` |
+| [PA12 — SLS/MJF](po/pa12-sls-mjf.md) | `material.pa12-sls-mjf` |
+| [AlSi10Mg — LPBF](po/aluminio-alsi10mg-lpbf.md) | `material.alsi10mg-lpbf` |
 
 ## Lacunas
 

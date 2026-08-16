@@ -15,7 +15,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["meta.coverage", "meta.knowledge-map"]
+related: ["meta.coverage", "meta.knowledge-map", "hazard.electrical-fire-unattended", "hazard.solvents-ipa-vapors"]
 prerequisites: ["meta.architecture"]
 supersedes: []
 aliases_pt_br: ["Segurança e meio ambiente"]
@@ -46,7 +46,9 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 | [Claims food-contact e médico](claims-food-contact-e-medico.md) | `hazard.food-medical-claims` | draft |
 | [Resina — PPE e descarte](resina-ppe-e-descarte.md) | `hazard.resin-ppe-disposal` | draft |
 | [Pós metálicos e explosão](pos-metais-e-risco-explosao.md) | `hazard.metal-powder` | draft |
+| [Elétrico, fogo e impressão desacompanhada](eletrico-fogo-e-impressao-desacompanhada.md) | `hazard.electrical-fire-unattended` | draft |
+| [Solventes, IPA e vapores](solventes-ipa-e-vapores.md) | `hazard.solvents-ipa-vapors` | draft |
 
 ## Lacunas
 
-Elétrico/fogo detalhado: wave futura.
+Mapa de resíduos por jurisdição BR e medição local de exposição: futuros.

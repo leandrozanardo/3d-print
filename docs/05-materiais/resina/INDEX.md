@@ -11,7 +11,7 @@ safety_level: "high"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
-related: ["hub.materiais", "material.resin-families", "hazard.resin-ppe-disposal"]
+related: ["hub.materiais", "material.resin-families", "material.resin-standard-vs-tough", "hazard.resin-ppe-disposal"]
 tags: ["hub", "resin"]
 ---
 
@@ -24,3 +24,4 @@ Antes de processar: [PPE e descarte](../../15-seguranca-e-meio-ambiente/resina-p
 | Página | ID |
 |---|---|
 | [Famílias de resina](familias-de-resina.md) | `material.resin-families` |
+| [Standard vs tough](resina-standard-vs-tough.md) | `material.resin-standard-vs-tough` |

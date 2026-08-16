@@ -45,8 +45,8 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 | [Settings semânticos (hub)](settings/INDEX.md) | `hub.slicers.settings` | draft |
 | [Resina — exposição e suportes](resina-exposicao-e-suportes.md) | `setting.resin-exposure-supports` | draft |
 
-Settings FFF atômicos: ver [settings/INDEX.md](settings/INDEX.md) (altura de camada, paredes, infill, temp, cooling, velocidades, retração, line width).
+Settings FFF atômicos: ver [settings/INDEX.md](settings/INDEX.md) (altura de camada, paredes, infill, temp, cooling, velocidades, retração, line width, suportes, brim/raft/skirt, flow/PA, costura).
 
 ## Lacunas
 
-Pressure advance / flow rate como páginas atômicas: futuro.
+Calibrações assistidas Bambu campo-a-campo por versão de Studio: futuro.

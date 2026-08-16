@@ -14,8 +14,8 @@ safety_level: "caution"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "12-months"
-sources: []
-related: ["firmware.gcode-basics", "hub.software", "printer.bambu-lab-a1-mini"]
+sources: ["source.marlin-docs", "source.klipper-docs"]
+related: ["firmware.gcode-basics", "hub.software", "printer.bambu-lab-a1-mini", "setting.flow-pressure-advance"]
 prerequisites: ["firmware.gcode-basics"]
 supersedes: []
 aliases_pt_br: ["Klipper versus Marlin", "firmwares FFF abertos"]
@@ -41,6 +41,7 @@ A [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md) nesta base opera no ecossist
 - Muitos recursos via `#define` / menus / G-code
 - Host (OctoPrint, etc.) opcional para fila e câmera
 - Amplo suporte comunitário em kits e máquinas DIY
+- Entrada canônica: [source.marlin-docs](../22-fontes/marlin-docs.md)
 
 ## Klipper (visão)
 
@@ -48,6 +49,7 @@ A [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md) nesta base opera no ecossist
 - Configuração em `printer.cfg` (e includes)
 - Macros potentes; input shaper e outros recursos populares no ecossistema
 - Exige SBC/PC confiável + MCU compatível
+- Entrada canônica: [source.klipper-docs](../22-fontes/klipper-docs.md)
 
 ## Comparação conceitual
 
@@ -66,12 +68,13 @@ Ambos consomem G-code, mas macros e M-codes diferem. Fundamentos: [gcode-fundame
 ## Quando a distinção importa nesta wiki
 
 - Diagnóstico de “firmware open” vs “OEM fechado”
-- Expectativa de input shaping / pressure advance: **nome do recurso e disponibilidade dependem do stack**
+- Expectativa de input shaping / pressure advance: **nome do recurso e disponibilidade dependem do stack** — ver [flow e pressure advance](../08-slicers-e-configuracoes/settings/flow-e-pressure-advance.md)
 - Automação remota: segurança primeiro (incêndio, home sozinho)
 
 ## Fontes
 
-Documentação oficial Marlin e Klipper (a pinagem `source.*` dedicada pode ser adicionada em batch de manutenção). Sem URLs inventadas de forks obscuros.
+- [source.marlin-docs](../22-fontes/marlin-docs.md) — https://marlinfw.org/docs/basics/introduction.html
+- [source.klipper-docs](../22-fontes/klipper-docs.md) — https://www.klipper3d.org/
 
 ## Lacunas
 

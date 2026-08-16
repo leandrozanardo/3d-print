@@ -46,6 +46,8 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 |---|---|---|
 | [G-code — fundamentos](gcode-fundamentos.md) | `firmware.gcode-basics` | draft |
 | [Klipper vs Marlin — conceitos](klipper-vs-marlin-conceitos.md) | `firmware.klipper-marlin-concepts` | draft |
+| [Input shaping e ressonância](input-shaping-e-ressonancia.md) | `firmware.input-shaping-resonance` | draft |
+| [Bed mesh e Z-offset](bed-mesh-e-z-offset.md) | `firmware.bed-mesh-z-offset` | draft |
 
 ## Relações com outros conceitos
 
@@ -54,4 +56,5 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+- Procedimentos versionados OEM (A1 Mini) pinados por firmware: abertos
+- Cobertura deep adicional: ver `cobertura.md`

@@ -1,7 +1,7 @@
 ---
 id: "hub.fundamentos"
 title: "Fundamentos"
-summary: "Terminologia de manufatura aditiva, categorias ISO/ASTM, workflow digital, camadas/resolução/precisão, anisotropia e tensões residuais. Hub de navegação da Wave 1 de fundamentos."
+summary: "Terminologia de manufatura aditiva, categorias ISO/ASTM, workflow digital, camadas/resolução/precisão, anisotropia, transferência de calor FFF, adesão/molhabilidade e disciplina correlação vs causa. Hub de navegação de fundamentos."
 doc_type: "hub"
 domain: ["hub"]
 technology: []
@@ -27,7 +27,7 @@ tags: ["hub"]
 
 ## Escopo
 
-Terminologia de manufatura aditiva, workflow digital CAD→peça, camadas/resolução/precisão, anisotropia e tensões residuais. Transferência de calor, fluxo, adesão detalhada e DoE entram em waves seguintes.
+Terminologia de manufatura aditiva, workflow digital CAD→peça, camadas/resolução/precisão, anisotropia e tensões residuais, transferência de calor FFF, adesão/molhabilidade da first layer e correlação vs causa no troubleshooting. DoE formal entra em waves seguintes.
 
 ## Status
 
@@ -48,6 +48,9 @@ Wave 1: páginas atômicas abaixo publicadas como `draft`. Matriz geral: [_meta/
 | [Workflow digital: do CAD à peça](workflow-digital-cad-ate-peca.md) | `fund.digital-workflow` | draft |
 | [Camadas, resolução e precisão](camadas-resolucao-precisao.md) | `fund.layers-resolution-accuracy` | draft |
 | [Anisotropia e tensões residuais](anisotropia-e-tensoes-residuais.md) | `fund.anisotropy` | draft |
+| [Transferência de calor em FFF](transferencia-de-calor-fff.md) | `fund.heat-transfer-fff` | draft |
+| [Adesão, molhabilidade e primeira camada](adesao-molhabilidade-primeira-camada.md) | `fund.wetting-first-layer` | draft |
+| [Correlação vs causa no troubleshooting](correlacao-vs-causa-troubleshooting.md) | `fund.correlation-vs-cause` | draft |
 
 ## Relações com outros conceitos
 
@@ -57,6 +60,5 @@ Wave 1: páginas atômicas abaixo publicadas como `draft`. Matriz geral: [_meta/
 
 ## Lacunas
 
-- Transferência de calor e fluxo de melt em FFF
-- Adesão mesa/peça como página atômica (além de primeira camada)
+- Fluxo de melt / reologia quantitativa em FFF
 - Desenho de experimentos (DoE) para calibração

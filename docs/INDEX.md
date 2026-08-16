@@ -31,8 +31,10 @@ Esta é a entrada humana da base canônica. Para agentes de IA, leia primeiro [A
 
 - Tecnologias: [Comparação entre categorias](02-tecnologias/comparacao-entre-categorias.md) · [PBF](02-tecnologias/powder-bed-fusion/INDEX.md)
 - Segurança crítica: [Pós metálicos / explosão](15-seguranca-e-meio-ambiente/pos-metais-e-risco-explosao.md)
-- Regulação: [Limites de qualificação](18-aplicacoes-e-regulacao/limites-de-qualificacao.md)
-- Mitos: [PLA food-safe](20-pesquisa-e-mitos/mito-pla-food-safe.md) · [100% infill](20-pesquisa-e-mitos/mito-100-infill-mais-forte.md)
+- Regulação: [Limites de qualificação](18-aplicacoes-e-regulacao/limites-de-qualificacao.md) · [Contato alimentar](18-aplicacoes-e-regulacao/contato-alimentar-limites.md)
+- Mitos: [PLA food-safe](20-pesquisa-e-mitos/mito-pla-food-safe.md) · [100% infill](20-pesquisa-e-mitos/mito-100-infill-mais-forte.md) · [Enclosure PLA](20-pesquisa-e-mitos/mito-enclosure-obrigatorio-pla.md)
+- Economia: [Quando não imprimir](19-economia-e-sustentabilidade/quando-nao-imprimir-3d.md)
+
 
 ## Domínios
 

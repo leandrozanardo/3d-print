@@ -45,6 +45,7 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | Página | ID | Status |
 |---|---|---|
 | [Custo e desperdício FFF](custo-e-desperdicio-fff.md) | `econ.fff-cost-waste` | draft |
+| [Quando não imprimir em 3D](quando-nao-imprimir-3d.md) | `econ.when-not-to-print` | draft |
 
 ## Relações com outros conceitos
 

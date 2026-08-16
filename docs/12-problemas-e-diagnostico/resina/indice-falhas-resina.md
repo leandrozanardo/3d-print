@@ -15,7 +15,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
 sources: ["source.niosh-am-entry"]
-related: ["tech.sla-dlp-msla", "setting.resin-exposure-supports", "post.resin-wash-cure", "hazard.resin-ppe-disposal", "material.resin-families"]
+related: ["tech.sla-dlp-msla", "setting.resin-exposure-supports", "post.resin-wash-cure", "hazard.resin-ppe-disposal", "material.resin-families", "defect.resin.nothing-on-plate", "defect.resin.island-loose-support", "defect.resin.suction-delamination", "defect.resin.over-under-exposure"]
 prerequisites: ["hazard.resin-ppe-disposal", "tech.sla-dlp-msla"]
 supersedes: []
 aliases_pt_br: ["falhas impressão resina", "troubleshooting MSLA", "print não gruda na plataforma"]
@@ -31,19 +31,28 @@ Hub pai: [Problemas e diagnóstico](../INDEX.md) · pasta [resina](INDEX.md)
 
 Pare se houver vazamento no LCD, cheiro irritante forte, contato cutâneo massivo ou peça colada que exija força perigosa. PPE: [resina PPE](../../15-seguranca-e-meio-ambiente/resina-ppe-e-descarte.md).
 
+## Páginas atômicas
+
+| Sintoma-chave | Página |
+|---|---|
+| Plataforma vazia / raft no FEP | [Nada na placa](nada-na-placa.md) |
+| Ilha / tip arrancado / feature no tanque | [Ilha e suporte solto](ilha-e-suporte-solto.md) |
+| Cupping / camadas em cavidade / peel extremo | [Sucção e delaminação](succao-e-delaminacao.md) |
+| Bleed vs fragilidade / calibrar dose | [Over / under exposure](over-under-exposure.md) |
+
 ## Matriz sintoma → hipótese → próximo passo
 
 | Sintoma | Hipóteses altas | Teste / ação |
 |---|---|---|
-| Nada na plataforma; raft no FEP | Bottom exposure baixa; nivelamento; FEP/film; lift | Matriz de exposição; nivelar; inspecionar filme ([settings](../../08-slicers-e-configuracoes/resina-exposicao-e-suportes.md)) |
-| Peça soldada no FEP | Bottom/exposure alta; lift inadequado | ↓ bottom; ↑ lift care; não arrancar com metal no LCD |
-| Camadas faltando / buracos | Subexposição; suporte fraco; sucção (cupping) | ↑ exposição leve; holes de alívio; tips |
-| Detalhe derretido / bleeding | Superexposição; resina errada | ↓ exposição; cupom de detalhe |
-| Suporte arranca da peça | Tips fracos; ângulo ruim; peel alto | Mais tips / contact; reorientar |
+| Nada na plataforma; raft no FEP | Bottom exposure baixa; nivelamento; FEP/film; lift | Ver [nada na placa](nada-na-placa.md); matriz; nivelar; filme ([settings](../../08-slicers-e-configuracoes/resina-exposicao-e-suportes.md)) |
+| Peça soldada no FEP | Bottom/exposure alta; lift inadequado | [Over exposure](over-under-exposure.md); ↓ bottom; lift care; não arrancar com metal no LCD |
+| Camadas faltando / buracos | Subexposição; suporte fraco; sucção (cupping) | [Sucção](succao-e-delaminacao.md) / [under](over-under-exposure.md) / [ilha](ilha-e-suporte-solto.md) |
+| Detalhe derretido / bleeding | Superexposição; resina errada | [Over/under](over-under-exposure.md); cupom de detalhe |
+| Suporte arranca da peça | Tips fracos; ângulo ruim; peel alto | [Ilha e suporte](ilha-e-suporte-solto.md) |
 | Peça quebradiça pós-cura | Cura excessiva ou resina frágil; lavagem má | Revisar [cura](../../14-pos-processamento/lavagem-e-pos-cura-resina.md); família ([materiais](../../05-materiais/resina/familias-de-resina.md)) |
 | Pegajosa após “cura” | Lavagem incompleta; UV insuficiente; tempo/distância | Relavar; re-curar conforme TDS; não pintar ainda |
 | Linhas/estrias LCD | Máscara/LED; FEP nublado | Manutenção OEM; substituir consumíveis |
-| Falha no meio do Z | Pouca resina; temperatura baixa; suporte | Volume; aquecer ambiente conforme TDS; reforçar |
+| Falha no meio do Z | Pouca resina; temperatura baixa; suporte; sucção | Volume; TDS térmica; [suporte](ilha-e-suporte-solto.md) / [sucção](succao-e-delaminacao.md) |
 
 ## Diferenciar de FFF
 
@@ -85,5 +94,5 @@ Print falhou
 
 ## Lacunas
 
-- Páginas atômicas por sintoma (uma a uma): waves futuras
+- Páginas atômicas cobertas para os quatro modos acima; restantes (LCD stripes, pegajosidade pós-cura dedicada) ainda index-only
 - Fotos de referência locais: pendente

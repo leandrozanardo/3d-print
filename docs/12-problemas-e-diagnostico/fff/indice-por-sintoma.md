@@ -1,7 +1,7 @@
 ---
 id: "troubleshoot.fff-symptom-index"
 title: "Índice por sintoma (FFF)"
-summary: "Mapa rápido sintoma → página canônica FFF. Escolha uma linha, abra a página, corrija uma causa por vez. Priorize segurança e adesão antes de cosmética. Cobre empenamento, primeira camada, stringing, subextrusão, layer shift, elephant foot e delaminação; aponta legado quando ainda não migrado."
+summary: "Mapa rápido sintoma → página canônica FFF. Escolha uma linha, abra a página, corrija uma causa por vez. Priorize segurança e adesão antes de cosmética. Cobre empenamento, primeira camada, stringing, subextrusão, layer shift, elephant foot, delaminação, ringing, Z-banding e pillowing; aponta legado quando ainda não migrado."
 doc_type: "troubleshooting"
 domain: ["troubleshooting", "fff"]
 technology: ["material-extrusion"]
@@ -15,7 +15,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 sources: []
-related: ["defect.fff.warping", "process.fff.first-layer", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.layer-shift", "defect.fff.elephant-foot", "defect.fff.delamination"]
+related: ["defect.fff.warping", "process.fff.first-layer", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.layer-shift", "defect.fff.elephant-foot", "defect.fff.delamination", "defect.fff.ringing-ghosting", "defect.fff.z-banding", "defect.fff.pillowing"]
 prerequisites: ["tech.fff"]
 supersedes: []
 aliases_pt_br: ["índice por sintoma", "matriz sintoma causa", "troubleshooting FFF"]
@@ -36,7 +36,7 @@ Hub pai: [Problemas FFF](INDEX.md) · [Problemas](../INDEX.md)
 1. Segurança / colisão (shift, peça solta)  
 2. Adesão / warp (peça precisa sobreviver)  
 3. Saúde de extrusão (gaps, clogs, umidade)  
-4. Cosmética (stringing, seam, detalhe)  
+4. Cosmética (stringing, seam, ringing, pillowing, detalhe)  
 
 ## Matriz sintoma → página
 
@@ -49,6 +49,9 @@ Hub pai: [Problemas FFF](INDEX.md) · [Problemas](../INDEX.md)
 | Degrau XY permanente nas paredes | impacto, peel-then-push, cinto, accel | [Layer shift](layer-shift.md) |
 | Base “pé de elefante” / furo apertado só na base | over-squish, bed quente, first layer | [Elephant foot](elephant-foot.md) |
 | Camadas separando / split mid-body | fan alto, frio, úmido (PETG) | [Delaminação](delaminacao.md) |
+| Eco/ondulação após cantos ou texto | vibração, outer speed, mesa, accel | [Ringing / ghosting](ringing-ghosting.md) |
+| Faixas horizontais periódicas em Z | Z mecânico, temp/fluxo, umidade, speed | [Z-banding](z-banding.md) |
+| Topo almofadado sobre o infill | tops insuficientes, infill aberto, cooling, extrusão | [Pillowing](pillowing.md) |
 | Pops / bolhas / espuma | umidade | [Secagem](../../05-materiais/fff/secagem-e-armazenamento.md) |
 
 ## Árvore rápida
@@ -61,7 +64,10 @@ Falhou na mesa (camadas 1–3)?
         ├─ Degrau XY → layer shift (descarte peel-push)
         ├─ Cabelo → stringing (secar antes)
         ├─ Split layers → delaminação
-        └─ Base gorda → elephant foot
+        ├─ Base gorda → elephant foot
+        ├─ Eco após cantos → ringing
+        ├─ Faixas horizontais Z → z-banding
+        └─ Topo colchão → pillowing
 ```
 
 ## Settings úteis
@@ -85,5 +91,5 @@ Hub: [Settings semânticos](../../08-slicers-e-configuracoes/settings/INDEX.md)
 
 ## Lacunas
 
-- Seam, pillowing, supports welded — migração pendente
+- Seam, supports welded — migração pendente
 - Fluxograma ilustrado

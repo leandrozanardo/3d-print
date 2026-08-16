@@ -1,7 +1,7 @@
 ---
 id: "hub.problemas.fff"
 title: "Problemas e diagnóstico FFF"
-summary: "Hub de falhas FFF: índice por sintoma, empenamento, stringing, subextrusão, layer shift, elephant foot e delaminação. Sempre uma variável por teste; secar antes de torres."
+summary: "Hub de falhas FFF: índice por sintoma, empenamento, stringing, subextrusão, layer shift, elephant foot, delaminação, ringing, Z-banding e pillowing. Sempre uma variável por teste; secar antes de torres."
 doc_type: "hub"
 domain: ["troubleshooting", "fff"]
 knowledge_status: "draft"
@@ -10,7 +10,7 @@ safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
-related: ["hub.problemas", "troubleshoot.fff-symptom-index", "defect.fff.warping", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.layer-shift", "defect.fff.elephant-foot", "defect.fff.delamination"]
+related: ["hub.problemas", "troubleshoot.fff-symptom-index", "defect.fff.warping", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.layer-shift", "defect.fff.elephant-foot", "defect.fff.delamination", "defect.fff.ringing-ghosting", "defect.fff.z-banding", "defect.fff.pillowing"]
 tags: ["hub", "troubleshooting", "fff"]
 ---
 
@@ -28,5 +28,8 @@ Voltar: [Problemas](../INDEX.md)
 | [Layer shift](layer-shift.md) | `defect.fff.layer-shift` |
 | [Elephant foot](elephant-foot.md) | `defect.fff.elephant-foot` |
 | [Delaminação](delaminacao.md) | `defect.fff.delamination` |
+| [Ringing / ghosting](ringing-ghosting.md) | `defect.fff.ringing-ghosting` |
+| [Z-banding](z-banding.md) | `defect.fff.z-banding` |
+| [Pillowing](pillowing.md) | `defect.fff.pillowing` |
 
 Processo relacionado: [Primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md)

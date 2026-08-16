@@ -15,7 +15,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "12-months"
 sources: ["source.niosh-am-entry", "source.epa-3d-printing-research", "source.iso-astm-52900-entry"]
-related: ["hub.materiais.po", "tech.sls-mjf", "tech.lpbf-ebm", "tech.binder-jetting-variants", "hazard.metal-powder", "defect.pbf", "post.depowdering-metal"]
+related: ["hub.materiais.po", "tech.sls-mjf", "tech.lpbf-ebm", "tech.binder-jetting-variants", "hazard.metal-powder", "defect.pbf", "post.depowdering-metal", "material.pa12-sls-mjf", "material.alsi10mg-lpbf"]
 prerequisites: ["hazard.metal-powder"]
 supersedes: []
 aliases_pt_br: ["pó AM", "feedstock pó", "pó metálico", "pó polimérico"]
@@ -49,6 +49,7 @@ Pó fino = inalação + potencial de combustão/explosão (especialmente metais 
 ## Polímeros (entrada)
 
 - Famílias comuns: PA12, PA11, TPU e filled grades em SLS/MJF
+- Grade dedicada: [PA12 — SLS/MJF](pa12-sls-mjf.md)
 - Aging térmico e oxidação no refresh alteram fusão e mecânica
 - Política de **virgin/refresh** é OEM-específica — não inventar %
 - Armazenar seco, fechado, rastreado
@@ -57,6 +58,7 @@ Pó fino = inalação + potencial de combustão/explosão (especialmente metais 
 
 - Rotas: atomização a gás → esferas para LPBF/EBM/BJ
 - Exemplos de famílias: 316L, 17-4PH, Ti-6Al-4V, AlSi10Mg, Inconel — cada uma com janela e riscos próprios
+- Grade dedicada (safety-critical): [AlSi10Mg — LPBF](aluminio-alsi10mg-lpbf.md)
 - Al e Ti: atenção máxima a inflamabilidade
 - Misturar lotes/ligas sem procedimento = contaminação cruzada grave
 
@@ -94,5 +96,5 @@ Ver [defeitos PBF](../../12-problemas-e-diagnostico/po-metal/defeitos-pbf.md).
 ## Lacunas
 
 - Tabelas PSD por máquina/liga não publicadas
-- Página por grade (PA12, Ti64, etc.) ainda não criada
+- Grades adicionais (Ti64, 316L, PA11, etc.) além de PA12 e AlSi10Mg
 - Ensaios de flowability (Hall, Carney) só mencionados

@@ -62,6 +62,10 @@ Hub: [resina/INDEX.md](resina/INDEX.md)
 | Página | ID |
 |---|---|
 | [Índice de falhas — resina](resina/indice-falhas-resina.md) | `defect.resin.index` |
+| [Nada na placa](resina/nada-na-placa.md) | `defect.resin.nothing-on-plate` |
+| [Ilha e suporte solto](resina/ilha-e-suporte-solto.md) | `defect.resin.island-loose-support` |
+| [Sucção e delaminação](resina/succao-e-delaminacao.md) | `defect.resin.suction-delamination` |
+| [Over / under exposure](resina/over-under-exposure.md) | `defect.resin.over-under-exposure` |
 
 ### Pó / metal (PBF)
 
@@ -73,4 +77,4 @@ Hub: [po-metal/INDEX.md](po-metal/INDEX.md)
 
 ## Lacunas
 
-Páginas atômicas por sintoma resin: waves futuras.
+Páginas atômicas resin adicionais (LCD stripes, pegajosidade pós-cura dedicada): waves futuras.

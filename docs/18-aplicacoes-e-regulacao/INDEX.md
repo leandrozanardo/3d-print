@@ -45,12 +45,14 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | Página | ID | Status |
 |---|---|---|
 | [Limites de qualificação](limites-de-qualificacao.md) | `app.qualification-limits` | draft |
+| [Contato alimentar — limites](contato-alimentar-limites.md) | `app.food-contact-limits` | draft |
 
 ## Relações com outros conceitos
 
 - part-of → base canônica `docs/`
 - depends-on → políticas em `_meta/`
+- related → [Claims food/médico](../15-seguranca-e-meio-ambiente/claims-food-contact-e-medico.md)
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Mapeamento ANVISA detalhado e templates IQ/OQ/PQ: abertos.

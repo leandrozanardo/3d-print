@@ -15,7 +15,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 sources: []
-related: ["meta.coverage", "meta.knowledge-map"]
+related: ["meta.coverage", "meta.knowledge-map", "scenario.vessels-containers", "scenario.multimaterial-ams-lite", "scenario.tall-thin-parts"]
 prerequisites: ["meta.architecture"]
 supersedes: []
 aliases_pt_br: ["Cenários e playbooks"]
@@ -48,6 +48,9 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | [Miniaturas e detalhe fino](miniaturas-detalhe-fino.md) | `scenario.miniatures` | draft |
 | [Peças funcionais e brackets](pecas-funcionais-brackets.md) | `scenario.functional-brackets` | draft |
 | [Impressão rápida vs qualidade](impressao-rapida-vs-qualidade.md) | `scenario.speed-vs-quality` | draft |
+| [Vasos e recipientes](vasos-e-recipientes.md) | `scenario.vessels-containers` | draft |
+| [Multimaterial AMS Lite](multimaterial-ams-lite.md) | `scenario.multimaterial-ams-lite` | draft |
+| [Peças altas e finas](pecas-altas-e-finas.md) | `scenario.tall-thin-parts` | draft |
 
 ## Relações com outros conceitos
 
@@ -56,4 +59,4 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Lacunas
 
-Playbooks multi-material AMS e resin-only end-to-end: futuros.
+Playbook resin-only end-to-end e suporte PVA dedicado: futuros.

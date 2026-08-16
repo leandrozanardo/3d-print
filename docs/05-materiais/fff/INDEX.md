@@ -10,7 +10,7 @@ safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
-related: ["hub.materiais", "material.pla", "material.petg", "material.tpu", "material.abs-asa", "material.pa", "material.pc", "material.drying-storage", "material.composites-fiber"]
+related: ["hub.materiais", "material.pla", "material.petg", "material.tpu", "material.abs-asa", "material.pa", "material.pc", "material.drying-storage", "material.composites-fiber", "material.pva-bvoh-support"]
 tags: ["hub", "fff"]
 ---
 
@@ -23,6 +23,7 @@ Voltar: [Materiais](../INDEX.md)
 | [PLA](pla.md) | `material.pla` | Ideal |
 | [PETG](petg.md) | `material.petg` | Ideal |
 | [TPU](tpu.md) | `material.tpu` | Ideal |
+| [PVA / BVOH (suporte)](pva-bvoh-suporte.md) | `material.pva-bvoh-support` | PVA listado Ideal — sem receita numérica inventada |
 | [ABS / ASA](abs-asa.md) | `material.abs-asa` | Not Recommended — sem receita completa |
 | [PA (nylon)](pa-nylon.md) | `material.pa` | Not Recommended — sem receita completa |
 | [PC](pc.md) | `material.pc` | Not Recommended — sem receita completa |

@@ -15,7 +15,7 @@ confidence: "high"
 last_reviewed: "2026-08-15"
 review_cycle: "12-months"
 sources: ["source.fda-am-medical-devices-entry"]
-related: ["material.pla", "app.qualification-limits", "hub.pesquisa"]
+related: ["material.pla", "app.qualification-limits", "app.food-contact-limits", "hazard.food-medical-claims", "hub.pesquisa"]
 prerequisites: []
 supersedes: []
 aliases_pt_br: ["PLA food safe", "PLA seguro para alimentos", "PLA atóxico"]
@@ -73,5 +73,5 @@ Regulação de contato alimentar é de **sistema** (material + processo + uso), 
 
 ## Lacunas
 
-- Página dedicada a food-contact / NSF/ANVISA ainda não escrita
+- Mapeamento NSF/ANVISA detalhado: ainda aberto (limites: [contato alimentar](../18-aplicacoes-e-regulacao/contato-alimentar-limites.md))
 - Ensaios laboratoriais locais: inexistentes nesta base

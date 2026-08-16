@@ -48,6 +48,8 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 | [Tolerâncias e encaixes FFF](tolerancias-e-encaixes-fff.md) | `design.tolerances-fff` | draft |
 | [Resistência e anisotropia](resistencia-e-anisotropia.md) | `design.strength-anisotropy` | draft |
 | [Furos, roscas e inserts](features-furos-roscas-inserts.md) | `design.holes-threads-inserts` | draft |
+| [Overhangs e ângulos autoportantes](overhangs-e-angulos-autofportantes.md) | `design.overhangs-self-supporting` | draft |
+| [Split e montagem](split-e-montagem.md) | `design.split-assembly` | draft |
 
 ## Lacunas
 

@@ -52,6 +52,8 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | [NIOSH Additive Manufacturing](niosh-additive-manufacturing.md) | `source.niosh-am-entry` |
 | [EPA 3D Printing Research](epa-3d-printing-research.md) | `source.epa-3d-printing-research` |
 | [FDA AM medical devices guidance](fda-am-medical-devices-guidance-entry.md) | `source.fda-am-medical-devices-entry` |
+| [Marlin Firmware Documentation](marlin-docs.md) | `source.marlin-docs` |
+| [Klipper Documentation](klipper-docs.md) | `source.klipper-docs` |
 
 Atribuição legado: [projeto/fontes-e-atribuicao.md](../projeto/fontes-e-atribuicao.md)
 
