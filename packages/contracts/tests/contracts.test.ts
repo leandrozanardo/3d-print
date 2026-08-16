@@ -47,9 +47,7 @@ describe("@fix-my-print/contracts", () => {
 
   it("rejects NaN in canonicalJson", () => {
     expect(() => canonicalJson({ a: Number.NaN })).toThrow(/NaN|Infinity/);
-    expect(() => canonicalJson({ a: Number.POSITIVE_INFINITY })).toThrow(
-      /NaN|Infinity/,
-    );
+    expect(() => canonicalJson({ a: Number.POSITIVE_INFINITY })).toThrow(/NaN|Infinity/);
   });
 
   it("sorts object keys in canonicalJson", () => {

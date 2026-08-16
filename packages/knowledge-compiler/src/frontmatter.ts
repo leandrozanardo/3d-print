@@ -40,7 +40,10 @@ function stripBom(text: string): { text: string; hasBom: boolean } {
 /**
  * Return [yamlText | null, body]. Accepts optional UTF-8 BOM already stripped.
  */
-export function splitFrontMatter(text: string): { yamlText: string | null; body: string } {
+export function splitFrontMatter(text: string): {
+  yamlText: string | null;
+  body: string;
+} {
   if (!text.startsWith(FM_START)) {
     return { yamlText: null, body: text };
   }
@@ -165,7 +168,10 @@ export function parseFrontMatterYaml(
     });
 
     if (doc.errors.length > 0) {
-      throw new FrontMatterError(`YAML parse error: ${doc.errors[0]?.message}`, pathLabel);
+      throw new FrontMatterError(
+        `YAML parse error: ${doc.errors[0]?.message}`,
+        pathLabel,
+      );
     }
 
     const tagIssues: string[] = [];

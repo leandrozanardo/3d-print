@@ -12,6 +12,10 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@fix-my-print/engine": "workspace:*",
+    "@fix-my-print/formats": "workspace:*",
+    "@fix-my-print/geometry": "workspace:*",
+    "buffer": "6.0.3",
     "react": "19.1.1",
     "react-dom": "19.1.1"
   },

@@ -6,7 +6,8 @@ describe("feature flag defaults", () => {
     expect(featureFlags.engine.ts.enabled).toBe(true);
   });
 
-  it("keeps geometry WASM off", () => {
+  it("keeps geometry WASM off until Manifold is wired in the worker", () => {
+    // Documented: PureTs inspect path is active; do not enable without Manifold bundle proof.
     expect(featureFlags.geometry.wasm.enabled).toBe(false);
   });
 

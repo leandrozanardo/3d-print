@@ -19,12 +19,7 @@ describe("@fix-my-print/domain", () => {
     expect(v.printability).toBeCloseTo(0.5);
     expect(v.strength).toBeCloseTo(0.5);
     const sum =
-      v.printability +
-      v.strength +
-      v.quality +
-      v.timeProxy +
-      v.materialProxy +
-      v.risk;
+      v.printability + v.strength + v.quality + v.timeProxy + v.materialProxy + v.risk;
     expect(sum).toBeCloseTo(1);
   });
 

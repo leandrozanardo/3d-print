@@ -5,14 +5,7 @@ import { parseBinaryStl } from "@fix-my-print/formats";
 
 import { PureTsGeometryAdapter } from "../src/index";
 
-const CUBE = path.join(
-  __dirname,
-  "..",
-  "..",
-  "formats",
-  "fixtures",
-  "cube.stl",
-);
+const CUBE = path.join(__dirname, "..", "..", "formats", "fixtures", "cube.stl");
 
 describe("@fix-my-print/geometry", () => {
   const adapter = new PureTsGeometryAdapter();
@@ -21,7 +14,10 @@ describe("@fix-my-print/geometry", () => {
     const mesh = parseBinaryStl(new Uint8Array(fs.readFileSync(CUBE)));
     const facts = adapter.inspect(mesh);
     expect(facts.faceCount).toBe(12);
-    expect(facts.vertexCount).toBe(36);
+    expect(facts.vertexCount).toBe(8);
+    expect(facts.watertight).toBe(true);
+    expect(facts.volume).not.toBeNull();
+    expect(Math.abs(facts.volume!)).toBeCloseTo(1, 5);
     expect(facts.bounds.min[0]).toBeCloseTo(0);
     expect(facts.bounds.max[0]).toBeCloseTo(1);
   });

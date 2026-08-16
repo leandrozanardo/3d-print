@@ -20,7 +20,8 @@ export interface AiPort {
 }
 
 export class NullAiPort implements AiPort {
-  async explain(_request: AiExplanationRequest): Promise<AiExplanationResult> {
+  async explain(request: AiExplanationRequest): Promise<AiExplanationResult> {
+    void request;
     return { schemaVersion: 1, status: "disabled", errorCode: "AI_DISABLED" };
   }
 }

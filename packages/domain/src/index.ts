@@ -139,9 +139,7 @@ export function paretoFrontier(candidates: readonly Candidate[]): Candidate[] {
   const feasible = candidates.filter((c) => c.hardConstraintOk);
   return feasible.filter(
     (c) =>
-      !feasible.some(
-        (other) => other.id !== c.id && dominates(other.scores, c.scores),
-      ),
+      !feasible.some((other) => other.id !== c.id && dominates(other.scores, c.scores)),
   );
 }
 

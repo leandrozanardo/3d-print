@@ -10,18 +10,66 @@ import {
 /** Elongated box 10 x 1 x 1 (12 tris, duplicated verts). */
 function elongatedBox(): RawMesh {
   const facesCoords: [number, number, number][][] = [
-    [[0, 0, 0], [10, 0, 0], [10, 1, 0]],
-    [[0, 0, 0], [10, 1, 0], [0, 1, 0]],
-    [[0, 0, 1], [10, 1, 1], [10, 0, 1]],
-    [[0, 0, 1], [0, 1, 1], [10, 1, 1]],
-    [[0, 0, 0], [10, 0, 1], [10, 0, 0]],
-    [[0, 0, 0], [0, 0, 1], [10, 0, 1]],
-    [[0, 1, 0], [10, 1, 0], [10, 1, 1]],
-    [[0, 1, 0], [10, 1, 1], [0, 1, 1]],
-    [[0, 0, 0], [0, 1, 0], [0, 1, 1]],
-    [[0, 0, 0], [0, 1, 1], [0, 0, 1]],
-    [[10, 0, 0], [10, 0, 1], [10, 1, 1]],
-    [[10, 0, 0], [10, 1, 1], [10, 1, 0]],
+    [
+      [0, 0, 0],
+      [10, 0, 0],
+      [10, 1, 0],
+    ],
+    [
+      [0, 0, 0],
+      [10, 1, 0],
+      [0, 1, 0],
+    ],
+    [
+      [0, 0, 1],
+      [10, 1, 1],
+      [10, 0, 1],
+    ],
+    [
+      [0, 0, 1],
+      [0, 1, 1],
+      [10, 1, 1],
+    ],
+    [
+      [0, 0, 0],
+      [10, 0, 1],
+      [10, 0, 0],
+    ],
+    [
+      [0, 0, 0],
+      [0, 0, 1],
+      [10, 0, 1],
+    ],
+    [
+      [0, 1, 0],
+      [10, 1, 0],
+      [10, 1, 1],
+    ],
+    [
+      [0, 1, 0],
+      [10, 1, 1],
+      [0, 1, 1],
+    ],
+    [
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 1, 1],
+    ],
+    [
+      [0, 0, 0],
+      [0, 1, 1],
+      [0, 0, 1],
+    ],
+    [
+      [10, 0, 0],
+      [10, 0, 1],
+      [10, 1, 1],
+    ],
+    [
+      [10, 0, 0],
+      [10, 1, 1],
+      [10, 1, 0],
+    ],
   ];
   const verts: number[] = [];
   const faces: number[][] = [];
@@ -40,12 +88,8 @@ describe("@fix-my-print/optimizer", () => {
   it("is deterministic: same frontier hash twice", () => {
     const mesh = elongatedBox();
     const volume = { x: 100, y: 100, z: 100 };
-    const a = paretoFrontierFromCandidates(
-      generateOrientationCandidates(mesh, volume),
-    );
-    const b = paretoFrontierFromCandidates(
-      generateOrientationCandidates(mesh, volume),
-    );
+    const a = paretoFrontierFromCandidates(generateOrientationCandidates(mesh, volume));
+    const b = paretoFrontierFromCandidates(generateOrientationCandidates(mesh, volume));
     expect(frontierHash(a)).toBe(frontierHash(b));
     expect(a.frontier.length).toBeGreaterThan(0);
   });

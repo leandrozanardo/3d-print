@@ -1,7 +1,4 @@
-import {
-  createEngineError,
-  EngineException,
-} from "@fix-my-print/contracts";
+import { createEngineError, EngineException } from "@fix-my-print/contracts";
 
 export interface StoragePort {
   putCreateOnly(key: string, value: Uint8Array): void;
@@ -50,6 +47,12 @@ export {
 } from "./rlsPolicy";
 export {
   OverwriteRejectedError,
-  SupabaseStorageAdapter,
+  StorageOperationError,
   type StoredObjectMeta,
+} from "./errors";
+export { InMemoryStorageAdapter } from "./InMemoryStorageAdapter";
+export {
+  SupabaseStorageAdapter,
+  isStorageConflictError,
+  type StorageUploadBody,
 } from "./SupabaseStorageAdapter";

@@ -6,8 +6,18 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 
-import { FrontMatterError, parseMarkdownDocument, type ParsedDocument } from "./frontmatter";
-import { LINK_RE, SKIP_SCHEMES, requireDirectory, validateWikiLinks, walkMarkdownFiles } from "./links";
+import {
+  FrontMatterError,
+  parseMarkdownDocument,
+  type ParsedDocument,
+} from "./frontmatter";
+import {
+  LINK_RE,
+  SKIP_SCHEMES,
+  requireDirectory,
+  validateWikiLinks,
+  walkMarkdownFiles,
+} from "./links";
 import {
   COVERAGE_LEVEL,
   CONFIDENCE,
@@ -88,14 +98,16 @@ function isCanonical(rel: string): boolean {
 
 function slugifyHeading(text: string): string {
   let t = text.trim().toLowerCase();
-  t = t.replace(/[^\p{L}\p{N}\s\-]/gu, "");
+  t = t.replace(/[^\p{L}\p{N}\s-]/gu, "");
   t = t.replace(/\s+/g, "-");
   return t.replace(/^-+|-+$/g, "");
 }
 
 function parseDate(value: unknown): Date | null {
   if (value instanceof Date && !Number.isNaN(value.getTime())) {
-    return new Date(Date.UTC(value.getUTCFullYear(), value.getUTCMonth(), value.getUTCDate()));
+    return new Date(
+      Date.UTC(value.getUTCFullYear(), value.getUTCMonth(), value.getUTCDate()),
+    );
   }
   if (typeof value === "string" && DATE_RE.test(value.trim())) {
     const [y, m, d] = value.trim().split("-").map(Number);
@@ -246,7 +258,9 @@ class WikiValidator {
     for (const issue of this.issues) {
       summary[issue.code] = (summary[issue.code] ?? 0) + 1;
     }
-    const summaryByCode = Object.fromEntries(Object.entries(summary).sort(([a], [b]) => a.localeCompare(b)));
+    const summaryByCode = Object.fromEntries(
+      Object.entries(summary).sort(([a], [b]) => a.localeCompare(b)),
+    );
 
     return {
       ok: errors.length === 0,
@@ -293,7 +307,11 @@ class WikiValidator {
       }
 
       if (doc.frontMatter === null) {
-        this.error("missing_front_matter", "canonical page missing YAML front matter", rel);
+        this.error(
+          "missing_front_matter",
+          "canonical page missing YAML front matter",
+          rel,
+        );
         continue;
       }
 
@@ -330,7 +348,11 @@ class WikiValidator {
     const value = fm[key];
     if (typeof value !== "string" || !allowed.has(value)) {
       const sorted = [...allowed].sort();
-      this.error("invalid_enum", `${key}=${JSON.stringify(value)} not in ${JSON.stringify(sorted)}`, rel);
+      this.error(
+        "invalid_enum",
+        `${key}=${JSON.stringify(value)} not in ${JSON.stringify(sorted)}`,
+        rel,
+      );
     }
   }
 
@@ -376,7 +398,11 @@ class WikiValidator {
         "tags",
       ]) {
         if (listKey in fm && asStrList(fm[listKey]) === null) {
-          this.error("invalid_list_field", `field '${listKey}' must be a list of scalars`, rel);
+          this.error(
+            "invalid_list_field",
+            `field '${listKey}' must be a list of scalars`,
+            rel,
+          );
         }
       }
 
@@ -384,9 +410,17 @@ class WikiValidator {
       if (typeof summary === "string") {
         const length = summary.trim().length;
         if (length < SUMMARY_MIN) {
-          this.error("summary_too_short", `summary length ${length} < ${SUMMARY_MIN}`, rel);
+          this.error(
+            "summary_too_short",
+            `summary length ${length} < ${SUMMARY_MIN}`,
+            rel,
+          );
         } else if (length > SUMMARY_MAX) {
-          this.warning("summary_too_long", `summary length ${length} > ${SUMMARY_MAX}`, rel);
+          this.warning(
+            "summary_too_long",
+            `summary length ${length} > ${SUMMARY_MAX}`,
+            rel,
+          );
         }
       } else if ("summary" in fm) {
         this.error("invalid_summary", "summary must be a string", rel);
@@ -405,7 +439,11 @@ class WikiValidator {
           cycle !== "per-batch" &&
           cycle !== "on-change"
         ) {
-          this.warning("unknown_review_cycle", `unrecognized review_cycle '${cycle}'`, rel);
+          this.warning(
+            "unknown_review_cycle",
+            `unrecognized review_cycle '${cycle}'`,
+            rel,
+          );
         }
         const months = cycleMonths(cycle);
         if (reviewed !== null && months !== null) {
@@ -448,7 +486,11 @@ class WikiValidator {
       const coverage = fm["coverage_level"];
       if (coverage !== undefined && coverage !== null) {
         if (typeof coverage !== "string" || !COVERAGE_LEVEL.has(coverage)) {
-          this.error("invalid_coverage_level", `invalid coverage_level '${String(coverage)}'`, rel);
+          this.error(
+            "invalid_coverage_level",
+            `invalid coverage_level '${String(coverage)}'`,
+            rel,
+          );
         } else {
           const sources = asStrList(fm["sources"]) ?? [];
           if (
@@ -530,10 +572,15 @@ class WikiValidator {
             continue;
           }
           if (!this.idToRel.has(ref)) {
-            this.error("unresolved_id", `${fieldName} references unknown id '${ref}'`, rel, {
-              field: fieldName,
-              entityId: ref,
-            });
+            this.error(
+              "unresolved_id",
+              `${fieldName} references unknown id '${ref}'`,
+              rel,
+              {
+                field: fieldName,
+                entityId: ref,
+              },
+            );
           } else if (fieldName === "prerequisites" && pageId) {
             const list = this.prereqGraph.get(pageId) ?? [];
             list.push(ref);
@@ -585,7 +632,9 @@ class WikiValidator {
       }
       if (visiting.has(node)) {
         const cycleStart = stack.indexOf(node);
-        const cycle = [...stack.slice(cycleStart >= 0 ? cycleStart : 0), node].join(" -> ");
+        const cycle = [...stack.slice(cycleStart >= 0 ? cycleStart : 0), node].join(
+          " -> ",
+        );
         this.error("prereq_cycle", `prerequisites cycle: ${cycle}`);
         return;
       }
@@ -747,7 +796,11 @@ class WikiValidator {
         if (hedge.test(window) || window.includes("Absolutos indevidos")) {
           continue;
         }
-        this.error("absolute_claim", `improper absolute certainty near '${match[0]}'`, rel);
+        this.error(
+          "absolute_claim",
+          `improper absolute certainty near '${match[0]}'`,
+          rel,
+        );
         break;
       }
       for (const pattern of soft) {
@@ -841,7 +894,9 @@ class WikiValidator {
       }
       for (const key of PRINTER_REQUIRED_FIELDS) {
         if (!(key in fm)) {
-          this.error("missing_printer_field", `printer requires '${key}'`, rel, { field: key });
+          this.error("missing_printer_field", `printer requires '${key}'`, rel, {
+            field: key,
+          });
         }
       }
       if (
@@ -925,17 +980,27 @@ class WikiValidator {
         continue;
       }
       if (!("title" in fm)) {
-        this.error("incomplete_source_page", "source page missing 'title'", rel, { field: "title" });
+        this.error("incomplete_source_page", "source page missing 'title'", rel, {
+          field: "title",
+        });
       }
       const body = this.bodyByRel.get(rel) ?? "";
       const hasUrl = /https?:\/\//.test(body) || /\bURL\b/.test(body);
       if (!hasUrl) {
         this.error("incomplete_source_page", "source page body missing URL field", rel);
       }
-      if (!body.toLowerCase().includes("data de acesso") && !body.toLowerCase().includes("accessed")) {
+      if (
+        !body.toLowerCase().includes("data de acesso") &&
+        !body.toLowerCase().includes("accessed")
+      ) {
         this.error("incomplete_source_page", "source page missing access date", rel);
       }
-      for (const key of ["source_type", "language", "version", "last_verified"] as const) {
+      for (const key of [
+        "source_type",
+        "language",
+        "version",
+        "last_verified",
+      ] as const) {
         if (!(key in fm)) {
           this.warning(
             "incomplete_source_metadata",
@@ -946,10 +1011,19 @@ class WikiValidator {
         }
       }
       const st = fm["source_type"];
-      if (st !== undefined && st !== null && (typeof st !== "string" || !SOURCE_TYPES.has(st))) {
-        this.error("invalid_source_type", `source_type '${String(st)}' not in controlled set`, rel, {
-          field: "source_type",
-        });
+      if (
+        st !== undefined &&
+        st !== null &&
+        (typeof st !== "string" || !SOURCE_TYPES.has(st))
+      ) {
+        this.error(
+          "invalid_source_type",
+          `source_type '${String(st)}' not in controlled set`,
+          rel,
+          {
+            field: "source_type",
+          },
+        );
       }
     }
   }
@@ -1010,7 +1084,10 @@ export function validateWiki(
     return result;
   }
 
-  const result = new WikiValidator(root, { strict: true, ...(today !== undefined ? { today } : {}) }).run();
+  const result = new WikiValidator(root, {
+    strict: true,
+    ...(today !== undefined ? { today } : {}),
+  }).run();
   result.stats["fail_on_warnings"] = failOnWarnings;
   if (failOnWarnings && result.warnings.length > 0) {
     result.ok = false;

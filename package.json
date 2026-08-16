@@ -3,22 +3,26 @@
   "private": true,
   "version": "0.0.0",
   "description": "Fix My Print monorepo",
-  "packageManager": "npm@11.6.2",
+  "packageManager": "pnpm@10.12.1",
   "engines": {
     "node": ">=20"
   },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
   "scripts": {
-    "build:packages": "npm run build -w @fix-my-print/contracts -w @fix-my-print/domain -w @fix-my-print/repo-guard -w @fix-my-print/knowledge-compiler -w @fix-my-print/formats -w @fix-my-print/formats-3mf -w @fix-my-print/geometry -w @fix-my-print/geometry-worker -w @fix-my-print/engine -w @fix-my-print/optimizer -w @fix-my-print/storage -w @fix-my-print/reporting -w @fix-my-print/cli --if-present",
-    "test": "npm run build:packages && npm run test --workspaces --if-present",
-    "test:unit": "npm run test",
-    "typecheck": "npm run build:packages && npm run typecheck --workspaces --if-present",
-    "build:web": "npm run build -w @fix-my-print/web",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "preinstall": "node -e \"const ua=process.env.npm_config_user_agent||''; if(!/pnpm/.test(ua)){console.error('Use pnpm (npx pnpm@10)'); process.exit(1)}\"",
+    "build": "pnpm -r --if-present run build",
+    "build:packages": "pnpm -r --filter \"./packages/**\" --if-present run build",
+    "build:web": "pnpm --filter @fix-my-print/web run build",
+    "test": "pnpm -r --if-present run test",
+    "test:unit": "pnpm -r --if-present run test",
+    "test:integration": "pnpm --filter @fix-my-print/storage run test",
+    "test:security": "pnpm --filter @fix-my-print/formats-3mf run test && pnpm --filter @fix-my-print/repo-guard run test",
+    "test:differential": "pnpm --filter @fix-my-print/knowledge-compiler run test -- wikiDifferential && pnpm --filter @fix-my-print/geometry-manifold run test -- meshDifferential",
+    "validate:knowledge": "pnpm --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --strict --json",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,js,cjs,mjs,json}\" \"apps/**/*.{ts,tsx,js,cjs,mjs,json,css,html}\" \"*.{json,md,yml,yaml}\" \".github/**/*.{yml,yaml}\" \".cursor/**/*.{mjs,json,mdc}\"",
+    "format:check": "prettier --check \"packages/**/*.{ts,tsx,js,cjs,mjs,json}\" \"apps/**/*.{ts,tsx,js,cjs,mjs,json,css,html}\" \"*.{json,md,yml,yaml}\" \".github/**/*.{yml,yaml}\" \".cursor/**/*.{mjs,json,mdc}\"",
+    "ci": "pnpm install --frozen-lockfile && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build:web && git diff --check"
   },
   "devDependencies": {
     "@eslint/js": "9.33.0",

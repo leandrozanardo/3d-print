@@ -2,7 +2,7 @@
   "name": "@fix-my-print/formats",
   "version": "0.0.0",
   "private": true,
-  "description": "Format detection and raw mesh parsers (STL)",
+  "description": "Format detection and raw mesh parsers (STL/OBJ/PLY)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fix-my-print/contracts": "0.0.0"
+    "@fix-my-print/contracts": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "30.0.0",

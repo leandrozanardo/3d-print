@@ -2,7 +2,7 @@
   "name": "@fix-my-print/storage",
   "version": "0.0.0",
   "private": true,
-  "description": "StoragePort, MemoryStorageAdapter, and SupabaseStorageAdapter stubs",
+  "description": "StoragePort, MemoryStorageAdapter, InMemoryStorageAdapter, and SupabaseStorageAdapter",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,7 +11,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fix-my-print/contracts": "0.0.0"
+    "@fix-my-print/contracts": "workspace:*",
+    "@supabase/supabase-js": "2.57.4"
   },
   "devDependencies": {
     "@types/jest": "30.0.0",

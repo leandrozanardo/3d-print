@@ -168,10 +168,7 @@ export type WorkerEvent = z.infer<typeof WorkerEventSchema>;
 export type AnalysisResult = z.infer<typeof AnalysisResultSchema>;
 export type EngineBudgets = z.infer<typeof EngineBudgetsSchema>;
 
-export function parseWithSchemaVersion<T>(
-  schema: z.ZodType<T>,
-  value: unknown,
-): T {
+export function parseWithSchemaVersion<T>(schema: z.ZodType<T>, value: unknown): T {
   if (
     typeof value !== "object" ||
     value === null ||

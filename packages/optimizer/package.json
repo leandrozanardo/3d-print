@@ -11,10 +11,10 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fix-my-print/contracts": "0.0.0",
-    "@fix-my-print/domain": "0.0.0",
-    "@fix-my-print/geometry": "0.0.0",
-    "@fix-my-print/formats": "0.0.0"
+    "@fix-my-print/contracts": "workspace:*",
+    "@fix-my-print/domain": "workspace:*",
+    "@fix-my-print/geometry": "workspace:*",
+    "@fix-my-print/formats": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "30.0.0",

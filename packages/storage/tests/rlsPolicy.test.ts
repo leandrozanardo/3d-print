@@ -1,8 +1,4 @@
-import {
-  assertTwoUserIsolation,
-  canOwnerAccess,
-  canOwnerInsert,
-} from "../src/rlsPolicy";
+import { assertTwoUserIsolation, canOwnerAccess, canOwnerInsert } from "../src/rlsPolicy";
 
 describe("RLS owner-only policy helpers", () => {
   const ownerA = "11111111-1111-1111-1111-111111111111";

@@ -1,55 +1,66 @@
 import type { RawMesh } from "@fix-my-print/formats";
 
-export interface Bounds {
-  min: [number, number, number];
-  max: [number, number, number];
-}
+import { type Bounds } from "./bounds";
+import { analyzeTopology, type TopologyMetrics } from "./topology";
 
+/** Re-export RawMesh for GeometryFacts consumers. */
+export type { RawMesh } from "@fix-my-print/formats";
+export type { Bounds } from "./bounds";
+export { computeBounds } from "./bounds";
+export type { TopologyMetrics } from "./topology";
+export { analyzeTopology } from "./topology";
+
+/** Full geometry inspection facts (P1/P2). */
 export interface GeometryFacts {
   vertexCount: number;
   faceCount: number;
   bounds: Bounds;
+  componentCount: number;
+  degenerateFaceCount: number;
+  boundaryEdgeCount: number;
+  nonManifoldEdgeCount: number;
+  windingConsistent: boolean | null;
+  watertight: boolean;
+  area: number | null;
+  volume: number | null;
+  validityFlags: string[];
+  limitations: string[];
+  issues: string[];
+  unitsAssumed: "mm";
 }
 
 export type TransformPlan =
   | { type: "translate"; dx: number; dy: number; dz: number }
   | { type: "rotate90"; axis: "x" | "y" | "z"; turns: number };
 
+export type RepairPlan = {
+  mergeVertices?: boolean;
+  removeDegenerate?: boolean;
+  fillHoles?: boolean;
+};
+
+export type RepairResult = {
+  mesh: RawMesh;
+  operations: string[];
+  issuesBefore: string[];
+  issuesAfter: string[];
+};
+
 export type OutputFormat = "stl-binary";
 
 export interface GeometryPort {
   inspect(mesh: RawMesh): GeometryFacts;
+  repair(mesh: RawMesh, plan: RepairPlan): Promise<RepairResult>;
   transform(mesh: RawMesh, plan: TransformPlan): RawMesh;
   exportModel(mesh: RawMesh, format: OutputFormat): Uint8Array;
-  dispose(): void;
+  dispose(): void | Promise<void>;
 }
 
-function vertexCount(mesh: RawMesh): number {
-  return mesh.vertices.length / 3;
-}
-
-export function computeBounds(mesh: RawMesh): Bounds {
-  if (mesh.vertices.length < 3) {
-    return { min: [0, 0, 0], max: [0, 0, 0] };
-  }
-  let minX = Infinity,
-    minY = Infinity,
-    minZ = Infinity;
-  let maxX = -Infinity,
-    maxY = -Infinity,
-    maxZ = -Infinity;
-  for (let i = 0; i < mesh.vertices.length; i += 3) {
-    const x = mesh.vertices[i]!;
-    const y = mesh.vertices[i + 1]!;
-    const z = mesh.vertices[i + 2]!;
-    if (x < minX) minX = x;
-    if (y < minY) minY = y;
-    if (z < minZ) minZ = z;
-    if (x > maxX) maxX = x;
-    if (y > maxY) maxY = y;
-    if (z > maxZ) maxZ = z;
-  }
-  return { min: [minX, minY, minZ], max: [maxX, maxY, maxZ] };
+export function topologyToFacts(metrics: TopologyMetrics): GeometryFacts {
+  return {
+    ...metrics,
+    unitsAssumed: "mm",
+  };
 }
 
 function rotatePoint(
@@ -84,7 +95,32 @@ function rotatePoint(
   return [px, py, pz];
 }
 
-function exportBinaryStl(mesh: RawMesh): Uint8Array {
+export function transformMesh(mesh: RawMesh, plan: TransformPlan): RawMesh {
+  const vertices = new Float64Array(mesh.vertices);
+  if (plan.type === "translate") {
+    for (let i = 0; i < vertices.length; i += 3) {
+      vertices[i]! += plan.dx;
+      vertices[i + 1]! += plan.dy;
+      vertices[i + 2]! += plan.dz;
+    }
+  } else {
+    for (let i = 0; i < vertices.length; i += 3) {
+      const [x, y, z] = rotatePoint(
+        vertices[i]!,
+        vertices[i + 1]!,
+        vertices[i + 2]!,
+        plan.axis,
+        plan.turns,
+      );
+      vertices[i] = x;
+      vertices[i + 1] = y;
+      vertices[i + 2] = z;
+    }
+  }
+  return { vertices, faces: mesh.faces.map((f) => [...f]) };
+}
+
+export function exportBinaryStl(mesh: RawMesh): Uint8Array {
   const triCount = mesh.faces.length;
   const buf = new ArrayBuffer(84 + triCount * 50);
   const u8 = new Uint8Array(buf);
@@ -124,42 +160,112 @@ function exportBinaryStl(mesh: RawMesh): Uint8Array {
   return u8;
 }
 
-/** Pure TypeScript geometry adapter (no WASM). */
+/** Light repair matching Python repair_mesh intent (merge / drop degenerates). */
+export function repairMeshLight(mesh: RawMesh, plan: RepairPlan): RepairResult {
+  const before = analyzeTopology(mesh);
+  const operations: string[] = [];
+  let vertices = new Float64Array(mesh.vertices);
+  let faces = mesh.faces.map((f) => [...f] as number[]);
+
+  if (plan.mergeVertices !== false) {
+    const eps = 1e-7;
+    const map = new Map<string, number>();
+    const remap = new Int32Array(vertices.length / 3);
+    const compacted: number[] = [];
+    for (let i = 0; i < vertices.length; i += 3) {
+      const x = vertices[i]!;
+      const y = vertices[i + 1]!;
+      const z = vertices[i + 2]!;
+      const key = `${Math.round(x / eps)}|${Math.round(y / eps)}|${Math.round(z / eps)}`;
+      const existing = map.get(key);
+      const vi = i / 3;
+      if (existing === undefined) {
+        const ni = compacted.length / 3;
+        map.set(key, ni);
+        remap[vi] = ni;
+        compacted.push(x, y, z);
+      } else {
+        remap[vi] = existing;
+      }
+    }
+    vertices = Float64Array.from(compacted);
+    faces = faces.map((f) => f.map((i) => remap[i]!));
+    operations.push("merge_vertices");
+  }
+
+  if (plan.removeDegenerate !== false) {
+    const kept: number[][] = [];
+    for (const f of faces) {
+      const a = f[0]!,
+        b = f[1]!,
+        c = f[2]!;
+      if (a === b || b === c || a === c) continue;
+      const ax = vertices[a * 3]!,
+        ay = vertices[a * 3 + 1]!,
+        az = vertices[a * 3 + 2]!;
+      const bx = vertices[b * 3]!,
+        by = vertices[b * 3 + 1]!,
+        bz = vertices[b * 3 + 2]!;
+      const cx = vertices[c * 3]!,
+        cy = vertices[c * 3 + 1]!,
+        cz = vertices[c * 3 + 2]!;
+      const ux = bx - ax,
+        uy = by - ay,
+        uz = bz - az;
+      const vx = cx - ax,
+        vy = cy - ay,
+        vz = cz - az;
+      const nx = uy * vz - uz * vy;
+      const ny = uz * vx - ux * vz;
+      const nz = ux * vy - uy * vx;
+      if (Math.hypot(nx, ny, nz) < 1e-18) continue;
+      kept.push([a, b, c]);
+    }
+    faces = kept;
+    operations.push("remove_degenerate");
+  }
+
+  if (plan.fillHoles) {
+    // Explicit limitation: hole filling requires manifold WASM path.
+    operations.push("fill_holes_skipped");
+  }
+
+  const resultMesh: RawMesh = { vertices, faces };
+  const after = analyzeTopology(resultMesh);
+  return {
+    mesh: resultMesh,
+    operations,
+    issuesBefore: before.issues,
+    issuesAfter: after.issues,
+  };
+}
+
+/**
+ * Weld coincident vertices before topology facts (parity with trimesh load process=True).
+ */
+export function prepareMeshForInspect(mesh: RawMesh): RawMesh {
+  return repairMeshLight(mesh, {
+    mergeVertices: true,
+    removeDegenerate: false,
+    fillHoles: false,
+  }).mesh;
+}
+
+/**
+ * Pure TypeScript GeometryPort. Prefer ManifoldGeometryAdapter in Node production paths.
+ */
 export class PureTsGeometryAdapter implements GeometryPort {
   inspect(mesh: RawMesh): GeometryFacts {
-    return {
-      vertexCount: vertexCount(mesh),
-      faceCount: mesh.faces.length,
-      bounds: computeBounds(mesh),
-    };
+    // Weld first so binary STL cubes report shared topology (Python trimesh parity).
+    return topologyToFacts(analyzeTopology(prepareMeshForInspect(mesh)));
+  }
+
+  async repair(mesh: RawMesh, plan: RepairPlan): Promise<RepairResult> {
+    return repairMeshLight(mesh, plan);
   }
 
   transform(mesh: RawMesh, plan: TransformPlan): RawMesh {
-    const vertices = new Float64Array(mesh.vertices);
-    if (plan.type === "translate") {
-      for (let i = 0; i < vertices.length; i += 3) {
-        vertices[i]! += plan.dx;
-        vertices[i + 1]! += plan.dy;
-        vertices[i + 2]! += plan.dz;
-      }
-    } else {
-      for (let i = 0; i < vertices.length; i += 3) {
-        const [x, y, z] = rotatePoint(
-          vertices[i]!,
-          vertices[i + 1]!,
-          vertices[i + 2]!,
-          plan.axis,
-          plan.turns,
-        );
-        vertices[i] = x;
-        vertices[i + 1] = y;
-        vertices[i + 2] = z;
-      }
-    }
-    return {
-      vertices,
-      faces: mesh.faces.map((f) => [...f]),
-    };
+    return transformMesh(mesh, plan);
   }
 
   exportModel(mesh: RawMesh, format: OutputFormat): Uint8Array {
@@ -170,6 +276,6 @@ export class PureTsGeometryAdapter implements GeometryPort {
   }
 
   dispose(): void {
-    // no-op for pure TS
+    // no-op
   }
 }

@@ -44,8 +44,8 @@ IDs no front matter **não** substituem links no corpo.
 Após cada batch:
 
 ```bash
-python -m core validate-wiki docs --json
-python -m core validate-wiki docs --strict --json
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --json
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --strict --json
 ```
 
 O validador padrão cobre links relativos quebrados. O modo `--strict` adiciona: front matter/YAML seguro, enums, IDs, related/sources/prerequisites/supersedes, anchors, órfãos, ciclos, absolutos duros, números sem evidência, promoção editorial inválida, lifecycle/coverage de impressoras.

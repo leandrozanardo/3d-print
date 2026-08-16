@@ -1,0 +1,27 @@
+{
+  "deleted": [
+    "core/__init__.py",
+    "core/__main__.py",
+    "core/bootstrap_wiki.py",
+    "core/cli.py",
+    "core/convert_a1_pdfs.py",
+    "core/convert_ebook_adoc.py",
+    "core/errors.py",
+    "core/mesh.py",
+    "core/models.py",
+    "core/paths.py",
+    "core/repair.py",
+    "core/threemf.py",
+    "core/wiki_contract.py",
+    "core/wiki_frontmatter.py",
+    "core/wiki_links.py",
+    "core/wiki_schema.py",
+    "core/wiki_validate.py",
+    "tests/test_inspect_3mf.py",
+    "tests/test_inspect_mesh.py",
+    "tests/test_validate_wiki_links.py",
+    "tests/test_validate_wiki_strict.py",
+    "core/requirements.txt"
+  ],
+  "at": "2026-08-16T05:45:05.594Z"
+}

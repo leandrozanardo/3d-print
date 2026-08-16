@@ -60,25 +60,21 @@ Supports?
 7. Bed volume **180×180×180** mm — leave margin for brim.  
 8. After Studio preview fails checklist, do not emit “done.”
 
-## CLI — `python -m core`
+## CLI — `fix-my-print` (Node)
 
 ```bash
 # Wiki link health (after doc edits)
-python -m core validate-wiki docs
-python -m core validate-wiki docs --json
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --json
 
 # Inspect mesh (STL/OBJ/PLY)
-python -m core inspect-mesh 3ds/original/part.stl
-python -m core inspect-mesh 3ds/original/part.stl --json
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js inspect-mesh 3ds/original/part.stl --json
 
 # Inspect 3MF (read-only container)
-python -m core inspect-3mf 3ds/original/part.3mf
-python -m core inspect-3mf 3ds/original/part.3mf --json
-python -m core inspect-3mf 3ds/original/part.3mf --json --strict
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js inspect-3mf 3ds/original/part.3mf --json --strict
 
 # Light repair — output MUST NOT be under 3ds/original/
-python -m core repair-mesh 3ds/original/part.stl 3ds/upgraded/part.stl
-python -m core repair-mesh 3ds/original/part.stl 3ds/upgraded/part.stl --json
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js repair-mesh 3ds/original/part.stl 3ds/upgraded/part.stl --json
 ```
 
 ### Interpret inspect before slicing
@@ -124,5 +120,5 @@ Exit codes: `0` ok · `1` domain/validation failure · `2` bad CLI usage · `130
 
 ## Sources
 
-- Playbook · `core/cli.py` · `core/README.md`
+- Playbook · `@fix-my-print/cli` · `core/README.md` (retired pointer)
 - `start_plan.md` mode B/C locks

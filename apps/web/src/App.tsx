@@ -5,7 +5,10 @@ import { ProgressCancel } from "./components/ProgressCancel";
 import { ViewerPlaceholder } from "./components/ViewerPlaceholder";
 import { detectCapabilities } from "./capabilities";
 import { featureFlags, isAiEnabled } from "./flags";
-import type { GeometryWorkerResponse } from "./workers/protocol";
+import {
+  GEOMETRY_WORKER_PROTOCOL_VERSION,
+  type GeometryWorkerResponse,
+} from "./workers/protocol";
 import GeometryWorker from "./workers/geometryWorker?worker";
 
 function newRequestId(): string {
@@ -36,26 +39,28 @@ export default function App() {
       const data = event.data;
       if (data.type === "progress") {
         setRatio(data.ratio);
-        setMessage(data.message);
+        setMessage(`${data.stage}: ${data.message}`);
         return;
       }
       if (data.type === "inspectResult") {
         setBusy(false);
         setRatio(1);
-        setMessage(`Inspected ${data.fileName} (${data.byteLength} bytes)`);
+        setMessage(`Inspected ${data.fileName} (${data.format})`);
         setViewerLabel(
-          `${data.fileName} — stub result (${data.byteLength} bytes). WASM flag=${String(featureFlags.geometry.wasm.enabled)}`,
+          `${data.fileName} — ${data.format}, ${data.vertexCount} verts / ${data.faceCount} faces, bounds min=${data.bounds.min.join(",")} max=${data.bounds.max.join(",")}`,
         );
         return;
       }
       if (data.type === "error") {
         setBusy(false);
         setMessage(`${data.code}: ${data.message}`);
+        setViewerLabel(`Error: ${data.code} — ${data.message}`);
       }
     };
     worker.onerror = () => {
       setBusy(false);
       setMessage("Worker error");
+      setViewerLabel("Error: worker crashed (see browser console)");
     };
     workerRef.current = worker;
     return worker;
@@ -71,6 +76,7 @@ export default function App() {
       setViewerLabel(`Queued ${fileName}`);
       worker.postMessage(
         {
+          schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
           type: "inspect",
           requestId,
           fileName,
@@ -83,10 +89,19 @@ export default function App() {
   );
 
   const onCancel = useCallback(() => {
+    const worker = workerRef.current;
+    if (worker) {
+      worker.postMessage({
+        schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+        type: "cancel",
+        requestId: "ui-cancel",
+      });
+    }
     disposeWorker();
     setBusy(false);
     setRatio(0);
     setMessage("Cancelled — worker terminated");
+    setViewerLabel("Cancelled");
   }, [disposeWorker]);
 
   return (
@@ -94,9 +109,9 @@ export default function App() {
       <header className="hero">
         <h1>Fix My Print</h1>
         <p>
-          Browser shell scaffolding — engine.ts={String(featureFlags.engine.ts.enabled)},
-          geometry.wasm={String(featureFlags.geometry.wasm.enabled)}, ai=
-          {isAiEnabled() ? "on" : "off"}
+          Browser shell — engine.ts={String(featureFlags.engine.ts.enabled)},
+          geometry.wasm={String(featureFlags.geometry.wasm.enabled)} (Manifold not wired;
+          PureTs inspect in worker), ai={isAiEnabled() ? "on" : "off"}
         </p>
       </header>
       <CapabilityDiagnostics report={capabilities} />

@@ -13,22 +13,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
-          cache: npm
-      - run: npm ci
-      - run: npm test
-      - run: npm run typecheck
-
-  python:
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Install Python deps
-        run: |
-          if [ -f core/requirements.txt ]; then pip install -r core/requirements.txt; fi
-          pip install pytest
-      - name: Pytest (optional)
-        run: python -m pytest -q
+      - name: Install pnpm
+        run: npm install -g pnpm@10.12.1
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Format check
+        run: pnpm format:check
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Unit / contract / security tests
+        run: pnpm test
+      - name: Web build
+        run: pnpm build:web
+      - name: Diff check
+        run: git diff --check

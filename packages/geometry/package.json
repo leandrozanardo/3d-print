@@ -11,7 +11,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fix-my-print/formats": "0.0.0"
+    "@fix-my-print/formats": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "30.0.0",

@@ -51,14 +51,20 @@ export function validateWikiLinks(rootInput: string): string[] {
     try {
       text = fs.readFileSync(md, "utf8");
     } catch (err) {
-      if (err instanceof Error && "code" in err && (err as NodeJS.ErrnoException).code === undefined) {
+      if (
+        err instanceof Error &&
+        "code" in err &&
+        (err as NodeJS.ErrnoException).code === undefined
+      ) {
         errors.push(`${md}: not valid UTF-8`);
         continue;
       }
       try {
         text = fs.readFileSync(md, "utf8");
       } catch (inner) {
-        errors.push(`${md}: read failed (${inner instanceof Error ? inner.message : String(inner)})`);
+        errors.push(
+          `${md}: read failed (${inner instanceof Error ? inner.message : String(inner)})`,
+        );
         continue;
       }
     }

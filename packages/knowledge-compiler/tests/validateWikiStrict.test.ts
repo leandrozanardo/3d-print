@@ -50,7 +50,10 @@ describe("front matter safety", () => {
       "aliases_en: []\n" +
       "tags: []\n" +
       "---\n\n# T\n";
-    fs.writeFileSync(md, Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), Buffer.from(body, "utf8")]));
+    fs.writeFileSync(
+      md,
+      Buffer.concat([Buffer.from([0xef, 0xbb, 0xbf]), Buffer.from(body, "utf8")]),
+    );
 
     const doc = parseMarkdownDocument(md);
     expect(doc.hasBom).toBe(true);

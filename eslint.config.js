@@ -12,6 +12,10 @@ export default tseslint.config(
       "**/3ds/**",
       "docs/**",
       "core/**",
+      "**/jest.config.cjs",
+      "**/*.cjs",
+      "project_plans/**",
+      ".cursor/**",
     ],
   },
 );

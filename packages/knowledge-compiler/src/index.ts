@@ -24,3 +24,7 @@ export type { WikiValidationResult, ValidationIssue } from "./validate";
 
 export { compileKnowledgePack, canonicalJson, canonicalize } from "./compile";
 export type { KnowledgePack, KnowledgePackPage, CompileResult } from "./compile";
+
+export { bootstrapWikiPage } from "./bootstrapWiki";
+export { runWikiFixtureParity, writeParityReport } from "./parity";
+export type { DiffEntry } from "./parity";

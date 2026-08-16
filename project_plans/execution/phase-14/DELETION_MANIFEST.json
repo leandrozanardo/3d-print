@@ -1,7 +1,162 @@
 {
   "schemaVersion": 1,
-  "expectedHead": "4f8e42537809c45d6b446755f8260b295ae20b84",
-  "status": "dry-run-only",
-  "note": "Live Python deletion is blocked until APPROVED: RETIRE PYTHON with sandbox proof and full mesh repair parity. This manifest is empty by design so dry-run succeeds without deleting.",
-  "files": []
+  "expectedHead": "e9925652c161766194d30d677ce413c5ff4d1efb",
+  "status": "deleted",
+  "note": "Python sources deleted under MIGRATION-AND-RETIREMENT after dry-run validation. See tests/differential/deletion-log.json.",
+  "files": [
+    {
+      "path": "core/__init__.py",
+      "sha256Before": "a2b2d83f32d91eac42173068b3423be0b5bd37b6655b4cd9f2d6fb77020ed9f6",
+      "replacement": "packages/contracts/src/index.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/__main__.py",
+      "sha256Before": "65c14be245bed333f82c29a4a0e44c0577e6f0e2be7ae702ae2bafc1b080f5c0",
+      "replacement": "apps/cli/src/bin.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/bootstrap_wiki.py",
+      "sha256Before": "f97a28b6e98e6c5d84edea9cb9630e7e7bb0dc00dbec4c9eac1f85c0d204dbf5",
+      "replacement": "packages/knowledge-compiler/src/bootstrapWiki.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/cli.py",
+      "sha256Before": "94572bf4d54d5f5401e58c680abf12a818626c2e99f0228159ae8e273e39bfe7",
+      "replacement": "apps/cli/src/index.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/convert_a1_pdfs.py",
+      "sha256Before": "4d57b296d7a8c8459750d76ca63140b7a0a0b92d5f82532f5fdc8810c8fdb26d",
+      "replacement": "packages/editorial/src/convertA1Pdfs.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/convert_ebook_adoc.py",
+      "sha256Before": "318c1caca5f5194d662014f5b7a08e0c06c5784ac397a8d5089cb618b0ad16bf",
+      "replacement": "packages/editorial/src/convertEbookAdoc.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/errors.py",
+      "sha256Before": "a863c19c1a1ae5073fedc9553b34fe99aad3510f5853af9beae29f99932555f4",
+      "replacement": "packages/contracts/src/index.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/mesh.py",
+      "sha256Before": "1e43037f503f59e20e5511a5df53529cda1c3add4a2b1f5a00ec82cbeb98b01a",
+      "replacement": "packages/geometry/src/index.ts",
+      "parityEvidence": "tests/differential/mesh-parity.report.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/models.py",
+      "sha256Before": "32f6067d071c141937490850363304c959061c24cdb4ccf30ecdd2a4cbebb8a1",
+      "replacement": "packages/domain/src/index.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/paths.py",
+      "sha256Before": "119928d726c2b7b62144e301814eb8685e5727e17bc18c05361778e90c96306c",
+      "replacement": "packages/repo-guard/src/index.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/repair.py",
+      "sha256Before": "30f8ff035bbf6ca6d7e9335e501e526ef195a5ad3d1f84c78e4a27cbda4018c0",
+      "replacement": "packages/geometry-manifold/src/index.ts",
+      "parityEvidence": "tests/differential/mesh-parity.report.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/threemf.py",
+      "sha256Before": "a3cabae8947edd375348140aea76c08cd8cd27b8eab6e286feda64dd79b1f271",
+      "replacement": "packages/formats-3mf/src/index.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/wiki_contract.py",
+      "sha256Before": "8a4efef82979ea7cc8160c44cb91db25ebfee54fea0fb8bb18b0be81e5e62adc",
+      "replacement": "packages/knowledge-compiler/src/schema.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/wiki_frontmatter.py",
+      "sha256Before": "a29d4b17a59e6d0fd2357e6952e29994d2457b8440d9715d560cfcaeb2031974",
+      "replacement": "packages/knowledge-compiler/src/frontmatter.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/wiki_links.py",
+      "sha256Before": "acdb1311bb2ed5b7dc9614265ec244d9f6dbde85f289799920ea293d9abbf21c",
+      "replacement": "packages/knowledge-compiler/src/links.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/wiki_schema.py",
+      "sha256Before": "e1d4dede0bf9e87460a8455aa27f2002dd27952cd9e302b88c6e7af1f8cfb5bd",
+      "replacement": "packages/knowledge-compiler/src/schema.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/wiki_validate.py",
+      "sha256Before": "c2eae92df9e786a8274a6eee857acee00f73c5c6eaae01f978ad58ee418d89c6",
+      "replacement": "packages/knowledge-compiler/src/validate.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "tests/test_inspect_3mf.py",
+      "sha256Before": "52696c96ad17be917885855158fc4eaae887b999e80e328f2eb04058752f0cc4",
+      "replacement": "packages/formats-3mf/tests/zip.test.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "tests/test_inspect_mesh.py",
+      "sha256Before": "ffe9ac7dfe5c2c2d32f844e25ee51174429d0749b7eceec1997fb4606e9eb0e3",
+      "replacement": "packages/geometry/tests/geometry.test.ts",
+      "parityEvidence": "tests/differential/mesh-parity.report.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "tests/test_validate_wiki_links.py",
+      "sha256Before": "7c6d1be2b86dc0f5b863fc7f9129d90f50b0847b2be4f4f55d5f2363fb39d2aa",
+      "replacement": "packages/knowledge-compiler/tests/validateWikiStrict.test.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "tests/test_validate_wiki_strict.py",
+      "sha256Before": "32e5f1a714a91a28a0944476c2331514585d0a99fbaf01dbc30baefa3a3574ad",
+      "replacement": "packages/knowledge-compiler/tests/wikiDifferential.test.ts",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Node/TS replacement with differential or unit evidence"
+    },
+    {
+      "path": "core/requirements.txt",
+      "sha256Before": "42d40186c93eb6189c0265f62b46ed69a467f4704d53678877434da271e9c56b",
+      "replacement": "package.json",
+      "parityEvidence": "tests/differential/retirement-evidence.json",
+      "reason": "Python deps retired; Node packageManager is sole runtime"
+    }
+  ]
 }

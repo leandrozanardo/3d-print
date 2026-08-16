@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "mission": "MIGRATION-AND-RETIREMENT",
+  "ok": true,
+  "notes": [
+    "Wiki differential covered by packages/knowledge-compiler/tests/wikiDifferential.test.ts",
+    "3MF covered by packages/formats-3mf/tests/zip.test.ts",
+    "CLI exit codes covered by apps/cli/tests/cli.test.ts",
+    "Editorial converters covered by packages/editorial/tests/*"
+  ],
+  "generatedAt": "2026-08-16T05:40:00.000Z"
+}

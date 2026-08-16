@@ -2,7 +2,7 @@
   "name": "@fix-my-print/formats-3mf",
   "version": "0.0.0",
   "private": true,
-  "description": "Safe read-only 3MF/ZIP open with path and bomb limits",
+  "description": "Safe read-only 3MF Core inspection and ZIP open with path/bomb limits",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,8 +11,9 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fix-my-print/contracts": "0.0.0",
-    "adm-zip": "0.5.16"
+    "@fix-my-print/contracts": "workspace:*",
+    "adm-zip": "0.5.16",
+    "fast-xml-parser": "5.2.5"
   },
   "devDependencies": {
     "@types/adm-zip": "0.5.7",

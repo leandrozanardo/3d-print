@@ -44,13 +44,19 @@ function sizeOf(bounds: Bounds): [number, number, number] {
   ];
 }
 
-function fits(size: [number, number, number], volume: BuildVolume): boolean {
-  const sortedMesh = [...size].sort((a, b) => a - b);
-  const sortedVol = [volume.x, volume.y, volume.z].sort((a, b) => a - b);
+/**
+ * Axis-aligned fit after orientation: compare each transformed axis to the
+ * matching printer axis (do not sort/permute axes).
+ */
+export function fits(
+  size: [number, number, number],
+  volume: BuildVolume,
+  clearance = 0,
+): boolean {
   return (
-    sortedMesh[0]! <= sortedVol[0]! &&
-    sortedMesh[1]! <= sortedVol[1]! &&
-    sortedMesh[2]! <= sortedVol[2]!
+    size[0]! <= volume.x - clearance &&
+    size[1]! <= volume.y - clearance &&
+    size[2]! <= volume.z - clearance
   );
 }
 
@@ -74,7 +80,7 @@ export function generateOrientationCandidates(
     const hardConstraintOk = fits(size, buildVolume);
     const height = size[2]!;
     const footprint = size[0]! * size[1]!;
-    // Higher is better; invert height/footprint proxies.
+    // Scores are engineering proxies only — not slicer measurements.
     const scores = {
       printability: hardConstraintOk ? 1 / (1 + height) : 0,
       strength: 1 / (1 + height),
@@ -89,6 +95,9 @@ export function generateOrientationCandidates(
         turns: spec.turns,
         height,
         footprint,
+        scoreKind: "proxy",
+        timeIsProxy: true,
+        materialIsProxy: true,
       }),
     );
   }

@@ -19,4 +19,17 @@ export const DEFAULT_FORMAT_BUDGETS: FormatBudgets = {
   maxVertices: 5_000_000,
 };
 
-export type DetectedFormat = "stl-ascii" | "stl-binary" | "unknown";
+export type DetectedFormat =
+  | "stl-ascii"
+  | "stl-binary"
+  | "obj"
+  | "ply-ascii"
+  | "ply-binary"
+  | "unknown";
+
+export type ParsedMeshFormat = Exclude<DetectedFormat, "unknown">;
+
+export interface ParsedMesh {
+  format: ParsedMeshFormat;
+  mesh: RawMesh;
+}

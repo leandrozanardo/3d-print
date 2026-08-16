@@ -5,14 +5,7 @@ import { EngineException } from "@fix-my-print/contracts";
 
 import { AnalysisEngine } from "../src/index";
 
-const CUBE = path.join(
-  __dirname,
-  "..",
-  "..",
-  "formats",
-  "fixtures",
-  "cube.stl",
-);
+const CUBE = path.join(__dirname, "..", "..", "formats", "fixtures", "cube.stl");
 
 describe("@fix-my-print/engine", () => {
   it("happy path analyzes cube to Completed", () => {
@@ -26,16 +19,14 @@ describe("@fix-my-print/engine", () => {
     const engine = new AnalysisEngine("run-cancel");
     engine.cancel();
     expect(engine.getState()).toBe("Cancelled");
-    expect(() =>
-      engine.analyzeFile(new Uint8Array(fs.readFileSync(CUBE))),
-    ).toThrow(EngineException);
+    expect(() => engine.analyzeFile(new Uint8Array(fs.readFileSync(CUBE)))).toThrow(
+      EngineException,
+    );
   });
 
   it("bad buffer fails closed", () => {
     const engine = new AnalysisEngine("run-bad");
-    expect(() => engine.analyzeFile(new Uint8Array([1, 2, 3]))).toThrow(
-      EngineException,
-    );
+    expect(() => engine.analyzeFile(new Uint8Array([1, 2, 3]))).toThrow(EngineException);
     expect(engine.getState()).toBe("Failed");
   });
 });

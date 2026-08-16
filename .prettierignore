@@ -1,0 +1,15 @@
+# Prettier ignore — never reformat the canonical docs corpus
+docs/
+3ds/
+node_modules/
+dist/
+coverage/
+pnpm-lock.yaml
+package-lock.json
+*.stl
+*.3mf
+*.obj
+*.ply
+*.mdc
+.tmp/
+project_plans/

@@ -6,10 +6,7 @@ import {
   type RunManifest,
 } from "@fix-my-print/contracts";
 import { parseMesh } from "@fix-my-print/formats";
-import {
-  PureTsGeometryAdapter,
-  type GeometryPort,
-} from "@fix-my-print/geometry";
+import { PureTsGeometryAdapter, type GeometryPort } from "@fix-my-print/geometry";
 
 export type PipelineState =
   | "Draft"
@@ -68,10 +65,7 @@ export class AnalysisEngine {
     const allowed = ALLOWED[from];
     if (!allowed.includes(to)) {
       throw new EngineException(
-        createEngineError(
-          "INTERNAL_ERROR",
-          `illegal transition ${from} -> ${to}`,
-        ),
+        createEngineError("INTERNAL_ERROR", `illegal transition ${from} -> ${to}`),
       );
     }
     this.transitions.push({
@@ -84,9 +78,7 @@ export class AnalysisEngine {
 
   private ensureNotCancelled(): void {
     if (this.cancelled || this.state === "Cancelled") {
-      throw new EngineException(
-        createEngineError("RUN_CANCELLED", "run cancelled"),
-      );
+      throw new EngineException(createEngineError("RUN_CANCELLED", "run cancelled"));
     }
   }
 
@@ -96,9 +88,7 @@ export class AnalysisEngine {
       this.transition("Validating");
       this.ensureNotCancelled();
       if (buffer.byteLength === 0) {
-        throw new EngineException(
-          createEngineError("MESH_PARSE_FAILED", "empty buffer"),
-        );
+        throw new EngineException(createEngineError("MESH_PARSE_FAILED", "empty buffer"));
       }
       this.transition("Ready");
       this.ensureNotCancelled();
@@ -149,4 +139,9 @@ export function isEngineError(err: unknown): err is EngineException {
 }
 
 export type { EngineError };
-export { NullAiPort, type AiPort, type AiExplanationRequest, type AiExplanationResult } from "./aiPort";
+export {
+  NullAiPort,
+  type AiPort,
+  type AiExplanationRequest,
+  type AiExplanationResult,
+} from "./aiPort";

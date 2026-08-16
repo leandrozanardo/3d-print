@@ -1,32 +1,18 @@
-import {
-  createEngineError,
-  EngineException,
-} from "@fix-my-print/contracts";
-
 import type { FormatBudgets, RawMesh } from "./types";
 import { DEFAULT_FORMAT_BUDGETS } from "./types";
-
-function assertBudgets(byteLength: number, budgets: FormatBudgets): void {
-  if (byteLength > budgets.maxBytes) {
-    throw new EngineException(
-      createEngineError("INPUT_TOO_LARGE", "STL exceeds maxBytes budget", {
-        context: { byteLength, maxBytes: budgets.maxBytes },
-      }),
-    );
-  }
-}
-
-function meshFailed(message: string): never {
-  throw new EngineException(
-    createEngineError("MESH_PARSE_FAILED", message, { retryable: false }),
-  );
-}
+import { assertFiniteTriple } from "./coords";
+import {
+  assertByteBudget,
+  assertFaceBudget,
+  assertVertexBudget,
+  meshFailed,
+} from "./budgets";
 
 export function parseBinaryStl(
   buffer: Uint8Array,
   budgets: FormatBudgets = DEFAULT_FORMAT_BUDGETS,
 ): RawMesh {
-  assertBudgets(buffer.byteLength, budgets);
+  assertByteBudget(buffer.byteLength, budgets, "STL");
   if (buffer.byteLength < 84) {
     meshFailed("binary STL truncated: header incomplete");
   }
@@ -36,13 +22,7 @@ export function parseBinaryStl(
   if (buffer.byteLength < expected) {
     meshFailed("binary STL truncated: triangle data incomplete");
   }
-  if (triCount > budgets.maxFaces) {
-    throw new EngineException(
-      createEngineError("GEOMETRY_BUDGET_EXCEEDED", "too many faces", {
-        context: { triCount, maxFaces: budgets.maxFaces },
-      }),
-    );
-  }
+  assertFaceBudget(triCount, budgets);
 
   const vertices = new Float64Array(triCount * 9);
   const faces: number[][] = [];
@@ -53,22 +33,19 @@ export function parseBinaryStl(
     const base = 84 + t * 50;
     for (let v = 0; v < 3; v++) {
       const off = base + 12 + v * 12;
-      vertices[floatOffset++] = view.getFloat32(off, true);
-      vertices[floatOffset++] = view.getFloat32(off + 4, true);
-      vertices[floatOffset++] = view.getFloat32(off + 8, true);
+      const x = view.getFloat32(off, true);
+      const y = view.getFloat32(off + 4, true);
+      const z = view.getFloat32(off + 8, true);
+      const [fx, fy, fz] = assertFiniteTriple(x, y, z, `stl[${t}].v${v}`);
+      vertices[floatOffset++] = fx;
+      vertices[floatOffset++] = fy;
+      vertices[floatOffset++] = fz;
     }
     faces.push([vertexIndex, vertexIndex + 1, vertexIndex + 2]);
     vertexIndex += 3;
   }
 
-  if (vertexIndex > budgets.maxVertices) {
-    throw new EngineException(
-      createEngineError("GEOMETRY_BUDGET_EXCEEDED", "too many vertices", {
-        context: { vertexIndex, maxVertices: budgets.maxVertices },
-      }),
-    );
-  }
-
+  assertVertexBudget(vertexIndex, budgets);
   return { vertices, faces };
 }
 
@@ -76,7 +53,7 @@ export function parseAsciiStl(
   buffer: Uint8Array,
   budgets: FormatBudgets = DEFAULT_FORMAT_BUDGETS,
 ): RawMesh {
-  assertBudgets(buffer.byteLength, budgets);
+  assertByteBudget(buffer.byteLength, budgets, "STL");
   if (buffer.byteLength === 0) {
     meshFailed("empty STL");
   }
@@ -89,8 +66,15 @@ export function parseAsciiStl(
     /vertex\s+([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d)?)\s+([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d)?)\s+([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d)?)/gi;
   const coords: number[] = [];
   let match: RegExpExecArray | null;
+  let vertexOrdinal = 0;
   while ((match = vertexRe.exec(text)) !== null) {
-    coords.push(Number(match[1]), Number(match[2]), Number(match[3]));
+    const [x, y, z] = assertFiniteTriple(
+      Number(match[1]),
+      Number(match[2]),
+      Number(match[3]),
+      `asciiVertex[${vertexOrdinal++}]`,
+    );
+    coords.push(x, y, z);
   }
   if (coords.length === 0) {
     meshFailed("ASCII STL has no vertices");
@@ -100,13 +84,8 @@ export function parseAsciiStl(
   }
 
   const triCount = coords.length / 9;
-  if (triCount > budgets.maxFaces) {
-    throw new EngineException(
-      createEngineError("GEOMETRY_BUDGET_EXCEEDED", "too many faces", {
-        context: { triCount, maxFaces: budgets.maxFaces },
-      }),
-    );
-  }
+  assertFaceBudget(triCount, budgets);
+  assertVertexBudget(coords.length / 3, budgets);
 
   const vertices = Float64Array.from(coords);
   const faces: number[][] = [];

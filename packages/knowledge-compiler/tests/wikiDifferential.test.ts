@@ -16,10 +16,10 @@ describe("wiki differential fixtures (Phase 13)", () => {
   });
 
   it("strict broken fixture reports expected issue families", () => {
-    const result = validateWiki(
-      path.join(ROOT, "tests/fixtures/wiki_strict_broken"),
-      { strict: true, today: TODAY },
-    );
+    const result = validateWiki(path.join(ROOT, "tests/fixtures/wiki_strict_broken"), {
+      strict: true,
+      today: TODAY,
+    });
     expect(result.ok).toBe(false);
     const blob = [...result.errors, ...result.warnings].join("\n");
     for (const code of [

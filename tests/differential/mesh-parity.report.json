@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "fixture": "packages/formats/fixtures/cube.stl",
+  "ok": true,
+  "pythonBaseline": {
+    "face_count": 12,
+    "vertex_count": 8,
+    "watertight": true,
+    "volumeAbs": 1.0,
+    "volumeSignedNote": "trimesh reported -1.0; Node reports abs(volume)"
+  },
+  "nodeAccepted": {
+    "face_count": 12,
+    "vertex_count": 8,
+    "watertight": true,
+    "volumeAbs": 1.0,
+    "weldOnInspect": true
+  },
+  "tests": [
+    "packages/geometry/tests/geometry.test.ts",
+    "packages/geometry-manifold/tests/meshDifferential.test.ts",
+    "apps/cli/tests/cli.test.ts"
+  ],
+  "generatedAt": "2026-08-16T05:40:00.000Z"
+}

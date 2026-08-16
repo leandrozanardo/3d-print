@@ -1,13 +1,5 @@
-import { realpathSync } from "node:fs";
-import {
-  basename,
-  dirname,
-  isAbsolute,
-  join,
-  relative,
-  resolve,
-  sep,
-} from "node:path";
+import { lstatSync, realpathSync } from "node:fs";
+import { basename, dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 
 /**
  * Thrown when a candidate path escapes the approved repository root.
@@ -24,6 +16,7 @@ export class RepoBoundaryError extends Error {
 /**
  * Resolve candidate under root and prove it stays strictly inside the repository.
  * Rejects the root itself, absolute escapes, parent traversal, and symlink escapes.
+ * Absolute paths that resolve inside the root are accepted; absolute outside are rejected.
  */
 export function assertInsideRepository(root: string, candidate: string): string {
   if (candidate.trim() === "" || candidate === ".") {
@@ -37,12 +30,14 @@ export function assertInsideRepository(root: string, candidate: string): string 
     throw new RepoBoundaryError("REPO_BOUNDARY_VIOLATION");
   }
 
+  // resolve() keeps absolute candidates as-is; relative ones are rooted under realRoot
   const absoluteCandidate = resolve(realRoot, candidate);
 
   let realParent: string;
   try {
     realParent = realpathSync(dirname(absoluteCandidate));
   } catch {
+    // Missing parent directory — cannot prove containment
     throw new RepoBoundaryError("REPO_BOUNDARY_VIOLATION");
   }
 
@@ -50,8 +45,26 @@ export function assertInsideRepository(root: string, candidate: string): string 
 
   let provenPath = normalizedCandidate;
   try {
-    provenPath = realpathSync(normalizedCandidate);
-  } catch {
+    const st = lstatSync(normalizedCandidate);
+    if (st.isSymbolicLink()) {
+      try {
+        provenPath = realpathSync(normalizedCandidate);
+      } catch {
+        // Broken symlink — fail closed (unprovable target)
+        throw new RepoBoundaryError("REPO_BOUNDARY_VIOLATION");
+      }
+    } else {
+      try {
+        provenPath = realpathSync(normalizedCandidate);
+      } catch {
+        provenPath = normalizedCandidate;
+      }
+    }
+  } catch (e) {
+    if (e instanceof RepoBoundaryError) {
+      throw e;
+    }
+    // Path does not exist yet; parent already proven inside the root
     provenPath = normalizedCandidate;
   }
 
@@ -66,4 +79,11 @@ export function assertInsideRepository(root: string, candidate: string): string 
   }
 
   return provenPath;
+}
+
+/**
+ * Always validate candidate (absolute or relative) against root — never bypass.
+ */
+export function resolveInsideRepository(root: string, candidate: string): string {
+  return assertInsideRepository(root, candidate);
 }

@@ -14,10 +14,14 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fix-my-print/formats": "0.0.0",
-    "@fix-my-print/geometry": "0.0.0",
-    "@fix-my-print/knowledge-compiler": "0.0.0",
-    "@fix-my-print/repo-guard": "0.0.0",
+    "@fix-my-print/contracts": "workspace:*",
+    "@fix-my-print/editorial": "workspace:*",
+    "@fix-my-print/formats": "workspace:*",
+    "@fix-my-print/formats-3mf": "workspace:*",
+    "@fix-my-print/geometry": "workspace:*",
+    "@fix-my-print/geometry-manifold": "workspace:*",
+    "@fix-my-print/knowledge-compiler": "workspace:*",
+    "@fix-my-print/repo-guard": "workspace:*",
     "commander": "14.0.0"
   },
   "devDependencies": {

@@ -15,9 +15,7 @@ export interface OptimizationReport {
 }
 
 /** Project an AnalysisResult into a plain OptimizationReport object. */
-export function toOptimizationReport(
-  result: AnalysisResult,
-): OptimizationReport {
+export function toOptimizationReport(result: AnalysisResult): OptimizationReport {
   return {
     schemaVersion: 1,
     runId: result.runId,
@@ -29,8 +27,6 @@ export function toOptimizationReport(
       bounds: result.bounds,
     },
     findings: [],
-    limitations: [
-      "Scores are geometry proxies only; no slicer simulation in MVP",
-    ],
+    limitations: ["Scores are geometry proxies only; no slicer simulation in MVP"],
   };
 }

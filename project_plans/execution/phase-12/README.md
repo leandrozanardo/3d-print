@@ -2,7 +2,7 @@
 
 ## Objective
 
-Provide `@fix-my-print/storage` with `SupabaseStorageAdapter` stub that validates object keys `userId/projectId/runId/artifactId/name` and rejects overwrite (merged with existing MemoryStorageAdapter).
+Provide `@fix-my-print/storage` with object-key helpers, `InMemoryStorageAdapter` (create-only Map), and real `SupabaseStorageAdapter` (`@supabase/supabase-js`, upsert:false) alongside existing `MemoryStorageAdapter`.
 
 ## Deliverables
 

@@ -5,33 +5,26 @@ Knowledge base and toolkit for 3D printing (product **fix-my-print**).
 ## Status (2026-08-16)
 
 - **Canonical knowledge:** `docs/` (PT-BR)
-- **Node monorepo:** packages under `packages/*`, apps under `apps/*` (CLI + Vite/React web shell)
-- **Python `core/`:** retained as reference until live retirement is explicitly approved after mesh repair parity
+- **Runtime:** Node.js / TypeScript monorepo (`packages/*`, `apps/*`)
+- **Geometry:** PureTS topology + Manifold WASM (`@fix-my-print/geometry-manifold`)
+- **Python:** retired — see `project_plans/execution/phase-14/DELETION_MANIFEST.json`
 - **AI:** disabled by default (`NullAiPort`)
 
-## Node (primary for new work)
+## Node (only operational runtime)
 
 ```text
-npm install
-npm test
-npm run typecheck
-npm run build:web
-npx fix-my-print help
-npx fix-my-print validate-wiki docs
-npx fix-my-print inspect-mesh packages/formats/fixtures/cube.stl
-```
-
-## Python (reference)
-
-```text
-python -m pip install -r core/requirements.txt pytest
-python -m pytest -q
-python -m core validate-wiki docs --strict --json
+npx --yes pnpm@10.12.1 install
+npx --yes pnpm@10.12.1 test
+npx --yes pnpm@10.12.1 run typecheck
+npx --yes pnpm@10.12.1 run build:web
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js help
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --strict
+npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js inspect-mesh ../../packages/formats/fixtures/cube.stl --json
 ```
 
 ## Safety
 
-Never mutate `3ds/original/`. Path writes must pass `@fix-my-print/repo-guard`. No slicer-accurate time/material claims without a real slicer adapter.
+Never mutate `3ds/original/` or any path above this project folder. Cursor rules enforce an absolute workspace boundary (`alwaysApply`). Path writes must pass `@fix-my-print/repo-guard`. No slicer-accurate time/material claims without a real slicer adapter.
 
 ## License
 

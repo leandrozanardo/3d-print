@@ -1,0 +1,26 @@
+{
+  "path": "packages/formats/fixtures/cube.stl",
+  "face_count": 12,
+  "vertex_count": 8,
+  "watertight": true,
+  "volume": -1,
+  "bounds": {
+    "min_xyz": [
+      0,
+      0,
+      0
+    ],
+    "max_xyz": [
+      1,
+      1,
+      1
+    ],
+    "size_xyz": [
+      1,
+      1,
+      1
+    ]
+  },
+  "issues": [],
+  "units_assumed": "mm"
+}

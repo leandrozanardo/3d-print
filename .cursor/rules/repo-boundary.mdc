@@ -1,19 +1,31 @@
 ---
-description: Hard repository boundary for Fix My Print implementation phases
+description: ABSOLUTE workspace boundary — never touch parent folders or anything outside the open project
 alwaysApply: true
 ---
 
-# Repository boundary
+# ABSOLUTE WORKSPACE BOUNDARY (NON-NEGOTIABLE)
 
-- Resolve the Git repository root with `git rev-parse --show-toplevel` before any write.
-- Treat that root as the only permitted read/write scope for implementation work.
-- Never read, write, move, rename, or delete anything outside the resolved root.
-- Reject absolute paths outside the root, unresolved `..`, symlink escapes, home paths, system paths, and broad workspace roots.
-- Before every file operation, validate the resolved target with `@fix-my-print/repo-guard` (`assertInsideRepository`).
-- If a path cannot be proven inside the root, stop with `REPO_BOUNDARY_VIOLATION`.
-- Never run `rm -rf`, `rm -r`, `git clean`, `git reset --hard`, `git checkout -- .`, `git restore .`, `find -delete`, `xargs rm`, glob deletion, or recursive directory deletion during Fix My Print phases.
-- Never alter global Git/shell/Node/pnpm/Cursor/system config.
-- Do not mutate `3ds/original/**`.
-- Do not delete Python sources unless `APPROVED: RETIRE PYTHON` and a literal deletion manifest pass.
-- Preserve unrelated user working-tree changes.
-- One approved phase at a time; do not start the next phase without a new authorization.
+This rule is **absolute**, **always on**, and **non-negotiable** for every chat, agent, and subagent.
+
+## Allowed scope
+
+- Only the **currently open project folder** (this workspace root) may be read or modified.
+- For this repo, the root is the Git tree whose `package.json` has `"name": "fix-my-print"`.
+- Prove containment with `@fix-my-print/repo-guard` (`assertInsideRepository` / `resolveInsideRepository`) for code path writes.
+
+## Hard stop — parent levels
+
+- **Never** read, write, create, move, rename, or delete anything in a **parent** of the project folder.
+- **Never** touch grandparents, sibling projects, home directory, or system paths outside this root.
+- Reject `..`, absolute escapes, symlink escapes, `~`, and `%USERPROFILE%` targets outside the root.
+- If a path is not strictly inside the open project folder → stop with `REPO_BOUNDARY_VIOLATION`.
+
+## Also forbidden
+
+- Destructive mass deletes (`rm -rf`, `git clean`, `git reset --hard`, recursive folder wipes).
+- Mutating `3ds/original/**`.
+- Deleting Python sources unless `APPROVED: RETIRE PYTHON` and a literal deletion manifest pass.
+
+## Response when blocked
+
+Stop immediately. State `REPO_BOUNDARY_VIOLATION`. Do not suggest workarounds that reach above the project folder.
