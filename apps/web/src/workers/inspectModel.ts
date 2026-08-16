@@ -1,8 +1,5 @@
 import { detectFormat, parseMesh } from "@fix-my-print/formats";
-import {
-  flattenThreeMf,
-  parseThreeMf,
-} from "@fix-my-print/formats-3mf";
+import { flattenThreeMf, parseThreeMf } from "@fix-my-print/formats-3mf";
 import { PureTsGeometryAdapter } from "@fix-my-print/geometry";
 
 export type GeometryBounds = {

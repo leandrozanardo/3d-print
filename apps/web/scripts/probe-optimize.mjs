@@ -74,14 +74,18 @@ async function main() {
         hasError: !!document.querySelector('[data-testid="error-alert"]'),
         progressText:
           document.querySelector('[data-testid="progress-stage"]')?.textContent ?? null,
-        errorText: document.querySelector('[data-testid="error-alert"]')?.textContent ?? null,
+        errorText:
+          document.querySelector('[data-testid="error-alert"]')?.textContent ?? null,
       };
     });
     log(`[t+${(i + 1) * 500}ms] ${JSON.stringify(snap)}`);
     if (snap.hasProcessing || snap.hasResult || snap.hasError) break;
   }
 
-  await page.screenshot({ path: path.join(outDir, "03-after-click.png"), fullPage: true });
+  await page.screenshot({
+    path: path.join(outDir, "03-after-click.png"),
+    fullPage: true,
+  });
   fs.writeFileSync(path.join(outDir, "probe.log"), logs.join("\n"));
   await browser.close();
 }

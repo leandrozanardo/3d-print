@@ -1,0 +1,55 @@
+{
+  "mission": "geometry-quality-v2",
+  "capturedAt": "2026-08-16T09:11:00.000Z",
+  "head": "4e9fcdfb5e175ff1b4acf8b6a9112f02a517ee61",
+  "branch": "main",
+  "node": "v24.13.0",
+  "pnpm": "10.12.1",
+  "packageName": "fix-my-print",
+  "gitStatusShort": "",
+  "original": {
+    "path": "3ds/original/one+Piece.3mf",
+    "bytes": 6844854,
+    "sha256": "5866bbb230db7fe3afe92981195431a52d67ba0a5d33babd26d2d1eb1989ab27"
+  },
+  "protectedHashes": {
+    "project_plans/execution/product-recovery/ACCEPTANCE_CONTRACT.md": "1c56ec64afc2829ae925576cd0375451c08b2766c4f6289e65beef8cc12c5c52",
+    "project_plans/execution/product-recovery/acceptance-lock.json": "e0a069005e0056f61bbce4c7cd8280dcc70b9c510ba2fff2fa57fdde53035bdb",
+    "scripts/verify-acceptance-lock.mjs": "d5589b88ae96179e15c2a93c8f1ffa7a843c618b01f9d895b34afd01e92b88df",
+    "apps/web/e2e/acceptance/one-piece-3mf.spec.ts": "99bdd91b943360af77a2d2d7e605555ce28abb09c12591e23c1bdb0d1b0ae0d3"
+  },
+  "commands": [
+    {
+      "command": "npx --yes pnpm@10.12.1 install --frozen-lockfile",
+      "exitCode": 0,
+      "durationMs": 2936,
+      "log": ".tmp/geometry-quality-v2/baseline---yes-pnpm_10.12.1-install---frozen-lockfile.log"
+    },
+    {
+      "command": "npx --yes pnpm@10.12.1 verify:boundary",
+      "exitCode": 0,
+      "durationMs": 4019,
+      "log": ".tmp/geometry-quality-v2/baseline---yes-pnpm_10.12.1-verify_boundary.log"
+    },
+    {
+      "command": "npx --yes pnpm@10.12.1 verify:no-python",
+      "exitCode": 0,
+      "durationMs": 2228,
+      "log": ".tmp/geometry-quality-v2/baseline---yes-pnpm_10.12.1-verify_no-python.log"
+    },
+    {
+      "command": "npx --yes pnpm@10.12.1 verify:acceptance-lock",
+      "exitCode": 0,
+      "durationMs": 2246,
+      "log": ".tmp/geometry-quality-v2/baseline---yes-pnpm_10.12.1-verify_acceptance-lock.log"
+    },
+    {
+      "command": "npx --yes pnpm@10.12.1 format:check",
+      "exitCode": 1,
+      "durationMs": 3242,
+      "log": ".tmp/geometry-quality-v2/baseline---yes-pnpm_10.12.1-format_check.log"
+    }
+  ],
+  "baselinePass": false,
+  "completedAt": "2026-08-16T09:21:27.999Z"
+}

@@ -117,8 +117,7 @@ export function computeOrientationMetrics(mesh: RawMesh): OrientationMetrics {
     const area = crossLength / 2;
     totalArea += area;
 
-    const onBed =
-      az - minZ <= epsilon && bz - minZ <= epsilon && cz - minZ <= epsilon;
+    const onBed = az - minZ <= epsilon && bz - minZ <= epsilon && cz - minZ <= epsilon;
     if (onBed) {
       contactArea += area;
       continue;

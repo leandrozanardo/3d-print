@@ -1,6 +1,6 @@
 /** Versioned geometry worker protocol for full model processing. */
 
-export const GEOMETRY_WORKER_PROTOCOL_VERSION = 2 as const;
+export const GEOMETRY_WORKER_PROTOCOL_VERSION = 3 as const;
 
 export type ProcessStage =
   | "validating"
@@ -9,6 +9,9 @@ export type ProcessStage =
   | "resolving-components"
   | "building-geometry"
   | "analyzing-topology"
+  | "repairing"
+  | "generating-orientations"
+  | "evaluating-candidates"
   | "evaluating-orientations"
   | "applying-optimization"
   | "serializing"
@@ -24,7 +27,12 @@ export type WorkerPrinterProfile = {
   maxHeightMm: number;
 };
 
-export type WorkerOptimizationGoal = "balanced" | "minimize-height" | "maximize-bed-contact";
+export type WorkerOptimizationGoal =
+  | "balanced"
+  | "minimize-height"
+  | "maximize-bed-contact";
+
+export type WorkerRepairMode = "none" | "safe";
 
 export type ProcessRequest = {
   schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
@@ -34,6 +42,7 @@ export type ProcessRequest = {
   bytes: ArrayBuffer;
   printer: WorkerPrinterProfile;
   goal: WorkerOptimizationGoal;
+  repairMode: WorkerRepairMode;
 };
 
 export type CancelRequest = {
@@ -62,6 +71,14 @@ export type PreviewReadyEvent = {
   bounds: { min: [number, number, number]; max: [number, number, number] };
 };
 
+export type GeometrySnapshot = {
+  vertexCount: number;
+  triangleCount: number;
+  dimensionsMm: [number, number, number];
+  watertight: boolean | "unknown";
+  bounds: { min: [number, number, number]; max: [number, number, number] };
+};
+
 export type ProcessSuccessEvent = {
   schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
   type: "processSuccess";
@@ -72,19 +89,13 @@ export type ProcessSuccessEvent = {
   mimeType: string;
   bytes: ArrayBuffer;
   sha256: string;
-  before: {
-    vertexCount: number;
-    triangleCount: number;
-    dimensionsMm: [number, number, number];
-    watertight: boolean | "unknown";
-    bounds: { min: [number, number, number]; max: [number, number, number] };
-  };
-  after: {
-    vertexCount: number;
-    triangleCount: number;
-    dimensionsMm: [number, number, number];
-    watertight: boolean | "unknown";
-    bounds: { min: [number, number, number]; max: [number, number, number] };
+  before: GeometrySnapshot;
+  normalized: GeometrySnapshot;
+  after: GeometrySnapshot;
+  repair: {
+    status: string;
+    operationsCommitted: string[];
+    reasonCodes: string[];
   };
   optimization: {
     algorithm: string;
@@ -92,7 +103,23 @@ export type ProcessSuccessEvent = {
     scoreBefore: number;
     scoreAfter: number;
     alreadyOptimal: boolean;
+    decisionKind: string;
+    goal: WorkerOptimizationGoal;
+    weights: Record<string, number>;
+    legacyCandidateCount: number;
+    exactCandidateCount: number;
+    qualityIndexBefore: number;
+    qualityIndexAfter: number;
+    costBefore: number;
+    costAfter: number;
+    relativeImprovement: number;
+    meaningfulImprovement: boolean;
+    bestLegacyCost: number;
+    bestV2Cost: number;
+    matrix: number[];
+    quaternion: number[];
   };
+  partCount: number;
   preservation: {
     preserved: string[];
     removed: string[];

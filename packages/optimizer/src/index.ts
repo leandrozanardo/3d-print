@@ -33,6 +33,60 @@ export interface BuildVolume {
  */
 export const ORIENTATION_SCORE_VERSION = "orientation-v1";
 
+export type {
+  OrientationMetricsV2,
+  OverhangBands,
+  OrientationCostVector,
+} from "./metricsV2";
+export { computeOrientationMetricsV2 } from "./metricsV2";
+export type {
+  OrientationGoal,
+  GoalWeights,
+  OrientationDecisionKind,
+} from "./orientationPolicy";
+export {
+  ORIENTATION_V2_VERSION,
+  GOAL_WEIGHTS,
+  QUICK_DIRECTION_CAP,
+  EXACT_CANDIDATE_CAP,
+  QUICK_FACE_SAMPLE_CAP,
+  MEANINGFUL_IMPROVEMENT_ABS,
+  MEANINGFUL_IMPROVEMENT_REL,
+  V1_V2_COST_TOLERANCE,
+  weightsForGoal,
+  totalCost,
+  qualityIndexFromCost,
+  isMeaningfulImprovement,
+} from "./orientationPolicy";
+export type { Quaternion, OrientationCandidateSeed } from "./quat";
+export {
+  normalizeQuat,
+  canonicalizeQuat,
+  quatToMatrix,
+  matrixToQuat,
+  quatFromTo,
+  angularDistance,
+  orientationCandidateId,
+  dedupeByAngularDistance,
+  identityQuat,
+  matrixLinearDeterminant,
+} from "./quat";
+export type { PcaResult, Vec3 } from "./pca";
+export { computePca, pcaAxisSenses, eigenSymmetric3x3 } from "./pca";
+export { clusterNormals, quatAlignNormalToNegZ } from "./normals";
+export { fibonacciSphereDirections } from "./fibonacci";
+export type {
+  OrientationCandidateV2,
+  EvaluateOrientationsV2Options,
+  EvaluateOrientationsV2Result,
+  OrientationV2Progress,
+} from "./evaluateOrientationsV2";
+export {
+  evaluateOrientationsV2,
+  evaluateOrientationsV2Progressive,
+  selectBestOrientationV2,
+} from "./evaluateOrientationsV2";
+
 /** Fixed weights used to break Pareto ties deterministically. */
 export const DEFAULT_SELECTION_WEIGHTS: CandidateScores = {
   printability: 0.3,

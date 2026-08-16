@@ -34,11 +34,17 @@ export function ModelViewer({
     void (async () => {
       try {
         const THREE = await import("three");
-        const { OrbitControls } = await import("three/examples/jsm/controls/OrbitControls.js");
+        const { OrbitControls } = await import(
+          "three/examples/jsm/controls/OrbitControls.js"
+        );
         if (disposed || !canvasRef.current) return;
 
         const canvas = canvasRef.current;
-        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        const renderer = new THREE.WebGLRenderer({
+          canvas,
+          antialias: true,
+          alpha: true,
+        });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0xf4f6fa);
@@ -126,9 +132,7 @@ export function ModelViewer({
       } catch (err) {
         if (!disposed) {
           setLoading(false);
-          setError(
-            err instanceof Error ? err.message : "WEBGL_UNAVAILABLE",
-          );
+          setError(err instanceof Error ? err.message : "WEBGL_UNAVAILABLE");
         }
       }
     })();
@@ -141,7 +145,12 @@ export function ModelViewer({
 
   if (error) {
     return (
-      <div className="viewer-fallback" data-testid="viewer-fallback" role="img" aria-label={label}>
+      <div
+        className="viewer-fallback"
+        data-testid="viewer-fallback"
+        role="img"
+        aria-label={label}
+      >
         Não foi possível iniciar o visualizador 3D. {error}
       </div>
     );

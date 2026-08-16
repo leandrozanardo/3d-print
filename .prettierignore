@@ -13,3 +13,11 @@ package-lock.json
 *.mdc
 .tmp/
 project_plans/
+
+# Product-recovery acceptance lock — hashes are authoritative; do not reformat.
+apps/web/e2e/acceptance/
+packages/formats-3mf/tests/acceptance/
+packages/optimizer/tests/orientation-24.test.ts
+packages/engine/tests/process-model.test.ts
+scripts/create-acceptance-lock.mjs
+scripts/verify-acceptance-lock.mjs

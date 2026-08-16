@@ -29,20 +29,18 @@ function volumeApprox(d) {
 }
 
 async function loadEngine() {
-  const engineUrl = pathToFileURL(
-    path.join(root, "packages/engine/dist/index.js"),
-  ).href;
+  const engineUrl = pathToFileURL(path.join(root, "packages/engine/dist/index.js")).href;
   return import(engineUrl);
 }
 
 async function inspectViaCli(file) {
   const { spawnSync } = await import("node:child_process");
   const bin = path.join(root, "apps/cli/dist/bin.js");
-  const r = spawnSync(
-    process.execPath,
-    [bin, "inspect-3mf", file, "--json"],
-    { encoding: "utf8", cwd: root, maxBuffer: 20 * 1024 * 1024 },
-  );
+  const r = spawnSync(process.execPath, [bin, "inspect-3mf", file, "--json"], {
+    encoding: "utf8",
+    cwd: root,
+    maxBuffer: 20 * 1024 * 1024,
+  });
   return {
     exitCode: r.status,
     stdout: r.stdout?.trim() || "",
@@ -126,8 +124,7 @@ async function main() {
     beforeD[2] > 0 ? ((beforeD[2] - afterD[2]) / beforeD[2]) * 100 : 0;
   const scoreGain =
     fromOriginal.optimization.scoreAfter - fromOriginal.optimization.scoreBefore;
-  const bedContactProxy =
-    afterD[0] * afterD[1] - beforeD[0] * beforeD[1];
+  const bedContactProxy = afterD[0] * afterD[1] - beforeD[0] * beforeD[1];
 
   const fitsPrinter = (d, printer) =>
     d[0] <= printer.bedWidthMm + 1e-3 &&
@@ -135,13 +132,11 @@ async function main() {
     d[2] <= printer.maxHeightMm + 1e-3;
 
   const zOnBed = Math.abs(after.bounds.min[2]) < 1e-3;
-  const byteDiffPct =
-    ((optBuf.length - origBuf.length) / origBuf.length) * 100;
+  const byteDiffPct = ((optBuf.length - origBuf.length) / origBuf.length) * 100;
 
   const regeneratedSha = fromOriginal.output.sha256;
   const fileSha = sha256(optBuf);
-  const bytesMatchEngine =
-    fromOriginal.output.bytes.byteLength === optBuf.length;
+  const bytesMatchEngine = fromOriginal.output.bytes.byteLength === optBuf.length;
   // Soft match: exact SHA may differ across runs if non-deterministic serialization;
   // also compare triangle counts and orientation id stability.
   const reAlreadyOptimal = fromOptimized.optimization.alreadyOptimal;
@@ -217,8 +212,7 @@ async function main() {
     consistency: {
       fileShaEqualsRegeneratedSha: fileSha === regeneratedSha,
       bytesMatchEngineLength: bytesMatchEngine,
-      triangleCountUnchanged:
-        before.triangleCount === after.triangleCount,
+      triangleCountUnchanged: before.triangleCount === after.triangleCount,
       meshTopologyPreserved:
         before.triangleCount === after.triangleCount &&
         before.vertexCount === after.vertexCount,

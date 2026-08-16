@@ -49,9 +49,7 @@ export function InspectSummary({
         </li>
         <li>
           <span>Watertight</span>
-          <strong>
-            {watertight === null ? "n/a" : watertight ? "yes" : "no"}
-          </strong>
+          <strong>{watertight === null ? "n/a" : watertight ? "yes" : "no"}</strong>
         </li>
       </ul>
       {issues.length > 0 ? (

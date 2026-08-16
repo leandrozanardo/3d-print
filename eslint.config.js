@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
+import globals from "globals";
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -17,5 +18,22 @@ export default tseslint.config(
       "project_plans/**",
       ".cursor/**",
     ],
+  },
+  {
+    files: ["scripts/**/*.{js,mjs}", "apps/**/scripts/**/*.{js,mjs}"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+  {
+    files: ["apps/web/scripts/**/*.{js,mjs}"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
+    },
   },
 );

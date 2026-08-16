@@ -23,20 +23,7 @@ export function parseTransformAttribute(raw: string | undefined): number[] {
     throw new Error(`INVALID_TRANSFORM: expected 12 finite numbers, got "${raw}"`);
   }
   // Remap 3MF (… tx ty tz) into row-major 4x4 with translation in column 3.
-  const [
-    m00,
-    m01,
-    m02,
-    m10,
-    m11,
-    m12,
-    m20,
-    m21,
-    m22,
-    tx,
-    ty,
-    tz,
-  ] = parts as [
+  const [m00, m01, m02, m10, m11, m12, m20, m21, m22, tx, ty, tz] = parts as [
     number,
     number,
     number,

@@ -18,6 +18,7 @@ describe("geometry worker protocol", () => {
           maxHeightMm: 180,
         },
         goal: "balanced",
+        repairMode: "safe",
       }),
     ).toBe(true);
 

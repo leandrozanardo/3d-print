@@ -29,6 +29,36 @@ export {
   translationMatrix,
 } from "./matrix";
 
+export {
+  REPAIR_POLICY_VERSION,
+  createRepairPolicy,
+  createRepairPolicyFromDiagonal,
+} from "./repair/repairPolicy";
+export type { RepairPolicy } from "./repair/repairPolicy";
+export type {
+  RepairMode,
+  RepairStatus,
+  SafeRepairResult,
+  PartRepairReport,
+  TopologySnapshot,
+  FidelityReport,
+} from "./repair/repairTypes";
+export { safeRepair } from "./repair/safeRepair";
+export type { SafeRepairOptions } from "./repair/safeRepair";
+export type {
+  AssemblyGeometryAnalysis,
+  AssemblyPartInput,
+  PartMeshInput,
+  PartGeometryAnalysis,
+} from "./repair/assemblyAnalysis";
+export { analyzeAssemblyGeometry, analyzePartGeometry } from "./repair/assemblyAnalysis";
+export { weldVertices } from "./repair/weld";
+export { cleanFaces } from "./repair/faces";
+export { fixWinding } from "./repair/winding";
+export { extractBoundaryLoops } from "./repair/boundaryLoops";
+export { earClipLoop } from "./repair/triangulate";
+export { evaluateFidelity, snapshotTopology } from "./repair/fidelity";
+
 /** Full geometry inspection facts (P1/P2). */
 export interface GeometryFacts {
   vertexCount: number;
@@ -99,7 +129,12 @@ export function transformMesh(mesh: RawMesh, plan: TransformPlan): RawMesh {
   const matrix: Matrix4 = transformPlanToMatrix(plan);
   const vertices = new Float64Array(mesh.vertices);
   for (let i = 0; i < vertices.length; i += 3) {
-    const [x, y, z] = applyMatrix4(matrix, vertices[i]!, vertices[i + 1]!, vertices[i + 2]!);
+    const [x, y, z] = applyMatrix4(
+      matrix,
+      vertices[i]!,
+      vertices[i + 1]!,
+      vertices[i + 2]!,
+    );
     vertices[i] = x;
     vertices[i + 1] = y;
     vertices[i + 2] = z;

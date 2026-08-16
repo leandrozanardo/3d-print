@@ -13,6 +13,7 @@
     "test:e2e": "playwright test",
     "test:e2e:private": "playwright test e2e/acceptance/one-piece-3mf.spec.ts --project=chromium",
     "test:e2e:public": "playwright test e2e/acceptance/stl.spec.ts e2e/acceptance/public-3mf.spec.ts",
+    "test:e2e:geometry-quality-v2": "playwright test e2e/geometry-quality-v2 --project=chromium",
     "test:network": "playwright test e2e/acceptance/network-idle.spec.ts --project=chromium",
     "test:a11y": "playwright test e2e/acceptance/accessibility.spec.ts --project=chromium",
     "test:repeatability": "playwright test e2e/acceptance/repeatability.spec.ts --project=chromium"

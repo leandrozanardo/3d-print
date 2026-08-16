@@ -1,6 +1,11 @@
 import { zipSync, strToU8 } from "fflate";
 
-import type { CanonicalScene, PreservationReport, ThreeMfWriteOptions } from "./types";
+import type {
+  CanonicalMesh,
+  CanonicalScene,
+  PreservationReport,
+  ThreeMfWriteOptions,
+} from "./types";
 
 function escapeXml(value: string): string {
   return value
@@ -18,19 +23,15 @@ function formatCoord(n: number): string {
   return Number(n.toFixed(6)).toString();
 }
 
-/**
- * Write a Core 3MF geometry-only package from a canonical millimeter scene.
- * Vendor G-code / slice data is intentionally omitted (see preservation report).
- */
-export function writeThreeMf(
-  scene: CanonicalScene,
-  options: ThreeMfWriteOptions = {},
-): { bytes: Uint8Array; preservation: PreservationReport } {
-  const mesh = scene.meshes[0];
-  if (!mesh || mesh.indices.length < 3) {
+function meshObjectXml(
+  mesh: CanonicalMesh,
+  objectId: number,
+  fallbackName: string,
+): string {
+  if (mesh.indices.length < 3) {
     throw new Error("SERIALIZATION_FAILED: empty mesh");
   }
-  const name = escapeXml(options.objectName ?? mesh.name ?? "Optimized model");
+  const name = escapeXml(mesh.name ?? fallbackName);
   const vertexLines: string[] = [];
   for (let i = 0; i < mesh.positions.length; i += 3) {
     vertexLines.push(
@@ -39,16 +40,16 @@ export function writeThreeMf(
   }
   const triangleLines: string[] = [];
   for (let i = 0; i < mesh.indices.length; i += 3) {
-    triangleLines.push(
-      `        <triangle v1="${mesh.indices[i]!}" v2="${mesh.indices[i + 1]!}" v3="${mesh.indices[i + 2]!}" />`,
-    );
+    const a = mesh.indices[i]!;
+    const b = mesh.indices[i + 1]!;
+    const c = mesh.indices[i + 2]!;
+    const vertexCount = mesh.positions.length / 3;
+    if (a >= vertexCount || b >= vertexCount || c >= vertexCount) {
+      throw new Error("SERIALIZATION_FAILED: triangle index out of range");
+    }
+    triangleLines.push(`        <triangle v1="${a}" v2="${b}" v3="${c}" />`);
   }
-
-  const modelXml = `<?xml version="1.0" encoding="UTF-8"?>
-<model unit="millimeter" xml:lang="en-US" xmlns="http://schemas.microsoft.com/3dmanufacturing/core/2015/02">
-  <metadata name="Application">fix-my-print</metadata>
-  <resources>
-    <object id="1" name="${name}" type="model">
+  return `    <object id="${objectId}" name="${name}" type="model">
       <mesh>
         <vertices>
 ${vertexLines.join("\n")}
@@ -57,10 +58,50 @@ ${vertexLines.join("\n")}
 ${triangleLines.join("\n")}
         </triangles>
       </mesh>
-    </object>
+    </object>`;
+}
+
+/**
+ * Write a Core 3MF geometry-only package from a canonical millimeter scene.
+ * Serializes every mesh as its own object + build item (FMT-004).
+ * Vendor G-code / slice data is intentionally omitted (see preservation report).
+ */
+export function writeThreeMf(
+  scene: CanonicalScene,
+  options: ThreeMfWriteOptions = {},
+): { bytes: Uint8Array; preservation: PreservationReport } {
+  const meshes = scene.meshes.filter((m) => m.indices.length >= 3);
+  if (meshes.length === 0) {
+    throw new Error("SERIALIZATION_FAILED: empty mesh");
+  }
+
+  const objectBlocks = meshes.map((mesh, index) => {
+    const objectId = index + 1;
+    const fallback =
+      meshes.length === 1
+        ? (options.objectName ?? "Optimized model")
+        : options.objectName
+          ? `${options.objectName} ${objectId}`
+          : `Part ${objectId}`;
+    return meshObjectXml(mesh, objectId, fallback);
+  });
+
+  const buildItems = meshes
+    .map((_, index) => `    <item objectid="${index + 1}" />`)
+    .join("\n");
+
+  const primaryName = escapeXml(
+    options.objectName ?? meshes[0]!.name ?? "Optimized model",
+  );
+
+  const modelXml = `<?xml version="1.0" encoding="UTF-8"?>
+<model unit="millimeter" xml:lang="en-US" xmlns="http://schemas.microsoft.com/3dmanufacturing/core/2015/02">
+  <metadata name="Application">fix-my-print</metadata>
+  <resources>
+${objectBlocks.join("\n")}
   </resources>
   <build>
-    <item objectid="1" />
+${buildItems}
   </build>
 </model>
 `;
@@ -94,9 +135,11 @@ ${triangleLines.join("\n")}
 
   const preserved = scene.sourceMetadata
     ? [
-        "Core geometry (flattened)",
+        meshes.length === 1
+          ? "Core geometry (flattened)"
+          : `Core geometry (${meshes.length} objects)`,
         `Original unit: ${scene.sourceMetadata.originalUnit}`,
-        `Object names when available → ${name}`,
+        `Object names when available → ${primaryName}`,
       ]
     : ["Core geometry"];
   const removed = [

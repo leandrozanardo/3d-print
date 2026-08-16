@@ -14,10 +14,10 @@ You are **inside** the `fix-my-print` project. Work here is allowed.
 
 ## Enforcement
 
-| Surface | Role |
-| --- | --- |
-| `.cursor/rules/repo-boundary.mdc` | Always-on project rule |
-| `@fix-my-print/repo-guard` | Runtime path proof for CLI/packages |
+| Surface                           | Role                                |
+| --------------------------------- | ----------------------------------- |
+| `.cursor/rules/repo-boundary.mdc` | Always-on project rule              |
+| `@fix-my-print/repo-guard`        | Runtime path proof for CLI/packages |
 
 ## In-repo constraints
 

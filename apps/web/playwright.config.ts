@@ -14,8 +14,19 @@ export default defineConfig({
   expect: { timeout: 120_000 },
   reporter: [
     ["list"],
-    ["html", { outputFolder: path.join(root, "artifacts/product-recovery/playwright"), open: "never" }],
-    ["json", { outputFile: path.join(root, "artifacts/product-recovery/playwright/results.json") }],
+    [
+      "html",
+      {
+        outputFolder: path.join(root, "artifacts/product-recovery/playwright"),
+        open: "never",
+      },
+    ],
+    [
+      "json",
+      {
+        outputFile: path.join(root, "artifacts/product-recovery/playwright/results.json"),
+      },
+    ],
   ],
   use: {
     baseURL: "http://127.0.0.1:4173",

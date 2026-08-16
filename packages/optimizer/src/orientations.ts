@@ -49,9 +49,7 @@ function buildOrientationSpecs(): readonly OrientationSpec[] {
     const baseMatrix = rotation90Matrix(base.axis, base.turns);
     for (const yaw of YAW_TURNS) {
       // Yaw is applied in printer space, after the face-up rotation.
-      const matrix = snapMatrix4(
-        multiplyMatrix4(rotation90Matrix("z", yaw), baseMatrix),
-      );
+      const matrix = snapMatrix4(multiplyMatrix4(rotation90Matrix("z", yaw), baseMatrix));
       if (!isOrthogonalLinear(matrix)) {
         throw new Error(`ORIENTATION_NOT_ORTHOGONAL: up=${base.up} yaw=${yaw}`);
       }

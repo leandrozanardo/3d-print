@@ -75,6 +75,7 @@ self.onmessage = (event: MessageEvent<unknown>) => {
           bytes: new Uint8Array(data.bytes),
           printer,
           goal: data.goal,
+          repairMode: data.repairMode ?? "safe",
         },
         {
           isCancelled: () => cancelledJobId === jobId,
@@ -124,6 +125,13 @@ self.onmessage = (event: MessageEvent<unknown>) => {
             watertight: result.before.watertight,
             bounds: result.before.bounds,
           },
+          normalized: {
+            vertexCount: result.normalized.vertexCount,
+            triangleCount: result.normalized.triangleCount,
+            dimensionsMm: result.normalized.dimensionsMm,
+            watertight: result.normalized.watertight,
+            bounds: result.normalized.bounds,
+          },
           after: {
             vertexCount: result.after.vertexCount,
             triangleCount: result.after.triangleCount,
@@ -131,13 +139,34 @@ self.onmessage = (event: MessageEvent<unknown>) => {
             watertight: result.after.watertight,
             bounds: result.after.bounds,
           },
+          repair: {
+            status: result.repair.status,
+            operationsCommitted: [...result.repair.operationsCommitted],
+            reasonCodes: [...result.repair.reasonCodes],
+          },
           optimization: {
             algorithm: result.optimization.algorithm,
             orientationId: result.optimization.orientationId,
             scoreBefore: result.optimization.scoreBefore,
             scoreAfter: result.optimization.scoreAfter,
             alreadyOptimal: result.optimization.alreadyOptimal,
+            decisionKind: result.optimization.decisionKind,
+            goal: result.optimization.goal,
+            weights: { ...result.optimization.weights },
+            legacyCandidateCount: result.optimization.legacyCandidateCount,
+            exactCandidateCount: result.optimization.exactCandidateCount,
+            qualityIndexBefore: result.optimization.qualityIndexBefore,
+            qualityIndexAfter: result.optimization.qualityIndexAfter,
+            costBefore: result.optimization.costBefore,
+            costAfter: result.optimization.costAfter,
+            relativeImprovement: result.optimization.relativeImprovement,
+            meaningfulImprovement: result.optimization.meaningfulImprovement,
+            bestLegacyCost: result.optimization.bestLegacyCost,
+            bestV2Cost: result.optimization.bestV2Cost,
+            matrix: [...result.optimization.matrix],
+            quaternion: [...result.optimization.quaternion],
           },
+          partCount: result.partCount,
           preservation: {
             preserved: [...result.preservation.preserved],
             removed: [...result.preservation.removed],
@@ -189,7 +218,8 @@ self.onmessage = (event: MessageEvent<unknown>) => {
         code,
         message,
         stage: "processing",
-        retryable: err instanceof EngineException ? Boolean(err.engineError.retryable) : false,
+        retryable:
+          err instanceof EngineException ? Boolean(err.engineError.retryable) : false,
       });
     } finally {
       if (activeJobId === jobId) {

@@ -1,4 +1,12 @@
-import { lazy, Suspense, useCallback, useEffect, useMemo, useReducer, useRef } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+} from "react";
 import { CapabilityDiagnostics } from "./components/CapabilityDiagnostics";
 import { detectCapabilities } from "./capabilities";
 import { featureFlags, isAiEnabled } from "./flags";
@@ -68,6 +76,7 @@ type State = {
   bedDepthMm: number;
   maxHeightMm: number;
   goal: "balanced" | "minimize-height" | "maximize-bed-contact";
+  repairMode: "none" | "safe";
 };
 
 type Action =
@@ -82,7 +91,8 @@ type Action =
   | { type: "reset-result" }
   | { type: "set-preset"; presetId: string }
   | { type: "set-bed"; bedWidthMm: number; bedDepthMm: number; maxHeightMm: number }
-  | { type: "set-goal"; goal: State["goal"] };
+  | { type: "set-goal"; goal: State["goal"] }
+  | { type: "set-repair-mode"; repairMode: State["repairMode"] };
 
 const initialState: State = {
   ui: "idle",
@@ -103,6 +113,7 @@ const initialState: State = {
   bedDepthMm: 180,
   maxHeightMm: 180,
   goal: "balanced",
+  repairMode: "safe",
 };
 
 // Held outside reducer to avoid cloning large ArrayBuffers in state snapshots.
@@ -227,6 +238,8 @@ function reducer(state: State, action: Action): State {
       };
     case "set-goal":
       return { ...state, goal: action.goal };
+    case "set-repair-mode":
+      return { ...state, repairMode: action.repairMode };
     default:
       return state;
   }
@@ -278,10 +291,13 @@ export default function App() {
     workerRef.current = null;
   }, []);
 
-  useEffect(() => () => {
-    disposeWorker();
-    revokeDownload();
-  }, [disposeWorker, revokeDownload]);
+  useEffect(
+    () => () => {
+      disposeWorker();
+      revokeDownload();
+    },
+    [disposeWorker, revokeDownload],
+  );
 
   const ensureWorker = useCallback(() => {
     if (workerRef.current) return workerRef.current;
@@ -386,7 +402,8 @@ export default function App() {
       dispatch({
         type: "failure",
         code: "WORKER_CRASHED",
-        message: "Não foi possível iniciar o motor de geometria. Recarregue a página e tente de novo.",
+        message:
+          "Não foi possível iniciar o motor de geometria. Recarregue a página e tente de novo.",
       });
       return;
     }
@@ -409,6 +426,7 @@ export default function App() {
           maxHeightMm: state.maxHeightMm,
         },
         goal: state.goal,
+        repairMode: state.repairMode,
       },
       [copy],
     );
@@ -428,13 +446,7 @@ export default function App() {
   }, [disposeWorker, state.jobId]);
 
   const step =
-    state.ui === "success"
-      ? 4
-      : state.ui === "processing"
-        ? 3
-        : state.fileName
-          ? 2
-          : 1;
+    state.ui === "success" ? 4 : state.ui === "processing" ? 3 : state.fileName ? 2 : 1;
 
   const canOptimize =
     state.ui === "file-ready" || state.ui === "cancelled" || state.ui === "failure";
@@ -463,22 +475,38 @@ export default function App() {
         <section className="hero-compact" aria-labelledby="hero-title">
           <h1 id="hero-title">Otimize a orientação do seu modelo</h1>
           <p>
-            Analise a geometria, reduza riscos e receba um arquivo pronto para revisar no seu
-            fatiador.
+            Analise a geometria, reduza riscos e receba um arquivo pronto para revisar no
+            seu fatiador.
           </p>
         </section>
 
-        <ol className="stepper" data-testid="workflow-stepper" aria-label="Etapas do fluxo">
-          <li aria-current={step === 1 ? "step" : undefined} className={step >= 1 ? "active" : ""}>
+        <ol
+          className="stepper"
+          data-testid="workflow-stepper"
+          aria-label="Etapas do fluxo"
+        >
+          <li
+            aria-current={step === 1 ? "step" : undefined}
+            className={step >= 1 ? "active" : ""}
+          >
             1 Arquivo
           </li>
-          <li aria-current={step === 2 ? "step" : undefined} className={step >= 2 ? "active" : ""}>
+          <li
+            aria-current={step === 2 ? "step" : undefined}
+            className={step >= 2 ? "active" : ""}
+          >
             2 Configuração
           </li>
-          <li aria-current={step === 3 ? "step" : undefined} className={step >= 3 ? "active" : ""}>
+          <li
+            aria-current={step === 3 ? "step" : undefined}
+            className={step >= 3 ? "active" : ""}
+          >
             3 Otimização
           </li>
-          <li aria-current={step === 4 ? "step" : undefined} className={step >= 4 ? "active" : ""}>
+          <li
+            aria-current={step === 4 ? "step" : undefined}
+            className={step >= 4 ? "active" : ""}
+          >
             4 Resultado
           </li>
         </ol>
@@ -512,7 +540,8 @@ export default function App() {
               <p className="drop-title">Envie seu modelo 3D</p>
               <p>Arraste um arquivo 3MF ou STL aqui ou escolha no computador</p>
               <p className="drop-meta">
-                Formatos aceitos: 3MF e STL · Tamanho máximo: {formatBytes(MAX_FILE_BYTES)}
+                Formatos aceitos: 3MF e STL · Tamanho máximo:{" "}
+                {formatBytes(MAX_FILE_BYTES)}
               </p>
               <input
                 id="file-input"
@@ -584,7 +613,9 @@ export default function App() {
                 data-testid="printer-preset"
                 value={state.presetId}
                 disabled={state.ui === "processing"}
-                onChange={(e) => dispatch({ type: "set-preset", presetId: e.target.value })}
+                onChange={(e) =>
+                  dispatch({ type: "set-preset", presetId: e.target.value })
+                }
               >
                 {PRESETS.map((p) => (
                   <option key={p.id} value={p.id}>
@@ -661,7 +692,7 @@ export default function App() {
               </label>
               <select
                 id="optimization-goal"
-                data-testid="optimization-goal"
+                data-testid="goal-select"
                 value={state.goal}
                 disabled={state.ui === "processing"}
                 onChange={(e) =>
@@ -671,10 +702,30 @@ export default function App() {
                   })
                 }
               >
-                <option value="balanced">Equilíbrio (altura × contato)</option>
-                <option value="minimize-height">Minimizar altura</option>
-                <option value="maximize-bed-contact">Maximizar contato com a mesa</option>
+                <option value="balanced">Equilíbrio</option>
+                <option value="minimize-height">Menor altura</option>
+                <option value="maximize-bed-contact">Maior contato</option>
               </select>
+
+              <label className="repair-toggle">
+                <input
+                  type="checkbox"
+                  data-testid="repair-safe-toggle"
+                  checked={state.repairMode === "safe"}
+                  disabled={state.ui === "processing"}
+                  onChange={(e) =>
+                    dispatch({
+                      type: "set-repair-mode",
+                      repairMode: e.target.checked ? "safe" : "none",
+                    })
+                  }
+                />
+                Reparo conservador
+              </label>
+              <p className="hint">
+                Corrige somente problemas simples quando a geometria pode ser preservada.
+                Alterações inseguras são rejeitadas automaticamente.
+              </p>
 
               <button
                 type="button"
@@ -706,7 +757,10 @@ export default function App() {
                   aria-valuemax={100}
                   aria-valuenow={Math.round(state.ratio * 100)}
                 >
-                  <div className="progress-fill" style={{ width: `${state.ratio * 100}%` }} />
+                  <div
+                    className="progress-fill"
+                    style={{ width: `${state.ratio * 100}%` }}
+                  />
                 </div>
                 <button type="button" data-testid="cancel-button" onClick={onCancel}>
                   Cancelar
@@ -737,49 +791,132 @@ export default function App() {
         {state.ui === "success" && state.success ? (
           <section className="result-panel" data-testid="result-panel" aria-live="polite">
             <div className="result-header">
-              <h2>Seu modelo está pronto</h2>
+              <h2
+                data-testid="decision-kind"
+                data-kind={state.success.optimization.decisionKind}
+              >
+                {state.success.optimization.decisionKind === "orientation-improved"
+                  ? "Encontramos uma orientação melhor"
+                  : state.success.optimization.decisionKind ===
+                      "repair-and-orientation-improved"
+                    ? "Reparo e orientação concluídos"
+                    : state.success.optimization.decisionKind === "repair-only"
+                      ? "Sua malha foi reparada com segurança"
+                      : state.success.optimization.alreadyOptimal
+                        ? "Seu modelo já estava na melhor orientação encontrada"
+                        : "Arquivo sanitizado e validado"}
+              </h2>
               <span className="validation-badge" data-testid="validation-badge">
-                Arquivo validado
+                Estrutura 3MF validada
               </span>
             </div>
             <div className="metrics-grid">
               <div data-testid="before-metrics">
                 <h3>Antes</h3>
                 <p>
-                  {state.success.before.dimensionsMm.map((n) => n.toFixed(1)).join(" × ")} mm
+                  {state.success.before.dimensionsMm.map((n) => n.toFixed(1)).join(" × ")}{" "}
+                  mm
                 </p>
                 <p>Altura: {state.success.before.dimensionsMm[2].toFixed(1)} mm</p>
-                <p>Score: {state.success.optimization.scoreBefore.toFixed(3)}</p>
+                <p>
+                  Qualidade geométrica: {state.success.optimization.qualityIndexBefore}
+                  /100
+                </p>
               </div>
               <div data-testid="after-metrics">
                 <h3>Depois</h3>
                 <p>
-                  {state.success.after.dimensionsMm.map((n) => n.toFixed(1)).join(" × ")} mm
+                  {state.success.after.dimensionsMm.map((n) => n.toFixed(1)).join(" × ")}{" "}
+                  mm
                 </p>
                 <p>Altura: {state.success.after.dimensionsMm[2].toFixed(1)} mm</p>
-                <p>Score: {state.success.optimization.scoreAfter.toFixed(3)}</p>
+                <p>
+                  Qualidade geométrica: {state.success.optimization.qualityIndexAfter}/100
+                </p>
               </div>
             </div>
             <ul className="result-facts">
-              <li>Orientação: {state.success.optimization.orientationId}</li>
-              <li>Triângulos: {state.success.after.triangleCount.toLocaleString("pt-BR")}</li>
+              <li data-testid="result-goal" data-goal={state.success.optimization.goal}>
+                Objetivo: {state.success.optimization.goal}
+              </li>
+              <li
+                data-testid="orientation-id"
+                data-id={state.success.optimization.orientationId}
+              >
+                Orientação: {state.success.optimization.orientationId}
+              </li>
+              <li
+                data-testid="exact-candidate-count"
+                data-count={String(state.success.optimization.exactCandidateCount)}
+              >
+                Candidatos V2: {state.success.optimization.exactCandidateCount} (legado{" "}
+                {state.success.optimization.legacyCandidateCount})
+              </li>
+              <li
+                data-testid="total-cost"
+                data-value={String(state.success.optimization.costAfter)}
+              >
+                Custo geométrico: {state.success.optimization.costAfter.toFixed(4)}
+              </li>
+              <li
+                data-testid="relative-improvement"
+                data-value={String(state.success.optimization.relativeImprovement)}
+              >
+                Melhoria relativa (proxy):{" "}
+                {(state.success.optimization.relativeImprovement * 100).toFixed(2)}%
+              </li>
+              <li data-testid="part-count" data-count={String(state.success.partCount)}>
+                Partes: {state.success.partCount}
+              </li>
+              <li data-testid="repair-status" data-status={state.success.repair.status}>
+                Reparo:{" "}
+                {state.success.repair.status === "committed"
+                  ? "Reparo aplicado"
+                  : state.success.repair.status === "not-needed"
+                    ? "Nenhum reparo necessário"
+                    : "A malha foi preservada"}
+              </li>
               <li>
-                Estanqueidade:{" "}
+                Triângulos: {state.success.after.triangleCount.toLocaleString("pt-BR")}
+              </li>
+              <li>
+                Estanqueidade (estimativa topológica):{" "}
                 {state.success.after.watertight === "unknown"
                   ? "desconhecida"
                   : state.success.after.watertight
-                    ? "sim"
-                    : "não"}
+                    ? "malhas estanques"
+                    : "há malhas abertas"}
               </li>
-              <li>Tempo: {(state.success.durationMs / 1000).toFixed(1)} s</li>
+              <li>Tempo do motor: {(state.success.durationMs / 1000).toFixed(1)} s</li>
               <li>Algoritmo: {state.success.optimization.algorithm}</li>
               <li>
                 Formato: {state.success.format.toUpperCase()} ·{" "}
                 {formatBytes(state.success.bytes.byteLength)}
               </li>
+              <li
+                data-testid="orientation-orthogonal"
+                data-orthogonal={
+                  /^up[+-][xyz]-yaw(0|90|180|270)$/.test(
+                    state.success.optimization.orientationId,
+                  )
+                    ? "true"
+                    : "false"
+                }
+              >
+                Orientação ortogonal legada:{" "}
+                {/^up[+-][xyz]-yaw(0|90|180|270)$/.test(
+                  state.success.optimization.orientationId,
+                )
+                  ? "sim"
+                  : "não"}
+              </li>
             </ul>
             {state.success.preservation.notes.length > 0 ? (
-              <div className="preservation-warning" data-testid="preservation-warning" role="note">
+              <div
+                className="preservation-warning"
+                data-testid="preservation-warning"
+                role="note"
+              >
                 <strong>Preservação do 3MF</strong>
                 <ul>
                   {state.success.preservation.notes.map((note) => (
@@ -803,7 +940,9 @@ export default function App() {
                 onClick={() => {
                   disposeWorker();
                   revokeDownload();
-                  const input = document.getElementById("file-input") as HTMLInputElement | null;
+                  const input = document.getElementById(
+                    "file-input",
+                  ) as HTMLInputElement | null;
                   if (input) input.value = "";
                   dispatch({ type: "clear-file" });
                 }}
@@ -821,8 +960,9 @@ export default function App() {
         <section id="como-funciona" className="how-section">
           <h2>Como funciona</h2>
           <p>
-            O processamento ocorre no seu navegador. Comparamos 24 orientações ortogonais com
-            estimativa geométrica de suporte (não é fatiamento) e geramos um novo 3MF Core válido.
+            O processamento ocorre no seu navegador. Comparamos 24 orientações ortogonais
+            com estimativa geométrica de suporte (não é fatiamento) e geramos um novo 3MF
+            Core válido.
           </p>
         </section>
 
@@ -831,7 +971,8 @@ export default function App() {
             <CapabilityDiagnostics report={capabilities} />
             <p>
               engine.ts={String(featureFlags.engine.ts.enabled)} geometry.wasm=
-              {String(featureFlags.geometry.wasm.enabled)} ai={isAiEnabled() ? "on" : "off"}
+              {String(featureFlags.geometry.wasm.enabled)} ai=
+              {isAiEnabled() ? "on" : "off"}
             </p>
           </div>
         ) : null}

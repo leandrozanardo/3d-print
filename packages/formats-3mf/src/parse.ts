@@ -4,11 +4,7 @@ import { computeBounds, IDENTITY_MATRIX4, type Matrix4 } from "@fix-my-print/geo
 import { classifyArchiveMember } from "./classify";
 import { DEFAULT_THREEMF_LIMITS, inspect3mf } from "./inspect";
 import { asArray, attr, parseSafeXml } from "./safeXml";
-import {
-  composeTransforms,
-  parseTransformAttribute,
-  transformPoint,
-} from "./transform";
+import { composeTransforms, parseTransformAttribute, transformPoint } from "./transform";
 import type {
   CanonicalMesh,
   CanonicalScene,
@@ -93,9 +89,7 @@ function readTriangle(
   const v1 = Number(attr(node, "v1"));
   const v2 = Number(attr(node, "v2"));
   const v3 = Number(attr(node, "v3"));
-  if (
-    ![v1, v2, v3].every((v) => Number.isInteger(v) && v >= 0 && v < vertexCount)
-  ) {
+  if (![v1, v2, v3].every((v) => Number.isInteger(v) && v >= 0 && v < vertexCount)) {
     throw new EngineException(
       createEngineError(
         "MESH_PARSE_FAILED",
@@ -122,7 +116,10 @@ function parseObjectNode(obj: Record<string, unknown>): ThreeMfObjectNode {
   if (meshNode) {
     const verticesNode = isRecord(meshNode.vertices) ? meshNode.vertices : undefined;
     const vertexNodes = asArray(
-      verticesNode?.vertex as Record<string, unknown> | Record<string, unknown>[] | undefined,
+      verticesNode?.vertex as
+        | Record<string, unknown>
+        | Record<string, unknown>[]
+        | undefined,
     );
     const positions = new Float64Array(vertexNodes.length * 3);
     for (let i = 0; i < vertexNodes.length; i++) {
@@ -159,9 +156,13 @@ function parseObjectNode(obj: Record<string, unknown>): ThreeMfObjectNode {
     const refId = attr(component, "objectid");
     if (!refId) {
       throw new EngineException(
-        createEngineError("MESH_PARSE_FAILED", "MISSING_OBJECT: component without objectid", {
-          retryable: false,
-        }),
+        createEngineError(
+          "MESH_PARSE_FAILED",
+          "MISSING_OBJECT: component without objectid",
+          {
+            retryable: false,
+          },
+        ),
       );
     }
     return {
@@ -241,9 +242,13 @@ export function parseThreeMf(
     const objectId = attr(item, "objectid");
     if (!objectId) {
       throw new EngineException(
-        createEngineError("MESH_PARSE_FAILED", "MISSING_OBJECT: build item without objectid", {
-          retryable: false,
-        }),
+        createEngineError(
+          "MESH_PARSE_FAILED",
+          "MISSING_OBJECT: build item without objectid",
+          {
+            retryable: false,
+          },
+        ),
       );
     }
     if (!objects.has(objectId)) {
@@ -330,16 +335,24 @@ function flattenObject(
 ): void {
   if (depth > 64) {
     throw new EngineException(
-      createEngineError("MESH_PARSE_FAILED", "CYCLIC_COMPONENTS: recursion depth exceeded", {
-        retryable: false,
-      }),
+      createEngineError(
+        "MESH_PARSE_FAILED",
+        "CYCLIC_COMPONENTS: recursion depth exceeded",
+        {
+          retryable: false,
+        },
+      ),
     );
   }
   if (stack.has(objectId)) {
     throw new EngineException(
-      createEngineError("MESH_PARSE_FAILED", `CYCLIC_COMPONENTS: cycle at object ${objectId}`, {
-        retryable: false,
-      }),
+      createEngineError(
+        "MESH_PARSE_FAILED",
+        `CYCLIC_COMPONENTS: cycle at object ${objectId}`,
+        {
+          retryable: false,
+        },
+      ),
     );
   }
   const object = document.objects.get(objectId);
@@ -352,17 +365,19 @@ function flattenObject(
   }
   stack.add(objectId);
   if (object.mesh && object.mesh.indices.length > 0) {
-    appendTransformedMesh(
-      acc,
-      object.mesh.positions,
-      object.mesh.indices,
-      parent,
-      scale,
-    );
+    appendTransformedMesh(acc, object.mesh.positions, object.mesh.indices, parent, scale);
   }
   for (const component of object.components) {
     const childMatrix = composeTransforms(parent, component.transform);
-    flattenObject(document, component.objectId, childMatrix, acc, scale, stack, depth + 1);
+    flattenObject(
+      document,
+      component.objectId,
+      childMatrix,
+      acc,
+      scale,
+      stack,
+      depth + 1,
+    );
   }
   stack.delete(objectId);
 }
@@ -389,9 +404,13 @@ export function flattenThreeMf(
   }
   if (acc.indices.length === 0) {
     throw new EngineException(
-      createEngineError("MESH_PARSE_FAILED", "EMPTY_GEOMETRY: no triangles reachable from build", {
-        retryable: false,
-      }),
+      createEngineError(
+        "MESH_PARSE_FAILED",
+        "EMPTY_GEOMETRY: no triangles reachable from build",
+        {
+          retryable: false,
+        },
+      ),
     );
   }
 

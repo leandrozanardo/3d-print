@@ -1,0 +1,21 @@
+{
+  "matrix": [
+    {
+      "mutant": "force-watertight-true",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
+      "mutant": "limit-v2-to-24",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
+      "mutant": "ignore-goal",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    }
+  ],
+  "killed": 3,
+  "required": 3
+}

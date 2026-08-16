@@ -22,6 +22,9 @@
     "test:e2e": "pnpm --filter @fix-my-print/web run test:e2e",
     "test:e2e:private": "pnpm --filter @fix-my-print/web run test:e2e:private",
     "test:e2e:public": "pnpm --filter @fix-my-print/web run test:e2e:public",
+    "test:e2e:geometry-quality-v2": "pnpm --filter @fix-my-print/web run test:e2e:geometry-quality-v2",
+    "test:geometry-quality-v2": "pnpm --filter @fix-my-print/geometry run test -- safe-repair && pnpm --filter @fix-my-print/optimizer run test -- orientation-v2 && pnpm --filter @fix-my-print/formats-3mf run test -- instances-two-cubes && pnpm --filter @fix-my-print/formats-3mf run test -- multiobject-roundtrip && pnpm --filter @fix-my-print/engine run test -- process-model-v2",
+    "test:mutation:geometry-quality-v2": "node scripts/mutation-geometry-quality-v2.mjs",
     "test:network": "pnpm --filter @fix-my-print/web run test:network",
     "test:a11y": "pnpm --filter @fix-my-print/web run test:a11y",
     "test:repeatability": "pnpm --filter @fix-my-print/web run test:repeatability",
@@ -34,7 +37,9 @@
     "verify:boundary": "pnpm --filter @fix-my-print/repo-guard run test",
     "verify:no-python": "node scripts/verify-no-python.mjs",
     "verify:acceptance-lock": "node scripts/verify-acceptance-lock.mjs",
-    "verify": "pnpm verify:boundary && pnpm verify:no-python && pnpm verify:acceptance-lock && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:unit && pnpm test:integration && pnpm test:security && pnpm build && pnpm test:e2e:public && pnpm test:e2e:private && pnpm test:network && pnpm test:a11y && pnpm test:repeatability && git diff --check",
+    "verify:geometry-quality-v2-lock": "node scripts/verify-geometry-quality-v2-lock.mjs",
+    "verify:geometry-quality-v2": "pnpm verify:geometry-quality-v2-lock && pnpm test:geometry-quality-v2 && pnpm build && pnpm test:e2e:geometry-quality-v2 && pnpm test:mutation:geometry-quality-v2",
+    "verify": "pnpm verify:boundary && pnpm verify:no-python && pnpm verify:acceptance-lock && pnpm verify:geometry-quality-v2-lock && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:unit && pnpm test:integration && pnpm test:security && pnpm build && pnpm test:e2e:public && pnpm test:e2e:geometry-quality-v2 && pnpm test:e2e:private && pnpm test:network && pnpm test:a11y && pnpm test:repeatability && pnpm test:mutation:geometry-quality-v2 && git diff --check",
     "ci": "pnpm install --frozen-lockfile && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build:web && git diff --check"
   },
   "devDependencies": {
