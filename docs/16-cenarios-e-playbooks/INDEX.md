@@ -45,6 +45,9 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | Página | ID | Status |
 |---|---|---|
 | [A1 Mini PLA/PETG — first layer + warp](a1-mini-pla-petg-primeira-camada-empenamento.md) | `scenario.a1-mini-pla-petg-first-layer-warp` | draft |
+| [Miniaturas e detalhe fino](miniaturas-detalhe-fino.md) | `scenario.miniatures` | draft |
+| [Peças funcionais e brackets](pecas-funcionais-brackets.md) | `scenario.functional-brackets` | draft |
+| [Impressão rápida vs qualidade](impressao-rapida-vs-qualidade.md) | `scenario.speed-vs-quality` | draft |
 
 ## Relações com outros conceitos
 
@@ -53,4 +56,4 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Playbooks multi-material AMS e resin-only end-to-end: futuros.

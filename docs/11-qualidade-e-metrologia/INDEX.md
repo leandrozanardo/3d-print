@@ -42,7 +42,10 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
+| Página | ID | Status |
+|---|---|---|
+| [Precisão vs repetibilidade](precisao-vs-repetibilidade.md) | `quality.accuracy-vs-precision` | draft |
+| [Cupons e ensaios](cupons-e-ensaios.md) | `quality.test-coupons` | draft |
 
 ## Relações com outros conceitos
 
@@ -51,4 +54,4 @@ Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vaz
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Inspeção dimensional avançada e critérios de aceite por produto ainda abertos.

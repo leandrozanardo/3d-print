@@ -27,6 +27,13 @@ Esta é a entrada humana da base canônica. Para agentes de IA, leia primeiro [A
 - Diagnóstico: [Empenamento / warping](12-problemas-e-diagnostico/fff/empenamento.md)
 - Playbook: [Fatia vertical A1 Mini](16-cenarios-e-playbooks/a1-mini-pla-petg-primeira-camada-empenamento.md)
 
+## Entradas industriais (cobertura parcial)
+
+- Tecnologias: [Comparação entre categorias](02-tecnologias/comparacao-entre-categorias.md) · [PBF](02-tecnologias/powder-bed-fusion/INDEX.md)
+- Segurança crítica: [Pós metálicos / explosão](15-seguranca-e-meio-ambiente/pos-metais-e-risco-explosao.md)
+- Regulação: [Limites de qualificação](18-aplicacoes-e-regulacao/limites-de-qualificacao.md)
+- Mitos: [PLA food-safe](20-pesquisa-e-mitos/mito-pla-food-safe.md) · [100% infill](20-pesquisa-e-mitos/mito-100-infill-mais-forte.md)
+
 ## Domínios
 
 | # | Domínio | Hub |

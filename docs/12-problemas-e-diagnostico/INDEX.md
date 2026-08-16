@@ -1,7 +1,7 @@
 ---
 id: "hub.problemas"
 title: "Problemas e diagnóstico"
-summary: "Sintoma, causa, teste e correção; taxonomias por tecnologia. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
+summary: "Sintoma, causa, teste e correção; taxonomias FFF, resina e PBF. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
 doc_type: "hub"
 domain: ["hub"]
 technology: []
@@ -9,8 +9,8 @@ process: []
 applies_to: []
 not_for: ["complete-coverage-claim"]
 knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
+evidence_status: "mixed"
+safety_level: "caution"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
@@ -31,30 +31,46 @@ Sintoma, causa, teste e correção; taxonomias por tecnologia.
 
 ## Status
 
-Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 
 ## Entradas recomendadas
 
-- Portal humano: [docs/INDEX.md](../INDEX.md)
-- Guia da IA: [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md)
-- Roteamento: [_meta/roteamento-de-consultas.md](../_meta/roteamento-de-consultas.md)
-- Legado operacional A1 Mini: [projeto/INDEX.md](../projeto/INDEX.md) (até migração)
+- Portal: [docs/INDEX.md](../INDEX.md) · [AGENT_GUIDE.md](../AGENT_GUIDE.md)
+- Legado EN: [projeto/troubleshooting](../projeto/troubleshooting/INDEX.md)
 
 ## Mapa local
 
 ### FFF
 
-| Página | ID | Status |
-|---|---|---|
-| [Empenamento (warping)](fff/empenamento.md) | `defect.fff.warping` | draft |
+Hub: [fff/INDEX.md](fff/INDEX.md)
 
-Legado EN: [projeto/troubleshooting](../projeto/troubleshooting/INDEX.md)
+| Página | ID |
+|---|---|
+| [Índice por sintoma](fff/indice-por-sintoma.md) | `troubleshoot.fff-symptom-index` |
+| [Empenamento](fff/empenamento.md) | `defect.fff.warping` |
+| [Falha adesão 1ª camada](fff/falha-adesao-primeira-camada.md) | `defect.fff.adhesion-failure` |
+| [Stringing](fff/stringing.md) | `defect.fff.stringing` |
+| [Subextrusão](fff/subextrusao.md) | `defect.fff.under-extrusion` |
+| [Layer shift](fff/layer-shift.md) | `defect.fff.layer-shift` |
+| [Elephant foot](fff/elephant-foot.md) | `defect.fff.elephant-foot` |
+| [Delaminação](fff/delaminacao.md) | `defect.fff.delamination` |
 
-## Relações com outros conceitos
+### Resina
 
-- part-of → base canônica `docs/`
-- depends-on → políticas em `_meta/`
+Hub: [resina/INDEX.md](resina/INDEX.md)
+
+| Página | ID |
+|---|---|
+| [Índice de falhas — resina](resina/indice-falhas-resina.md) | `defect.resin.index` |
+
+### Pó / metal (PBF)
+
+Hub: [po-metal/INDEX.md](po-metal/INDEX.md)
+
+| Página | ID |
+|---|---|
+| [Defeitos PBF](po-metal/defeitos-pbf.md) | `defect.pbf` |
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Páginas atômicas por sintoma resin: waves futuras.

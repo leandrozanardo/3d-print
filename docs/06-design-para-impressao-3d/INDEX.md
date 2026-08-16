@@ -1,7 +1,7 @@
 ---
 id: "hub.dfam"
 title: "Design para impressão 3D"
-summary: "DfAM por tecnologia: orientação, tolerâncias, features e lattices. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
+summary: "DfAM por tecnologia: orientação, tolerâncias, features, suportes e anisotropia. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
 doc_type: "hub"
 domain: ["hub"]
 technology: []
@@ -9,7 +9,7 @@ process: []
 applies_to: []
 not_for: ["complete-coverage-claim"]
 knowledge_status: "draft"
-evidence_status: "unknown"
+evidence_status: "mixed"
 safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
@@ -31,24 +31,24 @@ DfAM por tecnologia: orientação, tolerâncias, features e lattices.
 
 ## Status
 
-Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 
 ## Entradas recomendadas
 
 - Portal humano: [docs/INDEX.md](../INDEX.md)
 - Guia da IA: [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md)
 - Roteamento: [_meta/roteamento-de-consultas.md](../_meta/roteamento-de-consultas.md)
-- Legado operacional A1 Mini: [projeto/INDEX.md](../projeto/INDEX.md) (até migração)
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
-
-## Relações com outros conceitos
-
-- part-of → base canônica `docs/`
-- depends-on → políticas em `_meta/`
+| Página | ID | Status |
+|---|---|---|
+| [Orientação FFF](orientacao-fff.md) | `design.orientation-fff` | draft |
+| [Suportes FFF (DfAM)](suportes-fff.md) | `design.supports-fff` | draft |
+| [Tolerâncias e encaixes FFF](tolerancias-e-encaixes-fff.md) | `design.tolerances-fff` | draft |
+| [Resistência e anisotropia](resistencia-e-anisotropia.md) | `design.strength-anisotropy` | draft |
+| [Furos, roscas e inserts](features-furos-roscas-inserts.md) | `design.holes-threads-inserts` | draft |
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Lattices e DfAM resin profundo ainda abertos.

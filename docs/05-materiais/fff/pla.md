@@ -74,7 +74,7 @@ Fonte operacional detalhada (EN): [projeto/materiais/pla.md](../../projeto/mater
 |---|---|---|
 | Não gruda camada 1 | sujeira PEI, Z alto, bed frio, velocidade | [Primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) |
 | Cantos sobem depois | warp + draft + flat longo | [Empenamento](../../12-problemas-e-diagnostico/fff/empenamento.md) |
-| Stringing | úmido, temp alta, retract | legado stringing (migração pendente) |
+| Stringing | úmido, temp alta, retract | [stringing](../../12-problemas-e-diagnostico/fff/stringing.md) |
 | Quebra frágil | geometria + impacto + Z load | orientar carga; considerar PETG |
 
 ## Segurança

@@ -42,7 +42,9 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
+| Página | ID | Status |
+|---|---|---|
+| [Custo e desperdício FFF](custo-e-desperdicio-fff.md) | `econ.fff-cost-waste` | draft |
 
 ## Relações com outros conceitos
 
@@ -51,4 +53,4 @@ Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vaz
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+LCA formal e custo energético medido A1 Mini: abertos.

@@ -19,7 +19,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
 sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration", "source.bambu-a1-mini-tech-specs"]
-related: ["defect.fff.warping", "material.pla", "material.petg", "printer.bambu-lab-a1-mini"]
+related: ["defect.fff.warping", "material.pla", "material.petg", "printer.bambu-lab-a1-mini", "defect.fff.layer-shift", "defect.fff.elephant-foot", "troubleshoot.fff-symptom-index"]
 prerequisites: ["printer.bambu-lab-a1-mini", "tech.fff"]
 aliases_pt_br: ["primeira camada", "camada inicial"]
 aliases_en: ["first layer", "initial layer"]
@@ -50,7 +50,9 @@ A **primeira camada** é o cordão inicial depositado sobre a build surface. Ela
 |---|---|
 | Nunca grudou / soltou na camada 1–3 | Esta página + adesão |
 | Cantos sobem após muitas camadas, base ok | [Empenamento](../../12-problemas-e-diagnostico/fff/empenamento.md) |
-| Deslocamento XY permanente | layer shift (legado; migração pendente) |
+| Deslocamento XY permanente | [Layer shift](../../12-problemas-e-diagnostico/fff/layer-shift.md) |
+| Base alargada / furos apertados só embaixo | [Elephant foot](../../12-problemas-e-diagnostico/fff/elephant-foot.md) |
+| Outros sintomas | [Índice por sintoma FFF](../../12-problemas-e-diagnostico/fff/indice-por-sintoma.md) |
 
 ## Facts a coletar
 

@@ -47,6 +47,7 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | Página | ID | Status |
 |---|---|---|
 | [Primeira camada](fff/primeira-camada.md) | `process.fff.first-layer` | draft |
+| [Ambiente em frame aberto](fff/ambiente-frame-aberto.md) | `process.open-frame-env` | draft |
 
 ## Relações com outros conceitos
 

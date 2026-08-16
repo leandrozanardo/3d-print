@@ -42,7 +42,10 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
+| Página | ID | Status |
+|---|---|---|
+| [Mito — PLA food-safe](mito-pla-food-safe.md) | `myth.pla-food-safe` | draft |
+| [Mito — 100% infill mais forte](mito-100-infill-mais-forte.md) | `myth.100-infill-stronger` | draft |
 
 ## Relações com outros conceitos
 

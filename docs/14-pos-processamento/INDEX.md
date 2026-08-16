@@ -1,7 +1,7 @@
 ---
 id: "hub.pos"
 title: "Pós-processamento"
-summary: "Suportes, lixa, pintura, cura, depowdering e tratamentos térmicos. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
+summary: "Suportes FFF, lixa, pintura, lavagem/cura de resina e depowdering metálico. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
 doc_type: "hub"
 domain: ["hub"]
 technology: []
@@ -9,8 +9,8 @@ process: []
 applies_to: []
 not_for: ["complete-coverage-claim"]
 knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
+evidence_status: "mixed"
+safety_level: "high"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
@@ -31,24 +31,23 @@ Suportes, lixa, pintura, cura, depowdering e tratamentos térmicos.
 
 ## Status
 
-Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 
 ## Entradas recomendadas
 
-- Portal humano: [docs/INDEX.md](../INDEX.md)
-- Guia da IA: [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md)
-- Roteamento: [_meta/roteamento-de-consultas.md](../_meta/roteamento-de-consultas.md)
-- Legado operacional A1 Mini: [projeto/INDEX.md](../projeto/INDEX.md) (até migração)
+- Portal: [docs/INDEX.md](../INDEX.md) · [AGENT_GUIDE.md](../AGENT_GUIDE.md)
+- Segurança: [hub segurança](../15-seguranca-e-meio-ambiente/INDEX.md)
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
-
-## Relações com outros conceitos
-
-- part-of → base canônica `docs/`
-- depends-on → políticas em `_meta/`
+| Página | ID | Status |
+|---|---|---|
+| [Remoção de suportes FFF](remocao-de-suportes-fff.md) | `post.support-removal-fff` | draft |
+| [Lixamento e acabamento](lixamento-e-acabamento.md) | `post.sanding-finishing` | draft |
+| [Pintura e primer](pintura-e-primer.md) | `post.painting` | draft |
+| [Lavagem e pós-cura resina](lavagem-e-pos-cura-resina.md) | `post.resin-wash-cure` | draft |
+| [Depowdering e pós metal](depowdering-e-pos-metal.md) | `post.depowdering-metal` | draft |
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Annealing e vapor smoothing: ainda não canônicos.

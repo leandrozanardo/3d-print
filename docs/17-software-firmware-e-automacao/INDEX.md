@@ -42,7 +42,10 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
+| Página | ID | Status |
+|---|---|---|
+| [G-code — fundamentos](gcode-fundamentos.md) | `firmware.gcode-basics` | draft |
+| [Klipper vs Marlin — conceitos](klipper-vs-marlin-conceitos.md) | `firmware.klipper-marlin-concepts` | draft |
 
 ## Relações com outros conceitos
 

@@ -1,7 +1,7 @@
 ---
 id: "meta.continuation"
 title: "Continuação — estado da base"
-summary: "Protocolo de retomada: wave atual, batch concluído, arquivos tocados, próximo batch exato, arquivos a ler primeiro e blockers."
+summary: "Estado pós-Wave 11: fatia FFF + fatia pó/metal/consolidação publicadas em draft. Próximo batch = manutenção (vat deep, VOC FFF, settings, glossário, revalidar peers W1–9)."
 doc_type: "continuation"
 domain: ["meta"]
 knowledge_status: "draft"
@@ -10,7 +10,7 @@ safety_level: "normal"
 confidence: "high"
 last_reviewed: "2026-08-15"
 review_cycle: "per-batch"
-related: ["meta.coverage", "meta.work-queue"]
+related: ["meta.coverage", "meta.work-queue", "meta.gaps"]
 tags: ["continuation"]
 ---
 
@@ -18,77 +18,79 @@ tags: ["continuation"]
 
 ## Wave atual
 
-**Wave 0** — governance + audit + vertical slice (fechando)
+**Pós-Wave 11** — consolidação concluída neste batch; entrar em **maintenance batch A**.
 
 ## Batch concluído
 
-**Wave 0 / Batch A** — inventário, `_meta` completo, portais `INDEX.md` + `AGENT_GUIDE.md`, hubs 01–23, fatia A1 Mini + nozzle 0,4 + PLA/PETG + primeira camada + empenamento + playbook + fontes da fatia.
+**Wave 10 / Powder-metal + Wave 11 / Consolidation**
 
-## Arquivos criados (principais)
+### Wave 10 — arquivos principais
 
-- `docs/INDEX.md`, `docs/AGENT_GUIDE.md`
-- `docs/_meta/*` (governança)
-- `docs/01`…`23/*/INDEX.md` (hubs)
-- `docs/21-impressoras/bambu-lab-a1-mini.md`
-- `docs/04-componentes-e-hardware/nozzle-0-4-mm-fff.md`
-- `docs/05-materiais/fff/pla.md`, `petg.md`
-- `docs/02-tecnologias/material-extrusion/fff.md`
-- `docs/10-processo-de-impressao/fff/primeira-camada.md`
-- `docs/12-problemas-e-diagnostico/fff/empenamento.md`
-- `docs/16-cenarios-e-playbooks/a1-mini-pla-petg-primeira-camada-empenamento.md`
-- `docs/22-fontes/*.md` (5 fontes)
+- `docs/02-tecnologias/powder-bed-fusion/` — INDEX, `sls-mjf-polimeros.md`, `lpbf-ebm-metais.md`
+- `docs/02-tecnologias/binder-jetting/` — INDEX, `binder-jetting-metal-areia.md`
+- `docs/02-tecnologias/directed-energy-deposition/` — INDEX, `ded-e-waam.md`
+- `docs/02-tecnologias/material-jetting/INDEX.md` (hub enriched)
+- `docs/02-tecnologias/sheet-lamination/INDEX.md` (hub enriched)
+- `docs/05-materiais/po/` — INDEX + `feedstocks-polimeros-e-metais.md`
+- `docs/12-problemas-e-diagnostico/po-metal/` — INDEX + `defeitos-pbf.md`
+- `docs/14-pos-processamento/depowdering-e-pos-metal.md`
+- `docs/15-seguranca-e-meio-ambiente/pos-metais-e-risco-explosao.md`
+
+### Wave 11 — arquivos principais
+
+- `docs/02-tecnologias/comparacao-entre-categorias.md`
+- `docs/20-pesquisa-e-mitos/mito-pla-food-safe.md`
+- `docs/20-pesquisa-e-mitos/mito-100-infill-mais-forte.md`
+- `docs/18-aplicacoes-e-regulacao/limites-de-qualificacao.md`
+- `docs/17-software-firmware-e-automacao/gcode-fundamentos.md`
+- `docs/17-software-firmware-e-automacao/klipper-vs-marlin-conceitos.md`
+- `docs/22-fontes/fda-am-medical-devices-guidance-entry.md`
+- Fontes peer reutilizadas: `niosh-additive-manufacturing.md`, `epa-3d-printing-research.md` (duplicatas locais removidas)
+- Meta: `cobertura.md`, `lacunas.md`, `fila-de-trabalho.md`, este arquivo
+- Hubs INDEX atualizados (02, 05, 12, 14, 15, 17, 18, 20, 22) + `docs/INDEX.md` leve
 
 ## Arquivos modificados / movidos
 
-- Hubs com mapa local atualizado: 02, 04, 05, 10, 12, 16, 21, 22
-- **Nenhum** `git mv` / delete de legado
+- **Nenhum** delete de legado
 - **Nada** fora de `docs/`
 
-## Conteúdo migrado
+## Decisões / pressupostos
 
-Espelhamento canônico pt-BR (rewrite) a partir de `docs/projeto/` sem apagar origem. Ebook não copiado.
-
-## Sources adicionadas
-
-Ver [22-fontes/INDEX.md](../22-fontes/INDEX.md).
-
-## Decisões
-
-Ver [decisoes-editoriais.md](decisoes-editoriais.md) D-001…D-007.
-
-## Lacunas / contradições
-
-[lacunas.md](lacunas.md) · [contradicoes.md](contradicoes.md) (C-001…C-004)
+- Profundidade industrial AM = **parcial e honesta**; sem parâmetros de energia/shrink inventados
+- Segurança de pó metálico = `critical`; garage DIY desencorajado explicitamente
+- Sem internals proprietários Bambu em firmware
 
 ## Validações
 
-Reexecutar ao fechar: `python -m core validate-wiki docs --json` e greps de placeholder/absolutos.
+`python -m core validate-wiki docs --json` → `{"ok": true, "errors": []}` (2026-08-15, pós-Waves 1–11).
 
-## Próximo batch exato (Wave 1 / Batch A)
+## Próximo batch exato (Maintenance A)
 
-1. Fundamentos: terminologia AM + workflow digital CAD→peça (páginas profundas, não stubs)
-2. Hubs das sete categorias com página-resumo por categoria (mecanismo + limites + segurança entrada)
-3. Glossário inicial (30–50 termos da fatia + categorias)
-4. Atualizar cobertura/continuação
+1. Reconciliar matriz com entregas peer restantes (fundamentos, glossário, settings, economia)
+2. Taxonomia defeitos resina + materiais fotopolímero atômicos
+3. Grades de pó PA12 / uma liga metal como páginas atômicas
+4. Settings catalog início (semântica, não dump de UI)
+5. Pin `source.marlin-docs` / `source.klipper-docs`
+6. Elétrico/fogo e annealing/vapor smoothing
+7. Atualizar cobertura/continuação de novo
 
 ### Ler primeiro ao retomar
 
 1. Este arquivo
 2. [cobertura.md](cobertura.md)
-3. [inventario-existente.md](inventario-existente.md)
+3. [lacunas.md](lacunas.md)
 4. [AGENT_GUIDE.md](../AGENT_GUIDE.md)
-5. Páginas da fatia vertical já publicadas
+5. [hazard.metal-powder](../15-seguranca-e-meio-ambiente/pos-metais-e-risco-explosao.md) se tocar pó
 
-## Blockers que exigem decisão do usuário
+## Blockers
 
-- Nenhum blocker de licença bloqueante (ebook isolado; sem cópia textual)
-- Delete de legado: **proibido** até lista + confirmação (nenhum delete-candidate ativo)
-- Alterar `core/` para validar front matter: fora de escopo até pedido separado
+- Delete de legado: proibido até lista + confirmação
+- Alterar `core/` validator: fora de escopo até pedido
 
 ## Prompt curto para retomar
 
 ```text
-Continue a base docs/ LLM 3D print a partir de docs/_meta/continuacao.md.
-Execute Wave 1 Batch A (fundamentos + 7 categorias resumo + glossário inicial).
+Continue a base docs/ a partir de docs/_meta/continuacao.md.
+Execute Maintenance batch A (reconcile peers + resin defects + powder grades).
 Não apague legado. Não commit. Rode validate-wiki ao final.
 ```

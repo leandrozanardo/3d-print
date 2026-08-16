@@ -41,3 +41,5 @@ tags: ["source", "calibration"]
 ## Páginas que utilizam
 
 - [Primeira camada FFF](../10-processo-de-impressao/fff/primeira-camada.md)
+- [Ordem de calibração FFF](../09-calibracao/ordem-de-calibracao-fff.md)
+- [Falha de adesão na primeira camada](../12-problemas-e-diagnostico/fff/falha-adesao-primeira-camada.md)

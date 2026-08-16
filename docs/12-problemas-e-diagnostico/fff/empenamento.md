@@ -21,7 +21,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
 sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["process.fff.first-layer", "material.pla", "material.petg", "printer.bambu-lab-a1-mini"]
+related: ["process.fff.first-layer", "material.pla", "material.petg", "printer.bambu-lab-a1-mini", "defect.fff.layer-shift", "defect.fff.under-extrusion", "defect.fff.delamination", "defect.fff.elephant-foot", "troubleshoot.fff-symptom-index"]
 prerequisites: ["process.fff.first-layer"]
 aliases_pt_br: ["empenamento", "levantamento de canto", "warp"]
 aliases_en: ["warping", "corner lift", "curl"]
@@ -51,8 +51,11 @@ Principalmente FFF com polímeros que contraem ao resfriar. Intensidade depende 
 | Parece warp mas… | Vá para |
 |---|---|
 | Falhou na camada 1 | [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) |
-| Deslocamento em degrau XY | layer shift (legado) |
-| Gaps nas paredes | under-extrusion (legado) |
+| Deslocamento em degrau XY | [layer shift](layer-shift.md) |
+| Gaps nas paredes | [subextrusão](subextrusao.md) |
+| Camadas abrindo (solda Z) | [delaminação](delaminacao.md) |
+| Base só gorda | [elephant foot](elephant-foot.md) |
+| Índice rápido | [índice por sintoma](indice-por-sintoma.md) |
 
 ## Riscos e parada
 
@@ -135,6 +138,8 @@ Reimprimir o mesmo cupom/peça com **uma** mudança principal. Registrar bed/fan
 
 ## Veja também
 
+- [Índice por sintoma](indice-por-sintoma.md)
+- [Cooling](../../08-slicers-e-configuracoes/settings/cooling.md) · [Temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md)
 - Legado: [warping.md](../../projeto/troubleshooting/warping.md)
 - [brim-raft-saia](../../projeto/fatiamento/brim-raft-saia.md)
 - [Playbook vertical](../../16-cenarios-e-playbooks/a1-mini-pla-petg-primeira-camada-empenamento.md)

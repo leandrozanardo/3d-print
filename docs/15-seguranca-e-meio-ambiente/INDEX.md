@@ -1,7 +1,7 @@
 ---
 id: "hub.seguranca"
 title: "Segurança e meio ambiente"
-summary: "VOC, UFP, resina, pó, riscos elétricos, descarte e mitos food/medical. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
+summary: "VOC/UFP, claims food/medical, PPE/descarte de resina e risco de pós metálicos. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
 doc_type: "hub"
 domain: ["hub"]
 technology: []
@@ -9,12 +9,12 @@ process: []
 applies_to: []
 not_for: ["complete-coverage-claim"]
 knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
+evidence_status: "mixed"
+safety_level: "critical"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
-sources: []
+sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
 related: ["meta.coverage", "meta.knowledge-map"]
 prerequisites: ["meta.architecture"]
 supersedes: []
@@ -31,24 +31,22 @@ VOC, UFP, resina, pó, riscos elétricos, descarte e mitos food/medical.
 
 ## Status
 
-Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 
 ## Entradas recomendadas
 
-- Portal humano: [docs/INDEX.md](../INDEX.md)
-- Guia da IA: [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md)
-- Roteamento: [_meta/roteamento-de-consultas.md](../_meta/roteamento-de-consultas.md)
-- Legado operacional A1 Mini: [projeto/INDEX.md](../projeto/INDEX.md) (até migração)
+- Portal: [docs/INDEX.md](../INDEX.md) · [AGENT_GUIDE.md](../AGENT_GUIDE.md)
+- Fontes: [NIOSH](../22-fontes/niosh-additive-manufacturing.md) · [EPA](../22-fontes/epa-3d-printing-research.md)
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
-
-## Relações com outros conceitos
-
-- part-of → base canônica `docs/`
-- depends-on → políticas em `_meta/`
+| Página | ID | Status |
+|---|---|---|
+| [VOC, UFP e ventilação](voc-ufp-e-ventilacao.md) | `hazard.voc-ufp-ventilation` | draft |
+| [Claims food-contact e médico](claims-food-contact-e-medico.md) | `hazard.food-medical-claims` | draft |
+| [Resina — PPE e descarte](resina-ppe-e-descarte.md) | `hazard.resin-ppe-disposal` | draft |
+| [Pós metálicos e explosão](pos-metais-e-risco-explosao.md) | `hazard.metal-powder` | draft |
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Elétrico/fogo detalhado: wave futura.

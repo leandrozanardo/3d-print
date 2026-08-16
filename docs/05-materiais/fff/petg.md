@@ -73,10 +73,10 @@ Detalhe EN legado: [projeto/materiais/petg.md](../../projeto/materiais/petg.md).
 
 | Sintoma | Hipóteses | Próximo |
 |---|---|---|
-| Cabelo/stringing extremo | úmido, temp, retract, Z-hop | secar → torre |
+| Cabelo/stringing extremo | úmido, temp, retract, Z-hop | [stringing](../../12-problemas-e-diagnostico/fff/stringing.md); secar |
 | Warp apesar de boa camada 1 | draft, bed frio, flat longo | [empenamento](../../12-problemas-e-diagnostico/fff/empenamento.md) |
 | Placa rasgada | over-adhesion smooth | textured; esfriar |
-| Delaminação | cooling alto / frio / úmido | ajustar janela |
+| Delaminação | cooling alto / frio / úmido | [delaminação](../../12-problemas-e-diagnostico/fff/delaminacao.md) |
 
 ## Segurança
 

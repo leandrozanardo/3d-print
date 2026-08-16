@@ -1,4 +1,4 @@
----
+﻿---
 id: "hub.fontes"
 title: "Fontes"
 summary: "Registro de proveniência para afirmações técnicas. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
@@ -49,6 +49,9 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | [Ellis Print Tuning Guide](ellis-print-tuning-guide.md) | `source.ellis-print-tuning-guide` |
 | [Teaching Tech Calibration](teaching-tech-calibration.md) | `source.teaching-tech-calibration` |
 | [ISO/ASTM 52900 entrada](iso-astm-52900-entry.md) | `source.iso-astm-52900-entry` |
+| [NIOSH Additive Manufacturing](niosh-additive-manufacturing.md) | `source.niosh-am-entry` |
+| [EPA 3D Printing Research](epa-3d-printing-research.md) | `source.epa-3d-printing-research` |
+| [FDA AM medical devices guidance](fda-am-medical-devices-guidance-entry.md) | `source.fda-am-medical-devices-entry` |
 
 Atribuição legado: [projeto/fontes-e-atribuicao.md](../projeto/fontes-e-atribuicao.md)
 

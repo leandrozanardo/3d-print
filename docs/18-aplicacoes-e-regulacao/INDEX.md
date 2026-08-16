@@ -42,7 +42,9 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
+| Página | ID | Status |
+|---|---|---|
+| [Limites de qualificação](limites-de-qualificacao.md) | `app.qualification-limits` | draft |
 
 ## Relações com outros conceitos
 

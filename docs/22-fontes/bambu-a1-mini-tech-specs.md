@@ -49,3 +49,8 @@ tags: ["source", "bambu"]
 
 - [Bambu Lab A1 Mini](../21-impressoras/bambu-lab-a1-mini.md)
 - [Nozzle 0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md)
+- [Placa PEI FFF](../04-componentes-e-hardware/placa-pei-fff.md)
+- [Bambu Studio](../08-slicers-e-configuracoes/bambu-studio.md)
+- [Ordem de calibração FFF](../09-calibracao/ordem-de-calibracao-fff.md)
+- [Cinemática bed-slinger](../03-maquinas-e-arquiteturas/cinematica-bed-slinger.md)
+- [Ambiente em frame aberto](../10-processo-de-impressao/fff/ambiente-frame-aberto.md)

@@ -1,7 +1,7 @@
 ---
 id: "meta.gaps"
 title: "Lacunas explícitas"
-summary: "Lacunas conhecidas da base: sete categorias AM, settings catalog, safety NIOSH/EPA estruturada, front-matter validator, glossário, e cobertura além de A1 Mini/PLA/PETG."
+summary: "Lacunas após Waves 10–11: vat deep, settings catalog, glossário, VOC/UFP FFF com NIOSH detalhado, grades de pó por liga, ANVISA, experimentos locais, validator de front matter."
 doc_type: "audit"
 domain: ["meta"]
 knowledge_status: "draft"
@@ -10,23 +10,30 @@ safety_level: "normal"
 confidence: "high"
 last_reviewed: "2026-08-15"
 review_cycle: "per-batch"
-related: ["meta.coverage", "meta.contradictions"]
+related: ["meta.coverage", "meta.contradictions", "meta.continuation"]
 tags: ["gaps"]
 ---
 
 # Lacunas
 
+Atualizado pós-Wave 10–11. Itens resolvidos parcialmente riscam contexto, não exclusão.
+
 ## Cobertura de conteúdo
 
-1. Seis categorias AM além de material extrusion (hubs apenas)
-2. Catálogo semântico completo de settings Bambu Studio com paths/versão
-3. Taxonomia completa de falhas FFF e resina
-4. Segurança VOC/UFP/ventilação com fontes NIOSH/EPA em páginas canônicas
-5. DfAM, metrologia, economia, regulação, mitos
+1. **Vat photopolymerization** — parcialmente coberto por peers (`tech.vat-photopolymerization`, `tech.sla-dlp-msla`); ainda falta taxonomia de defeitos resina e materiais atômicos
+2. Catálogo semântico completo de settings Bambu Studio (paths/versão)
+3. Taxonomia completa de falhas FFF (além de warping/adesão) e resina
+4. Segurança VOC/UFP FFF — página existe (`hazard.voc-ufp-ventilation`); aprofundar com números só via SDS/NIOSH pinados
+5. DfAM, metrologia, economia — ainda hub-only / parcial peer
 6. Qualquer impressora além de A1 Mini
-7. Materiais além de PLA/PETG em profundidade canônica pt-BR
+7. Materiais FFF além de PLA/PETG; grades de pó (PA12, Ti64, AlSi10Mg) como páginas próprias
 8. Glossário pt-BR ↔ EN sistemático
-9. Páginas de fonte para todas as refs externas recorrentes
+9. Parâmetros OEM (energia, refresh %, shrink BJ) — propositalmente não inventados; faltam pinagens com datasheet
+10. NFPA 652/484 e limites de exposição numéricos — não resumidos (evitar falsa conformidade)
+11. Mapeamento ANVISA / food-contact BR
+12. Galeria visual de defeitos PBF
+13. `source.*` dedicadas Marlin/Klipper docs oficiais
+14. Revalidar cobertura real vs matriz após merges multi-agent
 
 ## Ferramentas
 
@@ -42,4 +49,4 @@ tags: ["gaps"]
 
 ## Licença
 
-1. Política de reutilização de trechos do ebook CC BY-SA ainda não aplicada a páginas derivadas (nenhuma cópia textual feita no vertical slice)
+1. Política de reutilização de trechos do ebook CC BY-SA ainda não aplicada a páginas derivadas (nenhuma cópia textual feita nas waves 10–11)

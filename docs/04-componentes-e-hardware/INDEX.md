@@ -45,6 +45,10 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | Página | ID | Status |
 |---|---|---|
 | [Nozzle 0,4 mm FFF](nozzle-0-4-mm-fff.md) | `nozzle.0.4mm-fff` | draft |
+| [Placa PEI FFF](placa-pei-fff.md) | `surface.pei` | draft |
+| [Extrusão direct drive vs Bowden](extrusao-direct-drive-vs-bowden.md) | `component.extruder-path` | draft |
+| [Hotend e zona de fusão](hotend-e-zona-de-fusao.md) | `component.hotend` | draft |
+| [Cooling de peça FFF](cooling-de-peca-fff.md) | `component.part-cooling` | draft |
 
 ## Relações com outros conceitos
 

@@ -1,7 +1,7 @@
 ---
 id: "hub.slicers"
 title: "Slicers e configurações"
-summary: "Conceitos semânticos de settings e mapeamentos por slicer e versão. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
+summary: "Conceitos semânticos de settings, Bambu Studio e exposição/suportes em resina. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
 doc_type: "hub"
 domain: ["hub"]
 technology: []
@@ -9,7 +9,7 @@ process: []
 applies_to: []
 not_for: ["complete-coverage-claim"]
 knowledge_status: "draft"
-evidence_status: "unknown"
+evidence_status: "mixed"
 safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
@@ -31,24 +31,22 @@ Conceitos semânticos de settings e mapeamentos por slicer e versão.
 
 ## Status
 
-Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 
 ## Entradas recomendadas
 
-- Portal humano: [docs/INDEX.md](../INDEX.md)
-- Guia da IA: [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md)
-- Roteamento: [_meta/roteamento-de-consultas.md](../_meta/roteamento-de-consultas.md)
-- Legado operacional A1 Mini: [projeto/INDEX.md](../projeto/INDEX.md) (até migração)
+- Portal: [docs/INDEX.md](../INDEX.md) · [AGENT_GUIDE.md](../AGENT_GUIDE.md)
 
 ## Mapa local
 
-Páginas filhas serão listadas aqui conforme publicação. Não criar stubs vazios só para completar a árvore.
+| Página | ID | Status |
+|---|---|---|
+| [Bambu Studio](bambu-studio.md) | `slicer.bambu-studio` | draft |
+| [Settings semânticos (hub)](settings/INDEX.md) | `hub.slicers.settings` | draft |
+| [Resina — exposição e suportes](resina-exposicao-e-suportes.md) | `setting.resin-exposure-supports` | draft |
 
-## Relações com outros conceitos
-
-- part-of → base canônica `docs/`
-- depends-on → políticas em `_meta/`
+Settings FFF atômicos: ver [settings/INDEX.md](settings/INDEX.md) (altura de camada, paredes, infill, temp, cooling, velocidades, retração, line width).
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Pressure advance / flow rate como páginas atômicas: futuro.

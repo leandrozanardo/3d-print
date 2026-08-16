@@ -18,3 +18,4 @@ tags: ["review"]
 | Data | Escopo | Resultado | Validações |
 |---|---|---|---|
 | 2026-08-15 | Inventário + Wave 0 + vertical slice | Draft publicado em docs/ | `validate-wiki` → ok:true, errors:[] (pré e pós) |
+| 2026-08-15 | Waves 1–11 (fundamentos → consolidação) | Draft expandido em docs/ | `validate-wiki` → ok:true, errors:[] |

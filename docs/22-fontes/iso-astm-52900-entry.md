@@ -39,3 +39,5 @@ tags: ["source", "standard"]
 ## Páginas que utilizam
 
 - [FFF / material extrusion](../02-tecnologias/material-extrusion/fff.md)
+- [Terminologia](../01-fundamentos/terminologia-manufatura-aditiva.md)
+- Hubs e páginas das sete categorias em [02-tecnologias](../02-tecnologias/INDEX.md)

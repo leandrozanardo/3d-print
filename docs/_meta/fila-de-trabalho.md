@@ -1,7 +1,7 @@
 ---
 id: "meta.work-queue"
 title: "Fila de trabalho"
-summary: "Waves 0–11 do protocolo mestre com status. Wave 0 em conclusão; próximo batch = Wave 1 fundamentos + glossário + sete categorias em profundidade mínima."
+summary: "Waves 0–11 do protocolo mestre. Waves 10–11 marcadas done neste batch (pó/metal + consolidação). Próximo: manutenção pós-11 + fechar lacunas W1–9/vat/settings."
 doc_type: "plan"
 domain: ["meta"]
 knowledge_status: "draft"
@@ -18,19 +18,23 @@ tags: ["queue"]
 
 | Wave | Tema | Status |
 |---|---|---|
-| 0 | Governance + audit + vertical slice | **in progress → closing** |
-| 1 | Navigation + foundations + 7 categories hubs deep | next |
-| 2 | FFF + A1 Mini vertical deepen (plates, Studio, cal) | queued |
+| 0 | Governance + audit + vertical slice | **done** (fatia FFF) |
+| 1 | Navigation + foundations + 7 categories hubs deep | partial / peer-dependent |
+| 2 | FFF + A1 Mini vertical deepen | queued / peer-dependent |
 | 3 | FFF hardware/process | queued |
 | 4 | FFF materials families | queued |
 | 5 | Slicers/settings catalog | queued |
 | 6 | Troubleshooting taxonomy | queued |
 | 7 | DfAM + quality | queued |
-| 8 | Post + safety + scenarios | queued |
-| 9 | Resin/vat | queued |
-| 10 | Powder/metal/rest | queued |
-| 11 | Consolidation | queued |
+| 8 | Post + safety + scenarios | partial (pós-metal/safety pó em W10) |
+| 9 | Resin/vat | **partial / peer done** |
+| 10 | Powder/metal/rest | **done** (este batch) |
+| 11 | Consolidation | **done** (este batch) |
 
-## Batch atual
+## Batch atual (fechado)
 
-Wave 0 / Batch A: meta completa + portals + hubs + fatia A1 Mini/PLA/PETG/primeira camada/empenamento.
+**Wave 10 + Wave 11** — PBF polímero/metal, BJ, DED/WAAM, MJ/SL hubs, feedstocks, defeitos PBF, depowdering, hazard pó, comparação, mitos, qualificação, G-code/Klipper-Marlin, fontes NIOSH/EPA/FDA, meta atualizada.
+
+## Próximo batch
+
+Ver [continuacao.md](continuacao.md) — manutenção pós-11 + vat deep + audit de peers W1–9.

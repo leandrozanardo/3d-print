@@ -9,8 +9,8 @@ process: []
 applies_to: []
 not_for: ["complete-coverage-claim"]
 knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
+evidence_status: "mixed"
+safety_level: "caution"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
@@ -31,31 +31,46 @@ Famílias, formulações e produtos para FFF, resina, pó, metal e cerâmica.
 
 ## Status
 
-Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md).
 
 ## Entradas recomendadas
 
-- Portal humano: [docs/INDEX.md](../INDEX.md)
-- Guia da IA: [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md)
-- Roteamento: [_meta/roteamento-de-consultas.md](../_meta/roteamento-de-consultas.md)
-- Legado operacional A1 Mini: [projeto/INDEX.md](../projeto/INDEX.md) (até migração)
+- Portal: [docs/INDEX.md](../INDEX.md) · [AGENT_GUIDE.md](../AGENT_GUIDE.md)
+- Legado EN: [projeto/materiais](../projeto/materiais/INDEX.md)
 
 ## Mapa local
 
 ### FFF
 
-| Página | ID | Status |
-|---|---|---|
-| [PLA](fff/pla.md) | `material.pla` | draft |
-| [PETG](fff/petg.md) | `material.petg` | draft |
+Hub: [fff/INDEX.md](fff/INDEX.md)
 
-Legado EN: [projeto/materiais](../projeto/materiais/INDEX.md)
+| Página | ID |
+|---|---|
+| [PLA](fff/pla.md) | `material.pla` |
+| [PETG](fff/petg.md) | `material.petg` |
+| [TPU](fff/tpu.md) | `material.tpu` |
+| [ABS / ASA](fff/abs-asa.md) | `material.abs-asa` |
+| [PA (nylon)](fff/pa-nylon.md) | `material.pa` |
+| [PC](fff/pc.md) | `material.pc` |
+| [Compósitos / fibra](fff/composites-fibra.md) | `material.composites-fiber` |
+| [Secagem e armazenamento](fff/secagem-e-armazenamento.md) | `material.drying-storage` |
 
-## Relações com outros conceitos
+### Resina
 
-- part-of → base canônica `docs/`
-- depends-on → políticas em `_meta/`
+Hub: [resina/INDEX.md](resina/INDEX.md)
+
+| Página | ID |
+|---|---|
+| [Famílias de resina](resina/familias-de-resina.md) | `material.resin-families` |
+
+### Pó
+
+Hub: [po/INDEX.md](po/INDEX.md)
+
+| Página | ID |
+|---|---|
+| [Feedstocks polímeros e metais](po/feedstocks-polimeros-e-metais.md) | `material.powder-feedstocks` |
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Cerâmica dedicada e SKUs comerciais: ver `_meta/lacunas.md`.
