@@ -29,7 +29,8 @@ Commands and results: see `12_ACCEPTANCE_MATRIX.md` appendix and the session com
 | `project_plans/upgrade_v1_plan.md` | Was SaaS local-bridge; now this engine plan | Engine TDD plan | **migrate** | n/a | n/a |
 | `core/bootstrap_wiki.py` | One-shot PT-BR generator, stale | Non-canonical; guard against re-run | **archive** / delete-candidate after ADR | High if executed | none |
 | `core/convert_ebook_adoc.py` | Ebook conversion | Keep as historical tool | **keep** (ops) | Low | none |
-| `core/convert_a1_pdfs.py` | PDF→MD | Keep as historical tool | **keep** (ops) | Low | none |
+| `core/convert_a1_pdfs.py` | **DEPRECATED stub** — prints warning, exit 2; OCR corpus already in `docs/printers/A1mini/` | Freeze like bootstrap; do not re-enable pypdf path | **archive** / keep stub | Low | none |
+| `core/__init__.py` | Reexports + `__version__ = "0.1.0"` (already set) | Same; sync with `pyproject.toml` | **keep** | Low | packaging test Phase 1 |
 | `knowledge/` | Missing | Canonical schemas/rules | **create** (Phase 2) | — | — |
 | Root `README.md` | Missing | Honest status matrix | **create** (Phase 0) | Low | none |
 | Root `LICENSE` | Missing | User decision | **blocked** | Legal | — |
@@ -49,6 +50,10 @@ Commands and results: see `12_ACCEPTANCE_MATRIX.md` appendix and the session com
 | other | blend/xcf/pdf/xlsx | Archive / sources |
 
 **Correction vs prompt (~685 files / 363 MiB):** tracked count is **657**. Working tree is larger because `3ds/` outputs and `project_plans/saas/` are local. Do not treat 363 MiB as current.
+
+**Line-count note:** `docs/projeto` is **71** pages. Line totals differ by method (~7.6k `splitlines` vs ~5.9k PowerShell `Measure-Object -Line`). Prefer page count + “dense English leaves”; do not treat either line total as a gate.
+
+**Post-audit corrections (subagent reconcilation 2026-08-15):** `__version__` already exists; `convert_a1_pdfs.py` is a disabled stub (exit 2), not an active converter; repair rejects `Scene` (single `Trimesh` only); CLI exposes no `--fill-holes` / `--merge-vertices` flags (Python API only).
 
 ---
 

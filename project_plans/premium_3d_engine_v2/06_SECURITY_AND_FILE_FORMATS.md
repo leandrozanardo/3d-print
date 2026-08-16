@@ -51,7 +51,8 @@ Intake: **magic/content**, not suffix alone. Suffix mismatch → fail closed.
 3. Base materials/colors if present.  
 4. Unknown namespaces/members: **opaque preserve** (do not drop, do not interpret).  
 5. Thumbnails: size-capped, not executed.  
-6. Do not rewrite vendor settings.
+6. Do not rewrite vendor settings. **Do not edit** Bambu `Metadata/*.config` (or equivalent) blobs. Approved job spec: light hygiene = **binary copy** of the project file + human Studio steps in `3ds/plan/*.md`.
+7. Multi-plate / noisy project: preserve all members; plan **names** the printable plate; unused plates are noted, not deleted. Missing/broken `.model` → fail closed (`inspect-3mf --strict` until Phase 3 XML). Do not emit upgraded success.
 
 **lib3mf ADR (before write/round-trip):**
 

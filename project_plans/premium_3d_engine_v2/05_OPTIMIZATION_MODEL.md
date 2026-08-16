@@ -139,10 +139,30 @@ Every rejected orientation must state the **feature** that beat a lower-support 
 
 ---
 
-## 9. What v1 will **not** optimize
+## 9. Purpose defaults — decorative / scenario 2
+
+Locked for the operational job in `docs/superpowers/specs/2026-08-15-one-piece-decorative-optimization-design.md`. Engine Phase 2 imports these as **experimental** heuristics (`purpose=decorative`, profile `pla-decorativo-superficie-0.4`), not verified physics.
+
+| Setting | Scenario 2 default | Notes |
+|---|---|---|
+| Layer height | 0.12–0.16 mm | Not 0.08 (scenario 3) |
+| Walls | ~3 | 4 if thin shell flexes |
+| Infill | 10–15% gyroid | Economy |
+| Ironing | **off** | Optional only on critical flat tops |
+| Raft | **off** | Never default |
+| Brim | off unless unstable base / peel | |
+| Supports | After reorientation; only where required; tree if organic; paint off show faces | |
+| Seam | Hidden edge | Studio UI / modifier; not 3MF blob rewrite |
+| Escalation | Scenario 3 (0.08 mm, generous supports) only if preview shows unavoidable overhang cost | Do not apply by default |
+
+**Operator scenario 2 (decided):** not a hidden scalar preset. `purpose=decorative` + the table above + **Pareto/trade-off report required** (material, time, fail-risk, cosmetics). Tie-break may use `balanced`. Scenario 3 appears as an optional `quality` candidate, never the default apply. See `10_DECISION_LOG.md` B-SCENARIO2-PRESET.
+
+Until Phase 7 round-trip is proven, “apply” for a Bambu project is **binary copy** of the `.3mf` plus plan text (Studio UI steps). That is class **B** hygiene, not class D.
+
+## 10. What v1 will **not** optimize
 
 - Continuous infill percentage search  
-- Toolpath-level seam painting  
+- Toolpath-level seam painting (plan may *instruct* the operator in Studio)  
 - FEM / real strength  
-- Multi-plate packing beyond quantity=1 except as future  
-- AMS color painting (may **warn** purge waste only)
+- Multi-plate packing / auto-select which plate to print (name the plate in the plan; do not silently merge)  
+- AMS color painting (may **warn** purge waste only; job `one+Piece` is monochrome, no paint)

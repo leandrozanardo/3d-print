@@ -17,6 +17,8 @@ A **hybrid personal toolkit** (locked in `project_plans/start_plan.md` as system
 - Immutable-input convention `3ds/original/` (gitignored) + write guard in `core/paths.py`.
 - Archived CC BY-SA 4.0 ebook (`docs/ebook/` active MD + `docs/_arquivo/ebook/` originals) and A1 Mini OCR/quick-starts (`docs/printers/A1mini/`).
 - Historical plans that **must be preserved**: `project_plans/start_plan.md`, `docs/projeto/IMPLANTACAO-FASES.md`, `project_plans/saas/` (out of this cycle).
+- Approved **operational** spec (not the engine program): `docs/superpowers/specs/2026-08-15-one-piece-decorative-optimization-design.md` — first real job `one+Piece.3mf`, purpose decorative, scenario 2, system C / optimize B, **no new `core/` code**. See `10_DECISION_LOG.md` (D-JOB-ONEPIECE).
+- Package already exposes `__version__ = "0.1.0"` in `core/__init__.py` (no packaging metadata file yet).
 
 It is **not** yet an engineering engine. There is no knowledge compiler, no capability matrix as data, no orientation optimizer, no slicer adapter, no run bundle, no deterministic `plan.md` generator.
 

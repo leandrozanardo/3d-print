@@ -20,6 +20,7 @@
 | `docs/projeto/IMPLANTACAO-FASES.md` | Historical implant 0–4 |
 | `project_plans/saas/` | Out of cycle; do not implement; do not delete |
 | Previous `upgrade_v1_plan.md` (SaaS bridge) | Copied to `project_plans/saas/upgrade_v1_local_bridge.md` |
+| `docs/superpowers/specs/2026-08-15-one-piece-decorative-optimization-design.md` | Preserve; operational job spec (subproject A), not superseded by the engine pack |
 
 ---
 
@@ -39,11 +40,12 @@ Breaking changes require a `core/cli_compat.py` warning on stderr (not stdout) f
 
 ---
 
-## 3. Deprecate `bootstrap_wiki.py`
+## 3. Deprecate `bootstrap_wiki.py` (and keep `convert_a1_pdfs` disabled)
 
 - Phase 0: module docstring + `main()` prints **FATAL: obsolete; refuses to write** unless `PRINT_ENGINE_ALLOW_BOOTSTRAP=I_UNDERSTAND`.  
 - Do not delete until Phase 9 (history).  
 - Live wiki is already English and denser; re-running bootstrap would **destroy** it.
+- `core/convert_a1_pdfs.py` already exits 2 with a deprecation message — **keep disabled**; OCR manuals live under `docs/printers/A1mini/`. Do not restore pypdf conversion for those PDFs.
 
 ---
 
@@ -108,3 +110,4 @@ If a phase breaks CLI characterization tests → stop, revert, do not “fix for
 - Root LICENSE (user decision).  
 - Moving wiki out of `docs/projeto` before Phase 9.  
 - TypeScript app.
+- The `one+Piece` job itself (gitignored artifacts). Engine phases must not require that file in CI.

@@ -51,6 +51,9 @@ These must become **one** compiled fact with citations; prose may *link* the id.
 | Overhang practical 45–60° | `geometria/balancos-e-angulos.md`, bootstrap leftover concept |
 | Fit clearance 0.2–0.4 mm PLA | `geometria/encaixes-mecanicos.md` |
 | Line width ~0.42 @ 0.4 nozzle | `geometria/paredes-finas.md` |
+| Brim 5–8 mm | `a1-mini-mesa-e-adesao.md`, `falha-adesao.md`, `brim-raft-saia.md` |
+| Overhang ≤45° PLA / 30–45° | `balancos-e-angulos.md`, `suportes-estrategia.md`, `orientacao.md` |
+| Vase non-spiral walls 2–3, infill 0–5% | `proposito/vasos.md`, `geometria/vasos-e-vasilhames.md` |
 | Build 180×180×180 mm | hardware overview, printers A1mini — **officially corroborated** |
 
 ---
@@ -65,6 +68,9 @@ These must become **one** compiled fact with citations; prose may *link* the id.
 | “never copy Bowden lengths” | `stringing-e-retract.md:5` | **hardware compatibility** (direct drive) |
 | “never chisel coating” | `a1-mini-mesa-e-adesao.md:33` | **safety / hardware** |
 | “skirt always” | `fatiamento/INDEX.md:32` | **strong default**, not safety |
+| “Dry always” before print (PETG) | `perfis-a1-mini/petg-funcional-0.4.md:44` | **strong default** (hygroscopic), not hard constraint |
+| “Guarantee interface layers…” | `troubleshooting/suporte-dificil-remover.md:51` | Rephrase in Phase 9 — **strong default**, never product guarantee |
+| “NEVER for base quality” (raft on minis) | `proposito/miniaturas.md:29` | **strong default** for scenario 2; scenario 3 may document raft as escalation |
 | “never invent precision” | purpose INDEX | Process rule (keep) |
 | “guarantee” | not used as print-success claim in wiki (good) | Keep banned in product copy |
 | Bootstrap “CoreXY-bed-slinger” | `core/bootstrap_wiki.py:122` | **false**; discard |
@@ -117,7 +123,7 @@ Required model (Phase 2): `knowledge/sources/<id>.yaml` + every rule `sources: [
 ## 6. Canonicalization plan
 
 1. Author YAML under `knowledge/` with JSON Schema; compile to `knowledge/compiled/` (gitignored or CI-built, never hand-edited).
-2. First vertical slice: A1 Mini printer profile + 0.4 SS nozzle + textured/smooth PEI + generic-PLA + generic-PETG + 7 purpose profiles **as heuristics with `status: experimental` until each number has a source**.
+2. First vertical slice: A1 Mini printer profile + 0.4 SS nozzle + textured/smooth PEI + generic-PLA + generic-PETG + 7 purpose profiles **as heuristics with `status: experimental` until each number has a source**. **First purpose profile to compile:** `pla-decorativo-superficie-0.4` (locked for job `one+Piece`, scenario 2): layer 0.12–0.16 mm, walls ~3, infill 10–15% gyroid, ironing off, no raft, brim only if unstable. Source tag `src.legacy.wiki.pla-decorativo-superficie-0.4` — **not** `verified`.
 3. Copying wiki numbers into YAML **without** reclassification + sources is an **anti-pattern** (prompt §33). Migration script must tag `legacy_wiki` + `confidence: low` + `calibration_required: true`.
 4. Wiki pages gain front matter pointing at rule ids; numeric tables shrink to “see rule X”.
 5. `validate-wiki` grows contradiction/orphan/source checks (Phase 9). `bootstrap_wiki.py` is frozen (warning on run).
@@ -135,3 +141,4 @@ Required model (Phase 2): `knowledge/sources/<id>.yaml` + every rule `sources: [
 | Energy | Idle 6 W / avg 57 W / max 150 W | Mark energy **unknown** unless using these as coarse bounds |
 | Orientation optimization literature | Not yet surveyed in-repo | Phase 5 research note (build-orientation papers) — cite, don’t copy |
 | Bambu project 3MF extensions | Unknown members | Golden fixtures from **user’s** sanitized projects (private) |
+| `one+Piece` scene/plates | Private gitignored 3MF; inspect-3mf is ZIP-only today | Job A uses `--strict`; engine Phase 3 XML; do not commit the model |
