@@ -8,7 +8,7 @@ knowledge_status: "draft"
 evidence_status: "unknown"
 safety_level: "normal"
 confidence: "high"
-last_reviewed: "2026-08-15"
+last_reviewed: "2026-08-16"
 review_cycle: "per-batch"
 related: ["meta.coverage", "meta.contradictions", "meta.continuation"]
 tags: ["gaps"]
@@ -37,9 +37,15 @@ Atualizado pós-Wave 10–11. Itens resolvidos parcialmente riscam contexto, nã
 
 ## Ferramentas
 
-1. `validate-wiki` não valida IDs, front matter, anchors, orphan detection semântica
-2. Sem checagem automática de `related` IDs
-3. Sem lint de absolutos indevidos (sempre/nunca/garantia)
+1. ~~`validate-wiki` não valida IDs/front matter~~ → **resolvido 2026-08-16** com `--strict` (`core/wiki_validate.py`); warnings de aliases/citações ainda abertos
+2. Sem derivação automática completa da matriz de cobertura a partir do corpus
+3. Lint de absolutos suaves ainda em modo warning
+
+## Catálogo de impressoras
+
+1. Denominador de mercado não fechado
+2. Fabricantes seed não investigados (exceto fatia A1 Mini)
+3. Nenhuma impressora em DoD `documented` / `cataloged` formal além do conteúdo draft A1 Mini
 
 ## Processo
 

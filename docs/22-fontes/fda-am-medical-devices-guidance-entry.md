@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "12-months"
 related: ["app.qualification-limits", "myth.pla-food-safe"]
 tags: ["source", "fda", "medical", "regulation"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Fonte — FDA guidance AM medical devices (entrada)

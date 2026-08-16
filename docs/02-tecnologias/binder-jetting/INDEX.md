@@ -14,6 +14,13 @@ review_cycle: "6-months"
 related: ["hub.tecnologias", "tech.binder-jetting", "tech.binder-jetting-variants"]
 sources: ["source.iso-astm-52900-entry"]
 tags: ["hub", "binder-jetting"]
+process: []
+applies_to: []
+not_for: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Binder jetting

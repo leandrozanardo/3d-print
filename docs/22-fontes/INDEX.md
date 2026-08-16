@@ -1,4 +1,4 @@
-﻿---
+---
 id: "hub.fontes"
 title: "Fontes"
 summary: "Registro de proveniência para afirmações técnicas. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."

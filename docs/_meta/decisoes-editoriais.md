@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "6-months"
 related: ["meta.migration", "meta.architecture"]
 tags: ["decisions"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Decisões editoriais

@@ -15,7 +15,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 sources: ["source.bambu-a1-mini-tech-specs", "source.ellis-print-tuning-guide"]
-related: ["defect.fff.warping", "defect.fff.layer-shift", "defect.fff.ringing-ghosting", "design.fff-orientation", "hub.cenarios"]
+related: ["defect.fff.warping", "defect.fff.layer-shift", "defect.fff.ringing-ghosting", "design.orientation-fff", "hub.cenarios"]
 prerequisites: ["process.fff.first-layer"]
 supersedes: []
 aliases_pt_br: ["torre fina", "peça esbelta", "haste alta FFF"]

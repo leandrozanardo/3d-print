@@ -13,6 +13,14 @@ last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 related: ["hub.problemas", "defect.resin.index", "defect.resin.nothing-on-plate", "defect.resin.island-loose-support", "defect.resin.suction-delamination", "defect.resin.over-under-exposure", "hazard.resin-ppe-disposal"]
 tags: ["hub", "resin", "troubleshooting"]
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Problemas — resina

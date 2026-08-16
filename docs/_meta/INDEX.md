@@ -56,6 +56,7 @@ Este diretório governa a construção e manutenção de `docs/`. Não contém r
 | [fila-de-trabalho.md](fila-de-trabalho.md) | Waves e batches |
 | [registro-de-revisao.md](registro-de-revisao.md) | Histórico de revisões |
 | [continuacao.md](continuacao.md) | Prompt curto de retomada |
+| [../21-impressoras/_meta/progresso.md](../21-impressoras/_meta/progresso.md) | Ledger do catálogo mundial de impressoras |
 
 ## Relação com conteúdo legado
 

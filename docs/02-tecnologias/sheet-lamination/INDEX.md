@@ -14,6 +14,13 @@ review_cycle: "6-months"
 related: ["hub.tecnologias", "tech.sheet-lamination"]
 sources: ["source.iso-astm-52900-entry"]
 tags: ["hub", "sheet-lamination"]
+process: []
+applies_to: []
+not_for: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Sheet lamination

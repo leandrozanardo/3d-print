@@ -18,7 +18,7 @@ safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
-sources: []
+sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration", "source.bambu-a1-mini-tech-specs"]
 related: ["defect.fff.stringing", "material.drying-storage", "material.tpu", "setting.temperatures", "setting.speeds"]
 prerequisites: ["tech.fff"]
 supersedes: []
@@ -56,13 +56,15 @@ Direct drive: pouco filamento elástico entre engrenagem e nozzle → **comprime
 
 ## Faixas de partida (direct drive — validar)
 
+Heurística metodológica (Ellis / Teaching Tech / preset Bambu): valores abaixo são **ponto de partida**, não metrologia.
+
 | Material | Length (ordem) | Notas |
 |---|---|---|
 | PLA | ~0,4–1,2 mm | Partir do preset Bambu |
 | PETG | ~0,6–1,4 mm | Só após secar |
 | TPU | mínima / quase off | Evitar jam |
 
-Ajuste ±0,1–0,2 mm por torre — não saltos grandes.
+Ajuste ±0,1–0,2 mm por torre (heurística) — não saltos grandes.
 
 ## Efeitos
 

@@ -22,6 +22,7 @@ prerequisites: []
 aliases_pt_br: ["terminologia AM", "vocabulário manufatura aditiva", "categorias ISO"]
 aliases_en: ["AM terminology", "additive manufacturing vocabulary"]
 tags: ["fundamentals", "terminology", "iso"]
+supersedes: []
 ---
 
 # Terminologia de manufatura aditiva

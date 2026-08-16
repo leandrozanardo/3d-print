@@ -1,4 +1,4 @@
-﻿---
+---
 id: "tech.material-jetting"
 title: "Material jetting"
 summary: "Categoria em que gotas de material de construção (fotopolímeros, ceras, etc.) são depositadas seletivamente, frequentemente com material de suporte removível. Forte em multi-material, cores e superfícies lisas; custo e materiais proprietários são limitações típicas. Não confundir com binder jetting."
@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["jetting de material", "PolyJet-like"]
 aliases_en: ["material jetting", "PolyJet", "inkjet AM"]
 tags: ["material-jetting", "multi-material"]
+supersedes: []
 ---
 
 # Material jetting

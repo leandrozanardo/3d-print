@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 related: ["hub.problemas", "troubleshoot.fff-symptom-index", "defect.fff.warping", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.layer-shift", "defect.fff.elephant-foot", "defect.fff.delamination", "defect.fff.ringing-ghosting", "defect.fff.z-banding", "defect.fff.pillowing"]
 tags: ["hub", "troubleshooting", "fff"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Problemas e diagnóstico FFF

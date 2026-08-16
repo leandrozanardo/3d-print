@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "12-months"
 related: ["process.fff.first-layer"]
 tags: ["source", "calibration"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Fonte — Teaching Tech Calibration

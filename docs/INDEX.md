@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "1-month"
 related: ["docs.agent-guide", "meta.index", "hub.impressoras"]
 tags: ["portal"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Base de conhecimento — Manufatura aditiva

@@ -8,7 +8,7 @@ knowledge_status: "draft"
 evidence_status: "mixed"
 safety_level: "normal"
 confidence: "medium"
-last_reviewed: "2026-08-15"
+last_reviewed: "2026-08-16"
 review_cycle: "per-batch"
 related: ["meta.evidence-policy", "meta.gaps"]
 tags: ["contradictions"]
@@ -47,6 +47,14 @@ tags: ["contradictions"]
 |---|---|
 | Observação | Risco de ler facilidade de impressão como food-safe/baixa emissão |
 | Resolução | Proibir claim de segurança alimentar/médica sem processo; VOC/UFP existem também em PLA (lacuna de página dedicada) |
+
+## C-005 — IDs related vs páginas reais (2026-08-16)
+
+| Item | Detalhe |
+|---|---|
+| Observação | `design.fff-orientation` e `hw.pei-sheet-fff` referenciados sem página |
+| Resolução | Corrigido para `design.orientation-fff` e `surface.pei` |
+| Confidence | high |
 
 ## Abertas
 

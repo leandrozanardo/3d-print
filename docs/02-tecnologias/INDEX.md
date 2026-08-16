@@ -1,4 +1,4 @@
-﻿---
+---
 id: "hub.tecnologias"
 title: "Tecnologias de manufatura aditiva"
 summary: "Sete categorias de processo e distinção entre categoria, processo genérico e nome comercial. Cobertura parcial: FFF, vat (SLA/DLP/MSLA), PBF, BJ, MJ, DED/WAAM, sheet lamination e comparação entre categorias."

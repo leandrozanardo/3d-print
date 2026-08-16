@@ -20,6 +20,7 @@ prerequisites: ["printer.bambu-lab-a1-mini", "process.fff.first-layer"]
 aliases_pt_br: ["playbook vertical A1 Mini"]
 aliases_en: ["A1 mini first layer warping playbook"]
 tags: ["playbook", "scenario"]
+supersedes: []
 ---
 
 # Playbook — A1 Mini + PLA/PETG: primeira camada e empenamento

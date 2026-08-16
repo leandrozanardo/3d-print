@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["fluxo digital", "pipeline CAD impressão", "do modelo à peça"]
 aliases_en: ["digital workflow", "CAD to part", "AM process chain"]
 tags: ["fundamentals", "workflow", "stl", "3mf", "gcode"]
+supersedes: []
 ---
 
 # Workflow digital: do CAD à peça

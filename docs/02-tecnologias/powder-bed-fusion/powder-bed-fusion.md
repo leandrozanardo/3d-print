@@ -1,4 +1,4 @@
-﻿---
+---
 id: "tech.powder-bed-fusion"
 title: "Powder bed fusion (SLS, MJF, LPBF)"
 summary: "Categoria em que regiões de um leito de pó são fundidas ou sinterizadas seletivamente. Inclui SLS e MJF em polímeros e LPBF/EBM em metais. Forte em geometrias complexas e produção; exige gestão de pó, atmosfera, tensões e pós-processamento. Não é FFF com ‘pó’."
@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["fusão em leito de pó", "SLS", "MJF", "LPBF"]
 aliases_en: ["powder bed fusion", "SLS", "MJF", "LPBF", "PBF"]
 tags: ["pbf", "sls", "mjf", "lpbf", "metal", "polymer"]
+supersedes: []
 ---
 
 # Powder bed fusion (SLS, MJF, LPBF)

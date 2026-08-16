@@ -13,6 +13,14 @@ review_cycle: "12-months"
 related: ["firmware.klipper-marlin-concepts", "firmware.gcode-basics", "setting.flow-pressure-advance", "source.marlin-docs"]
 aliases_en: ["Klipper docs", "klipper3d.org"]
 tags: ["source", "klipper", "firmware"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
 ---
 
 # Fonte — Klipper Documentation

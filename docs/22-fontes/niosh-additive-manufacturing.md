@@ -1,4 +1,4 @@
-﻿---
+---
 id: "source.niosh-am-entry"
 title: "Fonte — NIOSH Additive Manufacturing"
 summary: "Ponto de entrada para orientações do NIOSH (CDC) sobre saúde e segurança em manufatura aditiva: emissões, controles, e práticas gerais. Não substitui SDS/TDS do produto nem legislação local."
@@ -13,6 +13,14 @@ review_cycle: "12-months"
 related: ["hazard.metal-powder", "material.powder-feedstocks", "source.epa-3d-printing-research", "hub.seguranca"]
 aliases_en: ["NIOSH additive manufacturing", "CDC NIOSH AM"]
 tags: ["source", "safety", "niosh", "emissions"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
 ---
 
 # Fonte — NIOSH Additive Manufacturing

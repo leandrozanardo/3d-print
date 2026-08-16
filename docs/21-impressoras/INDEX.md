@@ -15,7 +15,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 sources: []
-related: ["meta.coverage", "meta.knowledge-map"]
+related: ["meta.coverage", "meta.knowledge-map", "meta.printer-progress", "meta.printer-inclusion-criteria"]
 prerequisites: ["meta.architecture"]
 supersedes: []
 aliases_pt_br: ["Impressoras"]
@@ -32,6 +32,15 @@ Páginas por modelo com capabilities reais e status de suporte documental.
 ## Status
 
 Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+
+## Governança do catálogo
+
+- [Progresso (ledger)](_meta/progresso.md)
+- [Critérios de inclusão](_meta/criterios-de-inclusao.md)
+- [Catálogo global](_meta/catalogo-global.md)
+- [Fabricantes (seed)](_meta/fabricantes.md)
+- [Rebrands e variantes](_meta/rebrands-e-variantes.md)
+- [Exclusões](_meta/exclusoes.md)
 
 ## Entradas recomendadas
 
@@ -55,4 +64,4 @@ Legado: [printers/A1mini](../printers/A1mini/INDEX.md) · [projeto/hardware](../
 
 ## Lacunas
 
-Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
+Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`. Catálogo mundial = seed (ver ledger).

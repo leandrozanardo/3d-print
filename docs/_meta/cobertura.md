@@ -8,7 +8,7 @@ knowledge_status: "draft"
 evidence_status: "mixed"
 safety_level: "normal"
 confidence: "medium"
-last_reviewed: "2026-08-15"
+last_reviewed: "2026-08-16"
 review_cycle: "per-batch"
 related: ["meta.gaps", "meta.continuation", "meta.work-queue"]
 tags: ["coverage"]
@@ -44,7 +44,7 @@ Legenda: `none` | `hub-only` | `draft` | `partial` | `deep` | `verified`
 | 18 aplicações/regulação | **partial** | limites de qualificação (W11) | — |
 | 19 economia | hub-only | W8 | — |
 | 20 pesquisa/mitos | **partial** | mito PLA food-safe + mito 100% infill (W11) | — |
-| 21 impressoras | **partial** | A1 Mini draft (W0) | projeto+printers |
+| 21 impressoras | **partial** | A1 Mini draft + ledger catálogo seed (2026-08-16); mercado não coberto | projeto+printers |
 | 22 fontes | **partial** | fatia W0 + NIOSH/EPA/FDA | fontes-e-atribuicao |
 | 23 glossário | hub-only | W1 | — |
 

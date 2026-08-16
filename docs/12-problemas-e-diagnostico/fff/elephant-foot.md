@@ -20,7 +20,7 @@ safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
-sources: []
+sources: ["source.ellis-print-tuning-guide", "source.bambu-a1-mini-tech-specs", "source.teaching-tech-calibration"]
 related: ["process.fff.first-layer", "defect.fff.warping", "setting.temperatures", "defect.fff.layer-shift"]
 prerequisites: ["process.fff.first-layer"]
 supersedes: []

@@ -14,6 +14,13 @@ review_cycle: "6-months"
 related: ["hub.tecnologias", "tech.directed-energy-deposition", "tech.ded-waam"]
 sources: ["source.iso-astm-52900-entry"]
 tags: ["hub", "ded", "waam"]
+process: []
+applies_to: []
+not_for: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Directed energy deposition

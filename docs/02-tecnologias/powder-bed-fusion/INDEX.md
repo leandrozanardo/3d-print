@@ -14,6 +14,13 @@ review_cycle: "6-months"
 related: ["hub.tecnologias", "tech.powder-bed-fusion", "tech.sls-mjf", "tech.lpbf-ebm"]
 sources: ["source.iso-astm-52900-entry"]
 tags: ["hub", "pbf", "sls", "lpbf"]
+process: []
+applies_to: []
+not_for: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Powder bed fusion

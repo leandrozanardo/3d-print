@@ -1,4 +1,4 @@
-﻿---
+---
 id: "glossary.initial"
 title: "Glossário inicial (AM / FFF)"
 summary: "Glossário operacional em pt-BR com termos EN estáveis para manufatura aditiva, com foco no corpus FFF desktop desta base. Cada entrada tem definição curta orientada a decisão e links quando existir página canônica. Não substitui SDS/TDS nem normas completas."
@@ -106,6 +106,7 @@ aliases_en:
   - "SDS"
   - "TDS"
 tags: ["glossary", "fff", "am"]
+supersedes: []
 ---
 
 # Glossário inicial (AM / FFF)

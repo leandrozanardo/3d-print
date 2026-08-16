@@ -14,6 +14,13 @@ review_cycle: "6-months"
 related: ["hub.tecnologias", "tech.vat-photopolymerization", "tech.sla-dlp-msla"]
 sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
 tags: ["hub", "resin", "vat"]
+process: []
+applies_to: []
+not_for: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Vat photopolymerization

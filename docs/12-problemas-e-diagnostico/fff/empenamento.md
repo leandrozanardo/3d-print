@@ -26,6 +26,7 @@ prerequisites: ["process.fff.first-layer"]
 aliases_pt_br: ["empenamento", "levantamento de canto", "warp"]
 aliases_en: ["warping", "corner lift", "curl"]
 tags: ["warping", "troubleshooting", "fff"]
+supersedes: []
 ---
 
 # Empenamento (warping) em FFF

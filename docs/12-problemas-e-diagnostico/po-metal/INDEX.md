@@ -18,6 +18,9 @@ supersedes: []
 aliases_pt_br: ["defeitos pó metal", "diagnóstico PBF"]
 aliases_en: ["PBF defects", "metal AM defects"]
 tags: ["hub", "troubleshooting", "pbf"]
+process: []
+applies_to: []
+not_for: []
 ---
 
 # Problemas — pó e metal (PBF)

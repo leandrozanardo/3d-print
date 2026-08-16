@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "24-months"
 related: ["tech.fff"]
 tags: ["source", "standard"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Fonte — ISO/ASTM 52900 (entrada)

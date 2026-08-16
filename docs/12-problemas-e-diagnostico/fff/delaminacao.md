@@ -20,7 +20,7 @@ safety_level: "caution"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
-sources: []
+sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
 related: ["setting.cooling", "material.drying-storage", "defect.fff.warping", "defect.fff.under-extrusion", "material.petg", "setting.temperatures"]
 prerequisites: ["tech.fff"]
 supersedes: []

@@ -16,7 +16,7 @@ confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "12-months"
 sources: ["source.teaching-tech-calibration", "source.ellis-print-tuning-guide"]
-related: ["process.fff.first-layer", "fund.wetting-first-layer", "hw.pei-sheet-fff", "firmware.gcode-basics", "hub.software"]
+related: ["process.fff.first-layer", "fund.wetting-first-layer", "surface.pei", "firmware.gcode-basics", "hub.software"]
 prerequisites: ["tech.fff"]
 supersedes: []
 aliases_pt_br: ["malha da mesa", "bed leveling mesh", "z-offset"]

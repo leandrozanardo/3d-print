@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["resolução de impressão", "altura de camada", "precisão dimensional"]
 aliases_en: ["layer height", "print resolution", "dimensional accuracy"]
 tags: ["fundamentals", "layers", "metrology", "fff"]
+supersedes: []
 ---
 
 # Camadas, resolução e precisão

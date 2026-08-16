@@ -20,6 +20,7 @@ prerequisites: ["printer.bambu-lab-a1-mini"]
 aliases_pt_br: ["bico 0,4 mm", "nozzle 0.4"]
 aliases_en: ["0.4 mm nozzle"]
 tags: ["nozzle", "fff"]
+supersedes: []
 ---
 
 # Nozzle 0,4 mm em FFF

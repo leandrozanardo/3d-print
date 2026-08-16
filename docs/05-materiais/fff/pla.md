@@ -22,6 +22,7 @@ prerequisites: ["tech.fff"]
 aliases_pt_br: ["PLA", "poliácido láctico", "ácido poliláctico"]
 aliases_en: ["PLA", "polylactic acid"]
 tags: ["material", "pla", "fff"]
+supersedes: []
 ---
 
 # PLA (ácido poliláctico) em FFF

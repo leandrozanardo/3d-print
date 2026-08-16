@@ -1,4 +1,4 @@
-﻿---
+---
 id: "tech.sheet-lamination"
 title: "Sheet lamination"
 summary: "Categoria em que folhas (papel, polímero, metal, compósito) são unidas (adesivo, solda ultrassônica, brasagem, etc.) e cortadas contorno a contorno. Útil para protótipos rápidos, tooling e certas rotas metálicas; anisotropia planar e remoção de excesso são temas centrais."
@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["laminação de folhas", "LOM-like"]
 aliases_en: ["sheet lamination", "laminated object manufacturing", "UAM"]
 tags: ["sheet-lamination", "uol", "lamination"]
+supersedes: []
 ---
 
 # Sheet lamination

@@ -20,6 +20,7 @@ prerequisites: []
 aliases_pt_br: ["FFF", "impressão por filamento", "extrusão de filamento"]
 aliases_en: ["FFF", "Fused Filament Fabrication", "FDM"]
 tags: ["fff", "material-extrusion"]
+supersedes: []
 ---
 
 # FFF — Fused Filament Fabrication

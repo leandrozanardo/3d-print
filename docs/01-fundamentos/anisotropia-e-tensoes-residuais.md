@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["anisotropia", "tensões residuais", "resistência entre camadas"]
 aliases_en: ["anisotropy", "residual stress", "interlayer strength", "Z strength"]
 tags: ["fundamentals", "mechanics", "anisotropy", "fff"]
+supersedes: []
 ---
 
 # Anisotropia e tensões residuais

@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 related: ["meta.architecture", "meta.coverage", "meta.query-routing"]
 tags: ["map"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Mapa de conhecimento

@@ -14,6 +14,13 @@ sources: []
 related: ["printer.bambu-lab-a1-mini"]
 aliases_en: ["A1 mini tech specs"]
 tags: ["source", "bambu"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
 ---
 
 # Fonte — Bambu Lab A1 mini Technical Specifications

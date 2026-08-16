@@ -1,4 +1,4 @@
-﻿---
+---
 id: "tech.directed-energy-deposition"
 title: "Directed energy deposition (DED, WAAM)"
 summary: "Categoria em que uma fonte de energia focalizada (laser, arco, feixe de elétrons) funde material (pó ou arame) no momento da deposição. Usada para reparo, features grandes e near-net-shape metálico. Distinta de powder bed fusion: sem leito completo; forte interação térmica e usinagem posterior frequente."
@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["deposição com energia direcionada", "DED", "WAAM"]
 aliases_en: ["directed energy deposition", "DED", "WAAM", "laser cladding AM"]
 tags: ["ded", "waam", "metal"]
+supersedes: []
 ---
 
 # Directed energy deposition (DED, WAAM)

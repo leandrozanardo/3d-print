@@ -1,4 +1,4 @@
-﻿---
+---
 id: "tech.binder-jetting"
 title: "Binder jetting"
 summary: "Categoria em que um aglutinante líquido é jateado seletivamente sobre um leito de pó, formando uma peça ‘verde’ que depois é curada, despoada e tipicamente sinterizada ou infiltrada. Produtiva e escalável; a metalurgia/cerâmica do pós decide propriedades finais. Distinta de powder bed fusion."
@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["jetting de aglutinante", "binder jet"]
 aliases_en: ["binder jetting", "binder jet"]
 tags: ["binder-jetting", "powder", "sinter"]
+supersedes: []
 ---
 
 # Binder jetting

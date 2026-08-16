@@ -24,6 +24,7 @@ prerequisites: ["printer.bambu-lab-a1-mini", "tech.fff"]
 aliases_pt_br: ["primeira camada", "camada inicial"]
 aliases_en: ["first layer", "initial layer"]
 tags: ["first-layer", "adhesion", "fff"]
+supersedes: []
 ---
 
 # Primeira camada (first layer) em FFF

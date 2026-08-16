@@ -22,6 +22,7 @@ prerequisites: ["tech.fff"]
 aliases_pt_br: ["PETG"]
 aliases_en: ["PETG", "glycol-modified PET"]
 tags: ["material", "petg", "fff"]
+supersedes: []
 ---
 
 # PETG em FFF

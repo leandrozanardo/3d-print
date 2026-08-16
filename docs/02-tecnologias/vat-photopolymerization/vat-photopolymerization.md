@@ -1,4 +1,4 @@
-﻿---
+---
 id: "tech.vat-photopolymerization"
 title: "Vat photopolymerization (SLA, DLP, MSLA)"
 summary: "Categoria em que resina líquida fotopolimérica é curada seletivamente por luz em uma cuba (vat). Inclui SLA laser, DLP e MSLA/LCD. Excelente detalhe fino; exige manejo de resina não curada, pós-cura e descarte responsável. Não aplicar regras de FFF."
@@ -22,6 +22,7 @@ prerequisites: ["fund.terminology"]
 aliases_pt_br: ["fotopolimerização em cuba", "impressão em resina", "SLA", "DLP", "MSLA"]
 aliases_en: ["vat photopolymerization", "SLA", "DLP", "MSLA", "LCD resin"]
 tags: ["vat", "sla", "dlp", "msla", "resin"]
+supersedes: []
 ---
 
 # Vat photopolymerization (SLA, DLP, MSLA)

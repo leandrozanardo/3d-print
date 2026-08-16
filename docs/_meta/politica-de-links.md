@@ -41,17 +41,12 @@ Após cada batch:
 
 ```bash
 python -m core validate-wiki docs --json
+python -m core validate-wiki docs --strict --json
 ```
 
-O validador atual (`core/wiki_links.py`) cobre links relativos quebrados. Lacunas conhecidas (ainda não cobertas pelo core nesta tarefa):
+O validador padrão cobre links relativos quebrados. O modo `--strict` adiciona: front matter/YAML seguro, enums, IDs, related/sources/prerequisites/supersedes, anchors, órfãos, ciclos, absolutos duros, números sem evidência, promoção editorial inválida, lifecycle/coverage de impressoras.
 
-- duplicate IDs
-- anchors inválidos
-- related IDs órfãos
-- ciclos de prerequisites
-- aviso automático de archived
-
-Registrar falhas manuais em [lacunas.md](lacunas.md).
+Registrar falhas manuais remanescentes (warnings) em [lacunas.md](lacunas.md).
 
 ## Proibições
 

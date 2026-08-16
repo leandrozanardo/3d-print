@@ -13,6 +13,7 @@ from core.mesh import inspect_mesh
 from core.repair import repair_mesh
 from core.threemf import inspect_3mf
 from core.wiki_links import validate_wiki_links
+from core.wiki_validate import validate_wiki
 
 
 def _print_report(data: dict[str, Any], *, as_json: bool) -> None:
@@ -24,6 +25,21 @@ def _print_report(data: dict[str, Any], *, as_json: bool) -> None:
 
 
 def cmd_validate_wiki(args: argparse.Namespace) -> int:
+    # Default mode preserves link-only contract; --strict enables enterprise rules.
+    if args.strict:
+        result = validate_wiki(Path(args.root), strict=True)
+        payload = result.to_dict()
+        if args.json:
+            print(json.dumps(payload, ensure_ascii=False, indent=2))
+        else:
+            if result.ok:
+                print(f"OK (strict): {payload.get('stats', {})}")
+            for err in result.errors:
+                print(err)
+            for warn in result.warnings:
+                print(f"WARNING: {warn}")
+        return 0 if result.ok else 1
+
     errors = validate_wiki_links(Path(args.root))
     if args.json:
         print(json.dumps({"ok": not errors, "errors": errors}, ensure_ascii=False, indent=2))
@@ -65,9 +81,17 @@ def build_parser() -> argparse.ArgumentParser:
     def add_json(p: argparse.ArgumentParser) -> None:
         p.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
 
-    p_wiki = sub.add_parser("validate-wiki", help="Validate relative Markdown links")
+    p_wiki = sub.add_parser(
+        "validate-wiki",
+        help="Validate wiki links; with --strict, run enterprise semantic checks",
+    )
     add_json(p_wiki)
     p_wiki.add_argument("root", help="Documentation root directory")
+    p_wiki.add_argument(
+        "--strict",
+        action="store_true",
+        help="Enable deterministic enterprise semantic validation (CI gate)",
+    )
     p_wiki.set_defaults(func=cmd_validate_wiki)
 
     p_mesh = sub.add_parser("inspect-mesh", help="Inspect STL/OBJ/PLY mesh")

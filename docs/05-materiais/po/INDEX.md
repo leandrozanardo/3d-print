@@ -18,6 +18,9 @@ supersedes: []
 aliases_pt_br: ["materiais em pó", "feedstock pó"]
 aliases_en: ["powder feedstocks"]
 tags: ["hub", "powder"]
+process: []
+applies_to: []
+not_for: []
 ---
 
 # Materiais em pó

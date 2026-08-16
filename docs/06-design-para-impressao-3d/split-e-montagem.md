@@ -15,7 +15,7 @@ safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
-sources: []
+sources: ["source.bambu-a1-mini-tech-specs", "source.ellis-print-tuning-guide"]
 related: ["design.orientation-fff", "design.tolerances-fff", "design.overhangs-self-supporting", "design.holes-threads-inserts", "design.strength-anisotropy", "hub.dfam"]
 prerequisites: ["tech.fff"]
 supersedes: []
@@ -59,7 +59,7 @@ Objetivo: tornar cada corpo **bom de imprimir** (orientação, suporte, envelope
 4. **Parafuso + insert** — serviço e desmontagem — [furos/roscas](features-furos-roscas-inserts.md)
 5. **Encaixe elástico (clip)** — depende de orientação e material (PLA frágil em clip fino)
 
-Não publique folgas “universais”: meça no seu perfil 0,4 mm.
+Não publique folgas “universais”: meça no seu perfil com nozzle 0,4 mm (capability/contexto A1 Mini — fonte: tech specs Bambu; validar no cupom).
 
 ## Ordem de decisão
 

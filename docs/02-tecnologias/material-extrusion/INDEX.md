@@ -1,4 +1,4 @@
-﻿---
+---
 id: "hub.tech.material-extrusion"
 title: "Material extrusion"
 summary: "Hub da categoria material extrusion (ISO/ASTM): feedstock dispensado por bico. Em desktop, o processo dominante é FFF com filamento termoplástico. Inclui navegação para FFF, escopo da categoria, riscos e lacunas."
@@ -14,6 +14,13 @@ review_cycle: "6-months"
 related: ["hub.tecnologias", "tech.fff", "fund.terminology"]
 sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
 tags: ["hub", "material-extrusion", "fff"]
+process: []
+applies_to: []
+not_for: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Material extrusion

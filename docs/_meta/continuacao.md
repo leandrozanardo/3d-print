@@ -1,16 +1,16 @@
 ---
 id: "meta.continuation"
 title: "Continuação — estado da base"
-summary: "Pós-Maintenance A: waves 0–11 + lote de manutenção (resina, pó, settings, formatos, segurança, cenários, fundamentos, mitos) publicados em draft. validate-wiki limpo. Próximo = Maintenance B (migração legado projeto/, pin Bambu Studio version, verified gates)."
+summary: "Batch 2026-08-16: auditoria empresarial + validador semântico --strict + remediação estrutural do corpus + ledger do catálogo de impressoras. Próximo = Phase 0.2-conteúdo (warnings) e piloto Bambu→Prusa→Formlabs."
 doc_type: "continuation"
 domain: ["meta"]
 knowledge_status: "draft"
 evidence_status: "mixed"
 safety_level: "normal"
 confidence: "high"
-last_reviewed: "2026-08-15"
+last_reviewed: "2026-08-16"
 review_cycle: "per-batch"
-related: ["meta.coverage", "meta.work-queue", "meta.gaps"]
+related: ["meta.coverage", "meta.work-queue", "meta.gaps", "meta.printer-progress"]
 tags: ["continuation"]
 ---
 
@@ -18,49 +18,43 @@ tags: ["continuation"]
 
 ## Wave atual
 
-**Pós-Maintenance A** — ciclo Waves 0–11 + Maintenance A concluídos.
+**Wiki Enterprise Audit — Phase 0 / 0.1 / 0.2-estrutural** (2026-08-16).
 
 ## Batch concluído
 
-**Maintenance A** (aprofundamento transversal sem stubs):
-
-- Defeitos resina atômicos + grades PA12 / AlSi10Mg
-- Settings: supports, brim/raft/skirt, flow/PA, seam
-- Fontes Marlin + Klipper
-- Formatos STL/3MF, reparo, manifold
-- Manutenção A1 Mini; elétrico/fogo; IPA; annealing; vapor smoothing
-- Cenários vasos/AMS/peças altas; ringing/Z-banding/pillowing
-- Fundamentos calor/adesão/causa; input shaping; bed mesh
-- Mitos enclosure/temp; quando não imprimir; food-contact limites
-- DfAM overhangs/split; PVA/BVOH; resina standard vs tough
+1. Auditoria recalculada → `project_plans/wiki_enterprise_audit/00–03`
+2. Validador empresarial → `core/wiki_validate.py` + `python -m core validate-wiki docs --strict --json`
+3. Remediação estrutural → BOM removido, campos list/`supersedes`, 2 related IDs corrigidos, sources em páginas com números órfãos
+4. Ledger do catálogo → `docs/21-impressoras/_meta/progresso.md` (+ critérios, catálogo, fabricantes, rebrands, exclusões)
 
 ## Validações
 
-`python -m core validate-wiki docs --json` → `{"ok": true, "errors": []}` (2026-08-15, pós-Maintenance A).
+```text
+python -m core validate-wiki docs --json
+→ ok: true
 
-## Próximo batch (Maintenance B)
+python -m core validate-wiki docs --strict --json
+→ ok: true (warnings residuais: aliases, citations próximas, linguagem suave)
+```
 
-1. Migrar/deprecar páginas-chave de `docs/projeto/` com `supersedes` (sem delete)
-2. Pin versão Bambu Studio nos paths de UI documentados
-3. Glossário expandido + lint de IDs duplicados manual
-4. Candidatos a `reviewed` na fatia A1 Mini/PLA/PETG/first-layer/warping
-5. Atualizar cobertura
+## Próximo batch determinístico
 
-### Ler primeiro
+1. **Phase 0.2-conteúdo** — reduzir warnings; pin `lifecycle`/`coverage_level` na A1 Mini; sincronizar cobertura
+2. **Piloto catálogo** — Bambu Lab portfólio atual → Prusa → Formlabs (`cataloged` mínimo)
+3. Revisar schema antes de escalar Creality+
 
-1. Este arquivo
-2. [cobertura.md](cobertura.md)
-3. [lacunas.md](lacunas.md)
-4. [AGENT_GUIDE.md](../AGENT_GUIDE.md)
+Ler primeiro: [progresso.md](../21-impressoras/_meta/progresso.md) · este arquivo · [cobertura.md](cobertura.md) · [lacunas.md](lacunas.md)
 
 ## Blockers
 
 - Delete de legado: proibido até confirmação
-- `core/` validator front matter: fora de escopo até pedido
+- Auto-promoção `reviewed`/`verified`: proibida
+- Ingestão factual OEM: ainda não iniciada (requer rede + fontes oficiais)
 
 ## Prompt curto
 
 ```text
-Continue docs/ a partir de docs/_meta/continuacao.md — Maintenance B.
-Não apague legado. Rode validate-wiki ao final.
+Continue a partir de docs/21-impressoras/_meta/progresso.md e docs/_meta/continuacao.md.
+Phase 0.2-conteúdo, depois piloto Bambu→Prusa→Formlabs.
+validate-wiki --strict. Sem commit/push. Não inventar specs.
 ```

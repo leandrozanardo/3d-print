@@ -19,7 +19,7 @@ safety_level: "caution"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
-sources: []
+sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
 related: ["material.drying-storage", "defect.fff.stringing", "material.composites-fiber", "setting.speeds", "process.fff.first-layer"]
 prerequisites: ["tech.fff"]
 supersedes: []

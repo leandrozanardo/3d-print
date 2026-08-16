@@ -12,6 +12,15 @@ last_reviewed: "2026-08-15"
 review_cycle: "3-months"
 related: ["hub.materiais", "material.pla", "material.petg", "material.tpu", "material.abs-asa", "material.pa", "material.pc", "material.drying-storage", "material.composites-fiber", "material.pva-bvoh-support"]
 tags: ["hub", "fff"]
+technology: []
+process: []
+applies_to: []
+not_for: []
+sources: []
+prerequisites: []
+supersedes: []
+aliases_pt_br: []
+aliases_en: []
 ---
 
 # Materiais FFF

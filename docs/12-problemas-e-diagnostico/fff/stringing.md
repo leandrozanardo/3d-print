@@ -20,7 +20,7 @@ safety_level: "normal"
 confidence: "medium"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
-sources: []
+sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
 related: ["setting.retraction", "material.drying-storage", "defect.fff.under-extrusion", "material.petg", "process.fff.first-layer"]
 prerequisites: ["material.drying-storage"]
 supersedes: []
