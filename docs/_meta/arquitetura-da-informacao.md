@@ -26,7 +26,7 @@ tags: ["meta", "ia", "taxonomy"]
 2. **Portal de IA:** [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md) — leitura obrigatória antes de recomendar
 3. **Governança:** [docs/_meta/](INDEX.md)
 4. **Domínios 01–23:** um hub `INDEX.md` por domínio; páginas atômicas por conceito
-5. **Legado isolado:** `projeto/`, `ebook/`, `_arquivo/`, `printers/`, `superpowers/` não poluem a navegação canônica, mas permanecem linkáveis e inventariados
+5. **Legado isolado:** `projeto/`, `ebook/`, `printers/`, `superpowers/` não poluem a navegação canônica, mas permanecem linkáveis e inventariados (`_arquivo/` removido)
 6. **Status ≠ ausência:** arquitetura preparada não implica cobertura verificada
 
 ## Árvore-alvo
@@ -62,7 +62,6 @@ docs/
   projeto/                  # LEGADO — migração faseada
   ebook/                    # LEGADO CC BY-SA
   printers/                 # LEGADO manuais
-  _arquivo/                 # LEGADO originais
 ```
 
 ## Tipos de página

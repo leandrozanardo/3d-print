@@ -1,7 +1,7 @@
 # Guia Maker de Impressão 3D
 
 > **Fonte:** Guia Maker de Impressão 3D (Cláudio Luís Marques Sampaio) — CC BY-SA 4.0
-> **Original arquivado em:** [`docs/_arquivo/ebook/`](../_arquivo/ebook/)
+> **Nota:** o arquivo AsciiDoc original (`docs/_arquivo/ebook/`) foi removido deste repositório.
 > **Obra:** http://www.makerlinux.com.br/ebook
 
 Versão convertida para Markdown a partir dos originais AsciiDoc (v0.99.3).

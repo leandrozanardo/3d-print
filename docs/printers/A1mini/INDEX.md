@@ -1,6 +1,6 @@
 # A1 Mini — local docs hub
 
-Corpus converted from official Bambu Lab **Quick Start Guides**, archived under [`docs/_arquivo/printers/A1mini/`](../../_arquivo/printers/A1mini/).
+Corpus converted from official Bambu Lab **Quick Start Guides** (PDF archive under `docs/_arquivo/` was removed from this repository).
 
 **Printer registry:** [../INDEX.md](../INDEX.md)
 

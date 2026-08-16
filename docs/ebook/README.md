@@ -12,7 +12,7 @@ Attribution required; ShareAlike for derivatives. See [LICENSE](LICENSE) and [CR
 
 1. Prefer `pandoc -f asciidoc -t gfm` when available.
 2. Otherwise: `python core/convert_ebook_adoc.py`
-3. Each chapter keeps a CC BY-SA attribution header pointing at `docs/_arquivo/ebook/`
+3. Each chapter keeps a CC BY-SA attribution header (AsciiDoc archive removed from this repo)
 4. Figures remain under `imagens/`; SVG sources also mirrored in `assets/`
 
 ## Active structure
@@ -26,6 +26,6 @@ Attribution required; ShareAlike for derivatives. See [LICENSE](LICENSE) and [CR
 
 ## Edit policy
 
-Edit active `.md` / assets here. Do not edit `docs/_arquivo/ebook/`.
+Edit active `.md` / assets here. The former `docs/_arquivo/ebook/` tree was deleted.
 
 > Note: Chapter bodies remain in Portuguese (original work language). The optimization wiki used by the playbook is English under `docs/projeto/`.

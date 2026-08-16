@@ -60,7 +60,7 @@ flowchart LR
 | `docs/projeto/` | Wiki operacional EN A1 Mini — keep-and-enrich / migrate |
 | `docs/ebook/` | Guia Maker pt-BR CC BY-SA — archive navigation, reuse sob licença |
 | `docs/printers/` | Manuais convertidos |
-| `docs/_arquivo/` | Originais — não editar |
+| ~~`docs/_arquivo/`~~ | Removido do repositório |
 | `docs/context.md` | Resumo de chat F.2 — não é KB AM |
 | `docs/superpowers/` | Specs de design de feature — fora da taxonomia AM |
 

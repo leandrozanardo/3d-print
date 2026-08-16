@@ -95,8 +95,8 @@ Inventário (`core`) → geometria → propósito → perfil → fatiamento → 
 Conhecimento consolidado de manuais oficiais, guias de tuning e o ebook local (CC BY-SA 4.0).
 
 ## Corpus local
-- Guia Maker de Impressão 3D — Cláudio Luís Marques Sampaio — **CC BY-SA 4.0** — http://www.makerlinux.com.br/ebook — MD em [`docs/ebook/`](../ebook/INDEX.md); originais em `docs/_arquivo/ebook/`
-- Manuais A1 Mini — [`docs/printers/A1mini/`](../printers/A1mini/INDEX.md); PDFs em `docs/_arquivo/printers/A1mini/`
+- Guia Maker de Impressão 3D — Cláudio Luís Marques Sampaio — **CC BY-SA 4.0** — http://www.makerlinux.com.br/ebook — MD em [`docs/ebook/`](../ebook/INDEX.md)
+- Manuais A1 Mini — [`docs/printers/A1mini/`](../printers/A1mini/INDEX.md)
 
 ## Fontes externas (consultadas / sintetizadas)
 | Fonte | O que absorvemos |

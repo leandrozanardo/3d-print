@@ -35,7 +35,7 @@ Novas páginas canônicas em português do Brasil. Legado EN não é reescrito e
 
 ## D-003 — Ebook CC BY-SA isolado
 
-`docs/ebook/` e `docs/_arquivo/ebook/` permanecem. Vertical slice **não** copia texto do ebook. Reutilização futura exige atribuição + ShareAlike + registro.
+`docs/ebook/` permanece; `docs/_arquivo/ebook/` foi removido. Vertical slice **não** copia texto do ebook. Reutilização futura exige atribuição + ShareAlike + registro.
 
 ## D-004 — Escopo operacional profundo inicial
 

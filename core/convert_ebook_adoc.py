@@ -9,7 +9,7 @@ from pathlib import Path
 
 ATTRIBUTION = """\
 > **Fonte:** Guia Maker de Impressão 3D (Cláudio Luís Marques Sampaio) — CC BY-SA 4.0
-> **Original arquivado em:** [`docs/_arquivo/ebook/`](../_arquivo/ebook/)
+> **Nota:** o arquivo AsciiDoc original (`docs/_arquivo/ebook/`) foi removido deste repositório.
 > **Obra:** http://www.makerlinux.com.br/ebook
 """
 
@@ -520,7 +520,7 @@ Conforme a CC BY-SA 4.0:
 
 1. **Atribuição** — crédito ao autor original (acima) é mantido em cada capítulo.
 2. **ShareAlike** — o material derivado permanece sob CC BY-SA 4.0 (ver `LICENSE`).
-3. **Originais** — AsciiDoc, Makefile, `.git` do ebook e `fontes/` estão em `docs/_arquivo/ebook/` (não editar).
+3. **Originais** — o arquivo AsciiDoc em `docs/_arquivo/ebook/` foi removido deste repositório.
 
 Ilustrações de terceiros mencionadas no texto original permanecem copyright de seus autores,
 conforme notas do próprio guia.
@@ -546,7 +546,7 @@ para Markdown, sob a mesma licença **CC BY-SA 4.0**.
    blocos `NOTE`/`TIP`/`WARNING`/`IMPORTANT`, listagens `[source]`, links e `latexmath`/`stem`.
 3. Cada capítulo começa com bloco de atribuição CC BY-SA apontando para o arquivo dos originais.
 4. Imagens permanecem em `imagens/` com caminhos relativos `imagens/<arquivo>`.
-5. Fontes SVG originais e `.adoc` foram movidos para `docs/_arquivo/ebook/` após a conversão.
+5. Fontes SVG originais e `.adoc` viviam em `docs/_arquivo/ebook/` (árvore removida do repositório).
 
 ## Estrutura ativa
 
@@ -560,14 +560,10 @@ para Markdown, sob a mesma licença **CC BY-SA 4.0**.
 
 ## Editar
 
-Edite apenas os `.md` e assets ativos nesta pasta. Não altere `docs/_arquivo/ebook/`.
+Edite apenas os `.md` e assets ativos nesta pasta.
 
 Obra original: http://www.makerlinux.com.br/ebook
 """
-
-
-def build_arquivo_readme() -> str:
-    return "# Arquivo de originais — não editar; editar só os .md ativos.\n"
 
 
 def main() -> int:
@@ -615,11 +611,6 @@ def main() -> int:
 
     (ebook / "README.md").write_text(build_readme(), encoding="utf-8", newline="\n")
     print("Wrote README.md")
-
-    arquivo = root / "docs" / "_arquivo"
-    arquivo.mkdir(parents=True, exist_ok=True)
-    (arquivo / "README.md").write_text(build_arquivo_readme(), encoding="utf-8", newline="\n")
-    print("Wrote docs/_arquivo/README.md")
 
     # Keep full English CC BY-SA text as docs/ebook/LICENSE (never replace with short PT summary)
     license_dest = ebook / "LICENSE"

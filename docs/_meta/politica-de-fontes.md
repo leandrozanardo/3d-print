@@ -49,7 +49,7 @@ Cada fonte citada de forma recorrente deve ter página em [docs/22-fontes/](../2
 
 ## Legado CC BY-SA
 
-O ebook Guia Maker (`docs/ebook/`, originais em `docs/_arquivo/ebook/`) é **CC BY-SA 4.0**. Derivação exige atribuição e ShareAlike. Não copiar trechos para páginas canônicas sem cumprir a licença e registrar derivação em [decisoes-editoriais.md](decisoes-editoriais.md).
+O ebook Guia Maker (`docs/ebook/`; originais AsciiDoc removidos com `docs/_arquivo/`) é **CC BY-SA 4.0**. Derivação exige atribuição e ShareAlike. Não copiar trechos para páginas canônicas sem cumprir a licença e registrar derivação em [decisoes-editoriais.md](decisoes-editoriais.md).
 
 ## Fontes iniciais de pesquisa
 

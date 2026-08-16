@@ -26,7 +26,7 @@ tags: ["inventory", "audit"]
 | `docs/projeto/` | 71 | Inglês | Wiki operacional A1 Mini / otimização híbrida |
 | `docs/ebook/` | 16 | Português | Guia Maker convertido |
 | `docs/printers/` | 6 | Misto | Registry + A1 Mini manuais/wiki local |
-| `docs/_arquivo/` | 6 (+ AsciiDoc/PDF/SVG fora do count md útil) | Misto | Originais — não editar |
+| ~~`docs/_arquivo/`~~ | — | — | Removido do repositório |
 | `docs/superpowers/` | 1 | Inglês | Spec de feature |
 | `docs/context.md` | 1 | Português | Resumo de chat F.2 |
 | **Total md** | **~101** | — | — |
@@ -39,7 +39,7 @@ Não existe ainda a árvore canônica 01–23 (criada nesta wave). Não existe `
 |---|---|---|
 | Original do projeto | `docs/projeto/**` | Conteúdo do repositório; EN; focado A1 Mini |
 | Convertido | `docs/ebook/**`, partes de `docs/printers/A1mini/**` | Ebook: **CC BY-SA 4.0** (Cláudio Luís Marques Sampaio / MakerLinux); manuais OEM convertidos |
-| Arquivado | `docs/_arquivo/**` | AsciiDoc, LICENSE, fontes SVG, PDFs A1 Mini |
+| Arquivado | ~~`docs/_arquivo/**`~~ | Removido do repositório |
 | Operacional/meta-chat | `docs/context.md` | Não é KB de AM |
 | Spec interna | `docs/superpowers/specs/**` | Design de otimização decorativa |
 
@@ -96,7 +96,7 @@ Não existe ainda a árvore canônica 01–23 (criada nesta wave). Não existe `
 
 - Muitas ocorrências legítimas de **validate on printer** (política, não stub)
 - `docs/context.md` seção TODO (chat summary)
-- `docs/_arquivo/ebook/TODO.md` (arquivo histórico)
+- ~~`docs/_arquivo/ebook/TODO.md`~~ (removido)
 - Ebook contém “sempre/nunca” em prosa técnica original — não migrar cegamente
 
 ## Validador

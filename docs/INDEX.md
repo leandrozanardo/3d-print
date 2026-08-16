@@ -85,7 +85,6 @@ Esta é a entrada humana da base canônica. Para agentes de IA, leia primeiro [A
 | [projeto/INDEX.md](projeto/INDEX.md) | Wiki operacional EN A1 Mini (migração faseada) |
 | [ebook/INDEX.md](ebook/INDEX.md) | Guia Maker CC BY-SA 4.0 |
 | [printers/INDEX.md](printers/INDEX.md) | Manuais convertidos |
-| [_arquivo/README.md](_arquivo/README.md) | Originais — não editar |
 
 ## Princípios
 

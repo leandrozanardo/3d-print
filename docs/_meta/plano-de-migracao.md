@@ -48,8 +48,8 @@ tags: ["migration"]
 | `projeto/qualidade.../elephant-foot-e-primeira-camada.md` | `10-processo.../fff/primeira-camada.md` | rewrite + split later elephant-foot | **primeira camada feita** |
 | `projeto/troubleshooting/warping.md` | `12-problemas.../fff/empenamento.md` | rewrite-with-sources | **feito vertical slice** |
 | `projeto/**` restante | taxonomia 01–23 | rewrite/move faseado | pending |
-| `ebook/**` | `_arquivo` navegação + fontes derivadas | archive (nav) | pending policy use |
-| `_arquivo/**` | permanece | archive | keep |
+| `ebook/**` | navegação + fontes derivadas | archive (nav) | pending policy use |
+| `_arquivo/**` | removido | — | deleted |
 | `printers/**` | `21` + `22` | keep-and-enrich | pending |
 | `context.md` | fora do KB AM | keep (ops) | n/a |
 | `superpowers/**` | fora do KB AM | keep | n/a |

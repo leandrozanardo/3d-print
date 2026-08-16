@@ -15,7 +15,7 @@ Copy this folder to `docs/printers/<printer-id>/` when onboarding a new machine.
 
 Move original PDFs/binaries to:
 
-`docs/_arquivo/printers/<printer-id>/`
+`docs/printers/<printer-id>/` (binary archives; do not reintroduce `docs/_arquivo/`)
 
 ## Project integration checklist
 

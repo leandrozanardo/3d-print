@@ -1,7 +1,7 @@
 # A1 Mini — Quick Start — standalone (no AMS)
 
 > **Hardware:** Bambu Lab A1 Mini  
-> **Archived PDF:** [`docs/_arquivo/printers/A1mini/a1-mini-quick-start-guide-unidade.pdf`](../../_arquivo/printers/A1mini/a1-mini-quick-start-guide-unidade.pdf)  
+> **Nota:** PDF arquivado removido com `docs/_arquivo/`.  
 > **Official wiki:** https://wiki.bambulab.com/en/a1-mini/manual  
 > **Conversion note:** Adobe Illustrator PDF (vector text); `pypdf` text layer empty — recovered via OCR. Original document language preserved in extracted body.
 

@@ -17,7 +17,7 @@
 
 **Risks:** IDE locks on rename; path drift.
 
-**Rollback:** keep `_arquivo/` untouched until MD validated.
+**Rollback:** `_arquivo/` was deleted; keep ebook Markdown validated before further conversion.
 
 **Evidence:** `pytest` green; `python -m core --help` works.
 

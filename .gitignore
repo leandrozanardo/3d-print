@@ -34,7 +34,7 @@ Desktop.ini
 *.pem
 credentials.json
 
-# Local archive assets (keep on disk; never version)
+# Deleted local archive — do not reintroduce
 docs/_arquivo/
 
 # Oversized ebook binaries kept local-only after history purge

@@ -62,7 +62,7 @@ Este diretório governa a construção e manutenção de `docs/`. Não contém r
 
 - `docs/projeto/` — wiki operacional A1 Mini (EN), permanece ativa até migração faseada
 - `docs/ebook/` — Guia Maker (CC BY-SA 4.0), não é navegação canônica nova
-- `docs/_arquivo/` — originais AsciiDoc/PDFs; não editar
+- ~~`docs/_arquivo/`~~ — removido do repositório (não reintroduzir)
 - `docs/printers/` — registry de manuais convertidos
 
 Ver [plano-de-migracao.md](plano-de-migracao.md).

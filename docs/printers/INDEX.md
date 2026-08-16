@@ -19,7 +19,7 @@ Add a new printer by copying [`_TEMPLATE/`](_TEMPLATE/README.md) to `docs/printe
 ## Conventions
 
 1. One folder per printer under `docs/printers/<id>/`
-2. Local manuals/Quick Starts live in that folder; binaries in `docs/_arquivo/printers/<id>/`
+2. Local manuals/Quick Starts live in that folder (binary archives previously under `docs/_arquivo/printers/<id>/` were removed)
 3. Process knowledge that is **printer-specific** stays under `docs/projeto/hardware/` with clear printer tags, or under `docs/projeto/perfis-<printer>/`
 4. **Generic** FFF knowledge stays in geometry / slicing / materials / troubleshooting
 5. Playbook must name the active printer explicitly
