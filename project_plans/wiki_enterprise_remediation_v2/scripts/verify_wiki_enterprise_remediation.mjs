@@ -57,6 +57,7 @@ const RULE = {
   FORBIDDEN_HEURISTICA: "FORBIDDEN_HEURISTICA",
   TROUBLESHOOTING_SOURCES: "TROUBLESHOOTING_SOURCES",
   DUP_PRINTER_PARAGRAPH: "DUP_PRINTER_PARAGRAPH",
+  RESEARCH_LEDGER: "RESEARCH_LEDGER",
 };
 
 function stripQuotes(s) {
@@ -538,6 +539,56 @@ export function verifyDocs(docsRoot, options = {}) {
         `troubleshooting page '${p.fm.id || p.rel}' must have non-empty sources`
       );
     }
+  }
+
+  // --- RESEARCH_LEDGER: reject placeholder / non-http URLs in url-ledger.jsonl ---
+  const ledgerPath = path.join(
+    WORKTREE_ROOT,
+    "project_plans/wiki_enterprise_remediation_v2/research/url-ledger.jsonl",
+  );
+  if (fs.existsSync(ledgerPath)) {
+    const lines = fs
+      .readFileSync(ledgerPath, "utf8")
+      .split(/\n/)
+      .map((l) => l.trim())
+      .filter(Boolean);
+    if (lines.length === 0) {
+      push(RULE.RESEARCH_LEDGER, "research/url-ledger.jsonl", "ledger is empty");
+    }
+    for (const line of lines) {
+      let row;
+      try {
+        row = JSON.parse(line);
+      } catch {
+        push(RULE.RESEARCH_LEDGER, "research/url-ledger.jsonl", "invalid JSONL row");
+        continue;
+      }
+      const url = String(row.url || "");
+      const canon = String(row.canonical_url || "");
+      if (!/^https?:\/\//i.test(url) || !/^https?:\/\//i.test(canon)) {
+        push(
+          RULE.RESEARCH_LEDGER,
+          "research/url-ledger.jsonl",
+          `non-http or placeholder url/canonical_url for ${row.source_id || "unknown"}: ${url}`,
+        );
+      }
+      if (/see body|see-official|carried from prior/i.test(url)) {
+        push(
+          RULE.RESEARCH_LEDGER,
+          "research/url-ledger.jsonl",
+          `forbidden placeholder url for ${row.source_id || "unknown"}`,
+        );
+      }
+      if (!row.accessed_at || !row.access_status) {
+        push(
+          RULE.RESEARCH_LEDGER,
+          "research/url-ledger.jsonl",
+          `missing accessed_at/access_status for ${row.source_id || "unknown"}`,
+        );
+      }
+    }
+  } else {
+    push(RULE.RESEARCH_LEDGER, "research/url-ledger.jsonl", "ledger file missing");
   }
 
   // --- DUP_PRINTER_PARAGRAPH ---

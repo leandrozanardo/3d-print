@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-08-16T07:40:08.406Z",
+  "probed": true,
+  "printers": 354,
+  "ledger_rows": 411,
+  "unique_urls": 130,
+  "coverage": {
+    "cataloged": 310,
+    "documented": 43,
+    "troubleshooting-mapped": 1
+  },
+  "access_status_counts": {
+    "FOUND_AND_CHECKED": 297,
+    "ACCESS_BLOCKED_WITH_EVIDENCE": 114
+  },
+  "http_status_sample": {
+    "200": 100,
+    "403": 3,
+    "429": 18,
+    "500": 1,
+    "null": 8
+  },
+  "fake_placeholder_urls": 0
+}
