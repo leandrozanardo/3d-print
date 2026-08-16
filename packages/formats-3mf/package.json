@@ -12,13 +12,14 @@
   },
   "dependencies": {
     "@fix-my-print/contracts": "workspace:*",
-    "adm-zip": "0.5.16",
-    "fast-xml-parser": "5.2.5"
+    "fast-xml-parser": "5.2.5",
+    "fflate": "0.8.2"
   },
   "devDependencies": {
     "@types/adm-zip": "0.5.7",
     "@types/jest": "30.0.0",
     "@types/node": "24.2.0",
+    "adm-zip": "0.5.16",
     "jest": "30.0.5",
     "ts-jest": "29.4.1",
     "typescript": "5.9.2"

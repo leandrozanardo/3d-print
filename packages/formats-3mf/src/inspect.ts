@@ -26,7 +26,7 @@ export interface ThreeMfInspectLimits extends ZipOpenLimits {
 
 export const DEFAULT_THREEMF_LIMITS: ThreeMfInspectLimits = {
   ...DEFAULT_ZIP_LIMITS,
-  maxXmlBytes: 16 * 1024 * 1024,
+  maxXmlBytes: 64 * 1024 * 1024,
   maxXmlDepth: 64,
   maxMembersListed: 200,
   maxMetadataNotes: 50,

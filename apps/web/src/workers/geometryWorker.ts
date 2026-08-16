@@ -1,15 +1,14 @@
 /// <reference lib="webworker" />
 
 import { Buffer } from "buffer";
-import { detectFormat, parseMesh } from "@fix-my-print/formats";
-import { PureTsGeometryAdapter } from "@fix-my-print/geometry";
 import {
   isGeometryWorkerRequest,
   type GeometryProgressStage,
   type GeometryWorkerResponse,
 } from "./protocol";
+import { inspectModelBytes } from "./inspectModel";
 
-// formats parsers expect Node Buffer in the browser worker bundle
+// formats / 3mf parsers expect Node Buffer in the browser worker bundle
 (globalThis as unknown as { Buffer: typeof Buffer }).Buffer = Buffer;
 
 declare const self: DedicatedWorkerGlobalScope;
@@ -68,41 +67,22 @@ async function handleInspect(
 
   postProgress(requestId, "detect", 0.15, "detect");
   const view = new Uint8Array(bytes);
-  const detected = detectFormat(view);
   throwIfCancelled(requestId);
 
   postProgress(requestId, "parse", 0.45, "parse");
-  const parsed = parseMesh(view);
+  postProgress(requestId, "inspect", 0.75, "inspect");
+  const result = inspectModelBytes(fileName, view);
   throwIfCancelled(requestId);
 
-  postProgress(requestId, "inspect", 0.75, "inspect");
-  // Browser worker uses topology-complete PureTs adapter (real metrics).
-  // Node/CLI production path uses ManifoldGeometryAdapter (WASM).
-  const geometry = new PureTsGeometryAdapter();
-  try {
-    const facts = geometry.inspect(parsed.mesh);
-    throwIfCancelled(requestId);
-
-    postProgress(requestId, "done", 1, "done");
-    post({
-      type: "inspectResult",
-      requestId,
-      ok: true,
-      fileName,
-      byteLength: bytes.byteLength,
-      format: parsed.format || detected,
-      vertexCount: facts.vertexCount,
-      faceCount: facts.faceCount,
-      bounds: facts.bounds,
-      watertight: facts.watertight,
-      area: facts.area,
-      volume: facts.volume,
-      issues: facts.issues,
-      limitations: facts.limitations,
-    });
-  } finally {
-    geometry.dispose();
-  }
+  postProgress(requestId, "done", 1, "done");
+  post({
+    type: "inspectResult",
+    requestId,
+    ok: true,
+    fileName,
+    byteLength: bytes.byteLength,
+    ...result,
+  });
 }
 
 self.onmessage = (event: MessageEvent<unknown>) => {

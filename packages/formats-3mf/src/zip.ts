@@ -1,4 +1,4 @@
-import AdmZip from "adm-zip";
+import { unzipSync } from "fflate";
 import { createEngineError, EngineException } from "@fix-my-print/contracts";
 
 export interface ZipOpenLimits {
@@ -8,9 +8,9 @@ export interface ZipOpenLimits {
 }
 
 export const DEFAULT_ZIP_LIMITS: ZipOpenLimits = {
-  maxEntries: 256,
-  maxUncompressedBytes: 64 * 1024 * 1024,
-  maxCompressionRatio: 100,
+  maxEntries: 512,
+  maxUncompressedBytes: 128 * 1024 * 1024,
+  maxCompressionRatio: 200,
 };
 
 export interface ZipMember {
@@ -28,67 +28,93 @@ export function isUnsafeEntryPath(entryPath: string): boolean {
   return parts.some((p) => p === ".." || p === "");
 }
 
+function toBuffer(data: Uint8Array): Buffer {
+  return Buffer.from(data.buffer, data.byteOffset, data.byteLength);
+}
+
 /**
- * Open a ZIP/3MF buffer read-only: list members after policy checks.
+ * Open a ZIP/3MF buffer read-only using fflate (works in Node and browser workers).
  * Does not extract to disk.
  */
 export function openZipReadOnly(
   buffer: Buffer | Uint8Array,
   limits: ZipOpenLimits = DEFAULT_ZIP_LIMITS,
 ): { members: ZipMember[]; readMember(path: string): Buffer } {
-  const zip = new AdmZip(Buffer.from(buffer));
-  const entries = zip.getEntries();
+  const input = buffer instanceof Uint8Array ? buffer : Uint8Array.from(buffer);
 
-  if (entries.length > limits.maxEntries) {
+  const members: ZipMember[] = [];
+  let totalUncompressed = 0;
+  let entryCount = 0;
+
+  let files: Record<string, Uint8Array>;
+  try {
+    files = unzipSync(input, {
+      filter(file) {
+        const name = file.name.replace(/\\/g, "/");
+        if (name.endsWith("/")) {
+          return false;
+        }
+        entryCount += 1;
+        if (entryCount > limits.maxEntries) {
+          throw new EngineException(
+            createEngineError("ARCHIVE_BOMB_RISK", "too many zip entries", {
+              context: { count: entryCount, maxEntries: limits.maxEntries },
+            }),
+          );
+        }
+        if (isUnsafeEntryPath(name)) {
+          throw new EngineException(
+            createEngineError(
+              "REPO_BOUNDARY_VIOLATION",
+              `unsafe zip entry path: ${name}`,
+              { retryable: false },
+            ),
+          );
+        }
+        const compressed = file.size;
+        const uncompressed = file.originalSize;
+        if (uncompressed > 0 && compressed > 0) {
+          const ratio = uncompressed / compressed;
+          if (ratio > limits.maxCompressionRatio) {
+            throw new EngineException(
+              createEngineError("ARCHIVE_BOMB_RISK", "compression ratio exceeded", {
+                context: { path: name, ratio },
+              }),
+            );
+          }
+        }
+        totalUncompressed += uncompressed;
+        if (totalUncompressed > limits.maxUncompressedBytes) {
+          throw new EngineException(
+            createEngineError("ARCHIVE_BOMB_RISK", "uncompressed size exceeded", {
+              context: { totalUncompressed },
+            }),
+          );
+        }
+        members.push({
+          path: name,
+          compressedSize: compressed,
+          uncompressedSize: uncompressed,
+        });
+        return true;
+      },
+    });
+  } catch (err) {
+    if (err instanceof EngineException) {
+      throw err;
+    }
     throw new EngineException(
-      createEngineError("ARCHIVE_BOMB_RISK", "too many zip entries", {
-        context: { count: entries.length, maxEntries: limits.maxEntries },
-      }),
+      createEngineError(
+        "MESH_PARSE_FAILED",
+        `Not a valid ZIP/3MF container: ${err instanceof Error ? err.message : String(err)}`,
+        { retryable: false },
+      ),
     );
   }
 
-  let totalUncompressed = 0;
-  const members: ZipMember[] = [];
-
-  for (const entry of entries) {
-    if (entry.isDirectory) {
-      continue;
-    }
-    const entryPath = entry.entryName;
-    if (isUnsafeEntryPath(entryPath)) {
-      throw new EngineException(
-        createEngineError(
-          "REPO_BOUNDARY_VIOLATION",
-          `unsafe zip entry path: ${entryPath}`,
-          { retryable: false },
-        ),
-      );
-    }
-    const compressed = entry.header.compressedSize;
-    const uncompressed = entry.header.size;
-    if (uncompressed > 0 && compressed > 0) {
-      const ratio = uncompressed / compressed;
-      if (ratio > limits.maxCompressionRatio) {
-        throw new EngineException(
-          createEngineError("ARCHIVE_BOMB_RISK", "compression ratio exceeded", {
-            context: { path: entryPath, ratio },
-          }),
-        );
-      }
-    }
-    totalUncompressed += uncompressed;
-    if (totalUncompressed > limits.maxUncompressedBytes) {
-      throw new EngineException(
-        createEngineError("ARCHIVE_BOMB_RISK", "uncompressed size exceeded", {
-          context: { totalUncompressed },
-        }),
-      );
-    }
-    members.push({
-      path: entryPath.replace(/\\/g, "/"),
-      compressedSize: compressed,
-      uncompressedSize: uncompressed,
-    });
+  const byPath = new Map<string, Uint8Array>();
+  for (const [rawPath, data] of Object.entries(files)) {
+    byPath.set(rawPath.replace(/\\/g, "/"), data);
   }
 
   return {
@@ -103,13 +129,13 @@ export function openZipReadOnly(
           ),
         );
       }
-      const entry = zip.getEntry(normalized);
-      if (!entry || entry.isDirectory) {
+      const data = byPath.get(normalized);
+      if (!data) {
         throw new EngineException(
           createEngineError("MESH_PARSE_FAILED", `member not found: ${normalized}`),
         );
       }
-      return entry.getData();
+      return toBuffer(data);
     },
   };
 }

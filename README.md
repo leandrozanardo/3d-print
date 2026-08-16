@@ -13,13 +13,25 @@ Knowledge base and toolkit for 3D printing (product **fix-my-print**).
 ## Node (only operational runtime)
 
 ```text
+START.cmd
+```
+
+Or:
+
+```text
+npx --yes pnpm@10.12.1 start
+```
+
+Then open http://127.0.0.1:5173/
+
+Other commands:
+
+```text
 npx --yes pnpm@10.12.1 install
 npx --yes pnpm@10.12.1 test
 npx --yes pnpm@10.12.1 run typecheck
 npx --yes pnpm@10.12.1 run build:web
 npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js help
-npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --strict
-npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js inspect-mesh ../../packages/formats/fixtures/cube.stl --json
 ```
 
 ## Safety

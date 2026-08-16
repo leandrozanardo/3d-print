@@ -9,6 +9,10 @@ const repoRoot = path.resolve(fileURLToPath(new URL("../..", import.meta.url)));
 const workspaceSrc = {
   "@fix-my-print/contracts": path.join(repoRoot, "packages/contracts/src/index.ts"),
   "@fix-my-print/formats": path.join(repoRoot, "packages/formats/src/index.ts"),
+  "@fix-my-print/formats-3mf": path.join(
+    repoRoot,
+    "packages/formats-3mf/src/index.ts",
+  ),
   "@fix-my-print/geometry": path.join(repoRoot, "packages/geometry/src/index.ts"),
   "@fix-my-print/engine": path.join(repoRoot, "packages/engine/src/index.ts"),
 };
@@ -23,7 +27,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["buffer"],
+    include: ["buffer", "fflate", "fast-xml-parser"],
   },
   worker: {
     format: "es",

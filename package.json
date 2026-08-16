@@ -12,6 +12,8 @@
     "build": "pnpm -r --if-present run build",
     "build:packages": "pnpm -r --filter \"./packages/**\" --if-present run build",
     "build:web": "pnpm --filter @fix-my-print/web run build",
+    "start": "pnpm --filter @fix-my-print/web run dev -- --host 127.0.0.1 --port 5173",
+    "dev": "pnpm start",
     "test": "pnpm -r --if-present run test",
     "test:unit": "pnpm -r --if-present run test",
     "test:integration": "pnpm --filter @fix-my-print/storage run test",

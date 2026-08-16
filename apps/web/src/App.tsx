@@ -47,7 +47,9 @@ export default function App() {
         setRatio(1);
         setMessage(`Inspected ${data.fileName} (${data.format})`);
         setViewerLabel(
-          `${data.fileName} — ${data.format}, ${data.vertexCount} verts / ${data.faceCount} faces, bounds min=${data.bounds.min.join(",")} max=${data.bounds.max.join(",")}`,
+          data.format === "3mf"
+            ? `${data.fileName} — 3MF container, ${data.vertexCount} verts / ${data.faceCount} tris (mesh AABB not computed yet)`
+            : `${data.fileName} — ${data.format}, ${data.vertexCount} verts / ${data.faceCount} faces, bounds min=${data.bounds.min.join(",")} max=${data.bounds.max.join(",")}`,
         );
         return;
       }
@@ -109,9 +111,10 @@ export default function App() {
       <header className="hero">
         <h1>Fix My Print</h1>
         <p>
-          Browser shell — engine.ts={String(featureFlags.engine.ts.enabled)},
-          geometry.wasm={String(featureFlags.geometry.wasm.enabled)} (Manifold not wired;
-          PureTs inspect in worker), ai={isAiEnabled() ? "on" : "off"}
+          Browser shell — drop STL/OBJ/PLY/3MF. engine.ts=
+          {String(featureFlags.engine.ts.enabled)}, geometry.wasm=
+          {String(featureFlags.geometry.wasm.enabled)}, ai=
+          {isAiEnabled() ? "on" : "off"}
         </p>
       </header>
       <CapabilityDiagnostics report={capabilities} />
