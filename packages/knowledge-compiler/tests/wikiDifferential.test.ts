@@ -1,6 +1,6 @@
 import * as path from "node:path";
 
-import { validateWiki } from "@fix-my-print/knowledge-compiler";
+import { validateWiki } from "../src/index";
 
 const ROOT = path.resolve(__dirname, "../../..");
 const TODAY = new Date(Date.UTC(2026, 7, 16));

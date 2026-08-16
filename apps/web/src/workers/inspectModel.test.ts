@@ -64,7 +64,8 @@ describe("inspectModelBytes", () => {
     expect(result.format).toBe("3mf");
     expect(result.vertexCount).toBe(3);
     expect(result.faceCount).toBe(1);
-    expect(result.limitations).toContain("3mf_container_inspect");
+    expect(result.limitations).toContain("geometry_flattened_from_3mf");
+    expect(result.bounds.max[0] - result.bounds.min[0]).toBeGreaterThan(0);
   });
 
   it("inspects 3MF by ZIP magic without extension", () => {

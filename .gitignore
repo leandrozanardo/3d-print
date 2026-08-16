@@ -61,3 +61,14 @@ coverage/
 *.tsbuildinfo
 npm-debug.log*
 .pnpm-store/
+
+# Playwright local output
+apps/web/test-results/
+playwright-report/
+
+
+# Regenerable Playwright HTML report under artifacts
+artifacts/product-recovery/playwright/
+artifacts/product-recovery/downloads/*.3mf
+artifacts/product-recovery/validation/*.3mf
+

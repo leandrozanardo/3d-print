@@ -1,6 +1,13 @@
 import type { RawMesh } from "@fix-my-print/formats";
 
 import { type Bounds } from "./bounds";
+import {
+  applyMatrix4,
+  linearDeterminant,
+  rotation90Matrix,
+  toMatrix4,
+  type Matrix4,
+} from "./matrix";
 import { analyzeTopology, type TopologyMetrics } from "./topology";
 
 /** Re-export RawMesh for GeometryFacts consumers. */
@@ -9,6 +16,18 @@ export type { Bounds } from "./bounds";
 export { computeBounds } from "./bounds";
 export type { TopologyMetrics } from "./topology";
 export { analyzeTopology } from "./topology";
+export type { Matrix4 } from "./matrix";
+export {
+  IDENTITY_MATRIX4,
+  applyMatrix4,
+  isOrthogonalLinear,
+  linearDeterminant,
+  multiplyMatrix4,
+  rotation90Matrix,
+  snapMatrix4,
+  toMatrix4,
+  translationMatrix,
+} from "./matrix";
 
 /** Full geometry inspection facts (P1/P2). */
 export interface GeometryFacts {
@@ -31,7 +50,9 @@ export interface GeometryFacts {
 
 export type TransformPlan =
   | { type: "translate"; dx: number; dy: number; dz: number }
-  | { type: "rotate90"; axis: "x" | "y" | "z"; turns: number };
+  | { type: "rotate90"; axis: "x" | "y" | "z"; turns: number }
+  /** Row-major affine matrix with 12 (3x4) or 16 (4x4) values. */
+  | { type: "matrix"; m: readonly number[] };
 
 export type RepairPlan = {
   mergeVertices?: boolean;
@@ -63,61 +84,30 @@ export function topologyToFacts(metrics: TopologyMetrics): GeometryFacts {
   };
 }
 
-function rotatePoint(
-  x: number,
-  y: number,
-  z: number,
-  axis: "x" | "y" | "z",
-  turns: number,
-): [number, number, number] {
-  const t = ((turns % 4) + 4) % 4;
-  let px = x,
-    py = y,
-    pz = z;
-  for (let i = 0; i < t; i++) {
-    if (axis === "x") {
-      const ny = -pz;
-      const nz = py;
-      py = ny;
-      pz = nz;
-    } else if (axis === "y") {
-      const nx = pz;
-      const nz = -px;
-      px = nx;
-      pz = nz;
-    } else {
-      const nx = -py;
-      const ny = px;
-      px = nx;
-      py = ny;
-    }
+/** Resolve any transform plan into a single row-major 4x4 affine matrix. */
+export function transformPlanToMatrix(plan: TransformPlan): number[] {
+  if (plan.type === "translate") {
+    return [1, 0, 0, plan.dx, 0, 1, 0, plan.dy, 0, 0, 1, plan.dz, 0, 0, 0, 1];
   }
-  return [px, py, pz];
+  if (plan.type === "rotate90") {
+    return rotation90Matrix(plan.axis, plan.turns);
+  }
+  return toMatrix4(plan.m);
 }
 
 export function transformMesh(mesh: RawMesh, plan: TransformPlan): RawMesh {
+  const matrix: Matrix4 = transformPlanToMatrix(plan);
   const vertices = new Float64Array(mesh.vertices);
-  if (plan.type === "translate") {
-    for (let i = 0; i < vertices.length; i += 3) {
-      vertices[i]! += plan.dx;
-      vertices[i + 1]! += plan.dy;
-      vertices[i + 2]! += plan.dz;
-    }
-  } else {
-    for (let i = 0; i < vertices.length; i += 3) {
-      const [x, y, z] = rotatePoint(
-        vertices[i]!,
-        vertices[i + 1]!,
-        vertices[i + 2]!,
-        plan.axis,
-        plan.turns,
-      );
-      vertices[i] = x;
-      vertices[i + 1] = y;
-      vertices[i + 2] = z;
-    }
+  for (let i = 0; i < vertices.length; i += 3) {
+    const [x, y, z] = applyMatrix4(matrix, vertices[i]!, vertices[i + 1]!, vertices[i + 2]!);
+    vertices[i] = x;
+    vertices[i + 1] = y;
+    vertices[i + 2] = z;
   }
-  return { vertices, faces: mesh.faces.map((f) => [...f]) };
+  // A negative determinant mirrors the solid; flipping winding keeps normals outward.
+  const flipWinding = linearDeterminant(matrix) < 0;
+  const faces = mesh.faces.map((f) => (flipWinding ? [...f].reverse() : [...f]));
+  return { vertices, faces };
 }
 
 export function exportBinaryStl(mesh: RawMesh): Uint8Array {
@@ -125,7 +115,8 @@ export function exportBinaryStl(mesh: RawMesh): Uint8Array {
   const buf = new ArrayBuffer(84 + triCount * 50);
   const u8 = new Uint8Array(buf);
   const view = new DataView(buf);
-  const header = Buffer.from("fix-my-print export", "ascii");
+  // Avoid Node Buffer in browser workers — write ASCII header via TextEncoder.
+  const header = new TextEncoder().encode("fix-my-print export");
   u8.set(header.subarray(0, Math.min(80, header.length)), 0);
   view.setUint32(80, triCount, true);
 

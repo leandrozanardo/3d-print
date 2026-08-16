@@ -1,0 +1,5 @@
+﻿ apps/web/package.json   |  1 +
+ apps/web/src/App.tsx    | 44 +++++++++++++++++++++++++++++++++++++++-----
+ apps/web/vite.config.ts |  3 ++-
+ pnpm-lock.yaml          |  3 +++
+ 4 files changed, 45 insertions(+), 6 deletions(-)

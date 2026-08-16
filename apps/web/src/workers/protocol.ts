@@ -1,93 +1,138 @@
-/**
- * Browser geometry-worker protocol.
- * Keep transferable ArrayBuffer inspect payloads local to the web app;
- * versioned shape mirrors contracts AnalysisResult facts without stub flags.
- */
+/** Versioned geometry worker protocol for full model processing. */
 
-export const GEOMETRY_WORKER_PROTOCOL_VERSION = 1 as const;
+export const GEOMETRY_WORKER_PROTOCOL_VERSION = 2 as const;
 
-export type GeometryBounds = {
-  min: [number, number, number];
-  max: [number, number, number];
+export type ProcessStage =
+  | "validating"
+  | "opening-container"
+  | "parsing-model"
+  | "resolving-components"
+  | "building-geometry"
+  | "analyzing-topology"
+  | "evaluating-orientations"
+  | "applying-optimization"
+  | "serializing"
+  | "validating-output"
+  | "preparing-preview"
+  | "completed";
+
+export type WorkerPrinterProfile = {
+  id: string;
+  name: string;
+  bedWidthMm: number;
+  bedDepthMm: number;
+  maxHeightMm: number;
 };
 
-export type GeometryInspectRequest = {
+export type WorkerOptimizationGoal = "balanced" | "minimize-height" | "maximize-bed-contact";
+
+export type ProcessRequest = {
   schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
-  type: "inspect";
-  requestId: string;
+  type: "process";
+  jobId: string;
   fileName: string;
   bytes: ArrayBuffer;
+  printer: WorkerPrinterProfile;
+  goal: WorkerOptimizationGoal;
 };
 
-export type GeometryCancelRequest = {
+export type CancelRequest = {
   schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
   type: "cancel";
-  requestId: string;
+  jobId: string;
 };
 
-export type GeometryWorkerRequest = GeometryInspectRequest | GeometryCancelRequest;
+export type WorkerRequest = ProcessRequest | CancelRequest;
 
-export type GeometryProgressStage = "detect" | "parse" | "inspect" | "done";
-
-export type GeometryProgressEvent = {
+export type ProgressEvent = {
+  schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
   type: "progress";
-  requestId: string;
-  stage: GeometryProgressStage;
+  jobId: string;
+  stage: ProcessStage | string;
   ratio: number;
   message: string;
 };
 
-export type GeometryInspectResult = {
-  type: "inspectResult";
-  requestId: string;
-  ok: true;
-  fileName: string;
-  byteLength: number;
-  format: string;
-  vertexCount: number;
-  faceCount: number;
-  bounds: GeometryBounds;
-  watertight: boolean;
-  area: number | null;
-  volume: number | null;
-  issues: string[];
-  limitations: string[];
+export type PreviewReadyEvent = {
+  schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
+  type: "previewReady";
+  jobId: string;
+  positions: Float32Array;
+  indices: Uint32Array;
+  bounds: { min: [number, number, number]; max: [number, number, number] };
 };
 
-export type GeometryErrorResult = {
-  type: "error";
-  requestId: string;
-  ok: false;
+export type ProcessSuccessEvent = {
+  schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
+  type: "processSuccess";
+  jobId: string;
+  fileName: string;
+  outputFileName: string;
+  format: "3mf" | "stl";
+  mimeType: string;
+  bytes: ArrayBuffer;
+  sha256: string;
+  before: {
+    vertexCount: number;
+    triangleCount: number;
+    dimensionsMm: [number, number, number];
+    watertight: boolean | "unknown";
+    bounds: { min: [number, number, number]; max: [number, number, number] };
+  };
+  after: {
+    vertexCount: number;
+    triangleCount: number;
+    dimensionsMm: [number, number, number];
+    watertight: boolean | "unknown";
+    bounds: { min: [number, number, number]; max: [number, number, number] };
+  };
+  optimization: {
+    algorithm: string;
+    orientationId: string;
+    scoreBefore: number;
+    scoreAfter: number;
+    alreadyOptimal: boolean;
+  };
+  preservation: {
+    preserved: string[];
+    removed: string[];
+    policy: string;
+    notes: string[];
+  };
+  warnings: { code: string; message: string }[];
+  durationMs: number;
+  preview: {
+    positions: Float32Array;
+    indices: Uint32Array;
+  };
+};
+
+export type ProcessFailureEvent = {
+  schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
+  type: "processFailure";
+  jobId: string;
   code: string;
   message: string;
+  stage: string;
+  retryable: boolean;
 };
 
-export type GeometryWorkerResponse =
-  | GeometryProgressEvent
-  | GeometryInspectResult
-  | GeometryErrorResult;
+export type CancelledEvent = {
+  schemaVersion: typeof GEOMETRY_WORKER_PROTOCOL_VERSION;
+  type: "cancelled";
+  jobId: string;
+};
 
-function isNonEmptyString(value: unknown): value is string {
-  return typeof value === "string" && value.length > 0;
-}
+export type WorkerResponse =
+  | ProgressEvent
+  | PreviewReadyEvent
+  | ProcessSuccessEvent
+  | ProcessFailureEvent
+  | CancelledEvent;
 
-export function isGeometryWorkerRequest(value: unknown): value is GeometryWorkerRequest {
-  if (value === null || typeof value !== "object") {
-    return false;
-  }
-  const msg = value as Record<string, unknown>;
-  if (msg.schemaVersion !== GEOMETRY_WORKER_PROTOCOL_VERSION) {
-    return false;
-  }
-  if (msg.type === "cancel") {
-    return isNonEmptyString(msg.requestId);
-  }
-  if (msg.type === "inspect") {
-    return (
-      isNonEmptyString(msg.requestId) &&
-      isNonEmptyString(msg.fileName) &&
-      msg.bytes instanceof ArrayBuffer
-    );
-  }
-  return false;
+export function isWorkerRequest(value: unknown): value is WorkerRequest {
+  if (typeof value !== "object" || value === null) return false;
+  const rec = value as Record<string, unknown>;
+  if (rec.schemaVersion !== GEOMETRY_WORKER_PROTOCOL_VERSION) return false;
+  return rec.type === "process" || rec.type === "cancel";
 }

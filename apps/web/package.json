@@ -9,24 +9,38 @@
     "build": "tsc -p tsconfig.json --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:e2e": "playwright test",
+    "test:e2e:private": "playwright test e2e/acceptance/one-piece-3mf.spec.ts --project=chromium",
+    "test:e2e:public": "playwright test e2e/acceptance/stl.spec.ts e2e/acceptance/public-3mf.spec.ts",
+    "test:network": "playwright test e2e/acceptance/network-idle.spec.ts --project=chromium",
+    "test:a11y": "playwright test e2e/acceptance/accessibility.spec.ts --project=chromium",
+    "test:repeatability": "playwright test e2e/acceptance/repeatability.spec.ts --project=chromium"
   },
   "dependencies": {
+    "@fix-my-print/domain": "workspace:*",
     "@fix-my-print/engine": "workspace:*",
     "@fix-my-print/formats": "workspace:*",
     "@fix-my-print/formats-3mf": "workspace:*",
     "@fix-my-print/geometry": "workspace:*",
+    "@fix-my-print/optimizer": "workspace:*",
     "buffer": "6.0.3",
+    "fflate": "0.8.2",
     "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react-dom": "19.1.1",
+    "three": "0.179.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.54.2",
     "@types/adm-zip": "0.5.7",
     "@types/react": "19.1.10",
     "@types/react-dom": "19.1.7",
+    "@types/three": "0.179.0",
     "@vitejs/plugin-react": "5.0.0",
     "adm-zip": "0.5.16",
     "jsdom": "26.1.0",
+    "serve": "14.2.4",
     "typescript": "5.9.2",
     "vite": "7.1.2",
     "vitest": "3.2.4"

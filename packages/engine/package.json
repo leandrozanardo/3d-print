@@ -13,7 +13,9 @@
   "dependencies": {
     "@fix-my-print/contracts": "workspace:*",
     "@fix-my-print/formats": "workspace:*",
-    "@fix-my-print/geometry": "workspace:*"
+    "@fix-my-print/formats-3mf": "workspace:*",
+    "@fix-my-print/geometry": "workspace:*",
+    "@fix-my-print/optimizer": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "30.0.0",

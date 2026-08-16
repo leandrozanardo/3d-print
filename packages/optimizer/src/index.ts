@@ -3,14 +3,23 @@ import {
   buildParetoSet,
   createCandidate,
   type Candidate,
+  type CandidateScores,
   type ParetoSet,
 } from "@fix-my-print/domain";
 import type { RawMesh } from "@fix-my-print/formats";
-import {
-  PureTsGeometryAdapter,
-  type Bounds,
-  type GeometryPort,
-} from "@fix-my-print/geometry";
+import { PureTsGeometryAdapter, type GeometryPort } from "@fix-my-print/geometry";
+
+import { computeOrientationMetrics, type OrientationMetrics } from "./metrics";
+import { ORIENTATION_SPECS, type OrientationSpec } from "./orientations";
+
+export type { OrientationMetrics } from "./metrics";
+export { computeOrientationMetrics } from "./metrics";
+export type { OrientationSpec, UpAxisLabel, YawDegrees } from "./orientations";
+export {
+  ORIENTATION_COUNT,
+  ORIENTATION_SPECS,
+  findOrientationSpec,
+} from "./orientations";
 
 export interface BuildVolume {
   x: number;
@@ -18,46 +27,98 @@ export interface BuildVolume {
   z: number;
 }
 
-export interface OrientationSpec {
-  id: string;
-  axis: "x" | "y" | "z";
-  turns: number;
-}
+/**
+ * Scoring contract version. All axes below are geometric proxies derived from
+ * the mesh; none of them come from a slicer.
+ */
+export const ORIENTATION_SCORE_VERSION = "orientation-v1";
 
-/** Finite deterministic orientation set (identity + 90° steps on principal axes). */
-export const ORIENTATION_SPECS: readonly OrientationSpec[] = [
-  { id: "identity", axis: "z", turns: 0 },
-  { id: "z90", axis: "z", turns: 1 },
-  { id: "z180", axis: "z", turns: 2 },
-  { id: "z270", axis: "z", turns: 3 },
-  { id: "x90", axis: "x", turns: 1 },
-  { id: "x180", axis: "x", turns: 2 },
-  { id: "y90", axis: "y", turns: 1 },
-  { id: "y180", axis: "y", turns: 2 },
-];
-
-function sizeOf(bounds: Bounds): [number, number, number] {
-  return [
-    bounds.max[0] - bounds.min[0],
-    bounds.max[1] - bounds.min[1],
-    bounds.max[2] - bounds.min[2],
-  ];
-}
+/** Fixed weights used to break Pareto ties deterministically. */
+export const DEFAULT_SELECTION_WEIGHTS: CandidateScores = {
+  printability: 0.3,
+  strength: 0.15,
+  quality: 0.1,
+  timeProxy: 0.15,
+  materialProxy: 0.15,
+  risk: 0.15,
+};
 
 /**
  * Axis-aligned fit after orientation: compare each transformed axis to the
  * matching printer axis (do not sort/permute axes).
  */
 export function fits(
-  size: [number, number, number],
+  size: readonly [number, number, number],
   volume: BuildVolume,
   clearance = 0,
 ): boolean {
   return (
-    size[0]! <= volume.x - clearance &&
-    size[1]! <= volume.y - clearance &&
-    size[2]! <= volume.z - clearance
+    size[0] <= volume.x - clearance &&
+    size[1] <= volume.y - clearance &&
+    size[2] <= volume.z - clearance
   );
+}
+
+/**
+ * Map geometric metrics to the objective vector (higher is better on all axes).
+ * Every axis is a proxy: `timeProxy`/`materialProxy` do not model a slicer.
+ */
+export function scoreOrientation(
+  metrics: OrientationMetrics,
+  hardConstraintOk: boolean,
+): CandidateScores {
+  const heightScore = 1 / (1 + Math.max(0, metrics.height));
+  const footprintScore = 1 / (1 + Math.max(0, metrics.footprintArea));
+  const contactScore = Math.min(1, Math.max(0, metrics.contactFraction));
+  const supportFreeScore = 1 - Math.min(1, Math.max(0, metrics.overhangFraction));
+  return {
+    printability: hardConstraintOk ? contactScore : 0,
+    strength: heightScore,
+    quality: footprintScore,
+    timeProxy: heightScore,
+    materialProxy: supportFreeScore,
+    risk: hardConstraintOk ? supportFreeScore : 0,
+  };
+}
+
+export interface OrientationCandidateDetail {
+  spec: OrientationSpec;
+  metrics: OrientationMetrics;
+  candidate: Candidate;
+  mesh: RawMesh;
+}
+
+/** Evaluate all 24 orientations and return candidates plus transformed meshes. */
+export function evaluateOrientations(
+  mesh: RawMesh,
+  buildVolume: BuildVolume,
+  geometry: GeometryPort = new PureTsGeometryAdapter(),
+): OrientationCandidateDetail[] {
+  return ORIENTATION_SPECS.map((spec) => {
+    const transformed = geometry.transform(mesh, { type: "matrix", m: spec.matrix });
+    const metrics = computeOrientationMetrics(transformed);
+    const hardConstraintOk = fits(metrics.size, buildVolume);
+    const scores = scoreOrientation(metrics, hardConstraintOk);
+    const candidate = createCandidate(
+      spec.id,
+      `orient:${spec.id}`,
+      scores,
+      hardConstraintOk,
+      {
+        up: spec.up,
+        yawDegrees: spec.yawDegrees,
+        height: metrics.height,
+        footprintArea: metrics.footprintArea,
+        contactFraction: metrics.contactFraction,
+        overhangFraction: metrics.overhangFraction,
+        scoreVersion: ORIENTATION_SCORE_VERSION,
+        scoreKind: "proxy",
+        timeIsProxy: true,
+        materialIsProxy: true,
+      },
+    );
+    return { spec, metrics, candidate, mesh: transformed };
+  });
 }
 
 export function generateOrientationCandidates(
@@ -65,43 +126,47 @@ export function generateOrientationCandidates(
   buildVolume: BuildVolume,
   geometry: GeometryPort = new PureTsGeometryAdapter(),
 ): Candidate[] {
-  const candidates: Candidate[] = [];
-  for (const spec of ORIENTATION_SPECS) {
-    const transformed =
-      spec.turns === 0
-        ? mesh
-        : geometry.transform(mesh, {
-            type: "rotate90",
-            axis: spec.axis,
-            turns: spec.turns,
-          });
-    const facts = geometry.inspect(transformed);
-    const size = sizeOf(facts.bounds);
-    const hardConstraintOk = fits(size, buildVolume);
-    const height = size[2]!;
-    const footprint = size[0]! * size[1]!;
-    // Scores are engineering proxies only — not slicer measurements.
-    const scores = {
-      printability: hardConstraintOk ? 1 / (1 + height) : 0,
-      strength: 1 / (1 + height),
-      quality: 1 / (1 + footprint),
-      timeProxy: 1 / (1 + height),
-      materialProxy: 1 / (1 + footprint),
-      risk: hardConstraintOk ? 1 : 0,
-    };
-    candidates.push(
-      createCandidate(spec.id, `orient:${spec.id}`, scores, hardConstraintOk, {
-        axis: spec.axis,
-        turns: spec.turns,
-        height,
-        footprint,
-        scoreKind: "proxy",
-        timeIsProxy: true,
-        materialIsProxy: true,
-      }),
-    );
+  return evaluateOrientations(mesh, buildVolume, geometry).map((d) => d.candidate);
+}
+
+export function weightedScore(
+  scores: CandidateScores,
+  weights: CandidateScores = DEFAULT_SELECTION_WEIGHTS,
+): number {
+  return (
+    scores.printability * weights.printability +
+    scores.strength * weights.strength +
+    scores.quality * weights.quality +
+    scores.timeProxy * weights.timeProxy +
+    scores.materialProxy * weights.materialProxy +
+    scores.risk * weights.risk
+  );
+}
+
+/**
+ * Deterministic winner: highest weighted score among feasible candidates,
+ * ties broken by ascending id so repeated runs agree.
+ */
+export function selectBestCandidate(
+  candidates: readonly Candidate[],
+  weights: CandidateScores = DEFAULT_SELECTION_WEIGHTS,
+): Candidate | null {
+  let best: Candidate | null = null;
+  let bestScore = -Infinity;
+  for (const candidate of candidates) {
+    if (!candidate.hardConstraintOk) {
+      continue;
+    }
+    const score = weightedScore(candidate.scores, weights);
+    if (
+      score > bestScore ||
+      (score === bestScore && best !== null && candidate.id.localeCompare(best.id) < 0)
+    ) {
+      best = candidate;
+      bestScore = score;
+    }
   }
-  return candidates;
+  return best;
 }
 
 export function paretoFrontierFromCandidates(

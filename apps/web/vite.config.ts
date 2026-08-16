@@ -8,16 +8,21 @@ const repoRoot = path.resolve(fileURLToPath(new URL("../..", import.meta.url)));
 /** Resolve workspace packages to TS sources so Vite/Rollup get real ESM named exports. */
 const workspaceSrc = {
   "@fix-my-print/contracts": path.join(repoRoot, "packages/contracts/src/index.ts"),
+  "@fix-my-print/domain": path.join(repoRoot, "packages/domain/src/index.ts"),
   "@fix-my-print/formats": path.join(repoRoot, "packages/formats/src/index.ts"),
   "@fix-my-print/formats-3mf": path.join(
     repoRoot,
     "packages/formats-3mf/src/index.ts",
   ),
   "@fix-my-print/geometry": path.join(repoRoot, "packages/geometry/src/index.ts"),
+  "@fix-my-print/optimizer": path.join(repoRoot, "packages/optimizer/src/index.ts"),
   "@fix-my-print/engine": path.join(repoRoot, "packages/engine/src/index.ts"),
 };
 
-/** COOP/COEP so local preview can prove crossOriginIsolated when needed. */
+/**
+ * Default hosting target is crossOriginIsolated=false (Lovable/static hosts).
+ * Do not set COOP/COEP here — product must work without SharedArrayBuffer.
+ */
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -27,7 +32,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["buffer", "fflate", "fast-xml-parser"],
+    include: ["buffer", "fflate", "three"],
   },
   worker: {
     format: "es",
@@ -35,16 +40,18 @@ export default defineConfig({
   define: {
     global: "globalThis",
   },
-  server: {
-    headers: {
-      "Cross-Origin-Opener-Policy": "same-origin",
-      "Cross-Origin-Embedder-Policy": "require-corp",
-    },
-  },
-  preview: {
-    headers: {
-      "Cross-Origin-Opener-Policy": "same-origin",
-      "Cross-Origin-Embedder-Policy": "require-corp",
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules/three")) {
+            return "three";
+          }
+          if (id.includes("ModelViewer")) {
+            return "viewer";
+          }
+        },
+      },
     },
   },
   test: {

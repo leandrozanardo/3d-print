@@ -1,0 +1,13 @@
+{
+  "policy": "geometry-only-core-3mf",
+  "removed": [
+    "VENDOR_CONFIGURATION",
+    "DERIVED_SLICE_DATA",
+    "GCODE_OR_TOOLPATH",
+    "THUMBNAIL"
+  ],
+  "notes": [
+    "Output is Core 3MF with effective geometry after orientation.",
+    "Re-slice before printing."
+  ]
+}

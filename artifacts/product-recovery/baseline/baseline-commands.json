@@ -1,0 +1,25 @@
+﻿{
+    "branch":  "main",
+    "statusShort":  [
+                        " M apps/web/package.json",
+                        " M apps/web/src/App.tsx",
+                        " M apps/web/vite.config.ts",
+                        " M pnpm-lock.yaml",
+                        "?? apps/web/src/components/InspectSummary.tsx"
+                    ],
+    "pythonTracked":  [
+
+                      ],
+    "root":  "D:/Projetos/3d-print",
+    "packageName":  "fix-my-print",
+    "pnpm":  "10.12.1",
+    "timestamp":  "2026-08-16T07:31:49.2400842Z",
+    "node":  "v24.13.0",
+    "original":  {
+                     "path":  "3ds/original/one+Piece.3mf",
+                     "sha256":  "5866bbb230db7fe3afe92981195431a52d67ba0a5d33babd26d2d1eb1989ab27",
+                     "size":  6844854
+                 },
+    "originMain":  "0b453c1c58ddb8374ec9bb0ab3d7ca0670dff015",
+    "head":  "b6d8a6b04a8313789ead1650cf3945f255cb8e40"
+}

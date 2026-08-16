@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-08-16T08:04:58.245Z",
+  "algorithm": "sha256",
+  "files": {
+    "project_plans/execution/product-recovery/ACCEPTANCE_CONTRACT.md": "1c56ec64afc2829ae925576cd0375451c08b2766c4f6289e65beef8cc12c5c52",
+    "apps/web/e2e/acceptance/one-piece-3mf.spec.ts": "99bdd91b943360af77a2d2d7e605555ce28abb09c12591e23c1bdb0d1b0ae0d3",
+    "apps/web/e2e/acceptance/public-3mf.spec.ts": "c4529032ecba4749fcaf744c5e60dcdf42d2d9d20911a0f68a06cccfb938665d",
+    "apps/web/e2e/acceptance/stl.spec.ts": "4c75e352ec92e3a8cbc762dcee9d59edabc7dc55c2f5475b190bc021f6890501",
+    "apps/web/e2e/acceptance/network-idle.spec.ts": "b7ce961f649b182d54351f16854f437934a38016aeee444a951780b26e2c67f3",
+    "apps/web/e2e/acceptance/error-recovery.spec.ts": "5759747a4087d6608022cd0c8046253fb1bb5193a6c4307a489ba3e65d673ccf",
+    "apps/web/e2e/acceptance/cancel.spec.ts": "f37b4ce715af59fabc27e255e4bfb82e5c2bb2ac83dfa75e5a3c69e24386d05e",
+    "apps/web/e2e/acceptance/offline.spec.ts": "d74ab012391565e76e2c96f6579236e249c155e82c1fbf4c679abe180cfe0a51",
+    "apps/web/e2e/acceptance/responsive.spec.ts": "bc28775890cc5b23ff79885087fcc5f9bed3e62bb12d490245ec7dc6a4ef0dda",
+    "apps/web/e2e/acceptance/accessibility.spec.ts": "c90308c951784b28c657c865cbc03a9837f71a3f799ea2858dbc9a28e640f7c9",
+    "apps/web/e2e/acceptance/repeatability.spec.ts": "36bd8aad83de8df54eb3747edaf61ce10ae9ca098e7ef128b68b44a5bea6191f",
+    "packages/formats-3mf/tests/acceptance/real-parse.test.ts": "cd0a3b09f60275c7cf4e1b8f0cbf9842d261e9a238158382534e784b2c576d8f",
+    "packages/formats-3mf/tests/acceptance/security.test.ts": "677a224b44c0f465604fac0591529d6745c2e0bd2c1f6ec72b9aea8154074131",
+    "packages/optimizer/tests/orientation-24.test.ts": "9001cbb62fd71f1b0416cdcc69ec12cfea52f8977954e37a431f011a7fae1244",
+    "packages/engine/tests/process-model.test.ts": "90a6304f258137f51916d5616c8c225f3a7e253aeb74edad07965c478f1143f6",
+    "scripts/create-acceptance-lock.mjs": "8967e3b0254981bd2f8a9608c916980414d8073c9c890537804374b3d6c199de",
+    "scripts/verify-acceptance-lock.mjs": "d5589b88ae96179e15c2a93c8f1ffa7a843c618b01f9d895b34afd01e92b88df"
+  }
+}

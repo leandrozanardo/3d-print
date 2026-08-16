@@ -2,7 +2,7 @@
   "name": "@fix-my-print/formats-3mf",
   "version": "0.0.0",
   "private": true,
-  "description": "Safe read-only 3MF Core inspection and ZIP open with path/bomb limits",
+  "description": "3MF Core parse, flatten, write, and validate (browser-safe, fflate)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fix-my-print/contracts": "workspace:*",
+    "@fix-my-print/geometry": "workspace:*",
     "fast-xml-parser": "5.2.5",
     "fflate": "0.8.2"
   },

@@ -1,8 +1,26 @@
 import { detectFormat, parseMesh } from "@fix-my-print/formats";
-import { inspect3mf } from "@fix-my-print/formats-3mf";
+import {
+  flattenThreeMf,
+  parseThreeMf,
+} from "@fix-my-print/formats-3mf";
 import { PureTsGeometryAdapter } from "@fix-my-print/geometry";
 
-import type { GeometryBounds, GeometryInspectResult } from "./protocol";
+export type GeometryBounds = {
+  min: [number, number, number];
+  max: [number, number, number];
+};
+
+export type InspectModelSuccess = {
+  format: string;
+  vertexCount: number;
+  faceCount: number;
+  bounds: GeometryBounds;
+  watertight: boolean | null;
+  area: number | null;
+  volume: number | null;
+  issues: string[];
+  limitations: string[];
+};
 
 function isZipMagic(buffer: Uint8Array): boolean {
   return (
@@ -21,47 +39,44 @@ function looksLike3mf(fileName: string, buffer: Uint8Array): boolean {
   return isZipMagic(buffer);
 }
 
-const UNKNOWN_BOUNDS: GeometryBounds = {
-  min: [0, 0, 0],
-  max: [0, 0, 0],
-};
-
-export type InspectModelSuccess = Omit<
-  GeometryInspectResult,
-  "type" | "requestId" | "ok" | "fileName" | "byteLength"
->;
-
 /**
- * Browser/Node-safe inspect routing: mesh parsers for STL/OBJ/PLY,
- * container inspect for 3MF (ZIP).
+ * Browser/Node-safe inspect routing: real 3MF flatten for geometry facts,
+ * mesh parsers for STL/OBJ/PLY.
  */
 export function inspectModelBytes(
   fileName: string,
   bytes: Uint8Array,
 ): InspectModelSuccess {
   if (looksLike3mf(fileName, bytes)) {
-    const report = inspect3mf(bytes);
-    return {
-      format: "3mf",
-      vertexCount: report.vertexCount ?? 0,
-      faceCount: report.triangleCount ?? 0,
-      bounds: UNKNOWN_BOUNDS,
-      watertight: false,
-      area: null,
-      volume: null,
-      issues: report.issues,
-      limitations: [
-        "3mf_container_inspect",
-        "bounds_not_computed_from_mesh",
-        "watertight_not_evaluated_for_3mf_container",
-        ...(report.units ? [`units=${report.units}`] : []),
-        ...(report.hasModel ? [] : ["no_model_payload"]),
-        `members=${report.memberCount}`,
-        ...(report.objectCount !== undefined
-          ? [`objects=${report.objectCount}`]
-          : []),
-      ],
-    };
+    const document = parseThreeMf(bytes, { fileName });
+    const scene = flattenThreeMf(document, { fileName });
+    const mesh = scene.meshes[0]!;
+    const faces: number[][] = [];
+    for (let i = 0; i < mesh.indices.length; i += 3) {
+      faces.push([mesh.indices[i]!, mesh.indices[i + 1]!, mesh.indices[i + 2]!]);
+    }
+    const geometry = new PureTsGeometryAdapter();
+    try {
+      const facts = geometry.inspect({ vertices: mesh.positions, faces });
+      return {
+        format: "3mf",
+        vertexCount: facts.vertexCount,
+        faceCount: facts.faceCount,
+        bounds: facts.bounds,
+        watertight: facts.watertight,
+        area: facts.area,
+        volume: facts.volume,
+        issues: [...facts.issues, ...scene.warnings.map((w) => w.message)],
+        limitations: [
+          `units=${document.unit}`,
+          `members=${document.members.length}`,
+          `objects=${document.objects.size}`,
+          "geometry_flattened_from_3mf",
+        ],
+      };
+    } finally {
+      geometry.dispose();
+    }
   }
 
   const detected = detectFormat(bytes);

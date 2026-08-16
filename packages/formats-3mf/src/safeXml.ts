@@ -48,7 +48,7 @@ export function parseSafeXml(
   text: string,
   options: { maxDepth: number; maxBytes: number },
 ): unknown {
-  if (Buffer.byteLength(text, "utf8") > options.maxBytes) {
+  if (new TextEncoder().encode(text).byteLength > options.maxBytes) {
     throw new EngineException(
       createEngineError("INPUT_TOO_LARGE", "XML exceeds maxXmlBytes", {
         context: { maxXmlBytes: options.maxBytes },

@@ -145,3 +145,15 @@ export {
   type AiExplanationRequest,
   type AiExplanationResult,
 } from "./aiPort";
+
+export {
+  processModel,
+  BAMBU_A1_MINI,
+  type ProcessModelRequest,
+  type ProcessModelResult,
+  type PrinterProfile,
+  type OptimizationGoal,
+  type GeometryAnalysis,
+  type OptimizationDecision,
+  type ProcessStageCallback,
+} from "./processModel";

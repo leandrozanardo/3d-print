@@ -1,123 +1,200 @@
 /// <reference lib="webworker" />
 
+// Provide Buffer for format parsers that still decode via Node-style APIs.
 import { Buffer } from "buffer";
-import {
-  isGeometryWorkerRequest,
-  type GeometryProgressStage,
-  type GeometryWorkerResponse,
-} from "./protocol";
-import { inspectModelBytes } from "./inspectModel";
-
-// formats / 3mf parsers expect Node Buffer in the browser worker bundle
 (globalThis as unknown as { Buffer: typeof Buffer }).Buffer = Buffer;
+
+import { processModel, type PrinterProfile } from "@fix-my-print/engine";
+import { EngineException } from "@fix-my-print/contracts";
+
+import {
+  GEOMETRY_WORKER_PROTOCOL_VERSION,
+  isWorkerRequest,
+  type ProcessStage,
+  type WorkerResponse,
+} from "./protocol";
 
 declare const self: DedicatedWorkerGlobalScope;
 
-let cancelledRequestId: string | null = null;
+let activeJobId: string | null = null;
+let cancelledJobId: string | null = null;
 
-function post(message: GeometryWorkerResponse): void {
-  self.postMessage(message);
+function post(message: WorkerResponse, transfer: Transferable[] = []): void {
+  self.postMessage(message, transfer);
 }
 
-function postProgress(
-  requestId: string,
-  stage: GeometryProgressStage,
-  ratio: number,
-  message: string,
-): void {
-  post({ type: "progress", requestId, stage, ratio, message });
-}
-
-function publicErrorMessage(err: unknown): { code: string; message: string } {
-  if (err && typeof err === "object") {
-    const e = err as {
-      code?: unknown;
-      message?: unknown;
-      name?: unknown;
-    };
-    const code =
-      typeof e.code === "string" && e.code.length > 0
-        ? e.code
-        : typeof e.name === "string" && e.name.length > 0
-          ? e.name
-          : "INSPECT_FAILED";
-    const message =
-      typeof e.message === "string" && e.message.length > 0
-        ? e.message.split("\n")[0]!.slice(0, 240)
-        : "Geometry inspect failed";
-    return { code, message };
-  }
-  return { code: "INSPECT_FAILED", message: "Geometry inspect failed" };
-}
-
-function throwIfCancelled(requestId: string): void {
-  if (cancelledRequestId === requestId) {
-    const err = new Error("run cancelled");
-    (err as Error & { code: string }).code = "RUN_CANCELLED";
-    throw err;
-  }
-}
-
-async function handleInspect(
-  requestId: string,
-  fileName: string,
-  bytes: ArrayBuffer,
-): Promise<void> {
-  throwIfCancelled(requestId);
-
-  postProgress(requestId, "detect", 0.15, "detect");
-  const view = new Uint8Array(bytes);
-  throwIfCancelled(requestId);
-
-  postProgress(requestId, "parse", 0.45, "parse");
-  postProgress(requestId, "inspect", 0.75, "inspect");
-  const result = inspectModelBytes(fileName, view);
-  throwIfCancelled(requestId);
-
-  postProgress(requestId, "done", 1, "done");
-  post({
-    type: "inspectResult",
-    requestId,
-    ok: true,
-    fileName,
-    byteLength: bytes.byteLength,
-    ...result,
-  });
+function mapStage(stage: string): ProcessStage | string {
+  if (stage === "resolving-components") return "building-geometry";
+  return stage;
 }
 
 self.onmessage = (event: MessageEvent<unknown>) => {
   const data = event.data;
-  if (!isGeometryWorkerRequest(data)) {
+  if (!isWorkerRequest(data)) {
     post({
-      type: "error",
-      requestId: "unknown",
-      ok: false,
-      code: "INVALID_PROTOCOL",
-      message: "Invalid geometry worker message",
+      schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+      type: "processFailure",
+      jobId: "unknown",
+      code: "UNKNOWN",
+      message: "Invalid worker request",
+      stage: "validating",
+      retryable: false,
     });
     return;
   }
 
   if (data.type === "cancel") {
-    cancelledRequestId = data.requestId;
-    postProgress(
-      data.requestId,
-      "done",
-      0,
-      "cancel acknowledged (terminate from UI for hard stop)",
-    );
+    cancelledJobId = data.jobId;
+    if (activeJobId === data.jobId) {
+      post({
+        schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+        type: "cancelled",
+        jobId: data.jobId,
+      });
+    }
     return;
   }
 
-  const { requestId, fileName, bytes } = data;
-  void handleInspect(requestId, fileName, bytes).catch((err: unknown) => {
-    const { code, message } = publicErrorMessage(err);
-    post({
-      type: "error",
-      requestId,
-      ok: false,
-      code,
-      message,
-    });
-  });
+  const jobId = data.jobId;
+  activeJobId = jobId;
+  cancelledJobId = null;
+
+  void (async () => {
+    try {
+      const printer: PrinterProfile = {
+        id: data.printer.id,
+        name: data.printer.name,
+        bedWidthMm: data.printer.bedWidthMm,
+        bedDepthMm: data.printer.bedDepthMm,
+        maxHeightMm: data.printer.maxHeightMm,
+      };
+      const result = await processModel(
+        {
+          jobId,
+          fileName: data.fileName,
+          bytes: new Uint8Array(data.bytes),
+          printer,
+          goal: data.goal,
+        },
+        {
+          isCancelled: () => cancelledJobId === jobId,
+          onProgress: (stage, ratio, message) => {
+            if (cancelledJobId === jobId) return;
+            post({
+              schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+              type: "progress",
+              jobId,
+              stage: mapStage(stage),
+              ratio,
+              message,
+            });
+          },
+        },
+      );
+
+      if (cancelledJobId === jobId) {
+        post({
+          schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+          type: "cancelled",
+          jobId,
+        });
+        return;
+      }
+
+      const outBuffer = result.output.bytes.buffer.slice(
+        result.output.bytes.byteOffset,
+        result.output.bytes.byteOffset + result.output.bytes.byteLength,
+      ) as ArrayBuffer;
+
+      post(
+        {
+          schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+          type: "processSuccess",
+          jobId,
+          fileName: result.input.fileName,
+          outputFileName: result.output.fileName,
+          format: result.output.format,
+          mimeType: result.output.mimeType,
+          bytes: outBuffer,
+          sha256: result.output.sha256,
+          before: {
+            vertexCount: result.before.vertexCount,
+            triangleCount: result.before.triangleCount,
+            dimensionsMm: result.before.dimensionsMm,
+            watertight: result.before.watertight,
+            bounds: result.before.bounds,
+          },
+          after: {
+            vertexCount: result.after.vertexCount,
+            triangleCount: result.after.triangleCount,
+            dimensionsMm: result.after.dimensionsMm,
+            watertight: result.after.watertight,
+            bounds: result.after.bounds,
+          },
+          optimization: {
+            algorithm: result.optimization.algorithm,
+            orientationId: result.optimization.orientationId,
+            scoreBefore: result.optimization.scoreBefore,
+            scoreAfter: result.optimization.scoreAfter,
+            alreadyOptimal: result.optimization.alreadyOptimal,
+          },
+          preservation: {
+            preserved: [...result.preservation.preserved],
+            removed: [...result.preservation.removed],
+            policy: result.preservation.policy,
+            notes: [...result.preservation.notes],
+          },
+          warnings: result.warnings.map((w) => ({ code: w.code, message: w.message })),
+          durationMs: result.durationMs,
+          preview: {
+            positions: result.preview.positions,
+            indices: result.preview.indices,
+          },
+        },
+        [outBuffer, result.preview.positions.buffer, result.preview.indices.buffer],
+      );
+    } catch (err) {
+      if (cancelledJobId === jobId) {
+        post({
+          schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+          type: "cancelled",
+          jobId,
+        });
+        return;
+      }
+      const code =
+        err instanceof EngineException
+          ? err.engineError.code
+          : err instanceof Error && /CANCELLED/.test(err.message)
+            ? "CANCELLED"
+            : "UNKNOWN";
+      const message =
+        err instanceof EngineException
+          ? err.message
+          : err instanceof Error
+            ? err.message
+            : String(err);
+      if (code === "RUN_CANCELLED" || code === "CANCELLED") {
+        post({
+          schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+          type: "cancelled",
+          jobId,
+        });
+        return;
+      }
+      post({
+        schemaVersion: GEOMETRY_WORKER_PROTOCOL_VERSION,
+        type: "processFailure",
+        jobId,
+        code,
+        message,
+        stage: "processing",
+        retryable: err instanceof EngineException ? Boolean(err.engineError.retryable) : false,
+      });
+    } finally {
+      if (activeJobId === jobId) {
+        activeJobId = null;
+      }
+    }
+  })();
 };

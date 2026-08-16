@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-08-16T08:05:00.000Z",
+  "classification": "EXTERNAL_BROWSER_INJECTION_LIKELY",
+  "cleanChromium": {
+    "test": "apps/web/e2e/acceptance/network-idle.spec.ts",
+    "idleWindowSeconds": 15,
+    "periodicXhrOrFetchFromApp": 0,
+    "result": "PASS"
+  },
+  "staticAudit": {
+    "path": "artifacts/product-recovery/network/static-rg.txt",
+    "note": "No application fetch/XHR/setInterval polling loop found that matches from?get&nocache"
+  },
+  "userBrowserInference": {
+    "pattern": "from?get&nocache=... initiator main.js?attr=...",
+    "likelyHosts": ["*.kaspersky-labs.com", "*.scr.kaspersky-labs.com"],
+    "officialDoc": "https://support.kaspersky.com/15335",
+    "productAction": "none — do not disable AV from the app"
+  }
+}

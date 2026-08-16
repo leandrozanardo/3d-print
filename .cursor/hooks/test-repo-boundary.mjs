@@ -76,6 +76,7 @@ expectAllow("delete-dir-inside", {
   command: `Remove-Item -Recurse -LiteralPath "${FIXTURE}"`,
 });
 expectAllow("git-status", { cwd: ROOT, command: "git status --short" });
+expectAllow("repository-root-path", { path: ROOT });
 
 // Deny
 expectDeny("cwd-outside", { cwd: path.parse(ROOT).root });
@@ -90,13 +91,6 @@ expectDeny("delete-root", {
 });
 expectDeny("home-tilde", { cwd: ROOT, path: "~/secret" });
 expectDeny("home-env", { cwd: ROOT, path: "%USERPROFILE%\\secret" });
-expectDeny(
-  "invalid-json-via-raw",
-  (() => {
-    // Simulate invalid JSON by calling hook with bad stdin separately below
-    return { path: ROOT };
-  })(),
-);
 
 // Invalid JSON explicit
 {

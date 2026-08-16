@@ -1,0 +1,6 @@
+﻿ M apps/web/package.json
+ M apps/web/src/App.tsx
+ M apps/web/vite.config.ts
+ M pnpm-lock.yaml
+?? apps/web/src/components/InspectSummary.tsx
+?? artifacts/
