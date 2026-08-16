@@ -1,4 +1,5 @@
 ---
+
 id: printer.nexa3d-nxe-400pro
 title: Nexa3D NXE 400Pro
 summary: Nexa3D NXE 400Pro (Nexa3D NXE 400Pro) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.nexa3d-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Nexa3D NXE 400Pro
 tags:
 - printer
-- documented
+- cataloged
 - nexa3d
 - current
 manufacturer_id: nexa3d
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Nexa3D NXE 400Pro** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Nexa3D NXE 400Pro**
 - Firmware/release notes pinados para **Nexa3D NXE 400Pro**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Nexa3D NXE 400Pro** (`printer.nexa3d-nxe-400pro`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.nexa3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.nexa3d-nxe-400pro:nexa3d-nxe-400pro.md -->
+
+### Nota de especificidade — Nexa3D NXE 400Pro
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Nexa3D NXE 400Pro** (`printer.nexa3d-nxe-400pro`, fabricante `nexa3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

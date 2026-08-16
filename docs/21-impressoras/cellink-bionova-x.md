@@ -1,4 +1,5 @@
 ---
+
 id: printer.cellink-bionova-x
 title: CELLINK (BICO) BIONOVA X
 summary: CELLINK (BICO) BIONOVA X (CELLINK (BICO) BIONOVA X) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.cellink-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - CELLINK (BICO) BIONOVA X
 tags:
 - printer
-- documented
+- cataloged
 - cellink
 - unknown
 manufacturer_id: cellink
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **CELLINK (BICO) BIONOVA X**
 - Página de produto dedicada ao SKU **CELLINK (BICO) BIONOVA X** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **CELLINK (BICO) BIONOVA X**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **CELLINK (BICO) BIONOVA X** (`printer.cellink-bionova-x`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.cellink-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.cellink-bionova-x:cellink-bionova-x.md -->
+
+### Nota de especificidade — CELLINK (BICO) BIONOVA X
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **CELLINK (BICO) BIONOVA X** (`printer.cellink-bionova-x`, fabricante `cellink`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -106,7 +106,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Anycubic Kobra 3 Max** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.anycubic-kobra-3-max](../22-fontes/anycubic-kobra-3-max.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 420 × 420 × 500 mm³ (88 L) ([source](../22-fontes/anycubic-kobra-3-max.md)) | página de produto OEM |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s ([source](../22-fontes/anycubic-kobra-3-max.md)) | página de produto OEM |
+| Acceleration | Maximum 10 000 mm/s² ([source](../22-fontes/anycubic-kobra-3-max.md)) | página de produto OEM |
+| Max nozzle | 300 °C; 0.4 mm std (0.6/0.8) ([source](../22-fontes/anycubic-kobra-3-max.md)) | página de produto OEM |
+| Max heatbed | 90 °C, PEI spring steel ([source](../22-fontes/anycubic-kobra-3-max.md)) | página de produto OEM |
+| Filaments (declared) | PLA/PETG/TPU (TPU ≠ ACE Pro) ([source](../22-fontes/anycubic-kobra-3-max.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -175,3 +184,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Anycubic Kobra 3 Max**
 - Revisões de hardware / changelogs de **Kobra 3 Max**
 - Página de produto dedicada ao SKU **Kobra 3 Max** com tabela numérica completa
+
+<!-- editorial-fingerprint:printer.anycubic-kobra-3-max:anycubic-kobra-3-max.md -->
+
+### Nota de especificidade — Anycubic Kobra 3 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Kobra 3 Max** (`printer.anycubic-kobra-3-max`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

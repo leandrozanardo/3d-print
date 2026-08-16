@@ -1,4 +1,5 @@
 ---
+
 id: printer.voxeljet-vx2000
 title: voxeljet VX2000
 summary: voxeljet VX2000 (voxeljet VX2000) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.voxeljet-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - voxeljet VX2000
 tags:
 - printer
-- documented
+- cataloged
 - voxeljet
 - unknown
 manufacturer_id: voxeljet
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: jetting de binder sobre leito de pó.
 
 - Technology: binder-jetting
 - Process: binder-jet
-- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó
+- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó «printer.voxeljet-vx2000»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **voxeljet VX2000**
 - Revisões de hardware / changelogs de **voxeljet VX2000**
 - Página de produto dedicada ao SKU **voxeljet VX2000** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **voxeljet VX2000** (`printer.voxeljet-vx2000`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.voxeljet-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.voxeljet-vx2000:voxeljet-vx2000.md -->
+
+### Nota de especificidade — voxeljet VX2000
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **voxeljet VX2000** (`printer.voxeljet-vx2000`, fabricante `voxeljet`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

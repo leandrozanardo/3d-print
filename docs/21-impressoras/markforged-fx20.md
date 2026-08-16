@@ -1,4 +1,5 @@
 ---
+
 id: printer.markforged-fx20
 title: Markforged FX20
 summary: Markforged FX20 (Markforged FX20) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.markforged-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Markforged FX20
 tags:
 - printer
-- documented
+- cataloged
 - markforged
 - current
 manufacturer_id: markforged
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Markforged FX20**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Markforged FX20**
 - Troubleshooting oficial por sintoma para **Markforged FX20**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Markforged FX20** (`printer.markforged-fx20`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.markforged-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.markforged-fx20:markforged-fx20.md -->
+
+### Nota de especificidade — Markforged FX20
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Markforged FX20** (`printer.markforged-fx20`, fabricante `markforged`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

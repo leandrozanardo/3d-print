@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://info.ackuretta.com/3d-dental-printers
 ---
+
 # Fonte — Ackuretta listagem oficial
 
 | Campo | Valor |

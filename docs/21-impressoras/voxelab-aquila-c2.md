@@ -1,4 +1,5 @@
 ---
+
 id: printer.voxelab-aquila-c2
 title: Voxelab Aquila C2
 summary: Voxelab Aquila C2 (Voxelab Aquila C2) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.voxelab-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Voxelab Aquila C2
 tags:
 - printer
-- documented
+- cataloged
 - voxelab
 - current
 manufacturer_id: voxelab
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Voxelab Aquila C2** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Voxelab Aquila C2**
 - Firmware/release notes pinados para **Voxelab Aquila C2**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Voxelab Aquila C2** (`printer.voxelab-aquila-c2`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.voxelab-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.voxelab-aquila-c2:voxelab-aquila-c2.md -->
+
+### Nota de especificidade — Voxelab Aquila C2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Voxelab Aquila C2** (`printer.voxelab-aquila-c2`, fabricante `voxelab`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

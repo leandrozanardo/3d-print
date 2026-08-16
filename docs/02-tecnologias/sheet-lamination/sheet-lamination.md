@@ -50,7 +50,7 @@ supersedes: []
 ---
 # Sheet lamination
 
-Hub pai: [Tecnologias](../INDEX.md) · pasta [sheet-lamination](./)
+Hub pai: [Tecnologias](../INDEX.md) · pasta [sheet-lamination](INDEX.md)
 
 ## Mecanismo
 

@@ -106,7 +106,16 @@ Front matter e corpo usam lifecycle legacy-supported e coverage documented de fo
 
 ## Especificações
 
-Não reutilizar números de outras máquinas anycubic como se fossem de **Kobra 3 V2**.
+Valores observados na página de produto específica ([source.anycubic-kobra-3-v2](../22-fontes/anycubic-kobra-3-v2.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 255 × 255 × 260 mm³ ([source](../22-fontes/anycubic-kobra-3-v2.md)) | página de produto OEM |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s ([source](../22-fontes/anycubic-kobra-3-v2.md)) | página de produto OEM |
+| Max nozzle | 300 °C; 0.4 mm std (0.6/0.8) ([source](../22-fontes/anycubic-kobra-3-v2.md)) | página de produto OEM |
+| Max heatbed | 110 °C, PEI spring steel ([source](../22-fontes/anycubic-kobra-3-v2.md)) | página de produto OEM |
+| Filaments (declared) | PLA / PETG / TPU ([source](../22-fontes/anycubic-kobra-3-v2.md)) | página de produto OEM |
+| Camera | 720P standard (bracket printável) ([source](../22-fontes/anycubic-kobra-3-v2.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -175,3 +184,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Kobra 3 V2**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Kobra 3 V2**
 - Troubleshooting oficial por sintoma para **Anycubic Kobra 3 V2**
+
+<!-- editorial-fingerprint:printer.anycubic-kobra-3-v2:anycubic-kobra-3-v2.md -->
+
+### Nota de especificidade — Anycubic Kobra 3 V2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Kobra 3 V2** (`printer.anycubic-kobra-3-v2`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

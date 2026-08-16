@@ -1,4 +1,5 @@
 ---
+
 id: printer.craftbot-flow
 title: Craftbot Flow
 summary: Craftbot Flow (Craftbot Flow) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.craftbot-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Craftbot Flow
 tags:
 - printer
-- documented
+- cataloged
 - craftbot
 - current
 manufacturer_id: craftbot
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Craftbot Flow**
 - Firmware/release notes pinados para **Craftbot Flow**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Craftbot Flow**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Craftbot Flow** (`printer.craftbot-flow`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.craftbot-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.craftbot-flow:craftbot-flow.md -->
+
+### Nota de especificidade — Craftbot Flow
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Craftbot Flow** (`printer.craftbot-flow`, fabricante `craftbot`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

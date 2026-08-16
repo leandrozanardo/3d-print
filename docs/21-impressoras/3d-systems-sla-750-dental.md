@@ -1,4 +1,5 @@
 ---
+
 id: printer.3d-systems-sla-750-dental
 title: 3D Systems SLA 750 Dental
 summary: 3D Systems SLA 750 Dental (3D Systems SLA 750 Dental) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.3d-systems-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - 3D Systems SLA 750 Dental
 tags:
 - printer
-- documented
+- cataloged
 - 3d-systems
 - current
 manufacturer_id: 3d-systems
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **3D Systems SLA 750 Dental**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **3D Systems SLA 750 Dental**
 - Troubleshooting oficial por sintoma para **3D Systems SLA 750 Dental**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **3D Systems SLA 750 Dental** (`printer.3d-systems-sla-750-dental`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.3d-systems-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.3d-systems-sla-750-dental:3d-systems-sla-750-dental.md -->
+
+### Nota de especificidade — 3D Systems SLA 750 Dental
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **3D Systems SLA 750 Dental** (`printer.3d-systems-sla-750-dental`, fabricante `3d-systems`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

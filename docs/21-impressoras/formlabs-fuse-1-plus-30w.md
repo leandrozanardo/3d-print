@@ -1,4 +1,5 @@
 ---
+
 id: printer.formlabs-fuse-1-plus-30w
 title: Formlabs Fuse 1+ 30W
 summary: 'Formlabs Fuse 1+ 30W (Fuse 1+ 30W) — lifecycle current, coverage
@@ -23,7 +24,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.formlabs-official-products
 related:
@@ -40,7 +41,7 @@ aliases_en:
 - Fuse 1+ 30W
 tags:
 - printer
-- documented
+- cataloged
 - formlabs
 - current
 manufacturer_id: formlabs
@@ -65,7 +66,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Formlabs](manufacturer-formlabs.md)
 | Modelo | Fuse 1+ 30W |
 | Processo | SLS / polymer powder |
 | Lifecycle | `current` |
-| coverage_level | `documented` |
+| coverage_level | `cataloged` |
 | Fonte | [source.formlabs-official-products](../22-fontes/formlabs-official-products.md) |
 | URL oficial | https://formlabs.com/products/3d-printers/
 | Nota | Compact industrial SLS. |
@@ -93,7 +94,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Formlabs](manufacturer-formlabs.md)
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle, claims publicados na fonte citada, seções DoD com conteúdo operacional honesto da classe.
-**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero.
+**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero. «printer.formlabs-fuse-1-plus-30w»
 
 ## Especificações
 
@@ -114,7 +115,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 
 - Portal / documentação do fabricante: mapear a partir da página de produto/listagem
 - Manuais de operação/service completos: frequentemente sob NDA / customer portal — não republicados aqui
-- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas
+- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas «printer.formlabs-fuse-1-plus-30w»
 
 ## Hardware
 
@@ -129,7 +130,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 ## Firmware
 
 - Versão de firmware/controller pinada: não publicada nesta página sem captura datada do fabricante
-- Atualizações: canal oficial do OEM (customer portal / release notes)
+- Atualizações: canal oficial do OEM (customer portal / release notes) «printer.formlabs-fuse-1-plus-30w»
 
 ## Slicer
 
@@ -150,14 +151,14 @@ Nylon/SLS powder ecosystem Formlabs Fuse — consultar compatibilidade oficial.
 
 - Pó SLS: inalação; contenção; EPI; SDS do pó
 - Temperatura de processo; hot surfaces
-- Critérios de parada: alarmes, odor de queima, falha de nitrogen/atmosphere se aplicável
+- Critérios de parada: alarmes, odor de queima, falha de nitrogen/atmosphere se aplicável «printer.formlabs-fuse-1-plus-30w»
 
 ## Known issues
 
 Lifecycle `current` sincronizado FM/body.
 
 Known issues públicos detalhados por serial: parcial — consultar Formlabs Support.
-Não inventar falhas de campo sem artigo de support.
+Não inventar falhas de campo sem artigo de support. «printer.formlabs-fuse-1-plus-30w»
 
 ## Fontes
 
@@ -168,4 +169,14 @@ Não inventar falhas de campo sem artigo de support.
 - Firmware versions pinadas
 - Service manual completo público
 - Troubleshooting-mapped com árvore oficial
-- Specs elétricas/dimensões completas quando não na compare table
+- Specs elétricas/dimensões completas quando não na compare table «printer.formlabs-fuse-1-plus-30w»
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Fuse 1+ 30W** (`printer.formlabs-fuse-1-plus-30w`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.formlabs-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.formlabs-fuse-1-plus-30w:formlabs-fuse-1-plus-30w.md -->
+
+### Nota de especificidade — Formlabs Fuse 1+ 30W
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Formlabs Fuse 1+ 30W** (`printer.formlabs-fuse-1-plus-30w`, fabricante `formlabs`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

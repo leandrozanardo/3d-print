@@ -83,7 +83,9 @@ A ficha **OrangeStorm Giga** (elegoo) prioriza evidência de catálogo e lacunas
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/orangestorm-giga (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-orangestorm-giga]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo OrangeStorm Giga** / `printer.elegoo-orangestorm-giga`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -107,7 +109,11 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **OrangeStorm Giga**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.elegoo-orangestorm-giga](../22-fontes/elegoo-orangestorm-giga.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 800 × 800 × 1000 mm ([source](../22-fontes/elegoo-orangestorm-giga.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +182,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **OrangeStorm Giga** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Elegoo OrangeStorm Giga**
 - Firmware/release notes pinados para **OrangeStorm Giga**
+
+<!-- editorial-fingerprint:printer.elegoo-orangestorm-giga:elegoo-orangestorm-giga.md -->
+
+### Nota de especificidade — Elegoo OrangeStorm Giga
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo OrangeStorm Giga** (`printer.elegoo-orangestorm-giga`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

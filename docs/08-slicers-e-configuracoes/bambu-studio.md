@@ -68,7 +68,7 @@ Hub pai: [Slicers e configurações](INDEX.md)
 
 - Qualquer receita operacional A1 Mini nesta base
 - Diagnóstico “mudei um número e piorou” (versão + família de perfil)
-- Escolha de process profile (0,20 mm Standard vs Draft vs Fine, etc. — heurística editorial (sem fonte pinada))
+- Escolha de process profile (perfis nomeados do slicer (Standard/Draft/Fine etc.) — escolha de fluxo de trabalho, não valor pinado)
 - Preview de suportes, brim e first layer antes de imprimir
 
 ## Conceitos semânticos (não dump de settings)

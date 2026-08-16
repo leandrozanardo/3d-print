@@ -1,4 +1,5 @@
 ---
+
 id: printer.bcn3d-epsilon-w50
 title: BCN3D Epsilon W50
 summary: BCN3D Epsilon W50 (BCN3D Epsilon W50) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.bcn3d-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - BCN3D Epsilon W50
 tags:
 - printer
-- documented
+- cataloged
 - bcn3d
 - current
 manufacturer_id: bcn3d
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **BCN3D Epsilon W50**
 - Revisões de hardware / changelogs de **BCN3D Epsilon W50**
 - Página de produto dedicada ao SKU **BCN3D Epsilon W50** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **BCN3D Epsilon W50** (`printer.bcn3d-epsilon-w50`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.bcn3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.bcn3d-epsilon-w50:bcn3d-epsilon-w50.md -->
+
+### Nota de especificidade — BCN3D Epsilon W50
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **BCN3D Epsilon W50** (`printer.bcn3d-epsilon-w50`, fabricante `bcn3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.stratasys-neo-800-plus
 title: Stratasys Neo 800+
 summary: Stratasys Neo 800+ (Stratasys Neo 800+) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.stratasys-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Stratasys Neo 800+
 tags:
 - printer
-- documented
+- cataloged
 - stratasys
 - current
 manufacturer_id: stratasys
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Stratasys Neo 800+**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Stratasys Neo 800+**
 - Troubleshooting oficial por sintoma para **Stratasys Neo 800+**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Stratasys Neo 800+** (`printer.stratasys-neo-800-plus`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.stratasys-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.stratasys-neo-800-plus:stratasys-neo-800-plus.md -->
+
+### Nota de especificidade — Stratasys Neo 800+
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Stratasys Neo 800+** (`printer.stratasys-neo-800-plus`, fabricante `stratasys`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.craftbot-flow-idex-xl
 title: Craftbot Flow IDEX XL
 summary: Craftbot Flow IDEX XL (Craftbot Flow IDEX XL) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.craftbot-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Craftbot Flow IDEX XL
 tags:
 - printer
-- documented
+- cataloged
 - craftbot
 - current
 manufacturer_id: craftbot
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Craftbot Flow IDEX XL**
 - Página de produto dedicada ao SKU **Craftbot Flow IDEX XL** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Craftbot Flow IDEX XL**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Craftbot Flow IDEX XL** (`printer.craftbot-flow-idex-xl`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.craftbot-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.craftbot-flow-idex-xl:craftbot-flow-idex-xl.md -->
+
+### Nota de especificidade — Craftbot Flow IDEX XL
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Craftbot Flow IDEX XL** (`printer.craftbot-flow-idex-xl`, fabricante `craftbot`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

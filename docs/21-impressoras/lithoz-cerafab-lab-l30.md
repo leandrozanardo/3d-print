@@ -1,4 +1,5 @@
 ---
+
 id: printer.lithoz-cerafab-lab-l30
 title: Lithoz CeraFab Lab L30
 summary: Lithoz CeraFab Lab L30 (Lithoz CeraFab Lab L30) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.lithoz-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Lithoz CeraFab Lab L30
 tags:
 - printer
-- documented
+- cataloged
 - lithoz
 - unknown
 manufacturer_id: lithoz
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Lithoz CeraFab Lab L30**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Lithoz CeraFab Lab L30**
 - Troubleshooting oficial por sintoma para **Lithoz CeraFab Lab L30**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Lithoz CeraFab Lab L30** (`printer.lithoz-cerafab-lab-l30`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.lithoz-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.lithoz-cerafab-lab-l30:lithoz-cerafab-lab-l30.md -->
+
+### Nota de especificidade — Lithoz CeraFab Lab L30
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Lithoz CeraFab Lab L30** (`printer.lithoz-cerafab-lab-l30`, fabricante `lithoz`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

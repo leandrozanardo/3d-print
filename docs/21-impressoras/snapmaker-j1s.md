@@ -1,4 +1,5 @@
 ---
+
 id: printer.snapmaker-j1s
 title: Snapmaker J1s
 summary: Snapmaker J1s (Snapmaker J1s) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.snapmaker-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Snapmaker J1s
 tags:
 - printer
-- documented
+- cataloged
 - snapmaker
 - current
 manufacturer_id: snapmaker
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Snapmaker J1s**
 - Firmware/release notes pinados para **Snapmaker J1s**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Snapmaker J1s**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Snapmaker J1s** (`printer.snapmaker-j1s`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.snapmaker-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.snapmaker-j1s:snapmaker-j1s.md -->
+
+### Nota de especificidade — Snapmaker J1s
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Snapmaker J1s** (`printer.snapmaker-j1s`, fabricante `snapmaker`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

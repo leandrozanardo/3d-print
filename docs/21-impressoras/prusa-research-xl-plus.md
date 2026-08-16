@@ -108,7 +108,14 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas prusa-research como se fossem de **Original Prusa XL+**.
+Valores observados na página de produto específica ([source.prusa-research-xl-plus](../22-fontes/prusa-research-xl-plus.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 360 × 360 × 360 mm ([source](../22-fontes/prusa-research-xl-plus.md)) | página de produto OEM |
+| Toolheads | Up to 5 independent toolheads (true multi-material) ([source](../22-fontes/prusa-research-xl-plus.md)) | página de produto OEM |
+| Max nozzle | 290 °C / 120 °C ([source](../22-fontes/prusa-research-xl-plus.md)) | página de produto OEM |
+| Heatbed | 16× individual heatbed tiles ([source](../22-fontes/prusa-research-xl-plus.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -177,3 +184,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Original Prusa XL+**
 - Página de produto dedicada ao SKU **Original Prusa XL+** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Prusa Research Prusa XL+**
+
+<!-- editorial-fingerprint:printer.prusa-research-xl-plus:prusa-research-xl-plus.md -->
+
+### Nota de especificidade — Prusa Research Prusa XL+
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Prusa Research Prusa XL+** (`printer.prusa-research-xl-plus`, fabricante `prusa-research`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

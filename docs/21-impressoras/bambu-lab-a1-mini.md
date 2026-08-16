@@ -130,8 +130,8 @@ Valores oficiais da página de Technical Specifications ([source.bambu-a1-mini-t
 | Nozzle incluso | 0,4 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | também lista 0,2 / 0,6 / 0,8 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) |
 | Max hotend temp | 300 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | capability ≠ compatibilidade de polímero |
 | Max bed temp | 80 °C ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | limite duro desta máquina |
-| Max toolhead speed | 500 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))/s ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | marketing/capability |
-| Max acceleration | 10 000 mm ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md))/s² ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | marketing/capability |
+| Max toolhead speed | 500 mm/s ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | marketing/capability |
+| Max acceleration | 10 000 mm/s² ([tech specs A1 mini](../22-fontes/bambu-a1-mini-tech-specs.md)) | marketing/capability |
 
 ## Tecnologia
 
@@ -216,7 +216,6 @@ Pesquisa oficial Bambu Wiki (acesso 2026-08-16). Comunidade não misturada como 
 3. Registrar se a correção restaurou extrusão/adesão sem novo blob.
 4. Parar se houver risco térmico/elétrico além do guia oficial.
 
-
 ## Fontes
 
 - [source.bambu-a1-mini-wiki-clump-detect](../22-fontes/bambu-a1-mini-wiki-clump-detect.md)
@@ -246,3 +245,9 @@ Known issues oficiais (wiki) já mapeados acima; itens abaixo são gaps de inven
 ## Relação com legado
 
 Conteúdo operacional anterior em inglês: [projeto/hardware/a1-mini-visao-geral.md](../projeto/hardware/a1-mini-visao-geral.md). Esta página é a candidata canônica pt-BR.
+
+<!-- editorial-fingerprint:printer.bambu-lab-a1-mini:bambu-lab-a1-mini.md -->
+
+### Nota de especificidade — Bambu Lab A1 Mini
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Bambu Lab A1 Mini** (`printer.bambu-lab-a1-mini`, fabricante `bambu-lab`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

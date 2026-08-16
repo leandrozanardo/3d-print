@@ -82,7 +82,9 @@ Para **Anycubic Kobra S1**, o foco operacional desta base é identidade + lifecy
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-s1 (accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-kobra-s1]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Kobra S1** / `printer.anycubic-kobra-s1`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -106,7 +108,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas anycubic como se fossem de **Kobra S1**.
+Valores observados na página de produto específica ([source.anycubic-kobra-s1](../22-fontes/anycubic-kobra-s1.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 250 × 250 × 250 mm³ ([source](../22-fontes/anycubic-kobra-s1.md)) | página de produto OEM |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s ([source](../22-fontes/anycubic-kobra-s1.md)) | página de produto OEM |
+| Acceleration | Recommended 10 000 mm/s²; Maximum 20 000 mm/s² ([source](../22-fontes/anycubic-kobra-s1.md)) | página de produto OEM |
+| Max nozzle | 320 °C (0.4 mm std; 0.25/0.6/0.8 opcional) ([source](../22-fontes/anycubic-kobra-s1.md)) | página de produto OEM |
+| Max heatbed | 120 °C, PEI spring steel ([source](../22-fontes/anycubic-kobra-s1.md)) | página de produto OEM |
+| Filaments (declared) | PLA, PETG, TPU, ABS, ASA ([source](../22-fontes/anycubic-kobra-s1.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -175,3 +186,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Kobra S1**
 - Página de produto dedicada ao SKU **Kobra S1** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Anycubic Kobra S1**
+
+<!-- editorial-fingerprint:printer.anycubic-kobra-s1:anycubic-kobra-s1.md -->
+
+### Nota de especificidade — Anycubic Kobra S1
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Kobra S1** (`printer.anycubic-kobra-s1`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

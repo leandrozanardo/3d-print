@@ -46,6 +46,7 @@ accessed_at: '2026-08-16'
 access_status_note: Cloudflare challenge on 2026-08-16 revalidation; prior access
   2026-08-15 retained
 ---
+
 # Fonte — Bambu Lab A1 mini Technical Specifications
 
 | Campo | Valor |
@@ -79,8 +80,16 @@ access_status_note: Cloudflare challenge on 2026-08-16 revalidation; prior acces
 - Causas físicas universais de defeitos FFF
 - Specs de outras impressoras Bambu (A1 / P1S / X1)
 
-## Limites
+## Claims sustentados
 
+- Build volume 180 × 180 × 180 mm
+- Nozzle incluso 0,4 mm; opções 0,2 / 0,6 / 0,8 mm
+- Max hotend temperature 300 °C (capability, não = compatibilidade de material)
+- Max build plate temperature 80 °C
+- Filamentos listados como Ideal: PLA, PETG, TPU, PVA
+- Filamentos Not Recommended pelo fabricante: ABS, ASA, PC, PA, PET, CF/GF reinforced (lista da página de specs)
+
+## Limites
 - Marketing pages podem mudar; revalidar na URL oficial
 - “Ideal / Not Recommended” é posição do fabricante, não prova de impossibilidade física absoluta
 - Não substitui TDS/SDS do filamento nem guias de segurança ocupacional

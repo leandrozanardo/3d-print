@@ -1,4 +1,5 @@
 ---
+
 id: printer.kingroon-kp5l
 title: Kingroon KP5L
 summary: Kingroon KP5L (Kingroon KP5L) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.kingroon-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Kingroon KP5L
 tags:
 - printer
-- documented
+- cataloged
 - kingroon
 - current
 manufacturer_id: kingroon
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Kingroon KP5L**
 - Revisões de hardware / changelogs de **Kingroon KP5L**
 - Página de produto dedicada ao SKU **Kingroon KP5L** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Kingroon KP5L** (`printer.kingroon-kp5l`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.kingroon-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.kingroon-kp5l:kingroon-kp5l.md -->
+
+### Nota de especificidade — Kingroon KP5L
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Kingroon KP5L** (`printer.kingroon-kp5l`, fabricante `kingroon`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

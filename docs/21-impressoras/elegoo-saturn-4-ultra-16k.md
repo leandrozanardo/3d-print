@@ -85,7 +85,9 @@ A ficha **Saturn 4 Ultra 16K** (elegoo) prioriza evidência de catálogo e lacun
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/saturn-4-ultra-16k-10inch-monochrome-lcd-resin-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-saturn-4-ultra-16k]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Saturn 4 Ultra 16K** / `printer.elegoo-saturn-4-ultra-16k`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -109,7 +111,15 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas elegoo como se fossem de **Saturn 4 Ultra 16K**.
+Valores observados na página de produto específica ([source.elegoo-saturn-4-ultra-16k](../22-fontes/elegoo-saturn-4-ultra-16k.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 211.68 × 118.37 × 220 mm ([source](../22-fontes/elegoo-saturn-4-ultra-16k.md)) | página de produto OEM |
+| Resolution | 15120 × 6230 (16K); XY 14 × 19 μm ([source](../22-fontes/elegoo-saturn-4-ultra-16k.md)) | página de produto OEM |
+| Max speed claim | 150 mm/h; 5.5 s/layer under stated fast-mode parameters ([source](../22-fontes/elegoo-saturn-4-ultra-16k.md)) | página de produto OEM |
+| Tank heating | Smart tank heating at 30 °C ([source](../22-fontes/elegoo-saturn-4-ultra-16k.md)) | página de produto OEM |
+| Leveling | Auto-leveling / plug-and-play claim ([source](../22-fontes/elegoo-saturn-4-ultra-16k.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -178,3 +188,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Saturn 4 Ultra 16K**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Saturn 4 Ultra 16K**
 - Troubleshooting oficial por sintoma para **Elegoo Saturn 4 Ultra 16K**
+
+<!-- editorial-fingerprint:printer.elegoo-saturn-4-ultra-16k:elegoo-saturn-4-ultra-16k.md -->
+
+### Nota de especificidade — Elegoo Saturn 4 Ultra 16K
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Saturn 4 Ultra 16K** (`printer.elegoo-saturn-4-ultra-16k`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

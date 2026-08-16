@@ -1,4 +1,5 @@
 ---
+
 id: printer.lulzbot-taz-8-long-bed
 title: LulzBot TAZ 8 Long Bed
 summary: LulzBot TAZ 8 Long Bed (LulzBot TAZ 8 Long Bed) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.lulzbot-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - LulzBot TAZ 8 Long Bed
 tags:
 - printer
-- documented
+- cataloged
 - lulzbot
 - current
 manufacturer_id: lulzbot
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **LulzBot TAZ 8 Long Bed**
 - Firmware/release notes pinados para **LulzBot TAZ 8 Long Bed**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **LulzBot TAZ 8 Long Bed**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **LulzBot TAZ 8 Long Bed** (`printer.lulzbot-taz-8-long-bed`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.lulzbot-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.lulzbot-taz-8-long-bed:lulzbot-taz-8-long-bed.md -->
+
+### Nota de especificidade — LulzBot TAZ 8 Long Bed
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **LulzBot TAZ 8 Long Bed** (`printer.lulzbot-taz-8-long-bed`, fabricante `lulzbot`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.raise3d-df2
 title: Raise3D DF2
 summary: Raise3D DF2 (Raise3D DF2) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.raise3d-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Raise3D DF2
 tags:
 - printer
-- documented
+- cataloged
 - raise3d
 - current
 manufacturer_id: raise3d
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Raise3D DF2**
 - Troubleshooting oficial por sintoma para **Raise3D DF2**
 - Revisões de hardware / changelogs de **Raise3D DF2**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Raise3D DF2** (`printer.raise3d-df2`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.raise3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.raise3d-df2:raise3d-df2.md -->
+
+### Nota de especificidade — Raise3D DF2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Raise3D DF2** (`printer.raise3d-df2`, fabricante `raise3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

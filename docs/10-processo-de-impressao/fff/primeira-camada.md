@@ -127,7 +127,7 @@ Métodos gerais de calibração: [Ellis](../../22-fontes/ellis-print-tuning-guid
 | Aspecto | PLA | PETG |
 |---|---|---|
 | Adesão PEI | geralmente fácil | pode soldar no smooth |
-| Bed partida | ~35–60 °C | ~70–80 °C (cap 80) — heurística editorial (sem fonte pinada) |
+| Bed partida | ~35–60 °C | ~70–80 °C (respeitar teto da máquina) — ponto de partida de bancada; sem fonte pinada |
 | Cooling inicial | baixo nas primeiras camadas | manter baixo por mais tempo |
 | Placa | smooth ou textured | textured preferida |
 
@@ -137,7 +137,7 @@ Não altere simultaneamente Z offset, bed temp, first layer speed e flow. Uma va
 
 ## Validação
 
-Cupom pequeno (quadrado 20–40 mm — heurística editorial (sem fonte pinada)) antes da peça crítica. Encaixes: cupom de fit — aparência ≠ metrologia.
+Cupom pequeno (cupom pequeno (ordem de poucos centímetros) — tamanho ilustrativo; sem fonte pinada) antes da peça crítica. Encaixes: cupom de fit — aparência ≠ metrologia.
 
 ## Relações com outros conceitos
 

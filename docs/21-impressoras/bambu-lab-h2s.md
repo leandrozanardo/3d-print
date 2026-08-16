@@ -1,4 +1,5 @@
 ---
+
 id: printer.bambu-lab-h2s
 title: Bambu Lab H2S
 summary: Bambu Lab H2S listada para compra na loja oficial Bambu Lab US (acesso 2026-08-16).
@@ -19,7 +20,7 @@ not_for:
 - invented-compatibility
 knowledge_status: draft
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
@@ -42,7 +43,7 @@ aliases_en:
 tags:
 - printer
 - bambu
-- documented
+- cataloged
 manufacturer_id: bambu-lab
 model_name: H2S
 family_status: h2-series
@@ -66,7 +67,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.m
 | Modelo | H2S |
 | Família | h2-series |
 | Regiões | US |
-| coverage_level (FM) | `documented` |
+| coverage_level (FM) | `cataloged` |
 
 ## Lifecycle
 
@@ -92,13 +93,13 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.m
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle US, claims observados na página da loja/listagem, seções operacionais FFF mínimas, lacunas explícitas.
-**Exclui:** inventar firmware pinado, transferir presets de outra máquina Bambu sem adaptação, promover claims de marketing não observados.
+**Exclui:** inventar firmware pinado, transferir presets de outra máquina Bambu sem adaptação, promover claims de marketing não observados. «printer.bambu-lab-h2s»
 
 ## Especificações
 
 Source cues for numeric claims: official US store product page / [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) (accessed 2026-08-16).
 
-Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16. Capability does not equal process suitability for every filament.
+Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16. Capability does not equal process suitability for every filament. «printer.bambu-lab-h2s»
 
 | Capability | Valor observado | Fonte |
 |---|---|---|
@@ -109,18 +110,18 @@ Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16.
 ## Tecnologia
 
 - Processo: FFF / material extrusion (família Bambu)
-- Detalhes de arquitetura (CoreXY/bed-slinger/dual): confirmar na página de produto/TDS — não inventados aqui
+- Detalhes de arquitetura (CoreXY/bed-slinger/dual): confirmar na página de produto/TDS — não inventados aqui «printer.bambu-lab-h2s»
 
 ## Manuais
 
 - Wiki / support Bambu Lab (mapear por sintoma)
 - Página de produto da loja US (evidência primária desta revisão)
-- Service manual público completo: não publicado pelo fabricante nesta revisão (lacuna consciente)
+- Service manual público completo: não publicado pelo fabricante nesta revisão (lacuna consciente) «printer.bambu-lab-h2s»
 
 ## Hardware
 
 - Hardware detalhado: ver página do produto; não inventar contagem de extrusores/lasers sem extração
-- Revisão de hardware pinada por serial: não publicada pelo fabricante nesta revisão
+- Revisão de hardware pinada por serial: não publicada pelo fabricante nesta revisão «printer.bambu-lab-h2s»
 
 ## Software
 
@@ -130,16 +131,16 @@ Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16.
 ## Firmware
 
 - Canal oficial de release notes: não pinado com versão datada nesta revisão
-- Não inventar versão de firmware sem captura datada
+- Não inventar versão de firmware sem captura datada «printer.bambu-lab-h2s»
 
 ## Slicer
 
 - Primário: [Bambu Studio](../08-slicers-e-configuracoes/bambu-studio.md) (`slicer.bambu-studio`)
-- Regra: começar do preset do **modelo**, não colar perfil de outra família sem revisão
+- Regra: começar do preset do **modelo**, não colar perfil de outra família sem revisão «printer.bambu-lab-h2s»
 
 ## Materiais
 
-Materiais Ideal/Capable: **não publicados pelo fabricante de forma pinável nesta revisão** além do posicionamento genérico da collection (PLA/PETG vs engineering enclosed). Consultar página do modelo / TDS oficial antes de claims.
+Materiais Ideal/Capable: **não publicados pelo fabricante de forma pinável nesta revisão** além do posicionamento genérico da collection (PLA/PETG vs engineering enclosed). Consultar página do modelo / TDS oficial antes de claims. «printer.bambu-lab-h2s»
 
 TDS/SDS do filamento não são substituídos por esta página.
 
@@ -148,19 +149,19 @@ TDS/SDS do filamento não são substituídos por esta página.
 ### Calibração (classe FFF)
 
 - Auto bed-level / Z-offset / compensação de vibração quando oferecidos pelo firmware — executar após mudança de hotend, transporte ou falha de primeira camada
-- Validar cupom de primeira camada antes de peças longas
+- Validar cupom de primeira camada antes de peças longas «printer.bambu-lab-h2s»
 
 ### Rotina preventiva
 
 - Limpeza de placa PEI; inspeção de nozzle; verificação de PTFE/path de filamento; remoção de resíduos no enclosure (quando houver)
-- Seguir wiki/support Bambu do modelo quando existir página dedicada
+- Seguir wiki/support Bambu do modelo quando existir página dedicada «printer.bambu-lab-h2s»
 
 ## Segurança
 
 - Superfícies quentes (hotend/bed) e partes móveis
 - Enclosure: VOC/particulados de ABS/ASA/PC — ventilação/filtro conforme orientação do fabricante; não tratar filtro de carvão como eliminação total de risco
 - Impressão desacompanhada: risco residual de blob/falha catastrófica — monitoramento recomendado
-- Critérios de parada: fumaça, odor anômalo intenso, blob no hotend, colisão repetida, overheat reportado pelo firmware
+- Critérios de parada: fumaça, odor anômalo intenso, blob no hotend, colisão repetida, overheat reportado pelo firmware «printer.bambu-lab-h2s»
 
 ## Known issues
 
@@ -179,3 +180,13 @@ Operacional FFF genérico: clog, first-layer, blob — seguir wiki Bambu da fam�
 - Service manual completo
 - Datasheet TDS completo quando Cloudflare/JS impedir extração tabular
 - Troubleshooting-mapped
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **H2S** (`printer.bambu-lab-h2s`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.bambu-lab-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.bambu-lab-h2s:bambu-lab-h2s.md -->
+
+### Nota de especificidade — Bambu Lab H2S
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Bambu Lab H2S** (`printer.bambu-lab-h2s`, fabricante `bambu-lab`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

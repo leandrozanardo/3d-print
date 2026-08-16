@@ -1,4 +1,5 @@
 ---
+
 id: printer.3d-systems-ext-800-titan-pellet
 title: 3D Systems EXT 800 Titan Pellet
 summary: 3D Systems EXT 800 Titan Pellet (3D Systems EXT 800 Titan Pellet) — coverage
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.3d-systems-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - 3D Systems EXT 800 Titan Pellet
 tags:
 - printer
-- documented
+- cataloged
 - 3d-systems
 - current
 manufacturer_id: 3d-systems
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **3D Systems EXT 800 Titan Pellet** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **3D Systems EXT 800 Titan Pellet**
 - Firmware/release notes pinados para **3D Systems EXT 800 Titan Pellet**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **3D Systems EXT 800 Titan Pellet** (`printer.3d-systems-ext-800-titan-pellet`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.3d-systems-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.3d-systems-ext-800-titan-pellet:3d-systems-ext-800-titan-pellet.md -->
+
+### Nota de especificidade — 3D Systems EXT 800 Titan Pellet
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **3D Systems EXT 800 Titan Pellet** (`printer.3d-systems-ext-800-titan-pellet`, fabricante `3d-systems`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.intamsys-funmat-pro-410
 title: INTAMSYS FUNMAT PRO 410
 summary: INTAMSYS FUNMAT PRO 410 (INTAMSYS FUNMAT PRO 410) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.intamsys-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - INTAMSYS FUNMAT PRO 410
 tags:
 - printer
-- documented
+- cataloged
 - intamsys
 - current
 manufacturer_id: intamsys
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **INTAMSYS FUNMAT PRO 410**
 - Firmware/release notes pinados para **INTAMSYS FUNMAT PRO 410**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **INTAMSYS FUNMAT PRO 410**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **INTAMSYS FUNMAT PRO 410** (`printer.intamsys-funmat-pro-410`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.intamsys-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.intamsys-funmat-pro-410:intamsys-funmat-pro-410.md -->
+
+### Nota de especificidade — INTAMSYS FUNMAT PRO 410
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **INTAMSYS FUNMAT PRO 410** (`printer.intamsys-funmat-pro-410`, fabricante `intamsys`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

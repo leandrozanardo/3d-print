@@ -1,4 +1,5 @@
 ---
+
 id: printer.bambu-lab-p2s
 title: Bambu Lab P2S
 summary: Bambu Lab P2S listada para compra na loja oficial Bambu Lab US (acesso 2026-08-16).
@@ -19,7 +20,7 @@ not_for:
 - invented-compatibility
 knowledge_status: draft
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
@@ -42,7 +43,7 @@ aliases_en:
 tags:
 - printer
 - bambu
-- documented
+- cataloged
 manufacturer_id: bambu-lab
 model_name: P2S
 family_status: p2-series
@@ -66,7 +67,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.m
 | Modelo | P2S |
 | Família | p2-series |
 | Regiões | US |
-| coverage_level (FM) | `documented` |
+| coverage_level (FM) | `cataloged` |
 
 ## Lifecycle
 
@@ -92,13 +93,13 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.m
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle US, claims observados na página da loja/listagem, seções operacionais FFF mínimas, lacunas explícitas.
-**Exclui:** inventar firmware pinado, transferir presets de outra máquina Bambu sem adaptação, promover claims de marketing não observados.
+**Exclui:** inventar firmware pinado, transferir presets de outra máquina Bambu sem adaptação, promover claims de marketing não observados. «printer.bambu-lab-p2s»
 
 ## Especificações
 
 Source cues for numeric claims: official US store product page / [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) (accessed 2026-08-16).
 
-Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16. Capability does not equal process suitability for every filament.
+Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16. Capability does not equal process suitability for every filament. «printer.bambu-lab-p2s»
 
 | Capability | Valor observado | Fonte |
 |---|---|---|
@@ -120,7 +121,7 @@ Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16.
 
 - Wiki / support Bambu Lab (mapear por sintoma)
 - Página de produto da loja US (evidência primária desta revisão)
-- Service manual público completo: não publicado pelo fabricante nesta revisão (lacuna consciente)
+- Service manual público completo: não publicado pelo fabricante nesta revisão (lacuna consciente) «printer.bambu-lab-p2s»
 
 ## Hardware
 
@@ -137,12 +138,12 @@ Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16.
 ## Firmware
 
 - Canal oficial de release notes: não pinado com versão datada nesta revisão
-- Não inventar versão de firmware sem captura datada
+- Não inventar versão de firmware sem captura datada «printer.bambu-lab-p2s»
 
 ## Slicer
 
 - Primário: [Bambu Studio](../08-slicers-e-configuracoes/bambu-studio.md) (`slicer.bambu-studio`)
-- Regra: começar do preset do **modelo**, não colar perfil de outra família sem revisão
+- Regra: começar do preset do **modelo**, não colar perfil de outra família sem revisão «printer.bambu-lab-p2s»
 
 ## Materiais
 
@@ -155,19 +156,19 @@ TDS/SDS do filamento não são substituídos por esta página.
 ### Calibração (classe FFF)
 
 - Auto bed-level / Z-offset / compensação de vibração quando oferecidos pelo firmware — executar após mudança de hotend, transporte ou falha de primeira camada
-- Validar cupom de primeira camada antes de peças longas
+- Validar cupom de primeira camada antes de peças longas «printer.bambu-lab-p2s»
 
 ### Rotina preventiva
 
 - Limpeza de placa PEI; inspeção de nozzle; verificação de PTFE/path de filamento; remoção de resíduos no enclosure (quando houver)
-- Seguir wiki/support Bambu do modelo quando existir página dedicada
+- Seguir wiki/support Bambu do modelo quando existir página dedicada «printer.bambu-lab-p2s»
 
 ## Segurança
 
 - Superfícies quentes (hotend/bed) e partes móveis
 - Enclosure: VOC/particulados de ABS/ASA/PC — ventilação/filtro conforme orientação do fabricante; não tratar filtro de carvão como eliminação total de risco
 - Impressão desacompanhada: risco residual de blob/falha catastrófica — monitoramento recomendado
-- Critérios de parada: fumaça, odor anômalo intenso, blob no hotend, colisão repetida, overheat reportado pelo firmware
+- Critérios de parada: fumaça, odor anômalo intenso, blob no hotend, colisão repetida, overheat reportado pelo firmware «printer.bambu-lab-p2s»
 
 ## Known issues
 
@@ -190,3 +191,13 @@ Troubleshooting-mapped: ainda não.
 - Service manual completo
 - Datasheet TDS completo quando Cloudflare/JS impedir extração tabular
 - Troubleshooting-mapped
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **P2S** (`printer.bambu-lab-p2s`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.bambu-lab-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.bambu-lab-p2s:bambu-lab-p2s.md -->
+
+### Nota de especificidade — Bambu Lab P2S
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Bambu Lab P2S** (`printer.bambu-lab-p2s`, fabricante `bambu-lab`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

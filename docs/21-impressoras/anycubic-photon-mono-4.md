@@ -84,7 +84,7 @@ A ficha **Photon Mono 4** (anycubic) prioriza evidência de catálogo e lacunas 
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed on official Anycubic store https://store.anycubic.com/products/photon-mono-4 (HTTP 200; accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-photon-mono-4]
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -108,7 +108,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas anycubic como se fossem de **Photon Mono 4**.
+Valores observados na página de produto específica ([source.anycubic-photon-mono-4](../22-fontes/anycubic-photon-mono-4.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 153.4 × 87 × 165 mm³ (2.2 L) ([source](../22-fontes/anycubic-photon-mono-4.md)) | página de produto OEM |
+| LCD | 7" mono 10K; X/Y 17 × 17 μm ([source](../22-fontes/anycubic-photon-mono-4.md)) | página de produto OEM |
+| Print speed | Std ≤50 mm/h; High-speed ≤70 mm/h @ 0.1 mm ([source](../22-fontes/anycubic-photon-mono-4.md)) | página de produto OEM |
+| Layer height | 0.03–0.15 mm ([source](../22-fontes/anycubic-photon-mono-4.md)) | página de produto OEM |
+| Light | Parallel Matrix Upgrade; ~3000 μW/cm² ([source](../22-fontes/anycubic-photon-mono-4.md)) | página de produto OEM |
+| Machine size | 230 × 235 × 391 mm³ ([source](../22-fontes/anycubic-photon-mono-4.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -177,3 +186,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Photon Mono 4**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Photon Mono 4**
 - Troubleshooting oficial por sintoma para **Anycubic Photon Mono 4**
+
+<!-- editorial-fingerprint:printer.anycubic-photon-mono-4:anycubic-photon-mono-4.md -->
+
+### Nota de especificidade — Anycubic Photon Mono 4
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Photon Mono 4** (`printer.anycubic-photon-mono-4`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

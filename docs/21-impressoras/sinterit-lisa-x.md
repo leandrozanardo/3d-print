@@ -1,4 +1,5 @@
 ---
+
 id: printer.sinterit-lisa-x
 title: Sinterit Lisa X
 summary: Sinterit Lisa X (Sinterit Lisa X) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.sinterit-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Sinterit Lisa X
 tags:
 - printer
-- documented
+- cataloged
 - sinterit
 - current
 manufacturer_id: sinterit
@@ -118,7 +119,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: sls
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.sinterit-lisa-x»
 
 ## Manuais
 
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Sinterit Lisa X**
 - Revisões de hardware / changelogs de **Sinterit Lisa X**
 - Página de produto dedicada ao SKU **Sinterit Lisa X** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Sinterit Lisa X** (`printer.sinterit-lisa-x`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.sinterit-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.sinterit-lisa-x:sinterit-lisa-x.md -->
+
+### Nota de especificidade — Sinterit Lisa X
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Sinterit Lisa X** (`printer.sinterit-lisa-x`, fabricante `sinterit`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

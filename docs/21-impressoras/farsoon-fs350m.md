@@ -1,4 +1,5 @@
 ---
+
 id: printer.farsoon-fs350m
 title: Farsoon FS350M
 summary: Farsoon FS350M (Farsoon FS350M) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.farsoon-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Farsoon FS350M
 tags:
 - printer
-- documented
+- cataloged
 - farsoon
 - current
 manufacturer_id: farsoon
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.farsoon-fs350m»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Farsoon FS350M**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Farsoon FS350M**
 - Troubleshooting oficial por sintoma para **Farsoon FS350M**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Farsoon FS350M** (`printer.farsoon-fs350m`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.farsoon-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.farsoon-fs350m:farsoon-fs350m.md -->
+
+### Nota de especificidade — Farsoon FS350M
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Farsoon FS350M** (`printer.farsoon-fs350m`, fabricante `farsoon`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -83,7 +83,9 @@ Para **Elegoo Neptune 4 Pro**, o foco operacional desta base é identidade + lif
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/elegoo-neptune-4-pro-fdm-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-neptune-4-pro]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Neptune 4 Pro** / `printer.elegoo-neptune-4-pro`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -107,7 +109,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Neptune 4 Pro**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.elegoo-neptune-4-pro](../22-fontes/elegoo-neptune-4-pro.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 225 × 225 × 265 mm ([source](../22-fontes/elegoo-neptune-4-pro.md)) | página de produto OEM |
+| Max toolhead speed / accel | 500 mm/s; 20 000 mm/s² ([source](../22-fontes/elegoo-neptune-4-pro.md)) | página de produto OEM |
+| Max nozzle | 300 °C ([source](../22-fontes/elegoo-neptune-4-pro.md)) | página de produto OEM |
+| Max heatbed | 110 °C (segmented 100 W + 150 W) ([source](../22-fontes/elegoo-neptune-4-pro.md)) | página de produto OEM |
+| Filaments (declared) | PLA / TPU / PETG / ABS / ASA / Nylon ([source](../22-fontes/elegoo-neptune-4-pro.md)) | página de produto OEM |
+| Machine size / net weight | 475 × 445 × 515 mm; 8.9 kg ([source](../22-fontes/elegoo-neptune-4-pro.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +187,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Neptune 4 Pro**
 - Troubleshooting oficial por sintoma para **Elegoo Neptune 4 Pro**
 - Revisões de hardware / changelogs de **Neptune 4 Pro**
+
+<!-- editorial-fingerprint:printer.elegoo-neptune-4-pro:elegoo-neptune-4-pro.md -->
+
+### Nota de especificidade — Elegoo Neptune 4 Pro
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Neptune 4 Pro** (`printer.elegoo-neptune-4-pro`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

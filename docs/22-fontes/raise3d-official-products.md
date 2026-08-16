@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.raise3d.com/3d-printers/
 ---
+
 # Fonte — Raise3D listagem oficial
 
 | Campo | Valor |

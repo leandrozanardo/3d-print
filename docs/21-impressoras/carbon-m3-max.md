@@ -1,4 +1,5 @@
 ---
+
 id: printer.carbon-m3-max
 title: Carbon M3 Max
 summary: Carbon M3 Max (Carbon M3 Max) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.carbon-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Carbon M3 Max
 tags:
 - printer
-- documented
+- cataloged
 - carbon
 - current
 manufacturer_id: carbon
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Carbon M3 Max** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Carbon M3 Max**
 - Firmware/release notes pinados para **Carbon M3 Max**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Carbon M3 Max** (`printer.carbon-m3-max`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.carbon-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.carbon-m3-max:carbon-m3-max.md -->
+
+### Nota de especificidade — Carbon M3 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Carbon M3 Max** (`printer.carbon-m3-max`, fabricante `carbon`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

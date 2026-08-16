@@ -107,7 +107,7 @@ Nesta base: use **FFF** no texto técnico; aceite “FDM” do usuário e normal
 ## Quando a terminologia falha na prática
 
 1. Usuário pede “settings de SLA” para A1 Mini (FFF) → redirecionar categoria
-2. Comparar “resolução 50 µm” de resina com “layer 0,2 mm” de FFF (heurística editorial (sem fonte pinada)) como se fossem a mesma métrica → explicar eixos diferentes
+2. Comparar “resolução 50 µm” de resina com “layer 0,2 mm” de FFF (comparação ilustrativa; sem fonte pinada) como se fossem a mesma métrica → explicar eixos diferentes
 3. Afirmar “PEI resolve warping” sem material/ambiente → PEI é superfície; warping é fenômeno térmico/mecânico
 4. Usar TDS de um SKU de PLA como regra de todos os PLAs → família ≠ formulação
 

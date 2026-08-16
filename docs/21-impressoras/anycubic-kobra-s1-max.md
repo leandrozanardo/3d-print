@@ -82,7 +82,9 @@ Para **Anycubic Kobra S1 Max**, o foco operacional desta base é identidade + li
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-s1-max (accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-kobra-s1-max]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Kobra S1 Max** / `printer.anycubic-kobra-s1-max`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -106,7 +108,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Kobra S1 Max**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.anycubic-kobra-s1-max](../22-fontes/anycubic-kobra-s1-max.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 350 × 350 × 350 mm³ ([source](../22-fontes/anycubic-kobra-s1-max.md)) | página de produto OEM |
+| Active chamber | 65 °C ([source](../22-fontes/anycubic-kobra-s1-max.md)) | página de produto OEM |
+| Max nozzle | 350 °C, hardened steel (0.4 + 0.6 incluídos) ([source](../22-fontes/anycubic-kobra-s1-max.md)) | página de produto OEM |
+| Max heatbed | 120 °C, PEI spring steel ([source](../22-fontes/anycubic-kobra-s1-max.md)) | página de produto OEM |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s ([source](../22-fontes/anycubic-kobra-s1-max.md)) | página de produto OEM |
+| Acceleration | Recommended 10 000 mm/s²; Maximum 20 000 mm/s² ([source](../22-fontes/anycubic-kobra-s1-max.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -175,3 +186,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Kobra S1 Max**
 - Troubleshooting oficial por sintoma para **Anycubic Kobra S1 Max**
 - Revisões de hardware / changelogs de **Kobra S1 Max**
+
+<!-- editorial-fingerprint:printer.anycubic-kobra-s1-max:anycubic-kobra-s1-max.md -->
+
+### Nota de especificidade — Anycubic Kobra S1 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Kobra S1 Max** (`printer.anycubic-kobra-s1-max`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

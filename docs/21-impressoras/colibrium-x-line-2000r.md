@@ -1,4 +1,5 @@
 ---
+
 id: printer.colibrium-x-line-2000r
 title: Colibrium Additive X Line 2000R
 summary: Colibrium Additive X Line 2000R (Colibrium Additive X Line 2000R) — coverage
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.colibrium-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Colibrium Additive X Line 2000R
 tags:
 - printer
-- documented
+- cataloged
 - colibrium
 - unknown
 manufacturer_id: colibrium
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.colibrium-x-line-2000r»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Colibrium Additive X Line 2000R**
 - Revisões de hardware / changelogs de **Colibrium Additive X Line 2000R**
 - Página de produto dedicada ao SKU **Colibrium Additive X Line 2000R** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Colibrium Additive X Line 2000R** (`printer.colibrium-x-line-2000r`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.colibrium-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.colibrium-x-line-2000r:colibrium-x-line-2000r.md -->
+
+### Nota de especificidade — Colibrium Additive X Line 2000R
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Colibrium Additive X Line 2000R** (`printer.colibrium-x-line-2000r`, fabricante `colibrium`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

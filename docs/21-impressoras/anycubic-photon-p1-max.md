@@ -84,7 +84,9 @@ Para **Anycubic Photon P1 Max**, o foco operacional desta base é identidade + l
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed on official Anycubic store https://store.anycubic.com/products/photon-p1-max-best-large-resin-3d-printer (HTTP 200; accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-photon-p1-max]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Photon P1 Max** / `printer.anycubic-photon-p1-max`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -108,7 +110,14 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas anycubic como se fossem de **Photon P1 Max**.
+Valores observados na página de produto específica ([source.anycubic-photon-p1-max](../22-fontes/anycubic-photon-p1-max.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 285.5 × 214 × 300 mm³ (18.3 L claim) ([source](../22-fontes/anycubic-photon-p1-max.md)) | página de produto OEM |
+| Resin vat | 1.9 L thermal-controlled (FAQ/marketing) ([source](../22-fontes/anycubic-photon-p1-max.md)) | página de produto OEM |
+| Light | 92% ([source](../22-fontes/anycubic-photon-p1-max.md)) | página de produto OEM |
+| Build platform | Precision-ground steel ([source](../22-fontes/anycubic-photon-p1-max.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -177,3 +186,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Photon P1 Max**
 - Página de produto dedicada ao SKU **Photon P1 Max** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Anycubic Photon P1 Max**
+
+<!-- editorial-fingerprint:printer.anycubic-photon-p1-max:anycubic-photon-p1-max.md -->
+
+### Nota de especificidade — Anycubic Photon P1 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Photon P1 Max** (`printer.anycubic-photon-p1-max`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

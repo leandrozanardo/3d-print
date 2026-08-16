@@ -1,4 +1,5 @@
 ---
+
 id: printer.mazak-vc-500a-5x-am-hwd
 title: Mazak VC-500A/5X AM HWD
 summary: Mazak VC-500A/5X AM HWD (Mazak VC-500A/5X AM HWD) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.mazak-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Mazak VC-500A/5X AM HWD
 tags:
 - printer
-- documented
+- cataloged
 - mazak
 - unknown
 manufacturer_id: mazak
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Mazak VC-500A/5X AM HWD**
 - Firmware/release notes pinados para **Mazak VC-500A/5X AM HWD**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Mazak VC-500A/5X AM HWD**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Mazak VC-500A/5X AM HWD** (`printer.mazak-vc-500a-5x-am-hwd`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.mazak-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.mazak-vc-500a-5x-am-hwd:mazak-vc-500a-5x-am-hwd.md -->
+
+### Nota de especificidade — Mazak VC-500A/5X AM HWD
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Mazak VC-500A/5X AM HWD** (`printer.mazak-vc-500a-5x-am-hwd`, fabricante `mazak`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

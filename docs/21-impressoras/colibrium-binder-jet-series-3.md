@@ -1,4 +1,5 @@
 ---
+
 id: printer.colibrium-binder-jet-series-3
 title: Colibrium Additive Binder Jet Series 3
 summary: Colibrium Additive Binder Jet Series 3 (Colibrium Additive Binder Jet Series
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.colibrium-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Colibrium Additive Binder Jet Series 3
 tags:
 - printer
-- documented
+- cataloged
 - colibrium
 - unknown
 manufacturer_id: colibrium
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: jetting de binder sobre leito de pó.
 
 - Technology: binder-jetting
 - Process: binder-jet
-- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó
+- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó «printer.colibrium-binder-jet-series-3»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Colibrium Additive Binder Jet Series 3**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Colibrium Additive Binder Jet Series 3**
 - Troubleshooting oficial por sintoma para **Colibrium Additive Binder Jet Series 3**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Colibrium Additive Binder Jet Series 3** (`printer.colibrium-binder-jet-series-3`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.colibrium-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.colibrium-binder-jet-series-3:colibrium-binder-jet-series-3.md -->
+
+### Nota de especificidade — Colibrium Additive Binder Jet Series 3
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Colibrium Additive Binder Jet Series 3** (`printer.colibrium-binder-jet-series-3`, fabricante `colibrium`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

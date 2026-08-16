@@ -1,4 +1,5 @@
 ---
+
 id: printer.voxeljet-vx1000-hss
 title: voxeljet VX1000 HSS
 summary: voxeljet VX1000 HSS (voxeljet VX1000 HSS) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.voxeljet-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - voxeljet VX1000 HSS
 tags:
 - printer
-- documented
+- cataloged
 - voxeljet
 - unknown
 manufacturer_id: voxeljet
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: jetting de binder sobre leito de pó.
 
 - Technology: binder-jetting
 - Process: hss
-- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó
+- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó «printer.voxeljet-vx1000-hss»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **voxeljet VX1000 HSS**
 - Firmware/release notes pinados para **voxeljet VX1000 HSS**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **voxeljet VX1000 HSS**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **voxeljet VX1000 HSS** (`printer.voxeljet-vx1000-hss`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.voxeljet-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.voxeljet-vx1000-hss:voxeljet-vx1000-hss.md -->
+
+### Nota de especificidade — voxeljet VX1000 HSS
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **voxeljet VX1000 HSS** (`printer.voxeljet-vx1000-hss`, fabricante `voxeljet`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

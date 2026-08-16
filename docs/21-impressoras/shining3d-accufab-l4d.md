@@ -1,4 +1,5 @@
 ---
+
 id: printer.shining3d-accufab-l4d
 title: Shining 3D AccuFab-L4D
 summary: Shining 3D AccuFab-L4D (Shining 3D AccuFab-L4D) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.shining3d-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Shining 3D AccuFab-L4D
 tags:
 - printer
-- documented
+- cataloged
 - shining3d
 - current
 manufacturer_id: shining3d
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Shining 3D AccuFab-L4D**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Shining 3D AccuFab-L4D**
 - Troubleshooting oficial por sintoma para **Shining 3D AccuFab-L4D**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Shining 3D AccuFab-L4D** (`printer.shining3d-accufab-l4d`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.shining3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.shining3d-accufab-l4d:shining3d-accufab-l4d.md -->
+
+### Nota de especificidade — Shining 3D AccuFab-L4D
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Shining 3D AccuFab-L4D** (`printer.shining3d-accufab-l4d`, fabricante `shining3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

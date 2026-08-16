@@ -1,4 +1,5 @@
 ---
+
 id: printer.qidi-q2c
 title: QIDI Q2C
 summary: QIDI Q2C (QIDI Q2C) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.qidi-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - QIDI Q2C
 tags:
 - printer
-- documented
+- cataloged
 - qidi
 - current
 manufacturer_id: qidi
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **QIDI Q2C**
 - Troubleshooting oficial por sintoma para **QIDI Q2C**
 - Revisões de hardware / changelogs de **QIDI Q2C**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **QIDI Q2C** (`printer.qidi-q2c`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.qidi-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.qidi-q2c:qidi-q2c.md -->
+
+### Nota de especificidade — QIDI Q2C
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **QIDI Q2C** (`printer.qidi-q2c`, fabricante `qidi`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

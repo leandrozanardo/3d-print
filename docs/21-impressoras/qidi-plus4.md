@@ -1,4 +1,5 @@
 ---
+
 id: printer.qidi-plus4
 title: QIDI Plus4
 summary: QIDI Plus4 (QIDI Plus4) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.qidi-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - QIDI Plus4
 tags:
 - printer
-- documented
+- cataloged
 - qidi
 - current
 manufacturer_id: qidi
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **QIDI Plus4**
 - Página de produto dedicada ao SKU **QIDI Plus4** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **QIDI Plus4**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **QIDI Plus4** (`printer.qidi-plus4`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.qidi-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.qidi-plus4:qidi-plus4.md -->
+
+### Nota de especificidade — QIDI Plus4
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **QIDI Plus4** (`printer.qidi-plus4`, fabricante `qidi`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

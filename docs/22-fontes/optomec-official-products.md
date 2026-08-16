@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.optomec.com/3d-printed-metals/lens-printers/
 ---
+
 # Fonte — Optomec listagem oficial
 
 | Campo | Valor |

@@ -48,7 +48,7 @@ supersedes: []
 ---
 # Material jetting
 
-Hub pai: [Tecnologias](../INDEX.md) · pasta [material-jetting](./)
+Hub pai: [Tecnologias](../INDEX.md) · pasta [material-jetting](INDEX.md)
 
 ## Mecanismo
 

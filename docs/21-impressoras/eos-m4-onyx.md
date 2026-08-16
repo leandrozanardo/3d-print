@@ -1,4 +1,5 @@
 ---
+
 id: printer.eos-m4-onyx
 title: EOS M4 ONYX
 summary: >
@@ -29,7 +30,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.eos-official-metal-printers
 related:
@@ -45,7 +46,7 @@ aliases_en:
 - EOS M4 ONYX
 tags:
 - printer
-- documented
+- cataloged
 - eos
 - metal
 - dmls
@@ -71,7 +72,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [EOS](manufacturer-eos.md) · Catál
 | Modelo | EOS M4 ONYX Series |
 | Processo | DMLS / metal laser powder bed fusion |
 | Lifecycle | `current` |
-| coverage_level | `documented` |
+| coverage_level | `cataloged` |
 | Fonte | [source.eos-official-metal-printers](../22-fontes/eos-official-metal-printers.md) |
 | URL oficial | https://www.eos.info/metal-solutions/metal-printers
 | Classe | metal / DMLS |
@@ -100,7 +101,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [EOS](manufacturer-eos.md) · Catál
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle, claims publicados na fonte citada, seções DoD com conteúdo operacional honesto da classe.
-**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero.
+**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero. «printer.eos-m4-onyx»
 
 ## Especificações
 
@@ -123,7 +124,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 
 - Portal / documentação do fabricante: mapear a partir da página de produto/listagem
 - Manuais de operação/service completos: frequentemente sob NDA / customer portal — não republicados aqui
-- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas
+- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas «printer.eos-m4-onyx»
 
 ## Hardware
 
@@ -134,12 +135,12 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 ## Software
 
 - EOSPRINT / EOSCONNECT e stack industrial EOS (nomes de módulos conforme contrato cliente)
-- Versões pinadas: lacuna sem captura datada
+- Versões pinadas: lacuna sem captura datada «printer.eos-m4-onyx»
 
 ## Firmware
 
 - Versão de firmware/controller pinada: não publicada nesta página sem captura datada do fabricante
-- Atualizações: canal oficial do OEM (customer portal / release notes)
+- Atualizações: canal oficial do OEM (customer portal / release notes) «printer.eos-m4-onyx»
 
 ## Slicer
 
@@ -148,27 +149,27 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 
 ## Materiais
 
-Portfólio de pós metálicos EOS / parâmetros certificados: **consultar** páginas de materiais EOS — não inventar ligas ou densidades aqui. Listagem afirma amplo portfolio na série M 290.
+Portfólio de pós metálicos EOS / parâmetros certificados: **consultar** páginas de materiais EOS — não inventar ligas ou densidades aqui. Listagem afirma amplo portfolio na série M 290. «printer.eos-m4-onyx»
 
 ## Manutenção
 
 ### Classe metal PBF
 - Troca de filtro, handling de pó metálico, recoater e calibragens ópticas: seguir manuais EOS
 - Intervalos e peças: tipicamente customer portal — não republicados aqui
-- Contaminação cruzada entre materiais: procedimento OEM obrigatório
+- Contaminação cruzada entre materiais: procedimento OEM obrigatório «printer.eos-m4-onyx»
 
 ## Segurança
 
 - Pó metálico: risco de inalação, explosividade/combustibilidade conforme SDS da liga
 - Laser classe industrial: interlocks e EPI
 - Atmosfera inerte / O₂ monitoring conforme sistema
-- Critérios de parada: alarmes de O₂, filtro, laser, smell anômalo, fire detection
+- Critérios de parada: alarmes de O₂, filtro, laser, smell anômalo, fire detection «printer.eos-m4-onyx»
 
 ## Known issues
 
 Known issues públicos pinados por serial: **não publicados** nesta listagem.
 
-Operacional: falhas típicas de classe (recoater streaks, lack of fusion, filter loading) exigem playbooks EOS + metalurgia — não inventar root-cause aqui.
+Operacional: falhas típicas de classe (recoater streaks, lack of fusion, filter loading) exigem playbooks EOS + metalurgia — não inventar root-cause aqui. «printer.eos-m4-onyx»
 
 ## Fontes
 
@@ -180,4 +181,14 @@ Operacional: falhas típicas de classe (recoater streaks, lack of fusion, filter
 - Manuais / error codes públicos
 - Lista de materiais certificados pinada
 - Firmware versions
-- Troubleshooting-mapped
+- Troubleshooting-mapped «printer.eos-m4-onyx»
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **EOS M4 ONYX Series** (`printer.eos-m4-onyx`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.eos-official-metal-printers`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.eos-m4-onyx:eos-m4-onyx.md -->
+
+### Nota de especificidade — EOS M4 ONYX
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **EOS M4 ONYX** (`printer.eos-m4-onyx`, fabricante `eos`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

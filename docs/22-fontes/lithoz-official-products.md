@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.lithoz.com/en/3d-printer/overview/
 ---
+
 # Fonte — Lithoz listagem oficial
 
 | Campo | Valor |

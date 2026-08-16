@@ -47,7 +47,7 @@ supersedes: []
 ---
 # Binder jetting
 
-Hub pai: [Tecnologias](../INDEX.md) · pasta [binder-jetting](./)
+Hub pai: [Tecnologias](../INDEX.md) · pasta [binder-jetting](INDEX.md)
 
 ## Mecanismo
 

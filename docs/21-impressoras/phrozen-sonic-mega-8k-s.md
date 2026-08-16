@@ -1,4 +1,5 @@
 ---
+
 id: printer.phrozen-sonic-mega-8k-s
 title: Phrozen Sonic Mega 8K S
 summary: Phrozen Sonic Mega 8K S (Phrozen Sonic Mega 8K S) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.phrozen-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Phrozen Sonic Mega 8K S
 tags:
 - printer
-- documented
+- cataloged
 - phrozen
 - current
 manufacturer_id: phrozen
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Phrozen Sonic Mega 8K S**
 - Firmware/release notes pinados para **Phrozen Sonic Mega 8K S**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Phrozen Sonic Mega 8K S**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Phrozen Sonic Mega 8K S** (`printer.phrozen-sonic-mega-8k-s`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.phrozen-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.phrozen-sonic-mega-8k-s:phrozen-sonic-mega-8k-s.md -->
+
+### Nota de especificidade — Phrozen Sonic Mega 8K S
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Phrozen Sonic Mega 8K S** (`printer.phrozen-sonic-mega-8k-s`, fabricante `phrozen`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

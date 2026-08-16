@@ -1,4 +1,5 @@
 ---
+
 id: printer.tronxy-moore-x2540
 title: Tronxy Moore X2540
 summary: Tronxy Moore X2540 (Tronxy Moore X2540) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.tronxy-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Tronxy Moore X2540
 tags:
 - printer
-- documented
+- cataloged
 - tronxy
 - current
 manufacturer_id: tronxy
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Tronxy Moore X2540**
 - Troubleshooting oficial por sintoma para **Tronxy Moore X2540**
 - Revisões de hardware / changelogs de **Tronxy Moore X2540**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Tronxy Moore X2540** (`printer.tronxy-moore-x2540`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.tronxy-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.tronxy-moore-x2540:tronxy-moore-x2540.md -->
+
+### Nota de especificidade — Tronxy Moore X2540
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Tronxy Moore X2540** (`printer.tronxy-moore-x2540`, fabricante `tronxy`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.lulzbot-taz-8
 title: LulzBot TAZ 8
 summary: LulzBot TAZ 8 (LulzBot TAZ 8) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.lulzbot-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - LulzBot TAZ 8
 tags:
 - printer
-- documented
+- cataloged
 - lulzbot
 - current
 manufacturer_id: lulzbot
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **LulzBot TAZ 8**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **LulzBot TAZ 8**
 - Troubleshooting oficial por sintoma para **LulzBot TAZ 8**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **LulzBot TAZ 8** (`printer.lulzbot-taz-8`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.lulzbot-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.lulzbot-taz-8:lulzbot-taz-8.md -->
+
+### Nota de especificidade — LulzBot TAZ 8
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **LulzBot TAZ 8** (`printer.lulzbot-taz-8`, fabricante `lulzbot`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -52,7 +52,7 @@ supersedes: []
 ---
 # Directed energy deposition (DED, WAAM)
 
-Hub pai: [Tecnologias](../INDEX.md) · pasta [directed-energy-deposition](./)
+Hub pai: [Tecnologias](../INDEX.md) · pasta [directed-energy-deposition](INDEX.md)
 
 ## Mecanismo
 

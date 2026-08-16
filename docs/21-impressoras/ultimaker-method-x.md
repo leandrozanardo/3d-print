@@ -1,4 +1,5 @@
 ---
+
 id: printer.ultimaker-method-x
 title: UltiMaker Method X
 summary: UltiMaker Method X (UltiMaker Method X) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.ultimaker-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - UltiMaker Method X
 tags:
 - printer
-- documented
+- cataloged
 - ultimaker
 - current
 manufacturer_id: ultimaker
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **UltiMaker Method X**
 - Página de produto dedicada ao SKU **UltiMaker Method X** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **UltiMaker Method X**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **UltiMaker Method X** (`printer.ultimaker-method-x`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.ultimaker-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.ultimaker-method-x:ultimaker-method-x.md -->
+
+### Nota de especificidade — UltiMaker Method X
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **UltiMaker Method X** (`printer.ultimaker-method-x`, fabricante `ultimaker`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

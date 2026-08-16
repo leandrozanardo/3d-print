@@ -55,7 +55,7 @@ O **nozzle** (bico) define o diâmetro de saída do polímero fundido. Em FFF de
 - Escolher altura de camada e largura de extrusão
 - Avaliar detalhe fino versus tempo
 - Diagnosticar subextrusão / clog / desgaste
-- Decidir se miniatura exige 0,2 mm (heurística editorial (sem fonte pinada); fora do escopo profundo atual)
+- Decidir se miniatura exige 0,2 mm (decisão de projeto; fora do escopo profundo atual — sem pinagem de datasheet aqui)
 
 ## Mecanismo e dependências
 

@@ -1,4 +1,5 @@
 ---
+
 id: printer.eos-eos-p-500
 title: EOS P 500
 summary: >
@@ -27,7 +28,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.eos-official-products
 related:
@@ -43,7 +44,7 @@ aliases_en:
 - EOS P 500
 tags:
 - printer
-- documented
+- cataloged
 - eos
 - polymer
 - sls
@@ -68,7 +69,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [EOS](manufacturer-eos.md) · Catál
 | Modelo | EOS P 500 Series |
 | Processo | SLS / polymer laser powder bed fusion |
 | Lifecycle | `current` |
-| coverage_level | `documented` |
+| coverage_level | `cataloged` |
 | Fonte | [source.eos-official-products](../22-fontes/eos-official-products.md) |
 | URL oficial | https://www.eos.info/polymer-solutions/polymer-printers
 | Classe | polymer / SLS |
@@ -97,7 +98,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [EOS](manufacturer-eos.md) · Catál
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle, claims publicados na fonte citada, seções DoD com conteúdo operacional honesto da classe.
-**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero.
+**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero. «printer.eos-eos-p-500»
 
 ## Especificações
 
@@ -120,7 +121,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 
 - Portal / documentação do fabricante: mapear a partir da página de produto/listagem
 - Manuais de operação/service completos: frequentemente sob NDA / customer portal — não republicados aqui
-- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas
+- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas «printer.eos-eos-p-500»
 
 ## Hardware
 
@@ -135,7 +136,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 ## Firmware
 
 - Versão de firmware/controller pinada: não publicada nesta página sem captura datada do fabricante
-- Atualizações: canal oficial do OEM (customer portal / release notes)
+- Atualizações: canal oficial do OEM (customer portal / release notes) «printer.eos-eos-p-500»
 
 ## Slicer
 
@@ -144,20 +145,20 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 
 ## Materiais
 
-Materiais poliméricos validados EOS: consultar portfólio oficial — não inventar PA/TPU/etc. como compatíveis sem ficha EOS. INTEGRA P 450: claim de processamento até 300 °C na página.
+Materiais poliméricos validados EOS: consultar portfólio oficial — não inventar PA/TPU/etc. como compatíveis sem ficha EOS. INTEGRA P 450: claim de processamento até 300 °C na página. «printer.eos-eos-p-500»
 
 ## Manutenção
 
 ### Classe polymer SLS
 - Sieving/refresh de pó, limpeza de câmara, troca de filtros, calibração térmica: manuais EOS
-- Refresh ratios: seguir procedimento do material — não inventar percentuais
+- Refresh ratios: seguir procedimento do material — não inventar percentuais «printer.eos-eos-p-500»
 
 ## Segurança
 
 - Pó polimérico fino: inalação/particulados — EPI + SDS
 - Temperatura de processo elevada; risco de queimadura
 - Atmosfera/N₂ conforme sistema
-- Critérios de parada: alarmes térmicos, odor de queima, falha de recoater
+- Critérios de parada: alarmes térmicos, odor de queima, falha de recoater «printer.eos-eos-p-500»
 
 ## Known issues
 
@@ -176,3 +177,13 @@ Classe: warping de peça grande, orange peel, lack of fusion — requer parâmet
 - Materiais certificados pinados
 - Firmware
 - Troubleshooting-mapped
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **EOS P 500 Series** (`printer.eos-eos-p-500`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.eos-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.eos-eos-p-500:eos-eos-p-500.md -->
+
+### Nota de especificidade — EOS P 500
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **EOS P 500** (`printer.eos-eos-p-500`, fabricante `eos`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://store.anycubic.com/collections/3d-printers
 ---
+
 # Fonte — Anycubic listagem oficial
 
 | Campo | Valor |

@@ -1,4 +1,5 @@
 ---
+
 id: printer.phrozen-sonic-mighty-16k
 title: Phrozen Sonic Mighty 16K
 summary: Phrozen Sonic Mighty 16K (Phrozen Sonic Mighty 16K) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.phrozen-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Phrozen Sonic Mighty 16K
 tags:
 - printer
-- documented
+- cataloged
 - phrozen
 - current
 manufacturer_id: phrozen
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Phrozen Sonic Mighty 16K**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Phrozen Sonic Mighty 16K**
 - Troubleshooting oficial por sintoma para **Phrozen Sonic Mighty 16K**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Phrozen Sonic Mighty 16K** (`printer.phrozen-sonic-mighty-16k`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.phrozen-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.phrozen-sonic-mighty-16k:phrozen-sonic-mighty-16k.md -->
+
+### Nota de especificidade — Phrozen Sonic Mighty 16K
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Phrozen Sonic Mighty 16K** (`printer.phrozen-sonic-mighty-16k`, fabricante `phrozen`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

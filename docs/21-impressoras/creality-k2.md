@@ -1,4 +1,5 @@
 ---
+
 id: printer.creality-k2
 title: Creality K2
 summary: Creality K2 é impressora FFF enclosed da série K2 (volume 260³ mm), listada
@@ -175,3 +176,9 @@ Cells não listadas para o SKU K2 na evidência: **não publicado pelo fabricant
 - Firmware version pinada
 - Troubleshooting-mapped por sintoma
 - Diâmetro de nozzle default confirmado em PDF (marketing cita quick-swap; célula dedicada K2 incompleta na loja consultada)
+
+<!-- editorial-fingerprint:printer.creality-k2:creality-k2.md -->
+
+### Nota de especificidade — Creality K2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Creality K2** (`printer.creality-k2`, fabricante `creality`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

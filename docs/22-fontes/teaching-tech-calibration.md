@@ -30,7 +30,9 @@ source_type: community-report
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://teachingtechyt.github.io/calibration.html
 ---
+
 # Fonte — Teaching Tech Calibration
 
 | Campo | Valor |
@@ -42,10 +44,17 @@ last_verified: '2026-08-16'
 | data de acesso | 2026-08-15 |
 | confiabilidade | boa para princípios e cupons; números são pontos de partida |
 
+## Claims sustentados
+
+- Site de calibração FFF com torres e primeiros princípios (método e cupons)
+- Orienta ordem de testes e leitura de artefatos; números são pontos de partida
+- URL canônica: https://teachingtechyt.github.io/calibration.html
+
 ## Limites
 
 - Paths de UI variam por slicer/versão
 - Não substitui perfil oficial Bambu para A1 Mini
+- Valores numéricos não transferem automaticamente entre máquinas
 
 ## Páginas que utilizam
 

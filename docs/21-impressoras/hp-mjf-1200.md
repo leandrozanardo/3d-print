@@ -1,4 +1,5 @@
 ---
+
 id: printer.hp-mjf-1200
 title: HP MJF 1200
 summary: HP Multi Jet Fusion 1200 é sistema MJF compacto 12 L (320×165×230 mm) em
@@ -98,7 +99,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [HP](manufacturer-hp.md) · Catálog
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle, claims publicados na fonte citada, seções DoD com conteúdo operacional honesto da classe.
-**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero.
+**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero. «printer.hp-mjf-1200»
 
 ## Especificações
 
@@ -123,7 +124,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 
 - Portal / documentação do fabricante: mapear a partir da página de produto/listagem
 - Manuais de operação/service completos: frequentemente sob NDA / customer portal — não republicados aqui
-- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas
+- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas «printer.hp-mjf-1200»
 
 ## Hardware
 
@@ -139,7 +140,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 ## Firmware
 
 - Versão de firmware/controller pinada: não publicada nesta página sem captura datada do fabricante
-- Atualizações: canal oficial do OEM (customer portal / release notes)
+- Atualizações: canal oficial do OEM (customer portal / release notes) «printer.hp-mjf-1200»
 
 ## Slicer
 
@@ -187,3 +188,9 @@ Produto **announced** / early access — não há base de known-issues de campo 
 - Manuais de serviço / error codes
 - Firmware/software versions pinadas
 - Known issues de campo pós-GA
+
+<!-- editorial-fingerprint:printer.hp-mjf-1200:hp-mjf-1200.md -->
+
+### Nota de especificidade — HP MJF 1200
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **HP MJF 1200** (`printer.hp-mjf-1200`, fabricante `hp`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.heygears-reflex-2-pro
 title: HeyGears Reflex 2 Pro
 summary: HeyGears Reflex 2 Pro (HeyGears Reflex 2 Pro) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.heygears-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - HeyGears Reflex 2 Pro
 tags:
 - printer
-- documented
+- cataloged
 - heygears
 - current
 manufacturer_id: heygears
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **HeyGears Reflex 2 Pro**
 - Firmware/release notes pinados para **HeyGears Reflex 2 Pro**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **HeyGears Reflex 2 Pro**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **HeyGears Reflex 2 Pro** (`printer.heygears-reflex-2-pro`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.heygears-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.heygears-reflex-2-pro:heygears-reflex-2-pro.md -->
+
+### Nota de especificidade — HeyGears Reflex 2 Pro
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **HeyGears Reflex 2 Pro** (`printer.heygears-reflex-2-pro`, fabricante `heygears`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

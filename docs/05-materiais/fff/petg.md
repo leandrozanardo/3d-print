@@ -79,8 +79,8 @@ Fabricante: PETG = **Ideal** ([tech specs](../../22-fontes/bambu-a1-mini-tech-sp
 
 | Parâmetro | Faixa de partida (projeto) | Notas |
 |---|---|---|
-| Nozzle | 220–250 °C — heurística editorial (sem fonte pinada) (ordem Studio ~230–245 °C) | Torre após secar |
-| Bed | 70–80 °C — heurística editorial (sem fonte pinada) | Não exceder 80 °C na A1 Mini ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md)) |
+| Nozzle | faixa típica de partida 220–250 °C (Studio costuma cair ~230–245 °C; confirmar no spool/TDS — sem fonte pinada nesta base) | Torre após secar |
+| Bed | faixa típica de partida 70–80 °C (orientação de bancada; confirmar no spool/TDS — sem fonte pinada nesta base) | Não exceder 80 °C na A1 Mini ([tech specs A1 mini](../../22-fontes/bambu-a1-mini-tech-specs.md)) |
 | Part cooling | moderado (ordem 30–70%) | Alto demais → Z fraco; baixo → sag/string |
 | Placa | texturizada preferida | Smooth: risco de solda |
 | Secagem | obrigatória se bobina aberta/suspeita | Umidade mascara retract |

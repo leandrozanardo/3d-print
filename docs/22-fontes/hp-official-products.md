@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.hp.com/us-en/printers/3d-printers/products.html
 ---
+
 # Fonte — HP listagem oficial
 
 | Campo | Valor |

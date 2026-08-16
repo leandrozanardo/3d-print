@@ -1,4 +1,5 @@
 ---
+
 id: printer.nikon-slm-nxg-600e
 title: Nikon SLM Solutions NXG 600E
 summary: Nikon SLM Solutions NXG 600E (Nikon SLM Solutions NXG 600E) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.nikon-slm-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Nikon SLM Solutions NXG 600E
 tags:
 - printer
-- documented
+- cataloged
 - nikon-slm
 - unknown
 manufacturer_id: nikon-slm
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.nikon-slm-nxg-600e»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Nikon SLM Solutions NXG 600E**
 - Firmware/release notes pinados para **Nikon SLM Solutions NXG 600E**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Nikon SLM Solutions NXG 600E**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Nikon SLM Solutions NXG 600E** (`printer.nikon-slm-nxg-600e`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.nikon-slm-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.nikon-slm-nxg-600e:nikon-slm-nxg-600e.md -->
+
+### Nota de especificidade — Nikon SLM Solutions NXG 600E
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Nikon SLM Solutions NXG 600E** (`printer.nikon-slm-nxg-600e`, fabricante `nikon-slm`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

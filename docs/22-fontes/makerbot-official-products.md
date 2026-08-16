@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.makerbot.com/3d-printers/
 ---
+
 # Fonte — MakerBot listagem oficial
 
 | Campo | Valor |

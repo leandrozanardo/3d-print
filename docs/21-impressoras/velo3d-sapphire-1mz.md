@@ -1,4 +1,5 @@
 ---
+
 id: printer.velo3d-sapphire-1mz
 title: Velo3D Sapphire 1MZ
 summary: Velo3D Sapphire 1MZ (Velo3D Sapphire 1MZ) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.velo3d-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Velo3D Sapphire 1MZ
 tags:
 - printer
-- documented
+- cataloged
 - velo3d
 - unknown
 manufacturer_id: velo3d
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.velo3d-sapphire-1mz»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Velo3D Sapphire 1MZ**
 - Revisões de hardware / changelogs de **Velo3D Sapphire 1MZ**
 - Página de produto dedicada ao SKU **Velo3D Sapphire 1MZ** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Velo3D Sapphire 1MZ** (`printer.velo3d-sapphire-1mz`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.velo3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.velo3d-sapphire-1mz:velo3d-sapphire-1mz.md -->
+
+### Nota de especificidade — Velo3D Sapphire 1MZ
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Velo3D Sapphire 1MZ** (`printer.velo3d-sapphire-1mz`, fabricante `velo3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

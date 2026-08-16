@@ -1,4 +1,5 @@
 ---
+
 id: printer.meltio-meltio-m600
 title: Meltio Meltio M600
 summary: Meltio Meltio M600 (Meltio Meltio M600) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.meltio-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Meltio Meltio M600
 tags:
 - printer
-- documented
+- cataloged
 - meltio
 - unknown
 manufacturer_id: meltio
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Meltio Meltio M600**
 - Firmware/release notes pinados para **Meltio Meltio M600**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Meltio Meltio M600**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Meltio Meltio M600** (`printer.meltio-meltio-m600`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.meltio-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.meltio-meltio-m600:meltio-meltio-m600.md -->
+
+### Nota de especificidade — Meltio Meltio M600
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Meltio Meltio M600** (`printer.meltio-meltio-m600`, fabricante `meltio`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

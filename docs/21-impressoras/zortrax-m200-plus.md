@@ -1,4 +1,5 @@
 ---
+
 id: printer.zortrax-m200-plus
 title: Zortrax M200 Plus
 summary: Zortrax M200 Plus (Zortrax M200 Plus) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.zortrax-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Zortrax M200 Plus
 tags:
 - printer
-- documented
+- cataloged
 - zortrax
 - current
 manufacturer_id: zortrax
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Zortrax M200 Plus**
 - Firmware/release notes pinados para **Zortrax M200 Plus**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Zortrax M200 Plus**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Zortrax M200 Plus** (`printer.zortrax-m200-plus`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.zortrax-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.zortrax-m200-plus:zortrax-m200-plus.md -->
+
+### Nota de especificidade — Zortrax M200 Plus
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Zortrax M200 Plus** (`printer.zortrax-m200-plus`, fabricante `zortrax`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

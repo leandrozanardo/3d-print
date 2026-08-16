@@ -100,7 +100,7 @@ Gaps / paredes ocas? Verifique **secagem** e **purge/clog** antes de subir flow.
 | Alta | Umidade | [Secagem](../../05-materiais/fff/secagem-e-armazenamento.md) |
 | Alta | Clog parcial / resíduo | Purge, cold pull, nozzle |
 | Alta | Speed > volumetric | [Velocidades](../../08-slicers-e-configuracoes/settings/velocidades.md) ↓ |
-| Média | Temp baixa | +5 °C no range (heurística editorial (sem fonte pinada)) — [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md) |
+| Média | Temp baixa | subir um pouco a temperatura dentro do range do material (ajuste exploratório; sem fonte pinada) — [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md) |
 | Média | Path/AMS fricção | Desembaraçar PTFE/path |
 | Média | Nozzle gasto (CF/GF) | Trocar hardened |
 | Baixa-primeira | Flow “baixo” sem medir | Calibrar só após path limpo |
@@ -114,7 +114,7 @@ Filamento seco / sem pops?
         ├─ NÃO → cold pull / nozzle; purge PLA↔PETG
         └─ SIM → só em alta velocidade?
               ├─ SIM → −20% speed / ↓ max volumetric
-              └─ NÃO → +5 °C (heurística editorial (sem fonte pinada)); cupom single-wall; flow 0,95–1,00
+              └─ NÃO → subir um pouco a temperatura dentro do range (ajuste exploratório; sem fonte pinada); cupom single-wall; flow 0,95–1,00
 AMS envolvido? → checar kink/tangle antes de flow no Studio
 ```
 

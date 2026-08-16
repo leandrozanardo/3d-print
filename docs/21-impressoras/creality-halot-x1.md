@@ -1,4 +1,5 @@
 ---
+
 id: printer.creality-halot-x1
 title: Creality HALOT-X1
 summary: Creality HALOT-X1 é impressora de resina MSLA/LCD 16K (10,1") com volume
@@ -182,3 +183,9 @@ Fonte: [source.creality-halot-x1-product](../22-fontes/creality-halot-x1-product
 - Datasheet PDF revisionado + AFU-only vs base BOM
 - Firmware pinado
 - Troubleshooting-mapped (layer lines, failed plate adhesion, RFID miss)
+
+<!-- editorial-fingerprint:printer.creality-halot-x1:creality-halot-x1.md -->
+
+### Nota de especificidade — Creality HALOT-X1
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Creality HALOT-X1** (`printer.creality-halot-x1`, fabricante `creality`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

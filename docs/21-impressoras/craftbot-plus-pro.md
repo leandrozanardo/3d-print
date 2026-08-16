@@ -1,4 +1,5 @@
 ---
+
 id: printer.craftbot-plus-pro
 title: Craftbot Plus Pro
 summary: Craftbot Plus Pro (Craftbot Plus Pro) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.craftbot-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Craftbot Plus Pro
 tags:
 - printer
-- documented
+- cataloged
 - craftbot
 - current
 manufacturer_id: craftbot
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Craftbot Plus Pro**
 - Troubleshooting oficial por sintoma para **Craftbot Plus Pro**
 - Revisões de hardware / changelogs de **Craftbot Plus Pro**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Craftbot Plus Pro** (`printer.craftbot-plus-pro`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.craftbot-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.craftbot-plus-pro:craftbot-plus-pro.md -->
+
+### Nota de especificidade — Craftbot Plus Pro
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Craftbot Plus Pro** (`printer.craftbot-plus-pro`, fabricante `craftbot`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

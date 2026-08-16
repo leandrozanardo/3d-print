@@ -83,7 +83,9 @@ Documentação de **Elegoo Neptune 4** distingue claims sustentados pela listage
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/elegoo-neptune-4-fdm-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-neptune-4]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Neptune 4** / `printer.elegoo-neptune-4`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -107,7 +109,11 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas elegoo como se fossem de **Neptune 4**.
+Valores observados na página de produto específica ([source.elegoo-neptune-4](../22-fontes/elegoo-neptune-4.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 225 × 225 × 265 mm ([source](../22-fontes/elegoo-neptune-4.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +182,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Neptune 4**
 - Página de produto dedicada ao SKU **Neptune 4** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Elegoo Neptune 4**
+
+<!-- editorial-fingerprint:printer.elegoo-neptune-4:elegoo-neptune-4.md -->
+
+### Nota de especificidade — Elegoo Neptune 4
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Neptune 4** (`printer.elegoo-neptune-4`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

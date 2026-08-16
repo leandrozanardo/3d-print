@@ -1,4 +1,5 @@
 ---
+
 id: printer.raise3d-pro3-plus-hs
 title: Raise3D Pro3 Plus HS
 summary: Raise3D Pro3 Plus HS (Raise3D Pro3 Plus HS) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.raise3d-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Raise3D Pro3 Plus HS
 tags:
 - printer
-- documented
+- cataloged
 - raise3d
 - current
 manufacturer_id: raise3d
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Raise3D Pro3 Plus HS**
 - Página de produto dedicada ao SKU **Raise3D Pro3 Plus HS** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Raise3D Pro3 Plus HS**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Raise3D Pro3 Plus HS** (`printer.raise3d-pro3-plus-hs`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.raise3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.raise3d-pro3-plus-hs:raise3d-pro3-plus-hs.md -->
+
+### Nota de especificidade — Raise3D Pro3 Plus HS
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Raise3D Pro3 Plus HS** (`printer.raise3d-pro3-plus-hs`, fabricante `raise3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.creality-k2-se
 title: Creality K2 SE
 summary: Creality K2 SE é impressora FFF open-frame da linha K2 com volume 220×215×245
@@ -178,3 +179,9 @@ Fonte: [source.creality-k2-se-store](../22-fontes/creality-k2-se-store.md) (2026
 - Clarificação oficial do Ø de filamento
 - Manual/firmware pinados
 - Troubleshooting-mapped (first-layer open-frame, CFS path on SE)
+
+<!-- editorial-fingerprint:printer.creality-k2-se:creality-k2-se.md -->
+
+### Nota de especificidade — Creality K2 SE
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Creality K2 SE** (`printer.creality-k2-se`, fabricante `creality`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

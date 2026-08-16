@@ -1,4 +1,5 @@
 ---
+
 id: printer.optomec-lens-cs-600
 title: Optomec LENS CS 600
 summary: Optomec LENS CS 600 (Optomec LENS CS 600) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.optomec-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Optomec LENS CS 600
 tags:
 - printer
-- documented
+- cataloged
 - optomec
 - unknown
 manufacturer_id: optomec
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Optomec LENS CS 600**
 - Página de produto dedicada ao SKU **Optomec LENS CS 600** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Optomec LENS CS 600**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Optomec LENS CS 600** (`printer.optomec-lens-cs-600`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.optomec-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.optomec-lens-cs-600:optomec-lens-cs-600.md -->
+
+### Nota de especificidade — Optomec LENS CS 600
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Optomec LENS CS 600** (`printer.optomec-lens-cs-600`, fabricante `optomec`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

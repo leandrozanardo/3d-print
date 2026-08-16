@@ -1,4 +1,5 @@
 ---
+
 id: printer.one-click-metal-mprint
 title: One Click Metal MPRINT
 summary: One Click Metal MPRINT (One Click Metal MPRINT) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.one-click-metal-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - One Click Metal MPRINT
 tags:
 - printer
-- documented
+- cataloged
 - one-click-metal
 - unknown
 manufacturer_id: one-click-metal
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.one-click-metal-mprint»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **One Click Metal MPRINT**
 - Troubleshooting oficial por sintoma para **One Click Metal MPRINT**
 - Revisões de hardware / changelogs de **One Click Metal MPRINT**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **One Click Metal MPRINT** (`printer.one-click-metal-mprint`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.one-click-metal-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.one-click-metal-mprint:one-click-metal-mprint.md -->
+
+### Nota de especificidade — One Click Metal MPRINT
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **One Click Metal MPRINT** (`printer.one-click-metal-mprint`, fabricante `one-click-metal`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

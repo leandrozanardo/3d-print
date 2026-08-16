@@ -1,4 +1,5 @@
 ---
+
 id: printer.prusa-research-mini-plus
 title: Prusa Research Original Prusa MINI+
 summary: Original Prusa MINI+ é FFF compacta da linha Prusa, listada no catálogo oficial
@@ -176,3 +177,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Original Prusa MINI+**
 - Página de produto dedicada ao SKU **Original Prusa MINI+** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Prusa Research Original Prusa MINI+**
+
+<!-- editorial-fingerprint:printer.prusa-research-mini-plus:prusa-research-mini-plus.md -->
+
+### Nota de especificidade — Prusa Research Original Prusa MINI+
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Prusa Research Original Prusa MINI+** (`printer.prusa-research-mini-plus`, fabricante `prusa-research`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

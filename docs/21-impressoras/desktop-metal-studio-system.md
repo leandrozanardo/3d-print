@@ -1,4 +1,5 @@
 ---
+
 id: printer.desktop-metal-studio-system
 title: Desktop Metal Studio System
 summary: Desktop Metal Studio System (Desktop Metal Studio System) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.desktop-metal-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Desktop Metal Studio System
 tags:
 - printer
-- documented
+- cataloged
 - desktop-metal
 - unknown
 manufacturer_id: desktop-metal
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Desktop Metal Studio System**
 - Firmware/release notes pinados para **Desktop Metal Studio System**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Desktop Metal Studio System**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Desktop Metal Studio System** (`printer.desktop-metal-studio-system`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.desktop-metal-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.desktop-metal-studio-system:desktop-metal-studio-system.md -->
+
+### Nota de especificidade — Desktop Metal Studio System
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Desktop Metal Studio System** (`printer.desktop-metal-studio-system`, fabricante `desktop-metal`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

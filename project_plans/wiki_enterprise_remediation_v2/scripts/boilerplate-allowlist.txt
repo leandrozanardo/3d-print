@@ -1,0 +1,5 @@
+# Boilerplate allowlist for DUP_PRINTER_PARAGRAPH
+# One normalized paragraph per line (lowercase, collapsed whitespace).
+# Only true universal safety one-liners belong here.
+
+always disconnect power before servicing heated components.

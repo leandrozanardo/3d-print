@@ -32,7 +32,9 @@ source_type: community-report
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://ellis3dp.com/Print-Tuning-Guide/
 ---
+
 # Fonte — Ellis Print Tuning Guide
 
 | Campo | Valor |
@@ -51,8 +53,12 @@ last_verified: '2026-08-16'
 - Ordem e racional de testes de calibração
 - Leitura de artefatos de superfície / flow / retract (heurísticas)
 
-## Limites
+## Claims sustentados
 
+- Ordem e racional de testes de calibração
+- Leitura de artefatos de superfície / flow / retract (heurísticas)
+
+## Limites
 - Não é documentação Bambu
 - Números não transferem automaticamente para A1 Mini + Bambu Studio
 - Não sustenta hard safety rules

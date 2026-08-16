@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.stratasys.com/en/3d-printers/printer-catalog/
 ---
+
 # Fonte — Stratasys listagem oficial
 
 | Campo | Valor |

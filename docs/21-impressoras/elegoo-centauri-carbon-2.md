@@ -83,7 +83,7 @@ Documentação de **Elegoo Centauri Carbon 2** distingue claims sustentados pela
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/centauri-carbon-2 (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-centauri-carbon-2]
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -107,7 +107,11 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas elegoo como se fossem de **Centauri Carbon 2**.
+Valores observados na página de produto específica ([source.elegoo-centauri-carbon-2](../22-fontes/elegoo-centauri-carbon-2.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 256 × 256 × 256 mm ([source](../22-fontes/elegoo-centauri-carbon-2.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +180,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Centauri Carbon 2**
 - Página de produto dedicada ao SKU **Centauri Carbon 2** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Elegoo Centauri Carbon 2**
+
+<!-- editorial-fingerprint:printer.elegoo-centauri-carbon-2:elegoo-centauri-carbon-2.md -->
+
+### Nota de especificidade — Elegoo Centauri Carbon 2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Centauri Carbon 2** (`printer.elegoo-centauri-carbon-2`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

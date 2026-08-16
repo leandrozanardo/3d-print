@@ -1,4 +1,5 @@
 ---
+
 id: printer.phrozen-sonic-mighty-revo-14k
 title: Phrozen Sonic Mighty Revo 14K
 summary: Phrozen Sonic Mighty Revo 14K (Phrozen Sonic Mighty Revo 14K) — coverage
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.phrozen-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Phrozen Sonic Mighty Revo 14K
 tags:
 - printer
-- documented
+- cataloged
 - phrozen
 - current
 manufacturer_id: phrozen
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Phrozen Sonic Mighty Revo 14K**
 - Firmware/release notes pinados para **Phrozen Sonic Mighty Revo 14K**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Phrozen Sonic Mighty Revo 14K**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Phrozen Sonic Mighty Revo 14K** (`printer.phrozen-sonic-mighty-revo-14k`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.phrozen-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.phrozen-sonic-mighty-revo-14k:phrozen-sonic-mighty-revo-14k.md -->
+
+### Nota de especificidade — Phrozen Sonic Mighty Revo 14K
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Phrozen Sonic Mighty Revo 14K** (`printer.phrozen-sonic-mighty-revo-14k`, fabricante `phrozen`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

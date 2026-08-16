@@ -1,4 +1,5 @@
 ---
+
 id: printer.snapmaker-artisan
 title: Snapmaker Artisan
 summary: Snapmaker Artisan (Snapmaker Artisan) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.snapmaker-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Snapmaker Artisan
 tags:
 - printer
-- documented
+- cataloged
 - snapmaker
 - current
 manufacturer_id: snapmaker
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Snapmaker Artisan** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Snapmaker Artisan**
 - Firmware/release notes pinados para **Snapmaker Artisan**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Snapmaker Artisan** (`printer.snapmaker-artisan`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.snapmaker-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.snapmaker-artisan:snapmaker-artisan.md -->
+
+### Nota de especificidade — Snapmaker Artisan
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Snapmaker Artisan** (`printer.snapmaker-artisan`, fabricante `snapmaker`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

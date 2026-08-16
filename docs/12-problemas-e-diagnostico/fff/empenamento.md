@@ -130,7 +130,7 @@ Camada 1 grudou com squish OK?
   └─ SIM → cantos sobem depois?
         ├─ Há draft/AC na mesa? → bloquear fluxo de ar
         ├─ Base longa contínua? → brim + reorientar eixo longo + ↓ fan inicial
-        └─ PETG? → seco? bed 70–80 °C (≤80 — heurística editorial (sem fonte pinada) para faixa PETG) + brim + fan moderado
+        └─ PETG? → seco? bed na faixa típica PETG ~70–80 °C sem ultrapassar o teto da máquina (orientação; sem fonte pinada para a faixa) + brim + fan moderado
 Raft somente se brim falhou em duas tentativas controladas.
 ```
 

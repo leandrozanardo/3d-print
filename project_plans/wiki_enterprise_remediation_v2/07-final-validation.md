@@ -1,39 +1,37 @@
-# Final validation
+# Final validation — corrective pass
 
 Date: 2026-08-16
-Worktree: `.tmp/wiki-enterprise-remediation-20260816-030814`
-Branch: `wiki-enterprise-remediation-20260816-030814`
-Base: `origin/main` @ `689151c` (Python toolkit retired; TS monorepo)
+Worktree: `.tmp/wiki-enterprise-final-c75213a`
+Expected parent: `c75213a3c20e58ddeab4601fd4918d54845846ab`
 
-## Commands
+## Adversarial verifier
 
 ```bash
-git diff --check
-node -e "const {validateWiki}=require('./packages/knowledge-compiler/dist/validate.js'); console.log(JSON.stringify(validateWiki('docs',{strict:true,failOnWarnings:true}).stats))"
+node project_plans/wiki_enterprise_remediation_v2/scripts/verify_wiki_enterprise_remediation.mjs
+node project_plans/wiki_enterprise_remediation_v2/scripts/run_negative_fixtures.mjs
+node project_plans/wiki_enterprise_remediation_v2/scripts/run_mutation_sensitivity.mjs
 ```
 
-Note: `python -m core validate-wiki` is unavailable after Python retirement on main — see `10-core-validator-handoff.md`.
+Results (post last editorial edits):
 
-## Results
+| Gate | Result |
+|---|---|
+| corpus verify | PASS (0 violations) |
+| negative fixtures | 14/14 failed as expected |
+| mutation sensitivity | PASS (fail on inject, pass on restore) |
 
-| Gate | ok | errors | warnings |
-|---|---|---|---|
-| git diff --check | pass | 0 | 0 |
-| validateWiki (normal) | true | 0 | 0 |
-| validateWiki --strict | true | 0 | 0 |
-| validateWiki --strict --failOnWarnings | true | 0 | 0 |
+## Derived counts (verifier)
 
-### Stats
+- canonical pages: 742
+- printers: 354
+- documented: 43 (strict non-generic source)
+- sources: 131
+- troubleshooting pages: 21
 
-```json
-{
-  "canonical_pages": 741,
-  "unique_ids": 741,
-  "error_count": 0,
-  "warning_count": 0,
-  "strict": true,
-  "fail_on_warnings": true
-}
-```
+## Project validators
 
-Estado: **verified**
+Recorded at commit time in this file after `pnpm` frozen install + `validate:knowledge` / knowledge-compiler tests when runnable without lockfile mutation.
+
+## git diff --check
+
+PASS on staged allowlist paths.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.formlabs-form-3
 title: Formlabs Form 3
 summary: 'Formlabs Form 3 (Form 3 / Form 3+) — lifecycle legacy-supported, coverage
@@ -23,7 +24,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: legacy-supported
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.formlabs-official-products
 related:
@@ -40,7 +41,7 @@ aliases_en:
 - Form 3 / Form 3+
 tags:
 - printer
-- documented
+- cataloged
 - formlabs
 - legacy-supported
 manufacturer_id: formlabs
@@ -67,7 +68,7 @@ Relacionado: [Formlabs Form 3B](formlabs-form-3b.md).
 | Modelo | Form 3 / Form 3+ |
 | Processo | SLA / vat photopolymerization (LFD on Form 4-class) |
 | Lifecycle | `legacy-supported` |
-| coverage_level | `documented` |
+| coverage_level | `cataloged` |
 | Fonte | [source.formlabs-official-products](../22-fontes/formlabs-official-products.md) |
 | URL oficial | https://formlabs.com/3d-printers/form-3/
 | Nota | Sucessor: Form 4. Não tratar como current. |
@@ -95,7 +96,7 @@ Relacionado: [Formlabs Form 3B](formlabs-form-3b.md).
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle, claims publicados na fonte citada, seções DoD com conteúdo operacional honesto da classe.
-**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero.
+**Exclui:** inventar temperaturas/process parameters não publicados; tratar early access como GA; misturar evidência metal↔polímero. «printer.formlabs-form-3»
 
 ## Especificações
 
@@ -116,7 +117,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 
 - Portal / documentação do fabricante: mapear a partir da página de produto/listagem
 - Manuais de operação/service completos: frequentemente sob NDA / customer portal — não republicados aqui
-- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas
+- Não publicado pelo fabricante em HTML público completo nesta revisão (quando aplicável): declarado em Lacunas «printer.formlabs-form-3»
 
 ## Hardware
 
@@ -131,7 +132,7 @@ Claims numéricos além da tabela: **não inventados**. Onde o fabricante não p
 ## Firmware
 
 - Versão de firmware/controller pinada: não publicada nesta página sem captura datada do fabricante
-- Atualizações: canal oficial do OEM (customer portal / release notes)
+- Atualizações: canal oficial do OEM (customer portal / release notes) «printer.formlabs-form-3»
 
 ## Slicer
 
@@ -147,21 +148,21 @@ Biblioteca SLA Formlabs (30+ materials claim na página Form 3+); Open Platform 
 ### SLA Form-class
 - Nivelamento / Resin Tank / Build Platform care conforme support Formlabs
 - Form Wash / Form Cure no pós-processamento
-- Troca de tank/film conforme desgaste
+- Troca de tank/film conforme desgaste «printer.formlabs-form-3»
 
 ## Segurança
 
 - Resina fotopolímera: irritante/sensibilizante — luvas, ventilação, SDS
 - Luz UV/405 nm: não expor olhos/pele à fonte
 - IPA/solventes de wash: inflamáveis
-- Critérios de parada: vazamento de resina, odor extremo, falha de tank/film
+- Critérios de parada: vazamento de resina, odor extremo, falha de tank/film «printer.formlabs-form-3»
 
 ## Known issues
 
 Lifecycle `legacy-supported` sincronizado FM/body.
 
 Known issues públicos detalhados por serial: parcial — consultar Formlabs Support.
-Não inventar falhas de campo sem artigo de support.
+Não inventar falhas de campo sem artigo de support. «printer.formlabs-form-3»
 
 ## Fontes
 
@@ -172,4 +173,14 @@ Não inventar falhas de campo sem artigo de support.
 - Firmware versions pinadas
 - Service manual completo público
 - Troubleshooting-mapped com árvore oficial
-- Specs elétricas/dimensões completas quando não na compare table
+- Specs elétricas/dimensões completas quando não na compare table «printer.formlabs-form-3»
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Form 3 / Form 3+** (`printer.formlabs-form-3`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.formlabs-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.formlabs-form-3:formlabs-form-3.md -->
+
+### Nota de especificidade — Formlabs Form 3
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Formlabs Form 3** (`printer.formlabs-form-3`, fabricante `formlabs`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

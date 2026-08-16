@@ -1,4 +1,5 @@
 ---
+
 id: printer.flsun-t1-max
 title: FLSUN T1 Max
 summary: FLSUN T1 Max (FLSUN T1 Max) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.flsun-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - FLSUN T1 Max
 tags:
 - printer
-- documented
+- cataloged
 - flsun
 - current
 manufacturer_id: flsun
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **FLSUN T1 Max**
 - Página de produto dedicada ao SKU **FLSUN T1 Max** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **FLSUN T1 Max**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **FLSUN T1 Max** (`printer.flsun-t1-max`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.flsun-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.flsun-t1-max:flsun-t1-max.md -->
+
+### Nota de especificidade — FLSUN T1 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **FLSUN T1 Max** (`printer.flsun-t1-max`, fabricante `flsun`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

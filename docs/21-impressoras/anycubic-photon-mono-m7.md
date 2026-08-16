@@ -84,7 +84,9 @@ Entrada **printer.anycubic-photon-mono-m7**: conteúdo específico do SKU, sem t
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed on official Anycubic store https://store.anycubic.com/products/photon-mono-m7 (HTTP 200; accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-photon-mono-m7]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Photon Mono M7** / `printer.anycubic-photon-mono-m7`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -108,7 +110,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas anycubic como se fossem de **Photon Mono M7**.
+Valores observados na página de produto específica ([source.anycubic-photon-mono-m7](../22-fontes/anycubic-photon-mono-m7.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 223 × 126 × 230 mm³ (6.5 L) ([source](../22-fontes/anycubic-photon-mono-m7.md)) | página de produto OEM |
+| LCD | 10.1" mono 14K; X/Y 16.8 × 24.8 μm ([source](../22-fontes/anycubic-photon-mono-m7.md)) | página de produto OEM |
+| Print speed | Std ≤90 mm/h; High-speed ≤150 mm/h @ 0.1 mm ([source](../22-fontes/anycubic-photon-mono-m7.md)) | página de produto OEM |
+| Layer height | 0.01–0.15 mm ([source](../22-fontes/anycubic-photon-mono-m7.md)) | página de produto OEM |
+| Light | LighTurbo 3.0 / COB + Fresnel ([source](../22-fontes/anycubic-photon-mono-m7.md)) | página de produto OEM |
+| Power | 135 W (specs block) ([source](../22-fontes/anycubic-photon-mono-m7.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -177,3 +188,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Photon Mono M7**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Photon Mono M7**
 - Troubleshooting oficial por sintoma para **Anycubic Photon Mono M7**
+
+<!-- editorial-fingerprint:printer.anycubic-photon-mono-m7:anycubic-photon-mono-m7.md -->
+
+### Nota de especificidade — Anycubic Photon Mono M7
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Photon Mono M7** (`printer.anycubic-photon-mono-m7`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

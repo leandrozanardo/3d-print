@@ -109,9 +109,9 @@ Bed máximo **80 °C** — [`source.bambu-a1-mini-tech-specs`](../../22-fontes/b
 
 | Material (Ideal A1 Mini) | Nozzle (ordem) | Bed (ordem) |
 |---|---|---|
-| [PLA](../../05-materiais/fff/pla.md) | ~190–220 °C — heurística editorial (sem fonte pinada) | ~35–60 °C — heurística editorial (sem fonte pinada) |
-| [PETG](../../05-materiais/fff/petg.md) | ~220–250 °C — heurística editorial (sem fonte pinada) | ~70–80 °C (≤80) — heurística editorial (sem fonte pinada) |
-| [TPU](../../05-materiais/fff/tpu.md) | ~210–230 °C — heurística editorial (sem fonte pinada) | ~30–60 °C |
+| [PLA](../../05-materiais/fff/pla.md) | faixa típica de partida ~190–220 °C (orientação de bancada; confirmar no spool/TDS — sem fonte pinada nesta base) | faixa típica de partida ~35–60 °C (orientação de bancada; confirmar no spool/TDS — sem fonte pinada nesta base) |
+| [PETG](../../05-materiais/fff/petg.md) | faixa típica de partida ~220–250 °C (orientação de bancada; confirmar no spool/TDS — sem fonte pinada nesta base) | faixa típica de partida ~70–80 °C, sem ultrapassar o teto da máquina (orientação de bancada; confirmar no spool/TDS — sem fonte pinada nesta base) |
+| [TPU](../../05-materiais/fff/tpu.md) | faixa típica de partida ~210–230 °C (orientação de bancada; confirmar no spool/TDS — sem fonte pinada nesta base) | ~30–60 °C |
 
 Para ABS/ASA/PC/PA: **não** há receita canônica nesta máquina — ver páginas de material e Not Recommended nas specs.
 
@@ -124,7 +124,7 @@ Para ABS/ASA/PC/PA: **não** há receita canônica nesta máquina — ver págin
 ## Calibração
 
 1. Secar se necessário
-2. Torre de temperatura ou cupons (−5 °C passos — heurística editorial (sem fonte pinada))
+2. Torre de temperatura ou cupons (passos curtos de temperatura — ponto de partida exploratório; sem fonte pinada)
 3. Uma variável por vez
 4. Registrar marca/cor/speed
 

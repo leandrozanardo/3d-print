@@ -1,4 +1,5 @@
 ---
+
 id: printer.sinterit-suzy
 title: Sinterit Suzy
 summary: Sinterit Suzy (Sinterit Suzy) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.sinterit-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Sinterit Suzy
 tags:
 - printer
-- documented
+- cataloged
 - sinterit
 - current
 manufacturer_id: sinterit
@@ -118,7 +119,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: sls
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.sinterit-suzy»
 
 ## Manuais
 
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Sinterit Suzy**
 - Página de produto dedicada ao SKU **Sinterit Suzy** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Sinterit Suzy**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Sinterit Suzy** (`printer.sinterit-suzy`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.sinterit-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.sinterit-suzy:sinterit-suzy.md -->
+
+### Nota de especificidade — Sinterit Suzy
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Sinterit Suzy** (`printer.sinterit-suzy`, fabricante `sinterit`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

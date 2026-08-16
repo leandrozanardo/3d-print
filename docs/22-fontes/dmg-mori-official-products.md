@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://en.dmgmori.com/products/machines/additive-manufacturing
 ---
+
 # Fonte — DMG MORI listagem oficial
 
 | Campo | Valor |

@@ -1,4 +1,5 @@
 ---
+
 id: printer.trumpf-truprint-1000
 title: TRUMPF TruPrint 1000
 summary: TRUMPF TruPrint 1000 (TRUMPF TruPrint 1000) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.trumpf-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - TRUMPF TruPrint 1000
 tags:
 - printer
-- documented
+- cataloged
 - trumpf
 - unknown
 manufacturer_id: trumpf
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.trumpf-truprint-1000»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **TRUMPF TruPrint 1000**
 - Revisões de hardware / changelogs de **TRUMPF TruPrint 1000**
 - Página de produto dedicada ao SKU **TRUMPF TruPrint 1000** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **TRUMPF TruPrint 1000** (`printer.trumpf-truprint-1000`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.trumpf-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.trumpf-truprint-1000:trumpf-truprint-1000.md -->
+
+### Nota de especificidade — TRUMPF TruPrint 1000
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **TRUMPF TruPrint 1000** (`printer.trumpf-truprint-1000`, fabricante `trumpf`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

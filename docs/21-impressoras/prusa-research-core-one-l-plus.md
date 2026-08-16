@@ -108,7 +108,14 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Prusa CORE One L+**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.prusa-research-core-one-l-plus](../22-fontes/prusa-research-core-one-l-plus.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 300 × 300 × 330 mm (30 L claim on product narrative) ([source](../22-fontes/prusa-research-core-one-l-plus.md)) | página de produto OEM |
+| Volume note | Some compare widgets also show 300 × 300 × 350 mm — treat as conflict; prefer dedicated product tech block when available ([source](../22-fontes/prusa-research-core-one-l-plus.md)) | página de produto OEM |
+| Chamber heating | Active convection up to 60 °C ([source](../22-fontes/prusa-research-core-one-l-plus.md)) | página de produto OEM |
+| Max nozzle | 290 °C (400 °C w/ HT) ([source](../22-fontes/prusa-research-core-one-l-plus.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -177,3 +184,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Prusa CORE One L+**
 - Troubleshooting oficial por sintoma para **Prusa Research Prusa CORE One L+**
 - Revisões de hardware / changelogs de **Prusa CORE One L+**
+
+<!-- editorial-fingerprint:printer.prusa-research-core-one-l-plus:prusa-research-core-one-l-plus.md -->
+
+### Nota de especificidade — Prusa Research Prusa CORE One L+
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Prusa Research Prusa CORE One L+** (`printer.prusa-research-core-one-l-plus`, fabricante `prusa-research`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

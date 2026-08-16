@@ -35,7 +35,9 @@ source_type: discovery-only
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://www.fda.gov/regulatory-information/search-fda-guidance-documents/technical-considerations-additive-manufactured-medical-devices
 ---
+
 # Fonte — FDA guidance AM medical devices (entrada)
 
 | Campo | Valor |
@@ -54,8 +56,13 @@ last_verified: '2026-08-16'
 - Ilustrar que AM regulado exige evidência de processo/material/design
 - Contrastar com mitos food-safe em FFF
 
-## Limites
+## Claims sustentados
 
+- Embasar [limites de qualificação](../18-aplicacoes-e-regulacao/limites-de-qualificacao.md)
+- Ilustrar que AM regulado exige evidência de processo/material/design
+- Contrastar com mitos food-safe em FFF
+
+## Limites
 - Guidance FDA ≠ aprovação automática de dispositivo
 - Não se aplica como atalho a utensílios de cozinha impressos em PLA
 - Jurisdição BR exige caminhos ANVISA próprios (lacuna detalhada)

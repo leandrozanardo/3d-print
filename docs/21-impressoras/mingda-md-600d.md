@@ -1,4 +1,5 @@
 ---
+
 id: printer.mingda-md-600d
 title: Mingda MD-600D
 summary: Mingda MD-600D (Mingda MD-600D) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.mingda-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Mingda MD-600D
 tags:
 - printer
-- documented
+- cataloged
 - mingda
 - current
 manufacturer_id: mingda
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Mingda MD-600D** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Mingda MD-600D**
 - Firmware/release notes pinados para **Mingda MD-600D**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Mingda MD-600D** (`printer.mingda-md-600d`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.mingda-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.mingda-md-600d:mingda-md-600d.md -->
+
+### Nota de especificidade — Mingda MD-600D
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Mingda MD-600D** (`printer.mingda-md-600d`, fabricante `mingda`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

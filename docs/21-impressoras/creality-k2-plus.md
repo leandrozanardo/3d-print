@@ -1,4 +1,5 @@
 ---
+
 id: printer.creality-k2-plus
 title: Creality K2 Plus
 summary: Creality K2 Plus é o flagship FFF 350³ mm da série K2 com nozzle até 350 °C,
@@ -179,3 +180,9 @@ Fonte primária: [source.creality-k2-plus-product](../22-fontes/creality-k2-plus
 - Firmware build pinado + changelog
 - Clarificação oficial TPU no Plus
 - Troubleshooting-mapped
+
+<!-- editorial-fingerprint:printer.creality-k2-plus:creality-k2-plus.md -->
+
+### Nota de especificidade — Creality K2 Plus
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Creality K2 Plus** (`printer.creality-k2-plus`, fabricante `creality`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

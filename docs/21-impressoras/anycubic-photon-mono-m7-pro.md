@@ -84,7 +84,9 @@ Documentação de **Anycubic Photon Mono M7 Pro** distingue claims sustentados p
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/photon-mono-m7-pro (accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-photon-mono-m7-pro]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Photon Mono M7 Pro** / `printer.anycubic-photon-mono-m7-pro`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -108,7 +110,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Photon Mono M7 Pro**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.anycubic-photon-mono-m7-pro](../22-fontes/anycubic-photon-mono-m7-pro.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 223 × 126 × 230 mm³ (6.5 L) ([source](../22-fontes/anycubic-photon-mono-m7-pro.md)) | página de produto OEM |
+| LCD | 10.1" mono 14K (13320 × 5120 marketing; X/Y 16.8 × 24.8 μm) ([source](../22-fontes/anycubic-photon-mono-m7-pro.md)) | página de produto OEM |
+| Print speed | Std resin ≤130 mm/h; High-speed ≤170 mm/h @ 0.1 mm ([source](../22-fontes/anycubic-photon-mono-m7-pro.md)) | página de produto OEM |
+| Layer height | 0.01–0.15 mm ([source](../22-fontes/anycubic-photon-mono-m7-pro.md)) | página de produto OEM |
+| Light | COB + Fresnel + uniformity algorithm; 5500±10% μW/cm² ([source](../22-fontes/anycubic-photon-mono-m7-pro.md)) | página de produto OEM |
+| Power | 240 W ([source](../22-fontes/anycubic-photon-mono-m7-pro.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -177,3 +188,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Photon Mono M7 Pro**
 - Troubleshooting oficial por sintoma para **Anycubic Photon Mono M7 Pro**
 - Revisões de hardware / changelogs de **Photon Mono M7 Pro**
+
+<!-- editorial-fingerprint:printer.anycubic-photon-mono-m7-pro:anycubic-photon-mono-m7-pro.md -->
+
+### Nota de especificidade — Anycubic Photon Mono M7 Pro
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Photon Mono M7 Pro** (`printer.anycubic-photon-mono-m7-pro`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

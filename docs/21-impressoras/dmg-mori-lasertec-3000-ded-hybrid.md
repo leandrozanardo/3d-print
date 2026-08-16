@@ -1,4 +1,5 @@
 ---
+
 id: printer.dmg-mori-lasertec-3000-ded-hybrid
 title: DMG MORI LASERTEC 3000 DED hybrid
 summary: DMG MORI LASERTEC 3000 DED hybrid (DMG MORI LASERTEC 3000 DED hybrid) — coverage
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.dmg-mori-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - DMG MORI LASERTEC 3000 DED hybrid
 tags:
 - printer
-- documented
+- cataloged
 - dmg-mori
 - unknown
 manufacturer_id: dmg-mori
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **DMG MORI LASERTEC 3000 DED hybrid**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **DMG MORI LASERTEC 3000 DED hybrid**
 - Troubleshooting oficial por sintoma para **DMG MORI LASERTEC 3000 DED hybrid**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **DMG MORI LASERTEC 3000 DED hybrid** (`printer.dmg-mori-lasertec-3000-ded-hybrid`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.dmg-mori-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.dmg-mori-lasertec-3000-ded-hybrid:dmg-mori-lasertec-3000-ded-hybrid.md -->
+
+### Nota de especificidade — DMG MORI LASERTEC 3000 DED hybrid
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **DMG MORI LASERTEC 3000 DED hybrid** (`printer.dmg-mori-lasertec-3000-ded-hybrid`, fabricante `dmg-mori`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

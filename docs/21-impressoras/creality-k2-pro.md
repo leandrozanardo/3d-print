@@ -1,4 +1,5 @@
 ---
+
 id: printer.creality-k2-pro
 title: Creality K2 Pro
 summary: Creality K2 Pro é impressora FFF enclosed 300³ mm com câmara aquecida até
@@ -177,3 +178,9 @@ Cruzamento [source.creality-k2-pro-store](../22-fontes/creality-k2-pro-store.md)
 - Reconciliação oficial de envelope externo
 - Firmware release notes em página `source.*` pinada
 - Troubleshooting-mapped (spaghetti, chamber heater faults, CFS jams)
+
+<!-- editorial-fingerprint:printer.creality-k2-pro:creality-k2-pro.md -->
+
+### Nota de especificidade — Creality K2 Pro
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Creality K2 Pro** (`printer.creality-k2-pro`, fabricante `creality`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.optomec-mts-500
 title: Optomec MTS 500
 summary: Optomec MTS 500 (Optomec MTS 500) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.optomec-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Optomec MTS 500
 tags:
 - printer
-- documented
+- cataloged
 - optomec
 - unknown
 manufacturer_id: optomec
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Optomec MTS 500**
 - Troubleshooting oficial por sintoma para **Optomec MTS 500**
 - Revisões de hardware / changelogs de **Optomec MTS 500**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Optomec MTS 500** (`printer.optomec-mts-500`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.optomec-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.optomec-mts-500:optomec-mts-500.md -->
+
+### Nota de especificidade — Optomec MTS 500
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Optomec MTS 500** (`printer.optomec-mts-500`, fabricante `optomec`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

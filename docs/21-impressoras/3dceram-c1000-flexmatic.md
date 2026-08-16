@@ -1,4 +1,5 @@
 ---
+
 id: printer.3dceram-c1000-flexmatic
 title: 3DCeram C1000 FLEXMATIC
 summary: 3DCeram C1000 FLEXMATIC (3DCeram C1000 FLEXMATIC) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.3dceram-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - 3DCeram C1000 FLEXMATIC
 tags:
 - printer
-- documented
+- cataloged
 - 3dceram
 - unknown
 manufacturer_id: 3dceram
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **3DCeram C1000 FLEXMATIC** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **3DCeram C1000 FLEXMATIC**
 - Firmware/release notes pinados para **3DCeram C1000 FLEXMATIC**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **3DCeram C1000 FLEXMATIC** (`printer.3dceram-c1000-flexmatic`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.3dceram-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.3dceram-c1000-flexmatic:3dceram-c1000-flexmatic.md -->
+
+### Nota de especificidade — 3DCeram C1000 FLEXMATIC
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **3DCeram C1000 FLEXMATIC** (`printer.3dceram-c1000-flexmatic`, fabricante `3dceram`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

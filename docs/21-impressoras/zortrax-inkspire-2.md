@@ -1,4 +1,5 @@
 ---
+
 id: printer.zortrax-inkspire-2
 title: Zortrax Inkspire 2
 summary: Zortrax Inkspire 2 (Zortrax Inkspire 2) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.zortrax-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Zortrax Inkspire 2
 tags:
 - printer
-- documented
+- cataloged
 - zortrax
 - current
 manufacturer_id: zortrax
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Zortrax Inkspire 2**
 - Página de produto dedicada ao SKU **Zortrax Inkspire 2** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Zortrax Inkspire 2**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Zortrax Inkspire 2** (`printer.zortrax-inkspire-2`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.zortrax-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.zortrax-inkspire-2:zortrax-inkspire-2.md -->
+
+### Nota de especificidade — Zortrax Inkspire 2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Zortrax Inkspire 2** (`printer.zortrax-inkspire-2`, fabricante `zortrax`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -134,4 +134,4 @@ Se risco a pessoa/patrimônio alto → **não** trate como hobby print.
 
 ## Fontes
 
-- Legado: [projeto/proposito](../projeto/proposito/) ferramentas; perfis `pla-ferramenta-resistente`, `petg-funcional`
+- Legado: [projeto/proposito](../projeto/INDEX.md) ferramentas; perfis `pla-ferramenta-resistente`, `petg-funcional`

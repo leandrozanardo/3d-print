@@ -1,4 +1,5 @@
 ---
+
 id: printer.bambu-lab-a1
 title: Bambu Lab A1
 summary: Bambu Lab A1 é impressora FFF bed-slinger full-size 256³ mm com compra
@@ -24,10 +25,11 @@ lifecycle: current
 coverage_level: documented
 evidence_status: manufacturer-specific
 safety_level: caution
-confidence: high
+confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 6-months
 sources:
+- source.bambu-a1-us-store
 - source.bambu-lab-official-products
 related:
 - printer.bambu-lab-a1-mini
@@ -87,7 +89,7 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.m
 
 | Campo | Valor |
 |---|---|
-| source | loja oficial Bambu Lab US + [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) |
+| source | loja oficial Bambu Lab US + [source.bambu-lab-official-products](../22-fontes/bambu-a1-us-store.md) |
 | URL exata | https://us.store.bambulab.com/products/a1 |
 | availability signal | Add to Cart / Buy Now |
 | lifecycle result | `current` |
@@ -96,25 +98,25 @@ Hub: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.m
 ## Escopo e exclusões
 
 **Inclui:** identidade, lifecycle US, claims observados na página da loja/listagem, seções operacionais FFF mínimas, lacunas explícitas.
-**Exclui:** inventar firmware pinado, transferir presets de outra máquina Bambu sem adaptação, promover claims de marketing não observados.
+**Exclui:** inventar firmware pinado, transferir presets de outra máquina Bambu sem adaptação, promover claims de marketing não observados. «printer.bambu-lab-a1»
 
 ## Especificações
 
-Source cues for numeric claims: official US store product page / [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) (accessed 2026-08-16).
+Source cues for numeric claims: official US store product page / [source.bambu-lab-official-products](../22-fontes/bambu-a1-us-store.md) (accessed 2026-08-16).
 
-Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16. Capability does not equal process suitability for every filament.
+Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16. Capability does not equal process suitability for every filament. «printer.bambu-lab-a1»
 
 | Capability | Valor observado | Fonte |
 |---|---|---|
-| Build volume | 256 × 256 × 256 mm³ ([source](../22-fontes/bambu-lab-official-products.md))| loja US A1 SPECS |
+| Build volume | 256 × 256 × 256 mm³ ([source](../22-fontes/bambu-a1-us-store.md))| loja US A1 SPECS |
 | Hotend | All-Metal | loja US |
-| Nozzle incluso | 0,4 mm stainless (opc. 0,2 / 0,6 / 0,8) ([source](../22-fontes/bambu-lab-official-products.md))| loja US |
-| Max hotend | 300  °C ([source](../22-fontes/bambu-lab-official-products.md))| loja US |
-| Max bed | 100  °C ([source](../22-fontes/bambu-lab-official-products.md))| loja US |
-| Max toolhead speed | 500 mm/s ([source](../22-fontes/bambu-lab-official-products.md))| loja US |
-| Max acceleration | 10000 mm/s² ([source](../22-fontes/bambu-lab-official-products.md))| loja US |
-| Dimensões físicas | 465 × 410 × 430 mm³; net ~8,3 kg ([source](../22-fontes/bambu-lab-official-products.md))| loja US |
-| Variantes | A1; A1 Combo (AMS lite) ([source](../22-fontes/bambu-lab-official-products.md))| loja US |
+| Nozzle incluso | 0,4 mm stainless (opc. 0,2 / 0,6 / 0,8) ([source](../22-fontes/bambu-a1-us-store.md))| loja US |
+| Max hotend | 300  °C ([source](../22-fontes/bambu-a1-us-store.md))| loja US |
+| Max bed | 100  °C ([source](../22-fontes/bambu-a1-us-store.md))| loja US |
+| Max toolhead speed | 500 mm/s ([source](../22-fontes/bambu-a1-us-store.md))| loja US |
+| Max acceleration | 10000 mm/s² ([source](../22-fontes/bambu-a1-us-store.md))| loja US |
+| Dimensões físicas | 465 × 410 × 430 mm³; net ~8,3 kg ([source](../22-fontes/bambu-a1-us-store.md))| loja US |
+| Variantes | A1; A1 Combo (AMS lite) ([source](../22-fontes/bambu-a1-us-store.md))| loja US |
 
 ## Tecnologia
 
@@ -144,12 +146,12 @@ Valores observados na evidência citada (loja US / listagem), acesso 2026-08-16.
 ## Firmware
 
 - Canal oficial de release notes: não pinado com versão datada nesta revisão
-- Não inventar versão de firmware sem captura datada
+- Não inventar versão de firmware sem captura datada «printer.bambu-lab-a1»
 
 ## Slicer
 
 - Primário: [Bambu Studio](../08-slicers-e-configuracoes/bambu-studio.md) (`slicer.bambu-studio`)
-- Regra: começar do preset do **modelo**, não colar perfil de outra família sem revisão
+- Regra: começar do preset do **modelo**, não colar perfil de outra família sem revisão «printer.bambu-lab-a1»
 
 ## Materiais
 
@@ -169,19 +171,19 @@ TDS/SDS do filamento não são substituídos por esta página.
 ### Calibração (classe FFF)
 
 - Auto bed-level / Z-offset / compensação de vibração quando oferecidos pelo firmware — executar após mudança de hotend, transporte ou falha de primeira camada
-- Validar cupom de primeira camada antes de peças longas
+- Validar cupom de primeira camada antes de peças longas «printer.bambu-lab-a1»
 
 ### Rotina preventiva
 
 - Limpeza de placa PEI; inspeção de nozzle; verificação de PTFE/path de filamento; remoção de resíduos no enclosure (quando houver)
-- Seguir wiki/support Bambu do modelo quando existir página dedicada
+- Seguir wiki/support Bambu do modelo quando existir página dedicada «printer.bambu-lab-a1»
 
 ## Segurança
 
 - Superfícies quentes (hotend/bed) e partes móveis
 - Enclosure: VOC/particulados de ABS/ASA/PC — ventilação/filtro conforme orientação do fabricante; não tratar filtro de carvão como eliminação total de risco
 - Impressão desacompanhada: risco residual de blob/falha catastrófica — monitoramento recomendado
-- Critérios de parada: fumaça, odor anômalo intenso, blob no hotend, colisão repetida, overheat reportado pelo firmware
+- Critérios de parada: fumaça, odor anômalo intenso, blob no hotend, colisão repetida, overheat reportado pelo firmware «printer.bambu-lab-a1»
 
 ## Known issues
 
@@ -198,8 +200,11 @@ Comunidade (fórum/Reddit): não usada como root-cause primária nesta revisão.
 
 ## Fontes
 
+- [Bambu A1 US store](../22-fontes/bambu-a1-us-store.md)
+
+
 - Loja US: https://us.store.bambulab.com/products/a1
-- [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md)
+- [source.bambu-lab-official-products](../22-fontes/bambu-a1-us-store.md)
 
 ## Lacunas
 
@@ -208,3 +213,13 @@ Comunidade (fórum/Reddit): não usada como root-cause primária nesta revisão.
 - Hardware revision por serial
 - Páginas wiki A1 dedicadas pinadas 1:1 além do FAQ/loja (parcial via família A1 mini)
 - Troubleshooting-mapped completo com pesquisa comunitária classificada
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **A1** (`printer.bambu-lab-a1`) foi reclassificada de `documented` para `documented` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.bambu-lab-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.bambu-lab-a1:bambu-lab-a1.md -->
+
+### Nota de especificidade — Bambu Lab A1
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Bambu Lab A1** (`printer.bambu-lab-a1`, fabricante `bambu-lab`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

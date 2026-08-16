@@ -1,4 +1,5 @@
 ---
+
 id: printer.3dceram-c101-easy-lab
 title: 3DCeram C101 EASY LAB
 summary: 3DCeram C101 EASY LAB (3DCeram C101 EASY LAB) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.3dceram-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - 3DCeram C101 EASY LAB
 tags:
 - printer
-- documented
+- cataloged
 - 3dceram
 - unknown
 manufacturer_id: 3dceram
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **3DCeram C101 EASY LAB** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **3DCeram C101 EASY LAB**
 - Firmware/release notes pinados para **3DCeram C101 EASY LAB**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **3DCeram C101 EASY LAB** (`printer.3dceram-c101-easy-lab`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.3dceram-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.3dceram-c101-easy-lab:3dceram-c101-easy-lab.md -->
+
+### Nota de especificidade — 3DCeram C101 EASY LAB
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **3DCeram C101 EASY LAB** (`printer.3dceram-c101-easy-lab`, fabricante `3dceram`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

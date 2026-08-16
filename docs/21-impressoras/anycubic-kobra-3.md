@@ -107,7 +107,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Kobra 3**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.anycubic-kobra-3](../22-fontes/anycubic-kobra-3.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 250 × 250 × 260 mm³ ([source](../22-fontes/anycubic-kobra-3.md)) | página de produto OEM |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s ([source](../22-fontes/anycubic-kobra-3.md)) | página de produto OEM |
+| Acceleration | Recommended 10 000 mm/s²; Maximum 20 000 mm/s² ([source](../22-fontes/anycubic-kobra-3.md)) | página de produto OEM |
+| Max nozzle | 300 °C; 0.4 mm std (0.6/0.8 opcional) ([source](../22-fontes/anycubic-kobra-3.md)) | página de produto OEM |
+| Max heatbed | 110 °C, PEI spring steel ([source](../22-fontes/anycubic-kobra-3.md)) | página de produto OEM |
+| Filaments (declared) | PLA, PETG, TPU (TPU ≠ ACE Pro) ([source](../22-fontes/anycubic-kobra-3.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +185,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Kobra 3** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Anycubic Kobra 3**
 - Firmware/release notes pinados para **Kobra 3**
+
+<!-- editorial-fingerprint:printer.anycubic-kobra-3:anycubic-kobra-3.md -->
+
+### Nota de especificidade — Anycubic Kobra 3
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Kobra 3** (`printer.anycubic-kobra-3`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

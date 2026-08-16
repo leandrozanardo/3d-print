@@ -107,7 +107,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Prusa Research Original Prusa MK4S** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.prusa-research-mk4s](../22-fontes/prusa-research-mk4s.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 250 × 210 × 220 mm ([source](../22-fontes/prusa-research-mk4s.md)) | página de produto OEM |
+| Max nozzle | 290 °C / 120 °C ([source](../22-fontes/prusa-research-mk4s.md)) | página de produto OEM |
+| Layer height | 0.05–0.30 mm ([source](../22-fontes/prusa-research-mk4s.md)) | página de produto OEM |
+| Nozzle | High-flow Prusa Nozzle brass CHT 0.4 mm ([source](../22-fontes/prusa-research-mk4s.md)) | página de produto OEM |
+| Weight / size | 7 kg; 500 × 550 × 400 mm (without spool) ([source](../22-fontes/prusa-research-mk4s.md)) | página de produto OEM |
+| PSU | 240 W Delta with Power Panic HW ([source](../22-fontes/prusa-research-mk4s.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +185,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Prusa Research Original Prusa MK4S**
 - Revisões de hardware / changelogs de **Original Prusa MK4S**
 - Página de produto dedicada ao SKU **Original Prusa MK4S** com tabela numérica completa
+
+<!-- editorial-fingerprint:printer.prusa-research-mk4s:prusa-research-mk4s.md -->
+
+### Nota de especificidade — Prusa Research Original Prusa MK4S
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Prusa Research Original Prusa MK4S** (`printer.prusa-research-mk4s`, fabricante `prusa-research`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

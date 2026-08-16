@@ -117,7 +117,7 @@ Pops / bobina duvidosa?
   └─ NÃO → PETG com fan alto?
         ├─ SIM → ↓ fan; early layers baixos
         └─ NÃO → temp no range? speed moderado?
-              ├─ NÃO → +5 °C (heurística editorial (sem fonte pinada)) / −speed (uma variável)
+              ├─ NÃO → subir um pouco a temperatura dentro do range (ajuste exploratório; sem fonte pinada) / −speed (uma variável)
               └─ SIM → bloquear draft; reorientar carga se possível
 ```
 

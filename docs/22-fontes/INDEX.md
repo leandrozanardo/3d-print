@@ -105,3 +105,4 @@ Atribuição legado: [projeto/fontes-e-atribuicao.md](../projeto/fontes-e-atribu
 Cobertura deep ainda não declarada para este domínio, salvo indicação em `cobertura.md`.
 - [bcn3d-fff-mechanical-parameters-study.md](bcn3d-fff-mechanical-parameters-study.md)
 - [markforged-settings-impacting-part-strength.md](markforged-settings-impacting-part-strength.md)
+- [bambu-a1-us-store.md](bambu-a1-us-store.md)

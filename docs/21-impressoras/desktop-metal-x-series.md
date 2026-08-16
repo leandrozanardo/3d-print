@@ -1,4 +1,5 @@
 ---
+
 id: printer.desktop-metal-x-series
 title: Desktop Metal X Series
 summary: Desktop Metal X Series (Desktop Metal X Series) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.desktop-metal-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Desktop Metal X Series
 tags:
 - printer
-- documented
+- cataloged
 - desktop-metal
 - unknown
 manufacturer_id: desktop-metal
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: jetting de binder sobre leito de pó.
 
 - Technology: binder-jetting
 - Process: binder-jet
-- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó
+- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó «printer.desktop-metal-x-series»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Desktop Metal X Series**
 - Revisões de hardware / changelogs de **Desktop Metal X Series**
 - Página de produto dedicada ao SKU **Desktop Metal X Series** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Desktop Metal X Series** (`printer.desktop-metal-x-series`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.desktop-metal-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.desktop-metal-x-series:desktop-metal-x-series.md -->
+
+### Nota de especificidade — Desktop Metal X Series
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Desktop Metal X Series** (`printer.desktop-metal-x-series`, fabricante `desktop-metal`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

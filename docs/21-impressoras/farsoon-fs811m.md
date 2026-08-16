@@ -1,4 +1,5 @@
 ---
+
 id: printer.farsoon-fs811m
 title: Farsoon FS811M
 summary: Farsoon FS811M (Farsoon FS811M) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.farsoon-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Farsoon FS811M
 tags:
 - printer
-- documented
+- cataloged
 - farsoon
 - current
 manufacturer_id: farsoon
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.farsoon-fs811m»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Farsoon FS811M** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Farsoon FS811M**
 - Firmware/release notes pinados para **Farsoon FS811M**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Farsoon FS811M** (`printer.farsoon-fs811m`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.farsoon-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.farsoon-fs811m:farsoon-fs811m.md -->
+
+### Nota de especificidade — Farsoon FS811M
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Farsoon FS811M** (`printer.farsoon-fs811m`, fabricante `farsoon`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

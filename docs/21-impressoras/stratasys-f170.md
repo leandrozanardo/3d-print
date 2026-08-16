@@ -1,4 +1,5 @@
 ---
+
 id: printer.stratasys-f170
 title: Stratasys F170
 summary: Stratasys F170 (Stratasys F170) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.stratasys-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Stratasys F170
 tags:
 - printer
-- documented
+- cataloged
 - stratasys
 - current
 manufacturer_id: stratasys
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Stratasys F170**
 - Troubleshooting oficial por sintoma para **Stratasys F170**
 - Revisões de hardware / changelogs de **Stratasys F170**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Stratasys F170** (`printer.stratasys-f170`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.stratasys-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.stratasys-f170:stratasys-f170.md -->
+
+### Nota de especificidade — Stratasys F170
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Stratasys F170** (`printer.stratasys-f170`, fabricante `stratasys`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

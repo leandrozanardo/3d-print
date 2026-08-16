@@ -39,7 +39,9 @@ source_type: discovery-only
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://marlinfw.org/docs/basics/introduction.html
 ---
+
 # Fonte — Marlin Firmware Documentation
 
 | Campo | Valor |
@@ -66,8 +68,13 @@ last_verified: '2026-08-16'
 - Apoiar [Klipper vs Marlin — conceitos](../17-software-firmware-e-automacao/klipper-vs-marlin-conceitos.md)
 - Apoiar discussão semântica de [flow / pressure advance](../08-slicers-e-configuracoes/settings/flow-e-pressure-advance.md) **quando** o leitor estiver em Marlin
 
-## Limites
+## Claims sustentados
 
+- Visão geral da arquitetura MCU-centric do Marlin
+- Navegação para G-code, configuração e features documentadas no site oficial
+- Contexto para Linear Advance / compensação de pressão quando o stack for Marlin
+
+## Limites
 - **Não** é documentação Bambu Lab / A1 Mini
 - Números de K-factor / features dependem da **versão** — verificar a página específica da versão em uso
 - Não autoriza substituir firmware de impressoras proprietárias nem contornar travas

@@ -1,4 +1,5 @@
 ---
+
 id: printer.bcn3d-omega-i60
 title: BCN3D Omega I60
 summary: BCN3D Omega I60 (BCN3D Omega I60) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.bcn3d-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - BCN3D Omega I60
 tags:
 - printer
-- documented
+- cataloged
 - bcn3d
 - current
 manufacturer_id: bcn3d
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **BCN3D Omega I60** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **BCN3D Omega I60**
 - Firmware/release notes pinados para **BCN3D Omega I60**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **BCN3D Omega I60** (`printer.bcn3d-omega-i60`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.bcn3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.bcn3d-omega-i60:bcn3d-omega-i60.md -->
+
+### Nota de especificidade — BCN3D Omega I60
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **BCN3D Omega I60** (`printer.bcn3d-omega-i60`, fabricante `bcn3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

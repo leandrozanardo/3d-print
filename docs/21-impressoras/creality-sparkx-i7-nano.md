@@ -1,4 +1,5 @@
 ---
+
 id: printer.creality-sparkx-i7-nano
 title: Creality SPARKX i7 NANO
 summary: Creality SPARKX i7 NANO é o SKU compacto multi-color da família SPARKX i7
@@ -166,3 +167,9 @@ A URL NANO ([source.creality-sparkx-i7-nano-store](../22-fontes/creality-sparkx-
 - Tabela de specs NANO-only no fabricante
 - Confirmação pós-ship de lifecycle `current`
 - Troubleshooting-mapped específico CFS nano + NANO kit variants
+
+<!-- editorial-fingerprint:printer.creality-sparkx-i7-nano:creality-sparkx-i7-nano.md -->
+
+### Nota de especificidade — Creality SPARKX i7 NANO
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Creality SPARKX i7 NANO** (`printer.creality-sparkx-i7-nano`, fabricante `creality`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

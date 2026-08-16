@@ -1,4 +1,5 @@
 ---
+
 id: printer.flashforge-creator-5
 title: FlashForge Creator 5
 summary: FlashForge Creator 5 (FlashForge Creator 5) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.flashforge-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - FlashForge Creator 5
 tags:
 - printer
-- documented
+- cataloged
 - flashforge
 - current
 manufacturer_id: flashforge
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **FlashForge Creator 5**
 - Troubleshooting oficial por sintoma para **FlashForge Creator 5**
 - Revisões de hardware / changelogs de **FlashForge Creator 5**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **FlashForge Creator 5** (`printer.flashforge-creator-5`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.flashforge-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.flashforge-creator-5:flashforge-creator-5.md -->
+
+### Nota de especificidade — FlashForge Creator 5
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **FlashForge Creator 5** (`printer.flashforge-creator-5`, fabricante `flashforge`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -83,7 +83,9 @@ Para **Elegoo Neptune 4 Max**, o foco operacional desta base é identidade + lif
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/neptune-4-max-fdm-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-neptune-4-max]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Neptune 4 Max** / `printer.elegoo-neptune-4-max`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -107,7 +109,12 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Elegoo Neptune 4 Max** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.elegoo-neptune-4-max](../22-fontes/elegoo-neptune-4-max.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 420 × 420 × 480 mm ([source](../22-fontes/elegoo-neptune-4-max.md)) | página de produto OEM |
+| Machine size | 658 × 632 × 740 mm ([source](../22-fontes/elegoo-neptune-4-max.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +183,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Elegoo Neptune 4 Max**
 - Firmware/release notes pinados para **Neptune 4 Max**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Neptune 4 Max**
+
+<!-- editorial-fingerprint:printer.elegoo-neptune-4-max:elegoo-neptune-4-max.md -->
+
+### Nota de especificidade — Elegoo Neptune 4 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Neptune 4 Max** (`printer.elegoo-neptune-4-max`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.voxelab-proxima-8-9
 title: Voxelab Proxima 8.9
 summary: Voxelab Proxima 8.9 (Voxelab Proxima 8.9) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.voxelab-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Voxelab Proxima 8.9
 tags:
 - printer
-- documented
+- cataloged
 - voxelab
 - current
 manufacturer_id: voxelab
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Voxelab Proxima 8.9** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Voxelab Proxima 8.9**
 - Firmware/release notes pinados para **Voxelab Proxima 8.9**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Voxelab Proxima 8.9** (`printer.voxelab-proxima-8-9`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.voxelab-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.voxelab-proxima-8-9:voxelab-proxima-8-9.md -->
+
+### Nota de especificidade — Voxelab Proxima 8.9
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Voxelab Proxima 8.9** (`printer.voxelab-proxima-8-9`, fabricante `voxelab`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

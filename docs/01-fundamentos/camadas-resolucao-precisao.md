@@ -54,7 +54,7 @@ Hub pai: [Fundamentos](INDEX.md)
 
 ## O que é
 
-Em manufatura aditiva, **camada** é a fatia discreta de construção. **Resolução**, **precisão** e **acurácia** são conceitos relacionados mas distintos. Confundi-los leva a settings absurdos (“layer 0,05 mm resolve encaixe” — heurística editorial (sem fonte pinada)) ou a comparações injustas entre FFF e vat photopolymerization.
+Em manufatura aditiva, **camada** é a fatia discreta de construção. **Resolução**, **precisão** e **acurácia** são conceitos relacionados mas distintos. Confundi-los leva a settings absurdos (“layer muito fino resolve encaixe” — mito comum; sem fonte pinada) ou a comparações injustas entre FFF e vat photopolymerization.
 
 Esta página é **conceitual e orientada a decisão**. Não publica tabela universal de tolerâncias: tolerância depende de máquina, material, geometria, orientação, calibração e metrologia.
 
@@ -111,8 +111,8 @@ Guias de calibração citados nesta base: [Teaching Tech](../22-fontes/teaching-
 | Afirmação de marketing | Leitura correta |
 |---|---|
 | “Resina 50 µm” | Frequentemente layer Z ou pixel XY — verificar eixo |
-| “FFF 0,1 mm” — heurística editorial (sem fonte pinada) | Layer height; XY ainda ~nozzle |
-| “Metal ±0,1 mm” — heurística editorial (sem fonte pinada) | Pode ser pós-sinter / usinagem; ler escopo do datasheet |
+| “FFF com layer fino” (exemplo ilustrativo; sem fonte pinada) | Layer height; XY ainda ~nozzle |
+| “Metal ± tolerância de folheto” (exemplo ilustrativo; sem fonte pinada) | Pode ser pós-sinter / usinagem; ler escopo do datasheet |
 | “Mesma resolução” | Processos diferentes têm limites físicos diferentes |
 
 Vat photopolymerization pode vencer em detalhe fino; FFF pode vencer em custo e materiais robustos de uso diário — a métrica certa depende da função da peça.
@@ -131,7 +131,7 @@ Vat photopolymerization pode vencer em detalhe fino; FFF pode vencer em custo e 
 
 - Medir no eixo e na feature que importam (não só o cubo de calibração)
 - Registrar material, cor, umidade, perfil, orientação
-- Separar erro sistemático (em geral (condicional) +0,2 mm — heurística editorial (sem fonte pinada)) de ruído
+- Separar erro sistemático (em geral (condicional) offset sistemático pequeno — exemplo ilustrativo; sem fonte pinada) de ruído
 - Hub futuro: [11-qualidade](../11-qualidade-e-metrologia/INDEX.md)
 
 ## Relações

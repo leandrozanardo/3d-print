@@ -1,4 +1,5 @@
 ---
+
 id: printer.lulzbot-sidekick-747-standard
 title: LulzBot SideKick 747 Standard
 summary: LulzBot SideKick 747 Standard (LulzBot SideKick 747 Standard) — coverage
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.lulzbot-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - LulzBot SideKick 747 Standard
 tags:
 - printer
-- documented
+- cataloged
 - lulzbot
 - current
 manufacturer_id: lulzbot
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **LulzBot SideKick 747 Standard**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **LulzBot SideKick 747 Standard**
 - Troubleshooting oficial por sintoma para **LulzBot SideKick 747 Standard**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **LulzBot SideKick 747 Standard** (`printer.lulzbot-sidekick-747-standard`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.lulzbot-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.lulzbot-sidekick-747-standard:lulzbot-sidekick-747-standard.md -->
+
+### Nota de especificidade — LulzBot SideKick 747 Standard
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **LulzBot SideKick 747 Standard** (`printer.lulzbot-sidekick-747-standard`, fabricante `lulzbot`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

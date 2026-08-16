@@ -1,4 +1,5 @@
 ---
+
 id: printer.creality-sparkx-i7
 title: Creality SPARKX i7
 summary: Creality SPARKX i7 é impressora FFF desktop 260×260×255 mm com AI camera,
@@ -185,3 +186,9 @@ Fonte: [source.creality-sparkx-i7-product](../22-fontes/creality-sparkx-i7-produ
 - Manual/firmware pinados
 - Clarificação oficial bed-slinger vs kinematics diagram
 - Troubleshooting-mapped (AI false positives, CFS Lite humidity)
+
+<!-- editorial-fingerprint:printer.creality-sparkx-i7:creality-sparkx-i7.md -->
+
+### Nota de especificidade — Creality SPARKX i7
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Creality SPARKX i7** (`printer.creality-sparkx-i7`, fabricante `creality`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

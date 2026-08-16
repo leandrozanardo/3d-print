@@ -85,7 +85,9 @@ A ficha **Jupiter 2** (elegoo) prioriza evidência de catálogo e lacunas explí
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/elegoo-jupiter-2 (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-jupiter-2]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Jupiter 2** / `printer.elegoo-jupiter-2`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -109,7 +111,11 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Jupiter 2**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.elegoo-jupiter-2](../22-fontes/elegoo-jupiter-2.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 302 × 162 × 300 mm ([source](../22-fontes/elegoo-jupiter-2.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -178,3 +184,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Jupiter 2** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Elegoo Jupiter 2**
 - Firmware/release notes pinados para **Jupiter 2**
+
+<!-- editorial-fingerprint:printer.elegoo-jupiter-2:elegoo-jupiter-2.md -->
+
+### Nota de especificidade — Elegoo Jupiter 2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Jupiter 2** (`printer.elegoo-jupiter-2`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

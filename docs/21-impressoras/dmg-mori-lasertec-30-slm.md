@@ -1,4 +1,5 @@
 ---
+
 id: printer.dmg-mori-lasertec-30-slm
 title: DMG MORI LASERTEC 30 SLM
 summary: DMG MORI LASERTEC 30 SLM (DMG MORI LASERTEC 30 SLM) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.dmg-mori-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - DMG MORI LASERTEC 30 SLM
 tags:
 - printer
-- documented
+- cataloged
 - dmg-mori
 - unknown
 manufacturer_id: dmg-mori
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.dmg-mori-lasertec-30-slm»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **DMG MORI LASERTEC 30 SLM**
 - Troubleshooting oficial por sintoma para **DMG MORI LASERTEC 30 SLM**
 - Revisões de hardware / changelogs de **DMG MORI LASERTEC 30 SLM**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **DMG MORI LASERTEC 30 SLM** (`printer.dmg-mori-lasertec-30-slm`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.dmg-mori-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.dmg-mori-lasertec-30-slm:dmg-mori-lasertec-30-slm.md -->
+
+### Nota de especificidade — DMG MORI LASERTEC 30 SLM
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **DMG MORI LASERTEC 30 SLM** (`printer.dmg-mori-lasertec-30-slm`, fabricante `dmg-mori`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,0 +1,554 @@
+{
+  "generated_at": "2026-08-16T07:21:11.075Z",
+  "worktree": ".tmp/wiki-enterprise-final-c75213a",
+  "scope": {
+    "root": "docs/",
+    "excluded_dirs": [
+      "projeto",
+      "ebook",
+      "printers",
+      "superpowers",
+      "_arquivo"
+    ],
+    "excluded_files": [
+      "context.md"
+    ],
+    "definition": "Markdown under docs/ with YAML front matter field id, after exclusions"
+  },
+  "counts": {
+    "canonical_pages_with_front_matter_id": 741,
+    "printers_total": 354,
+    "printers_by_coverage_level": {
+      "documented": 353,
+      "troubleshooting-mapped": 1
+    },
+    "printers_sources_only_generic_official_products_or_manufacturer_listing": 311,
+    "lacuna_bullets_across_printers": 2059,
+    "normalized_body_hash": {
+      "printers_hashed": 354,
+      "unique_hashes": 344,
+      "duplicate_group_count": 9,
+      "printers_in_duplicate_groups": 19,
+      "uniqueness_ratio": 0.971751
+    },
+    "unit_splitting_citations_mm_bracket_slash_s": 0,
+    "heuristica_editorial_sem_fonte_pinada": 0,
+    "sources_total": 130,
+    "sources_without_canonical_url": 74,
+    "sources_without_claims_or_limitations_sections": 10,
+    "see_body_occurrences": 0,
+    "carried_from_prior_occurrences": 0,
+    "troubleshooting_pages_total": 17,
+    "troubleshooting_pages_with_empty_sources": 2
+  },
+  "supplemental_near_misses": {
+    "sem_fonte_pinada_occurrences": 24,
+    "mm_open_bracket_citation_occurrences": 63,
+    "note": "Exact requested phrases for unit-splitting (mm ([…])/s) and 'heurística editorial (sem fonte pinada)' are 0 in canonical docs; these near-misses are recorded for remediation context only."
+  },
+  "top_10_duplicate_groups": [
+    {
+      "hash": "5c81662a3a5de0c0d8df998c3a6ae8889460ee7df5a9920d7c6c13cd57d5f971",
+      "size": 3,
+      "members": [
+        "21-impressoras/renishaw-renam-500d.md",
+        "21-impressoras/renishaw-renam-500s.md",
+        "21-impressoras/trumpf-truprint-1000.md"
+      ]
+    },
+    {
+      "hash": "747de48be3256dc3140dffb1252607639032b65bcdfabaa08823bcfe1d397b3d",
+      "size": 2,
+      "members": [
+        "21-impressoras/bambu-lab-h2c.md",
+        "21-impressoras/bambu-lab-h2s.md"
+      ]
+    },
+    {
+      "hash": "f64e9fabe0b764766caf01b618da64e733ead24db496e7edd7f8c56977ee0773",
+      "size": 2,
+      "members": [
+        "21-impressoras/farsoon-403p.md",
+        "21-impressoras/farsoon-ht1001p.md"
+      ]
+    },
+    {
+      "hash": "15cf5236bdc400f4506d4e63b652a6fe190623470431c97a525b7d04c1bf3903",
+      "size": 2,
+      "members": [
+        "21-impressoras/hp-jet-fusion-5000.md",
+        "21-impressoras/hp-jet-fusion-5400.md"
+      ]
+    },
+    {
+      "hash": "852e48d789745d3619aea1baae4584e7d0c501c9fdbbe8c5b0bfee31d6973c1c",
+      "size": 2,
+      "members": [
+        "21-impressoras/mimaki-3dgd-1800.md",
+        "21-impressoras/mimaki-3duj-553.md"
+      ]
+    },
+    {
+      "hash": "6a15d637cb56ea4317988bdc8af37bd90048d4650dfe62633e3a665a5568992d",
+      "size": 2,
+      "members": [
+        "21-impressoras/mingda-md-1000d.md",
+        "21-impressoras/mingda-md-400d.md"
+      ]
+    },
+    {
+      "hash": "bf9243e9f479593ab5e2fc1d25b1a5f0170c0f5a511a6fb7c28d731671708a26",
+      "size": 2,
+      "members": [
+        "21-impressoras/optomec-lens-cs-1500.md",
+        "21-impressoras/optomec-lens-cs-250.md"
+      ]
+    },
+    {
+      "hash": "a81671582d8fad5c293a5029c4bac40d278218def73b65ce08d2e87a3e570253",
+      "size": 2,
+      "members": [
+        "21-impressoras/phrozen-sonic-mighty-12k.md",
+        "21-impressoras/phrozen-sonic-mighty-16k.md"
+      ]
+    },
+    {
+      "hash": "7a379bc895a9238be3c081b0735a47ba23ec42f62a58f6da5fc21c311cdb1834",
+      "size": 2,
+      "members": [
+        "21-impressoras/stratasys-f170.md",
+        "21-impressoras/stratasys-f900.md"
+      ]
+    }
+  ],
+  "samples": {
+    "generic_only_printers_first_20": [
+      "21-impressoras/3d-systems-ext-800-titan-pellet.md",
+      "21-impressoras/3d-systems-figure-4.md",
+      "21-impressoras/3d-systems-mjp-300w-plus.md",
+      "21-impressoras/3d-systems-nextdent-5100.md",
+      "21-impressoras/3d-systems-prox-950.md",
+      "21-impressoras/3d-systems-psla-270.md",
+      "21-impressoras/3d-systems-sla-750-dental.md",
+      "21-impressoras/3d-systems-sls-380.md",
+      "21-impressoras/3dceram-c1000-flexmatic.md",
+      "21-impressoras/3dceram-c101-easy-lab.md",
+      "21-impressoras/3dceram-c3601-ultimate.md",
+      "21-impressoras/ackuretta-dentiq.md",
+      "21-impressoras/ackuretta-sol-plus.md",
+      "21-impressoras/ackuretta-sol-se.md",
+      "21-impressoras/ackuretta-sol.md",
+      "21-impressoras/additive-industries-metalfab-300flex.md",
+      "21-impressoras/additive-industries-metalfab-420k.md",
+      "21-impressoras/additive-industries-metalfab-g2.md",
+      "21-impressoras/artillery-m1-pro-s1.md",
+      "21-impressoras/artillery-m1-pro.md"
+    ],
+    "unit_splitting": [],
+    "heuristica_editorial": [],
+    "sources_without_canonical_url": [
+      {
+        "file": "22-fontes/3d-systems-official-products.md",
+        "id": "source.3d-systems-official-products"
+      },
+      {
+        "file": "22-fontes/3dceram-official-products.md",
+        "id": "source.3dceram-official-products"
+      },
+      {
+        "file": "22-fontes/ackuretta-official-products.md",
+        "id": "source.ackuretta-official-products"
+      },
+      {
+        "file": "22-fontes/additive-industries-official-products.md",
+        "id": "source.additive-industries-official-products"
+      },
+      {
+        "file": "22-fontes/anycubic-official-products.md",
+        "id": "source.anycubic-official-products"
+      },
+      {
+        "file": "22-fontes/artillery-official-products.md",
+        "id": "source.artillery-official-products"
+      },
+      {
+        "file": "22-fontes/asiga-official-products.md",
+        "id": "source.asiga-official-products"
+      },
+      {
+        "file": "22-fontes/bambu-lab-official-products.md",
+        "id": "source.bambu-lab-official-products"
+      },
+      {
+        "file": "22-fontes/bambu-wiki-a1-mini.md",
+        "id": "source.bambu-wiki-a1-mini"
+      },
+      {
+        "file": "22-fontes/bcn3d-official-products.md",
+        "id": "source.bcn3d-official-products"
+      },
+      {
+        "file": "22-fontes/carbon-official-products.md",
+        "id": "source.carbon-official-products"
+      },
+      {
+        "file": "22-fontes/cellink-official-products.md",
+        "id": "source.cellink-official-products"
+      },
+      {
+        "file": "22-fontes/cobod-official-products.md",
+        "id": "source.cobod-official-products"
+      },
+      {
+        "file": "22-fontes/colibrium-official-products.md",
+        "id": "source.colibrium-official-products"
+      },
+      {
+        "file": "22-fontes/craftbot-official-products.md",
+        "id": "source.craftbot-official-products"
+      },
+      {
+        "file": "22-fontes/creality-official-products.md",
+        "id": "source.creality-official-products"
+      },
+      {
+        "file": "22-fontes/desktop-metal-official-products.md",
+        "id": "source.desktop-metal-official-products"
+      },
+      {
+        "file": "22-fontes/dmg-mori-official-products.md",
+        "id": "source.dmg-mori-official-products"
+      },
+      {
+        "file": "22-fontes/elegoo-official-products.md",
+        "id": "source.elegoo-official-products"
+      },
+      {
+        "file": "22-fontes/ellis-print-tuning-guide.md",
+        "id": "source.ellis-print-tuning-guide"
+      },
+      {
+        "file": "22-fontes/epa-3d-printing-research.md",
+        "id": "source.epa-3d-printing-research"
+      },
+      {
+        "file": "22-fontes/farsoon-official-products.md",
+        "id": "source.farsoon-official-products"
+      },
+      {
+        "file": "22-fontes/fda-am-medical-devices-guidance-entry.md",
+        "id": "source.fda-am-medical-devices-entry"
+      },
+      {
+        "file": "22-fontes/flashforge-official-products.md",
+        "id": "source.flashforge-official-products"
+      },
+      {
+        "file": "22-fontes/flsun-official-products.md",
+        "id": "source.flsun-official-products"
+      },
+      {
+        "file": "22-fontes/formlabs-official-products.md",
+        "id": "source.formlabs-official-products"
+      },
+      {
+        "file": "22-fontes/heygears-official-products.md",
+        "id": "source.heygears-official-products"
+      },
+      {
+        "file": "22-fontes/hp-official-products.md",
+        "id": "source.hp-official-products"
+      },
+      {
+        "file": "22-fontes/icon-official-products.md",
+        "id": "source.icon-official-products"
+      },
+      {
+        "file": "22-fontes/impossible-objects-official-products.md",
+        "id": "source.impossible-objects-official-products"
+      },
+      {
+        "file": "22-fontes/intamsys-official-products.md",
+        "id": "source.intamsys-official-products"
+      },
+      {
+        "file": "22-fontes/iso-astm-52900-entry.md",
+        "id": "source.iso-astm-52900-entry"
+      },
+      {
+        "file": "22-fontes/kingroon-official-products.md",
+        "id": "source.kingroon-official-products"
+      },
+      {
+        "file": "22-fontes/klipper-docs.md",
+        "id": "source.klipper-docs"
+      },
+      {
+        "file": "22-fontes/lithoz-official-products.md",
+        "id": "source.lithoz-official-products"
+      },
+      {
+        "file": "22-fontes/lulzbot-official-products.md",
+        "id": "source.lulzbot-official-products"
+      },
+      {
+        "file": "22-fontes/makerbot-official-products.md",
+        "id": "source.makerbot-official-products"
+      },
+      {
+        "file": "22-fontes/markforged-official-products.md",
+        "id": "source.markforged-official-products"
+      },
+      {
+        "file": "22-fontes/marlin-docs.md",
+        "id": "source.marlin-docs"
+      },
+      {
+        "file": "22-fontes/mazak-official-products.md",
+        "id": "source.mazak-official-products"
+      },
+      {
+        "file": "22-fontes/meltio-official-products.md",
+        "id": "source.meltio-official-products"
+      },
+      {
+        "file": "22-fontes/mimaki-official-products.md",
+        "id": "source.mimaki-official-products"
+      },
+      {
+        "file": "22-fontes/mingda-official-products.md",
+        "id": "source.mingda-official-products"
+      },
+      {
+        "file": "22-fontes/nano-dimension-official-products.md",
+        "id": "source.nano-dimension-official-products"
+      },
+      {
+        "file": "22-fontes/nexa3d-official-products.md",
+        "id": "source.nexa3d-official-products"
+      },
+      {
+        "file": "22-fontes/nikon-slm-official-products.md",
+        "id": "source.nikon-slm-official-products"
+      },
+      {
+        "file": "22-fontes/niosh-additive-manufacturing.md",
+        "id": "source.niosh-am-entry"
+      },
+      {
+        "file": "22-fontes/one-click-metal-official-products.md",
+        "id": "source.one-click-metal-official-products"
+      },
+      {
+        "file": "22-fontes/optomec-official-products.md",
+        "id": "source.optomec-official-products"
+      },
+      {
+        "file": "22-fontes/phrozen-official-products.md",
+        "id": "source.phrozen-official-products"
+      },
+      {
+        "file": "22-fontes/prusa-research-official-products.md",
+        "id": "source.prusa-research-official-products"
+      },
+      {
+        "file": "22-fontes/qidi-official-products.md",
+        "id": "source.qidi-official-products"
+      },
+      {
+        "file": "22-fontes/raise3d-official-products.md",
+        "id": "source.raise3d-official-products"
+      },
+      {
+        "file": "22-fontes/rapidshape-official-products.md",
+        "id": "source.rapidshape-official-products"
+      },
+      {
+        "file": "22-fontes/renishaw-official-products.md",
+        "id": "source.renishaw-official-products"
+      },
+      {
+        "file": "22-fontes/roboze-official-products.md",
+        "id": "source.roboze-official-products"
+      },
+      {
+        "file": "22-fontes/sciaky-official-products.md",
+        "id": "source.sciaky-official-products"
+      },
+      {
+        "file": "22-fontes/shining3d-official-products.md",
+        "id": "source.shining3d-official-products"
+      },
+      {
+        "file": "22-fontes/sinterit-official-products.md",
+        "id": "source.sinterit-official-products"
+      },
+      {
+        "file": "22-fontes/snapmaker-official-products.md",
+        "id": "source.snapmaker-official-products"
+      },
+      {
+        "file": "22-fontes/sovol-official-products.md",
+        "id": "source.sovol-official-products"
+      },
+      {
+        "file": "22-fontes/sprintray-official-products.md",
+        "id": "source.sprintray-official-products"
+      },
+      {
+        "file": "22-fontes/stratasys-official-products.md",
+        "id": "source.stratasys-official-products"
+      },
+      {
+        "file": "22-fontes/teaching-tech-calibration.md",
+        "id": "source.teaching-tech-calibration"
+      },
+      {
+        "file": "22-fontes/tronxy-official-products.md",
+        "id": "source.tronxy-official-products"
+      },
+      {
+        "file": "22-fontes/trumpf-official-products.md",
+        "id": "source.trumpf-official-products"
+      },
+      {
+        "file": "22-fontes/ultimaker-official-products.md",
+        "id": "source.ultimaker-official-products"
+      },
+      {
+        "file": "22-fontes/uniformation-official-products.md",
+        "id": "source.uniformation-official-products"
+      },
+      {
+        "file": "22-fontes/velo3d-official-products.md",
+        "id": "source.velo3d-official-products"
+      },
+      {
+        "file": "22-fontes/voxelab-official-products.md",
+        "id": "source.voxelab-official-products"
+      },
+      {
+        "file": "22-fontes/voxeljet-official-products.md",
+        "id": "source.voxeljet-official-products"
+      },
+      {
+        "file": "22-fontes/wasp-official-products.md",
+        "id": "source.wasp-official-products"
+      },
+      {
+        "file": "22-fontes/xact-metal-official-products.md",
+        "id": "source.xact-metal-official-products"
+      },
+      {
+        "file": "22-fontes/zortrax-official-products.md",
+        "id": "source.zortrax-official-products"
+      }
+    ],
+    "sources_without_claims_or_limitations": [
+      {
+        "file": "22-fontes/bambu-a1-mini-tech-specs.md",
+        "id": "source.bambu-a1-mini-tech-specs",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/bambu-wiki-a1-mini.md",
+        "id": "source.bambu-wiki-a1-mini",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/ellis-print-tuning-guide.md",
+        "id": "source.ellis-print-tuning-guide",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/epa-3d-printing-research.md",
+        "id": "source.epa-3d-printing-research",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/fda-am-medical-devices-guidance-entry.md",
+        "id": "source.fda-am-medical-devices-entry",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/iso-astm-52900-entry.md",
+        "id": "source.iso-astm-52900-entry",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/klipper-docs.md",
+        "id": "source.klipper-docs",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/marlin-docs.md",
+        "id": "source.marlin-docs",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/niosh-additive-manufacturing.md",
+        "id": "source.niosh-am-entry",
+        "has_claims": false,
+        "has_limitations": false
+      },
+      {
+        "file": "22-fontes/teaching-tech-calibration.md",
+        "id": "source.teaching-tech-calibration",
+        "has_claims": false,
+        "has_limitations": false
+      }
+    ],
+    "see_body_files": [],
+    "carried_from_prior_files": [],
+    "troubleshooting_empty_sources": [
+      {
+        "file": "12-problemas-e-diagnostico/fff/indice-por-sintoma.md",
+        "id": "troubleshoot.fff-symptom-index"
+      },
+      {
+        "file": "12-problemas-e-diagnostico/fff/layer-shift.md",
+        "id": "defect.fff.layer-shift"
+      }
+    ],
+    "contradiction_anycubic_kobra_3": {
+      "printer_page": "21-impressoras/anycubic-kobra-3.md",
+      "source_page": "22-fontes/anycubic-kobra-3.md",
+      "printer_says_unpublished": true,
+      "printer_unpublished_lines": [
+        "Mapa de manuais específicos de **Kobra 3**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte anycubic + PDF por SKU.",
+        "Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Anycubic Kobra 3**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.",
+        "Compatibilidade Ideal/Capable/Not Recommended de **Kobra 3**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia."
+      ],
+      "specs_section_already_has_sourced_table": true,
+      "source_has_numeric_specs": true,
+      "evidence_excerpt": {
+        "printer_unpublished_examples": [
+          "Mapa de manuais específicos de **Kobra 3**: não publicado / não localizado na superfície citada em 2026-08-16. Próximo passo: portal de suporte anycubic + PDF por SKU.",
+          "Hardware detalhado (eixos, hotend/óptica/energia, sensores, revisões) de **Anycubic Kobra 3**: **não publicado** na evidência de listagem. Registrar apenas declarações da página de produto específica em revisão futura.",
+          "Compatibilidade Ideal/Capable/Not Recommended de **Kobra 3**: **não publicada** na listagem genérica citada. Exigir TDS/página de produto antes de recomendar polímero/resina/pó de engenharia."
+        ],
+        "note": "Especificações may already mirror source claims; Manuais/Hardware/Materiais still assert unpublished vs listing while source.anycubic-kobra-3 pins numeric OEM claims.",
+        "source_claims": [
+          "Build volume: 250 × 250 × 260 mm³",
+          "Max print speed: Recommended 300 mm/s; Maximum 600 mm/s",
+          "Max nozzle: 300 °C; 0.4 mm std (0.6/0.8 opcional)",
+          "Max heatbed: 110 °C, PEI spring steel"
+        ]
+      }
+    }
+  },
+  "method_notes": {
+    "generic_source": "Source id ends with -official-products OR source_type === manufacturer-product-listing",
+    "body_normalization": "lowercase + collapse whitespace + replace title/model/manufacturer/alias/slug tokens (len>=3) with MODEL",
+    "unit_splitting_regex": "/mm\\s*\\(\\[[^\\]]*\\](?:\\([^)]*\\))?\\)\\s*\\/\\s*s/gi",
+    "lacuna_bullets": "Bullet lines under ## Lacunas on printer pages"
+  }
+}

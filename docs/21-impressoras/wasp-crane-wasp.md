@@ -1,4 +1,5 @@
 ---
+
 id: printer.wasp-crane-wasp
 title: WASP Crane WASP
 summary: WASP Crane WASP (WASP Crane WASP) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.wasp-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - WASP Crane WASP
 tags:
 - printer
-- documented
+- cataloged
 - wasp
 - unknown
 manufacturer_id: wasp
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **WASP Crane WASP**
 - Página de produto dedicada ao SKU **WASP Crane WASP** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **WASP Crane WASP**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **WASP Crane WASP** (`printer.wasp-crane-wasp`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.wasp-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.wasp-crane-wasp:wasp-crane-wasp.md -->
+
+### Nota de especificidade — WASP Crane WASP
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **WASP Crane WASP** (`printer.wasp-crane-wasp`, fabricante `wasp`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

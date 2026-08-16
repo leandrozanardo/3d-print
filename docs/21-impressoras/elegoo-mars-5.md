@@ -85,7 +85,9 @@ Para **Elegoo Mars 5**, o foco operacional desta base é identidade + lifecycle 
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/mars-5-4k-6-6inch-monochrome-lcd-resin-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-mars-5]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Mars 5** / `printer.elegoo-mars-5`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -109,7 +111,12 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Elegoo Mars 5** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.elegoo-mars-5](../22-fontes/elegoo-mars-5.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 143.43 × 89.6 × 150 mm ([source](../22-fontes/elegoo-mars-5.md)) | página de produto OEM |
+| LCD | 6.6-inch monochrome LCD (4K product handle) ([source](../22-fontes/elegoo-mars-5.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -178,3 +185,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Elegoo Mars 5**
 - Firmware/release notes pinados para **Mars 5**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Mars 5**
+
+<!-- editorial-fingerprint:printer.elegoo-mars-5:elegoo-mars-5.md -->
+
+### Nota de especificidade — Elegoo Mars 5
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Mars 5** (`printer.elegoo-mars-5`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

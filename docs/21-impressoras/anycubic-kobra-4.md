@@ -82,7 +82,7 @@ Entrada **printer.anycubic-kobra-4**: conteúdo específico do SKU, sem transfer
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-4-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-kobra-4]
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -106,7 +106,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Kobra 4**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.anycubic-kobra-4](../22-fontes/anycubic-kobra-4.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 260 × 260 × 260 mm³ ([source](../22-fontes/anycubic-kobra-4.md)) | página de produto OEM |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s ([source](../22-fontes/anycubic-kobra-4.md)) | página de produto OEM |
+| Acceleration | Recommended 10 000 mm/s²; Maximum 20 000 mm/s² ([source](../22-fontes/anycubic-kobra-4.md)) | página de produto OEM |
+| Max nozzle | 300 °C, hardened steel 0.4 mm std ([source](../22-fontes/anycubic-kobra-4.md)) | página de produto OEM |
+| Max heatbed | 100 °C, PEI spring steel ([source](../22-fontes/anycubic-kobra-4.md)) | página de produto OEM |
+| Filaments (declared) | PLA, PETG, TPU (95A; TPU não compatível com ACE 2 Pro) ([source](../22-fontes/anycubic-kobra-4.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -175,3 +184,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Kobra 4** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Anycubic Kobra 4**
 - Firmware/release notes pinados para **Kobra 4**
+
+<!-- editorial-fingerprint:printer.anycubic-kobra-4:anycubic-kobra-4.md -->
+
+### Nota de especificidade — Anycubic Kobra 4
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Kobra 4** (`printer.anycubic-kobra-4`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

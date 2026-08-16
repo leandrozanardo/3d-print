@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.rapidshape.de/
 ---
+
 # Fonte — Rapid Shape listagem oficial
 
 | Campo | Valor |

@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://www.nano-di.com/dragonfly-iv
 ---
+
 # Fonte — Nano Dimension listagem oficial
 
 | Campo | Valor |

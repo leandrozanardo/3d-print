@@ -39,7 +39,9 @@ source_type: discovery-only
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://www.cdc.gov/niosh/manufacturing/additive/index.html
 ---
+
 # Fonte — NIOSH Additive Manufacturing
 
 | Campo | Valor |
@@ -59,8 +61,13 @@ last_verified: '2026-08-16'
 - Orientar leitores a buscar controles de engenharia, práticas de trabalho e EPIs via material NIOSH e SDS do produto
 - Apoiar páginas de [segurança](../15-seguranca-e-meio-ambiente/INDEX.md) e seções de segurança das tecnologias
 
-## Limites
+## Claims sustentados
 
+- Referenciar que AM envolve riscos ocupacionais (particulados ultrafinos, VOCs, pós, resinas, energia)
+- Orientar leitores a buscar controles de engenharia, práticas de trabalho e EPIs via material NIOSH e SDS do produto
+- Apoiar páginas de [segurança](../15-seguranca-e-meio-ambiente/INDEX.md) e seções de segurança das tecnologias
+
+## Limites
 - Portal é **índice**; detalhes estão em documentos/páginas filhas do CDC/NIOSH — verificar a página específica antes de citar número
 - Não substitui **SDS** do filamento/resina/pó nem normas locais de ventilação
 - Não usar para afirmar que determinado setup doméstico é “seguro”

@@ -1,4 +1,5 @@
 ---
+
 id: printer.additive-industries-metalfab-300flex
 title: Additive Industries MetalFab 300Flex
 summary: Additive Industries MetalFab 300Flex (Additive Industries MetalFab 300Flex)
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.additive-industries-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Additive Industries MetalFab 300Flex
 tags:
 - printer
-- documented
+- cataloged
 - additive-industries
 - unknown
 manufacturer_id: additive-industries
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.additive-industries-metalfab-300flex»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Additive Industries MetalFab 300Flex**
 - Página de produto dedicada ao SKU **Additive Industries MetalFab 300Flex** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Additive Industries MetalFab 300Flex**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Additive Industries MetalFab 300Flex** (`printer.additive-industries-metalfab-300flex`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.additive-industries-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.additive-industries-metalfab-300flex:additive-industries-metalfab-300flex.md -->
+
+### Nota de especificidade — Additive Industries MetalFab 300Flex
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Additive Industries MetalFab 300Flex** (`printer.additive-industries-metalfab-300flex`, fabricante `additive-industries`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

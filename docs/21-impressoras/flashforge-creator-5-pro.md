@@ -1,4 +1,5 @@
 ---
+
 id: printer.flashforge-creator-5-pro
 title: FlashForge Creator 5 Pro
 summary: FlashForge Creator 5 Pro (FlashForge Creator 5 Pro) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.flashforge-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - FlashForge Creator 5 Pro
 tags:
 - printer
-- documented
+- cataloged
 - flashforge
 - current
 manufacturer_id: flashforge
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **FlashForge Creator 5 Pro**
 - Revisões de hardware / changelogs de **FlashForge Creator 5 Pro**
 - Página de produto dedicada ao SKU **FlashForge Creator 5 Pro** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **FlashForge Creator 5 Pro** (`printer.flashforge-creator-5-pro`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.flashforge-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.flashforge-creator-5-pro:flashforge-creator-5-pro.md -->
+
+### Nota de especificidade — FlashForge Creator 5 Pro
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **FlashForge Creator 5 Pro** (`printer.flashforge-creator-5-pro`, fabricante `flashforge`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

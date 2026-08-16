@@ -30,7 +30,9 @@ source_type: discovery-only
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://wiki.bambulab.com/en/a1-mini/manual
 ---
+
 # Fonte — Bambu Lab Wiki A1 mini
 
 | Campo | Valor |
@@ -48,8 +50,12 @@ last_verified: '2026-08-16'
 - Existência de guias oficiais de unboxing, primeiro print (AMS lite / spool externo), UI, firmware history
 - FAQ confirma volume máximo 180 × 180 × 180 mm e aponta para tech specs
 
-## Limites
+## Claims sustentados
 
+- Existência de guias oficiais de unboxing, primeiro print (AMS lite / spool externo), UI, firmware history
+- FAQ confirma volume máximo 180 × 180 × 180 mm e aponta para tech specs
+
+## Limites
 - Procedimentos mudam com firmware/hardware revision
 - FAQ não substitui tech specs para números de capability
 - Comunidade no fórum Bambu não eleva automaticamente a esta fonte

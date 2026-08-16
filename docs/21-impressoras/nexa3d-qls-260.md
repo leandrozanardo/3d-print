@@ -1,4 +1,5 @@
 ---
+
 id: printer.nexa3d-qls-260
 title: Nexa3D QLS 260
 summary: Nexa3D QLS 260 (Nexa3D QLS 260) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.nexa3d-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Nexa3D QLS 260
 tags:
 - printer
-- documented
+- cataloged
 - nexa3d
 - current
 manufacturer_id: nexa3d
@@ -118,7 +119,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: sls
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.nexa3d-qls-260»
 
 ## Manuais
 
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Nexa3D QLS 260**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Nexa3D QLS 260**
 - Troubleshooting oficial por sintoma para **Nexa3D QLS 260**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Nexa3D QLS 260** (`printer.nexa3d-qls-260`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.nexa3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.nexa3d-qls-260:nexa3d-qls-260.md -->
+
+### Nota de especificidade — Nexa3D QLS 260
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Nexa3D QLS 260** (`printer.nexa3d-qls-260`, fabricante `nexa3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.ackuretta-sol-plus
 title: Ackuretta SOL Plus
 summary: Ackuretta SOL Plus (Ackuretta SOL Plus) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.ackuretta-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Ackuretta SOL Plus
 tags:
 - printer
-- documented
+- cataloged
 - ackuretta
 - current
 manufacturer_id: ackuretta
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Ackuretta SOL Plus**
 - Revisões de hardware / changelogs de **Ackuretta SOL Plus**
 - Página de produto dedicada ao SKU **Ackuretta SOL Plus** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Ackuretta SOL Plus** (`printer.ackuretta-sol-plus`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.ackuretta-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.ackuretta-sol-plus:ackuretta-sol-plus.md -->
+
+### Nota de especificidade — Ackuretta SOL Plus
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Ackuretta SOL Plus** (`printer.ackuretta-sol-plus`, fabricante `ackuretta`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

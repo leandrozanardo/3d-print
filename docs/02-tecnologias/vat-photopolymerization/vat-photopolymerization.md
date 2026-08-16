@@ -52,7 +52,7 @@ supersedes: []
 ---
 # Vat photopolymerization (SLA, DLP, MSLA)
 
-Hub pai: [Tecnologias](../INDEX.md) · pasta [vat-photopolymerization](./)
+Hub pai: [Tecnologias](../INDEX.md) · pasta [vat-photopolymerization](INDEX.md)
 
 ## Mecanismo
 

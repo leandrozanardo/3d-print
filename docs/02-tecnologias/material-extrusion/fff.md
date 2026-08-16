@@ -49,7 +49,7 @@ supersedes: []
 ---
 # FFF — Fused Filament Fabrication
 
-Hub pai: [Tecnologias](../INDEX.md) · pasta [material-extrusion](./)
+Hub pai: [Tecnologias](../INDEX.md) · pasta [material-extrusion](INDEX.md)
 
 ## O que é
 

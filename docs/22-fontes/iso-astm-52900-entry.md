@@ -31,7 +31,9 @@ source_type: discovery-only
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://www.iso.org/obp/ui/
 ---
+
 # Fonte — ISO/ASTM 52900 (entrada)
 
 | Campo | Valor |
@@ -49,8 +51,12 @@ last_verified: '2026-08-16'
 - Referenciar a existência das sete categorias de processo
 - Orientar terminologia (categoria vs processo vs marca)
 
-## Limites
+## Claims sustentados
 
+- Referenciar a existência das sete categorias de processo
+- Orientar terminologia (categoria vs processo vs marca)
+
+## Limites
 - Sem acesso ao texto completo nesta sessão: não citar cláusulas numeradas como se tivessem sido lidas
 - Não usar como datasheet de máquina
 

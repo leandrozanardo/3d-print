@@ -1,4 +1,5 @@
 ---
+
 id: printer.sovol-sv08-max
 title: Sovol SV08 Max
 summary: Sovol SV08 Max (Sovol SV08 Max) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.sovol-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Sovol SV08 Max
 tags:
 - printer
-- documented
+- cataloged
 - sovol
 - current
 manufacturer_id: sovol
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Sovol SV08 Max**
 - Revisões de hardware / changelogs de **Sovol SV08 Max**
 - Página de produto dedicada ao SKU **Sovol SV08 Max** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Sovol SV08 Max** (`printer.sovol-sv08-max`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.sovol-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.sovol-sv08-max:sovol-sv08-max.md -->
+
+### Nota de especificidade — Sovol SV08 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Sovol SV08 Max** (`printer.sovol-sv08-max`, fabricante `sovol`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

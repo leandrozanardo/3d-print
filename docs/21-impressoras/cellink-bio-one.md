@@ -1,4 +1,5 @@
 ---
+
 id: printer.cellink-bio-one
 title: CELLINK (BICO) BIO ONE
 summary: CELLINK (BICO) BIO ONE (CELLINK (BICO) BIO ONE) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.cellink-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - CELLINK (BICO) BIO ONE
 tags:
 - printer
-- documented
+- cataloged
 - cellink
 - unknown
 manufacturer_id: cellink
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **CELLINK (BICO) BIO ONE**
 - Revisões de hardware / changelogs de **CELLINK (BICO) BIO ONE**
 - Página de produto dedicada ao SKU **CELLINK (BICO) BIO ONE** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **CELLINK (BICO) BIO ONE** (`printer.cellink-bio-one`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.cellink-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.cellink-bio-one:cellink-bio-one.md -->
+
+### Nota de especificidade — CELLINK (BICO) BIO ONE
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **CELLINK (BICO) BIO ONE** (`printer.cellink-bio-one`, fabricante `cellink`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

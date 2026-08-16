@@ -1,4 +1,5 @@
 ---
+
 id: printer.craftbot-flow-wide-xl
 title: Craftbot Flow Wide XL
 summary: Craftbot Flow Wide XL (Craftbot Flow Wide XL) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.craftbot-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Craftbot Flow Wide XL
 tags:
 - printer
-- documented
+- cataloged
 - craftbot
 - current
 manufacturer_id: craftbot
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Craftbot Flow Wide XL** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Craftbot Flow Wide XL**
 - Firmware/release notes pinados para **Craftbot Flow Wide XL**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Craftbot Flow Wide XL** (`printer.craftbot-flow-wide-xl`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.craftbot-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.craftbot-flow-wide-xl:craftbot-flow-wide-xl.md -->
+
+### Nota de especificidade — Craftbot Flow Wide XL
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Craftbot Flow Wide XL** (`printer.craftbot-flow-wide-xl`, fabricante `craftbot`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

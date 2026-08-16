@@ -85,7 +85,9 @@ Documentação de **Elegoo Saturn 4 Ultra** distingue claims sustentados pela li
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/saturn-4-ultra-12k-10inch-monochrome-lcd-resin-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-saturn-4-ultra]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Saturn 4 Ultra** / `printer.elegoo-saturn-4-ultra`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -109,7 +111,13 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas elegoo como se fossem de **Saturn 4 Ultra**.
+Valores observados na página de produto específica ([source.elegoo-saturn-4-ultra](../22-fontes/elegoo-saturn-4-ultra.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 218.88 × 122.88 × 220 mm ([source](../22-fontes/elegoo-saturn-4-ultra.md)) | página de produto OEM |
+| LCD | 10-inch monochrome 12K (product handle) ([source](../22-fontes/elegoo-saturn-4-ultra.md)) | página de produto OEM |
+| Machine size | 327.4 × 329.2 × 548 mm ([source](../22-fontes/elegoo-saturn-4-ultra.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -178,3 +186,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Saturn 4 Ultra**
 - Página de produto dedicada ao SKU **Saturn 4 Ultra** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Elegoo Saturn 4 Ultra**
+
+<!-- editorial-fingerprint:printer.elegoo-saturn-4-ultra:elegoo-saturn-4-ultra.md -->
+
+### Nota de especificidade — Elegoo Saturn 4 Ultra
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Saturn 4 Ultra** (`printer.elegoo-saturn-4-ultra`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

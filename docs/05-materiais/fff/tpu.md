@@ -88,7 +88,7 @@ Partir do **preset TPU A1 Mini** no Bambu Studio (nome/campo podem mudar entre v
 
 | Parâmetro | Faixa de partida (ordem de magnitude / legado + prática) | Papel |
 |---|---|---|
-| Nozzle | ~210–230 °C — heurística editorial (sem fonte pinada) | Torre; marca manda |
+| Nozzle | faixa típica de partida ~210–230 °C (orientação de bancada; confirmar no spool/TDS — sem fonte pinada nesta base) | Torre; marca manda |
 | Bed | ~30–60 °C | Adesão sem soldar demais o PEI |
 | Velocidade | bem abaixo de PLA “rápido” | Evitar buckling / click |
 | Retração | mínima / curta (direct drive) | Retração longa → jam |

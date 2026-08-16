@@ -82,7 +82,7 @@ Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.m
 
 ## Resumo de emergência
 
-Fios entre torres/peças? **Seque** o filamento, depois −5 °C no range (heurística editorial (sem fonte pinada)), depois torre de [retração](../../08-slicers-e-configuracoes/settings/retracao.md) curta (direct drive). Não suba retract para 5–8 mm (heurística editorial (sem fonte pinada)).
+Fios entre torres/peças? **Seque** o filamento, depois baixar um pouco a temperatura dentro do range (ajuste exploratório; sem fonte pinada), depois torre de [retração](../../08-slicers-e-configuracoes/settings/retracao.md) curta (direct drive). Evite saltar para retrações longas típicas de Bowden sem medir na sua máquina (ponto de partida; sem fonte pinada).
 
 ## Assinatura
 

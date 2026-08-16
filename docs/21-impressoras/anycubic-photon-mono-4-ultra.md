@@ -84,7 +84,9 @@ Para **Anycubic Photon Mono 4 Ultra**, o foco operacional desta base é identida
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/photon-mono-4-ultra (accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-photon-mono-4-ultra]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Photon Mono 4 Ultra** / `printer.anycubic-photon-mono-4-ultra`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -108,7 +110,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Valores de volume, temperatura e velocidade para **Photon Mono 4 Ultra**: **não publicados pelo fabricante** na evidência de listagem citada em 2026-08-16.
+Valores observados na página de produto específica ([source.anycubic-photon-mono-4-ultra](../22-fontes/anycubic-photon-mono-4-ultra.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 153.4 × 87 × 165 mm³ (2.2 L) ([source](../22-fontes/anycubic-photon-mono-4-ultra.md)) | página de produto OEM |
+| LCD | 7" mono 10K (9024×5120); 17×17 μm ([source](../22-fontes/anycubic-photon-mono-4-ultra.md)) | página de produto OEM |
+| Print speed | Std ≤80 mm/h; High-speed 2.0 ≤120 mm/h @ 0.1 mm ([source](../22-fontes/anycubic-photon-mono-4-ultra.md)) | página de produto OEM |
+| Layer height | 0.02–0.15 mm ([source](../22-fontes/anycubic-photon-mono-4-ultra.md)) | página de produto OEM |
+| Light | ≥3500 μW/cm² ([source](../22-fontes/anycubic-photon-mono-4-ultra.md)) | página de produto OEM |
+| Power | 66 W ([source](../22-fontes/anycubic-photon-mono-4-ultra.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -177,3 +188,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Photon Mono 4 Ultra**
 - Troubleshooting oficial por sintoma para **Anycubic Photon Mono 4 Ultra**
 - Revisões de hardware / changelogs de **Photon Mono 4 Ultra**
+
+<!-- editorial-fingerprint:printer.anycubic-photon-mono-4-ultra:anycubic-photon-mono-4-ultra.md -->
+
+### Nota de especificidade — Anycubic Photon Mono 4 Ultra
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Photon Mono 4 Ultra** (`printer.anycubic-photon-mono-4-ultra`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

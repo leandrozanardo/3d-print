@@ -55,7 +55,7 @@ supersedes: []
 ---
 # Powder bed fusion (SLS, MJF, LPBF)
 
-Hub pai: [Tecnologias](../INDEX.md) · pasta [powder-bed-fusion](./)
+Hub pai: [Tecnologias](../INDEX.md) · pasta [powder-bed-fusion](INDEX.md)
 
 ## Mecanismo
 

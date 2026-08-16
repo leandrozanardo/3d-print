@@ -1,4 +1,5 @@
 ---
+
 id: printer.mimaki-3dgd-1800
 title: Mimaki 3DGD-1800
 summary: Mimaki 3DGD-1800 (Mimaki 3DGD-1800) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.mimaki-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Mimaki 3DGD-1800
 tags:
 - printer
-- documented
+- cataloged
 - mimaki
 - unknown
 manufacturer_id: mimaki
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Mimaki 3DGD-1800**
 - Firmware/release notes pinados para **Mimaki 3DGD-1800**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Mimaki 3DGD-1800**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Mimaki 3DGD-1800** (`printer.mimaki-3dgd-1800`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.mimaki-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.mimaki-3dgd-1800:mimaki-3dgd-1800.md -->
+
+### Nota de especificidade — Mimaki 3DGD-1800
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Mimaki 3DGD-1800** (`printer.mimaki-3dgd-1800`, fabricante `mimaki`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

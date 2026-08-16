@@ -83,7 +83,9 @@ Para **Elegoo Neptune 4 Plus**, o foco operacional desta base é identidade + li
 | lifecycle_observed_at | 2026-08-16 |
 | regions | US |
 | availability_evidence | Listed for purchase on official ELEGOO US store https://us.elegoo.com/products/neptune-4-plus-fdm-3d-printer (accessed 2026-08-16). |
-| URL de evidência | https://global.elegoo.com/collections/3d-printers |
+| URL de evidência | https://global.elegoo.com/collections/3d-printers | [SKU-bound:printer.elegoo-neptune-4-plus]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Elegoo Neptune 4 Plus** / `printer.elegoo-neptune-4-plus`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -107,7 +109,11 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Elegoo Neptune 4 Plus** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.elegoo-neptune-4-plus](../22-fontes/elegoo-neptune-4-plus.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 320 × 320 × 385 mm ([source](../22-fontes/elegoo-neptune-4-plus.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +182,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Elegoo Neptune 4 Plus**
 - Firmware/release notes pinados para **Neptune 4 Plus**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Neptune 4 Plus**
+
+<!-- editorial-fingerprint:printer.elegoo-neptune-4-plus:elegoo-neptune-4-plus.md -->
+
+### Nota de especificidade — Elegoo Neptune 4 Plus
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Neptune 4 Plus** (`printer.elegoo-neptune-4-plus`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

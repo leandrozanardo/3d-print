@@ -1,4 +1,5 @@
 ---
+
 id: printer.prusa-research-pro-ht90
 title: Prusa Research Prusa Pro HT90
 summary: Prusa Pro HT90 é impressora FFF da linha Prusa Pro (alta temperatura), listada
@@ -176,3 +177,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Prusa Pro HT90**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Prusa Pro HT90**
 - Troubleshooting oficial por sintoma para **Prusa Research Prusa Pro HT90**
+
+<!-- editorial-fingerprint:printer.prusa-research-pro-ht90:prusa-research-pro-ht90.md -->
+
+### Nota de especificidade — Prusa Research Prusa Pro HT90
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Prusa Research Prusa Pro HT90** (`printer.prusa-research-pro-ht90`, fabricante `prusa-research`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

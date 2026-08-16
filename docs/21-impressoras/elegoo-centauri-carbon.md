@@ -107,7 +107,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Elegoo Centauri Carbon** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.elegoo-centauri-carbon](../22-fontes/elegoo-centauri-carbon.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 256 × 256 × 256 mm ([source](../22-fontes/elegoo-centauri-carbon.md)) | página de produto OEM |
+| Max speed / accel | 500 mm/s; 20 000 mm/s² ([source](../22-fontes/elegoo-centauri-carbon.md)) | página de produto OEM |
+| Flow claim | 32 mm³/s ([source](../22-fontes/elegoo-centauri-carbon.md)) | página de produto OEM |
+| Max nozzle | 320 °C brass-hardened steel ([source](../22-fontes/elegoo-centauri-carbon.md)) | página de produto OEM |
+| Max heatbed | 110 °C ([source](../22-fontes/elegoo-centauri-carbon.md)) | página de produto OEM |
+| Kinematics | CoreXY enclosed + chamber camera ([source](../22-fontes/elegoo-centauri-carbon.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +185,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Elegoo Centauri Carbon**
 - Firmware/release notes pinados para **Centauri Carbon**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Centauri Carbon**
+
+<!-- editorial-fingerprint:printer.elegoo-centauri-carbon:elegoo-centauri-carbon.md -->
+
+### Nota de especificidade — Elegoo Centauri Carbon
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Elegoo Centauri Carbon** (`printer.elegoo-centauri-carbon`, fabricante `elegoo`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

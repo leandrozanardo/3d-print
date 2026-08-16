@@ -1,4 +1,5 @@
 ---
+
 id: printer.nano-dimension-dragonfly-iv-plus
 title: Nano Dimension DragonFly IV+
 summary: Nano Dimension DragonFly IV+ (Nano Dimension DragonFly IV+) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.nano-dimension-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Nano Dimension DragonFly IV+
 tags:
 - printer
-- documented
+- cataloged
 - nano-dimension
 - unknown
 manufacturer_id: nano-dimension
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Nano Dimension DragonFly IV+**
 - Firmware/release notes pinados para **Nano Dimension DragonFly IV+**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Nano Dimension DragonFly IV+**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Nano Dimension DragonFly IV+** (`printer.nano-dimension-dragonfly-iv-plus`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.nano-dimension-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.nano-dimension-dragonfly-iv-plus:nano-dimension-dragonfly-iv-plus.md -->
+
+### Nota de especificidade — Nano Dimension DragonFly IV+
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Nano Dimension DragonFly IV+** (`printer.nano-dimension-dragonfly-iv-plus`, fabricante `nano-dimension`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

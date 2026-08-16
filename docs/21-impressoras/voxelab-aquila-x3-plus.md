@@ -1,4 +1,5 @@
 ---
+
 id: printer.voxelab-aquila-x3-plus
 title: Voxelab Aquila X3 Plus
 summary: Voxelab Aquila X3 Plus (Voxelab Aquila X3 Plus) — coverage documented com
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.voxelab-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Voxelab Aquila X3 Plus
 tags:
 - printer
-- documented
+- cataloged
 - voxelab
 - current
 manufacturer_id: voxelab
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Voxelab Aquila X3 Plus**
 - Página de produto dedicada ao SKU **Voxelab Aquila X3 Plus** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Voxelab Aquila X3 Plus**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Voxelab Aquila X3 Plus** (`printer.voxelab-aquila-x3-plus`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.voxelab-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.voxelab-aquila-x3-plus:voxelab-aquila-x3-plus.md -->
+
+### Nota de especificidade — Voxelab Aquila X3 Plus
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Voxelab Aquila X3 Plus** (`printer.voxelab-aquila-x3-plus`, fabricante `voxelab`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

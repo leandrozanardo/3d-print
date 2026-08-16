@@ -37,7 +37,9 @@ source_type: discovery-only
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://www.epa.gov/chemical-research/3d-printing-research-epa
 ---
+
 # Fonte — EPA 3D Printing Research
 
 | Campo | Valor |
@@ -56,8 +58,13 @@ last_verified: '2026-08-16'
 - Contexto de avaliação de risco químico/ambiental (não receita de slicer)
 - Apoio a decisões de ventilação, descarte responsável e “não trivializar emissões”
 
-## Limites
+## Claims sustentados
 
+- Linhas de pesquisa EPA sobre emissões e química associada a impressão 3D
+- Contexto de avaliação de risco químico/ambiental (não receita de slicer)
+- Apoio a decisões de ventilação, descarte responsável e “não trivializar emissões”
+
+## Limites
 - Resultados de laboratório/estudos não transferem 1:1 para A1 Mini em sala aberta sem medição
 - Não certifica materiais como food-safe ou biocompatíveis
 - Jurisdição e programas são dos EUA; no Brasil, seguir SDS, legislação local de resíduos e boas práticas

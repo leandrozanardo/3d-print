@@ -34,7 +34,9 @@ source_type: manufacturer-product-listing
 language: en
 version: web-page-public
 last_verified: '2026-08-16'
+canonical_url: https://us.store.bambulab.com/collections/3d-printer
 ---
+
 # Fonte — Bambu Lab listagem oficial
 
 | Campo | Valor |

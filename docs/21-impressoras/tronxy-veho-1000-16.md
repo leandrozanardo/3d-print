@@ -1,4 +1,5 @@
 ---
+
 id: printer.tronxy-veho-1000-16
 title: Tronxy VEHO 1000-16
 summary: Tronxy VEHO 1000-16 (Tronxy VEHO 1000-16) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.tronxy-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Tronxy VEHO 1000-16
 tags:
 - printer
-- documented
+- cataloged
 - tronxy
 - current
 manufacturer_id: tronxy
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Tronxy VEHO 1000-16**
 - Firmware/release notes pinados para **Tronxy VEHO 1000-16**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Tronxy VEHO 1000-16**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Tronxy VEHO 1000-16** (`printer.tronxy-veho-1000-16`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.tronxy-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.tronxy-veho-1000-16:tronxy-veho-1000-16.md -->
+
+### Nota de especificidade — Tronxy VEHO 1000-16
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Tronxy VEHO 1000-16** (`printer.tronxy-veho-1000-16`, fabricante `tronxy`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

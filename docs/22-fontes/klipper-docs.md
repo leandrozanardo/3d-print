@@ -39,7 +39,9 @@ source_type: discovery-only
 language: unknown
 version: unknown
 last_verified: '2026-08-16'
+canonical_url: https://www.klipper3d.org/
 ---
+
 # Fonte — Klipper Documentation
 
 | Campo | Valor |
@@ -66,8 +68,14 @@ last_verified: '2026-08-16'
 - Apoiar [Klipper vs Marlin — conceitos](../17-software-firmware-e-automacao/klipper-vs-marlin-conceitos.md)
 - Apoiar [flow / pressure advance](../08-slicers-e-configuracoes/settings/flow-e-pressure-advance.md) quando o stack for Klipper
 
-## Limites
+## Claims sustentados
 
+- Modelo host + MCU (planejamento no host)
+- Configuração via arquivos texto (`printer.cfg` e includes)
+- Pressure advance e outros recursos documentados no site oficial
+- Macros e ecossistema de configuração
+
+## Limites
 - **Não** é documentação Bambu Lab / A1 Mini
 - Coeficientes de PA e exemplos de config **não** transferem automaticamente entre impressoras
 - Host offline durante print = risco operacional — a doc oficial discute o modelo; esta entrada não é SOP de segurança de unattended print

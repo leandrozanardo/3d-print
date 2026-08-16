@@ -82,7 +82,9 @@ Para **Anycubic Kobra X**, o foco operacional desta base é identidade + lifecyc
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/kobra-x (accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-kobra-x]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Kobra X** / `printer.anycubic-kobra-x`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -106,7 +108,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Anycubic Kobra X** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.anycubic-kobra-x](../22-fontes/anycubic-kobra-x.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 260 × 260 × 260 mm³ ([source](../22-fontes/anycubic-kobra-x.md)) | página de produto OEM |
+| Multicolor | Native 4-color; expandable to 19 with ACE 2 Pro ([source](../22-fontes/anycubic-kobra-x.md)) | página de produto OEM |
+| Max print speed | Recommended 300 mm/s; Maximum 600 mm/s ([source](../22-fontes/anycubic-kobra-x.md)) | página de produto OEM |
+| Acceleration | Recommended 10 000 mm/s²; Maximum 20 000 mm/s² ([source](../22-fontes/anycubic-kobra-x.md)) | página de produto OEM |
+| Max nozzle | 300 °C, hardened steel 0.4 mm ([source](../22-fontes/anycubic-kobra-x.md)) | página de produto OEM |
+| Max heatbed | 100 °C, PEI spring steel ([source](../22-fontes/anycubic-kobra-x.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -175,3 +186,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Manual de usuário/serviço PDF específico de **Anycubic Kobra X**
 - Firmware/release notes pinados para **Kobra X**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Kobra X**
+
+<!-- editorial-fingerprint:printer.anycubic-kobra-x:anycubic-kobra-x.md -->
+
+### Nota de especificidade — Anycubic Kobra X
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Kobra X** (`printer.anycubic-kobra-x`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

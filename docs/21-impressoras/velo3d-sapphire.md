@@ -1,4 +1,5 @@
 ---
+
 id: printer.velo3d-sapphire
 title: Velo3D Sapphire
 summary: Velo3D Sapphire (Velo3D Sapphire) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.velo3d-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Velo3D Sapphire
 tags:
 - printer
-- documented
+- cataloged
 - velo3d
 - unknown
 manufacturer_id: velo3d
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: fusão em leito de pó (SLS/LPBF/MJF/HSS confo
 
 - Technology: powder-bed-fusion
 - Process: metal-lpbf
-- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo)
+- Nota: conteúdo operacional da classe — fusão em leito de pó (SLS/LPBF/MJF/HSS conforme processo) «printer.velo3d-sapphire»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Velo3D Sapphire**
 - Página de produto dedicada ao SKU **Velo3D Sapphire** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Velo3D Sapphire**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Velo3D Sapphire** (`printer.velo3d-sapphire`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.velo3d-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.velo3d-sapphire:velo3d-sapphire.md -->
+
+### Nota de especificidade — Velo3D Sapphire
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Velo3D Sapphire** (`printer.velo3d-sapphire`, fabricante `velo3d`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

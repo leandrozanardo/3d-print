@@ -107,7 +107,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Não reutilizar números de outras máquinas prusa-research como se fossem de **Prusa CORE One+ (Gen 2)**.
+Valores observados na página de produto específica ([source.prusa-research-core-one-plus](../22-fontes/prusa-research-core-one-plus.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 250 × 220 × 270 mm ([source](../22-fontes/prusa-research-core-one-plus.md)) | página de produto OEM |
+| Kinematics | CoreXY enclosed ([source](../22-fontes/prusa-research-core-one-plus.md)) | página de produto OEM |
+| Max nozzle | 290 °C (400 °C w/ HT upgrade claimed) ([source](../22-fontes/prusa-research-core-one-plus.md)) | página de produto OEM |
+| Max heatbed | 120 °C ([source](../22-fontes/prusa-research-core-one-plus.md)) | página de produto OEM |
+| Max chamber | 55 °C ([source](../22-fontes/prusa-research-core-one-plus.md)) | página de produto OEM |
+| Layer height | 0.05–0.30 mm ([source](../22-fontes/prusa-research-core-one-plus.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: extrusão de filament/pellet (FFF/FDM ou variante).
 
@@ -176,3 +185,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Firmware/release notes pinados para **Prusa CORE One+ (Gen 2)**
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Prusa CORE One+ (Gen 2)**
 - Troubleshooting oficial por sintoma para **Prusa Research Prusa CORE One+ (Gen 2)**
+
+<!-- editorial-fingerprint:printer.prusa-research-core-one-plus:prusa-research-core-one-plus.md -->
+
+### Nota de especificidade — Prusa Research Prusa CORE One+ (Gen 2)
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Prusa Research Prusa CORE One+ (Gen 2)** (`printer.prusa-research-core-one-plus`, fabricante `prusa-research`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

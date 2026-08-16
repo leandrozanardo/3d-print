@@ -1,4 +1,5 @@
 ---
+
 id: printer.uniformation-gktwo
 title: Uniformation GKtwo
 summary: Uniformation GKtwo (Uniformation GKtwo) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.uniformation-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Uniformation GKtwo
 tags:
 - printer
-- documented
+- cataloged
 - uniformation
 - current
 manufacturer_id: uniformation
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Uniformation GKtwo** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Uniformation GKtwo**
 - Firmware/release notes pinados para **Uniformation GKtwo**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Uniformation GKtwo** (`printer.uniformation-gktwo`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.uniformation-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.uniformation-gktwo:uniformation-gktwo.md -->
+
+### Nota de especificidade — Uniformation GKtwo
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Uniformation GKtwo** (`printer.uniformation-gktwo`, fabricante `uniformation`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

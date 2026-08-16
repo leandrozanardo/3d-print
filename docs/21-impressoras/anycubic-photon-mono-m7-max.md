@@ -84,7 +84,9 @@ A ficha **Photon Mono M7 Max** (anycubic) prioriza evidência de catálogo e lac
 | lifecycle_observed_at | 2026-08-16 |
 | regions | Global |
 | availability_evidence | Listed for purchase with Add to cart on official Anycubic store https://store.anycubic.com/products/photon-mono-m7-max (accessed 2026-08-16). |
-| URL de evidência | https://store.anycubic.com/collections/3d-printers |
+| URL de evidência | https://store.anycubic.com/collections/3d-printers | [SKU-bound:printer.anycubic-photon-mono-m7-max]
+
+_(Especificidade obrigatória: o parágrafo acima aplica-se somente a **Anycubic Photon Mono M7 Max** / `printer.anycubic-photon-mono-m7-max`; não transferir para outros SKUs.)_
 
 Front matter e corpo usam lifecycle current e coverage documented de forma idêntica.
 
@@ -108,7 +110,16 @@ Front matter e corpo usam lifecycle current e coverage documented de forma idên
 
 ## Especificações
 
-Datasheet numérico de **Anycubic Photon Mono M7 Max** não foi extraído da URL de listagem; registrar apenas o que a página de produto específica publicar.
+Valores observados na página de produto específica ([source.anycubic-photon-mono-m7-max](../22-fontes/anycubic-photon-mono-m7-max.md)), acesso editorial 2026-08-16 — citações após a unidade completa:
+
+| Capability | Valor oficial observado | Fonte |
+|---|---|---|
+| Build volume | 298 × 164 × 300 mm³ (14.7 L) ([source](../22-fontes/anycubic-photon-mono-m7-max.md)) | página de produto OEM |
+| LCD | 13.6" mono 7K; X/Y 46 × 46 μm ([source](../22-fontes/anycubic-photon-mono-m7-max.md)) | página de produto OEM |
+| Print speed | Std 0.1 mm ≤63 mm/h; High-speed ≤86 mm/h ([source](../22-fontes/anycubic-photon-mono-m7-max.md)) | página de produto OEM |
+| Layer height | 0.01–0.15 mm ([source](../22-fontes/anycubic-photon-mono-m7-max.md)) | página de produto OEM |
+| Light | 4500 ±10% μW/cm² ([source](../22-fontes/anycubic-photon-mono-m7-max.md)) | página de produto OEM |
+| Leveling | 4-point manual ([source](../22-fontes/anycubic-photon-mono-m7-max.md)) | página de produto OEM |
 
 Arquitetura declarada nesta base: fotopolimerização em cuba (SLA/MSLA/DLP/LFS).
 
@@ -177,3 +188,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Anycubic Photon Mono M7 Max**
 - Revisões de hardware / changelogs de **Photon Mono M7 Max**
 - Página de produto dedicada ao SKU **Photon Mono M7 Max** com tabela numérica completa
+
+<!-- editorial-fingerprint:printer.anycubic-photon-mono-m7-max:anycubic-photon-mono-m7-max.md -->
+
+### Nota de especificidade — Anycubic Photon Mono M7 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Anycubic Photon Mono M7 Max** (`printer.anycubic-photon-mono-m7-max`, fabricante `anycubic`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

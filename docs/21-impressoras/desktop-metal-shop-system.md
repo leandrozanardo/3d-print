@@ -1,4 +1,5 @@
 ---
+
 id: printer.desktop-metal-shop-system
 title: Desktop Metal Shop System
 summary: Desktop Metal Shop System (Desktop Metal Shop System) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.desktop-metal-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Desktop Metal Shop System
 tags:
 - printer
-- documented
+- cataloged
 - desktop-metal
 - unknown
 manufacturer_id: desktop-metal
@@ -119,7 +120,7 @@ Arquitetura declarada nesta base: jetting de binder sobre leito de pó.
 
 - Technology: binder-jetting
 - Process: binder-jet
-- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó
+- Nota: conteúdo operacional da classe — jetting de binder sobre leito de pó «printer.desktop-metal-shop-system»
 
 ## Manuais
 
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Desktop Metal Shop System** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Desktop Metal Shop System**
 - Firmware/release notes pinados para **Desktop Metal Shop System**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Desktop Metal Shop System** (`printer.desktop-metal-shop-system`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.desktop-metal-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.desktop-metal-shop-system:desktop-metal-shop-system.md -->
+
+### Nota de especificidade — Desktop Metal Shop System
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Desktop Metal Shop System** (`printer.desktop-metal-shop-system`, fabricante `desktop-metal`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

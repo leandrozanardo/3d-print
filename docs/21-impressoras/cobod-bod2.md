@@ -1,4 +1,5 @@
 ---
+
 id: printer.cobod-bod2
 title: COBOD BOD2
 summary: COBOD BOD2 (COBOD BOD2) — coverage documented com seções DoD, technology/process
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.cobod-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - COBOD BOD2
 tags:
 - printer
-- documented
+- cataloged
 - cobod
 - unknown
 manufacturer_id: cobod
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **COBOD BOD2**
 - Revisões de hardware / changelogs de **COBOD BOD2**
 - Página de produto dedicada ao SKU **COBOD BOD2** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **COBOD BOD2** (`printer.cobod-bod2`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.cobod-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.cobod-bod2:cobod-bod2.md -->
+
+### Nota de especificidade — COBOD BOD2
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **COBOD BOD2** (`printer.cobod-bod2`, fabricante `cobod`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

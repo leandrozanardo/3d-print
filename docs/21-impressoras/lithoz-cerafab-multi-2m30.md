@@ -1,4 +1,5 @@
 ---
+
 id: printer.lithoz-cerafab-multi-2m30
 title: Lithoz CeraFab Multi 2M30
 summary: Lithoz CeraFab Multi 2M30 (Lithoz CeraFab Multi 2M30) — coverage documented
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.lithoz-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Lithoz CeraFab Multi 2M30
 tags:
 - printer
-- documented
+- cataloged
 - lithoz
 - unknown
 manufacturer_id: lithoz
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **Lithoz CeraFab Multi 2M30**
 - Revisões de hardware / changelogs de **Lithoz CeraFab Multi 2M30**
 - Página de produto dedicada ao SKU **Lithoz CeraFab Multi 2M30** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Lithoz CeraFab Multi 2M30** (`printer.lithoz-cerafab-multi-2m30`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.lithoz-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.lithoz-cerafab-multi-2m30:lithoz-cerafab-multi-2m30.md -->
+
+### Nota de especificidade — Lithoz CeraFab Multi 2M30
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Lithoz CeraFab Multi 2M30** (`printer.lithoz-cerafab-multi-2m30`, fabricante `lithoz`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

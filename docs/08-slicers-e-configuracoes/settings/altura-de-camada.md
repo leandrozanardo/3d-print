@@ -4,8 +4,9 @@ title: Altura de camada (layer height)
 summary: 'Altura de camada é a espessura Z de cada fatia depositada. Controla resolução
   vertical, tempo, resistência anisotrópica e capacidade de detalhe/overhang. Conceito
   primeiro; no Bambu Studio o controle aparece sob Quality/layer height (rótulos variam
-  por versão). Regra prática: fração do diâmetro do nozzle (comum 25–75% de 0,4 mm),
-  não um número mágico universal. Validar com a geometria e o material.'
+  por versão). Regra prática: fração do diâmetro do nozzle (comum 25–75% do Ø incluso
+  tipicamente 0,4 mm nas tech specs A1 mini — ver sources), não um número mágico universal.
+  Validar com a geometria e o material.'
 doc_type: setting
 domain:
 - slicing
@@ -34,6 +35,7 @@ last_reviewed: '2026-08-15'
 review_cycle: 6-months
 sources:
 - source.ellis-print-tuning-guide
+- source.bambu-a1-mini-tech-specs
 related:
 - setting.line-width
 - setting.speeds
@@ -69,7 +71,7 @@ Em builds recentes do Bambu Studio, procure campos de **Layer height** / **First
 
 ## Unidade / tipo
 
-Comprimento (mm). Tipicamente 0,08–0,28 mm com nozzle 0,4 mm na prática desktop — **faixa de partida**, heurística editorial (sem fonte pinada), não lei.
+Comprimento (mm). Em desktop com nozzle 0,4 mm (tech specs A1 mini / sources), costuma-se partir de alturas de camada bem abaixo do diâmetro do bico — **faixa de partida ilustrativa**, não lei e sem fonte pinada.
 
 ## Mecanismo
 
@@ -97,7 +99,7 @@ O slicer gera perímetros/infill com altura H. O fluxo volumétrico necessário 
 
 ## Heurísticas (com escopo)
 
-- Cosmético fino / mini: frequentemente 0,08–0,12 mm com 0,4 mm — validar
+- Cosmético fino / mini: frequentemente 0,08–0,12 mm com 0,4 mm (tech specs A1 mini / sources) — validar
 - Funcional geral: frequentemente 0,16–0,20 mm — validar
 - Rascunho: até ~0,24–0,28 mm se a geometria permitir
 - First layer: muitas vezes ligeiramente maior que H — ver página de primeira camada

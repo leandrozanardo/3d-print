@@ -1,4 +1,5 @@
 ---
+
 id: printer.prusa-research-sl1s-speed
 title: Prusa Research Original Prusa SL1S SPEED
 summary: Original Prusa SL1S SPEED é impressora MSLA/SLA de resina da Prusa, listada
@@ -177,3 +178,9 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **Original Prusa SL1S SPEED**
 - Página de produto dedicada ao SKU **Original Prusa SL1S SPEED** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Prusa Research Original Prusa SL1S SPEED**
+
+<!-- editorial-fingerprint:printer.prusa-research-sl1s-speed:prusa-research-sl1s-speed.md -->
+
+### Nota de especificidade — Prusa Research Original Prusa SL1S SPEED
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Prusa Research Original Prusa SL1S SPEED** (`printer.prusa-research-sl1s-speed`, fabricante `prusa-research`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

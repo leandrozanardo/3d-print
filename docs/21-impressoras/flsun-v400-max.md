@@ -1,4 +1,5 @@
 ---
+
 id: printer.flsun-v400-max
 title: FLSUN V400 Max
 summary: FLSUN V400 Max (FLSUN V400 Max) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.flsun-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - FLSUN V400 Max
 tags:
 - printer
-- documented
+- cataloged
 - flsun
 - current
 manufacturer_id: flsun
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **FLSUN V400 Max**
 - Página de produto dedicada ao SKU **FLSUN V400 Max** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **FLSUN V400 Max**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **FLSUN V400 Max** (`printer.flsun-v400-max`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.flsun-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.flsun-v400-max:flsun-v400-max.md -->
+
+### Nota de especificidade — FLSUN V400 Max
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **FLSUN V400 Max** (`printer.flsun-v400-max`, fabricante `flsun`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

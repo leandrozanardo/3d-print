@@ -1,4 +1,5 @@
 ---
+
 id: printer.sprintray-midas
 title: SprintRay Midas
 summary: SprintRay Midas (SprintRay Midas) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.sprintray-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - SprintRay Midas
 tags:
 - printer
-- documented
+- cataloged
 - sprintray
 - current
 manufacturer_id: sprintray
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Revisões de hardware / changelogs de **SprintRay Midas**
 - Página de produto dedicada ao SKU **SprintRay Midas** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **SprintRay Midas**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **SprintRay Midas** (`printer.sprintray-midas`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.sprintray-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.sprintray-midas:sprintray-midas.md -->
+
+### Nota de especificidade — SprintRay Midas
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **SprintRay Midas** (`printer.sprintray-midas`, fabricante `sprintray`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

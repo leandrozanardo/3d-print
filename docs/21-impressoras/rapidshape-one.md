@@ -1,4 +1,5 @@
 ---
+
 id: printer.rapidshape-one
 title: Rapid Shape ONE
 summary: Rapid Shape ONE (Rapid Shape ONE) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.rapidshape-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - Rapid Shape ONE
 tags:
 - printer
-- documented
+- cataloged
 - rapidshape
 - unknown
 manufacturer_id: rapidshape
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Página de produto dedicada ao SKU **Rapid Shape ONE** com tabela numérica completa
 - Manual de usuário/serviço PDF específico de **Rapid Shape ONE**
 - Firmware/release notes pinados para **Rapid Shape ONE**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Rapid Shape ONE** (`printer.rapidshape-one`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.rapidshape-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.rapidshape-one:rapidshape-one.md -->
+
+### Nota de especificidade — Rapid Shape ONE
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Rapid Shape ONE** (`printer.rapidshape-one`, fabricante `rapidshape`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

@@ -1,4 +1,5 @@
 ---
+
 id: printer.xact-metal-xm300g
 title: Xact Metal XM300G
 summary: Xact Metal XM300G (Xact Metal XM300G) — coverage documented com seções DoD,
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: unknown
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.xact-metal-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Xact Metal XM300G
 tags:
 - printer
-- documented
+- cataloged
 - xact-metal
 - unknown
 manufacturer_id: xact-metal
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Xact Metal XM300G**
 - Troubleshooting oficial por sintoma para **Xact Metal XM300G**
 - Revisões de hardware / changelogs de **Xact Metal XM300G**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Xact Metal XM300G** (`printer.xact-metal-xm300g`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.xact-metal-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.xact-metal-xm300g:xact-metal-xm300g.md -->
+
+### Nota de especificidade — Xact Metal XM300G
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Xact Metal XM300G** (`printer.xact-metal-xm300g`, fabricante `xact-metal`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

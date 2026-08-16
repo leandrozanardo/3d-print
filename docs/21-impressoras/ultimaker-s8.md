@@ -1,4 +1,5 @@
 ---
+
 id: printer.ultimaker-s8
 title: UltiMaker S8
 summary: UltiMaker S8 (UltiMaker S8) — coverage documented com seções DoD, technology/process
@@ -24,7 +25,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.ultimaker-official-products
 related:
@@ -41,7 +42,7 @@ aliases_en:
 - UltiMaker S8
 tags:
 - printer
-- documented
+- cataloged
 - ultimaker
 - current
 manufacturer_id: ultimaker
@@ -177,3 +178,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Troubleshooting oficial por sintoma para **UltiMaker S8**
 - Revisões de hardware / changelogs de **UltiMaker S8**
 - Página de produto dedicada ao SKU **UltiMaker S8** com tabela numérica completa
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **UltiMaker S8** (`printer.ultimaker-s8`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.ultimaker-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.ultimaker-s8:ultimaker-s8.md -->
+
+### Nota de especificidade — UltiMaker S8
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **UltiMaker S8** (`printer.ultimaker-s8`, fabricante `ultimaker`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.

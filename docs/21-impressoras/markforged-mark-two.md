@@ -1,4 +1,5 @@
 ---
+
 id: printer.markforged-mark-two
 title: Markforged Mark Two
 summary: Markforged Mark Two (Markforged Mark Two) — coverage documented com seções
@@ -25,7 +26,7 @@ confidence: medium
 last_reviewed: '2026-08-16'
 review_cycle: 3-months
 lifecycle: current
-coverage_level: documented
+coverage_level: cataloged
 sources:
 - source.markforged-official-products
 related:
@@ -42,7 +43,7 @@ aliases_en:
 - Markforged Mark Two
 tags:
 - printer
-- documented
+- cataloged
 - markforged
 - current
 manufacturer_id: markforged
@@ -178,3 +179,13 @@ Classificação: inventário vazio consciente (≠ prova de ausência de problem
 - Matriz de materiais Ideal/Capable/Not Recommended publicada para **Markforged Mark Two**
 - Troubleshooting oficial por sintoma para **Markforged Mark Two**
 - Revisões de hardware / changelogs de **Markforged Mark Two**
+
+## Status editorial (remediação corretiva 2026-08-16)
+
+A página **Markforged Mark Two** (`printer.markforged-mark-two`) foi reclassificada de `documented` para `cataloged` porque, nesta execução, a única evidência pinada era listagem genérica do fabricante (`source.markforged-official-products`, tipicamente `manufacturer-product-listing`). Listagem P3 sustenta identidade/presença no catálogo, não especificações, manuais, firmware ou known issues do SKU. Pesquisa de página oficial específica do modelo foi registrada no ledger JSONL; até existir fonte P1/P2 aplicável, `documented` permanece injustificado.
+
+<!-- editorial-fingerprint:printer.markforged-mark-two:markforged-mark-two.md -->
+
+### Nota de especificidade — Markforged Mark Two
+
+Este bloco existe para impedir documentação falsa-específica: o conteúdo operacional e as lacunas abaixo referem-se exclusivamente a **Markforged Mark Two** (`printer.markforged-mark-two`, fabricante `markforged`), não a irmãos de linha. Qualquer número fora das fontes listadas no front matter deve ser tratado como não publicado.
