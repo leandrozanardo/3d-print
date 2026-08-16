@@ -34,8 +34,15 @@ Desktop.ini
 *.pem
 credentials.json
 
-# Nested git backups (do not publish nested repos)
-docs/_arquivo/ebook/.git_ebook_backup/
+# Local archive assets (keep on disk; never version)
+docs/_arquivo/
+
+# Oversized ebook binaries kept local-only after history purge
+*.blend
+docs/ebook/assets/capa-livro-makerlinux2.svg
+docs/ebook/imagens/primeiracamadasethi.png
+docs/ebook/imagens/fotolapac.jpeg
+docs/ebook/imagens/ummontedealicates.png
 
 # Local 3D assets and per-model plans (templates below stay tracked)
 3ds/original/
