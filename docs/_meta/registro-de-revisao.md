@@ -21,3 +21,4 @@ tags: ["review"]
 | 2026-08-15 | Waves 1–11 (fundamentos → consolidação) | Draft expandido em docs/ | `validate-wiki` → ok:true, errors:[] |
 | 2026-08-15 | Maintenance A (resina/pó/settings/formatos/segurança/cenários) | Draft expandido | `validate-wiki` → ok:true, errors:[] |
 | 2026-08-16 | Wiki enterprise audit + semantic validator `--strict` + remediação FM/BOM + ledger impressoras | Gate CI estrito verde; catálogo seed | `validate-wiki --strict` → ok:true; pytest wiki pass |
+| 2026-08-16 | Census global cataloged (66 OEMs / 353 printers) + piloto Bambu/Prusa/Formlabs | Catálogo `cataloged`; 0 documented DoD | `validate-wiki --strict` + pytest |

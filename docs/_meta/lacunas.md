@@ -43,9 +43,10 @@ Atualizado pós-Wave 10–11. Itens resolvidos parcialmente riscam contexto, nã
 
 ## Catálogo de impressoras
 
-1. Denominador de mercado não fechado
-2. Fabricantes seed não investigados (exceto fatia A1 Mini)
-3. Nenhuma impressora em DoD `documented` / `cataloged` formal além do conteúdo draft A1 Mini
+1. ~~Denominador seed vazio~~ → censo `2026-08-16-census` com 353 modelos `cataloged` (**denominador ainda aberto**)
+2. **0** modelos no DoD `documented` (specs/manuais/known-issues)
+3. SKUs parciais por JS (Creality/Elegoo/etc.)
+4. Known-issues específicos por modelo: não pesquisados em massa
 
 ## Processo
 

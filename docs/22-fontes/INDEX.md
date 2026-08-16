@@ -12,10 +12,10 @@ knowledge_status: "draft"
 evidence_status: "unknown"
 safety_level: "normal"
 confidence: "medium"
-last_reviewed: "2026-08-15"
+last_reviewed: "2026-08-16"
 review_cycle: "3-months"
 sources: []
-related: ["meta.coverage", "meta.knowledge-map"]
+related: ["meta.coverage", "meta.knowledge-map", "meta.printer-global-catalog"]
 prerequisites: ["meta.architecture"]
 supersedes: []
 aliases_pt_br: ["Fontes"]
@@ -32,6 +32,16 @@ Registro de proveniência para afirmações técnicas.
 ## Status
 
 Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para navegação estável; páginas atômicas profundas entram por wave.
+
+## Catálogo de impressoras (2026-08-16)
+
+Fontes de listagem oficial por OEM seguem o padrão:
+
+`docs/22-fontes/<manufacturer-id>-official-products.md` → id `source.<manufacturer-id>-official-products`
+
+Piloto: [bambu-lab-official-products.md](bambu-lab-official-products.md) · [prusa-research-official-products.md](prusa-research-official-products.md) · [formlabs-official-products.md](formlabs-official-products.md)
+
+Índice de modelos: [catalogo-global.md](../21-impressoras/_meta/catalogo-global.md)
 
 ## Entradas recomendadas
 

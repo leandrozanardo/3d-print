@@ -1,7 +1,7 @@
 ---
 id: "meta.continuation"
 title: "Continuação — estado da base"
-summary: "Batch 2026-08-16: auditoria empresarial + validador semântico --strict + remediação estrutural do corpus + ledger do catálogo de impressoras. Próximo = Phase 0.2-conteúdo (warnings) e piloto Bambu→Prusa→Formlabs."
+summary: "Batch 2026-08-16-census: catálogo com 66 fabricantes e 353 modelos em coverage cataloged; piloto Bambu/Prusa/Formlabs. Nenhum DoD documented completo. Próximo = aprofundar specs/manuais/known-issues do piloto."
 doc_type: "continuation"
 domain: ["meta"]
 knowledge_status: "draft"
@@ -18,43 +18,33 @@ tags: ["continuation"]
 
 ## Wave atual
 
-**Wiki Enterprise Audit — Phase 0 / 0.1 / 0.2-estrutural** (2026-08-16).
+**Printer catalog census** — `market-snapshot-2026-08-16-census`.
 
 ## Batch concluído
 
-1. Auditoria recalculada → `project_plans/wiki_enterprise_audit/00–03`
-2. Validador empresarial → `core/wiki_validate.py` + `python -m core validate-wiki docs --strict --json`
-3. Remediação estrutural → BOM removido, campos list/`supersedes`, 2 related IDs corrigidos, sources em páginas com números órfãos
-4. Ledger do catálogo → `docs/21-impressoras/_meta/progresso.md` (+ critérios, catálogo, fabricantes, rebrands, exclusões)
+- Gate semântico `--strict` (batch anterior) mantido
+- Censo oficial multi-OEM → páginas `manufacturer.*` + `printer.*` em `cataloged`
+- Ledger/catálogo global atualizados
+- **Não** concluído: DoD `documented` / known-issues / specs por modelo em massa
 
 ## Validações
 
+Rodar ao final:
+
 ```text
 python -m core validate-wiki docs --json
-→ ok: true
-
 python -m core validate-wiki docs --strict --json
-→ ok: true (warnings residuais: aliases, citations próximas, linguagem suave)
+python -m pytest tests -q
 ```
 
-## Próximo batch determinístico
+## Próximo batch
 
-1. **Phase 0.2-conteúdo** — reduzir warnings; pin `lifecycle`/`coverage_level` na A1 Mini; sincronizar cobertura
-2. **Piloto catálogo** — Bambu Lab portfólio atual → Prusa → Formlabs (`cataloged` mínimo)
-3. Revisar schema antes de escalar Creality+
+Aprofundar piloto **Bambu → Prusa → Formlabs** para `documented` sem inventar números.
 
-Ler primeiro: [progresso.md](../21-impressoras/_meta/progresso.md) · este arquivo · [cobertura.md](cobertura.md) · [lacunas.md](lacunas.md)
+Ler: [progresso.md](../21-impressoras/_meta/progresso.md) · [catalogo-global.md](../21-impressoras/_meta/catalogo-global.md)
 
 ## Blockers
 
-- Delete de legado: proibido até confirmação
-- Auto-promoção `reviewed`/`verified`: proibida
-- Ingestão factual OEM: ainda não iniciada (requer rede + fontes oficiais)
-
-## Prompt curto
-
-```text
-Continue a partir de docs/21-impressoras/_meta/progresso.md e docs/_meta/continuacao.md.
-Phase 0.2-conteúdo, depois piloto Bambu→Prusa→Formlabs.
-validate-wiki --strict. Sem commit/push. Não inventar specs.
-```
+- Auto-`reviewed`/`verified` proibido
+- JS truncando listagens de alguns OEMs
+- Mercado sem denominador fechado

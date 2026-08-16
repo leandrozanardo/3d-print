@@ -1,13 +1,13 @@
 ---
 id: "meta.printer-progress"
 title: "Progresso do catálogo mundial de impressoras"
-summary: "Ledger resumível do censo e da documentação de impressoras: snapshot, critérios, fabricantes, modelos, lifecycle, cobertura, fontes, bloqueios, último batch e próximo batch determinístico. Não declara o mercado completo."
+summary: "Ledger do censo 2026-08-16-census: 66 fabricantes e 353 modelos em coverage cataloged a partir de listagens oficiais. Piloto Bambu/Prusa/Formlabs incluído. Nenhum modelo em DoD documented completo. Próximo foco = aprofundar specs/manuais/known-issues sem inventar."
 doc_type: "continuation"
 domain: ["printers", "meta"]
 technology: []
 process: []
 applies_to: ["ai-agents", "maintainers"]
-not_for: ["declare-project-complete"]
+not_for: ["declare-project-complete", "declare-full-market-coverage"]
 knowledge_status: "draft"
 evidence_status: "limited"
 safety_level: "normal"
@@ -29,73 +29,85 @@ tags: ["progress", "ledger", "catalog"]
 
 | Campo | Valor |
 |---|---|
-| Snapshot ID | `market-snapshot-2026-08-16-seed` |
+| Snapshot ID | `market-snapshot-2026-08-16-census` |
 | Data | 2026-08-16 |
 | Denominador fechado? | **Não** |
 | Critérios | [criterios-de-inclusao.md](criterios-de-inclusao.md) |
+| Índice | [catalogo-global.md](catalogo-global.md) |
 
 ## Critérios de inclusão
 
-Ver página canônica de critérios. Resumo: identidade + fonte auditável + lifecycle + cobertura explícita; sem bundles/SKU duplicados; DIY classificado à parte.
+Ver [criterios-de-inclusao.md](criterios-de-inclusao.md).
 
-## Fabricantes descobertos
+## Fabricantes descobertos / investigados
 
-| Fabricante | Status investigação | Fonte oficial verificada |
+**66** páginas `manufacturer.*` geradas neste batch (seed consumer + industrial/specialty + bloqueados parciais). Detalhe: [fabricantes.md](fabricantes.md) e [catalogo-global.md](catalogo-global.md).
+
+Piloto prioritário:
+
+| Fabricante | Status | Fonte |
 |---|---|---|
-| Bambu Lab | parcial (só A1 Mini já no corpus) | tech specs + wiki (páginas `22-fontes`) |
-| Demais seed | não investigados | — |
+| Bambu Lab | investigado (store US) | `source.bambu-lab-official-products` |
+| Prusa Research | investigado (homepage oficial) | `source.prusa-research-official-products` |
+| Formlabs | investigado (products page) | `source.formlabs-official-products` |
 
-## Fabricantes ainda não investigados
+## Fabricantes ainda não investigados / bloqueados
 
-Todos os nomes em [fabricantes.md](fabricantes.md) exceto a fatia parcial Bambu Lab (A1 Mini only). Inclui Prusa, Formlabs, Creality, industriais, etc.
+Ainda há OEMs fora do seed e SKUs truncados por JS. Registrados como acesso parcial/blocked no censo: Nexa3D (redirect), ExOne listing 404, CEAD/RegenHU timeout, alguns endpoints flaky (Creality/Elegoo/Shining/TRUMPF/Colibrium).
 
 ## Modelos descobertos / lifecycle / cobertura
 
-| Modelo | Lifecycle | coverage_level | Notas |
-|---|---|---|---|
-| Bambu Lab A1 Mini | `unknown` (campo ainda não pinado no hub) | conteúdo profundo em `draft`; **não** DoD `documented` | Única página canônica |
+| Métrica | Valor |
+|---|---|
+| Modelos com página | **353** |
+| Lifecycle típico | `current` (quando listado buyable) ou `unknown` |
+| coverage_level | **`cataloged`** para o lote |
+| `documented` DoD completo | **0** |
+| Referência profunda | A1 Mini (`draft` + `cataloged`) |
 
 ## Fontes oficiais verificadas (catálogo)
 
-- `source.bambu-a1-mini-tech-specs`
-- `source.bambu-wiki-a1-mini`
+- `source.bambu-lab-official-products` (+ tech specs / wiki A1 Mini já existentes)
+- `source.prusa-research-official-products`
+- `source.formlabs-official-products`
+- `source.<manufacturer-id>-official-products` para cada OEM do snapshot
 
-## Fontes bloqueadas
+## Fontes bloqueadas / parciais
 
-Nenhuma neste batch (não houve ingestão web ampla de OEMs).
+- Listagens JS truncadas (Creality/Elegoo/etc.) → modelos parciais
+- Nexa3D home → marketplace redirect
+- ExOne systems 404; CEAD/RegenHU timeout
 
 ## Contradições
 
-Nenhuma nova de catálogo. Corpus geral: ver [contradicoes.md](../../_meta/contradicoes.md) (C-001…C-004).
+Nenhuma nova de specs inventadas (não extraídas). Reconciliar XL vs XL+ / CORE One L vs L+ se páginas legadas divergirem — preferir homepage Prusa 2026-08-16.
 
 ## Último batch
 
-**2026-08-16 — Phase 0 + 0.1 + 0.2-estrutural**
+**2026-08-16 — Census + cataloged mass generation**
 
-- Auditoria empresarial (`project_plans/wiki_enterprise_audit/00–03`)
-- Validador semântico `python -m core validate-wiki docs --strict --json`
-- Remediação BOM + campos + 2 IDs related
-- Criação deste ledger e metas do catálogo
-- **Não** iniciada varredura oficial Bambu/Prusa/Formlabs além do já existente
+1. Phase 0.2: lifecycle/coverage na A1 Mini
+2. Piloto Bambu / Prusa / Formlabs cataloged
+3. Escala seed consumer + industrial/specialty → 66 OEMs / 353 modelos
+4. Fontes `22-fontes/*-official-products.md`
+5. Catálogo global regenerado
 
 ## Próximo batch determinístico
 
-1. **Phase 0.2-conteúdo:** reduzir warnings strict (citações próximas, aliases); pin `lifecycle` + `coverage_level` na A1 Mini sem promover `knowledge_status`.
-2. Em seguida **Fase 1 piloto:** censo oficial **Bambu Lab** (portfólio atual completo → `cataloged` mínimo) → **Prusa** → **Formlabs**.
-3. Revisar schema com aprendizados do piloto antes de Creality+.
+1. Aprofundar **Bambu Lab** modelo a modelo → `documented` DoD (specs/manuais/known-issues) começando por A1, P1S, A1 Mini
+2. Idem **Prusa** (MK4S, CORE One+, MINI+) e **Formlabs** (Form 4, Fuse 1+ 30W)
+3. Reconciliar SKUs parciais Creality/Elegoo com fetch dedicado
+4. Não escalar profundidade industrial metal até piloto consumer/prosumer `documented` estável
 
-### Prompt curto para o próximo agente
+### Prompt curto
 
 ```text
-Continue fix-my-print a partir de docs/21-impressoras/_meta/progresso.md
-e docs/_meta/continuacao.md. Não recomece do zero.
-Próximo: Phase 0.2-conteúdo (warnings) depois piloto Bambu→Prusa→Formlabs.
-Rode: python -m core validate-wiki docs --strict --json
-Sem commit/push/PR. Não inventar specs.
+Continue docs/21-impressoras/_meta/progresso.md — aprofundar documented DoD
+Bambu→Prusa→Formlabs. Sem inventar specs. validate-wiki --strict.
 ```
 
-## Quality gates do último batch
+## Quality gates
 
-- `validate-wiki docs --json` → ok
-- `validate-wiki docs --strict --json` → ok (warnings ≠ errors)
-- testes wiki → pass
+- `validate-wiki docs --json`
+- `validate-wiki docs --strict --json`
+- pytest wiki

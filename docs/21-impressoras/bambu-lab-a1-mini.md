@@ -12,13 +12,15 @@ printers: ["printer.bambu-lab-a1-mini"]
 slicers: ["slicer.bambu-studio"]
 materials: ["material.pla", "material.petg"]
 knowledge_status: "draft"
+lifecycle: "current"
+coverage_level: "cataloged"
 evidence_status: "manufacturer-specific"
 safety_level: "caution"
 confidence: "high"
 last_reviewed: "2026-08-15"
 review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.bambu-wiki-a1-mini"]
-related: ["nozzle.0.4mm-fff", "material.pla", "material.petg", "tech.fff"]
+sources: ["source.bambu-a1-mini-tech-specs", "source.bambu-wiki-a1-mini", "source.bambu-lab-official-products"]
+related: ["nozzle.0.4mm-fff", "material.pla", "material.petg", "tech.fff", "manufacturer.bambu-lab", "hub.impressoras"]
 prerequisites: ["tech.fff"]
 supersedes: []
 aliases_pt_br: ["A1 Mini", "A1 mini"]

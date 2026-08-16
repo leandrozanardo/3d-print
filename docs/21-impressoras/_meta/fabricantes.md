@@ -1,7 +1,7 @@
 ---
 id: "meta.printer-manufacturers"
-title: "Fabricantes — censo seed"
-summary: "Lista seed de fabricantes a investigar, agrupada por segmento. Nomes não provam cobertura; cada entrada exige verificação de status atual e fonte oficial antes de catalogar modelos."
+title: "Fabricantes — censo"
+summary: "Estado do censo de fabricantes no snapshot 2026-08-16-census. 66 OEMs com página manufacturer.* após investigação de listagens oficiais. Seed original expandido; denominador de mercado permanece aberto."
 doc_type: "catalog"
 domain: ["printers", "meta"]
 technology: []
@@ -11,50 +11,33 @@ not_for: ["treat-seed-as-complete-census"]
 knowledge_status: "draft"
 evidence_status: "limited"
 safety_level: "normal"
-confidence: "low"
+confidence: "medium"
 last_reviewed: "2026-08-16"
 review_cycle: "per-batch"
 sources: []
-related: ["meta.printer-progress", "meta.printer-inclusion-criteria"]
+related: ["meta.printer-progress", "meta.printer-inclusion-criteria", "meta.printer-global-catalog"]
 prerequisites: ["meta.printer-inclusion-criteria"]
 supersedes: []
 aliases_pt_br: ["censo de fabricantes"]
-aliases_en: ["manufacturer census seed"]
+aliases_en: ["manufacturer census"]
 tags: ["manufacturers", "catalog"]
 ---
 
-# Fabricantes — censo seed
+# Fabricantes — censo
 
-**Importante:** esta lista é **seed não exaustiva**. Status de cada nome = `investigation-pending` até verificação com fonte oficial na data do snapshot.
+**Snapshot:** `market-snapshot-2026-08-16-census`  
+**Páginas manufacturer:** ver tabela em [catalogo-global.md](catalogo-global.md)
 
-## Consumer / prosumer
+## Investigados neste snapshot
 
-Bambu Lab · Prusa Research · Creality · Anycubic · Elegoo · QIDI · FlashForge · Phrozen · Uniformation · Sovol · FLSUN · Artillery · Snapmaker · LulzBot · Mingda · Kingroon · Tronxy · Voxelab · Zortrax · Craftbot · BCN3D · Raise3D · UltiMaker · MakerBot
+Inclui (não exaustivo): Bambu Lab, Prusa Research, Formlabs, Creality, Anycubic, Elegoo, QIDI, FlashForge, Phrozen, Uniformation, Sovol, FLSUN, Artillery, Snapmaker, LulzBot, Mingda, Kingroon, Tronxy, Voxelab, Zortrax, Craftbot, BCN3D, Raise3D, UltiMaker, MakerBot, Asiga, HeyGears, SprintRay, Ackuretta, Rapid Shape, Stratasys, 3D Systems, EOS, HP, Carbon, Markforged, Farsoon, Sinterit, INTAMSYS, Impossible Objects, Nikon SLM, Renishaw, TRUMPF, Additive Industries, Velo3D, Desktop Metal, Xact Metal, One Click Metal, Meltio, Optomec, DMG MORI, Mazak, Mimaki, voxeljet, Nano Dimension, Lithoz, 3DCeram, WASP, COBOD, ICON, CELLINK, Nexa3D (parcial), Shining 3D (parcial), Roboze (parcial), Colibrium (parcial), Sciaky (família).
 
-## Professional resin / dental / medical
+## Ainda descobertos / a aprofundar
 
-Formlabs · Asiga · HeyGears · SprintRay · Ackuretta · Shining 3D · Rapid Shape · Nexa3D
+- OEMs ausentes do seed (feiras, associações, distribuidores)
+- SKUs truncados por JavaScript em lojas oficiais
+- DIY/open hardware (Voron, RatRig, etc.) — classificação própria ainda não aberta neste snapshot
 
-## Industrial polymers / composites
+## Regra
 
-Stratasys · 3D Systems · EOS · HP · Carbon · Markforged · Farsoon · Formlabs · Raise3D · Sinterit · Roboze · Intamsys · Impossible Objects · CEAD
-
-## Industrial metal
-
-EOS · Nikon SLM Solutions · Renishaw · 3D Systems · TRUMPF · Additive Industries · Velo3D · Colibrium Additive · Desktop Metal · Markforged · HP Metal Jet · Xact Metal · One Click Metal · Farsoon · Meltio · Optomec · Sciaky · DMG Mori · Mazak
-
-## Binder / material jetting e afins
-
-Stratasys · 3D Systems · Mimaki · voxeljet · Desktop Metal · ExOne · Nano Dimension · HP
-
-## Cerâmica / construção / bioprinting / especialidades
-
-Lithoz · 3DCeram · WASP · COBOD · ICON · BICO/CELLINK · RegenHU · (+ descobertas futuras)
-
-## Investigados neste batch
-
-Nenhum fabricante recebeu varredura oficial completa neste batch (foco = auditoria + validator).
-
-## Ainda não investigados
-
-Todos os nomes acima + ausentes a descobrir via associações, feiras e distribuidores autorizados (descoberta ≠ spec).
+Nome na seed **não** prova cobertura. Só a página `manufacturer.*` + fonte `source.*-official-products` + modelos `cataloged` contam.
