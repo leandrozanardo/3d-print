@@ -1,30 +1,70 @@
 ---
-id: "material.composites-fiber"
-title: "Compósitos e filamentos com fibra (CF/GF) em FFF"
-summary: "Filamentos com fibra de carbono (CF), fibra de vidro (GF) e outros fillers aumentam rigidez/abrasividade e mudam cosmética — mas o polímero base ainda manda na janela térmica e na umidade. Na A1 Mini o fabricante marca reforçados CF/GF como Not Recommended; desgaste abrasivo de nozzle é o risco operacional central mesmo em bases Ideal (ex.: PLA-CF). Sem receita completa de engenharia filled na A1 Mini; explicar wear, hardened nozzle e quando migrar de máquina."
-doc_type: "material"
-domain: ["materials", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "abrasive-filaments", "hardened-nozzle-workflows"]
-not_for: ["soft-brass-nozzle-long-cf-gf-runs", "full-a1-mini-cf-gf-engineering-recipe", "carbon-equals-heat-resistance-myth"]
-materials: ["material.composites-fiber"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["nozzle.0.4mm-fff", "material.pa", "material.petg", "material.pla", "defect.fff.under-extrusion", "printer.bambu-lab-a1-mini"]
-prerequisites: ["tech.fff"]
+id: material.composites-fiber
+title: Compósitos e filamentos com fibra (CF/GF) em FFF
+summary: 'Filamentos com fibra de carbono (CF), fibra de vidro (GF) e outros fillers
+  aumentam rigidez/abrasividade e mudam cosmética — mas o polímero base ainda manda
+  na janela térmica e na umidade. Na A1 Mini o fabricante marca reforçados CF/GF como
+  Not Recommended; desgaste abrasivo de nozzle é o risco operacional central mesmo
+  em bases Ideal (ex.: PLA-CF). Sem receita completa de engenharia filled na A1 Mini;
+  explicar wear, hardened nozzle e quando migrar de máquina.'
+doc_type: material
+domain:
+- materials
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- abrasive-filaments
+- hardened-nozzle-workflows
+not_for:
+- soft-brass-nozzle-long-cf-gf-runs
+- full-a1-mini-cf-gf-engineering-recipe
+- carbon-equals-heat-resistance-myth
+materials:
+- material.composites-fiber
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- nozzle.0.4mm-fff
+- material.pa
+- material.petg
+- material.pla
+- defect.fff.under-extrusion
+- printer.bambu-lab-a1-mini
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["filamento com fibra", "CF", "GF", "compósito FFF", "carbon fiber", "glass fiber"]
-aliases_en: ["filled filament", "CF", "GF", "carbon fiber filament", "glass fiber filament", "composite filament"]
-tags: ["composites", "abrasive", "cf", "gf", "nozzle-wear"]
+aliases_pt_br:
+- filamento com fibra
+- CF
+- GF
+- compósito FFF
+- carbon fiber
+- glass fiber
+aliases_en:
+- filled filament
+- CF
+- GF
+- carbon fiber filament
+- glass fiber filament
+- composite filament
+tags:
+- composites
+- abrasive
+- cf
+- gf
+- nozzle-wear
 ---
-
 # Compósitos e filamentos com fibra (CF/GF) em FFF
 
 Hub pai: [Materiais FFF](INDEX.md)

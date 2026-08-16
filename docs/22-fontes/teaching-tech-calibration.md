@@ -1,17 +1,22 @@
 ---
-id: "source.teaching-tech-calibration"
-title: "Fonte — Teaching Tech Calibration"
-summary: "Site de calibração FFF com torres e primeiros princípios. Fonte de método; adaptar ao slicer e máquina específicos."
-doc_type: "source"
-domain: ["sources"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["process.fff.first-layer"]
-tags: ["source", "calibration"]
+id: source.teaching-tech-calibration
+title: Fonte — Teaching Tech Calibration
+summary: Site de calibração FFF com torres e primeiros princípios. Fonte de método;
+  adaptar ao slicer e máquina específicos.
+doc_type: source
+domain:
+- sources
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- process.fff.first-layer
+tags:
+- source
+- calibration
 technology: []
 process: []
 applies_to: []
@@ -21,8 +26,11 @@ prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — Teaching Tech Calibration
 
 | Campo | Valor |

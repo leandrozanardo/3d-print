@@ -1,0 +1,19 @@
+---
+description: Hard repository boundary for Fix My Print implementation phases
+alwaysApply: true
+---
+
+# Repository boundary
+
+- Resolve the Git repository root with `git rev-parse --show-toplevel` before any write.
+- Treat that root as the only permitted read/write scope for implementation work.
+- Never read, write, move, rename, or delete anything outside the resolved root.
+- Reject absolute paths outside the root, unresolved `..`, symlink escapes, home paths, system paths, and broad workspace roots.
+- Before every file operation, validate the resolved target with `@fix-my-print/repo-guard` (`assertInsideRepository`).
+- If a path cannot be proven inside the root, stop with `REPO_BOUNDARY_VIOLATION`.
+- Never run `rm -rf`, `rm -r`, `git clean`, `git reset --hard`, `git checkout -- .`, `git restore .`, `find -delete`, `xargs rm`, glob deletion, or recursive directory deletion during Fix My Print phases.
+- Never alter global Git/shell/Node/pnpm/Cursor/system config.
+- Do not mutate `3ds/original/**`.
+- Do not delete Python sources unless `APPROVED: RETIRE PYTHON` and a literal deletion manifest pass.
+- Preserve unrelated user working-tree changes.
+- One approved phase at a time; do not start the next phase without a new authorization.

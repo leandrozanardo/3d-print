@@ -1,28 +1,42 @@
 ---
-id: "manufacturer.makerbot"
-title: "Fabricante — MakerBot"
-summary: "Página canônica do fabricante MakerBot no catálogo fix-my-print. Segmento: consumer-prosumer. Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census com coverage cataloged. Não declara portfólio mundial completo do fabricante além das fontes citadas."
-doc_type: "manufacturer"
-domain: ["printers"]
+id: manufacturer.makerbot
+title: Fabricante — MakerBot
+summary: 'Página canônica do fabricante MakerBot no catálogo fix-my-print. Segmento:
+  consumer-prosumer. Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census
+  com coverage cataloged. Não declara portfólio mundial completo do fabricante além
+  das fontes citadas.'
+doc_type: manufacturer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["catalog"]
-not_for: ["complete-oem-portfolio-without-source"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-sources: ["source.makerbot-official-products"]
-related: ["hub.impressoras", "meta.printer-progress", "meta.printer-global-catalog"]
-prerequisites: ["meta.printer-inclusion-criteria"]
+applies_to:
+- catalog
+not_for:
+- complete-oem-portfolio-without-source
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+sources:
+- source.makerbot-official-products
+related:
+- hub.impressoras
+- meta.printer-progress
+- meta.printer-global-catalog
+prerequisites:
+- meta.printer-inclusion-criteria
 supersedes: []
-aliases_pt_br: ["MakerBot"]
-aliases_en: ["MakerBot"]
-tags: ["manufacturer", "makerbot"]
+aliases_pt_br:
+- MakerBot
+aliases_en:
+- MakerBot
+tags:
+- manufacturer
+- makerbot
 ---
-
 # Fabricante — MakerBot
 
 Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.md)

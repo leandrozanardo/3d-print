@@ -1,28 +1,51 @@
 ---
-id: "printer.optomec-mts-860"
-title: "Optomec MTS 860"
-summary: "Optomec MTS 860 é um modelo do fabricante Optomec registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.optomec-mts-860
+title: Optomec MTS 860
+summary: 'Optomec MTS 860 é um modelo do fabricante Optomec registrado no catálogo
+  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
+  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
+  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
+  known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["optomec"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.optomec-official-products"]
-related: ["manufacturer.optomec", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- optomec
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.optomec-official-products
+related:
+- manufacturer.optomec
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Optomec MTS 860"]
-tags: ["printer", "cataloged", "optomec"]
+aliases_en:
+- Optomec MTS 860
+tags:
+- printer
+- cataloged
+- optomec
+manufacturer_id: optomec
+model_name: Optomec MTS 860
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # Optomec MTS 860
 

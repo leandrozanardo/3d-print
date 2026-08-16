@@ -1,28 +1,57 @@
 ---
-id: "post.painting"
-title: "Pintura e primer em peças impressas"
-summary: "Primer e tinta melhoram cosmético e podem revelar defeitos; exigem superfície limpa, lixa adequada e ventilação por VOC de solventes. Compatibilidade tinta↔polímero (PLA/PETG/resina curada) deve seguir SDS do produto — esta base não certifica sistemas. Pintura não torna a peça apta a contato alimentar ou uso médico. Preferir camadas finas, cura entre demãos e PPE."
-doc_type: "guide"
-domain: ["post-processing"]
-technology: ["material-extrusion", "vat-photopolymerization"]
-process: ["fff"]
-applies_to: ["cosmetic-finishing", "fff"]
-not_for: ["food-contact-coating-claim", "medical-device-coating", "unventilated-solvent-spraying"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["post.sanding-finishing", "post.support-removal-fff", "hazard.voc-ufp-ventilation", "scenario.miniatures"]
-prerequisites: ["post.sanding-finishing"]
+id: post.painting
+title: Pintura e primer em peças impressas
+summary: Primer e tinta melhoram cosmético e podem revelar defeitos; exigem superfície
+  limpa, lixa adequada e ventilação por VOC de solventes. Compatibilidade tinta↔polímero
+  (PLA/PETG/resina curada) deve seguir SDS do produto — esta base não certifica sistemas.
+  Pintura não torna a peça apta a contato alimentar ou uso médico. Preferir camadas
+  finas, cura entre demãos e PPE.
+doc_type: guide
+domain:
+- post-processing
+technology:
+- material-extrusion
+- vat-photopolymerization
+process:
+- fff
+applies_to:
+- cosmetic-finishing
+- fff
+not_for:
+- food-contact-coating-claim
+- medical-device-coating
+- unventilated-solvent-spraying
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- post.sanding-finishing
+- post.support-removal-fff
+- hazard.voc-ufp-ventilation
+- scenario.miniatures
+prerequisites:
+- post.sanding-finishing
 supersedes: []
-aliases_pt_br: ["pintar impressão 3D", "primer em PLA", "acabamento com tinta"]
-aliases_en: ["painting 3D prints", "primer", "spray paint plastics"]
-tags: ["post-processing", "painting", "primer", "voc"]
+aliases_pt_br:
+- pintar impressão 3D
+- primer em PLA
+- acabamento com tinta
+aliases_en:
+- painting 3D prints
+- primer
+- spray paint plastics
+tags:
+- post-processing
+- painting
+- primer
+- voc
 ---
-
 # Pintura e primer
 
 Hub pai: [Pós-processamento](INDEX.md)

@@ -1,28 +1,65 @@
 ---
-id: "material.pa12-sls-mjf"
-title: "PA12 para SLS e MJF"
-summary: "PA12 (poliamida 12) é o feedstock polimérico mais citado em powder bed fusion industrial (SLS e MJF). Orientação de engenharia: quando escolher PA12, o que muda entre SLS e MJF em termos de processo/acabamento, controles de pó (umidade, refresh/virgin), anisotropia e pós (depowdering, tingimento). Não inventa percentuais de refresh, temperaturas de câmara nem propriedades mecânicas universais — use certificado de lote, TDS da plataforma e especificação do OEM. Não é processo doméstico de pó."
-doc_type: "material"
-domain: ["materials", "polymers"]
-technology: ["powder-bed-fusion"]
-process: ["sls", "mjf"]
-applies_to: ["powder-bed-fusion", "polymer-powder", "pa12"]
-not_for: ["fff-pa12-filament-as-identical", "home-diy-powder-printing", "universal-refresh-percentages"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hub.materiais.po", "material.powder-feedstocks", "tech.sls-mjf", "defect.pbf", "post.depowdering-metal", "hazard.metal-powder"]
-prerequisites: ["material.powder-feedstocks", "tech.sls-mjf"]
+id: material.pa12-sls-mjf
+title: PA12 para SLS e MJF
+summary: 'PA12 (poliamida 12) é o feedstock polimérico mais citado em powder bed fusion
+  industrial (SLS e MJF). Orientação de engenharia: quando escolher PA12, o que muda
+  entre SLS e MJF em termos de processo/acabamento, controles de pó (umidade, refresh/virgin),
+  anisotropia e pós (depowdering, tingimento). Não inventa percentuais de refresh,
+  temperaturas de câmara nem propriedades mecânicas universais — use certificado de
+  lote, TDS da plataforma e especificação do OEM. Não é processo doméstico de pó.'
+doc_type: material
+domain:
+- materials
+- polymers
+technology:
+- powder-bed-fusion
+process:
+- sls
+- mjf
+applies_to:
+- powder-bed-fusion
+- polymer-powder
+- pa12
+not_for:
+- fff-pa12-filament-as-identical
+- home-diy-powder-printing
+- universal-refresh-percentages
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hub.materiais.po
+- material.powder-feedstocks
+- tech.sls-mjf
+- defect.pbf
+- post.depowdering-metal
+- hazard.metal-powder
+prerequisites:
+- material.powder-feedstocks
+- tech.sls-mjf
 supersedes: []
-aliases_pt_br: ["nylon 12 SLS", "PA12 MJF", "poliamida 12 pó"]
-aliases_en: ["PA12 SLS", "PA12 MJF", "nylon 12 powder"]
-tags: ["pa12", "sls", "mjf", "powder", "polymer"]
+aliases_pt_br:
+- nylon 12 SLS
+- PA12 MJF
+- poliamida 12 pó
+aliases_en:
+- PA12 SLS
+- PA12 MJF
+- nylon 12 powder
+tags:
+- pa12
+- sls
+- mjf
+- powder
+- polymer
 ---
-
 # PA12 para SLS e MJF
 
 Hub pai: [Materiais em pó](INDEX.md) · overview: [feedstocks](feedstocks-polimeros-e-metais.md)

@@ -1,32 +1,71 @@
 ---
-id: "setting.retraction"
-title: "Retração (retraction)"
-summary: "Retração puxa o filamento para reduzir pressão no nozzle em travels e cortar stringing. Em extrusores direct drive (A1 Mini) os comprimentos são curtos; copiar valores Bowden causa grind e jam. Conceito primeiro; no Bambu Studio: Retraction length/speed e opções de Z-hop/wipe (UI muda). Seque o filamento antes de torres — umidade mascara retract. TPU: retração mínima."
-doc_type: "setting"
-domain: ["slicing", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "printer.bambu-lab-a1-mini", "direct-drive"]
-not_for: ["bowden-lengths-on-direct-drive", "retract-before-drying", "eternal-ui-path-pinning"]
-settings: ["setting.retraction"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-materials: ["material.pla", "material.petg", "material.tpu"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration", "source.bambu-a1-mini-tech-specs"]
-related: ["defect.fff.stringing", "material.drying-storage", "material.tpu", "setting.temperatures", "setting.speeds"]
-prerequisites: ["tech.fff"]
+id: setting.retraction
+title: Retração (retraction)
+summary: 'Retração puxa o filamento para reduzir pressão no nozzle em travels e cortar
+  stringing. Em extrusores direct drive (A1 Mini) os comprimentos são curtos; copiar
+  valores Bowden causa grind e jam. Conceito primeiro; no Bambu Studio: Retraction
+  length/speed e opções de Z-hop/wipe (UI muda). Seque o filamento antes de torres
+  — umidade mascara retract. TPU: retração mínima.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- printer.bambu-lab-a1-mini
+- direct-drive
+not_for:
+- bowden-lengths-on-direct-drive
+- retract-before-drying
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+materials:
+- material.pla
+- material.petg
+- material.tpu
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- defect.fff.stringing
+- material.drying-storage
+- material.tpu
+- setting.temperatures
+- setting.speeds
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["retração", "retracão", "retract"]
-aliases_en: ["retraction", "retract length", "retract speed", "Z-hop"]
-tags: ["setting", "retraction", "stringing"]
+aliases_pt_br:
+- retração
+- retracão
+- retract
+aliases_en:
+- retraction
+- retract length
+- retract speed
+- Z-hop
+tags:
+- setting
+- retraction
+- stringing
+setting_tags:
+- retraction
 ---
-
 # Retração (retraction)
 
 Hub pai: [Settings](INDEX.md)

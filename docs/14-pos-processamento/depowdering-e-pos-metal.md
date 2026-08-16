@@ -1,28 +1,63 @@
 ---
-id: "post.depowdering-metal"
-title: "Depowdering e pós-processamento metálico"
-summary: "Depowdering remove pó não fundido/aglutinado após builds em leito (PBF, BJ) e é etapa crítica de qualidade e segurança. Em metal, a cadeia típica inclui unpack controlado, remoção de pó, corte de suportes, alívio de tensões, HIP (quando especificado), usinagem e NDE. Em polímeros SLS/MJF, o foco é unpack, jateamento e acabamento sem HIP. Esta página descreve a sequência conceitual — não é SOP de forno nem substitui controles de pó combustível."
-doc_type: "guide"
-domain: ["post-processing", "metals"]
-technology: ["powder-bed-fusion", "binder-jetting"]
+id: post.depowdering-metal
+title: Depowdering e pós-processamento metálico
+summary: Depowdering remove pó não fundido/aglutinado após builds em leito (PBF, BJ)
+  e é etapa crítica de qualidade e segurança. Em metal, a cadeia típica inclui unpack
+  controlado, remoção de pó, corte de suportes, alívio de tensões, HIP (quando especificado),
+  usinagem e NDE. Em polímeros SLS/MJF, o foco é unpack, jateamento e acabamento sem
+  HIP. Esta página descreve a sequência conceitual — não é SOP de forno nem substitui
+  controles de pó combustível.
+doc_type: guide
+domain:
+- post-processing
+- metals
+technology:
+- powder-bed-fusion
+- binder-jetting
 process: []
-applies_to: ["powder-bed-fusion", "binder-jetting", "metal-am"]
-not_for: ["fff-sanding-only", "uncontrolled-home-depowder"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hazard.metal-powder", "tech.lpbf-ebm", "tech.sls-mjf", "tech.binder-jetting-variants", "defect.pbf", "material.powder-feedstocks"]
-prerequisites: ["hazard.metal-powder"]
+applies_to:
+- powder-bed-fusion
+- binder-jetting
+- metal-am
+not_for:
+- fff-sanding-only
+- uncontrolled-home-depowder
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hazard.metal-powder
+- tech.lpbf-ebm
+- tech.sls-mjf
+- tech.binder-jetting-variants
+- defect.pbf
+- material.powder-feedstocks
+prerequisites:
+- hazard.metal-powder
 supersedes: []
-aliases_pt_br: ["depowdering", "remoção de pó", "pós-processamento metálico", "HIP"]
-aliases_en: ["depowdering", "powder removal", "stress relief", "HIP", "support removal"]
-tags: ["post-processing", "depowdering", "metal", "safety-critical"]
+aliases_pt_br:
+- depowdering
+- remoção de pó
+- pós-processamento metálico
+- HIP
+aliases_en:
+- depowdering
+- powder removal
+- stress relief
+- HIP
+- support removal
+tags:
+- post-processing
+- depowdering
+- metal
+- safety-critical
 ---
-
 # Depowdering e pós-processamento metálico
 
 Hub pai: [Pós-processamento](../INDEX.md)

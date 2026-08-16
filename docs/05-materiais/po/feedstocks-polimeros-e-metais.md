@@ -1,28 +1,67 @@
 ---
-id: "material.powder-feedstocks"
-title: "Feedstocks em pó — polímeros e metais"
-summary: "Feedstocks em pó para manufatura aditiva diferem de filamento FFF: distribuição granulométrica (PSD), morfologia (esfericidade), umidade, oxigênio intersticial (metais), reciclabilidade/refresh e SDS definem processabilidade e risco. Polímeros (ex.: PA12 para SLS/MJF) e metais (aços, Ti, Al, Ni) exigem armazenagem, manuseio e rastreabilidade distintos. Esta página orienta conceitos e controles — não substitui certificado de lote, TDS nem parâmetros de máquina."
-doc_type: "material"
-domain: ["materials", "metals", "polymers"]
-technology: ["powder-bed-fusion", "binder-jetting", "directed-energy-deposition"]
+id: material.powder-feedstocks
+title: Feedstocks em pó — polímeros e metais
+summary: 'Feedstocks em pó para manufatura aditiva diferem de filamento FFF: distribuição
+  granulométrica (PSD), morfologia (esfericidade), umidade, oxigênio intersticial
+  (metais), reciclabilidade/refresh e SDS definem processabilidade e risco. Polímeros
+  (ex.: PA12 para SLS/MJF) e metais (aços, Ti, Al, Ni) exigem armazenagem, manuseio
+  e rastreabilidade distintos. Esta página orienta conceitos e controles — não substitui
+  certificado de lote, TDS nem parâmetros de máquina.'
+doc_type: material
+domain:
+- materials
+- metals
+- polymers
+technology:
+- powder-bed-fusion
+- binder-jetting
+- directed-energy-deposition
 process: []
-applies_to: ["powder-bed-fusion", "binder-jetting", "ded-powder"]
-not_for: ["fff-filament-diameter-rules", "resin-vat-chemistry"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research", "source.iso-astm-52900-entry"]
-related: ["hub.materiais.po", "tech.sls-mjf", "tech.lpbf-ebm", "tech.binder-jetting-variants", "hazard.metal-powder", "defect.pbf", "post.depowdering-metal", "material.pa12-sls-mjf", "material.alsi10mg-lpbf"]
-prerequisites: ["hazard.metal-powder"]
+applies_to:
+- powder-bed-fusion
+- binder-jetting
+- ded-powder
+not_for:
+- fff-filament-diameter-rules
+- resin-vat-chemistry
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+- source.iso-astm-52900-entry
+related:
+- hub.materiais.po
+- tech.sls-mjf
+- tech.lpbf-ebm
+- tech.binder-jetting-variants
+- hazard.metal-powder
+- defect.pbf
+- post.depowdering-metal
+- material.pa12-sls-mjf
+- material.alsi10mg-lpbf
+prerequisites:
+- hazard.metal-powder
 supersedes: []
-aliases_pt_br: ["pó AM", "feedstock pó", "pó metálico", "pó polimérico"]
-aliases_en: ["AM powder", "metal powder feedstock", "polymer powder", "PSD"]
-tags: ["powder", "feedstock", "safety-critical"]
+aliases_pt_br:
+- pó AM
+- feedstock pó
+- pó metálico
+- pó polimérico
+aliases_en:
+- AM powder
+- metal powder feedstock
+- polymer powder
+- PSD
+tags:
+- powder
+- feedstock
+- safety-critical
 ---
-
 # Feedstocks em pó — polímeros e metais
 
 Hub pai: [Materiais em pó](./INDEX.md) · [Materiais](../INDEX.md)

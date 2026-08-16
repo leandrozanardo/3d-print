@@ -1,17 +1,29 @@
 ---
-id: "source.epa-3d-printing-research"
-title: "Fonte — EPA 3D Printing Research"
-summary: "Hub EPA de pesquisa sobre impressão 3D: emissões, exposição e impactos ambientais. Usar para embasar cautela com VOC/UFP e resíduos; não como garantia de segurança doméstica nem claim food/medical."
-doc_type: "source"
-domain: ["sources", "safety", "environment"]
-knowledge_status: "draft"
-evidence_status: "strong"
-safety_level: "high"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["hazard.voc-ufp-ventilation", "econ.fff-cost-waste", "hazard.resin-ppe-disposal"]
-tags: ["source", "epa", "safety", "emissions"]
+id: source.epa-3d-printing-research
+title: Fonte — EPA 3D Printing Research
+summary: 'Hub EPA de pesquisa sobre impressão 3D: emissões, exposição e impactos ambientais.
+  Usar para embasar cautela com VOC/UFP e resíduos; não como garantia de segurança
+  doméstica nem claim food/medical.'
+doc_type: source
+domain:
+- sources
+- safety
+- environment
+knowledge_status: draft
+evidence_status: strong
+safety_level: high
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- hazard.voc-ufp-ventilation
+- econ.fff-cost-waste
+- hazard.resin-ppe-disposal
+tags:
+- source
+- epa
+- safety
+- emissions
 technology: []
 process: []
 applies_to: []
@@ -21,8 +33,11 @@ prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — EPA 3D Printing Research
 
 | Campo | Valor |

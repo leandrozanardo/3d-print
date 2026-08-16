@@ -1,28 +1,56 @@
 ---
-id: "printer.formlabs-form-3l"
-title: "Formlabs Form 3L"
-summary: "Formlabs Form 3L é um modelo do fabricante Formlabs registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
-technology: []
-process: []
-applies_to: ["formlabs"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.formlabs-official-products"]
-related: ["manufacturer.formlabs", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+id: printer.formlabs-form-3l
+title: Formlabs Form 3L
+summary: 'Formlabs Form 3L é um modelo do fabricante Formlabs registrado no catálogo
+  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
+  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
+  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
+  known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
+technology:
+- vat-photopolymerization
+process:
+- sla
+applies_to:
+- formlabs
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: legacy-supported
+coverage_level: cataloged
+sources:
+- source.formlabs-official-products
+related:
+- manufacturer.formlabs
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Formlabs Form 3L"]
-tags: ["printer", "cataloged", "formlabs"]
+aliases_en:
+- Formlabs Form 3L
+tags:
+- printer
+- cataloged
+- formlabs
+manufacturer_id: formlabs
+model_name: Form 3L
+family_status: form-3-series
+lifecycle_observed_at: '2026-08-16'
+regions:
+- US
+availability_evidence: 'Formlabs support article: Form 3L still sold (new/reconditioned)
+  through 2026 until stock depleted; succeeded by Form 4L (https://formlabs.com/global/support/Ongoing-support-for-the-Form-3L-and-Form-3BL/,
+  accessed 2026-08-16).'
 ---
 # Formlabs Form 3L
 
@@ -57,3 +85,12 @@ Esta entrada confirma **existência e listagem oficial** na data do snapshot.
 
 - part-of → fabricante `formlabs`
 - cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+
+## Evidence locator
+
+| Campo | Valor |
+|---|---|
+| lifecycle | `legacy-supported` |
+| coverage | `cataloged` |
+| evidence | Formlabs support article: Form 3L still sold (new/reconditioned) through 2026 until stock depleted; succeeded by Form 4L (https://formlabs.com/global/support/Ongoing-support-for-the-Form-3L-and-Form-3BL/, accessed 2026-08-16). |
+| observed_at | 2026-08-16 |

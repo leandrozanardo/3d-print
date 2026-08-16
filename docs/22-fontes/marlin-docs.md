@@ -1,18 +1,32 @@
 ---
-id: "source.marlin-docs"
-title: "Fonte — Marlin Firmware Documentation"
-summary: "Documentação oficial do firmware Marlin (introdução e docs em marlinfw.org). Usar para conceitos de G-code, configuração e recursos como Linear Advance em stacks abertos baseados em Marlin. Não descreve firmware proprietário Bambu nem autoriza flash/jailbreak."
-doc_type: "source"
-domain: ["sources", "firmware"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["firmware.klipper-marlin-concepts", "firmware.gcode-basics", "setting.flow-pressure-advance", "source.klipper-docs"]
-aliases_en: ["Marlin docs", "marlinfw.org"]
-tags: ["source", "marlin", "firmware"]
+id: source.marlin-docs
+title: Fonte — Marlin Firmware Documentation
+summary: Documentação oficial do firmware Marlin (introdução e docs em marlinfw.org).
+  Usar para conceitos de G-code, configuração e recursos como Linear Advance em stacks
+  abertos baseados em Marlin. Não descreve firmware proprietário Bambu nem autoriza
+  flash/jailbreak.
+doc_type: source
+domain:
+- sources
+- firmware
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- firmware.klipper-marlin-concepts
+- firmware.gcode-basics
+- setting.flow-pressure-advance
+- source.klipper-docs
+aliases_en:
+- Marlin docs
+- marlinfw.org
+tags:
+- source
+- marlin
+- firmware
 technology: []
 process: []
 applies_to: []
@@ -21,8 +35,11 @@ sources: []
 prerequisites: []
 supersedes: []
 aliases_pt_br: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — Marlin Firmware Documentation
 
 | Campo | Valor |

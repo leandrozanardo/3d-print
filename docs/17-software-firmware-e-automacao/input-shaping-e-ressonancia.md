@@ -1,29 +1,59 @@
 ---
-id: "firmware.input-shaping-resonance"
-title: "Input shaping e ressonância (conceitos)"
-summary: "Input shaping / compensação de vibração reduz ringing (ghosting) ao filtrar comandos de aceleração perto das frequências naturais da máquina. Conceito compartilhado por firmwares abertos (ex.: Klipper) e por recursos de fabricante em impressoras consumer. Esta página explica mecanismo, sintomas e limites — sem inventar procedimentos ou parâmetros proprietários da Bambu Lab / A1 Mini."
-doc_type: "concept"
-domain: ["firmware", "motion", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "motion-systems", "printer.bambu-lab-a1-mini"]
-not_for: ["invented-bambu-calibration-steps", "bypass-mechanical-faults-with-filters"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
+id: firmware.input-shaping-resonance
+title: Input shaping e ressonância (conceitos)
+summary: 'Input shaping / compensação de vibração reduz ringing (ghosting) ao filtrar
+  comandos de aceleração perto das frequências naturais da máquina. Conceito compartilhado
+  por firmwares abertos (ex.: Klipper) e por recursos de fabricante em impressoras
+  consumer. Esta página explica mecanismo, sintomas e limites — sem inventar procedimentos
+  ou parâmetros proprietários da Bambu Lab / A1 Mini.'
+doc_type: concept
+domain:
+- firmware
+- motion
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- motion-systems
+- printer.bambu-lab-a1-mini
+not_for:
+- invented-bambu-calibration-steps
+- bypass-mechanical-faults-with-filters
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
 sources: []
-related: ["firmware.klipper-marlin-concepts", "firmware.gcode-basics", "kinematics.bed-slinger", "defect.fff.layer-shift", "hub.software"]
-prerequisites: ["tech.fff"]
+related:
+- firmware.klipper-marlin-concepts
+- firmware.gcode-basics
+- kinematics.bed-slinger
+- defect.fff.layer-shift
+- hub.software
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["input shaping", "compensação de vibração", "ringing ghosting"]
-aliases_en: ["input shaping", "resonance compensation", "ringing suppression"]
-tags: ["firmware", "motion", "resonance", "fff"]
+aliases_pt_br:
+- input shaping
+- compensação de vibração
+- ringing ghosting
+aliases_en:
+- input shaping
+- resonance compensation
+- ringing suppression
+tags:
+- firmware
+- motion
+- resonance
+- fff
 ---
-
 # Input shaping e ressonância (conceitos)
 
 Hub pai: [Software, firmware e automação](./INDEX.md)

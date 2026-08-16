@@ -1,28 +1,63 @@
 ---
-id: "hazard.solvents-ipa-vapors"
-title: "Solventes, IPA e vapores"
-summary: "Álcool isopropílico (IPA), acetona e outros solventes usados em limpeza de placa, lavagem de resina ou acabamento liberam vapores inflamáveis e irritantes. Hierarquia: substituir quando possível, ventilar/exaurir, controlar ignição, PPE conforme SDS — nunca ‘cheirar para testar’. NIOSH/EPA embasam cautela com exposição química e emissões; SDS do produto manda nos limites. Esta página não fornece diluições mágicas nem autoriza vapor smoothing improvisado."
-doc_type: "guide"
-domain: ["safety", "environment", "postprocessing"]
-technology: ["material-extrusion", "vat-photopolymerization"]
-process: ["fff"]
-applies_to: ["fff", "resin-wash", "plate-cleaning", "post-solvent-use"]
-not_for: ["open-flame-near-solvents", "food-contact-after-solvent", "unventilated-acetone-bath"]
-knowledge_status: "draft"
-evidence_status: "strong"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hazard.voc-ufp-ventilation", "hazard.resin-ppe-disposal", "post.vapor-smoothing", "post.resin-wash-cure", "hub.seguranca"]
+id: hazard.solvents-ipa-vapors
+title: Solventes, IPA e vapores
+summary: 'Álcool isopropílico (IPA), acetona e outros solventes usados em limpeza
+  de placa, lavagem de resina ou acabamento liberam vapores inflamáveis e irritantes.
+  Hierarquia: substituir quando possível, ventilar/exaurir, controlar ignição, PPE
+  conforme SDS — nunca ‘cheirar para testar’. NIOSH/EPA embasam cautela com exposição
+  química e emissões; SDS do produto manda nos limites. Esta página não fornece diluições
+  mágicas nem autoriza vapor smoothing improvisado.'
+doc_type: guide
+domain:
+- safety
+- environment
+- postprocessing
+technology:
+- material-extrusion
+- vat-photopolymerization
+process:
+- fff
+applies_to:
+- fff
+- resin-wash
+- plate-cleaning
+- post-solvent-use
+not_for:
+- open-flame-near-solvents
+- food-contact-after-solvent
+- unventilated-acetone-bath
+knowledge_status: draft
+evidence_status: strong
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hazard.voc-ufp-ventilation
+- hazard.resin-ppe-disposal
+- post.vapor-smoothing
+- post.resin-wash-cure
+- hub.seguranca
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["IPA segurança", "vapores de solvente", "álcool isopropílico impressão 3D"]
-aliases_en: ["IPA vapors", "isopropyl alcohol safety", "solvent fumes 3D printing"]
-tags: ["safety", "ipa", "solvents", "voc", "flammable"]
+aliases_pt_br:
+- IPA segurança
+- vapores de solvente
+- álcool isopropílico impressão 3D
+aliases_en:
+- IPA vapors
+- isopropyl alcohol safety
+- solvent fumes 3D printing
+tags:
+- safety
+- ipa
+- solvents
+- voc
+- flammable
 ---
-
 # Solventes, IPA e vapores
 
 Hub pai: [Segurança e meio ambiente](INDEX.md)

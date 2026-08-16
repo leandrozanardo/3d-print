@@ -27,10 +27,14 @@ def _print_report(data: dict[str, Any], *, as_json: bool) -> None:
 def cmd_validate_wiki(args: argparse.Namespace) -> int:
     # Default mode preserves link-only contract; --strict enables enterprise rules.
     if args.strict:
-        result = validate_wiki(Path(args.root), strict=True)
+        result = validate_wiki(
+            Path(args.root),
+            strict=True,
+            fail_on_warnings=bool(args.fail_on_warnings),
+        )
         payload = result.to_dict()
         if args.json:
-            print(json.dumps(payload, ensure_ascii=False, indent=2))
+            print(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True))
         else:
             if result.ok:
                 print(f"OK (strict): {payload.get('stats', {})}")
@@ -91,6 +95,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--strict",
         action="store_true",
         help="Enable deterministic enterprise semantic validation (CI gate)",
+    )
+    p_wiki.add_argument(
+        "--fail-on-warnings",
+        action="store_true",
+        help="With --strict, treat warnings as failing the gate (exit 1)",
     )
     p_wiki.set_defaults(func=cmd_validate_wiki)
 

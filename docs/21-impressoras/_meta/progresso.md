@@ -1,7 +1,7 @@
 ---
 id: "meta.printer-progress"
 title: "Progresso do catálogo mundial de impressoras"
-summary: "Ledger do censo 2026-08-16-census: 66 fabricantes e 353 modelos em coverage cataloged a partir de listagens oficiais. Piloto Bambu/Prusa/Formlabs incluído. Nenhum modelo em DoD documented completo. Próximo foco = aprofundar specs/manuais/known-issues sem inventar."
+summary: "Pós-remediação v2 (2026-08-16): maioria dos modelos em discovered/unknown até reopen; exceções revalidadas Bambu A1/A1 mini/P1S, Formlabs 3/4*, HP MJF 1200 announced. 71 fabricantes (incl. CEAD/ExOne/RegenHU/Voron/RatRig). Catálogo 353 modelos."
 doc_type: "continuation"
 domain: ["printers", "meta"]
 technology: []
@@ -25,89 +25,53 @@ tags: ["progress", "ledger", "catalog"]
 
 # Progresso — catálogo de impressoras
 
-## Snapshot de mercado
+## Snapshot
 
 | Campo | Valor |
 |---|---|
-| Snapshot ID | `market-snapshot-2026-08-16-census` |
+| Snapshot ID | `remediation-v2-2026-08-16` |
 | Data | 2026-08-16 |
 | Denominador fechado? | **Não** |
 | Critérios | [criterios-de-inclusao.md](criterios-de-inclusao.md) |
 | Índice | [catalogo-global.md](catalogo-global.md) |
 
-## Critérios de inclusão
+## Fabricantes
 
-Ver [criterios-de-inclusao.md](criterios-de-inclusao.md).
-
-## Fabricantes descobertos / investigados
-
-**66** páginas `manufacturer.*` geradas neste batch (seed consumer + industrial/specialty + bloqueados parciais). Detalhe: [fabricantes.md](fabricantes.md) e [catalogo-global.md](catalogo-global.md).
+**71** páginas `manufacturer.*` (seed anterior + CEAD, ExOne, RegenHU, Voron Design, Rat Rig). Superfícies: [07-oem-surfaces-ledger.md](../../../project_plans/wiki_enterprise_remediation_v2/07-oem-surfaces-ledger.md).
 
 Piloto prioritário:
 
-| Fabricante | Status | Fonte |
+| Fabricante | Status | Notas |
 |---|---|---|
-| Bambu Lab | investigado (store US) | `source.bambu-lab-official-products` |
-| Prusa Research | investigado (homepage oficial) | `source.prusa-research-official-products` |
-| Formlabs | investigado (products page) | `source.formlabs-official-products` |
+| Bambu Lab | A1 mini troubleshooting-mapped; A1 + P1S documented | Loja US + wiki |
+| Prusa Research | modelos ainda discovered pós-downgrade honesto | Reabrir SKUs |
+| Formlabs | Form 4* current cataloged; Form 3* legacy-supported cataloged | Support/Buy pages |
 
-## Fabricantes ainda não investigados / bloqueados
-
-Ainda há OEMs fora do seed e SKUs truncados por JS. Registrados como acesso parcial/blocked no censo: Nexa3D (redirect), ExOne listing 404, CEAD/RegenHU timeout, alguns endpoints flaky (Creality/Elegoo/Shining/TRUMPF/Colibrium).
-
-## Modelos descobertos / lifecycle / cobertura
+## Modelos / lifecycle / cobertura
 
 | Métrica | Valor |
 |---|---|
 | Modelos com página | **353** |
-| Lifecycle típico | `current` (quando listado buyable) ou `unknown` |
-| coverage_level | **`cataloged`** para o lote |
-| `documented` DoD completo | **0** |
-| Referência profunda | A1 Mini (`draft` + `cataloged`) |
+| Tipicamente | `lifecycle: unknown` + `coverage_level: discovered` |
+| Revalidados | A1 mini, A1, P1S, Form 3/3L/3BL, Form 4/4B/4L/4BL, HP MJF 1200 |
+| `documented` DoD | A1, P1S |
+| `troubleshooting-mapped` | A1 Mini |
 
-## Fontes oficiais verificadas (catálogo)
+## Fontes oficiais (desta wave)
 
-- `source.bambu-lab-official-products` (+ tech specs / wiki A1 Mini já existentes)
-- `source.prusa-research-official-products`
-- `source.formlabs-official-products`
-- `source.<manufacturer-id>-official-products` para cada OEM do snapshot
+- `source.hp-mjf-1200-product-page`
+- `source.eos-official-metal-printers` (split vs polímeros)
+- `source.bambu-p1s-us-store` + wiki A1 mini clog/blob/clump
+- `source.<oem>-official-products` para CEAD/ExOne/RegenHU/Voron/RatRig
 
-## Fontes bloqueadas / parciais
+## Próximo batch
 
-- Listagens JS truncadas (Creality/Elegoo/etc.) → modelos parciais
-- Nexa3D home → marketplace redirect
-- ExOne systems 404; CEAD/RegenHU timeout
+1. Reabrir Prusa MK4S / CORE One+ / MINI+ para cataloged com evidence locator
+2. Specs dedicadas A1 (se tech-specs acessível) sem inventar números
+3. Continuar OEM surfaces ledger (28 superfícies profundas ainda pending)
 
-## Contradições
-
-Nenhuma nova de specs inventadas (não extraídas). Reconciliar XL vs XL+ / CORE One L vs L+ se páginas legadas divergirem — preferir homepage Prusa 2026-08-16.
-
-## Último batch
-
-**2026-08-16 — Census + cataloged mass generation**
-
-1. Phase 0.2: lifecycle/coverage na A1 Mini
-2. Piloto Bambu / Prusa / Formlabs cataloged
-3. Escala seed consumer + industrial/specialty → 66 OEMs / 353 modelos
-4. Fontes `22-fontes/*-official-products.md`
-5. Catálogo global regenerado
-
-## Próximo batch determinístico
-
-1. Aprofundar **Bambu Lab** modelo a modelo → `documented` DoD (specs/manuais/known-issues) começando por A1, P1S, A1 Mini
-2. Idem **Prusa** (MK4S, CORE One+, MINI+) e **Formlabs** (Form 4, Fuse 1+ 30W)
-3. Reconciliar SKUs parciais Creality/Elegoo com fetch dedicado
-4. Não escalar profundidade industrial metal até piloto consumer/prosumer `documented` estável
-
-### Prompt curto
+## Gate
 
 ```text
-Continue docs/21-impressoras/_meta/progresso.md — aprofundar documented DoD
-Bambu→Prusa→Formlabs. Sem inventar specs. validate-wiki --strict.
+python -m core validate-wiki docs --strict --fail-on-warnings --json
 ```
-
-## Quality gates
-
-- `validate-wiki docs --json`
-- `validate-wiki docs --strict --json`
-- pytest wiki

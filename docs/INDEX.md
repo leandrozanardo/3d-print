@@ -1,17 +1,25 @@
 ---
-id: "docs.portal"
-title: "Base de conhecimento — Manufatura aditiva e impressão 3D"
-summary: "Portal humano da wiki canônica em docs/: fundamentos, tecnologias, materiais, máquinas, processo, diagnóstico e segurança. Foco operacional inicial em Bambu Lab A1 Mini, nozzle 0,4 mm, Bambu Studio, PLA e PETG. Cobertura mensurável; a base não se declara completa."
-doc_type: "hub"
-domain: ["portal"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "1-month"
-related: ["docs.agent-guide", "meta.index", "hub.impressoras"]
-tags: ["portal"]
+id: docs.portal
+title: Base de conhecimento — Manufatura aditiva e impressão 3D
+summary: 'Portal humano da wiki canônica em docs/: fundamentos, tecnologias, materiais,
+  máquinas, processo, diagnóstico e segurança. Foco operacional inicial em Bambu Lab
+  A1 Mini, nozzle 0,4 mm, Bambu Studio, PLA e PETG. Cobertura mensurável; a base não
+  se declara completa.'
+doc_type: hub
+domain:
+- portal
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 1-month
+related:
+- docs.agent-guide
+- meta.index
+- hub.impressoras
+tags:
+- portal
 technology: []
 process: []
 applies_to: []
@@ -22,7 +30,6 @@ supersedes: []
 aliases_pt_br: []
 aliases_en: []
 ---
-
 # Base de conhecimento — Manufatura aditiva
 
 Esta é a entrada humana da base canônica. Para agentes de IA, leia primeiro [AGENT_GUIDE.md](AGENT_GUIDE.md).

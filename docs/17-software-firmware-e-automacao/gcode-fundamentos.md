@@ -1,28 +1,50 @@
 ---
-id: "firmware.gcode-basics"
-title: "G-code — fundamentos"
-summary: "G-code é a linguagem de comandos de movimento e periféricos enviada do slicer (ou host) ao firmware da impressora. Em FFF, linhas típicas incluem G0/G1 (movimento), temperaturas (M104/M109, M140/M190), extrusão E, unidades e modos de posicionamento. Dialetos variam (Marlin, Klipper via macros, firmwares OEM). Esta página ensina conceitos seguros — não incentiva editar G-code de máquinas fechadas sem documentação, nem inventar comandos proprietários Bambu."
-doc_type: "guide"
-domain: ["firmware", "software"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "gcode"]
-not_for: ["invented-oem-opcodes", "bypass-safety-interlocks"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
+id: firmware.gcode-basics
+title: G-code — fundamentos
+summary: G-code é a linguagem de comandos de movimento e periféricos enviada do slicer
+  (ou host) ao firmware da impressora. Em FFF, linhas típicas incluem G0/G1 (movimento),
+  temperaturas (M104/M109, M140/M190), extrusão E, unidades e modos de posicionamento.
+  Dialetos variam (Marlin, Klipper via macros, firmwares OEM). Esta página ensina
+  conceitos seguros — não incentiva editar G-code de máquinas fechadas sem documentação,
+  nem inventar comandos proprietários Bambu.
+doc_type: guide
+domain:
+- firmware
+- software
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- gcode
+not_for:
+- invented-oem-opcodes
+- bypass-safety-interlocks
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
 sources: []
-related: ["firmware.klipper-marlin-concepts", "hub.software", "tech.fff"]
+related:
+- firmware.klipper-marlin-concepts
+- hub.software
+- tech.fff
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["fundamentos de G-code", "código G"]
-aliases_en: ["G-code basics", "CNC G-code for FFF"]
-tags: ["gcode", "firmware", "fff"]
+aliases_pt_br:
+- fundamentos de G-code
+- código G
+aliases_en:
+- G-code basics
+- CNC G-code for FFF
+tags:
+- gcode
+- firmware
+- fff
 ---
-
 # G-code — fundamentos
 
 Hub pai: [Software, firmware e automação](./INDEX.md)

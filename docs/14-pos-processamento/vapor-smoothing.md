@@ -1,28 +1,61 @@
 ---
-id: "post.vapor-smoothing"
-title: "Vapor smoothing (acabamento por vapor de solvente)"
-summary: "Vapor smoothing usa vapor de solvente (classicamente acetona em ABS) para fundir microtextura de camada e brilhar a superfície. É processo safety-critical: inflamável, exposição a vapores, risco de derreter a peça e alterar dimensões. NÃO é fluxo primário para PLA. Não faça banho improvisado em quarto fechado. Priorize ventilação, SDS, recipiente adequado e peça de teste. Esta base não fornece câmara DIY passo a passo nem garante acabamento ‘profissional’."
-doc_type: "guide"
-domain: ["postprocessing", "fff", "safety"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material.abs-asa"]
-not_for: ["pla-primary-acetone-vapor", "food-contact-after-smoothing", "unventilated-solvent-chamber", "a1-mini-abs-as-default-print"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hazard.solvents-ipa-vapors", "hazard.voc-ufp-ventilation", "material.abs-asa", "post.sanding-finishing", "hub.pos"]
-prerequisites: ["hazard.solvents-ipa-vapors"]
+id: post.vapor-smoothing
+title: Vapor smoothing (acabamento por vapor de solvente)
+summary: 'Vapor smoothing usa vapor de solvente (classicamente acetona em ABS) para
+  fundir microtextura de camada e brilhar a superfície. É processo safety-critical:
+  inflamável, exposição a vapores, risco de derreter a peça e alterar dimensões. NÃO
+  é fluxo primário para PLA. Não faça banho improvisado em quarto fechado. Priorize
+  ventilação, SDS, recipiente adequado e peça de teste. Esta base não fornece câmara
+  DIY passo a passo nem garante acabamento ‘profissional’.'
+doc_type: guide
+domain:
+- postprocessing
+- fff
+- safety
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material.abs-asa
+not_for:
+- pla-primary-acetone-vapor
+- food-contact-after-smoothing
+- unventilated-solvent-chamber
+- a1-mini-abs-as-default-print
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hazard.solvents-ipa-vapors
+- hazard.voc-ufp-ventilation
+- material.abs-asa
+- post.sanding-finishing
+- hub.pos
+prerequisites:
+- hazard.solvents-ipa-vapors
 supersedes: []
-aliases_pt_br: ["alisamento a vapor", "acetona ABS", "vapor smooth"]
-aliases_en: ["vapor smoothing", "acetone vapor ABS", "solvent smoothing"]
-tags: ["vapor-smoothing", "acetone", "abs", "safety-critical"]
+aliases_pt_br:
+- alisamento a vapor
+- acetona ABS
+- vapor smooth
+aliases_en:
+- vapor smoothing
+- acetone vapor ABS
+- solvent smoothing
+tags:
+- vapor-smoothing
+- acetone
+- abs
+- safety-critical
 ---
-
 # Vapor smoothing
 
 Hub pai: [Pós-processamento](INDEX.md)

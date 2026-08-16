@@ -1,17 +1,22 @@
 ---
-id: "source.bambu-wiki-a1-mini"
-title: "Fonte — Bambu Lab Wiki A1 mini"
-summary: "Registro do hub de manuais e FAQ do A1 mini no Bambu Lab Wiki, incluindo confirmação de volume máximo e links de unboxing/primeiro print."
-doc_type: "source"
-domain: ["sources"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-related: ["printer.bambu-lab-a1-mini"]
-tags: ["source", "bambu"]
+id: source.bambu-wiki-a1-mini
+title: Fonte — Bambu Lab Wiki A1 mini
+summary: Registro do hub de manuais e FAQ do A1 mini no Bambu Lab Wiki, incluindo
+  confirmação de volume máximo e links de unboxing/primeiro print.
+doc_type: source
+domain:
+- sources
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+related:
+- printer.bambu-lab-a1-mini
+tags:
+- source
+- bambu
 technology: []
 process: []
 applies_to: []
@@ -21,8 +26,11 @@ prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — Bambu Lab Wiki A1 mini
 
 | Campo | Valor |

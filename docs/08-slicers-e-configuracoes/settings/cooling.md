@@ -1,32 +1,70 @@
 ---
-id: "setting.cooling"
-title: "Cooling (part cooling / ventilação da peça)"
-summary: "Part cooling é o fluxo de ar do part-cooling fan sobre o cordão fresco. Ajuda overhangs, bridges e detalhe; em excesso esfria a interface e enfraquece a solda Z — crítico em PETG e polímeros de engenharia. No Bambu Studio: Fan speed / cooling por camada (nomes variam). Em A1 Mini (frame aberto), draft ambiente soma ao fan — controle corrente de ar. Ajuste por material e geometria; não use max fan para ‘matar stringing’ em PETG."
-doc_type: "setting"
-domain: ["slicing", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "printer.bambu-lab-a1-mini"]
-not_for: ["max-fan-to-fix-petg-stringing", "eternal-ui-path-pinning"]
-settings: ["setting.cooling", "setting.part-cooling"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-materials: ["material.pla", "material.petg", "material.tpu"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["setting.temperatures", "defect.fff.warping", "defect.fff.delamination", "defect.fff.stringing", "material.petg", "material.pla"]
-prerequisites: ["tech.fff"]
+id: setting.cooling
+title: Cooling (part cooling / ventilação da peça)
+summary: 'Part cooling é o fluxo de ar do part-cooling fan sobre o cordão fresco.
+  Ajuda overhangs, bridges e detalhe; em excesso esfria a interface e enfraquece a
+  solda Z — crítico em PETG e polímeros de engenharia. No Bambu Studio: Fan speed
+  / cooling por camada (nomes variam). Em A1 Mini (frame aberto), draft ambiente soma
+  ao fan — controle corrente de ar. Ajuste por material e geometria; não use max fan
+  para ‘matar stringing’ em PETG.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- printer.bambu-lab-a1-mini
+not_for:
+- max-fan-to-fix-petg-stringing
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+materials:
+- material.pla
+- material.petg
+- material.tpu
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- setting.temperatures
+- defect.fff.warping
+- defect.fff.delamination
+- defect.fff.stringing
+- material.petg
+- material.pla
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["cooling", "ventilação da peça", "fan da peça", "part cooling"]
-aliases_en: ["part cooling", "cooling fan", "fan speed"]
-tags: ["setting", "cooling", "fan"]
+aliases_pt_br:
+- cooling
+- ventilação da peça
+- fan da peça
+- part cooling
+aliases_en:
+- part cooling
+- cooling fan
+- fan speed
+tags:
+- setting
+- cooling
+- fan
+setting_tags:
+- cooling
+- part-cooling
 ---
-
 # Cooling (part cooling)
 
 Hub pai: [Settings](INDEX.md)

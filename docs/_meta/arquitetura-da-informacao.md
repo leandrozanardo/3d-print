@@ -1,23 +1,35 @@
 ---
-id: "meta.architecture"
-title: "Arquitetura da informação"
-summary: "Estrutura-alvo de docs/: portal humano, AGENT_GUIDE, _meta de governança e 23 domínios numerados. Define hubs, páginas atômicas, isolamento de legado e status de cobertura explícito."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
+id: meta.architecture
+title: Arquitetura da informação
+summary: 'Estrutura-alvo de docs/: portal humano, AGENT_GUIDE, _meta de governança
+  e 23 domínios numerados. Define hubs, páginas atômicas, isolamento de legado e status
+  de cobertura explícito.'
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
 sources: []
-related: ["meta.ontology", "meta.coverage", "meta.migration"]
-prerequisites: ["meta.inventory"]
-aliases_pt_br: ["arquitetura editorial", "taxonomia docs"]
-aliases_en: ["information architecture"]
-tags: ["meta", "ia", "taxonomy"]
+related:
+- meta.ontology
+- meta.coverage
+- meta.migration
+prerequisites:
+- meta.inventory
+aliases_pt_br:
+- arquitetura editorial
+- taxonomia docs
+aliases_en:
+- information architecture
+tags:
+- meta
+- ia
+- taxonomy
 ---
-
 # Arquitetura da informação
 
 ## Princípios

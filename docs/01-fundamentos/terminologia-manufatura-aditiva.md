@@ -1,30 +1,47 @@
 ---
-id: "fund.terminology"
-title: "Terminologia de manufatura aditiva"
-summary: "Como falar de manufatura aditiva sem misturar categoria ISO/ASTM, processo genérico e marca comercial. Define AM vs 3D printing, as sete categorias de processo, o papel de FFF/FDM, e regras de linguagem para decisões técnicas nesta base canônica."
-doc_type: "concept"
-domain: ["fundamentals"]
+id: fund.terminology
+title: Terminologia de manufatura aditiva
+summary: Como falar de manufatura aditiva sem misturar categoria ISO/ASTM, processo
+  genérico e marca comercial. Define AM vs 3D printing, as sete categorias de processo,
+  o papel de FFF/FDM, e regras de linguagem para decisões técnicas nesta base canônica.
+doc_type: concept
+domain:
+- fundamentals
 technology: []
 process: []
-applies_to: ["all-am"]
-not_for: ["machine-specific-settings", "material-datasheets"]
+applies_to:
+- all-am
+not_for:
+- machine-specific-settings
+- material-datasheets
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry"]
-related: ["hub.tecnologias", "tech.fff", "fund.digital-workflow"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+related:
+- hub.tecnologias
+- tech.fff
+- fund.digital-workflow
 prerequisites: []
-aliases_pt_br: ["terminologia AM", "vocabulário manufatura aditiva", "categorias ISO"]
-aliases_en: ["AM terminology", "additive manufacturing vocabulary"]
-tags: ["fundamentals", "terminology", "iso"]
+aliases_pt_br:
+- terminologia AM
+- vocabulário manufatura aditiva
+- categorias ISO
+aliases_en:
+- AM terminology
+- additive manufacturing vocabulary
+tags:
+- fundamentals
+- terminology
+- iso
 supersedes: []
 ---
-
 # Terminologia de manufatura aditiva
 
 Hub pai: [Fundamentos](INDEX.md)
@@ -90,7 +107,7 @@ Nesta base: use **FFF** no texto técnico; aceite “FDM” do usuário e normal
 ## Quando a terminologia falha na prática
 
 1. Usuário pede “settings de SLA” para A1 Mini (FFF) → redirecionar categoria
-2. Comparar “resolução 50 µm” de resina com “layer 0,2 mm” de FFF como se fossem a mesma métrica → explicar eixos diferentes
+2. Comparar “resolução 50 µm” de resina com “layer 0,2 mm (fonte oficial / fabricante / heuristic; ver `sources`) ” de FFF como se fossem a mesma métrica → explicar eixos diferentes
 3. Afirmar “PEI resolve warping” sem material/ambiente → PEI é superfície; warping é fenômeno térmico/mecânico
 4. Usar TDS de um SKU de PLA como regra de todos os PLAs → família ≠ formulação
 

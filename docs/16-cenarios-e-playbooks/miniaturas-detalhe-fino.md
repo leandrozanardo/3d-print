@@ -1,28 +1,61 @@
 ---
-id: "scenario.miniatures"
-title: "Playbook — miniaturas e detalhe fino"
-summary: "Cenário para miniaturas/figuras: priorizar resolução aparente (camada fina, nozzle 0,4 mm ainda útil), orientação de faces cosméticas, cooling e suporte tipado — em FFF na A1 Mini com PLA. Resina (MSLA) ganha detalhe mas exige PPE e fluxo de lavagem/cura. Não misturar regras FFF/resina; não afirmar food/medical. Valide com cupom de detalhe antes da peça longa."
-doc_type: "scenario"
-domain: ["scenarios", "fff", "quality"]
-technology: ["material-extrusion", "vat-photopolymerization"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "material.pla", "cosmetic-miniatures"]
-not_for: ["structural-brackets-as-miniature-settings", "food-minis", "resin-without-ppe"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.niosh-am-entry"]
-related: ["material.pla", "post.support-removal-fff", "post.sanding-finishing", "post.painting", "tech.sla-dlp-msla", "scenario.speed-vs-quality"]
-prerequisites: ["material.pla", "process.fff.first-layer"]
+id: scenario.miniatures
+title: Playbook — miniaturas e detalhe fino
+summary: 'Cenário para miniaturas/figuras: priorizar resolução aparente (camada fina,
+  nozzle 0,4 mm ainda útil), orientação de faces cosméticas, cooling e suporte tipado
+  — em FFF na A1 Mini com PLA. Resina (MSLA) ganha detalhe mas exige PPE e fluxo de
+  lavagem/cura. Não misturar regras FFF/resina; não afirmar food/medical. Valide com
+  cupom de detalhe antes da peça longa.'
+doc_type: scenario
+domain:
+- scenarios
+- fff
+- quality
+technology:
+- material-extrusion
+- vat-photopolymerization
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- material.pla
+- cosmetic-miniatures
+not_for:
+- structural-brackets-as-miniature-settings
+- food-minis
+- resin-without-ppe
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.niosh-am-entry
+related:
+- material.pla
+- post.support-removal-fff
+- post.sanding-finishing
+- post.painting
+- tech.sla-dlp-msla
+- scenario.speed-vs-quality
+prerequisites:
+- material.pla
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["miniaturas FFF", "detalhe fino", "figuras impressas"]
-aliases_en: ["miniatures", "fine detail prints", "tabletop miniatures"]
-tags: ["playbook", "miniatures", "detail"]
+aliases_pt_br:
+- miniaturas FFF
+- detalhe fino
+- figuras impressas
+aliases_en:
+- miniatures
+- fine detail prints
+- tabletop miniatures
+tags:
+- playbook
+- miniatures
+- detail
 ---
-
 # Playbook — miniaturas e detalhe fino
 
 Hub pai: [Cenários](INDEX.md)
@@ -43,7 +76,7 @@ Obter detalhe cosmético aceitável em figura/miniatura (rostos, bordas, textura
 
 - Sem food/medical ([claims](../15-seguranca-e-meio-ambiente/claims-food-contact-e-medico.md))
 - Resina: PPE + ventilação obrigatórios ([resina PPE](../15-seguranca-e-meio-ambiente/resina-ppe-e-descarte.md))
-- A1 Mini FFF: nozzle ref. [0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); detalhe limitado pelo cordão
+- A1 Mini FFF: nozzle ref. [0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); detalhe limitado pelo cordão
 
 ## Seleção tech / material
 

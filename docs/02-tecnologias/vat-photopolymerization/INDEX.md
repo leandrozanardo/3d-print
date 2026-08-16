@@ -1,19 +1,30 @@
 ---
-id: "hub.tech.vat-photopolymerization"
-title: "Vat photopolymerization"
-summary: "Hub da categoria vat photopolymerization (cura de fotopolímero em tanque). Variantes: SLA, DLP e MSLA. Segurança química precede qualquer receita de exposição."
-doc_type: "hub"
-domain: ["technologies"]
-technology: ["vat-photopolymerization"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-related: ["hub.tecnologias", "tech.vat-photopolymerization", "tech.sla-dlp-msla"]
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-tags: ["hub", "resin", "vat"]
+id: hub.tech.vat-photopolymerization
+title: Vat photopolymerization
+summary: 'Hub da categoria vat photopolymerization (cura de fotopolímero em tanque).
+  Variantes: SLA, DLP e MSLA. Segurança química precede qualquer receita de exposição.'
+doc_type: hub
+domain:
+- technologies
+technology:
+- vat-photopolymerization
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+related:
+- hub.tecnologias
+- tech.vat-photopolymerization
+- tech.sla-dlp-msla
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+tags:
+- hub
+- resin
+- vat
 process: []
 applies_to: []
 not_for: []
@@ -22,7 +33,6 @@ supersedes: []
 aliases_pt_br: []
 aliases_en: []
 ---
-
 # Vat photopolymerization
 
 Voltar: [Tecnologias](../INDEX.md)

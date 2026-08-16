@@ -1,28 +1,42 @@
 ---
-id: "manufacturer.nexa3d"
-title: "Fabricante — Nexa3D"
-summary: "Página canônica do fabricante Nexa3D no catálogo fix-my-print. Segmento: professional-resin. Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census com coverage cataloged. Não declara portfólio mundial completo do fabricante além das fontes citadas."
-doc_type: "manufacturer"
-domain: ["printers"]
+id: manufacturer.nexa3d
+title: Fabricante — Nexa3D
+summary: 'Página canônica do fabricante Nexa3D no catálogo fix-my-print. Segmento:
+  professional-resin. Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census
+  com coverage cataloged. Não declara portfólio mundial completo do fabricante além
+  das fontes citadas.'
+doc_type: manufacturer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["catalog"]
-not_for: ["complete-oem-portfolio-without-source"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-sources: ["source.nexa3d-official-products"]
-related: ["hub.impressoras", "meta.printer-progress", "meta.printer-global-catalog"]
-prerequisites: ["meta.printer-inclusion-criteria"]
+applies_to:
+- catalog
+not_for:
+- complete-oem-portfolio-without-source
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+sources:
+- source.nexa3d-official-products
+related:
+- hub.impressoras
+- meta.printer-progress
+- meta.printer-global-catalog
+prerequisites:
+- meta.printer-inclusion-criteria
 supersedes: []
-aliases_pt_br: ["Nexa3D"]
-aliases_en: ["Nexa3D"]
-tags: ["manufacturer", "nexa3d"]
+aliases_pt_br:
+- Nexa3D
+aliases_en:
+- Nexa3D
+tags:
+- manufacturer
+- nexa3d
 ---
-
 # Fabricante — Nexa3D
 
 Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.md)

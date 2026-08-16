@@ -1,28 +1,58 @@
 ---
-id: "scenario.multimaterial-ams-lite"
-title: "Playbook — multimaterial AMS Lite"
-summary: "AMS Lite na A1 Mini habilita trocas de cor/material com custo de purge, tempo e sensibilidade a umidade/caminho. Use quando precisar de ≥2 cores ou troca automática; spool direto é mais simples para monoestrutural. AMS não seca filamento. Minimize swaps em faces detalhadas; comece com flush do Studio e ajuste só após observar marble vs desperdício. Falhas de load parecem subextrusão — diagnostique path primeiro."
-doc_type: "scenario"
-domain: ["scenarios", "fff", "hardware"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "ams-lite", "multicolor"]
-not_for: ["ams-as-dryer", "pla-petg-mix-without-reason", "flush-guessing-five-knobs"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-wiki-a1-mini", "source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "maint.a1-mini-preventive", "defect.fff.under-extrusion", "defect.fff.stringing", "material.drying-storage", "hub.cenarios"]
-prerequisites: ["printer.bambu-lab-a1-mini", "material.drying-storage"]
+id: scenario.multimaterial-ams-lite
+title: Playbook — multimaterial AMS Lite
+summary: AMS Lite na A1 Mini habilita trocas de cor/material com custo de purge, tempo
+  e sensibilidade a umidade/caminho. Use quando precisar de ≥2 cores ou troca automática;
+  spool direto é mais simples para monoestrutural. AMS não seca filamento. Minimize
+  swaps em faces detalhadas; comece com flush do Studio e ajuste só após observar
+  marble vs desperdício. Falhas de load parecem subextrusão — diagnostique path primeiro.
+doc_type: scenario
+domain:
+- scenarios
+- fff
+- hardware
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- ams-lite
+- multicolor
+not_for:
+- ams-as-dryer
+- pla-petg-mix-without-reason
+- flush-guessing-five-knobs
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.bambu-wiki-a1-mini
+related:
+- printer.bambu-lab-a1-mini
+- maint.a1-mini-preventive
+- defect.fff.under-extrusion
+- defect.fff.stringing
+- material.drying-storage
+- hub.cenarios
+prerequisites:
+- printer.bambu-lab-a1-mini
+- material.drying-storage
 supersedes: []
-aliases_pt_br: ["AMS Lite playbook", "multicolor A1 Mini"]
-aliases_en: ["AMS Lite multimaterial", "A1 mini multicolor"]
-tags: ["playbook", "ams-lite", "multicolor"]
+aliases_pt_br:
+- AMS Lite playbook
+- multicolor A1 Mini
+aliases_en:
+- AMS Lite multimaterial
+- A1 mini multicolor
+tags:
+- playbook
+- ams-lite
+- multicolor
 ---
-
 # Playbook — multimaterial AMS Lite
 
 Hub pai: [Cenários](INDEX.md) · Máquina: [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md)

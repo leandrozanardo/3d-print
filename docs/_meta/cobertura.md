@@ -1,19 +1,24 @@
 ---
-id: "meta.coverage"
-title: "Matriz de cobertura"
-summary: "Cobertura mensurável por domínio 01–23 após Waves 0–11 (parcial). Nenhum domínio declarado completo ou verified. Status: none/hub-only/draft/partial/deep."
-doc_type: "coverage"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "per-batch"
-related: ["meta.gaps", "meta.continuation", "meta.work-queue"]
-tags: ["coverage"]
+id: meta.coverage
+title: Matriz de cobertura
+summary: 'Cobertura mensurável por domínio 01–23 após Waves 0–11 (parcial). Nenhum
+  domínio declarado completo ou verified. Status: none/hub-only/draft/partial/deep.'
+doc_type: coverage
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: per-batch
+related:
+- meta.gaps
+- meta.continuation
+- meta.work-queue
+tags:
+- coverage
 ---
-
 # Matriz de cobertura
 
 Legenda: `none` | `hub-only` | `draft` | `partial` | `deep` | `verified`

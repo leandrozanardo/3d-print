@@ -1,34 +1,75 @@
 ---
-id: "defect.fff.elephant-foot"
-title: "Elephant foot (pé de elefante) em FFF"
-summary: "Elephant foot é o alargamento da base nas primeiras camadas por over-squish e/ou excesso de calor na mesa — estraga encaixes e furos na base. Oposto: Z alto demais causa peel. Na A1 Mini: limpe PEI, leia a first layer (linhas se beijando), só então use elephant foot compensation (ordem 0,1–0,2 mm) se a tolerância exigir. Não use raft para ‘consertar’ foot. Diferencie de warp e de erro dimensional no meio da peça."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["mid-part-dimensional-only", "raft-as-elephant-fix"]
-symptoms: ["symptom.elephant-foot", "symptom.fat-base"]
-causes: ["cause.over-squish", "cause.hot-bed", "cause.first-layer-flow"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.temperatures"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.bambu-a1-mini-tech-specs", "source.teaching-tech-calibration"]
-related: ["process.fff.first-layer", "defect.fff.warping", "setting.temperatures", "defect.fff.layer-shift"]
-prerequisites: ["process.fff.first-layer"]
+id: defect.fff.elephant-foot
+title: Elephant foot (pé de elefante) em FFF
+summary: 'Elephant foot é o alargamento da base nas primeiras camadas por over-squish
+  e/ou excesso de calor na mesa — estraga encaixes e furos na base. Oposto: Z alto
+  demais causa peel. Na A1 Mini: limpe PEI, leia a first layer (linhas se beijando),
+  só então use elephant foot compensation (ordem 0,1–0,2 mm) se a tolerância exigir.
+  Não use raft para ‘consertar’ foot. Diferencie de warp e de erro dimensional no
+  meio da peça.'
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- mid-part-dimensional-only
+- raft-as-elephant-fix
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- process.fff.first-layer
+- defect.fff.warping
+- setting.temperatures
+- defect.fff.layer-shift
+prerequisites:
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["elephant foot", "pé de elefante", "base alargada"]
-aliases_en: ["elephant foot", "elephants foot", "fat first layer"]
-tags: ["elephant-foot", "first-layer", "troubleshooting"]
+aliases_pt_br:
+- elephant foot
+- pé de elefante
+- base alargada
+aliases_en:
+- elephant foot
+- elephants foot
+- fat first layer
+tags:
+- elephant-foot
+- first-layer
+- troubleshooting
+symptom_tags:
+- elephant-foot
+- fat-base
+cause_tags:
+- over-squish
+- hot-bed
+- first-layer-flow
+setting_tags:
+- temperatures
 ---
-
 # Elephant foot (pé de elefante) em FFF
 
 Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.md)
@@ -77,7 +118,7 @@ Fits críticos?
 
 - First layer height frequentemente ≥ layer nominal  
 - First layer speed baixa  
-- Bed no range do material (PETG ≤ 80 °C)  
+- Bed no range do material (PETG ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) )  
 - Compensation só após squish correto  
 
 Legado EN: [elephant-foot-e-primeira-camada.md](../../projeto/qualidade-e-acabamento/elephant-foot-e-primeira-camada.md).

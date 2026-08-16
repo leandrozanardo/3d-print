@@ -1,30 +1,65 @@
 ---
-id: "fund.wetting-first-layer"
-title: "Adesão, molhabilidade e primeira camada"
-summary: "Adesão da first layer em FFF é fenômeno de superfície: o cordão quente precisa molhar a build surface (ex.: PEI) e solidificar sob geometria controlada (squish). Limpeza, distância Z, temperatura local, velocidade e área de contato dominam — não ‘cola mágica’ universal. Distingue adesão mesa↔peça de união camada↔camada. Conceitual; setpoints vêm do perfil/TDS e validação."
-doc_type: "concept"
-domain: ["fundamentals", "fff", "adhesion"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material.pla", "material.petg", "printer.bambu-lab-a1-mini"]
-not_for: ["universal-glue-recipes", "food-contact-surface-claims"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration", "source.bambu-a1-mini-tech-specs"]
-related: ["process.fff.first-layer", "fund.heat-transfer-fff", "surface.pei", "defect.fff.warping", "firmware.bed-mesh-z-offset"]
-prerequisites: ["tech.fff"]
+id: fund.wetting-first-layer
+title: Adesão, molhabilidade e primeira camada
+summary: 'Adesão da first layer em FFF é fenômeno de superfície: o cordão quente precisa
+  molhar a build surface (ex.: PEI) e solidificar sob geometria controlada (squish).
+  Limpeza, distância Z, temperatura local, velocidade e área de contato dominam —
+  não ‘cola mágica’ universal. Distingue adesão mesa↔peça de união camada↔camada.
+  Conceitual; setpoints vêm do perfil/TDS e validação.'
+doc_type: concept
+domain:
+- fundamentals
+- fff
+- adhesion
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material.pla
+- material.petg
+- printer.bambu-lab-a1-mini
+not_for:
+- universal-glue-recipes
+- food-contact-surface-claims
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- process.fff.first-layer
+- fund.heat-transfer-fff
+- surface.pei
+- defect.fff.warping
+- firmware.bed-mesh-z-offset
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["molhabilidade primeira camada", "adesão à mesa", "wetting FFF"]
-aliases_en: ["first layer wetting", "bed adhesion fundamentals", "build surface wettability"]
-tags: ["fundamentals", "adhesion", "first-layer", "fff"]
+aliases_pt_br:
+- molhabilidade primeira camada
+- adesão à mesa
+- wetting FFF
+aliases_en:
+- first layer wetting
+- bed adhesion fundamentals
+- build surface wettability
+tags:
+- fundamentals
+- adhesion
+- first-layer
+- fff
 ---
-
 # Adesão, molhabilidade e primeira camada
 
 Hub pai: [Fundamentos](INDEX.md)
@@ -92,7 +127,6 @@ Materiais Ideal (PLA, PETG, TPU, PVA nas [tech specs](../22-fontes/bambu-a1-mini
 
 - [source.ellis-print-tuning-guide](../22-fontes/ellis-print-tuning-guide.md)
 - [source.teaching-tech-calibration](../22-fontes/teaching-tech-calibration.md)
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

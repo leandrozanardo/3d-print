@@ -1,17 +1,22 @@
 ---
-id: "meta.editorial-decisions"
-title: "Decisões editoriais"
-summary: "Decisões A3 da Wave 0: taxonomia 01–23, legado intacto, canônico pt-BR, fatia A1 Mini, ebook isolado sob CC BY-SA, sem delete, sem alterar core/."
-doc_type: "decision-log"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-related: ["meta.migration", "meta.architecture"]
-tags: ["decisions"]
+id: meta.editorial-decisions
+title: Decisões editoriais
+summary: 'Decisões A3 da Wave 0: taxonomia 01–23, legado intacto, canônico pt-BR,
+  fatia A1 Mini, ebook isolado sob CC BY-SA, sem delete, sem alterar core/.'
+doc_type: decision-log
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+related:
+- meta.migration
+- meta.architecture
+tags:
+- decisions
 technology: []
 process: []
 applies_to: []
@@ -22,7 +27,6 @@ supersedes: []
 aliases_pt_br: []
 aliases_en: []
 ---
-
 # Decisões editoriais
 
 ## D-001 — Dual-track legado + canônico

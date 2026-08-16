@@ -1,19 +1,25 @@
 ---
-id: "meta.gaps"
-title: "Lacunas explícitas"
-summary: "Lacunas após Waves 10–11: vat deep, settings catalog, glossário, VOC/UFP FFF com NIOSH detalhado, grades de pó por liga, ANVISA, experimentos locais, validator de front matter."
-doc_type: "audit"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-16"
-review_cycle: "per-batch"
-related: ["meta.coverage", "meta.contradictions", "meta.continuation"]
-tags: ["gaps"]
+id: meta.gaps
+title: Lacunas explícitas
+summary: 'Lacunas após Waves 10–11: vat deep, settings catalog, glossário, VOC/UFP
+  FFF com NIOSH detalhado, grades de pó por liga, ANVISA, experimentos locais, validator
+  de front matter.'
+doc_type: audit
+domain:
+- meta
+knowledge_status: draft
+evidence_status: unknown
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-16'
+review_cycle: per-batch
+related:
+- meta.coverage
+- meta.contradictions
+- meta.continuation
+tags:
+- gaps
 ---
-
 # Lacunas
 
 Atualizado pós-Wave 10–11. Itens resolvidos parcialmente riscam contexto, não exclusão.

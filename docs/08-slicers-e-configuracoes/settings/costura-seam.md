@@ -1,30 +1,66 @@
 ---
-id: "setting.seam"
-title: "Costura (seam)"
-summary: "A costura (seam/Z-seam) é o ponto onde o perímetro de uma camada inicia/termina — aparece como linha ou ponto vertical se alinhada. Conceito: posicionamento (aligned, rear, nearest, random, painted) e trade-off entre cicatriz previsível vs distribuída. No Bambu Studio: Seam position / scarfing options conforme versão. Não é defeito de extrusão por si; interage com retract, wipe, PA e geometria. Escolha alinhada em face oculta para peças cosméticas."
-doc_type: "setting"
-domain: ["slicing", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio"]
-not_for: ["calling-seam-under-extrusion", "eternal-ui-path-pinning"]
-settings: ["setting.seam"]
-slicers: ["slicer.bambu-studio"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["setting.retraction", "setting.flow-pressure-advance", "setting.walls-shells", "setting.speeds", "defect.fff.stringing", "hub.slicers.settings"]
-prerequisites: ["tech.fff"]
+id: setting.seam
+title: Costura (seam)
+summary: 'A costura (seam/Z-seam) é o ponto onde o perímetro de uma camada inicia/termina
+  — aparece como linha ou ponto vertical se alinhada. Conceito: posicionamento (aligned,
+  rear, nearest, random, painted) e trade-off entre cicatriz previsível vs distribuída.
+  No Bambu Studio: Seam position / scarfing options conforme versão. Não é defeito
+  de extrusão por si; interage com retract, wipe, PA e geometria. Escolha alinhada
+  em face oculta para peças cosméticas.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+not_for:
+- calling-seam-under-extrusion
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- setting.retraction
+- setting.flow-pressure-advance
+- setting.walls-shells
+- setting.speeds
+- defect.fff.stringing
+- hub.slicers.settings
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["costura", "z-seam", "linha de costura", "seam painting"]
-aliases_en: ["seam", "Z-seam", "seam position", "scarf seam"]
-tags: ["setting", "seam", "cosmetics", "fff"]
+aliases_pt_br:
+- costura
+- z-seam
+- linha de costura
+- seam painting
+aliases_en:
+- seam
+- Z-seam
+- seam position
+- scarf seam
+tags:
+- setting
+- seam
+- cosmetics
+- fff
+setting_tags:
+- seam
 ---
-
 # Costura (seam)
 
 Hub pai: [Settings](INDEX.md)

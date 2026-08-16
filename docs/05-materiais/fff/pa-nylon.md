@@ -1,30 +1,68 @@
 ---
-id: "material.pa"
-title: "PA (nylon) em FFF"
-summary: "Poliamidas (PA6, PA12 e blends) oferecem tenacidade, desgaste e resistência química relativa — e são extremamente higroscópicas. Warp e peças fracas/úmidas são o padrão se a disciplina de secagem falhar. Na A1 Mini o fabricante marca PA como Not Recommended; esta página cobre família, umidade, segurança e quando outra máquina/câmara é necessária, sem receita completa de impressão para A1 Mini."
-doc_type: "material"
-domain: ["materials", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "dry-box-workflows", "enclosed-preferred"]
-not_for: ["printer.bambu-lab-a1-mini-as-default", "undried-spools", "full-a1-mini-print-recipe", "food-contact-assumption"]
-materials: ["material.pa"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.drying-storage", "material.composites-fiber", "defect.fff.warping", "printer.bambu-lab-a1-mini", "material.petg"]
-prerequisites: ["tech.fff", "material.drying-storage"]
+id: material.pa
+title: PA (nylon) em FFF
+summary: Poliamidas (PA6, PA12 e blends) oferecem tenacidade, desgaste e resistência
+  química relativa — e são extremamente higroscópicas. Warp e peças fracas/úmidas
+  são o padrão se a disciplina de secagem falhar. Na A1 Mini o fabricante marca PA
+  como Not Recommended; esta página cobre família, umidade, segurança e quando outra
+  máquina/câmara é necessária, sem receita completa de impressão para A1 Mini.
+doc_type: material
+domain:
+- materials
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- dry-box-workflows
+- enclosed-preferred
+not_for:
+- printer.bambu-lab-a1-mini-as-default
+- undried-spools
+- full-a1-mini-print-recipe
+- food-contact-assumption
+materials:
+- material.pa
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- material.drying-storage
+- material.composites-fiber
+- defect.fff.warping
+- printer.bambu-lab-a1-mini
+- material.petg
+prerequisites:
+- tech.fff
+- material.drying-storage
 supersedes: []
-aliases_pt_br: ["PA", "nylon", "poliamida", "PA6", "PA12"]
-aliases_en: ["PA", "nylon", "polyamide", "PA6", "PA12"]
-tags: ["material", "pa", "nylon", "fff", "hygroscopic"]
+aliases_pt_br:
+- PA
+- nylon
+- poliamida
+- PA6
+- PA12
+aliases_en:
+- PA
+- nylon
+- polyamide
+- PA6
+- PA12
+tags:
+- material
+- pa
+- nylon
+- fff
+- hygroscopic
 ---
-
 # PA (nylon) em FFF
 
 Hub pai: [Materiais FFF](INDEX.md)
@@ -115,7 +153,6 @@ Faixas de processo publicadas por OEMs (nozzle/bed/câmara) são **pontos de par
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../../22-fontes/bambu-a1-mini-tech-specs.md)
 - TDS/SDS do produto
 - Legado EN: [pa-nylon.md](../../projeto/materiais/pa-nylon.md)
 

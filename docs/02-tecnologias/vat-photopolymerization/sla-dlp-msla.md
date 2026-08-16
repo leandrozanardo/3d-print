@@ -1,28 +1,64 @@
 ---
-id: "tech.sla-dlp-msla"
-title: "SLA, DLP e MSLA — variantes de vat photopolymerization"
-summary: "SLA (laser), DLP (projetor) e MSLA/LCD (máscara de cristal líquido) são variantes de vat photopolymerization: solidificam resina fotopolimérica camada a camada. Diferem em fonte de luz, velocidade tipica de área e artefatos, mas compartilham riscos químicos (pele, olhos, VOC, descarte) e a necessidade de lavagem + pós-cura. Não são FFF; não misture parâmetros. Esta página orienta princípios e navegação — não calibra exposição de uma marca específica."
-doc_type: "technology"
-domain: ["technologies", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization", "resin-printing"]
-not_for: ["fff-settings-transfer", "food-medical-resin-diy", "resin-without-ppe"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["material.resin-families", "setting.resin-exposure-supports", "post.resin-wash-cure", "hazard.resin-ppe-disposal", "defect.resin.index"]
+id: tech.sla-dlp-msla
+title: SLA, DLP e MSLA — variantes de vat photopolymerization
+summary: 'SLA (laser), DLP (projetor) e MSLA/LCD (máscara de cristal líquido) são
+  variantes de vat photopolymerization: solidificam resina fotopolimérica camada a
+  camada. Diferem em fonte de luz, velocidade tipica de área e artefatos, mas compartilham
+  riscos químicos (pele, olhos, VOC, descarte) e a necessidade de lavagem + pós-cura.
+  Não são FFF; não misture parâmetros. Esta página orienta princípios e navegação
+  — não calibra exposição de uma marca específica.'
+doc_type: technology
+domain:
+- technologies
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+- resin-printing
+not_for:
+- fff-settings-transfer
+- food-medical-resin-diy
+- resin-without-ppe
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- material.resin-families
+- setting.resin-exposure-supports
+- post.resin-wash-cure
+- hazard.resin-ppe-disposal
+- defect.resin.index
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["SLA", "DLP", "MSLA", "impressão em resina", "LCD resin"]
-aliases_en: ["SLA", "DLP", "MSLA", "LCD 3D printing", "vat photopolymerization"]
-tags: ["resin", "sla", "dlp", "msla", "vat"]
+aliases_pt_br:
+- SLA
+- DLP
+- MSLA
+- LCD resin
+aliases_en:
+- SLA
+- DLP
+- MSLA
+- LCD 3D printing
+tags:
+- resin
+- sla
+- dlp
+- msla
+- vat
 ---
-
 # SLA, DLP e MSLA
 
 Hub pai: [Vat photopolymerization](INDEX.md) · [Tecnologias](../INDEX.md)

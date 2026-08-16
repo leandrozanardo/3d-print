@@ -1,28 +1,59 @@
 ---
-id: "setting.resin-exposure-supports"
-title: "Resina — exposição e suportes (settings)"
-summary: "Em MSLA/SLA/DLP, tempo de exposição, camadas de base, altura de camada e estratégia de suporte (tips, densidade, ângulo) controlam aderência à plataforma, falha de peel e cicatrizes. Valores numéricos vêm do fabricante da resina + calibrador da impressora — esta página explica mecanismos e ordem de ajuste, sem tabela universal. Segurança: resina não curada e FEP danificado são riscos; não transfira settings FFF."
-doc_type: "setting"
-domain: ["slicers", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-support-settings", "copy-exposure-between-brands"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["tech.sla-dlp-msla", "material.resin-families", "post.resin-wash-cure", "defect.resin.index", "hazard.resin-ppe-disposal"]
-prerequisites: ["tech.sla-dlp-msla", "hazard.resin-ppe-disposal"]
+id: setting.resin-exposure-supports
+title: Resina — exposição e suportes (settings)
+summary: 'Em MSLA/SLA/DLP, tempo de exposição, camadas de base, altura de camada e
+  estratégia de suporte (tips, densidade, ângulo) controlam aderência à plataforma,
+  falha de peel e cicatrizes. Valores numéricos vêm do fabricante da resina + calibrador
+  da impressora — esta página explica mecanismos e ordem de ajuste, sem tabela universal.
+  Segurança: resina não curada e FEP danificado são riscos; não transfira settings
+  FFF.'
+doc_type: setting
+domain:
+- slicers
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-support-settings
+- copy-exposure-between-brands
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- tech.sla-dlp-msla
+- material.resin-families
+- post.resin-wash-cure
+- defect.resin.index
+- hazard.resin-ppe-disposal
+prerequisites:
+- tech.sla-dlp-msla
+- hazard.resin-ppe-disposal
 supersedes: []
-aliases_pt_br: ["tempo de exposição resina", "suportes MSLA", "camadas de base"]
-aliases_en: ["resin exposure time", "MSLA supports", "burn-in layers"]
-tags: ["settings", "resin", "exposure", "supports"]
+aliases_pt_br:
+- tempo de exposição resina
+- suportes MSLA
+- camadas de base
+aliases_en:
+- resin exposure time
+- MSLA supports
+- burn-in layers
+tags:
+- settings
+- resin
+- exposure
+- supports
 ---
-
 # Resina — exposição e suportes
 
 Hub pai: [Slicers e configurações](INDEX.md)

@@ -1,28 +1,60 @@
 ---
-id: "scenario.vessels-containers"
-title: "Playbook — vasos e recipientes"
-summary: "Cenário para vasos, cachepôs e recipientes decorativos em FFF: decidir spiral vase vs casca normal, estabilidade de base, estanqueidade real vs aparência, e pós. Hard rule: esta base NÃO afirma food-safe nem contato alimentar. Líquido real exige liner/selo — parede única de spiral vaza. Preferir PLA cosmético na A1 Mini; validar preview e envelope 180³ mm. Link claims e legado de propósito vasos."
-doc_type: "scenario"
-domain: ["scenarios", "fff", "design"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "material.pla", "decorative-vessels"]
-not_for: ["food-safe-claim", "drinkware", "pressure-vessel", "chemical-tank-certification"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.niosh-am-entry"]
-related: ["hazard.food-medical-claims", "material.pla", "format.units-scale-manifold", "scenario.miniatures", "hub.cenarios"]
-prerequisites: ["material.pla", "process.fff.first-layer"]
+id: scenario.vessels-containers
+title: Playbook — vasos e recipientes
+summary: 'Cenário para vasos, cachepôs e recipientes decorativos em FFF: decidir spiral
+  vase vs casca normal, estabilidade de base, estanqueidade real vs aparência, e pós.
+  Hard rule: esta base NÃO afirma food-safe nem contato alimentar. Líquido real exige
+  liner/selo — parede única de spiral vaza. Preferir PLA cosmético na A1 Mini; validar
+  preview e envelope 180³ mm. Link claims e legado de propósito vasos.'
+doc_type: scenario
+domain:
+- scenarios
+- fff
+- design
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- material.pla
+- decorative-vessels
+not_for:
+- food-safe-claim
+- drinkware
+- pressure-vessel
+- chemical-tank-certification
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.niosh-am-entry
+related:
+- hazard.food-medical-claims
+- material.pla
+- format.units-scale-manifold
+- scenario.miniatures
+- hub.cenarios
+prerequisites:
+- material.pla
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["vasos impressos", "modo vaso", "recipientes FFF"]
-aliases_en: ["vase mode playbook", "printed planters", "spiral vase"]
-tags: ["playbook", "vase", "containers"]
+aliases_pt_br:
+- vasos impressos
+- modo vaso
+- recipientes FFF
+aliases_en:
+- vase mode playbook
+- printed planters
+- spiral vase
+tags:
+- playbook
+- vase
+- containers
 ---
-
 # Playbook — vasos e recipientes
 
 Hub pai: [Cenários](INDEX.md)
@@ -69,7 +101,7 @@ Parâmetros numéricos de perfil: use o perfil/legado do projeto e **valide na i
 
 - Confirmar unidades/envelope: [unidades e manifold](../07-modelos-formatos-e-malhas/unidades-escala-manifold.md)
 - Spiral exige contorno elegível — preview no Studio é gate
-- Paredes finas demais para o nozzle falham — ver design de paredes / nozzle 0,4 mm
+- Paredes finas demais para o nozzle falham — ver design de paredes / nozzle 0,4 mm (fonte oficial/fabricante/heuristic; ver sources) 
 
 ## Processo FFF (A1 Mini)
 

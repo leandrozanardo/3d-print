@@ -1,28 +1,54 @@
 ---
-id: "myth.enclosure-required-pla"
-title: "Mito — enclosure é obrigatório para PLA"
-summary: "O claim ‘PLA só imprime bem em enclosure’ confunde necessidades de ABS/ASA (draft/warp/emissões) com PLA desktop. PLA frequentemente imprime bem em frame aberto; enclosure fechado pode até prejudicar overhangs por excesso de calor residual. Status: overgeneralization. Enclosure pode ajudar em drafts extremos ou materiais sensíveis — não é regra universal para PLA."
-doc_type: "research"
-domain: ["research", "fff", "environment"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material.pla", "printer.bambu-lab-a1-mini"]
-not_for: ["abs-asa-open-frame-endorsement", "ignore-voc-controls"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.pla", "material.abs-asa", "process.open-frame-env", "myth.more-temp-more-adhesion", "hub.pesquisa"]
+id: myth.enclosure-required-pla
+title: Mito — enclosure é obrigatório para PLA
+summary: 'O claim ‘PLA só imprime bem em enclosure’ confunde necessidades de ABS/ASA
+  (draft/warp/emissões) com PLA desktop. PLA frequentemente imprime bem em frame aberto;
+  enclosure fechado pode até prejudicar overhangs por excesso de calor residual. Status:
+  overgeneralization. Enclosure pode ajudar em drafts extremos ou materiais sensíveis
+  — não é regra universal para PLA.'
+doc_type: research
+domain:
+- research
+- fff
+- environment
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material.pla
+- printer.bambu-lab-a1-mini
+not_for:
+- abs-asa-open-frame-endorsement
+- ignore-voc-controls
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources: []
+related:
+- material.pla
+- material.abs-asa
+- process.open-frame-env
+- myth.more-temp-more-adhesion
+- hub.pesquisa
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["PLA precisa de enclosure", "caixa fechada obrigatória PLA"]
-aliases_en: ["PLA requires enclosure myth", "enclosed PLA mandatory"]
-tags: ["myth", "pla", "enclosure", "fff"]
+aliases_pt_br:
+- PLA precisa de enclosure
+- caixa fechada obrigatória PLA
+aliases_en:
+- PLA requires enclosure myth
+- enclosed PLA mandatory
+tags:
+- myth
+- pla
+- enclosure
+- fff
 ---
-
 # Mito — enclosure é obrigatório para PLA
 
 Hub pai: [Pesquisa e mitos](./INDEX.md)
@@ -69,7 +95,6 @@ Generalização a partir de guias de **ABS/ASA/PC** (warp e drafts) e marketing 
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

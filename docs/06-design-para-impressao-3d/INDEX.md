@@ -1,28 +1,35 @@
 ---
-id: "hub.dfam"
-title: "Design para impressão 3D"
-summary: "DfAM por tecnologia: orientação, tolerâncias, features, suportes e anisotropia. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
-doc_type: "hub"
-domain: ["hub"]
+id: hub.dfam
+title: Design para impressão 3D
+summary: 'DfAM por tecnologia: orientação, tolerâncias, features, suportes e anisotropia.
+  Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md.'
+doc_type: hub
+domain:
+- hub
 technology: []
 process: []
 applies_to: []
-not_for: ["complete-coverage-claim"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
+not_for:
+- complete-coverage-claim
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
 sources: []
-related: ["meta.coverage", "meta.knowledge-map"]
-prerequisites: ["meta.architecture"]
+related:
+- meta.coverage
+- meta.knowledge-map
+prerequisites:
+- meta.architecture
 supersedes: []
-aliases_pt_br: ["Design para impressão 3D"]
+aliases_pt_br:
+- Design para impressão 3D
 aliases_en: []
-tags: ["hub"]
+tags:
+- hub
 ---
-
 # Design para impressão 3D
 
 ## Escopo

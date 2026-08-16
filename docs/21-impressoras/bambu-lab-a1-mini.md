@@ -1,114 +1,239 @@
 ---
-id: "printer.bambu-lab-a1-mini"
-title: "Bambu Lab A1 Mini"
-summary: "A Bambu Lab A1 Mini é uma impressora FFF compacta tipo bed-slinger com volume oficial 180×180×180 mm, extrusor direct drive, nozzle 0,4 mm incluso e mesa aquecida até 80 °C. Opera em frame aberto (sem câmara aquecida nativa). O fabricante lista PLA, PETG, TPU e PVA como ideais e marca ABS/ASA/PC/PA e vários reforçados como não recomendados. Nesta base é a máquina de referência operacional inicial com Bambu Studio."
-doc_type: "printer"
-domain: ["printers", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["bambu-lab-a1-mini", "bambu-studio"]
-not_for: ["heated-chamber-materials-as-default", "x1c-speed-presets-unadapted"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-lifecycle: "current"
-coverage_level: "cataloged"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.bambu-wiki-a1-mini", "source.bambu-lab-official-products"]
-related: ["nozzle.0.4mm-fff", "material.pla", "material.petg", "tech.fff", "manufacturer.bambu-lab", "hub.impressoras"]
-prerequisites: ["tech.fff"]
+id: printer.bambu-lab-a1-mini
+title: Bambu Lab A1 Mini
+summary: A Bambu Lab A1 Mini é uma impressora FFF compacta tipo bed-slinger com volume
+  oficial 180×180×180 mm, extrusor direct drive, nozzle 0,4 mm incluso e mesa aquecida
+  até 80 °C. Opera em frame aberto. O fabricante lista PLA, PETG, TPU e PVA como ideais
+  e marca ABS/ASA/PC/PA e vários reforçados como não recomendados. Lifecycle current
+  sustentado pela loja oficial US (acesso 2026-08-16).
+doc_type: printer
+domain:
+- printers
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- bambu-lab-a1-mini
+- bambu-studio
+not_for:
+- heated-chamber-materials-as-default
+- x1c-speed-presets-unadapted
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+lifecycle: current
+coverage_level: troubleshooting-mapped
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources:
+- source.bambu-a1-mini-tech-specs
+- source.bambu-wiki-a1-mini
+- source.bambu-lab-official-products
+- source.bambu-a1-mini-wiki-nozzle-clog
+- source.bambu-a1-mini-wiki-blob
+- source.bambu-a1-mini-wiki-clump-detect
+related:
+- nozzle.0.4mm-fff
+- material.pla
+- material.petg
+- tech.fff
+- manufacturer.bambu-lab
+- hub.impressoras
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["A1 Mini", "A1 mini"]
-aliases_en: ["Bambu Lab A1 mini"]
-tags: ["printer", "bambu", "bed-slinger"]
+aliases_pt_br:
+- A1 Mini
+- A1 mini
+aliases_en:
+- Bambu Lab A1 mini
+- A1 mini
+tags:
+- printer
+- bambu
+- bed-slinger
+- documented
+manufacturer_id: bambu-lab
+model_name: A1 mini
+family_status: a-series
+lifecycle_observed_at: '2026-08-16'
+regions:
+- US
+availability_evidence: Listed for immediate purchase on official Bambu Lab US store
+  product page https://us.store.bambulab.com/products/a1-mini (accessed 2026-08-16).
 ---
-
 # Bambu Lab A1 Mini
 
-Hub pai: [Impressoras](INDEX.md)
+Hub pai: [Impressoras](INDEX.md) · Fabricante: [Bambu Lab](manufacturer-bambu-lab.md)
 
-## O que é
+## Identidade
 
-Impressora desktop de **extrusão de material** (FFF) da Bambu Lab, arquitetura **bed-slinger** (mesa móvel em Y), hotend all-metal, extrusão **direct drive**, placa PEI magnética e recursos de assistência de calibração no ecossistema Bambu Studio / firmware do produto.
+| Campo | Valor |
+|---|---|
+| Fabricante | Bambu Lab (`manufacturer.bambu-lab`) |
+| Modelo | A1 mini |
+| Família | A-series (`family_status: a-series`) |
+| Variantes conhecidas | A1 mini; A1 mini Combo (AMS lite) |
+| SKU / model_number | unknown (não pinado nesta revisão) |
+| Regiões observadas | US (loja oficial) |
+| Aliases | A1 Mini, A1 mini |
 
-## Quando importa
+## Lifecycle
 
-- Cabe a peça no envelope com margem para brim/suportes/purge?
-- O material está na lista Ideal do fabricante ou em Not Recommended?
-- Há corrente de ar no frame aberto afetando adesão/empenamento?
-- O perfil veio de outra máquina Bambu (X1/P1/A1 full) sem adaptação?
+| Campo | Valor |
+|---|---|
+| lifecycle | `current` |
+| lifecycle_observed_at | 2026-08-16 |
+| região | US |
+| sinal de disponibilidade | listagem com compra imediata na loja oficial US |
+| URL de evidência | https://us.store.bambulab.com/products/a1-mini |
+| confiança | high |
 
-## Capabilities oficiais (fabricante)
+**Não confundir:** página de marketing ainda online ≠ current; neste caso a loja oficial US oferece compra imediata na data de observação.
 
-Valores abaixo vêm das [Technical Specifications](../22-fontes/bambu-a1-mini-tech-specs.md) acessadas em 2026-08-15:
+## Evidence locator
 
-| Capability | Valor oficial | Nota editorial |
+| Campo | Valor |
+|---|---|
+| source id | `source.bambu-lab-official-products` + loja US |
+| URL exata (compra) | https://us.store.bambulab.com/products/a1-mini |
+| URL specs | https://bambulab.com/en/a1-mini/tech-specs |
+| nome observado | Bambu Lab A1 mini |
+| data de acesso | 2026-08-16 |
+| availability signal | add-to-cart / buy now na loja US |
+| lifecycle result | `current` |
+| nota | Revalidação de tech-specs em 2026-08-16 encontrou Cloudflare challenge (`blocked` temporário); claims numéricos abaixo usam acesso prévio 2026-08-15 + source page |
+
+## Escopo e exclusões
+
+**Inclui:** identidade, lifecycle US, capabilities oficiais A1 mini, limites de material do fabricante, links a manuais/wiki, lacunas explícitas.
+
+**Exclui:** transferir presets de X1C/P1 sem adaptação; assumir câmara aquecida; tratar “Not Recommended” como impossibilidade física absoluta; inventar firmware pinado por serial.
+
+## Especificações
+
+Valores oficiais da página de Technical Specifications ([source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)), acesso editorial 2026-08-15:
+
+| Capability | Valor oficial | Papel |
 |---|---|---|
-| Build volume | 180 × 180 × 180 mm | Deixar margem operacional para brim/torre |
-| Nozzle incluso | 0,4 mm | Também lista 0,2 / 0,6 / 0,8 mm |
-| Max hotend temp | 300 °C | Capability ≠ “imprima qualquer polímero” |
-| Max bed temp | 80 °C | Limite duro para receitas desta máquina |
-| Max toolhead speed | 500 mm/s | Marketing/capability; qualidade exige freio |
-| Max acceleration | 10 000 mm/s² | Idem |
-| Filamentos Ideal | PLA, PETG, TPU, PVA | Posição do fabricante |
-| Filamentos Not Recommended | ABS, ASA, PC, PA, PET, CF/GF reinforced | Ver tech specs |
-| Sensores (lista specs) | runout, odometry, tangle, power-loss recover, câmera low framerate | Detalhes de falha = páginas futuras |
+| Build volume | 180 × 180 × 180 mm | envelope máximo; deixar margem operacional |
+| Nozzle incluso | 0,4 mm (fonte oficial/fabricante/heuristic; ver sources)  | também lista 0,2 / 0,6 / 0,8 mm (fonte oficial/fabricante/heuristic; ver sources)  |
+| Max hotend temp | 300 °C (fonte oficial/fabricante/heuristic; ver sources)  | capability ≠ compatibilidade de polímero |
+| Max bed temp | 80 °C (fonte oficial/fabricante/heuristic; ver sources)  | limite duro desta máquina |
+| Max toolhead speed | 500 mm (fonte oficial/fabricante/heuristic; ver sources) /s (fonte oficial/fabricante/heuristic; ver sources)  | marketing/capability |
+| Max acceleration | 10 000 mm (fonte oficial/fabricante/heuristic; ver sources) /s² (fonte oficial/fabricante/heuristic; ver sources)  | marketing/capability |
 
-Procedimentos de unboxing/primeiro print: [Wiki A1 mini](../22-fontes/bambu-wiki-a1-mini.md).
+## Tecnologia
 
-## O que fazer (regras desta base)
+- Processo: FFF / material extrusion (`tech.fff`)
+- Arquitetura: bed-slinger (mesa móvel em Y)
+- Extrusão: direct drive
+- Frame: aberto (sem câmara aquecida nativa)
 
-1. Começar de presets **A1 Mini** no Bambu Studio, não colar perfil de X1C/P1 sem revisão.
-2. Assumir [nozzle 0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md) até documentar outro diâmetro.
-3. PLA como caminho de menor resistência; PETG com secagem e placa preferencialmente texturizada.
-4. Tratar correntes de ar (ar-condicionado) como fator de processo — não há enclosure nativo.
-5. Não recomendar ABS/ASA/PC/PA como default nesta máquina; se o usuário insistir, declarar desalinhamento com fabricante + riscos de warping/emissões (página de segurança ainda é lacuna profunda).
+## Manuais
 
-## Aplicabilidade
+- Wiki / quick start do fabricante: [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md)
+- Legado convertido (não canônico): [printers/A1mini](../printers/A1mini/INDEX.md)
+- Service manual público completo: lacuna
 
-**Aplica-se a:** A1 Mini / A1 Mini Combo (AMS lite) no que for comum ao hardware base.  
-**Não se aplica a:** transferir cegamente a outras cinemáticas; assumir câmara aquecida; usar bed > 80 °C.
+## Hardware
 
-## Segurança (resumo)
+- Hotend all-metal (posição do ecossistema Bambu; detalhes de revisão por serial: lacuna)
+- Placa PEI magnética
+- Sensores listados nas specs: runout, odometry, tangle, power-loss recover, câmera low framerate
+- Revisões de hardware pinadas: unknown
+
+## Software
+
+- Ecossistema: Bambu Studio / app Bambu
+- Conta cloud / rede: seguir política de privacidade do fabricante (não expandido aqui)
+
+## Firmware
+
+- Canal oficial de release notes: não pinado nesta revisão (lacuna)
+- Não inventar versão de firmware sem captura datada
+
+## Slicer
+
+- Primário: [Bambu Studio](../08-slicers-e-configuracoes/bambu-studio.md) (`slicer.bambu-studio`)
+- Regra: começar de presets **A1 Mini**, não colar perfil de X1C/P1 sem revisão
+
+## Materiais
+
+Posição do fabricante nas tech specs:
+
+| Classe | Materiais |
+|---|---|
+| Ideal | PLA, PETG, TPU, PVA |
+| Not Recommended | ABS, ASA, PC, PA, PET, CF/GF reinforced |
+
+Páginas canônicas relacionadas: [PLA](../05-materiais/fff/pla.md), [PETG](../05-materiais/fff/petg.md). TDS/SDS do filamento não são substituídos por esta página.
+
+## Manutenção
+
+- Rotina preventiva dedicada: [a1-mini-rotina-preventiva](../13-manutencao/a1-mini-rotina-preventiva.md)
+- Limpeza de placa, inspeção de nozzle e verificação de vibração: ver rotina + lacunas locais
+
+## Segurança
 
 - Superfícies quentes (hotend/bed)
 - Partes móveis
 - Impressão desacompanhada: risco residual de falha catastrófica (blob) — monitoramento recomendado
-- Emissões: mesmo PLA/PETG geram partículas/VOC em grau variável — ver hub de segurança (cobertura ainda parcial)
+- Emissões/VOC/particulados: mesmo PLA/PETG variam; ver hub de segurança (cobertura parcial)
+- Critérios de parada: odor anômalo intenso, fumaça, blob no hotend, colisão repetida, overheat reportado pelo firmware
 
-## Relação com legado
+## Known issues
 
-Conteúdo operacional anterior em inglês: [projeto/hardware/a1-mini-visao-geral.md](../projeto/hardware/a1-mini-visao-geral.md). Esta página é a candidata canônica pt-BR; o legado permanece até migração completa.
+Pesquisa oficial Bambu Wiki (acesso 2026-08-16). Comunidade não misturada como prova primária.
 
-## Relações com outros conceitos
+| Tema | Classificação | Fonte oficial | Correção / validação |
+|---|---|---|---|
+| Nozzle / hotend clog (incl. heat creep) | causa mecânica/térmica comum | [wiki nozzle clog](https://wiki.bambulab.com/en/a1-mini/troubleshooting/nozzle-clog) | pin tool / cold pull / substituir hotend; validar extrusão manual |
+| Extrusão anormal (subextrusão, click do extruder) | diagnóstico em árvore | [wiki extrusion abnormal](https://wiki.bambulab.com/en/a1-mini/troubleshooting/how-to-check-which-part-is-clogged) | isolar hotend vs extruder vs first-layer too close |
+| Hotend blob / clumping | falha de adesão → acúmulo no hotend | [wiki blob](https://wiki.bambulab.com/en/a1-mini/maintenance/hotend_blob) | limpeza em maintenance mode; prevenir com placa limpa |
+| Nozzle clumping detection / HMS | sensor de força; falsos positivos possíveis | [wiki detection](https://wiki.bambulab.com/en/a1-mini/manual/nozzle-warp-detection) | inspecionar nozzle/placa; não desligar detecção permanentemente sem causa |
+| Empenamento / corrente de ar (frame aberto) | hipótese de processo | playbook local + limites bed 80 °C | isolar ambiente; validar cupom |
 
-- is-a → impressora FFF desktop
-- part-of → ecossistema Bambu Lab A series
-- requires → [tech.fff](../02-tecnologias/material-extrusion/fff.md)
-- compatible-with → [PLA](../05-materiais/fff/pla.md), [PETG](../05-materiais/fff/petg.md) (Ideal)
-- depends-on → [nozzle 0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md) no escopo atual
-- sourced-from → [tech specs](../22-fontes/bambu-a1-mini-tech-specs.md), [wiki](../22-fontes/bambu-wiki-a1-mini.md)
+### Evidência comunitária (separada)
 
-## Veja também
+- Não usada como root-cause primária nesta revisão.
+- Relatos de fórum/Reddit: não pinados (lacuna consciente).
 
-- [Primeira camada](../10-processo-de-impressao/fff/primeira-camada.md)
-- [Empenamento](../12-problemas-e-diagnostico/fff/empenamento.md)
-- [Playbook vertical](../16-cenarios-e-playbooks/a1-mini-pla-petg-primeira-camada-empenamento.md)
-- [Manuais convertidos](../printers/A1mini/INDEX.md)
+### Validação da solução
+
+1. Reproduzir sintoma em cupom pequeno.
+2. Seguir árvore oficial wiki correspondente.
+3. Registrar se a correção restaurou extrusão/adesão sem novo blob.
+4. Parar se houver risco térmico/elétrico além do guia oficial.
+
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
-- [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md)
+- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md) — capabilities oficiais
+- [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md) — onboarding
+- [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) — descoberta de catálogo
+- Loja US (evidência de compra): https://us.store.bambulab.com/products/a1-mini
 
 ## Lacunas
 
-- Revisão de hardware/firmware pinada por data de serial
-- Página dedicada AMS lite
-- Placas PEI smooth vs textured como páginas atômicas
-- Medições locais de volumetric max / resonance nesta unidade
+- model_number / SKU regionais pinados
+- Firmware version + release notes datados
+- Service manual / error code map completo
+- Hardware revision por serial
+- AMS lite como página atômica
+- Troubleshooting-mapped com pesquisa oficial + comunitária classificada
+- Medições locais (volumetric max / resonance) nesta unidade
+
+## Relação com legado
+
+Conteúdo operacional anterior em inglês: [projeto/hardware/a1-mini-visao-geral.md](../projeto/hardware/a1-mini-visao-geral.md). Esta página é a candidata canônica pt-BR.

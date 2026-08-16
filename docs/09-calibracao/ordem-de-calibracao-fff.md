@@ -1,31 +1,64 @@
 ---
-id: "cal.fff-order"
-title: "Ordem de calibração FFF"
-summary: "Calibração FFF só é útil se a ordem respeitar dependências: mecânica/base estável → primeira camada → fluxo/extrusão → temperatura → retract/stringing → avanços de pressão/dinâmica → velocidade. Guias Ellis e Teaching Tech fornecem método e cupons; números não transferem automaticamente para A1 Mini + Bambu Studio. Prefira assistências oficiais do ecossistema quando existirem e mude uma variável por vez."
-doc_type: "calibration"
-domain: ["calibration", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "slicer.bambu-studio"]
-not_for: ["random-knob-turning", "copy-numbers-across-firmwares"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration", "source.bambu-a1-mini-tech-specs"]
-related: ["process.fff.first-layer", "slicer.bambu-studio", "defect.fff.adhesion-failure", "printer.bambu-lab-a1-mini", "component.hotend", "component.extruder-path"]
-prerequisites: ["printer.bambu-lab-a1-mini", "process.fff.first-layer"]
+id: cal.fff-order
+title: Ordem de calibração FFF
+summary: 'Calibração FFF só é útil se a ordem respeitar dependências: mecânica/base
+  estável → primeira camada → fluxo/extrusão → temperatura → retract/stringing → avanços
+  de pressão/dinâmica → velocidade. Guias Ellis e Teaching Tech fornecem método e
+  cupons; números não transferem automaticamente para A1 Mini + Bambu Studio. Prefira
+  assistências oficiais do ecossistema quando existirem e mude uma variável por vez.'
+doc_type: calibration
+domain:
+- calibration
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- slicer.bambu-studio
+not_for:
+- random-knob-turning
+- copy-numbers-across-firmwares
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- process.fff.first-layer
+- slicer.bambu-studio
+- defect.fff.adhesion-failure
+- printer.bambu-lab-a1-mini
+- component.hotend
+- component.extruder-path
+prerequisites:
+- printer.bambu-lab-a1-mini
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["ordem de calibração", "sequência de tuning FFF"]
-aliases_en: ["calibration order", "print tuning order"]
-tags: ["calibration", "fff", "method"]
+aliases_pt_br:
+- ordem de calibração
+- sequência de tuning FFF
+aliases_en:
+- calibration order
+- print tuning order
+tags:
+- calibration
+- fff
+- method
 ---
-
 # Ordem de calibração FFF
 
 Hub pai: [Calibração](INDEX.md)
@@ -75,7 +108,7 @@ Inspirada na lógica de [Ellis Print Tuning Guide](../22-fontes/ellis-print-tuni
 ### Constantes durante um teste
 
 - Mesmo filamento, cor e lote se possível
-- Mesmo nozzle (0,4 mm nesta base)
+- Mesmo nozzle (0,4 mm (fonte oficial/fabricante/heuristic; ver sources)  nesta base)
 - Uma variável por cupom
 - Registrar foto + valor + versão Studio
 
@@ -94,7 +127,7 @@ Inspirada na lógica de [Ellis Print Tuning Guide](../22-fontes/ellis-print-tuni
 | Começar por PA/speed | Amplifica erro de Z/flow |
 | Copiar valores Ellis/TT literalmente | Firmwares e hotends diferentes |
 | Calibrar PETG úmido | Stringing e estalo confundem leitura |
-| Bed > 80 °C “porque o guia diz” | Viola capability A1 Mini |
+| Bed > 80 °C (fonte oficial/fabricante/heuristic; ver sources)  “porque o guia diz” | Viola capability A1 Mini |
 | Mudar 5 settings no mesmo print | Perde causalidade |
 
 ## Frequência

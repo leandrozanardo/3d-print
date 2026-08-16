@@ -1,28 +1,58 @@
 ---
-id: "maint.a1-mini-preventive"
-title: "A1 Mini — rotina preventiva"
-summary: "Manutenção preventiva da Bambu Lab A1 Mini: placa limpa, caminho de filamento (AMS Lite ou spool), tensores/cintos conforme procedimento oficial, ventoinhas/trilhos sem fiapo, hotend sem blob e firmware estável. Intervalos são ordem de grandeza — seguir Wiki/tech specs do fabricante e validar no duty cycle local. Manutenção não substitui ventilação/segurança; não inventa torque nem lubrificante ‘milagroso’. Cite fontes oficiais; para sintomas persistentes vá ao diagnóstico FFF."
-doc_type: "guide"
-domain: ["maintenance", "fff", "printers"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "ams-lite"]
-not_for: ["overtighten-belts-by-feel", "skip-official-procedure", "maintenance-as-food-safe"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-wiki-a1-mini", "source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "defect.fff.layer-shift", "defect.fff.under-extrusion", "material.drying-storage", "hub.manutencao"]
-prerequisites: ["printer.bambu-lab-a1-mini"]
+id: maint.a1-mini-preventive
+title: A1 Mini — rotina preventiva
+summary: 'Manutenção preventiva da Bambu Lab A1 Mini: placa limpa, caminho de filamento
+  (AMS Lite ou spool), tensores/cintos conforme procedimento oficial, ventoinhas/trilhos
+  sem fiapo, hotend sem blob e firmware estável. Intervalos são ordem de grandeza
+  — seguir Wiki/tech specs do fabricante e validar no duty cycle local. Manutenção
+  não substitui ventilação/segurança; não inventa torque nem lubrificante ‘milagroso’.
+  Cite fontes oficiais; para sintomas persistentes vá ao diagnóstico FFF.'
+doc_type: guide
+domain:
+- maintenance
+- fff
+- printers
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- ams-lite
+not_for:
+- overtighten-belts-by-feel
+- skip-official-procedure
+- maintenance-as-food-safe
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.bambu-wiki-a1-mini
+- source.bambu-a1-mini-tech-specs
+related:
+- printer.bambu-lab-a1-mini
+- defect.fff.layer-shift
+- defect.fff.under-extrusion
+- material.drying-storage
+- hub.manutencao
+prerequisites:
+- printer.bambu-lab-a1-mini
 supersedes: []
-aliases_pt_br: ["manutenção A1 Mini", "checklist preventivo A1 mini"]
-aliases_en: ["A1 mini preventive maintenance", "A1 mini service routine"]
-tags: ["maintenance", "a1-mini", "bambu", "preventive"]
+aliases_pt_br:
+- manutenção A1 Mini
+- checklist preventivo A1 mini
+aliases_en:
+- A1 mini preventive maintenance
+- A1 mini service routine
+tags:
+- maintenance
+- a1-mini
+- bambu
+- preventive
 ---
-
 # A1 Mini — rotina preventiva
 
 Hub pai: [Manutenção](INDEX.md) · Impressora: [Bambu Lab A1 Mini](../21-impressoras/bambu-lab-a1-mini.md)

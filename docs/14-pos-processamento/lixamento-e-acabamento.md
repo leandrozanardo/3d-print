@@ -1,28 +1,56 @@
 ---
-id: "post.sanding-finishing"
-title: "Lixamento e acabamento (FFF e geral seco)"
-summary: "Lixamento remove marcas de camada e cicatrizes de suporte, mas gera pó — controle respiratório e combustível em pó fino. Progressão típica: grãos grossos → finos, a seco ou úmido conforme polímero/tinta. Não lixe resina não curada; para resina curada use PPE de pó e evite confusão com solvente de lavagem. Acabamento mecânico não torna a peça food-safe."
-doc_type: "guide"
-domain: ["post-processing"]
-technology: ["material-extrusion", "vat-photopolymerization"]
-process: ["fff"]
-applies_to: ["fff", "cosmetic-finishing"]
-not_for: ["food-safe-by-sanding", "wet-sand-uncured-resin", "asbestos-era-habits"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["post.support-removal-fff", "post.painting", "post.resin-wash-cure", "hazard.voc-ufp-ventilation", "hazard.resin-ppe-disposal"]
-prerequisites: ["post.support-removal-fff"]
+id: post.sanding-finishing
+title: Lixamento e acabamento (FFF e geral seco)
+summary: 'Lixamento remove marcas de camada e cicatrizes de suporte, mas gera pó —
+  controle respiratório e combustível em pó fino. Progressão típica: grãos grossos
+  → finos, a seco ou úmido conforme polímero/tinta. Não lixe resina não curada; para
+  resina curada use PPE de pó e evite confusão com solvente de lavagem. Acabamento
+  mecânico não torna a peça food-safe.'
+doc_type: guide
+domain:
+- post-processing
+technology:
+- material-extrusion
+- vat-photopolymerization
+process:
+- fff
+applies_to:
+- fff
+- cosmetic-finishing
+not_for:
+- food-safe-by-sanding
+- wet-sand-uncured-resin
+- asbestos-era-habits
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- post.support-removal-fff
+- post.painting
+- post.resin-wash-cure
+- hazard.voc-ufp-ventilation
+- hazard.resin-ppe-disposal
+prerequisites:
+- post.support-removal-fff
 supersedes: []
-aliases_pt_br: ["lixar impressão 3D", "acabamento de superfície", "progressão de lixa"]
-aliases_en: ["sanding 3D prints", "surface finishing", "wet sanding"]
-tags: ["post-processing", "sanding", "finishing"]
+aliases_pt_br:
+- lixar impressão 3D
+- acabamento de superfície
+- progressão de lixa
+aliases_en:
+- sanding 3D prints
+- surface finishing
+- wet sanding
+tags:
+- post-processing
+- sanding
+- finishing
 ---
-
 # Lixamento e acabamento
 
 Hub pai: [Pós-processamento](INDEX.md)

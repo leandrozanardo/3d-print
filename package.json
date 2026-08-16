@@ -1,0 +1,30 @@
+{
+  "name": "fix-my-print",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Fix My Print monorepo",
+  "packageManager": "npm@11.6.2",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:packages": "npm run build -w @fix-my-print/contracts -w @fix-my-print/domain -w @fix-my-print/repo-guard -w @fix-my-print/knowledge-compiler -w @fix-my-print/formats -w @fix-my-print/formats-3mf -w @fix-my-print/geometry -w @fix-my-print/geometry-worker -w @fix-my-print/engine -w @fix-my-print/optimizer -w @fix-my-print/storage -w @fix-my-print/reporting -w @fix-my-print/cli --if-present",
+    "test": "npm run build:packages && npm run test --workspaces --if-present",
+    "test:unit": "npm run test",
+    "typecheck": "npm run build:packages && npm run typecheck --workspaces --if-present",
+    "build:web": "npm run build -w @fix-my-print/web",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "9.33.0",
+    "eslint": "9.33.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.39.1"
+  }
+}

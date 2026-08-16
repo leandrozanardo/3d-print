@@ -1,28 +1,57 @@
 ---
-id: "econ.fff-cost-waste"
-title: "Custo e desperdício em FFF"
-summary: "Custo FFF real combina filamento, tempo de máquina, energia, falhas, suportes e retrabalho — não só R$/kg do spool. Desperdício cai com DfAM (menos suporte), cupons antes de peças longas, secagem adequada e critérios de aceite claros. Reciclar falhas domésticas tem limites (contaminação, segurança). Emissões e resíduos ainda importam (EPA/NIOSH). Não use economia como desculpa para pular ventilação ou claims food-safe falsos."
-doc_type: "guide"
-domain: ["economics", "sustainability", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["ignore-safety-to-save-money", "claim-zero-waste-printing"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.epa-3d-printing-research", "source.niosh-am-entry"]
-related: ["scenario.speed-vs-quality", "post.support-removal-fff", "quality.test-coupons", "hazard.voc-ufp-ventilation"]
-prerequisites: ["tech.fff"]
+id: econ.fff-cost-waste
+title: Custo e desperdício em FFF
+summary: Custo FFF real combina filamento, tempo de máquina, energia, falhas, suportes
+  e retrabalho — não só R$/kg do spool. Desperdício cai com DfAM (menos suporte),
+  cupons antes de peças longas, secagem adequada e critérios de aceite claros. Reciclar
+  falhas domésticas tem limites (contaminação, segurança). Emissões e resíduos ainda
+  importam (EPA/NIOSH). Não use economia como desculpa para pular ventilação ou claims
+  food-safe falsos.
+doc_type: guide
+domain:
+- economics
+- sustainability
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- ignore-safety-to-save-money
+- claim-zero-waste-printing
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.epa-3d-printing-research
+- source.niosh-am-entry
+related:
+- scenario.speed-vs-quality
+- post.support-removal-fff
+- quality.test-coupons
+- hazard.voc-ufp-ventilation
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["custo de impressão FFF", "desperdício de filamento", "quando não imprimir"]
-aliases_en: ["FFF cost", "filament waste", "print economics"]
-tags: ["economics", "waste", "fff", "sustainability"]
+aliases_pt_br:
+- custo de impressão FFF
+- desperdício de filamento
+aliases_en:
+- FFF cost
+- filament waste
+- print economics
+tags:
+- economics
+- waste
+- fff
+- sustainability
 ---
-
 # Custo e desperdício em FFF
 
 Hub pai: [Economia e sustentabilidade](INDEX.md)

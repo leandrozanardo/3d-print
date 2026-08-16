@@ -1,30 +1,61 @@
 ---
-id: "component.extruder-path"
-title: "Extrusão direct drive vs Bowden"
-summary: "O caminho de extrusão define onde o motor empurra o filamento: direct drive (extrusor no cabeçote) ou Bowden (extrusor remoto + tubo). Direct drive responde melhor a retract curto, flexíveis (TPU) e mudanças rápidas de extrusão; Bowden reduz massa no head mas alonga o sistema elástico. A A1 Mini é direct drive — receitas de retract longos de Bowden não transferem."
-doc_type: "component"
-domain: ["hardware", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "direct-drive"]
-not_for: ["bowden-retract-lengths-on-a1-mini"]
-printers: ["printer.bambu-lab-a1-mini"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "component.hotend", "cal.fff-order", "slicer.bambu-studio", "material.pla", "material.petg"]
-prerequisites: ["tech.fff"]
+id: component.extruder-path
+title: Extrusão direct drive vs Bowden
+summary: 'O caminho de extrusão define onde o motor empurra o filamento: direct drive
+  (extrusor no cabeçote) ou Bowden (extrusor remoto + tubo). Direct drive responde
+  melhor a retract curto, flexíveis (TPU) e mudanças rápidas de extrusão; Bowden reduz
+  massa no head mas alonga o sistema elástico. A A1 Mini é direct drive — receitas
+  de retract longos de Bowden não transferem.'
+doc_type: component
+domain:
+- hardware
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- direct-drive
+not_for:
+- bowden-retract-lengths-on-a1-mini
+printers:
+- printer.bambu-lab-a1-mini
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 12-months
+sources: []
+related:
+- printer.bambu-lab-a1-mini
+- component.hotend
+- cal.fff-order
+- slicer.bambu-studio
+- material.pla
+- material.petg
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["direct drive", "Bowden", "caminho de extrusão"]
-aliases_en: ["direct drive", "Bowden extruder", "extruder path"]
-tags: ["extruder", "direct-drive", "bowden", "fff"]
+aliases_pt_br:
+- direct drive
+- Bowden
+- caminho de extrusão
+aliases_en:
+- direct drive
+- Bowden extruder
+- extruder path
+tags:
+- extruder
+- direct-drive
+- bowden
+- fff
 ---
-
 # Extrusão direct drive vs Bowden
 
 Hub pai: [Componentes e hardware](INDEX.md)
@@ -55,7 +86,7 @@ A [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md) usa **direct drive** (posiç
 | Massa no head | Maior | Menor (potencialmente mais dinâmico) |
 | Manutenção | Acesso ao drive no toolhead | Tubo, fittings, atrito |
 
-**Regra desta base:** na A1 Mini, trate retract/PA como valores de **direct drive**. Não copie 4–8 mm “clássicos de Bowden” sem validação.
+**Regra desta base:** na A1 Mini, trate retract/PA como valores de **direct drive**. Não copie 4–8 mm (fonte oficial / fabricante / heuristic; ver `sources`)  “clássicos de Bowden” sem validação.
 
 ## Sinais de falha do caminho
 

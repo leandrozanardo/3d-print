@@ -1,30 +1,64 @@
 ---
-id: "fund.heat-transfer-fff"
-title: "Transferência de calor em FFF"
-summary: "Em FFF, a peça nasce sob gradientes térmicos: hotend, mesa, cooling de peça e ambiente competem. Entender condução, convecção e solidificação ajuda a priorizar first layer, bonding Z, overhangs, warping e stringing sem tratar temperatura de nozzle como alavanca única. Valores absolutos dependem de SKU, máquina e geometria — esta página é conceitual."
-doc_type: "concept"
-domain: ["fundamentals", "fff", "thermal"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material.pla", "material.petg", "printer.bambu-lab-a1-mini"]
-not_for: ["universal-temperature-tables", "certified-thermal-properties"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.ellis-print-tuning-guide", "source.bambu-a1-mini-tech-specs"]
-related: ["fund.anisotropy", "fund.wetting-first-layer", "process.fff.first-layer", "component.part-cooling", "defect.fff.warping"]
-prerequisites: ["fund.terminology", "tech.fff"]
+id: fund.heat-transfer-fff
+title: Transferência de calor em FFF
+summary: 'Em FFF, a peça nasce sob gradientes térmicos: hotend, mesa, cooling de peça
+  e ambiente competem. Entender condução, convecção e solidificação ajuda a priorizar
+  first layer, bonding Z, overhangs, warping e stringing sem tratar temperatura de
+  nozzle como alavanca única. Valores absolutos dependem de SKU, máquina e geometria
+  — esta página é conceitual.'
+doc_type: concept
+domain:
+- fundamentals
+- fff
+- thermal
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material.pla
+- material.petg
+- printer.bambu-lab-a1-mini
+not_for:
+- universal-temperature-tables
+- certified-thermal-properties
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- fund.anisotropy
+- fund.wetting-first-layer
+- process.fff.first-layer
+- component.part-cooling
+- defect.fff.warping
+prerequisites:
+- fund.terminology
+- tech.fff
 supersedes: []
-aliases_pt_br: ["transferência de calor FFF", "gradientes térmicos impressão", "térmica do cordão"]
-aliases_en: ["FFF heat transfer", "filament thermal gradients", "melt cooling FFF"]
-tags: ["fundamentals", "thermal", "fff"]
+aliases_pt_br:
+- transferência de calor FFF
+- gradientes térmicos impressão
+- térmica do cordão
+aliases_en:
+- FFF heat transfer
+- filament thermal gradients
+- melt cooling FFF
+tags:
+- fundamentals
+- thermal
+- fff
 ---
-
 # Transferência de calor em FFF
 
 Hub pai: [Fundamentos](INDEX.md)
@@ -95,7 +129,6 @@ A [A1 Mini](../21-impressoras/bambu-lab-a1-mini.md) é frame aberto com mesa mó
 ## Fontes
 
 - [source.ellis-print-tuning-guide](../22-fontes/ellis-print-tuning-guide.md)
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

@@ -1,28 +1,44 @@
 ---
-id: "manufacturer.eos"
-title: "Fabricante — EOS"
-summary: "Página canônica do fabricante EOS no catálogo fix-my-print. Segmento: industrial-polymers-metal. Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census com coverage cataloged. Não declara portfólio mundial completo do fabricante além das fontes citadas."
-doc_type: "manufacturer"
-domain: ["printers"]
+id: manufacturer.eos
+title: Fabricante — EOS
+summary: 'Página canônica do fabricante EOS no catálogo fix-my-print. Segmento: industrial-polymers-metal.
+  Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census com coverage
+  cataloged. Não declara portfólio mundial completo do fabricante além das fontes
+  citadas.'
+doc_type: manufacturer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["catalog"]
-not_for: ["complete-oem-portfolio-without-source"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-sources: ["source.eos-official-products"]
-related: ["hub.impressoras", "meta.printer-progress", "meta.printer-global-catalog"]
-prerequisites: ["meta.printer-inclusion-criteria"]
+applies_to:
+- catalog
+not_for:
+- complete-oem-portfolio-without-source
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+sources:
+- source.eos-official-products
+- source.eos-official-metal-printers
+related:
+- hub.impressoras
+- meta.printer-progress
+- meta.printer-global-catalog
+- source.eos-official-metal-printers
+prerequisites:
+- meta.printer-inclusion-criteria
 supersedes: []
-aliases_pt_br: ["EOS"]
-aliases_en: ["EOS"]
-tags: ["manufacturer", "eos"]
+aliases_pt_br:
+- EOS
+aliases_en:
+- EOS
+tags:
+- manufacturer
+- eos
 ---
-
 # Fabricante — EOS
 
 Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.md)
@@ -34,9 +50,10 @@ Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.
 | manufacturer_id | `eos` |
 | Segmento | industrial-polymers-metal |
 | Homepage | https://www.eos.info/ |
-| Products URL | https://www.eos.info/polymer-solutions/polymer-printers |
+| Products URL (polímeros) | https://www.eos.info/polymer-solutions/polymer-printers |
+| Products URL (metais) | https://www.eos.info/metal-solutions/metal-printers |
 | Acesso (2026-08-16) | ok |
-| Fonte | [eos-official-products.md](../22-fontes/eos-official-products.md) |
+| Fontes | [polímeros](../22-fontes/eos-official-products.md) · [metais](../22-fontes/eos-official-metal-printers.md) |
 
 ## Modelos no snapshot
 

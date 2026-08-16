@@ -1,28 +1,54 @@
 ---
-id: "econ.when-not-to-print"
-title: "Quando não imprimir em 3D"
-summary: "Impressão 3D desktop brilha em customização, iteração e geometrias difíceis de usinagem/injeção em baixa escala — e falha como default para commodity barata, peças reguladas, produção em massa sem QMS e usos food/medical sem processo. Esta página lista critérios de ‘não imprimir’ para economizar tempo, filamento e risco."
-doc_type: "guide"
-domain: ["economics", "applications", "fff"]
-technology: ["material-extrusion", "vat-photopolymerization"]
+id: econ.when-not-to-print
+title: Quando não imprimir em 3D
+summary: Impressão 3D desktop brilha em customização, iteração e geometrias difíceis
+  de usinagem/injeção em baixa escala — e falha como default para commodity barata,
+  peças reguladas, produção em massa sem QMS e usos food/medical sem processo. Esta
+  página lista critérios de ‘não imprimir’ para economizar tempo, filamento e risco.
+doc_type: guide
+domain:
+- economics
+- applications
+- fff
+technology:
+- material-extrusion
+- vat-photopolymerization
 process: []
-applies_to: ["desktop-am", "hobby-to-prosumer"]
-not_for: ["ban-all-3d-printing", "self-certify-regulated-parts"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
+applies_to:
+- desktop-am
+- hobby-to-prosumer
+not_for:
+- ban-all-3d-printing
+- self-certify-regulated-parts
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
 sources: []
-related: ["econ.fff-cost-waste", "app.qualification-limits", "app.food-contact-limits", "hazard.food-medical-claims", "hub.economia"]
+related:
+- econ.fff-cost-waste
+- app.qualification-limits
+- app.food-contact-limits
+- hazard.food-medical-claims
+- hub.economia
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["quando não imprimir", "não use impressão 3D", "comprar vs imprimir"]
-aliases_en: ["when not to 3D print", "buy vs print", "print economics stop rules"]
-tags: ["economics", "decision", "dfam", "risk"]
+aliases_pt_br:
+- quando não imprimir
+- não use impressão 3D
+- comprar vs imprimir
+aliases_en:
+- when not to 3D print
+- buy vs print
+- print economics stop rules
+tags:
+- economics
+- decision
+- dfam
+- risk
 ---
-
 # Quando não imprimir em 3D
 
 Hub pai: [Economia e sustentabilidade](INDEX.md)

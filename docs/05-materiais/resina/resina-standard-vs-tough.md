@@ -1,29 +1,59 @@
 ---
-id: "material.resin-standard-vs-tough"
-title: "Resina standard vs tough (fotopolímeros)"
-summary: "Em vat photopolymerization, ‘standard/cosmo’ e ‘tough/ABS-like’ são rótulos de marketing para famílias com trade-offs: detalhe e facilidade vs tenacidade/impacto relativos. Propriedades reais vêm do TDS/SDS do SKU e da pós-cura — não do nome. Nenhum rótulo autoriza uso clínico, dental DIY ou food-contact. Segurança e PPE precedem escolha cosmética."
-doc_type: "material"
-domain: ["materials", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization", "material.resin-families"]
-not_for: ["diy-clinical-dental", "food-contact", "fff-filament-comparison-as-equal"]
-materials: ["material.resin-standard-vs-tough"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
+id: material.resin-standard-vs-tough
+title: Resina standard vs tough (fotopolímeros)
+summary: 'Em vat photopolymerization, ‘standard/cosmo’ e ‘tough/ABS-like’ são rótulos
+  de marketing para famílias com trade-offs: detalhe e facilidade vs tenacidade/impacto
+  relativos. Propriedades reais vêm do TDS/SDS do SKU e da pós-cura — não do nome.
+  Nenhum rótulo autoriza uso clínico, dental DIY ou food-contact. Segurança e PPE
+  precedem escolha cosmética.'
+doc_type: material
+domain:
+- materials
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+- material.resin-families
+not_for:
+- diy-clinical-dental
+- food-contact
+- fff-filament-comparison-as-equal
+materials:
+- material.resin-standard-vs-tough
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
 sources: []
-related: ["material.resin-families", "hazard.resin-ppe-disposal", "tech.sla-dlp-msla", "hub.materiais.resina"]
-prerequisites: ["hazard.resin-ppe-disposal"]
+related:
+- material.resin-families
+- hazard.resin-ppe-disposal
+- tech.sla-dlp-msla
+- hub.materiais.resina
+prerequisites:
+- hazard.resin-ppe-disposal
 supersedes: []
-aliases_pt_br: ["resina standard vs tough", "resina abs-like", "resina cosmético vs impacto"]
-aliases_en: ["standard vs tough resin", "ABS-like resin", "rigid vs tough photopolymer"]
-tags: ["material", "resin", "tough", "standard"]
+aliases_pt_br:
+- resina standard vs tough
+- resina abs-like
+- resina cosmético vs impacto
+aliases_en:
+- standard vs tough resin
+- ABS-like resin
+- rigid vs tough photopolymer
+tags:
+- material
+- resin
+- tough
+- standard
 ---
-
 # Resina standard vs tough (fotopolímeros)
 
 Hub pai: [Materiais — resina](INDEX.md)

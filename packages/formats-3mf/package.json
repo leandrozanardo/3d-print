@@ -1,0 +1,25 @@
+{
+  "name": "@fix-my-print/formats-3mf",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Safe read-only 3MF/ZIP open with path and bomb limits",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest --config jest.config.cjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@fix-my-print/contracts": "0.0.0",
+    "adm-zip": "0.5.16"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "0.5.7",
+    "@types/jest": "30.0.0",
+    "@types/node": "24.2.0",
+    "jest": "30.0.5",
+    "ts-jest": "29.4.1",
+    "typescript": "5.9.2"
+  }
+}

@@ -1,17 +1,27 @@
 ---
-id: "source.fda-am-medical-devices-entry"
-title: "Fonte — FDA guidance AM medical devices (entrada)"
-summary: "Entrada para o guidance da FDA estadunidense ‘Technical Considerations for Additive Manufactured Medical Devices’. Documento de consideração técnica para fabricantes de dispositivos médicos AM — não autoriza food-contact PLA nem certifica peças desktop."
-doc_type: "source"
-domain: ["sources", "regulation"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["app.qualification-limits", "myth.pla-food-safe"]
-tags: ["source", "fda", "medical", "regulation"]
+id: source.fda-am-medical-devices-entry
+title: Fonte — FDA guidance AM medical devices (entrada)
+summary: Entrada para o guidance da FDA estadunidense ‘Technical Considerations for
+  Additive Manufactured Medical Devices’. Documento de consideração técnica para fabricantes
+  de dispositivos médicos AM — não autoriza food-contact PLA nem certifica peças desktop.
+doc_type: source
+domain:
+- sources
+- regulation
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- app.qualification-limits
+- myth.pla-food-safe
+tags:
+- source
+- fda
+- medical
+- regulation
 technology: []
 process: []
 applies_to: []
@@ -21,8 +31,11 @@ prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — FDA guidance AM medical devices (entrada)
 
 | Campo | Valor |

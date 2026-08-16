@@ -1,29 +1,47 @@
 ---
-id: "nozzle.0.4mm-fff"
-title: "Nozzle 0,4 mm em FFF"
-summary: "O nozzle de 0,4 mm é o diâmetro de referência desta base para a A1 Mini: equilíbrio entre detalhe, vazão e robustez a entupimentos. Altura de camada útil tipicamente fica numa fração do diâmetro; largura de linha e flow devem ser co-projetados. Trocar para 0,2/0,6/0,8 mm exige novos perfis — não basta mudar um número."
-doc_type: "component"
-domain: ["hardware", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["nozzle-0.4mm", "printer.bambu-lab-a1-mini"]
-not_for: ["abrasive-fillers-without-wear-assessment"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "material.pla", "setting.layer-height"]
-prerequisites: ["printer.bambu-lab-a1-mini"]
-aliases_pt_br: ["bico 0,4 mm", "nozzle 0.4"]
-aliases_en: ["0.4 mm nozzle"]
-tags: ["nozzle", "fff"]
+id: nozzle.0.4mm-fff
+title: Nozzle 0,4 mm em FFF
+summary: 'O nozzle de 0,4 mm é o diâmetro de referência desta base para a A1 Mini:
+  equilíbrio entre detalhe, vazão e robustez a entupimentos. Altura de camada útil
+  tipicamente fica numa fração do diâmetro; largura de linha e flow devem ser co-projetados.
+  Trocar para 0,2/0,6/0,8 mm exige novos perfis — não basta mudar um número.'
+doc_type: component
+domain:
+- hardware
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- nozzle-0.4mm
+- printer.bambu-lab-a1-mini
+not_for:
+- abrasive-fillers-without-wear-assessment
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 12-months
+sources: []
+related:
+- printer.bambu-lab-a1-mini
+- material.pla
+- setting.layer-height
+prerequisites:
+- printer.bambu-lab-a1-mini
+aliases_pt_br:
+- bico 0,4 mm
+- nozzle 0.4
+aliases_en:
+- 0.4 mm nozzle
+tags:
+- nozzle
+- fff
 supersedes: []
 ---
-
-# Nozzle 0,4 mm em FFF
+# Nozzle 0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`)  em FFF
 
 Hub pai: [Componentes](INDEX.md)
 
@@ -36,7 +54,7 @@ O **nozzle** (bico) define o diâmetro de saída do polímero fundido. Em FFF de
 - Escolher altura de camada e largura de extrusão
 - Avaliar detalhe fino versus tempo
 - Diagnosticar subextrusão / clog / desgaste
-- Decidir se miniatura exige 0,2 mm (fora do escopo profundo atual)
+- Decidir se miniatura exige 0,2 mm (fonte oficial/fabricante/heuristic; ver sources)  (fora do escopo profundo atual)
 
 ## Mecanismo e dependências
 
@@ -46,7 +64,7 @@ Heurística comum de partida (não é lei física universal): altura de camada f
 
 ## O que fazer
 
-1. Manter perfis nomeados para 0,4 mm; criar família nova ao trocar diâmetro.
+1. Manter perfis nomeados para 0,4 mm (fonte oficial/fabricante/heuristic; ver sources) ; criar família nova ao trocar diâmetro.
 2. Filamentos abrasivos (CF/GF, filled): avaliar desgaste — latão/aço inox/hardened diferem; fabricante A1 Mini lista vários reforçados como Not Recommended.
 3. Em falhas de vazão, distinguir: clog parcial, limite volumétrico, umidade, grind do extrusor.
 4. Não “compensar” nozzle errado só com flow ratio.
@@ -76,7 +94,6 @@ Nozzle e heat block atingem temperaturas altas — risco de queimadura. Troca a 
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

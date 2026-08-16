@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "expectedHead": "4f8e42537809c45d6b446755f8260b295ae20b84",
+  "status": "dry-run-only",
+  "note": "Live Python deletion is blocked until APPROVED: RETIRE PYTHON with sandbox proof and full mesh repair parity. This manifest is empty by design so dry-run succeeds without deleting.",
+  "files": []
+}

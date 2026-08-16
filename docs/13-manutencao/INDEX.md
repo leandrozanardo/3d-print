@@ -1,28 +1,38 @@
 ---
-id: "hub.manutencao"
-title: "Manutenção"
-summary: "Preventiva e corretiva por classe de máquina. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
-doc_type: "hub"
-domain: ["hub"]
+id: hub.manutencao
+title: Manutenção
+summary: Preventiva e corretiva por classe de máquina. Hub de navegação; a cobertura
+  profunda depende da matriz em _meta/cobertura.md.
+doc_type: hub
+domain:
+- hub
 technology: []
 process: []
 applies_to: []
-not_for: ["complete-coverage-claim"]
-knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-wiki-a1-mini", "source.bambu-a1-mini-tech-specs"]
-related: ["meta.coverage", "meta.knowledge-map", "maint.a1-mini-preventive", "printer.bambu-lab-a1-mini"]
-prerequisites: ["meta.architecture"]
+not_for:
+- complete-coverage-claim
+knowledge_status: draft
+evidence_status: unknown
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.bambu-wiki-a1-mini
+related:
+- meta.coverage
+- meta.knowledge-map
+- maint.a1-mini-preventive
+- printer.bambu-lab-a1-mini
+prerequisites:
+- meta.architecture
 supersedes: []
-aliases_pt_br: ["Manutenção"]
+aliases_pt_br:
+- Manutenção
 aliases_en: []
-tags: ["hub"]
+tags:
+- hub
 ---
-
 # Manutenção
 
 ## Escopo

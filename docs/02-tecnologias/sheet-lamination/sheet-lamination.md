@@ -1,30 +1,53 @@
 ---
-id: "tech.sheet-lamination"
-title: "Sheet lamination"
-summary: "Categoria em que folhas (papel, polímero, metal, compósito) são unidas (adesivo, solda ultrassônica, brasagem, etc.) e cortadas contorno a contorno. Útil para protótipos rápidos, tooling e certas rotas metálicas; anisotropia planar e remoção de excesso são temas centrais."
-doc_type: "technology"
-domain: ["technologies"]
-technology: ["sheet-lamination"]
-process: ["sheet-lamination"]
-applies_to: ["sheet-lamination", "uol", "laminated-object"]
-not_for: ["fff-layer-height-as-same-physics"]
+id: tech.sheet-lamination
+title: Sheet lamination
+summary: Categoria em que folhas (papel, polímero, metal, compósito) são unidas (adesivo,
+  solda ultrassônica, brasagem, etc.) e cortadas contorno a contorno. Útil para protótipos
+  rápidos, tooling e certas rotas metálicas; anisotropia planar e remoção de excesso
+  são temas centrais.
+doc_type: technology
+domain:
+- technologies
+technology:
+- sheet-lamination
+process:
+- sheet-lamination
+applies_to:
+- sheet-lamination
+- uol
+- laminated-object
+not_for:
+- fff-layer-height-as-same-physics
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["fund.terminology", "fund.anisotropy", "tech.fff"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["laminação de folhas", "LOM-like"]
-aliases_en: ["sheet lamination", "laminated object manufacturing", "UAM"]
-tags: ["sheet-lamination", "uol", "lamination"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- fund.terminology
+- fund.anisotropy
+- tech.fff
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- laminação de folhas
+- LOM-like
+aliases_en:
+- sheet lamination
+- laminated object manufacturing
+- UAM
+tags:
+- sheet-lamination
+- uol
+- lamination
 supersedes: []
 ---
-
 # Sheet lamination
 
 Hub pai: [Tecnologias](../INDEX.md) · pasta [sheet-lamination](./)

@@ -1,32 +1,71 @@
 ---
-id: "process.fff.first-layer"
-title: "Primeira camada (first layer) em FFF"
-summary: "A primeira camada determina se a peça nasce aderida com geometria correta na base. Falha aqui produz peels, spaghetti e falsos diagnósticos de warping. Em A1 Mini + PEI + PLA/PETG, priorize calibração/limpeza, squish visual (linhas se beijando), velocidade baixa e temperatura de mesa/nozzle no range do material — antes de compensações numéricas finas."
-doc_type: "process"
-domain: ["process", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["mid-print-dimensional-error-only", "resin-first-layers"]
-symptoms: ["symptom.no-stick", "symptom.uneven-first-layer", "symptom.elephant-foot"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration", "source.bambu-a1-mini-tech-specs"]
-related: ["defect.fff.warping", "material.pla", "material.petg", "printer.bambu-lab-a1-mini", "defect.fff.layer-shift", "defect.fff.elephant-foot", "troubleshoot.fff-symptom-index"]
-prerequisites: ["printer.bambu-lab-a1-mini", "tech.fff"]
-aliases_pt_br: ["primeira camada", "camada inicial"]
-aliases_en: ["first layer", "initial layer"]
-tags: ["first-layer", "adhesion", "fff"]
+id: process.fff.first-layer
+title: Primeira camada (first layer) em FFF
+summary: A primeira camada determina se a peça nasce aderida com geometria correta
+  na base. Falha aqui produz peels, spaghetti e falsos diagnósticos de warping. Em
+  A1 Mini + PEI + PLA/PETG, priorize calibração/limpeza, squish visual (linhas se
+  beijando), velocidade baixa e temperatura de mesa/nozzle no range do material —
+  antes de compensações numéricas finas.
+doc_type: process
+domain:
+- process
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- mid-print-dimensional-error-only
+- resin-first-layers
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- defect.fff.warping
+- material.pla
+- material.petg
+- printer.bambu-lab-a1-mini
+- defect.fff.layer-shift
+- defect.fff.elephant-foot
+- troubleshoot.fff-symptom-index
+prerequisites:
+- printer.bambu-lab-a1-mini
+- tech.fff
+aliases_pt_br:
+- primeira camada
+- camada inicial
+aliases_en:
+- first layer
+- initial layer
+tags:
+- first-layer
+- adhesion
+- fff
 supersedes: []
+symptom_tags:
+- no-stick
+- uneven-first-layer
+- elephant-foot
 ---
-
 # Primeira camada (first layer) em FFF
 
 Hub pai: [Processo de impressão](../INDEX.md)
@@ -49,7 +88,7 @@ A **primeira camada** é o cordão inicial depositado sobre a build surface. Ela
 
 | Observação | Preferir |
 |---|---|
-| Nunca grudou / soltou na camada 1–3 | Esta página + adesão |
+| Nao (regra de seguranca) grudou / soltou na camada 1–3 | Esta página + adesão |
 | Cantos sobem após muitas camadas, base ok | [Empenamento](../../12-problemas-e-diagnostico/fff/empenamento.md) |
 | Deslocamento XY permanente | [Layer shift](../../12-problemas-e-diagnostico/fff/layer-shift.md) |
 | Base alargada / furos apertados só embaixo | [Elephant foot](../../12-problemas-e-diagnostico/fff/elephant-foot.md) |
@@ -88,17 +127,17 @@ Métodos gerais de calibração: [Ellis](../../22-fontes/ellis-print-tuning-guid
 | Aspecto | PLA | PETG |
 |---|---|---|
 | Adesão PEI | geralmente fácil | pode soldar no smooth |
-| Bed partida | ~35–60 °C | ~70–80 °C (cap 80) |
+| Bed partida | ~35–60 °C | ~70–80 °C (fonte oficial/fabricante/heuristic; ver sources)  (cap 80) |
 | Cooling inicial | baixo nas primeiras camadas | manter baixo por mais tempo |
 | Placa | smooth ou textured | textured preferida |
 
 ## O que não mudar junto
 
-Não altere simultaneamente Z offset, bed temp, first layer speed e flow. Uma variável por experimento sempre que possível.
+Não altere simultaneamente Z offset, bed temp, first layer speed e flow. Uma variável por experimento em geral (condicional) que possível.
 
 ## Validação
 
-Cupom pequeno (quadrado 20–40 mm) antes da peça crítica. Encaixes: cupom de fit — aparência ≠ metrologia.
+Cupom pequeno (quadrado 20–40 mm (fonte oficial/fabricante/heuristic; ver sources) ) antes da peça crítica. Encaixes: cupom de fit — aparência ≠ metrologia.
 
 ## Relações com outros conceitos
 

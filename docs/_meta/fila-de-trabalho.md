@@ -1,19 +1,23 @@
 ---
-id: "meta.work-queue"
-title: "Fila de trabalho"
-summary: "Waves 0–11 done; Maintenance A done. Próximo: Maintenance B (migração legado, pin Studio, reviewed gates)."
-doc_type: "plan"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "per-batch"
-related: ["meta.continuation", "meta.coverage"]
-tags: ["queue"]
+id: meta.work-queue
+title: Fila de trabalho
+summary: 'Waves 0–11 done; Maintenance A done. Próximo: Maintenance B (migração legado,
+  pin Studio, reviewed gates).'
+doc_type: plan
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: per-batch
+related:
+- meta.continuation
+- meta.coverage
+tags:
+- queue
 ---
-
 # Fila de trabalho
 
 | Wave | Tema | Status |

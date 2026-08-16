@@ -1,28 +1,40 @@
 ---
-id: "meta.printer-exclusions"
-title: "Exclusões do catálogo de impressoras"
-summary: "O que fica de fora do catálogo canônico de impressoras: stubs sem evidência, bundles sem hardware distinto, listagens de marketplace sem identidade OEM, e claims de cobertura total sem denominador."
-doc_type: "policy"
-domain: ["printers", "meta"]
+id: meta.printer-exclusions
+title: Exclusões do catálogo de impressoras
+summary: 'O que fica de fora do catálogo canônico de impressoras: stubs sem evidência,
+  bundles sem hardware distinto, listagens de marketplace sem identidade OEM, e claims
+  de cobertura total sem denominador.'
+doc_type: policy
+domain:
+- printers
+- meta
 technology: []
 process: []
-applies_to: ["catalog-maintainers"]
-not_for: ["hide-discontinued-relevant-models"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-16"
-review_cycle: "per-batch"
+applies_to:
+- catalog-maintainers
+not_for:
+- hide-discontinued-relevant-models
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-16'
+review_cycle: per-batch
 sources: []
-related: ["meta.printer-inclusion-criteria", "meta.printer-progress"]
-prerequisites: ["meta.printer-inclusion-criteria"]
+related:
+- meta.printer-inclusion-criteria
+- meta.printer-progress
+prerequisites:
+- meta.printer-inclusion-criteria
 supersedes: []
-aliases_pt_br: ["exclusões catálogo impressoras"]
-aliases_en: ["printer catalog exclusions"]
-tags: ["exclusions", "catalog"]
+aliases_pt_br:
+- exclusões catálogo impressoras
+aliases_en:
+- printer catalog exclusions
+tags:
+- exclusions
+- catalog
 ---
-
 # Exclusões do catálogo
 
 ## Excluir / não catalogar como impressora

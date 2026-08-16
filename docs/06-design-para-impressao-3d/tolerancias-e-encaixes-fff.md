@@ -1,28 +1,63 @@
 ---
-id: "design.tolerances-fff"
-title: "Tolerâncias e encaixes em FFF"
-summary: "Em FFF, tolerância dimensional não é ‘precisão CNC’: depende de nozzle, flow, elephant foot, orientação, material e resfriamento. Para encaixes (pin/hole, tampa, snap), use folgas de partida calibradas com cupom e paquímetro — tipicamente ordem 0,15–0,40 mm de folga diametral em PLA na A1 Mini com nozzle 0,4 mm — e só então loteie. Compense a primeira camada antes de culpar o CAD. Esta página não garante encaixe ‘à prova de falha’ nem substitui ensaio funcional."
-doc_type: "guide"
-domain: ["design", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "nozzle-0.4mm", "material.pla", "material.petg"]
-not_for: ["cnc-tolerance-transfer", "metal-press-fit-specs", "food-medical-seals"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.bambu-a1-mini-tech-specs"]
-related: ["design.holes-threads-inserts", "design.strength-anisotropy", "process.fff.first-layer", "quality.accuracy-vs-precision", "quality.test-coupons"]
-prerequisites: ["tech.fff", "process.fff.first-layer"]
+id: design.tolerances-fff
+title: Tolerâncias e encaixes em FFF
+summary: 'Em FFF, tolerância dimensional não é ‘precisão CNC’: depende de nozzle,
+  flow, elephant foot, orientação, material e resfriamento. Para encaixes (pin/hole,
+  tampa, snap), use folgas de partida calibradas com cupom e paquímetro — tipicamente
+  ordem 0,15–0,40 mm de folga diametral em PLA na A1 Mini com nozzle 0,4 mm — e só
+  então loteie. Compense a primeira camada antes de culpar o CAD. Esta página não
+  garante encaixe ‘à prova de falha’ nem substitui ensaio funcional.'
+doc_type: guide
+domain:
+- design
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- nozzle-0.4mm
+- material.pla
+- material.petg
+not_for:
+- cnc-tolerance-transfer
+- metal-press-fit-specs
+- food-medical-seals
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- design.holes-threads-inserts
+- design.strength-anisotropy
+- process.fff.first-layer
+- quality.accuracy-vs-precision
+- quality.test-coupons
+prerequisites:
+- tech.fff
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["tolerâncias FFF", "encaixes mecânicos FFF", "folga pin hole"]
-aliases_en: ["FFF tolerances", "clearance fits", "mechanical fits"]
-tags: ["dfam", "tolerances", "fff", "fits"]
+aliases_pt_br:
+- tolerâncias FFF
+- encaixes mecânicos FFF
+- folga pin hole
+aliases_en:
+- FFF tolerances
+- clearance fits
+- mechanical fits
+tags:
+- dfam
+- tolerances
+- fff
+- fits
 ---
-
 # Tolerâncias e encaixes em FFF
 
 Hub pai: [Design para impressão 3D](INDEX.md)

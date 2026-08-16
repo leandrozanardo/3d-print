@@ -1,28 +1,51 @@
 ---
-id: "printer.voxelab-aquila-x3-max"
-title: "Voxelab Aquila X3 MAX"
-summary: "Voxelab Aquila X3 MAX é um modelo do fabricante Voxelab registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.voxelab-aquila-x3-max
+title: Voxelab Aquila X3 MAX
+summary: 'Voxelab Aquila X3 MAX é um modelo do fabricante Voxelab registrado no catálogo
+  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
+  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
+  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
+  known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["voxelab"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.voxelab-official-products"]
-related: ["manufacturer.voxelab", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- voxelab
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.voxelab-official-products
+related:
+- manufacturer.voxelab
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Voxelab Aquila X3 MAX"]
-tags: ["printer", "cataloged", "voxelab"]
+aliases_en:
+- Voxelab Aquila X3 MAX
+tags:
+- printer
+- cataloged
+- voxelab
+manufacturer_id: voxelab
+model_name: Voxelab Aquila X3 MAX
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # Voxelab Aquila X3 MAX
 

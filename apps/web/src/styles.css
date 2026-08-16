@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  line-height: 1.45;
+  color: #14212b;
+  background: #f3f6f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+}
+
+.hero p {
+  margin: 0;
+  color: #405463;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #d5dee5;
+  padding: 1rem 1.1rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.diag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.diag-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.note {
+  margin: 0.85rem 0 0;
+  color: #4a5d6a;
+  font-size: 0.92rem;
+}
+
+.dropzone {
+  border: 1px dashed #7a90a0;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  background: #f8fafb;
+}
+
+.dropzone-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.progress-track {
+  height: 10px;
+  background: #e4ebf0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2f6fed;
+}
+
+button {
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #2f6fed;
+  background: #2f6fed;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.viewer {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+}
+
+.viewer canvas {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  background: linear-gradient(160deg, #d9e4ec, #f7fafc);
+  border: 1px solid #c9d5de;
+}

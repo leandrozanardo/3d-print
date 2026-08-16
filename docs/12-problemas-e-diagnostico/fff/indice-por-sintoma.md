@@ -1,28 +1,58 @@
 ---
-id: "troubleshoot.fff-symptom-index"
-title: "Índice por sintoma (FFF)"
-summary: "Mapa rápido sintoma → página canônica FFF. Escolha uma linha, abra a página, corrija uma causa por vez. Priorize segurança e adesão antes de cosmética. Cobre empenamento, primeira camada, stringing, subextrusão, layer shift, elephant foot, delaminação, ringing, Z-banding e pillowing; aponta legado quando ainda não migrado."
-doc_type: "troubleshooting"
-domain: ["troubleshooting", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["change-five-knobs-at-once", "skip-drying-when-wet-signs"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
+id: troubleshoot.fff-symptom-index
+title: Índice por sintoma (FFF)
+summary: Mapa rápido sintoma → página canônica FFF. Escolha uma linha, abra a página,
+  corrija uma causa por vez. Priorize segurança e adesão antes de cosmética. Cobre
+  empenamento, primeira camada, stringing, subextrusão, layer shift, elephant foot,
+  delaminação, ringing, Z-banding e pillowing; aponta legado quando ainda não migrado.
+doc_type: troubleshooting
+domain:
+- troubleshooting
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- change-five-knobs-at-once
+- skip-drying-when-wet-signs
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
 sources: []
-related: ["defect.fff.warping", "process.fff.first-layer", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.layer-shift", "defect.fff.elephant-foot", "defect.fff.delamination", "defect.fff.ringing-ghosting", "defect.fff.z-banding", "defect.fff.pillowing"]
-prerequisites: ["tech.fff"]
+related:
+- defect.fff.warping
+- process.fff.first-layer
+- defect.fff.stringing
+- defect.fff.under-extrusion
+- defect.fff.layer-shift
+- defect.fff.elephant-foot
+- defect.fff.delamination
+- defect.fff.ringing-ghosting
+- defect.fff.z-banding
+- defect.fff.pillowing
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["índice por sintoma", "matriz sintoma causa", "troubleshooting FFF"]
-aliases_en: ["symptom index", "symptom cause matrix", "FFF troubleshooting"]
-tags: ["troubleshooting", "index", "fff"]
+aliases_pt_br:
+- índice por sintoma
+- matriz sintoma causa
+- troubleshooting FFF
+aliases_en:
+- symptom index
+- symptom cause matrix
+- FFF troubleshooting
+tags:
+- troubleshooting
+- index
+- fff
 ---
-
 # Índice por sintoma (FFF)
 
 Hub pai: [Problemas FFF](INDEX.md) · [Problemas](../INDEX.md)

@@ -1,30 +1,62 @@
 ---
-id: "material.tpu"
-title: "TPU (flexíveis) em FFF"
-summary: "TPU e filamentos flexíveis produzem peças elásticas, antiderrapantes e absorvedoras de impacto. Na A1 Mini o fabricante lista TPU como Ideal; o extrusor direct drive ajuda frente a Bowden, mas velocidade alta, retração longa e bobina úmida causam grind, stringing e subextrusão. Shore hardness e marca não são intercambiáveis — ranges são ponto de partida com TDS e validação na impressora."
-doc_type: "material"
-domain: ["materials", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "nozzle-0.4mm", "direct-drive"]
-not_for: ["pla-speed-profiles", "tight-tolerance-as-rigid", "bowden-long-retract-copy"]
-materials: ["material.tpu"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "material.drying-storage", "setting.retraction", "defect.fff.stringing", "defect.fff.under-extrusion"]
-prerequisites: ["tech.fff"]
+id: material.tpu
+title: TPU (flexíveis) em FFF
+summary: TPU e filamentos flexíveis produzem peças elásticas, antiderrapantes e absorvedoras
+  de impacto. Na A1 Mini o fabricante lista TPU como Ideal; o extrusor direct drive
+  ajuda frente a Bowden, mas velocidade alta, retração longa e bobina úmida causam
+  grind, stringing e subextrusão. Shore hardness e marca não são intercambiáveis —
+  ranges são ponto de partida com TDS e validação na impressora.
+doc_type: material
+domain:
+- materials
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- nozzle-0.4mm
+- direct-drive
+not_for:
+- pla-speed-profiles
+- tight-tolerance-as-rigid
+- bowden-long-retract-copy
+materials:
+- material.tpu
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources: []
+related:
+- printer.bambu-lab-a1-mini
+- material.drying-storage
+- setting.retraction
+- defect.fff.stringing
+- defect.fff.under-extrusion
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["TPU", "filamento flexível", "poliuretano termoplástico"]
-aliases_en: ["TPU", "thermoplastic polyurethane", "flexible filament"]
-tags: ["material", "tpu", "flexible", "fff"]
+aliases_pt_br:
+- TPU
+- filamento flexível
+- poliuretano termoplástico
+aliases_en:
+- TPU
+- thermoplastic polyurethane
+- flexible filament
+tags:
+- material
+- tpu
+- flexible
+- fff
 ---
-
 # TPU (flexíveis) em FFF
 
 Hub pai: [Materiais FFF](INDEX.md)
@@ -56,7 +88,7 @@ Partir do **preset TPU A1 Mini** no Bambu Studio (nome/campo podem mudar entre v
 
 | Parâmetro | Faixa de partida (ordem de magnitude / legado + prática) | Papel |
 |---|---|---|
-| Nozzle | ~210–230 °C | Torre; marca manda |
+| Nozzle | ~210–230 °C (fonte oficial / fabricante / heuristic; ver `sources`)  | Torre; marca manda |
 | Bed | ~30–60 °C | Adesão sem soldar demais o PEI |
 | Velocidade | bem abaixo de PLA “rápido” | Evitar buckling / click |
 | Retração | mínima / curta (direct drive) | Retração longa → jam |
@@ -104,7 +136,6 @@ Fonte operacional EN: [projeto/materiais/tpu.md](../../projeto/materiais/tpu.md)
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../../22-fontes/bambu-a1-mini-tech-specs.md)
 - TDS/SDS e preset do fabricante do filamento
 - Legado EN: [tpu.md](../../projeto/materiais/tpu.md)
 

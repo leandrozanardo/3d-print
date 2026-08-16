@@ -1,30 +1,72 @@
 ---
-id: "material.drying-storage"
-title: "Secagem e armazenamento de filamentos FFF"
-summary: "Filamento úmido não é problema de slicer: vapor no hotend gera pops, bolhas, stringing, falsa subextrusão e camadas fracas. PLA é moderadamente higroscópico; PETG, TPU, PA e PC exigem disciplina maior. A A1 Mini não seca bobina durante o print — secar e vedar antes de culpar retração ou flow. Faixas de tempo/temperatura são pontos de partida subordinados ao TDS e aos limites do secador/carretel."
-doc_type: "material"
-domain: ["materials", "fff", "process"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg", "material.tpu"]
-not_for: ["slicer-only-fix-for-wet-filament", "kitchen-oven-without-temp-control"]
-materials: ["material.pla", "material.petg", "material.tpu", "material.pa", "material.pc"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.pla", "material.petg", "material.tpu", "material.pa", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.delamination"]
-prerequisites: ["tech.fff"]
+id: material.drying-storage
+title: Secagem e armazenamento de filamentos FFF
+summary: 'Filamento úmido não é problema de slicer: vapor no hotend gera pops, bolhas,
+  stringing, falsa subextrusão e camadas fracas. PLA é moderadamente higroscópico;
+  PETG, TPU, PA e PC exigem disciplina maior. A A1 Mini não seca bobina durante o
+  print — secar e vedar antes de culpar retração ou flow. Faixas de tempo/temperatura
+  são pontos de partida subordinados ao TDS e aos limites do secador/carretel.'
+doc_type: material
+domain:
+- materials
+- fff
+- process
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+- material.tpu
+not_for:
+- slicer-only-fix-for-wet-filament
+- kitchen-oven-without-temp-control
+materials:
+- material.pla
+- material.petg
+- material.tpu
+- material.pa
+- material.pc
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- material.pla
+- material.petg
+- material.tpu
+- material.pa
+- defect.fff.stringing
+- defect.fff.under-extrusion
+- defect.fff.delamination
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["secagem de filamento", "umidade", "armazenamento de bobina"]
-aliases_en: ["filament drying", "moisture", "spool storage", "hygroscopy"]
-tags: ["drying", "storage", "humidity", "fff"]
+aliases_pt_br:
+- secagem de filamento
+- umidade
+- armazenamento de bobina
+aliases_en:
+- filament drying
+- moisture
+- spool storage
+- hygroscopy
+tags:
+- drying
+- storage
+- humidity
+- fff
 ---
-
 # Secagem e armazenamento de filamentos FFF
 
 Hub pai: [Materiais FFF](INDEX.md)
@@ -81,7 +123,7 @@ Após secar ainda ruim?
 
 | Família | Temp. típica de partida | Tempo típico de partida | Notas |
 |---|---|---|---|
-| PLA | ~45–55 °C | ~4–6 h | Não exceda limite do spool |
+| PLA | ~45–55 °C (fonte oficial / fabricante / heuristic; ver `sources`)  | ~4–6 h | Não exceda limite do spool |
 | PETG | ~65–70 °C | ~4–8 h | Re-secar após aberto em clima úmido |
 | TPU | seguir TDS (ordem semelhante a PETG em muitos SKUs) | TDS | Não inventar; marca manda |
 | PA | frequentemente mais quente/longo no TDS | TDS | Tratar overnight aberto como molhado |

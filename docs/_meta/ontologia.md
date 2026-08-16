@@ -1,19 +1,26 @@
 ---
-id: "meta.ontology"
-title: "Ontologia da base de conhecimento"
-summary: "Entidades e relações semânticas obrigatórias para manufatura aditiva: processo, tecnologia, impressora, material, setting, sintoma, causa, teste, correção, hazard e fonte. Linguagem consistente para front matter e seção Relações."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["meta.architecture", "meta.link-policy", "meta.templates"]
-tags: ["ontology", "rag"]
+id: meta.ontology
+title: Ontologia da base de conhecimento
+summary: 'Entidades e relações semânticas obrigatórias para manufatura aditiva: processo,
+  tecnologia, impressora, material, setting, sintoma, causa, teste, correção, hazard
+  e fonte. Linguagem consistente para front matter e seção Relações.'
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- meta.architecture
+- meta.link-policy
+- meta.templates
+tags:
+- ontology
+- rag
 ---
-
 # Ontologia
 
 ## Entidades principais

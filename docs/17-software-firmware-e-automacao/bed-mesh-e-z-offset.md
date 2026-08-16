@@ -1,29 +1,62 @@
 ---
-id: "firmware.bed-mesh-z-offset"
-title: "Bed mesh e Z-offset (conceitos)"
-summary: "Bed mesh (malha de nivelamento) compensa desvios de planicidade da mesa ao longo de XY; Z-offset (ou equivalente) ajusta a distância nozzle↔superfície na first layer. São ferramentas complementares, não substitutas de mesa danificada, sujeira ou homing falho. Conceitos gerais FFF; em A1 Mini preferir o fluxo oficial do fabricante — sem inventar códigos proprietários."
-doc_type: "concept"
-domain: ["firmware", "calibration", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "first-layer", "printer.bambu-lab-a1-mini"]
-not_for: ["invented-oem-mesh-opcodes", "replace-damaged-bed-with-mesh-only"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.teaching-tech-calibration", "source.ellis-print-tuning-guide"]
-related: ["process.fff.first-layer", "fund.wetting-first-layer", "surface.pei", "firmware.gcode-basics", "hub.software"]
-prerequisites: ["tech.fff"]
+id: firmware.bed-mesh-z-offset
+title: Bed mesh e Z-offset (conceitos)
+summary: Bed mesh (malha de nivelamento) compensa desvios de planicidade da mesa ao
+  longo de XY; Z-offset (ou equivalente) ajusta a distância nozzle↔superfície na first
+  layer. São ferramentas complementares, não substitutas de mesa danificada, sujeira
+  ou homing falho. Conceitos gerais FFF; em A1 Mini preferir o fluxo oficial do fabricante
+  — sem inventar códigos proprietários.
+doc_type: concept
+domain:
+- firmware
+- calibration
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- first-layer
+- printer.bambu-lab-a1-mini
+not_for:
+- invented-oem-mesh-opcodes
+- replace-damaged-bed-with-mesh-only
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.teaching-tech-calibration
+- source.ellis-print-tuning-guide
+related:
+- process.fff.first-layer
+- fund.wetting-first-layer
+- surface.pei
+- firmware.gcode-basics
+- hub.software
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["malha da mesa", "bed leveling mesh", "z-offset"]
-aliases_en: ["bed mesh", "Z offset", "ABL mesh"]
-tags: ["firmware", "calibration", "bed-mesh", "z-offset", "fff"]
+aliases_pt_br:
+- malha da mesa
+- bed leveling mesh
+- z-offset
+aliases_en:
+- bed mesh
+- Z offset
+- ABL mesh
+tags:
+- firmware
+- calibration
+- bed-mesh
+- z-offset
+- fff
 ---
-
 # Bed mesh e Z-offset (conceitos)
 
 Hub pai: [Software, firmware e automação](./INDEX.md)

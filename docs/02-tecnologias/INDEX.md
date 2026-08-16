@@ -1,28 +1,38 @@
 ---
-id: "hub.tecnologias"
-title: "Tecnologias de manufatura aditiva"
-summary: "Sete categorias de processo e distinção entre categoria, processo genérico e nome comercial. Cobertura parcial: FFF, vat (SLA/DLP/MSLA), PBF, BJ, MJ, DED/WAAM, sheet lamination e comparação entre categorias."
-doc_type: "hub"
-domain: ["hub"]
+id: hub.tecnologias
+title: Tecnologias de manufatura aditiva
+summary: 'Sete categorias de processo e distinção entre categoria, processo genérico
+  e nome comercial. Cobertura parcial: FFF, vat (SLA/DLP/MSLA), PBF, BJ, MJ, DED/WAAM,
+  sheet lamination e comparação entre categorias.'
+doc_type: hub
+domain:
+- hub
 technology: []
 process: []
 applies_to: []
-not_for: ["complete-coverage-claim"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.iso-astm-52900-entry"]
-related: ["meta.coverage", "meta.knowledge-map", "tech.category-comparison"]
-prerequisites: ["meta.architecture"]
+not_for:
+- complete-coverage-claim
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.iso-astm-52900-entry
+related:
+- meta.coverage
+- meta.knowledge-map
+- tech.category-comparison
+prerequisites:
+- meta.architecture
 supersedes: []
-aliases_pt_br: ["Tecnologias de manufatura aditiva"]
+aliases_pt_br:
+- Tecnologias de manufatura aditiva
 aliases_en: []
-tags: ["hub"]
+tags:
+- hub
 ---
-
 # Tecnologias de manufatura aditiva
 
 ## Escopo

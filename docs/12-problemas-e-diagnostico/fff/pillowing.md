@@ -1,34 +1,75 @@
 ---
-id: "defect.fff.pillowing"
-title: "Pillowing em FFF"
-summary: "Pillowing é a superfície superior ondulada/almofadada sobre infill, quando solid tops não fecham o vão entre nervuras. Causas comuns: poucos top layers, infill baixo/esparso, bridging/cooling insuficiente no topo, subextrusão ou velocidade alta na cobertura. Corrija geometria de tops/infill antes de ‘mais temperatura’. Diferencie de warping de canto e de gaps de subextrusão nas paredes. Sem porcentagens mágicas universais — parta do preset e valide no cupom."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["side-wall-gaps-as-pillowing", "spiral-vase-top-expectations"]
-symptoms: ["symptom.pillowing", "symptom.bumpy-top"]
-causes: ["cause.insufficient-top-layers", "cause.sparse-infill", "cause.cooling", "cause.under-extrusion"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.top-layers", "setting.infill", "setting.cooling"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide"]
-related: ["defect.fff.under-extrusion", "setting.infill", "scenario.speed-vs-quality"]
-prerequisites: ["tech.fff"]
+id: defect.fff.pillowing
+title: Pillowing em FFF
+summary: 'Pillowing é a superfície superior ondulada/almofadada sobre infill, quando
+  solid tops não fecham o vão entre nervuras. Causas comuns: poucos top layers, infill
+  baixo/esparso, bridging/cooling insuficiente no topo, subextrusão ou velocidade
+  alta na cobertura. Corrija geometria de tops/infill antes de ‘mais temperatura’.
+  Diferencie de warping de canto e de gaps de subextrusão nas paredes. Sem porcentagens
+  mágicas universais — parta do preset e valide no cupom.'
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- side-wall-gaps-as-pillowing
+- spiral-vase-top-expectations
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- defect.fff.under-extrusion
+- setting.infill
+- scenario.speed-vs-quality
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["pillowing", "topo almofadado", "coberturas onduladas"]
-aliases_en: ["pillowing", "bumpy top surface", "pillow topping"]
-tags: ["pillowing", "troubleshooting", "fff", "tops"]
+aliases_pt_br:
+- pillowing
+- topo almofadado
+- coberturas onduladas
+aliases_en:
+- pillowing
+- bumpy top surface
+- pillow topping
+tags:
+- pillowing
+- troubleshooting
+- fff
+- tops
+symptom_tags:
+- pillowing
+- bumpy-top
+cause_tags:
+- insufficient-top-layers
+- sparse-infill
+- cooling
+- under-extrusion
+setting_tags:
+- top-layers
+- infill
+- cooling
 ---
-
 # Pillowing em FFF
 
 Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.md)

@@ -12,6 +12,12 @@ from typing import Any
 from core.paths import require_directory
 from core.wiki_frontmatter import FrontMatterError, ParsedDocument, parse_markdown_document
 from core.wiki_links import LINK_RE, SKIP_SCHEMES, validate_wiki_links
+from core.wiki_contract import (
+    DOCUMENTED_DOD_MARKERS,
+    ID_REFERENCE_FIELDS,
+    PRINTER_REQUIRED_FIELDS,
+    SOURCE_TYPES,
+)
 from core.wiki_schema import (
     COVERAGE_LEVEL,
     CONFIDENCE,
@@ -70,10 +76,22 @@ class ValidationIssue:
     message: str
     path: str | None = None
     severity: str = "error"  # error | warning
+    field: str | None = None
+    entity_id: str | None = None
 
     def format(self) -> str:
         loc = f"{self.path}: " if self.path else ""
         return f"[{self.code}] {loc}{self.message}"
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "code": self.code,
+            "severity": self.severity,
+            "path": self.path,
+            "field": self.field,
+            "id": self.entity_id,
+            "message": self.message,
+        }
 
 
 @dataclass
@@ -81,13 +99,17 @@ class WikiValidationResult:
     ok: bool
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
+    issues: list[dict[str, Any]] = field(default_factory=list)
     stats: dict[str, Any] = field(default_factory=dict)
+    summary_by_code: dict[str, int] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return {
             "ok": self.ok,
             "errors": self.errors,
             "warnings": self.warnings,
+            "issues": self.issues,
+            "summary_by_code": self.summary_by_code,
             "stats": self.stats,
         }
 
@@ -169,11 +191,31 @@ class WikiValidator:
         self.inbound_links: dict[str, set[str]] = defaultdict(set)
         self.fm_by_rel: dict[str, dict[str, Any]] = {}
 
-    def error(self, code: str, message: str, path: str | None = None) -> None:
-        self.issues.append(ValidationIssue(code, message, path, "error"))
+    def error(
+        self,
+        code: str,
+        message: str,
+        path: str | None = None,
+        *,
+        field: str | None = None,
+        entity_id: str | None = None,
+    ) -> None:
+        self.issues.append(
+            ValidationIssue(code, message, path, "error", field=field, entity_id=entity_id)
+        )
 
-    def warning(self, code: str, message: str, path: str | None = None) -> None:
-        self.issues.append(ValidationIssue(code, message, path, "warning"))
+    def warning(
+        self,
+        code: str,
+        message: str,
+        path: str | None = None,
+        *,
+        field: str | None = None,
+        entity_id: str | None = None,
+    ) -> None:
+        self.issues.append(
+            ValidationIssue(code, message, path, "warning", field=field, entity_id=entity_id)
+        )
 
     def run(self) -> WikiValidationResult:
         md_files = sorted(self.root.rglob("*.md"))
@@ -200,8 +242,12 @@ class WikiValidator:
         self._check_source_pages()
         self._check_aliases()
 
+        structured = [i.to_dict() for i in self.issues]
         errors = sorted(i.format() for i in self.issues if i.severity == "error")
         warnings = sorted(i.format() for i in self.issues if i.severity == "warning")
+        summary: dict[str, int] = defaultdict(int)
+        for issue in self.issues:
+            summary[issue.code] += 1
         ok = len(errors) == 0
         stats = {
             "canonical_pages": len(canonical_files),
@@ -211,7 +257,14 @@ class WikiValidator:
             "error_count": len(errors),
             "warning_count": len(warnings),
         }
-        return WikiValidationResult(ok=ok, errors=errors, warnings=warnings, stats=stats)
+        return WikiValidationResult(
+            ok=ok,
+            errors=errors,
+            warnings=warnings,
+            issues=structured,
+            stats=stats,
+            summary_by_code=dict(sorted(summary.items())),
+        )
 
     def _load_documents(self, files: list[Path]) -> None:
         for path in files:
@@ -354,7 +407,35 @@ class WikiValidator:
                         "coverage_without_evidence",
                         f"coverage_level '{coverage}' requires non-empty sources",
                         rel,
+                        field="coverage_level",
                     )
+                if coverage in {"cataloged", "documented", "troubleshooting-mapped"}:
+                    if not as_str_list(fm.get("regions")):
+                        self.error(
+                            "cataloged_without_region",
+                            f"coverage_level '{coverage}' requires non-empty regions",
+                            rel,
+                            field="regions",
+                        )
+                    evidence = fm.get("availability_evidence")
+                    if not isinstance(evidence, str) or not evidence.strip() or evidence.strip() == "unknown":
+                        self.error(
+                            "cataloged_without_evidence",
+                            f"coverage_level '{coverage}' requires concrete availability_evidence",
+                            rel,
+                            field="availability_evidence",
+                        )
+                if coverage in {"documented", "troubleshooting-mapped", "review-ready", "reviewed", "verified"}:
+                    body = self.body_by_rel.get(rel, "")
+                    missing = [m for m in DOCUMENTED_DOD_MARKERS if m not in body]
+                    if missing:
+                        self.error(
+                            "documented_without_dod",
+                            "documented+ coverage requires DoD body sections; missing: "
+                            + ", ".join(missing[:5]),
+                            rel,
+                            field="coverage_level",
+                        )
 
     def _check_enum(self, rel: str, fm: dict[str, Any], key: str, allowed: frozenset[str]) -> None:
         if key not in fm:
@@ -366,7 +447,9 @@ class WikiValidator:
     def _check_id_references(self) -> None:
         for rel, fm in self.fm_by_rel.items():
             page_id = self.rel_to_id.get(rel)
-            for field_name in ("sources", "related", "prerequisites", "supersedes"):
+            for field_name in ID_REFERENCE_FIELDS:
+                if field_name not in fm:
+                    continue
                 values = as_str_list(fm.get(field_name)) or []
                 for ref in values:
                     if not ref:
@@ -376,6 +459,8 @@ class WikiValidator:
                             "unresolved_id",
                             f"{field_name} references unknown id '{ref}'",
                             rel,
+                            field=field_name,
+                            entity_id=ref,
                         )
                     elif field_name == "prerequisites" and page_id:
                         self.prereq_graph[page_id].append(ref)
@@ -504,10 +589,11 @@ class WikiValidator:
         soft = [re.compile(p, re.I) for p in SOFT_ABSOLUTE_PATTERNS]
         hedge = re.compile(
             r"(exceto|salvo|não\s+significa|condicional|quando|unless|except|"
-            r"not\s+always|imperativo|proibid|safety|segurança|pare|stop)",
+            r"not\s+always|imperativo|proibid|safety|segurança|pare|stop|"
+            r"nem\s+sempre|não\s+sempre|em\s+geral)",
             re.I,
         )
-        skip_doc = frozenset({"policy", "audit", "guide", "research", "myth"})
+        skip_doc = frozenset({"policy", "audit", "guide", "research", "myth", "source"})
         for rel, body in self.body_by_rel.items():
             fm = self.fm_by_rel.get(rel, {})
             doc_type = fm.get("doc_type")
@@ -598,31 +684,96 @@ class WikiValidator:
         for rel, fm in self.fm_by_rel.items():
             if fm.get("doc_type") != "printer":
                 continue
+            for key in PRINTER_REQUIRED_FIELDS:
+                if key not in fm:
+                    self.error("missing_printer_field", f"printer requires '{key}'", rel, field=key)
+            if "family_id" not in fm and fm.get("family_status") not in {"unknown", "n/a", "pending"}:
+                if "family_status" not in fm:
+                    self.error(
+                        "missing_printer_field",
+                        "printer requires family_id or family_status",
+                        rel,
+                        field="family_status",
+                    )
+
             lifecycle = fm.get("lifecycle") or fm.get("lifecycle_status")
             if lifecycle is not None and lifecycle not in PRINTER_LIFECYCLE:
                 self.error(
                     "invalid_lifecycle",
                     f"printer lifecycle '{lifecycle}' not in controlled set",
                     rel,
+                    field="lifecycle",
                 )
-            coverage = fm.get("coverage_level")
-            if coverage == "documented":
-                sources = as_str_list(fm.get("sources")) or []
-                if not sources:
-                    self.error("coverage_without_evidence", "documented printer requires sources", rel)
+            if lifecycle == "current":
+                regions = as_str_list(fm.get("regions")) or []
+                evidence = fm.get("availability_evidence")
+                observed = fm.get("lifecycle_observed_at")
+                if not regions or regions == ["unknown"]:
+                    self.error(
+                        "current_without_region",
+                        "lifecycle current requires documented regions",
+                        rel,
+                        field="regions",
+                    )
+                if not isinstance(evidence, str) or not evidence.strip() or evidence.strip() in {
+                    "unknown",
+                    "pending-revalidation",
+                }:
+                    self.error(
+                        "current_without_evidence",
+                        "lifecycle current requires concrete availability_evidence",
+                        rel,
+                        field="availability_evidence",
+                    )
+                if _parse_date(observed) is None:
+                    self.error(
+                        "current_without_observation_date",
+                        "lifecycle current requires lifecycle_observed_at YYYY-MM-DD",
+                        rel,
+                        field="lifecycle_observed_at",
+                    )
+
+            mfr = fm.get("manufacturer_id")
+            if isinstance(mfr, str) and mfr.strip():
+                mfr_id = mfr if mfr.startswith("manufacturer.") else f"manufacturer.{mfr}"
+                if mfr_id not in self.id_to_rel and mfr not in self.id_to_rel:
+                    self.error(
+                        "unresolved_id",
+                        f"manufacturer_id '{mfr}' does not resolve",
+                        rel,
+                        field="manufacturer_id",
+                        entity_id=mfr,
+                    )
 
     def _check_source_pages(self) -> None:
         for rel, fm in self.fm_by_rel.items():
             if fm.get("doc_type") != "source":
                 continue
             if "title" not in fm:
-                self.error("incomplete_source_page", "source page missing 'title'", rel)
+                self.error("incomplete_source_page", "source page missing 'title'", rel, field="title")
             body = self.body_by_rel.get(rel, "")
             has_url = bool(re.search(r"https?://", body)) or bool(re.search(r"\bURL\b", body))
             if not has_url:
                 self.error("incomplete_source_page", "source page body missing URL field", rel)
             if "data de acesso" not in body.lower() and "accessed" not in body.lower():
                 self.error("incomplete_source_page", "source page missing access date", rel)
+            # Enterprise metadata — warn when missing (P1 debt)
+            for key in ("source_type", "language", "version", "last_verified"):
+                if key not in fm:
+                    self.warning(
+                        "incomplete_source_metadata",
+                        f"source page missing front-matter '{key}'",
+                        rel,
+                        field=key,
+                    )
+            st = fm.get("source_type")
+            if st is not None and st not in SOURCE_TYPES:
+                self.error(
+                    "invalid_source_type",
+                    f"source_type '{st}' not in controlled set",
+                    rel,
+                    field="source_type",
+                )
 
     def _check_aliases(self) -> None:
         alias_index: dict[str, list[str]] = defaultdict(list)
@@ -634,7 +785,6 @@ class WikiValidator:
                     if not norm:
                         continue
                     alias_index[norm].append(page_id)
-            # title colliding as alias of another page is OK; duplicate alias across IDs is inconsistent
         for alias, owners in alias_index.items():
             unique = sorted(set(owners))
             if len(unique) > 1:
@@ -651,14 +801,27 @@ def ks_of(validator: WikiValidator, ref: str) -> str:
     return str(validator.fm_by_rel.get(rel, {}).get("knowledge_status", "unknown"))
 
 
-def validate_wiki(root: Path, *, strict: bool = False, today: date | None = None) -> WikiValidationResult:
+def validate_wiki(
+    root: Path,
+    *,
+    strict: bool = False,
+    fail_on_warnings: bool = False,
+    today: date | None = None,
+) -> WikiValidationResult:
     """Validate wiki links and, when strict, full semantic enterprise rules."""
     if not strict:
         errors = validate_wiki_links(root)
-        return WikiValidationResult(
+        result = WikiValidationResult(
             ok=not errors,
             errors=errors,
             warnings=[],
-            stats={"strict": False, "error_count": len(errors)},
+            stats={"strict": False, "error_count": len(errors), "fail_on_warnings": fail_on_warnings},
         )
-    return WikiValidator(root, strict=True, today=today).run()
+        if fail_on_warnings and result.warnings:
+            result.ok = False
+        return result
+    result = WikiValidator(root, strict=True, today=today).run()
+    result.stats["fail_on_warnings"] = fail_on_warnings
+    if fail_on_warnings and result.warnings:
+        result.ok = False
+    return result

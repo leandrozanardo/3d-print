@@ -1,28 +1,62 @@
 ---
-id: "hazard.resin-ppe-disposal"
-title: "Resina — PPE e descarte"
-summary: "Resina não curada é perigo cutâneo/ocular e gera resíduos líquidos regulados: use luvas compatíveis (tipicamente nitrílica), óculos, roupa de cobertura e ventilação; leia o SDS de cada SKU. Descarte: cure resíduos quando o fluxo permitir, armazene solventes saturados como residual químico — nunca ralo/lixo comum sem regra local. NIOSH e EPA embasam cautela ocupacional/ambiental; esta página não substitui legislação municipal nem autoriza uso food/medical."
-doc_type: "guide"
-domain: ["safety", "environment", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization", "resin-handling"]
-not_for: ["fff-only-users-skipping-read-if-no-resin", "drain-disposal-advice", "diy-biocompatibility"]
-knowledge_status: "draft"
-evidence_status: "strong"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["post.resin-wash-cure", "hazard.voc-ufp-ventilation", "hazard.food-medical-claims", "tech.sla-dlp-msla", "material.resin-families", "defect.resin.index"]
+id: hazard.resin-ppe-disposal
+title: Resina — PPE e descarte
+summary: 'Resina não curada é perigo cutâneo/ocular e gera resíduos líquidos regulados:
+  use luvas compatíveis (tipicamente nitrílica), óculos, roupa de cobertura e ventilação;
+  leia o SDS de cada SKU. Descarte: cure resíduos quando o fluxo permitir, armazene
+  solventes saturados como residual químico — nunca ralo/lixo comum sem regra local.
+  NIOSH e EPA embasam cautela ocupacional/ambiental; esta página não substitui legislação
+  municipal nem autoriza uso food/medical.'
+doc_type: guide
+domain:
+- safety
+- environment
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+- resin-handling
+not_for:
+- fff-only-users-skipping-read-if-no-resin
+- drain-disposal-advice
+- diy-biocompatibility
+knowledge_status: draft
+evidence_status: strong
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- post.resin-wash-cure
+- hazard.voc-ufp-ventilation
+- hazard.food-medical-claims
+- tech.sla-dlp-msla
+- material.resin-families
+- defect.resin.index
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["EPI resina 3D", "descarte de resina", "luvas nitrílica resina"]
-aliases_en: ["resin PPE", "resin disposal", "photopolymer waste"]
-tags: ["safety", "resin", "ppe", "disposal"]
+aliases_pt_br:
+- EPI resina 3D
+- descarte de resina
+- luvas nitrílica resina
+aliases_en:
+- resin PPE
+- resin disposal
+- photopolymer waste
+tags:
+- safety
+- resin
+- ppe
+- disposal
 ---
-
 # Resina — PPE e descarte
 
 Hub pai: [Segurança e meio ambiente](INDEX.md)

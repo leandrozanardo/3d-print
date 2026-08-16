@@ -1,114 +1,69 @@
 ---
-id: "glossary.initial"
-title: "Glossário inicial (AM / FFF)"
-summary: "Glossário operacional em pt-BR com termos EN estáveis para manufatura aditiva, com foco no corpus FFF desktop desta base. Cada entrada tem definição curta orientada a decisão e links quando existir página canônica. Não substitui SDS/TDS nem normas completas."
-doc_type: "glossary"
-domain: ["glossary"]
+id: glossary.initial
+title: Glossário inicial (AM / FFF)
+summary: Glossário operacional em pt-BR com termos EN estáveis para manufatura aditiva,
+  com foco no corpus FFF desktop desta base. Cada entrada tem definição curta orientada
+  a decisão e links quando existir página canônica. Não substitui SDS/TDS nem normas
+  completas.
+doc_type: glossary
+domain:
+- glossary
 technology: []
 process: []
-applies_to: ["all-am", "fff"]
-not_for: ["legal-definitions", "complete-iso-vocabulary"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["hub.glossario", "fund.terminology"]
-prerequisites: ["fund.terminology"]
+applies_to:
+- all-am
+- fff
+not_for:
+- legal-definitions
+- complete-iso-vocabulary
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- hub.glossario
+- fund.terminology
+prerequisites:
+- fund.terminology
 aliases_pt_br:
-  - "glossário"
-  - "FFF"
-  - "FDM"
-  - "extrusão de material"
-  - "empenamento"
-  - "primeira camada"
-  - "bico"
-  - "PEI"
-  - "brim"
-  - "raft"
-  - "overhang"
-  - "anisotropia"
-  - "Tg"
-  - "VOC"
-  - "UFP"
-  - "SLA"
-  - "DLP"
-  - "MSLA"
-  - "SLS"
-  - "MJF"
-  - "LPBF"
-  - "DED"
-  - "WAAM"
-  - "3MF"
-  - "STL"
-  - "G-code"
-  - "Bambu Studio"
-  - "A1 Mini"
-  - "PLA"
-  - "PETG"
-  - "elephant foot"
-  - "stringing"
-  - "layer shift"
-  - "suporte"
-  - "infill"
-  - "perímetro"
-  - "parede"
-  - "bed-slinger"
-  - "direct drive"
-  - "pressure advance"
-  - "input shaping"
-  - "SDS"
-  - "TDS"
+- extrusão de material
+- bico
+- PEI
+- overhang
+- Tg
+- 3MF
+- STL
+- G-code
+- suporte
+- perímetro
+- parede
+- SDS
+- TDS
 aliases_en:
-  - "glossary"
-  - "FFF"
-  - "FDM"
-  - "material extrusion"
-  - "warping"
-  - "first layer"
-  - "nozzle"
-  - "PEI"
-  - "brim"
-  - "raft"
-  - "overhang"
-  - "anisotropy"
-  - "Tg"
-  - "VOC"
-  - "UFP"
-  - "SLA"
-  - "DLP"
-  - "MSLA"
-  - "SLS"
-  - "MJF"
-  - "LPBF"
-  - "DED"
-  - "WAAM"
-  - "3MF"
-  - "STL"
-  - "G-code"
-  - "Bambu Studio"
-  - "A1 Mini"
-  - "PLA"
-  - "PETG"
-  - "elephant foot"
-  - "stringing"
-  - "layer shift"
-  - "support"
-  - "infill"
-  - "perimeter"
-  - "wall"
-  - "bed-slinger"
-  - "direct drive"
-  - "pressure advance"
-  - "input shaping"
-  - "SDS"
-  - "TDS"
-tags: ["glossary", "fff", "am"]
+- material extrusion
+- nozzle
+- PEI
+- overhang
+- Tg
+- 3MF
+- STL
+- G-code
+- support
+- perimeter
+- wall
+- SDS
+- TDS
+tags:
+- glossary
+- fff
+- am
 supersedes: []
 ---
-
 # Glossário inicial (AM / FFF)
 
 Hub pai: [Glossário](INDEX.md) · Conceito pai: [Terminologia](../01-fundamentos/terminologia-manufatura-aditiva.md)
@@ -203,7 +158,7 @@ Categoria ISO/ASTM: material dispensado por bico. Hub: [material-extrusion](../0
 
 ## Nozzle (bico) {#term-nozzle}
 
-Orifício de saída do hotend; diâmetro limita feature XY e flow. Ex.: [nozzle 0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md).
+Orifício de saída do hotend; diâmetro limita feature XY e flow. Ex.: [nozzle 0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md).
 
 ## Overhang {#term-overhang}
 

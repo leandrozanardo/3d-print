@@ -1,30 +1,55 @@
 ---
-id: "tech.vat-photopolymerization"
-title: "Vat photopolymerization (SLA, DLP, MSLA)"
-summary: "Categoria em que resina líquida fotopolimérica é curada seletivamente por luz em uma cuba (vat). Inclui SLA laser, DLP e MSLA/LCD. Excelente detalhe fino; exige manejo de resina não curada, pós-cura e descarte responsável. Não aplicar regras de FFF."
-doc_type: "technology"
-domain: ["technologies"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization", "resin-printing"]
-not_for: ["fff-filament-settings", "powder-bed-rules"]
+id: tech.vat-photopolymerization
+title: Vat photopolymerization (SLA, DLP, MSLA)
+summary: Categoria em que resina líquida fotopolimérica é curada seletivamente por
+  luz em uma cuba (vat). Inclui SLA laser, DLP e MSLA/LCD. Excelente detalhe fino;
+  exige manejo de resina não curada, pós-cura e descarte responsável. Não aplicar
+  regras de FFF.
+doc_type: technology
+domain:
+- technologies
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+- resin-printing
+not_for:
+- fff-filament-settings
+- powder-bed-rules
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["fund.terminology", "tech.fff", "hub.seguranca"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["fotopolimerização em cuba", "impressão em resina", "SLA", "DLP", "MSLA"]
-aliases_en: ["vat photopolymerization", "SLA", "DLP", "MSLA", "LCD resin"]
-tags: ["vat", "sla", "dlp", "msla", "resin"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- fund.terminology
+- tech.fff
+- hub.seguranca
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- fotopolimerização em cuba
+- impressão em resina
+aliases_en:
+- vat photopolymerization
+tags:
+- vat
+- sla
+- dlp
+- msla
+- resin
 supersedes: []
 ---
-
 # Vat photopolymerization (SLA, DLP, MSLA)
 
 Hub pai: [Tecnologias](../INDEX.md) · pasta [vat-photopolymerization](./)

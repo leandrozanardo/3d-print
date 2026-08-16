@@ -1,17 +1,33 @@
 ---
-id: "hub.materiais.fff"
-title: "Materiais FFF"
-summary: "Hub de famílias de filamento para extrusão de material. Cobertura: PLA, PETG, TPU, ABS/ASA, PA, PC, compósitos/fibra e secagem/armazenamento. Materiais Not Recommended na A1 Mini não recebem receita completa nesta máquina."
-doc_type: "hub"
-domain: ["materials", "fff"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-related: ["hub.materiais", "material.pla", "material.petg", "material.tpu", "material.abs-asa", "material.pa", "material.pc", "material.drying-storage", "material.composites-fiber", "material.pva-bvoh-support"]
-tags: ["hub", "fff"]
+id: hub.materiais.fff
+title: Materiais FFF
+summary: 'Hub de famílias de filamento para extrusão de material. Cobertura: PLA,
+  PETG, TPU, ABS/ASA, PA, PC, compósitos/fibra e secagem/armazenamento. Materiais
+  Not Recommended na A1 Mini não recebem receita completa nesta máquina.'
+doc_type: hub
+domain:
+- materials
+- fff
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+related:
+- hub.materiais
+- material.pla
+- material.petg
+- material.tpu
+- material.abs-asa
+- material.pa
+- material.pc
+- material.drying-storage
+- material.composites-fiber
+- material.pva-bvoh-support
+tags:
+- hub
+- fff
 technology: []
 process: []
 applies_to: []
@@ -22,7 +38,6 @@ supersedes: []
 aliases_pt_br: []
 aliases_en: []
 ---
-
 # Materiais FFF
 
 Voltar: [Materiais](../INDEX.md)

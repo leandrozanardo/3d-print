@@ -1,30 +1,50 @@
 ---
-id: "tech.binder-jetting"
-title: "Binder jetting"
-summary: "Categoria em que um aglutinante líquido é jateado seletivamente sobre um leito de pó, formando uma peça ‘verde’ que depois é curada, despoada e tipicamente sinterizada ou infiltrada. Produtiva e escalável; a metalurgia/cerâmica do pós decide propriedades finais. Distinta de powder bed fusion."
-doc_type: "technology"
-domain: ["technologies"]
-technology: ["binder-jetting"]
-process: ["binder-jetting"]
-applies_to: ["binder-jetting"]
-not_for: ["fff-defaults", "assume-full-density-off-the-printer"]
+id: tech.binder-jetting
+title: Binder jetting
+summary: Categoria em que um aglutinante líquido é jateado seletivamente sobre um
+  leito de pó, formando uma peça ‘verde’ que depois é curada, despoada e tipicamente
+  sinterizada ou infiltrada. Produtiva e escalável; a metalurgia/cerâmica do pós decide
+  propriedades finais. Distinta de powder bed fusion.
+doc_type: technology
+domain:
+- technologies
+technology:
+- binder-jetting
+process:
+- binder-jetting
+applies_to:
+- binder-jetting
+not_for:
+- fff-defaults
+- assume-full-density-off-the-printer
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["tech.powder-bed-fusion", "fund.terminology"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["jetting de aglutinante", "binder jet"]
-aliases_en: ["binder jetting", "binder jet"]
-tags: ["binder-jetting", "powder", "sinter"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- tech.powder-bed-fusion
+- fund.terminology
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- jetting de aglutinante
+- binder jet
+aliases_en:
+- binder jetting
+- binder jet
+tags:
+- binder-jetting
+- powder
+- sinter
 supersedes: []
 ---
-
 # Binder jetting
 
 Hub pai: [Tecnologias](../INDEX.md) · pasta [binder-jetting](./)

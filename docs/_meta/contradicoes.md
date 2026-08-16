@@ -1,19 +1,23 @@
 ---
-id: "meta.contradictions"
-title: "Registro de contradições"
-summary: "Divergências e riscos de falsa universalidade detectados na auditoria e no vertical slice. Escopos preservados; sem média numérica arbitrária."
-doc_type: "audit"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "per-batch"
-related: ["meta.evidence-policy", "meta.gaps"]
-tags: ["contradictions"]
+id: meta.contradictions
+title: Registro de contradições
+summary: Divergências e riscos de falsa universalidade detectados na auditoria e no
+  vertical slice. Escopos preservados; sem média numérica arbitrária.
+doc_type: audit
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: per-batch
+related:
+- meta.evidence-policy
+- meta.gaps
+tags:
+- contradictions
 ---
-
 # Contradições e divergências
 
 ## C-001 — Faixas de temperatura PLA

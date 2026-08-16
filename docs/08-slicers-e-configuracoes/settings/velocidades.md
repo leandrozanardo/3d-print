@@ -1,31 +1,65 @@
 ---
-id: "setting.speeds"
-title: "Velocidades (speeds)"
-summary: "Velocidades de impressão (perímetros, infill, first layer, travel) definem mm/s do head e, com geometria do cordão, o fluxo volumétrico exigido. Marketing de ‘max speed’ da impressora não é qualidade garantida. No Bambu Studio: Speed por tipo de feature (nomes variam). Na A1 Mini, comece dos presets A1 Mini; reduza se houver gaps em alta velocidade, ringing ou layer shift por inércia. Valide volumetric do filamento."
-doc_type: "setting"
-domain: ["slicing", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "printer.bambu-lab-a1-mini"]
-not_for: ["marketing-max-speed-as-quality-target", "eternal-ui-path-pinning"]
-settings: ["setting.speeds"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["setting.layer-height", "setting.temperatures", "defect.fff.under-extrusion", "defect.fff.layer-shift", "setting.retraction", "material.tpu"]
-prerequisites: ["tech.fff"]
+id: setting.speeds
+title: Velocidades (speeds)
+summary: 'Velocidades de impressão (perímetros, infill, first layer, travel) definem
+  mm/s do head e, com geometria do cordão, o fluxo volumétrico exigido. Marketing
+  de ‘max speed’ da impressora não é qualidade garantida. No Bambu Studio: Speed por
+  tipo de feature (nomes variam). Na A1 Mini, comece dos presets A1 Mini; reduza se
+  houver gaps em alta velocidade, ringing ou layer shift por inércia. Valide volumetric
+  do filamento.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- printer.bambu-lab-a1-mini
+not_for:
+- marketing-max-speed-as-quality-target
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- setting.layer-height
+- setting.temperatures
+- defect.fff.under-extrusion
+- defect.fff.layer-shift
+- setting.retraction
+- material.tpu
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["velocidade de impressão", "speeds", "mm/s"]
-aliases_en: ["print speed", "outer wall speed", "infill speed", "travel speed"]
-tags: ["setting", "speed", "slicer"]
+aliases_pt_br:
+- velocidade de impressão
+- speeds
+- mm/s
+aliases_en:
+- print speed
+- outer wall speed
+- infill speed
+- travel speed
+tags:
+- setting
+- speed
+- slicer
+setting_tags:
+- speeds
 ---
-
 # Velocidades (speeds)
 
 Hub pai: [Settings](INDEX.md)

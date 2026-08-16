@@ -1,34 +1,80 @@
 ---
-id: "defect.fff.delamination"
-title: "Delaminação (separação de camadas) em FFF"
-summary: "Delaminação é a separação entre camadas (solda Z fraca): fendas horizontais, split ao flexionar, casca que ‘abre’. Causas comuns: part cooling alto, nozzle frio, filamento úmido, speed alto demais para a temp, e draft em frame aberto. Em PETG é clássico. Diferencie de empenamento (lift de canto com base parcialmente livre) e de subextrusão (falta de material). Trate umidade e cooling antes de ‘subir walls’."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["corner-lift-only-warping", "xy-layer-shift"]
-symptoms: ["symptom.delamination", "symptom.layer-split", "symptom.weak-z"]
-causes: ["cause.high-cooling", "cause.cold-nozzle", "cause.moisture", "cause.draft"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.cooling", "setting.temperatures", "setting.speeds"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["setting.cooling", "material.drying-storage", "defect.fff.warping", "defect.fff.under-extrusion", "material.petg", "setting.temperatures"]
-prerequisites: ["tech.fff"]
+id: defect.fff.delamination
+title: Delaminação (separação de camadas) em FFF
+summary: 'Delaminação é a separação entre camadas (solda Z fraca): fendas horizontais,
+  split ao flexionar, casca que ‘abre’. Causas comuns: part cooling alto, nozzle frio,
+  filamento úmido, speed alto demais para a temp, e draft em frame aberto. Em PETG
+  é clássico. Diferencie de empenamento (lift de canto com base parcialmente livre)
+  e de subextrusão (falta de material). Trate umidade e cooling antes de ‘subir walls’.'
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- corner-lift-only-warping
+- xy-layer-shift
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- setting.cooling
+- material.drying-storage
+- defect.fff.warping
+- defect.fff.under-extrusion
+- material.petg
+- setting.temperatures
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["delaminação", "separação de camadas", "layer splitting"]
-aliases_en: ["delamination", "layer separation", "poor layer adhesion"]
-tags: ["delamination", "troubleshooting", "fff"]
+aliases_pt_br:
+- delaminação
+- separação de camadas
+- layer splitting
+aliases_en:
+- delamination
+- layer separation
+- poor layer adhesion
+tags:
+- delamination
+- troubleshooting
+- fff
+symptom_tags:
+- delamination
+- layer-split
+- weak-z
+cause_tags:
+- high-cooling
+- cold-nozzle
+- moisture
+- draft
+setting_tags:
+- cooling
+- temperatures
+- speeds
 ---
-
 # Delaminação (separação de camadas) em FFF
 
 Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.md)
@@ -71,7 +117,7 @@ Pops / bobina duvidosa?
   └─ NÃO → PETG com fan alto?
         ├─ SIM → ↓ fan; early layers baixos
         └─ NÃO → temp no range? speed moderado?
-              ├─ NÃO → +5 °C / −speed (uma variável)
+              ├─ NÃO → +5 °C (fonte oficial / fabricante / heuristic; ver `sources`)  / −speed (uma variável)
               └─ SIM → bloquear draft; reorientar carga se possível
 ```
 

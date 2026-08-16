@@ -1,28 +1,55 @@
 ---
-id: "app.qualification-limits"
-title: "Limites de qualificação em aplicações AM"
-summary: "Qualificar uma peça de manufatura aditiva para uso médico, aeroespacial, food-contact ou safety-critical exige evidência de processo, material, rastreabilidade, inspeção e conformidade regulatória — não basta ‘imprimiu e parece bom’. Esta página delimita o que esta base pode e não pode afirmar: não certifica dispositivos, não substitui FDA/ANVISA/FAA/EASA nem QMS do fabricante. Cobertura parcial voltada a expectativas realistas."
-doc_type: "guide"
-domain: ["applications", "regulation"]
+id: app.qualification-limits
+title: Limites de qualificação em aplicações AM
+summary: 'Qualificar uma peça de manufatura aditiva para uso médico, aeroespacial,
+  food-contact ou safety-critical exige evidência de processo, material, rastreabilidade,
+  inspeção e conformidade regulatória — não basta ‘imprimiu e parece bom’. Esta página
+  delimita o que esta base pode e não pode afirmar: não certifica dispositivos, não
+  substitui FDA/ANVISA/FAA/EASA nem QMS do fabricante. Cobertura parcial voltada a
+  expectativas realistas.'
+doc_type: guide
+domain:
+- applications
+- regulation
 technology: []
 process: []
-applies_to: ["regulated-am", "end-use-parts"]
-not_for: ["self-certifying-implants", "food-safe-pla-claims"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.fda-am-medical-devices-entry", "source.iso-astm-52900-entry"]
-related: ["myth.pla-food-safe", "app.food-contact-limits", "tech.lpbf-ebm", "hazard.metal-powder", "hub.aplicacoes"]
+applies_to:
+- regulated-am
+- end-use-parts
+not_for:
+- self-certifying-implants
+- food-safe-pla-claims
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.fda-am-medical-devices-entry
+- source.iso-astm-52900-entry
+related:
+- myth.pla-food-safe
+- app.food-contact-limits
+- tech.lpbf-ebm
+- hazard.metal-powder
+- hub.aplicacoes
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["qualificação AM", "certificação peça impressa", "limites regulatórios"]
-aliases_en: ["AM qualification limits", "process qualification", "device regulation"]
-tags: ["regulation", "qualification", "medical", "aerospace"]
+aliases_pt_br:
+- qualificação AM
+- certificação peça impressa
+- limites regulatórios
+aliases_en:
+- AM qualification limits
+- process qualification
+- device regulation
+tags:
+- regulation
+- qualification
+- medical
+- aerospace
 ---
-
 # Limites de qualificação em aplicações AM
 
 Hub pai: [Aplicações e regulação](./INDEX.md)

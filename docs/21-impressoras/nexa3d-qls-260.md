@@ -1,28 +1,51 @@
 ---
-id: "printer.nexa3d-qls-260"
-title: "Nexa3D QLS 260"
-summary: "Nexa3D QLS 260 é um modelo do fabricante Nexa3D registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.nexa3d-qls-260
+title: Nexa3D QLS 260
+summary: 'Nexa3D QLS 260 é um modelo do fabricante Nexa3D registrado no catálogo fix-my-print
+  (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura
+  é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em
+  2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues
+  ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["nexa3d"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "unknown"
-coverage_level: "cataloged"
-sources: ["source.nexa3d-official-products"]
-related: ["manufacturer.nexa3d", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- nexa3d
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.nexa3d-official-products
+related:
+- manufacturer.nexa3d
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Nexa3D QLS 260"]
-tags: ["printer", "cataloged", "nexa3d"]
+aliases_en:
+- Nexa3D QLS 260
+tags:
+- printer
+- cataloged
+- nexa3d
+manufacturer_id: nexa3d
+model_name: Nexa3D QLS 260
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # Nexa3D QLS 260
 

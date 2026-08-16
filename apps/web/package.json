@@ -1,0 +1,27 @@
+{
+  "name": "@fix-my-print/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fix My Print browser shell (Vite + React + TypeScript)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
+    "@vitejs/plugin-react": "5.0.0",
+    "jsdom": "26.1.0",
+    "typescript": "5.9.2",
+    "vite": "7.1.2",
+    "vitest": "3.2.4"
+  }
+}

@@ -1,28 +1,57 @@
 ---
-id: "format.mesh-repair"
-title: "Reparo de malha"
-summary: "Malhas de marketplace/scan/CAD frequentemente chegam com buracos, normals invertidas, não-manifold, shells soltos ou autointerseções. Reparo restaura fechamento e topologia mínima para o slicer gerar toolpath confiável — não melhora automaticamente o design nem garante estanqueidade ou food-safe. Preferir inspecionar → reparar → revalidar envelope/unidades → só então fatiar. Números de tolerância de software variam; use a ferramenta documentada do projeto e valide o preview."
-doc_type: "guide"
-domain: ["models", "formats", "meshes"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "mesh-pipeline", "stl-repair"]
-not_for: ["cosmetic-sculpt-as-repair", "claim-watertight-equals-food-safe"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
+id: format.mesh-repair
+title: Reparo de malha
+summary: Malhas de marketplace/scan/CAD frequentemente chegam com buracos, normals
+  invertidas, não-manifold, shells soltos ou autointerseções. Reparo restaura fechamento
+  e topologia mínima para o slicer gerar toolpath confiável — não melhora automaticamente
+  o design nem garante estanqueidade ou food-safe. Preferir inspecionar → reparar
+  → revalidar envelope/unidades → só então fatiar. Números de tolerância de software
+  variam; use a ferramenta documentada do projeto e valide o preview.
+doc_type: guide
+domain:
+- models
+- formats
+- meshes
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- mesh-pipeline
+- stl-repair
+not_for:
+- cosmetic-sculpt-as-repair
+- claim-watertight-equals-food-safe
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
 sources: []
-related: ["format.stl-vs-3mf", "format.units-scale-manifold", "fund.digital-workflow", "hub.modelos"]
-prerequisites: ["format.stl-vs-3mf"]
+related:
+- format.stl-vs-3mf
+- format.units-scale-manifold
+- fund.digital-workflow
+- hub.modelos
+prerequisites:
+- format.stl-vs-3mf
 supersedes: []
-aliases_pt_br: ["reparar STL", "malha quebrada", "fix mesh"]
-aliases_en: ["mesh repair", "fix STL", "non-manifold repair"]
-tags: ["mesh", "repair", "stl", "manifold"]
+aliases_pt_br:
+- reparar STL
+- malha quebrada
+- fix mesh
+aliases_en:
+- mesh repair
+- fix STL
+- non-manifold repair
+tags:
+- mesh
+- repair
+- stl
+- manifold
 ---
-
 # Reparo de malha
 
 Hub pai: [Modelos, formatos e malhas](INDEX.md)

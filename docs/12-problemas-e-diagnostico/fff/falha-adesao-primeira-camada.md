@@ -1,41 +1,89 @@
 ---
-id: "defect.fff.adhesion-failure"
-title: "Falha de adesão na primeira camada (FFF)"
-summary: "Falha de adesão na primeira camada é quando o cordão inicial não gruda, gruda aos pedaços ou solta nas camadas 1–3 — distinto de empenamento tardio. Causa-raiz usual: Z alto, PEI suja/errada, first layer rápida demais, bed fora do range, draft no frame aberto ou material inadequado à superfície. Na A1 Mini respeite bed ≤ 80 °C, limpe PEI, valide squish e só então use brim; PETG prefere textured e remoção fria."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["late-corner-lift-only", "layer-shift"]
-symptoms: ["symptom.no-stick", "symptom.peel-layer-1", "symptom.spaghetti-early"]
-causes: ["cause.z-too-high", "cause.dirty-pei", "cause.cold-bed", "cause.draft", "cause.first-layer-too-fast"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.first-layer-speed", "setting.bed-temperature", "setting.brim"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["process.fff.first-layer", "defect.fff.warping", "surface.pei", "material.pla", "material.petg", "process.open-frame-env", "cal.fff-order"]
-prerequisites: ["process.fff.first-layer"]
+id: defect.fff.adhesion-failure
+title: Falha de adesão na primeira camada (FFF)
+summary: 'Falha de adesão na primeira camada é quando o cordão inicial não gruda,
+  gruda aos pedaços ou solta nas camadas 1–3 — distinto de empenamento tardio. Causa-raiz
+  usual: Z alto, PEI suja/errada, first layer rápida demais, bed fora do range, draft
+  no frame aberto ou material inadequado à superfície. Na A1 Mini respeite bed ≤ 80
+  °C, limpe PEI, valide squish e só então use brim; PETG prefere textured e remoção
+  fria.'
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- late-corner-lift-only
+- layer-shift
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- process.fff.first-layer
+- defect.fff.warping
+- surface.pei
+- material.pla
+- material.petg
+- process.open-frame-env
+- cal.fff-order
+prerequisites:
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["falha de adesão", "não gruda na mesa", "peel primeira camada"]
-aliases_en: ["bed adhesion failure", "first layer not sticking"]
-tags: ["adhesion", "troubleshooting", "fff"]
+aliases_pt_br:
+- falha de adesão
+- não gruda na mesa
+- peel primeira camada
+aliases_en:
+- bed adhesion failure
+- first layer not sticking
+tags:
+- adhesion
+- troubleshooting
+- fff
+symptom_tags:
+- no-stick
+- peel-layer-1
+- spaghetti-early
+cause_tags:
+- z-too-high
+- dirty-pei
+- cold-bed
+- draft
+- first-layer-too-fast
+setting_tags:
+- first-layer-speed
+- bed-temperature
+- brim
 ---
-
 # Falha de adesão na primeira camada (FFF)
 
 Hub pai: [Problemas e diagnóstico FFF](INDEX.md)
 
 ## Resumo de emergência
 
-Peça **não gruda** ou solta nas camadas 1–3? Pare o job se o nozzle estiver “imprimindo no ar”. Limpe a [PEI](../../04-componentes-e-hardware/placa-pei-fff.md), confira Z/squish, reduza velocidade da first layer, confirme bed no range (**≤ 80 °C** na A1 Mini). Não trate como [empenamento](empenamento.md) até a base ter aderido de verdade.
+Peça **não gruda** ou solta nas camadas 1–3? Pare o job se o nozzle estiver “imprimindo no ar”. Limpe a [PEI](../../04-componentes-e-hardware/placa-pei-fff.md), confira Z/squish, reduza velocidade da first layer, confirme bed no range (**≤ 80 °C (fonte oficial / fabricante / heuristic; ver `sources`) ** na A1 Mini). Não trate como [empenamento](empenamento.md) até a base ter aderido de verdade.
 
 ## Assinatura
 
@@ -47,7 +95,7 @@ Peça **não gruda** ou solta nas camadas 1–3? Pare o job se o nozzle estiver 
 
 | Observação | Página |
 |---|---|
-| Nunca grudou / peel imediato | **Esta página** + [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) |
+| Nao (regra de seguranca) grudou / peel imediato | **Esta página** + [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) |
 | Base OK, cantos sobem depois | [Empenamento](empenamento.md) |
 | Deslocamento em degrau XY | layer shift (legado; migração pendente) |
 | Under-extrusion geral após camada boa | fluxo/hotend — [ordem de calibração](../../09-calibracao/ordem-de-calibracao-fff.md) |
@@ -114,7 +162,7 @@ Método geral: [Ellis](../../22-fontes/ellis-print-tuning-guide.md), [Teaching T
 | Sujeira | Limpeza; reteste |
 | Z alto | Assistência / offset; squish visual |
 | Velocidade | First layer mais lenta no Studio |
-| Bed | Subir/descer **dentro** do range; cap 80 °C |
+| Bed | Subir/descer **dentro** do range; cap 80 °C (fonte oficial/fabricante/heuristic; ver sources)  |
 | Draft | Bloquear fluxo; ver ambiente aberto |
 | Contato mínimo | Reorientar / brim |
 | PETG em smooth | Textured; remoção fria se aderiu demais |
@@ -134,7 +182,6 @@ Método geral: [Ellis](../../22-fontes/ellis-print-tuning-guide.md), [Teaching T
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../../22-fontes/bambu-a1-mini-tech-specs.md)
 - [source.ellis-print-tuning-guide](../../22-fontes/ellis-print-tuning-guide.md)
 - [source.teaching-tech-calibration](../../22-fontes/teaching-tech-calibration.md)
 

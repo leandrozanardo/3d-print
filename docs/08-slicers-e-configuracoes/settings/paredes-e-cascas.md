@@ -1,30 +1,62 @@
 ---
-id: "setting.walls-shells"
-title: "Paredes e cascas (walls / perimeters / shells)"
-summary: "Paredes (perímetros, shells) são os contornos sólidos que formam a pele da peça. Número de walls e espessura de top/bottom dominam resistência prática e acabamento mais que infill esparso em muitos casos. No Bambu Studio: Wall loops / top-bottom shell thickness (nomes variam). Conceito: casca contínua vs núcleo; validar espessura mínima para furos e carga. Não confundir com infill percentual."
-doc_type: "setting"
-domain: ["slicing", "fff", "strength"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio"]
-not_for: ["infill-percent-as-shell-substitute", "eternal-ui-path-pinning"]
-settings: ["setting.walls-shells"]
-slicers: ["slicer.bambu-studio"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
+id: setting.walls-shells
+title: Paredes e cascas (walls / perimeters / shells)
+summary: 'Paredes (perímetros, shells) são os contornos sólidos que formam a pele
+  da peça. Número de walls e espessura de top/bottom dominam resistência prática e
+  acabamento mais que infill esparso em muitos casos. No Bambu Studio: Wall loops
+  / top-bottom shell thickness (nomes variam). Conceito: casca contínua vs núcleo;
+  validar espessura mínima para furos e carga. Não confundir com infill percentual.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- strength
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+not_for:
+- infill-percent-as-shell-substitute
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
 sources: []
-related: ["setting.infill", "setting.line-width", "setting.layer-height", "material.pla", "material.petg"]
-prerequisites: ["tech.fff"]
+related:
+- setting.infill
+- setting.line-width
+- setting.layer-height
+- material.pla
+- material.petg
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["paredes", "perímetros", "cascas", "shells"]
-aliases_en: ["walls", "perimeters", "shells", "wall loops", "top bottom shells"]
-tags: ["setting", "walls", "strength"]
+aliases_pt_br:
+- paredes
+- perímetros
+- cascas
+- shells
+aliases_en:
+- walls
+- perimeters
+- shells
+- wall loops
+- top bottom shells
+tags:
+- setting
+- walls
+- strength
+setting_tags:
+- walls-shells
 ---
-
 # Paredes e cascas (walls / shells)
 
 Hub pai: [Settings](INDEX.md)

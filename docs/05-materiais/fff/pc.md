@@ -1,30 +1,58 @@
 ---
-id: "material.pc"
-title: "PC (policarbonato) em FFF"
-summary: "Policarbonato (PC) traz tenacidade e resistência térmica elevadas em graus de engenharia, mas exige processo quente, adesão agressiva e preferencialmente câmara. Na A1 Mini o fabricante lista PC como Not Recommended; bed máximo 80 °C e frame aberto desalinhados com janelas típicas de PC desktop. Esta página explica limitações, segurança e migração de máquina — sem receita completa de impressão para A1 Mini."
-doc_type: "material"
-domain: ["materials", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "high-temp-enclosed-printers"]
-not_for: ["printer.bambu-lab-a1-mini-as-default", "miniature-pla-workflow", "full-a1-mini-print-recipe"]
-materials: ["material.pc"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "material.petg", "material.abs-asa", "material.drying-storage", "defect.fff.warping"]
-prerequisites: ["tech.fff"]
+id: material.pc
+title: PC (policarbonato) em FFF
+summary: Policarbonato (PC) traz tenacidade e resistência térmica elevadas em graus
+  de engenharia, mas exige processo quente, adesão agressiva e preferencialmente câmara.
+  Na A1 Mini o fabricante lista PC como Not Recommended; bed máximo 80 °C e frame
+  aberto desalinhados com janelas típicas de PC desktop. Esta página explica limitações,
+  segurança e migração de máquina — sem receita completa de impressão para A1 Mini.
+doc_type: material
+domain:
+- materials
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- high-temp-enclosed-printers
+not_for:
+- printer.bambu-lab-a1-mini-as-default
+- miniature-pla-workflow
+- full-a1-mini-print-recipe
+materials:
+- material.pc
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources: []
+related:
+- printer.bambu-lab-a1-mini
+- material.petg
+- material.abs-asa
+- material.drying-storage
+- defect.fff.warping
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["PC", "policarbonato"]
-aliases_en: ["PC", "polycarbonate"]
-tags: ["material", "pc", "fff", "high-temp"]
+aliases_pt_br:
+- PC
+- policarbonato
+aliases_en:
+- PC
+- polycarbonate
+tags:
+- material
+- pc
+- fff
+- high-temp
 ---
-
 # PC (policarbonato) em FFF
 
 Hub pai: [Materiais FFF](INDEX.md)
@@ -52,7 +80,7 @@ Hub pai: [Materiais FFF](INDEX.md)
 
 ### Por quê não tratar como operacional aqui
 
-1. Janelas típicas de PC desktop pedem **mesa/câmara quentes** acima do que um bed-slinger aberto com teto de 80 °C oferece com margem.
+1. Janelas típicas de PC desktop pedem **mesa/câmara quentes** acima do que um bed-slinger aberto com teto de 80 °C (fonte oficial/fabricante/heuristic; ver sources)  oferece com margem.
 2. Warp e delaminação sob draft são severos.
 3. Umidade degrada superfície e bonding.
 4. Risco de falha de adesão → peça solta → colisão/blob.
@@ -81,7 +109,7 @@ PC é sensível a umidade. Secar conforme TDS/secador; ver [secagem e armazename
 | Shrink / stress | Warp — [empenamento](../../12-problemas-e-diagnostico/fff/empenamento.md) |
 | Claridade óptica | Settings de força ≠ settings de óptica |
 
-Ranges OEM (nozzle/bed/chamber) = **starting points em máquina adequada** + TDS. Nunca gospel universal.
+Ranges OEM (nozzle/bed/chamber) = **starting points em máquina adequada** + TDS. Nao (regra de seguranca) gospel universal.
 
 ## Assinatura de falhas
 
@@ -114,7 +142,6 @@ Ranges OEM (nozzle/bed/chamber) = **starting points em máquina adequada** + TDS
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../../22-fontes/bambu-a1-mini-tech-specs.md)
 - TDS/SDS do SKU
 - Legado EN: [pc.md](../../projeto/materiais/pc.md)
 

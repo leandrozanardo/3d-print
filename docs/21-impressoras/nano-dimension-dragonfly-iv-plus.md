@@ -1,28 +1,51 @@
 ---
-id: "printer.nano-dimension-dragonfly-iv-plus"
-title: "Nano Dimension DragonFly IV+"
-summary: "Nano Dimension DragonFly IV+ é um modelo do fabricante Nano Dimension registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.nano-dimension-dragonfly-iv-plus
+title: Nano Dimension DragonFly IV+
+summary: 'Nano Dimension DragonFly IV+ é um modelo do fabricante Nano Dimension registrado
+  no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página
+  o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem
+  oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais
+  e known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["nano-dimension"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.nano-dimension-official-products"]
-related: ["manufacturer.nano-dimension", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- nano-dimension
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.nano-dimension-official-products
+related:
+- manufacturer.nano-dimension
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Nano Dimension DragonFly IV+"]
-tags: ["printer", "cataloged", "nano-dimension"]
+aliases_en:
+- Nano Dimension DragonFly IV+
+tags:
+- printer
+- cataloged
+- nano-dimension
+manufacturer_id: nano-dimension
+model_name: Nano Dimension DragonFly IV+
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # Nano Dimension DragonFly IV+
 

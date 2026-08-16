@@ -1,30 +1,77 @@
 ---
-id: "defect.pbf"
-title: "Defeitos em powder bed fusion (polímero e metal)"
-summary: "Defeitos em PBF agrupam modos de falha de leito (espalhamento), fusão (energia insuficiente/excessiva), tensão residual, contaminação de pó e pós-processamento. Em polímeros (SLS/MJF): soft cake, warpage, fusão incompleta, variação por refresh. Em metais (LPBF/EBM): lack of fusion, keyhole porosity, cracking, balling, spatter. Esta página é matriz de diagnóstico de engenharia — não calibração de laser nem liberação de peça crítica."
-doc_type: "troubleshooting"
-domain: ["troubleshooting", "metals", "polymers"]
-technology: ["powder-bed-fusion"]
-process: ["sls", "mjf", "lpbf", "ebm"]
-applies_to: ["powder-bed-fusion"]
-not_for: ["fff-warping-only", "resin-print-failures"]
-symptoms: ["symptom.porosity", "symptom.lack-of-fusion", "symptom.crack", "symptom.surface-rough", "symptom.warp-cake"]
-causes: ["cause.energy-density", "cause.powder-quality", "cause.atmosphere", "cause.scan-strategy", "cause.thermal-stress"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.niosh-am-entry", "source.iso-astm-52900-entry"]
-related: ["hub.problemas.po-metal", "tech.sls-mjf", "tech.lpbf-ebm", "material.powder-feedstocks", "post.depowdering-metal", "hazard.metal-powder"]
-prerequisites: ["tech.lpbf-ebm"]
+id: defect.pbf
+title: Defeitos em powder bed fusion (polímero e metal)
+summary: 'Defeitos em PBF agrupam modos de falha de leito (espalhamento), fusão (energia
+  insuficiente/excessiva), tensão residual, contaminação de pó e pós-processamento.
+  Em polímeros (SLS/MJF): soft cake, warpage, fusão incompleta, variação por refresh.
+  Em metais (LPBF/EBM): lack of fusion, keyhole porosity, cracking, balling, spatter.
+  Esta página é matriz de diagnóstico de engenharia — não calibração de laser nem
+  liberação de peça crítica.'
+doc_type: troubleshooting
+domain:
+- troubleshooting
+- metals
+- polymers
+technology:
+- powder-bed-fusion
+process:
+- sls
+- mjf
+- lpbf
+- ebm
+applies_to:
+- powder-bed-fusion
+not_for:
+- fff-warping-only
+- resin-print-failures
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.niosh-am-entry
+- source.iso-astm-52900-entry
+related:
+- hub.problemas.po-metal
+- tech.sls-mjf
+- tech.lpbf-ebm
+- material.powder-feedstocks
+- post.depowdering-metal
+- hazard.metal-powder
+prerequisites:
+- tech.lpbf-ebm
 supersedes: []
-aliases_pt_br: ["defeitos PBF", "porosidade LPBF", "falha de fusão", "lack of fusion"]
-aliases_en: ["PBF defects", "lack of fusion", "keyholing", "balling", "spatter"]
-tags: ["pbf", "defects", "metal", "polymer"]
+aliases_pt_br:
+- defeitos PBF
+- porosidade LPBF
+- falha de fusão
+- lack of fusion
+aliases_en:
+- PBF defects
+- lack of fusion
+- keyholing
+- balling
+- spatter
+tags:
+- pbf
+- defects
+- metal
+- polymer
+symptom_tags:
+- porosity
+- lack-of-fusion
+- crack
+- surface-rough
+- warp-cake
+cause_tags:
+- energy-density
+- powder-quality
+- atmosphere
+- scan-strategy
+- thermal-stress
 ---
-
 # Defeitos em powder bed fusion
 
 Hub pai: [Problemas — pó/metal](./INDEX.md)

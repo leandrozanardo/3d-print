@@ -1,28 +1,58 @@
 ---
-id: "printer.formlabs-form-4"
-title: "Formlabs Form 4"
-summary: "Formlabs Form 4 é um modelo do fabricante Formlabs registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
-technology: []
-process: []
-applies_to: ["formlabs"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.formlabs-official-products"]
-related: ["manufacturer.formlabs", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+id: printer.formlabs-form-4
+title: Formlabs Form 4
+summary: 'Formlabs Form 4 é um modelo do fabricante Formlabs registrado no catálogo
+  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
+  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
+  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
+  known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
+technology:
+- vat-photopolymerization
+process:
+- sla
+- lfd
+applies_to:
+- formlabs
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: current
+coverage_level: cataloged
+sources:
+- source.formlabs-official-products
+related:
+- manufacturer.formlabs
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
-aliases_pt_br: []
-aliases_en: ["Formlabs Form 4"]
-tags: ["printer", "cataloged", "formlabs"]
+aliases_pt_br:
+- Form 4
+aliases_en:
+- Formlabs Form 4
+- Form 4
+tags:
+- printer
+- cataloged
+- formlabs
+manufacturer_id: formlabs
+model_name: Form 4
+family_status: form-4-series
+lifecycle_observed_at: '2026-08-16'
+regions:
+- US
+availability_evidence: Official Formlabs Form 4 product page offers Buy Now / Contact
+  an Expert (https://formlabs.com/3d-printers/form-4/, accessed 2026-08-16).
 ---
 # Formlabs Form 4
 
@@ -57,3 +87,15 @@ Esta entrada confirma **existência e listagem oficial** na data do snapshot.
 
 - part-of → fabricante `formlabs`
 - cataloged-in → snapshot `market-snapshot-2026-08-16-census`
+
+## Evidence locator (remediação v2)
+
+| Campo | Valor |
+|---|---|
+| URL exata | https://formlabs.com/3d-printers/form-4/ |
+| região | US / global EN |
+| nome observado | Form 4 |
+| availability signal | Buy Now / Contact an Expert |
+| lifecycle result | current |
+| data de acesso | 2026-08-16 |
+| nota | Form 3+ ainda citada na página Form 4 como benchmark de tempo — não prova Form 3 current |

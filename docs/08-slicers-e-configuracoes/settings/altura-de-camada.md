@@ -1,31 +1,60 @@
 ---
-id: "setting.layer-height"
-title: "Altura de camada (layer height)"
-summary: "Altura de camada é a espessura Z de cada fatia depositada. Controla resolução vertical, tempo, resistência anisotrópica e capacidade de detalhe/overhang. Conceito primeiro; no Bambu Studio o controle aparece sob Quality/layer height (rótulos variam por versão). Regra prática: fração do diâmetro do nozzle (comum 25–75% de 0,4 mm), não um número mágico universal. Validar com a geometria e o material."
-doc_type: "setting"
-domain: ["slicing", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "nozzle-0.4mm"]
-not_for: ["resin-layer-exposure-time", "eternal-ui-path-pinning"]
-settings: ["setting.layer-height"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.bambu-a1-mini-tech-specs"]
-related: ["setting.line-width", "setting.speeds", "nozzle.0.4mm-fff", "process.fff.first-layer"]
-prerequisites: ["tech.fff"]
+id: setting.layer-height
+title: Altura de camada (layer height)
+summary: 'Altura de camada é a espessura Z de cada fatia depositada. Controla resolução
+  vertical, tempo, resistência anisotrópica e capacidade de detalhe/overhang. Conceito
+  primeiro; no Bambu Studio o controle aparece sob Quality/layer height (rótulos variam
+  por versão). Regra prática: fração do diâmetro do nozzle (comum 25–75% de 0,4 mm),
+  não um número mágico universal. Validar com a geometria e o material.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- nozzle-0.4mm
+not_for:
+- resin-layer-exposure-time
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- setting.line-width
+- setting.speeds
+- nozzle.0.4mm-fff
+- process.fff.first-layer
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["altura de camada", "espessura de camada"]
-aliases_en: ["layer height", "layer thickness"]
-tags: ["setting", "layer-height", "slicer"]
+aliases_pt_br:
+- altura de camada
+- espessura de camada
+aliases_en:
+- layer height
+- layer thickness
+tags:
+- setting
+- layer-height
+- slicer
+setting_tags:
+- layer-height
 ---
-
 # Altura de camada (layer height)
 
 Hub pai: [Settings](INDEX.md) · [Slicers](../INDEX.md)
@@ -40,7 +69,7 @@ Em builds recentes do Bambu Studio, procure campos de **Layer height** / **First
 
 ## Unidade / tipo
 
-Comprimento (mm). Tipicamente 0,08–0,28 mm com nozzle 0,4 mm na prática desktop — **faixa de partida**, não lei.
+Comprimento (mm). Tipicamente 0,08–0,28 mm (fonte oficial / fabricante / heuristic; ver `sources`)  com nozzle 0,4 mm na prática desktop — **faixa de partida**, não lei.
 
 ## Mecanismo
 

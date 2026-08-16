@@ -1,28 +1,41 @@
 ---
-id: "meta.printer-manufacturers"
-title: "Fabricantes — censo"
-summary: "Estado do censo de fabricantes no snapshot 2026-08-16-census. 66 OEMs com página manufacturer.* após investigação de listagens oficiais. Seed original expandido; denominador de mercado permanece aberto."
-doc_type: "catalog"
-domain: ["printers", "meta"]
+id: meta.printer-manufacturers
+title: Fabricantes — censo
+summary: Estado do censo de fabricantes no snapshot 2026-08-16-census. 66 OEMs com
+  página manufacturer.* após investigação de listagens oficiais. Seed original expandido;
+  denominador de mercado permanece aberto.
+doc_type: catalog
+domain:
+- printers
+- meta
 technology: []
 process: []
-applies_to: ["catalog-maintainers"]
-not_for: ["treat-seed-as-complete-census"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "per-batch"
+applies_to:
+- catalog-maintainers
+not_for:
+- treat-seed-as-complete-census
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: per-batch
 sources: []
-related: ["meta.printer-progress", "meta.printer-inclusion-criteria", "meta.printer-global-catalog"]
-prerequisites: ["meta.printer-inclusion-criteria"]
+related:
+- meta.printer-progress
+- meta.printer-inclusion-criteria
+- meta.printer-global-catalog
+prerequisites:
+- meta.printer-inclusion-criteria
 supersedes: []
-aliases_pt_br: ["censo de fabricantes"]
-aliases_en: ["manufacturer census"]
-tags: ["manufacturers", "catalog"]
+aliases_pt_br:
+- censo de fabricantes
+aliases_en:
+- manufacturer census
+tags:
+- manufacturers
+- catalog
 ---
-
 # Fabricantes — censo
 
 **Snapshot:** `market-snapshot-2026-08-16-census`  
@@ -34,9 +47,9 @@ Inclui (não exaustivo): Bambu Lab, Prusa Research, Formlabs, Creality, Anycubic
 
 ## Ainda descobertos / a aprofundar
 
-- OEMs ausentes do seed (feiras, associações, distribuidores)
+- OEMs adicionados em 2026-08-16: [CEAD](../manufacturer-cead.md), [ExOne](../manufacturer-exone.md), [RegenHU](../manufacturer-regenhu.md), [VORON Design](../manufacturer-voron.md), [Rat Rig](../manufacturer-ratrig.md)
 - SKUs truncados por JavaScript em lojas oficiais
-- DIY/open hardware (Voron, RatRig, etc.) — classificação própria ainda não aberta neste snapshot
+- DIY/open hardware — classificação própria aberta (Voron/RatRig)
 
 ## Regra
 

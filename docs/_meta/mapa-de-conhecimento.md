@@ -1,17 +1,23 @@
 ---
-id: "meta.knowledge-map"
-title: "Mapa de conhecimento"
-summary: "Mapa dos hubs 01–23, fatia vertical A1 Mini/PLA/PETG e posicionamento do corpus legado (projeto, ebook, printers, arquivo)."
-doc_type: "map"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-related: ["meta.architecture", "meta.coverage", "meta.query-routing"]
-tags: ["map"]
+id: meta.knowledge-map
+title: Mapa de conhecimento
+summary: Mapa dos hubs 01–23, fatia vertical A1 Mini/PLA/PETG e posicionamento do
+  corpus legado (projeto, ebook, printers, arquivo).
+doc_type: map
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+related:
+- meta.architecture
+- meta.coverage
+- meta.query-routing
+tags:
+- map
 technology: []
 process: []
 applies_to: []
@@ -22,7 +28,6 @@ supersedes: []
 aliases_pt_br: []
 aliases_en: []
 ---
-
 # Mapa de conhecimento
 
 ## Entradas por intenção

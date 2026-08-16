@@ -1,19 +1,25 @@
 ---
-id: "meta.editorial-guide"
-title: "Guia editorial"
-summary: "Convenções de idioma pt-BR, nomes técnicos em inglês, filenames kebab-case, front matter, tamanho de página, distinção fato/heurística/hipótese e Definition of Done de página."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-related: ["meta.templates", "meta.evidence-policy", "meta.source-policy"]
-tags: ["editorial"]
+id: meta.editorial-guide
+title: Guia editorial
+summary: Convenções de idioma pt-BR, nomes técnicos em inglês, filenames kebab-case,
+  front matter, tamanho de página, distinção fato/heurística/hipótese e Definition
+  of Done de página.
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+related:
+- meta.templates
+- meta.evidence-policy
+- meta.source-policy
+tags:
+- editorial
 ---
-
 # Guia editorial
 
 ## Idioma

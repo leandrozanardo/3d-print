@@ -1,30 +1,65 @@
 ---
-id: "process.open-frame-env"
-title: "Ambiente em frame aberto (FFF)"
-summary: "Impressoras de frame aberto, como a A1 Mini, expõem a peça e a mesa ao ar da sala: correntes de ar-condicionado, janelas e ventiladores alteram adesão, empenamento e cooling efetivo. Não há câmara aquecida nativa; materiais Ideal (PLA/PETG/TPU/PVA) ainda exigem controle de draft e temperatura ambiente estável. Trate o ambiente como parâmetro de processo — não só o preset do slicer."
-doc_type: "process"
-domain: ["process", "fff", "environment"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["open-frame", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["substitute-for-heated-chamber-materials", "abs-asa-as-default-on-a1-mini"]
-printers: ["printer.bambu-lab-a1-mini"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "defect.fff.warping", "defect.fff.adhesion-failure", "process.fff.first-layer", "component.part-cooling", "kinematics.bed-slinger", "material.pla", "material.petg"]
-prerequisites: ["printer.bambu-lab-a1-mini"]
+id: process.open-frame-env
+title: Ambiente em frame aberto (FFF)
+summary: 'Impressoras de frame aberto, como a A1 Mini, expõem a peça e a mesa ao ar
+  da sala: correntes de ar-condicionado, janelas e ventiladores alteram adesão, empenamento
+  e cooling efetivo. Não há câmara aquecida nativa; materiais Ideal (PLA/PETG/TPU/PVA)
+  ainda exigem controle de draft e temperatura ambiente estável. Trate o ambiente
+  como parâmetro de processo — não só o preset do slicer.'
+doc_type: process
+domain:
+- process
+- fff
+- environment
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- open-frame
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- substitute-for-heated-chamber-materials
+- abs-asa-as-default-on-a1-mini
+printers:
+- printer.bambu-lab-a1-mini
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources: []
+related:
+- printer.bambu-lab-a1-mini
+- defect.fff.warping
+- defect.fff.adhesion-failure
+- process.fff.first-layer
+- component.part-cooling
+- kinematics.bed-slinger
+- material.pla
+- material.petg
+prerequisites:
+- printer.bambu-lab-a1-mini
 supersedes: []
-aliases_pt_br: ["frame aberto", "ambiente de impressão aberto", "sem enclosure"]
-aliases_en: ["open frame", "open-frame environment", "no enclosure"]
-tags: ["environment", "open-frame", "fff"]
+aliases_pt_br:
+- frame aberto
+- ambiente de impressão aberto
+- sem enclosure
+aliases_en:
+- open frame
+- open-frame environment
+- no enclosure
+tags:
+- environment
+- open-frame
+- fff
 ---
-
 # Ambiente em frame aberto (FFF)
 
 Hub pai: [Processo de impressão FFF](INDEX.md)
@@ -56,7 +91,7 @@ Anteparo ≠ enclosure aquecido: pode reduzir draft, mas **não** transforma a m
 
 1. Antes de subir bed ou fan no slicer: **eliminar draft**.
 2. First layer: ambiente estável + limpeza PEI — [primeira camada](primeira-camada.md).
-3. PETG: textured + bed no range (cap 80 °C) + fan moderado + brim se base larga.
+3. PETG: textured + bed no range (cap 80 °C (fonte oficial/fabricante/heuristic; ver sources) ) + fan moderado + brim se base larga.
 4. PLA: mais tolerante, ainda sensível a jato frio direto na first layer.
 5. Não use materiais Not Recommended “com caixa de papelão” como conselho padrão desta base.
 
@@ -83,7 +118,6 @@ Como [bed-slinger](../../03-maquinas-e-arquiteturas/cinematica-bed-slinger.md), 
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

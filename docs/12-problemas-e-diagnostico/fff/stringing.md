@@ -1,41 +1,88 @@
 ---
-id: "defect.fff.stringing"
-title: "Stringing (fios / cabelo) em FFF"
-summary: "Stringing são fios finos entre regiões da peça causados por ooze durante travels. Na A1 Mini (direct drive) a ordem correta é secar → ajustar temperatura → torre de retração curta a partir do preset — nunca copiar comprimentos Bowden. PETG é especialmente sensível à umidade. Z-hop pode piorar. Diferencie de subextrusão (gaps) e de detalhe derretido sem fios."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg", "material.tpu"]
-not_for: ["gaps-without-hairs", "bowden-retract-copy"]
-symptoms: ["symptom.stringing", "symptom.whiskers"]
-causes: ["cause.moisture", "cause.high-temp", "cause.retraction", "cause.travel"]
-materials: ["material.pla", "material.petg", "material.tpu"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.retraction", "setting.temperatures"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["setting.retraction", "material.drying-storage", "defect.fff.under-extrusion", "material.petg", "process.fff.first-layer"]
-prerequisites: ["material.drying-storage"]
+id: defect.fff.stringing
+title: Stringing (fios / cabelo) em FFF
+summary: Stringing são fios finos entre regiões da peça causados por ooze durante
+  travels. Na A1 Mini (direct drive) a ordem correta é secar → ajustar temperatura
+  → torre de retração curta a partir do preset — nunca copiar comprimentos Bowden.
+  PETG é especialmente sensível à umidade. Z-hop pode piorar. Diferencie de subextrusão
+  (gaps) e de detalhe derretido sem fios.
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+- material.tpu
+not_for:
+- gaps-without-hairs
+- bowden-retract-copy
+materials:
+- material.pla
+- material.petg
+- material.tpu
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- setting.retraction
+- material.drying-storage
+- defect.fff.under-extrusion
+- material.petg
+- process.fff.first-layer
+prerequisites:
+- material.drying-storage
 supersedes: []
-aliases_pt_br: ["stringing", "fio de cabelo", "teia", "oozing"]
-aliases_en: ["stringing", "whiskers", "hairs", "oozing"]
-tags: ["stringing", "troubleshooting", "fff"]
+aliases_pt_br:
+- stringing
+- fio de cabelo
+- teia
+- oozing
+aliases_en:
+- stringing
+- whiskers
+- hairs
+- oozing
+tags:
+- stringing
+- troubleshooting
+- fff
+symptom_tags:
+- stringing
+- whiskers
+cause_tags:
+- moisture
+- high-temp
+- retraction
+- travel
+setting_tags:
+- retraction
+- temperatures
 ---
-
 # Stringing (fios / cabelo) em FFF
 
 Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.md)
 
 ## Resumo de emergência
 
-Fios entre torres/peças? **Seque** o filamento, depois −5 °C no range, depois torre de [retração](../../08-slicers-e-configuracoes/settings/retracao.md) curta (direct drive). Não suba retract para 5–8 mm.
+Fios entre torres/peças? **Seque** o filamento, depois −5 °C (fonte oficial / fabricante / heuristic; ver `sources`)  no range, depois torre de [retração](../../08-slicers-e-configuracoes/settings/retracao.md) curta (direct drive). Não suba retract para 5–8 mm (fonte oficial/fabricante/heuristic; ver sources) .
 
 ## Assinatura
 

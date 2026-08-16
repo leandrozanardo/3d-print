@@ -1,30 +1,72 @@
 ---
-id: "defect.resin.island-loose-support"
-title: "Ilha e suporte solto"
-summary: "Falha atômica em vat: volumes desconectados (ilhas), overhangs sem caminho de carga até a plataforma, ou tips de suporte que arrancam da peça/raft. Sintomas: pedaços no fundo do tanque, features faltando, cicatriz de tip sem corpo, peça ‘pendurada’ incompleta. Mecanismos: tipagem insuficiente, ângulo ruim, contact depth baixo, peel alto, subexposição local. Diferencie de falha total de base (nada na placa) e de cupping/sucção. PPE obrigatório ao filtrar resina."
-doc_type: "troubleshooting"
-domain: ["troubleshooting", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-tree-supports-as-identical", "copy-support-density-universals"]
-symptoms: ["symptom.island-failure", "symptom.support-tear", "symptom.missing-feature-mid-print"]
-causes: ["cause.weak-tips", "cause.bad-orientation", "cause.unsupported-island", "cause.high-peel", "cause.local-underexposure"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["defect.resin.index", "defect.resin.nothing-on-plate", "defect.resin.suction-delamination", "defect.resin.over-under-exposure", "setting.resin-exposure-supports", "hazard.resin-ppe-disposal"]
-prerequisites: ["hazard.resin-ppe-disposal", "setting.resin-exposure-supports"]
+id: defect.resin.island-loose-support
+title: Ilha e suporte solto
+summary: 'Falha atômica em vat: volumes desconectados (ilhas), overhangs sem caminho
+  de carga até a plataforma, ou tips de suporte que arrancam da peça/raft. Sintomas:
+  pedaços no fundo do tanque, features faltando, cicatriz de tip sem corpo, peça ‘pendurada’
+  incompleta. Mecanismos: tipagem insuficiente, ângulo ruim, contact depth baixo,
+  peel alto, subexposição local. Diferencie de falha total de base (nada na placa)
+  e de cupping/sucção. PPE obrigatório ao filtrar resina.'
+doc_type: troubleshooting
+domain:
+- troubleshooting
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-tree-supports-as-identical
+- copy-support-density-universals
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- defect.resin.index
+- defect.resin.nothing-on-plate
+- defect.resin.suction-delamination
+- defect.resin.over-under-exposure
+- setting.resin-exposure-supports
+- hazard.resin-ppe-disposal
+prerequisites:
+- hazard.resin-ppe-disposal
+- setting.resin-exposure-supports
 supersedes: []
-aliases_pt_br: ["ilha impressão resina", "suporte arrancado", "tip falhou", "feature caiu no tanque"]
-aliases_en: ["resin island failure", "loose support", "torn support tip", "unsupported island"]
-tags: ["troubleshooting", "resin", "supports", "islands"]
+aliases_pt_br:
+- ilha impressão resina
+- suporte arrancado
+- tip falhou
+- feature caiu no tanque
+aliases_en:
+- resin island failure
+- loose support
+- torn support tip
+- unsupported island
+tags:
+- troubleshooting
+- resin
+- supports
+- islands
+symptom_tags:
+- island-failure
+- support-tear
+- missing-feature-mid-print
+cause_tags:
+- weak-tips
+- bad-orientation
+- unsupported-island
+- high-peel
+- local-underexposure
 ---
-
 # Ilha e suporte solto
 
 Hub pai: [Problemas — resina](INDEX.md) · [Índice de falhas](indice-falhas-resina.md)

@@ -1,28 +1,56 @@
 ---
-id: "fund.correlation-vs-cause"
-title: "Correlação vs causa no troubleshooting FFF"
-summary: "Troubleshooting eficaz separa sintoma, correlação e causa raiz. Mudar dois parâmetros e ‘melhorar’ não prova mecanismo; a mesma falha (ex.: peça solta) pode vir de first layer, warp, layer shift ou umidade. Esta página define disciplina de diagnóstico: uma mudança por vez, hipóteses falsificáveis, cupons e registro — sem checklists mágicos universais."
-doc_type: "concept"
-domain: ["fundamentals", "troubleshooting", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "calibration", "defect-diagnosis"]
-not_for: ["blind-parameter-spray", "guaranteed-root-cause-from-photo-alone"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["troubleshoot.fff-symptom-index", "quality.test-coupons", "process.fff.first-layer", "fund.heat-transfer-fff"]
-prerequisites: ["fund.terminology"]
+id: fund.correlation-vs-cause
+title: Correlação vs causa no troubleshooting FFF
+summary: 'Troubleshooting eficaz separa sintoma, correlação e causa raiz. Mudar dois
+  parâmetros e ‘melhorar’ não prova mecanismo; a mesma falha (ex.: peça solta) pode
+  vir de first layer, warp, layer shift ou umidade. Esta página define disciplina
+  de diagnóstico: uma mudança por vez, hipóteses falsificáveis, cupons e registro
+  — sem checklists mágicos universais.'
+doc_type: concept
+domain:
+- fundamentals
+- troubleshooting
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- calibration
+- defect-diagnosis
+not_for:
+- blind-parameter-spray
+- guaranteed-root-cause-from-photo-alone
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- troubleshoot.fff-symptom-index
+- quality.test-coupons
+- process.fff.first-layer
+- fund.heat-transfer-fff
+prerequisites:
+- fund.terminology
 supersedes: []
-aliases_pt_br: ["correlação vs causa", "diagnóstico FFF", "falácia de troubleshooting"]
-aliases_en: ["correlation vs causation printing", "FFF troubleshooting discipline"]
-tags: ["fundamentals", "troubleshooting", "methodology"]
+aliases_pt_br:
+- correlação vs causa
+- diagnóstico FFF
+- falácia de troubleshooting
+aliases_en:
+- correlation vs causation printing
+- FFF troubleshooting discipline
+tags:
+- fundamentals
+- troubleshooting
+- methodology
 ---
-
 # Correlação vs causa no troubleshooting FFF
 
 Hub pai: [Fundamentos](INDEX.md)

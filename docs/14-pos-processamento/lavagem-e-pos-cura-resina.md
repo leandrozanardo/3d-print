@@ -1,28 +1,62 @@
 ---
-id: "post.resin-wash-cure"
-title: "Lavagem e pós-cura de resina"
-summary: "Peças vat saem ‘green’: devem ser lavadas para remover resina não curada e pós-curadas com UV na dose adequada ao TDS. IPA ou fluxos water-washable têm riscos distintos (inflamável vs efluente). Cura incompleta deixa superfície irritante; cura excessiva pode fragilizar. Nunca pular PPE; nunca descarte no ralo; nunca claim food/medical. Referências NIOSH/EPA para higiene e química."
-doc_type: "guide"
-domain: ["post-processing", "resin", "safety"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-support-removal-as-wash", "drain-disposal", "food-safe-after-cure-claim"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hazard.resin-ppe-disposal", "tech.sla-dlp-msla", "material.resin-families", "setting.resin-exposure-supports", "post.sanding-finishing", "post.painting"]
-prerequisites: ["hazard.resin-ppe-disposal"]
+id: post.resin-wash-cure
+title: Lavagem e pós-cura de resina
+summary: 'Peças vat saem ‘green’: devem ser lavadas para remover resina não curada
+  e pós-curadas com UV na dose adequada ao TDS. IPA ou fluxos water-washable têm riscos
+  distintos (inflamável vs efluente). Cura incompleta deixa superfície irritante;
+  cura excessiva pode fragilizar. Nunca pular PPE; nunca descarte no ralo; nunca claim
+  food/medical. Referências NIOSH/EPA para higiene e química.'
+doc_type: guide
+domain:
+- post-processing
+- resin
+- safety
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-support-removal-as-wash
+- drain-disposal
+- food-safe-after-cure-claim
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hazard.resin-ppe-disposal
+- tech.sla-dlp-msla
+- material.resin-families
+- setting.resin-exposure-supports
+- post.sanding-finishing
+- post.painting
+prerequisites:
+- hazard.resin-ppe-disposal
 supersedes: []
-aliases_pt_br: ["lavar peça de resina", "pós-cura UV", "IPA wash"]
-aliases_en: ["resin wash and cure", "IPA wash", "UV post-cure"]
-tags: ["post-processing", "resin", "wash", "cure", "safety"]
+aliases_pt_br:
+- lavar peça de resina
+- pós-cura UV
+- IPA wash
+aliases_en:
+- resin wash and cure
+- IPA wash
+- UV post-cure
+tags:
+- post-processing
+- resin
+- wash
+- cure
+- safety
 ---
-
 # Lavagem e pós-cura de resina
 
 Hub pai: [Pós-processamento](INDEX.md)

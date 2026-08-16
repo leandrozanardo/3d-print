@@ -1,28 +1,35 @@
 ---
-id: "hub.calibracao"
-title: "Calibração"
-summary: "Procedimentos, cupons, ordem de testes e validade temporal. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
-doc_type: "hub"
-domain: ["hub"]
+id: hub.calibracao
+title: Calibração
+summary: Procedimentos, cupons, ordem de testes e validade temporal. Hub de navegação;
+  a cobertura profunda depende da matriz em _meta/cobertura.md.
+doc_type: hub
+domain:
+- hub
 technology: []
 process: []
 applies_to: []
-not_for: ["complete-coverage-claim"]
-knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
+not_for:
+- complete-coverage-claim
+knowledge_status: draft
+evidence_status: unknown
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
 sources: []
-related: ["meta.coverage", "meta.knowledge-map"]
-prerequisites: ["meta.architecture"]
+related:
+- meta.coverage
+- meta.knowledge-map
+prerequisites:
+- meta.architecture
 supersedes: []
-aliases_pt_br: ["Calibração"]
+aliases_pt_br:
+- Calibração
 aliases_en: []
-tags: ["hub"]
+tags:
+- hub
 ---
-
 # Calibração
 
 ## Escopo

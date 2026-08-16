@@ -1,28 +1,52 @@
 ---
-id: "tech.fff"
-title: "FFF — Fused Filament Fabrication (extrusão de material)"
-summary: "FFF é o processo genérico de manufatura aditiva por extrusão de termoplástico em filamento, depositado camada a camada. Pertence à categoria material extrusion. FDM é termo comercial histórico frequentemente usado como sinônimo popular, mas não deve ser tratado como categoria ISO distinta sem contexto. Esta página orienta mecanismo, limitações e navegação; profundidade de hardware/settings virá em waves seguintes."
-doc_type: "technology"
-domain: ["technologies", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material-extrusion"]
-not_for: ["vat-photopolymerization-rules", "powder-bed-rules"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry"]
-related: ["printer.bambu-lab-a1-mini", "material.pla", "process.fff.first-layer"]
+id: tech.fff
+title: FFF — Fused Filament Fabrication (extrusão de material)
+summary: FFF é o processo genérico de manufatura aditiva por extrusão de termoplástico
+  em filamento, depositado camada a camada. Pertence à categoria material extrusion.
+  FDM é termo comercial histórico frequentemente usado como sinônimo popular, mas
+  não deve ser tratado como categoria ISO distinta sem contexto. Esta página orienta
+  mecanismo, limitações e navegação; profundidade de hardware/settings virá em waves
+  seguintes.
+doc_type: technology
+domain:
+- technologies
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material-extrusion
+not_for:
+- vat-photopolymerization-rules
+- powder-bed-rules
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+related:
+- printer.bambu-lab-a1-mini
+- material.pla
+- process.fff.first-layer
 prerequisites: []
-aliases_pt_br: ["FFF", "impressão por filamento", "extrusão de filamento"]
-aliases_en: ["FFF", "Fused Filament Fabrication", "FDM"]
-tags: ["fff", "material-extrusion"]
+aliases_pt_br:
+- FFF
+- impressão por filamento
+- extrusão de filamento
+aliases_en:
+- FFF
+- Fused Filament Fabrication
+- FDM
+tags:
+- fff
+- material-extrusion
 supersedes: []
 ---
-
 # FFF — Fused Filament Fabrication
 
 Hub pai: [Tecnologias](../INDEX.md) · pasta [material-extrusion](./)

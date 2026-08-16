@@ -1,28 +1,61 @@
 ---
-id: "design.holes-threads-inserts"
-title: "Features — furos, roscas e inserts em FFF"
-summary: "Furos em FFF saem menores/ovais se mal orientados; roscas impressas funcionam em baixa carga com calculadora e cupom, mas inserts metálicos (heat-set ou press) são preferíveis para torque e ciclos. Desenhe bosses com paredes suficientes, evite suporte no furo crítico e corrija elephant foot antes de culpar o diâmetro CAD. Não use rosca impressa como substituto de fixação de segurança crítica."
-doc_type: "guide"
-domain: ["design", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "nozzle-0.4mm", "material.pla", "material.petg"]
-not_for: ["safety-critical-fasteners-without-engineering", "pipe-thread-pressure", "food-medical-seals"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide"]
-related: ["design.tolerances-fff", "design.strength-anisotropy", "process.fff.first-layer", "quality.test-coupons", "scenario.functional-brackets"]
-prerequisites: ["design.tolerances-fff"]
+id: design.holes-threads-inserts
+title: Features — furos, roscas e inserts em FFF
+summary: Furos em FFF saem menores/ovais se mal orientados; roscas impressas funcionam
+  em baixa carga com calculadora e cupom, mas inserts metálicos (heat-set ou press)
+  são preferíveis para torque e ciclos. Desenhe bosses com paredes suficientes, evite
+  suporte no furo crítico e corrija elephant foot antes de culpar o diâmetro CAD.
+  Não use rosca impressa como substituto de fixação de segurança crítica.
+doc_type: guide
+domain:
+- design
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- nozzle-0.4mm
+- material.pla
+- material.petg
+not_for:
+- safety-critical-fasteners-without-engineering
+- pipe-thread-pressure
+- food-medical-seals
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- design.tolerances-fff
+- design.strength-anisotropy
+- process.fff.first-layer
+- quality.test-coupons
+- scenario.functional-brackets
+prerequisites:
+- design.tolerances-fff
 supersedes: []
-aliases_pt_br: ["furos FFF", "roscas impressas", "insertos heat-set"]
-aliases_en: ["printed holes", "printed threads", "heat-set inserts"]
-tags: ["dfam", "holes", "threads", "inserts", "fff"]
+aliases_pt_br:
+- furos FFF
+- roscas impressas
+- insertos heat-set
+aliases_en:
+- printed holes
+- printed threads
+- heat-set inserts
+tags:
+- dfam
+- holes
+- threads
+- inserts
+- fff
 ---
-
 # Features — furos, roscas e inserts em FFF
 
 Hub pai: [Design para impressão 3D](INDEX.md)

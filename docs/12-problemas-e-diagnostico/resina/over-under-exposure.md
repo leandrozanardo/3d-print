@@ -1,30 +1,72 @@
 ---
-id: "defect.resin.over-under-exposure"
-title: "Over e under exposure (resina)"
-summary: "Falha atômica em vat: energia por camada fora da janela. Under: features frágeis, falha de adesão entre camadas, tips fracos, detalhe ‘incompleto’. Over: bleeding/elefante em microdetalhe, perda de furos finos, aderência excessiva ao filme, peça gorducha. Calibre com matriz/cupom do fabricante — nunca copie tempo de fórum como universal. Diferencie de tipagem e de cupping. PPE ao manusear cupons não lavados."
-doc_type: "troubleshooting"
-domain: ["troubleshooting", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-temperature-tuning", "universal-exposure-tables"]
-symptoms: ["symptom.underexposure-resin", "symptom.overexposure-bleed", "symptom.lost-fine-holes"]
-causes: ["cause.wrong-exposure-time", "cause.wrong-layer-height", "cause.degraded-lcd", "cause.resin-batch-shift"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["defect.resin.index", "defect.resin.nothing-on-plate", "defect.resin.island-loose-support", "defect.resin.suction-delamination", "setting.resin-exposure-supports", "material.resin-families", "post.resin-wash-cure"]
-prerequisites: ["hazard.resin-ppe-disposal", "setting.resin-exposure-supports"]
+id: defect.resin.over-under-exposure
+title: Over e under exposure (resina)
+summary: 'Falha atômica em vat: energia por camada fora da janela. Under: features
+  frágeis, falha de adesão entre camadas, tips fracos, detalhe ‘incompleto’. Over:
+  bleeding/elefante em microdetalhe, perda de furos finos, aderência excessiva ao
+  filme, peça gorducha. Calibre com matriz/cupom do fabricante — nunca copie tempo
+  de fórum como universal. Diferencie de tipagem e de cupping. PPE ao manusear cupons
+  não lavados.'
+doc_type: troubleshooting
+domain:
+- troubleshooting
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-temperature-tuning
+- universal-exposure-tables
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- defect.resin.index
+- defect.resin.nothing-on-plate
+- defect.resin.island-loose-support
+- defect.resin.suction-delamination
+- setting.resin-exposure-supports
+- material.resin-families
+- post.resin-wash-cure
+prerequisites:
+- hazard.resin-ppe-disposal
+- setting.resin-exposure-supports
 supersedes: []
-aliases_pt_br: ["superexposição resina", "subexposição resina", "bleeding MSLA", "cura insuficiente camada"]
-aliases_en: ["resin overexposure", "resin underexposure", "MSLA bleeding", "exposure calibration"]
-tags: ["troubleshooting", "resin", "exposure", "calibration"]
+aliases_pt_br:
+- superexposição resina
+- subexposição resina
+- bleeding MSLA
+- cura insuficiente camada
+aliases_en:
+- resin overexposure
+- resin underexposure
+- MSLA bleeding
+- exposure calibration
+tags:
+- troubleshooting
+- resin
+- exposure
+- calibration
+symptom_tags:
+- underexposure-resin
+- overexposure-bleed
+- lost-fine-holes
+cause_tags:
+- wrong-exposure-time
+- wrong-layer-height
+- degraded-lcd
+- resin-batch-shift
 ---
-
 # Over e under exposure (resina)
 
 Hub pai: [Problemas — resina](INDEX.md) · [Índice de falhas](indice-falhas-resina.md)

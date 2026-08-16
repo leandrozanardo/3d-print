@@ -1,18 +1,32 @@
 ---
-id: "source.klipper-docs"
-title: "Fonte — Klipper Documentation"
-summary: "Documentação oficial do projeto Klipper (klipper3d.org): host-based motion planning, printer.cfg, macros e recursos como pressure advance. Usar para conceitos de stacks abertos Klipper. Não descreve firmware interno Bambu nem instrui jailbreak/substituição de OEM."
-doc_type: "source"
-domain: ["sources", "firmware"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["firmware.klipper-marlin-concepts", "firmware.gcode-basics", "setting.flow-pressure-advance", "source.marlin-docs"]
-aliases_en: ["Klipper docs", "klipper3d.org"]
-tags: ["source", "klipper", "firmware"]
+id: source.klipper-docs
+title: Fonte — Klipper Documentation
+summary: 'Documentação oficial do projeto Klipper (klipper3d.org): host-based motion
+  planning, printer.cfg, macros e recursos como pressure advance. Usar para conceitos
+  de stacks abertos Klipper. Não descreve firmware interno Bambu nem instrui jailbreak/substituição
+  de OEM.'
+doc_type: source
+domain:
+- sources
+- firmware
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- firmware.klipper-marlin-concepts
+- firmware.gcode-basics
+- setting.flow-pressure-advance
+- source.marlin-docs
+aliases_en:
+- Klipper docs
+- klipper3d.org
+tags:
+- source
+- klipper
+- firmware
 technology: []
 process: []
 applies_to: []
@@ -21,8 +35,11 @@ sources: []
 prerequisites: []
 supersedes: []
 aliases_pt_br: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — Klipper Documentation
 
 | Campo | Valor |

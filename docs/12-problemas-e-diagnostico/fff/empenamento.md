@@ -1,41 +1,89 @@
 ---
-id: "defect.fff.warping"
-title: "Empenamento (warping) em FFF"
-summary: "Empenamento (warping) é o levantamento de cantos ou bordas por contração térmica e tensões residuais depois que a peça já aderiu. Diferente de falha de adesão na camada 1. Em A1 Mini (frame aberto), PLA empen menos que PETG e geometrias de base larga; as alavancas principais são contato (brim), temperatura de mesa no range, cooling inicial baixo, bloqueio de corrente de ar e reorientação — raft é último recurso."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["first-layer-never-stuck", "layer-shift"]
-symptoms: ["symptom.corner-lift", "symptom.edge-peel-late"]
-causes: ["cause.thermal-shrinkage", "cause.draft", "cause.insufficient-edge-anchor"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.brim", "setting.bed-temperature", "setting.part-cooling"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["process.fff.first-layer", "material.pla", "material.petg", "printer.bambu-lab-a1-mini", "defect.fff.layer-shift", "defect.fff.under-extrusion", "defect.fff.delamination", "defect.fff.elephant-foot", "troubleshoot.fff-symptom-index"]
-prerequisites: ["process.fff.first-layer"]
-aliases_pt_br: ["empenamento", "levantamento de canto", "warp"]
-aliases_en: ["warping", "corner lift", "curl"]
-tags: ["warping", "troubleshooting", "fff"]
+id: defect.fff.warping
+title: Empenamento (warping) em FFF
+summary: Empenamento (warping) é o levantamento de cantos ou bordas por contração
+  térmica e tensões residuais depois que a peça já aderiu. Diferente de falha de adesão
+  na camada 1. Em A1 Mini (frame aberto), PLA empen menos que PETG e geometrias de
+  base larga; as alavancas principais são contato (brim), temperatura de mesa no range,
+  cooling inicial baixo, bloqueio de corrente de ar e reorientação — raft é último
+  recurso.
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- first-layer-never-stuck
+- layer-shift
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- process.fff.first-layer
+- material.pla
+- material.petg
+- printer.bambu-lab-a1-mini
+- defect.fff.layer-shift
+- defect.fff.under-extrusion
+- defect.fff.delamination
+- defect.fff.elephant-foot
+- troubleshoot.fff-symptom-index
+prerequisites:
+- process.fff.first-layer
+aliases_pt_br:
+- empenamento
+- levantamento de canto
+- warp
+aliases_en:
+- warping
+- corner lift
+- curl
+tags:
+- warping
+- troubleshooting
+- fff
 supersedes: []
+symptom_tags:
+- corner-lift
+- edge-peel-late
+cause_tags:
+- thermal-shrinkage
+- draft
+- insufficient-edge-anchor
+setting_tags:
+- brim
+- bed-temperature
+- part-cooling
 ---
-
 # Empenamento (warping) em FFF
 
 Hub pai: [Problemas e diagnóstico](../INDEX.md)
 
 ## Resumo de emergência
 
-Cantos sobem **depois** de boa adesão inicial? Bloqueie corrente de ar, confirme bed no range (A1 Mini ≤ 80 °C), ative brim, reduza cooling nas primeiras camadas. Se **nunca** grudou na camada 1 → [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) primeiro.
+Cantos sobem **depois** de boa adesão inicial? Bloqueie corrente de ar, confirme bed no range (A1 Mini ≤ 80 °C (fonte oficial / fabricante / heuristic; ver `sources`) ), ative brim, reduza cooling nas primeiras camadas. Se **nunca** grudou na camada 1 → [primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) primeiro.
 
 ## Assinatura
 
@@ -82,7 +130,7 @@ Camada 1 grudou com squish OK?
   └─ SIM → cantos sobem depois?
         ├─ Há draft/AC na mesa? → bloquear fluxo de ar
         ├─ Base longa contínua? → brim + reorientar eixo longo + ↓ fan inicial
-        └─ PETG? → seco? bed 70–80 °C (≤80) + brim + fan moderado
+        └─ PETG? → seco? bed 70–80 °C (fonte oficial/fabricante/heuristic; ver sources)  (≤80) + brim + fan moderado
 Raft somente se brim falhou em duas tentativas controladas.
 ```
 
@@ -102,7 +150,7 @@ Raft somente se brim falhou em duas tentativas controladas.
 |---|---|---|
 | Draft | Defletor / mudar posição | Subir temp sem medir |
 | Âncora fraca | Brim | Raft imediato |
-| PETG bed baixo | ↑ bed até ≤80 °C | Ultrapassar capability |
+| PETG bed baixo | ↑ bed até ≤80 °C (fonte oficial/fabricante/heuristic; ver sources)  | Ultrapassar capability |
 | Cooling cedo | ↓ fan inicial | Max fan + max speed |
 | Geometria | Reorientar | Mudar material na mesma hora |
 

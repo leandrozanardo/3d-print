@@ -1,28 +1,57 @@
 ---
-id: "format.units-scale-manifold"
-title: "Unidades, escala e manifold"
-summary: "Falhas clássicas de importação: modelo 25× maior/menor (polegada vs mm), envelope fora da mesa, e malha non-manifold que o slicer interpreta como volume inválido. Manifold (fechada, orientável, sem bordas livres problemáticas) é pré-condição de fatiamento confiável — não de food-safe. Sempre validar unidades e bounding box no slicer antes de jobs longos. Esta página não inventa fatores de escala ‘mágicos’; mede no software e compara com a intenção."
-doc_type: "guide"
-domain: ["models", "formats", "meshes"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "mesh-import", "bambu-studio"]
-not_for: ["assume-mm-without-check", "manifold-equals-watertight-product"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["format.stl-vs-3mf", "format.mesh-repair", "printer.bambu-lab-a1-mini", "fund.digital-workflow"]
-prerequisites: ["format.stl-vs-3mf"]
+id: format.units-scale-manifold
+title: Unidades, escala e manifold
+summary: 'Falhas clássicas de importação: modelo 25× maior/menor (polegada vs mm),
+  envelope fora da mesa, e malha non-manifold que o slicer interpreta como volume
+  inválido. Manifold (fechada, orientável, sem bordas livres problemáticas) é pré-condição
+  de fatiamento confiável — não de food-safe. Sempre validar unidades e bounding box
+  no slicer antes de jobs longos. Esta página não inventa fatores de escala ‘mágicos’;
+  mede no software e compara com a intenção.'
+doc_type: guide
+domain:
+- models
+- formats
+- meshes
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- mesh-import
+- bambu-studio
+not_for:
+- assume-mm-without-check
+- manifold-equals-watertight-product
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources: []
+related:
+- format.stl-vs-3mf
+- format.mesh-repair
+- printer.bambu-lab-a1-mini
+- fund.digital-workflow
+prerequisites:
+- format.stl-vs-3mf
 supersedes: []
-aliases_pt_br: ["escala errada STL", "unidades mm polegadas", "malha manifold"]
-aliases_en: ["mesh units", "scale factor", "manifold mesh"]
-tags: ["units", "scale", "manifold", "mesh"]
+aliases_pt_br:
+- escala errada STL
+- unidades mm polegadas
+- malha manifold
+aliases_en:
+- mesh units
+- scale factor
+- manifold mesh
+tags:
+- units
+- scale
+- manifold
+- mesh
 ---
-
 # Unidades, escala e manifold
 
 Hub pai: [Modelos, formatos e malhas](INDEX.md)

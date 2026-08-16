@@ -1,31 +1,67 @@
 ---
-id: "setting.supports"
-title: "Suportes (FFF)"
-summary: "Suportes FFF são estruturas temporárias que sustentam overhangs, bridges difíceis e ilhas até haver material abaixo. Conceito: ângulo de overhang, interface (contact Z / top interface), padrão (normal vs tree), densidade e remoção. No Bambu Studio: Enable support, type, threshold angle, raft/interface options (UI muda). Preferir reorientar/design antes de suporte denso. Diferencie de brim/raft (adesão à mesa) e de tipagem de resina."
-doc_type: "setting"
-domain: ["slicing", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "printer.bambu-lab-a1-mini"]
-not_for: ["resin-support-tips-as-identical", "eternal-ui-path-pinning", "universal-overhang-angle"]
-settings: ["setting.supports"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["setting.brim-raft-skirt", "setting.cooling", "setting.speeds", "setting.layer-height", "defect.fff.warping", "hub.slicers.settings"]
-prerequisites: ["tech.fff"]
+id: setting.supports
+title: Suportes (FFF)
+summary: 'Suportes FFF são estruturas temporárias que sustentam overhangs, bridges
+  difíceis e ilhas até haver material abaixo. Conceito: ângulo de overhang, interface
+  (contact Z / top interface), padrão (normal vs tree), densidade e remoção. No Bambu
+  Studio: Enable support, type, threshold angle, raft/interface options (UI muda).
+  Preferir reorientar/design antes de suporte denso. Diferencie de brim/raft (adesão
+  à mesa) e de tipagem de resina.'
+doc_type: setting
+domain:
+- slicing
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- printer.bambu-lab-a1-mini
+not_for:
+- resin-support-tips-as-identical
+- eternal-ui-path-pinning
+- universal-overhang-angle
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- setting.brim-raft-skirt
+- setting.cooling
+- setting.speeds
+- setting.layer-height
+- defect.fff.warping
+- hub.slicers.settings
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["suportes FFF", "support overhang", "suporte árvore", "interface de suporte"]
-aliases_en: ["FFF supports", "tree support", "overhang threshold", "support interface"]
-tags: ["setting", "supports", "fff", "slicer"]
+aliases_pt_br:
+- support overhang
+- interface de suporte
+aliases_en:
+- FFF supports
+- tree support
+- overhang threshold
+- support interface
+tags:
+- setting
+- supports
+- fff
+- slicer
+setting_tags:
+- supports
 ---
-
 # Suportes (FFF)
 
 Hub pai: [Settings](INDEX.md)

@@ -1,28 +1,51 @@
 ---
-id: "printer.eos-formiga-p-110"
-title: "EOS FORMIGA P 110"
-summary: "EOS FORMIGA P 110 é um modelo do fabricante EOS registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.eos-formiga-p-110
+title: EOS FORMIGA P 110
+summary: 'EOS FORMIGA P 110 é um modelo do fabricante EOS registrado no catálogo fix-my-print
+  (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura
+  é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em
+  2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues
+  ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["eos"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.eos-official-products"]
-related: ["manufacturer.eos", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- eos
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.eos-official-products
+related:
+- manufacturer.eos
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["EOS FORMIGA P 110"]
-tags: ["printer", "cataloged", "eos"]
+aliases_en:
+- EOS FORMIGA P 110
+tags:
+- printer
+- cataloged
+- eos
+manufacturer_id: eos
+model_name: FORMIGA P 110
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # EOS FORMIGA P 110
 

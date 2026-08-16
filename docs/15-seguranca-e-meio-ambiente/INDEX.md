@@ -1,28 +1,39 @@
 ---
-id: "hub.seguranca"
-title: "Segurança e meio ambiente"
-summary: "VOC/UFP, claims food/medical, PPE/descarte de resina e risco de pós metálicos. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
-doc_type: "hub"
-domain: ["hub"]
+id: hub.seguranca
+title: Segurança e meio ambiente
+summary: VOC/UFP, claims food/medical, PPE/descarte de resina e risco de pós metálicos.
+  Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md.
+doc_type: hub
+domain:
+- hub
 technology: []
 process: []
 applies_to: []
-not_for: ["complete-coverage-claim"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["meta.coverage", "meta.knowledge-map", "hazard.electrical-fire-unattended", "hazard.solvents-ipa-vapors"]
-prerequisites: ["meta.architecture"]
+not_for:
+- complete-coverage-claim
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- meta.coverage
+- meta.knowledge-map
+- hazard.electrical-fire-unattended
+- hazard.solvents-ipa-vapors
+prerequisites:
+- meta.architecture
 supersedes: []
-aliases_pt_br: ["Segurança e meio ambiente"]
+aliases_pt_br:
+- Segurança e meio ambiente
 aliases_en: []
-tags: ["hub"]
+tags:
+- hub
 ---
-
 # Segurança e meio ambiente
 
 ## Escopo

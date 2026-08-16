@@ -1,28 +1,60 @@
 ---
-id: "quality.test-coupons"
-title: "Cupons e ensaios (validação FFF)"
-summary: "Cupons são geometrias pequenas para isolar uma variável (primeira camada, folga pin/hole, flow, overhang, adesão Z) antes de gastar tempo e filamento na peça final. Ensaios funcionais validam a peça sob carga/uso real. Use uma mudança por vez, registre condições e interprete com exatidão vs repetibilidade. Cupom não substitui SDS, ventilação nem certificação food/medical."
-doc_type: "guide"
-domain: ["quality", "metrology", "calibration", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["single-coupon-as-certification", "destructive-test-lab-accreditation"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["quality.accuracy-vs-precision", "design.tolerances-fff", "process.fff.first-layer", "design.strength-anisotropy"]
-prerequisites: ["quality.accuracy-vs-precision"]
+id: quality.test-coupons
+title: Cupons e ensaios (validação FFF)
+summary: Cupons são geometrias pequenas para isolar uma variável (primeira camada,
+  folga pin/hole, flow, overhang, adesão Z) antes de gastar tempo e filamento na peça
+  final. Ensaios funcionais validam a peça sob carga/uso real. Use uma mudança por
+  vez, registre condições e interprete com exatidão vs repetibilidade. Cupom não substitui
+  SDS, ventilação nem certificação food/medical.
+doc_type: guide
+domain:
+- quality
+- metrology
+- calibration
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- single-coupon-as-certification
+- destructive-test-lab-accreditation
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- quality.accuracy-vs-precision
+- design.tolerances-fff
+- process.fff.first-layer
+- design.strength-anisotropy
+prerequisites:
+- quality.accuracy-vs-precision
 supersedes: []
-aliases_pt_br: ["cupons de teste", "geometrias de calibração", "ensaios FFF"]
-aliases_en: ["test coupons", "calibration prints", "bench tests"]
-tags: ["coupons", "calibration", "quality", "fff"]
+aliases_pt_br:
+- cupons de teste
+- geometrias de calibração
+- ensaios FFF
+aliases_en:
+- test coupons
+- calibration prints
+- bench tests
+tags:
+- coupons
+- calibration
+- quality
+- fff
 ---
-
 # Cupons e ensaios
 
 Hub pai: [Qualidade e metrologia](INDEX.md)

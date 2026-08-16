@@ -1,37 +1,60 @@
 ---
-id: "fund.layers-resolution-accuracy"
-title: "Camadas, resolução e precisão"
-summary: "Separa layer height, resolução aparente, precisão dimensional, repetibilidade e acurácia de posicionamento. Explica o que a altura de camada controla (e o que não controla) em FFF e como comparar métricas entre tecnologias sem falsa equivalência."
-doc_type: "concept"
-domain: ["fundamentals", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "quality-discussion"]
-not_for: ["certified-metrology-procedures", "universal-tolerance-tables"]
+id: fund.layers-resolution-accuracy
+title: Camadas, resolução e precisão
+summary: Separa layer height, resolução aparente, precisão dimensional, repetibilidade
+  e acurácia de posicionamento. Explica o que a altura de camada controla (e o que
+  não controla) em FFF e como comparar métricas entre tecnologias sem falsa equivalência.
+doc_type: concept
+domain:
+- fundamentals
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- quality-discussion
+not_for:
+- certified-metrology-procedures
+- universal-tolerance-tables
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["fund.digital-workflow", "fund.anisotropy", "hub.qualidade"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["resolução de impressão", "altura de camada", "precisão dimensional"]
-aliases_en: ["layer height", "print resolution", "dimensional accuracy"]
-tags: ["fundamentals", "layers", "metrology", "fff"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- fund.digital-workflow
+- fund.anisotropy
+- hub.qualidade
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- resolução de impressão
+- precisão dimensional
+aliases_en:
+- print resolution
+- dimensional accuracy
+tags:
+- fundamentals
+- layers
+- metrology
+- fff
 supersedes: []
 ---
-
 # Camadas, resolução e precisão
 
 Hub pai: [Fundamentos](INDEX.md)
 
 ## O que é
 
-Em manufatura aditiva, **camada** é a fatia discreta de construção. **Resolução**, **precisão** e **acurácia** são conceitos relacionados mas distintos. Confundi-los leva a settings absurdos (“layer 0,05 mm resolve encaixe”) ou a comparações injustas entre FFF e vat photopolymerization.
+Em manufatura aditiva, **camada** é a fatia discreta de construção. **Resolução**, **precisão** e **acurácia** são conceitos relacionados mas distintos. Confundi-los leva a settings absurdos (“layer 0,05 mm (fonte oficial/fabricante/heuristic; ver sources)  resolve encaixe”) ou a comparações injustas entre FFF e vat photopolymerization.
 
 Esta página é **conceitual e orientada a decisão**. Não publica tabela universal de tolerâncias: tolerância depende de máquina, material, geometria, orientação, calibração e metrologia.
 
@@ -88,8 +111,8 @@ Guias de calibração citados nesta base: [Teaching Tech](../22-fontes/teaching-
 | Afirmação de marketing | Leitura correta |
 |---|---|
 | “Resina 50 µm” | Frequentemente layer Z ou pixel XY — verificar eixo |
-| “FFF 0,1 mm” | Layer height; XY ainda ~nozzle |
-| “Metal ±0,1 mm” | Pode ser pós-sinter / usinagem; ler escopo do datasheet |
+| “FFF 0,1 mm (fonte oficial/fabricante/heuristic; ver sources) ” | Layer height; XY ainda ~nozzle |
+| “Metal ±0,1 mm (fonte oficial/fabricante/heuristic; ver sources) ” | Pode ser pós-sinter / usinagem; ler escopo do datasheet |
 | “Mesma resolução” | Processos diferentes têm limites físicos diferentes |
 
 Vat photopolymerization pode vencer em detalhe fino; FFF pode vencer em custo e materiais robustos de uso diário — a métrica certa depende da função da peça.
@@ -108,7 +131,7 @@ Vat photopolymerization pode vencer em detalhe fino; FFF pode vencer em custo e 
 
 - Medir no eixo e na feature que importam (não só o cubo de calibração)
 - Registrar material, cor, umidade, perfil, orientação
-- Separar erro sistemático (sempre +0,2 mm) de ruído
+- Separar erro sistemático (em geral (condicional) +0,2 mm (fonte oficial/fabricante/heuristic; ver sources) ) de ruído
 - Hub futuro: [11-qualidade](../11-qualidade-e-metrologia/INDEX.md)
 
 ## Relações

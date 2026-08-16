@@ -1,30 +1,58 @@
 ---
-id: "tech.powder-bed-fusion"
-title: "Powder bed fusion (SLS, MJF, LPBF)"
-summary: "Categoria em que regiões de um leito de pó são fundidas ou sinterizadas seletivamente. Inclui SLS e MJF em polímeros e LPBF/EBM em metais. Forte em geometrias complexas e produção; exige gestão de pó, atmosfera, tensões e pós-processamento. Não é FFF com ‘pó’."
-doc_type: "technology"
-domain: ["technologies"]
-technology: ["powder-bed-fusion"]
-process: ["sls", "mjf", "lpbf"]
-applies_to: ["powder-bed-fusion", "sls", "mjf", "lpbf"]
-not_for: ["desktop-fff-defaults", "resin-wash-cure-as-primary"]
+id: tech.powder-bed-fusion
+title: Powder bed fusion (SLS, MJF, LPBF)
+summary: Categoria em que regiões de um leito de pó são fundidas ou sinterizadas seletivamente.
+  Inclui SLS e MJF em polímeros e LPBF/EBM em metais. Forte em geometrias complexas
+  e produção; exige gestão de pó, atmosfera, tensões e pós-processamento. Não é FFF
+  com ‘pó’.
+doc_type: technology
+domain:
+- technologies
+technology:
+- powder-bed-fusion
+process:
+- sls
+- mjf
+- lpbf
+applies_to:
+- powder-bed-fusion
+- sls
+- mjf
+- lpbf
+not_for:
+- desktop-fff-defaults
+- resin-wash-cure-as-primary
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["fund.terminology", "fund.anisotropy", "tech.binder-jetting"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["fusão em leito de pó", "SLS", "MJF", "LPBF"]
-aliases_en: ["powder bed fusion", "SLS", "MJF", "LPBF", "PBF"]
-tags: ["pbf", "sls", "mjf", "lpbf", "metal", "polymer"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- fund.terminology
+- fund.anisotropy
+- tech.binder-jetting
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- fusão em leito de pó
+aliases_en:
+- powder bed fusion
+- PBF
+tags:
+- pbf
+- sls
+- mjf
+- lpbf
+- metal
+- polymer
 supersedes: []
 ---
-
 # Powder bed fusion (SLS, MJF, LPBF)
 
 Hub pai: [Tecnologias](../INDEX.md) · pasta [powder-bed-fusion](./)

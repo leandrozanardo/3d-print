@@ -1,28 +1,51 @@
 ---
-id: "tech.category-comparison"
-title: "Comparação entre categorias de manufatura aditiva"
-summary: "Comparação honesta e parcial das sete categorias ISO/ASTM de AM: material extrusion, vat photopolymerization, powder bed fusion, binder jetting, material jetting, directed energy deposition e sheet lamination. Orienta escolha por geometria, material, custo, facility e risco — sem crowning de ‘melhor tecnologia’. Profundidade limitada fora de FFF e da fatia PBF/DED/BJ desta wave."
-doc_type: "technology"
-domain: ["technologies"]
+id: tech.category-comparison
+title: Comparação entre categorias de manufatura aditiva
+summary: 'Comparação honesta e parcial das sete categorias ISO/ASTM de AM: material
+  extrusion, vat photopolymerization, powder bed fusion, binder jetting, material
+  jetting, directed energy deposition e sheet lamination. Orienta escolha por geometria,
+  material, custo, facility e risco — sem crowning de ‘melhor tecnologia’. Profundidade
+  limitada fora de FFF e da fatia PBF/DED/BJ desta wave.'
+doc_type: technology
+domain:
+- technologies
 technology: []
 process: []
-applies_to: ["additive-manufacturing"]
-not_for: ["single-best-tech-claim"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry"]
-related: ["hub.tecnologias", "tech.fff", "tech.sls-mjf", "tech.lpbf-ebm", "tech.binder-jetting-variants", "tech.ded-waam", "tech.material-jetting", "tech.sheet-lamination", "tech.vat-photopolymerization"]
-prerequisites: ["hub.tecnologias"]
+applies_to:
+- additive-manufacturing
+not_for:
+- single-best-tech-claim
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+related:
+- hub.tecnologias
+- tech.fff
+- tech.sls-mjf
+- tech.lpbf-ebm
+- tech.binder-jetting-variants
+- tech.ded-waam
+- tech.material-jetting
+- tech.sheet-lamination
+- tech.vat-photopolymerization
+prerequisites:
+- hub.tecnologias
 supersedes: []
-aliases_pt_br: ["comparação de tecnologias AM", "qual processo escolher"]
-aliases_en: ["AM process comparison", "seven AM categories"]
-tags: ["comparison", "iso-astm-52900"]
+aliases_pt_br:
+- comparação de tecnologias AM
+- qual processo escolher
+aliases_en:
+- AM process comparison
+- seven AM categories
+tags:
+- comparison
+- iso-astm-52900
 ---
-
 # Comparação entre categorias de manufatura aditiva
 
 Hub pai: [Tecnologias](./INDEX.md)

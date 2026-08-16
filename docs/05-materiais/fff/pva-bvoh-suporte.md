@@ -1,30 +1,64 @@
 ---
-id: "material.pva-bvoh-support"
-title: "PVA / BVOH — filamentos de suporte solúvel"
-summary: "PVA e BVOH (e marcas correlatas) são famílias usadas como suporte solúvel em FFF multi-material: imprimem interface e dissolvem em água (condições conforme TDS). Exigem controle de umidade, bicos/perfis compatíveis e tempo de dissolução. Na A1 Mini, PVA aparece como Ideal nas tech specs do fabricante — ainda assim não inventar receitas de temperatura universais. Não confundir com suporte breakaway seco."
-doc_type: "material"
-domain: ["materials", "fff", "supports"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "multi-material", "printer.bambu-lab-a1-mini"]
-not_for: ["universal-dissolve-times", "food-contact-after-dissolve"]
-materials: ["material.pva-bvoh-support"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.drying-storage", "design.supports-fff", "material.pla", "material.petg", "printer.bambu-lab-a1-mini", "hub.materiais.fff"]
-prerequisites: ["tech.fff"]
+id: material.pva-bvoh-support
+title: PVA / BVOH — filamentos de suporte solúvel
+summary: 'PVA e BVOH (e marcas correlatas) são famílias usadas como suporte solúvel
+  em FFF multi-material: imprimem interface e dissolvem em água (condições conforme
+  TDS). Exigem controle de umidade, bicos/perfis compatíveis e tempo de dissolução.
+  Na A1 Mini, PVA aparece como Ideal nas tech specs do fabricante — ainda assim não
+  inventar receitas de temperatura universais. Não confundir com suporte breakaway
+  seco.'
+doc_type: material
+domain:
+- materials
+- fff
+- supports
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- multi-material
+- printer.bambu-lab-a1-mini
+not_for:
+- universal-dissolve-times
+- food-contact-after-dissolve
+materials:
+- material.pva-bvoh-support
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- material.drying-storage
+- design.supports-fff
+- material.pla
+- material.petg
+- printer.bambu-lab-a1-mini
+- hub.materiais.fff
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["suporte PVA", "BVOH", "suporte solúvel"]
-aliases_en: ["PVA support filament", "BVOH soluble support", "water-soluble support"]
-tags: ["material", "pva", "bvoh", "support", "fff"]
+aliases_pt_br:
+- suporte PVA
+- BVOH
+- suporte solúvel
+aliases_en:
+- PVA support filament
+- BVOH soluble support
+- water-soluble support
+tags:
+- material
+- pva
+- bvoh
+- support
+- fff
 ---
-
 # PVA / BVOH — filamentos de suporte solúvel
 
 Hub pai: [Materiais FFF](INDEX.md)

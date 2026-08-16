@@ -1,28 +1,51 @@
 ---
-id: "printer.tronxy-veho-800-pro"
-title: "Tronxy VEHO 800 Pro"
-summary: "Tronxy VEHO 800 Pro é um modelo do fabricante Tronxy registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.tronxy-veho-800-pro
+title: Tronxy VEHO 800 Pro
+summary: 'Tronxy VEHO 800 Pro é um modelo do fabricante Tronxy registrado no catálogo
+  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
+  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
+  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
+  known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["tronxy"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.tronxy-official-products"]
-related: ["manufacturer.tronxy", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- tronxy
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.tronxy-official-products
+related:
+- manufacturer.tronxy
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Tronxy VEHO 800 Pro"]
-tags: ["printer", "cataloged", "tronxy"]
+aliases_en:
+- Tronxy VEHO 800 Pro
+tags:
+- printer
+- cataloged
+- tronxy
+manufacturer_id: tronxy
+model_name: Tronxy VEHO 800 Pro
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # Tronxy VEHO 800 Pro
 

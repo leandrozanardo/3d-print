@@ -1,28 +1,58 @@
 ---
-id: "hazard.food-medical-claims"
-title: "Claims de food-contact e uso médico — limites"
-summary: "Impressão 3D desktop (FFF ou resina) não torna uma peça automaticamente apta a contato com alimentos, implantes, dispositivos médicos ou ‘biocompatível’. Fendas, porosidade, monômeros residuais, pigmentos, adesão de biofilm e ausência de validação regulatória impedem atalhos. NIOSH/EPA tratam emissões e química — não certificam utensílios. Esta base recusa certificar food-safe/medical; oriente engenharia regulatória quando o caso for real."
-doc_type: "guide"
-domain: ["safety", "regulation"]
-technology: ["material-extrusion", "vat-photopolymerization"]
+id: hazard.food-medical-claims
+title: Claims de food-contact e uso médico — limites
+summary: Impressão 3D desktop (FFF ou resina) não torna uma peça automaticamente apta
+  a contato com alimentos, implantes, dispositivos médicos ou ‘biocompatível’. Fendas,
+  porosidade, monômeros residuais, pigmentos, adesão de biofilm e ausência de validação
+  regulatória impedem atalhos. NIOSH/EPA tratam emissões e química — não certificam
+  utensílios. Esta base recusa certificar food-safe/medical; oriente engenharia regulatória
+  quando o caso for real.
+doc_type: guide
+domain:
+- safety
+- regulation
+technology:
+- material-extrusion
+- vat-photopolymerization
 process: []
-applies_to: ["all-desktop-am-advice-in-this-kb"]
-not_for: ["diy-implant-advice", "diy-food-certification", "sterility-guarantees"]
-knowledge_status: "draft"
-evidence_status: "strong"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hazard.voc-ufp-ventilation", "hazard.resin-ppe-disposal", "material.pla", "material.resin-families", "post.painting"]
+applies_to:
+- all-desktop-am-advice-in-this-kb
+not_for:
+- diy-implant-advice
+- diy-food-certification
+- sterility-guarantees
+knowledge_status: draft
+evidence_status: strong
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hazard.voc-ufp-ventilation
+- hazard.resin-ppe-disposal
+- material.pla
+- material.resin-families
+- post.painting
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["food-safe impressão 3D", "biocompatível mito", "contato alimentar FFF"]
-aliases_en: ["food contact 3D printing", "medical claims", "biocompatible filament myths"]
-tags: ["safety", "food-contact", "medical", "claims", "regulation"]
+aliases_pt_br:
+- food-safe impressão 3D
+- biocompatível mito
+- contato alimentar FFF
+aliases_en:
+- food contact 3D printing
+- medical claims
+- biocompatible filament myths
+tags:
+- safety
+- food-contact
+- medical
+- claims
+- regulation
 ---
-
 # Claims de food-contact e uso médico
 
 Hub pai: [Segurança e meio ambiente](INDEX.md)

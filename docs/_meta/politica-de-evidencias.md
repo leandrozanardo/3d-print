@@ -1,19 +1,23 @@
 ---
-id: "meta.evidence-policy"
-title: "Política de evidências"
-summary: "Classificação de afirmações técnicas, tratamento de divergências entre fontes, regras para valores numéricos e registro de contradições sem média sem sentido."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["meta.source-policy", "meta.contradictions"]
-tags: ["evidence"]
+id: meta.evidence-policy
+title: Política de evidências
+summary: Classificação de afirmações técnicas, tratamento de divergências entre fontes,
+  regras para valores numéricos e registro de contradições sem média sem sentido.
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- meta.source-policy
+- meta.contradictions
+tags:
+- evidence
 ---
-
 # Política de evidências
 
 ## Classes internas de claim

@@ -1,30 +1,65 @@
 ---
-id: "surface.pei"
-title: "Placa PEI (build surface) em FFF"
-summary: "PEI (polieterimida) como revestimento de mesa é a superfície de trabalho padrão em muitas FFF desktop, inclusive a A1 Mini com placa magnética. Texturizada (textured) e lisa (smooth) mudam adesão, acabamento da face de mesa e risco de soldagem — especialmente com PETG. Limpeza e remoção a frio protegem o coating; temperatura de mesa na A1 Mini não ultrapassa 80 °C (capability do fabricante)."
-doc_type: "component"
-domain: ["hardware", "fff", "process"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["abs-asa-default-on-a1-mini", "hot-yank-petg-from-smooth-pei"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.pla", "material.petg", "process.fff.first-layer", "defect.fff.adhesion-failure", "defect.fff.warping", "printer.bambu-lab-a1-mini"]
-prerequisites: ["tech.fff"]
+id: surface.pei
+title: Placa PEI (build surface) em FFF
+summary: PEI (polieterimida) como revestimento de mesa é a superfície de trabalho
+  padrão em muitas FFF desktop, inclusive a A1 Mini com placa magnética. Texturizada
+  (textured) e lisa (smooth) mudam adesão, acabamento da face de mesa e risco de soldagem
+  — especialmente com PETG. Limpeza e remoção a frio protegem o coating; temperatura
+  de mesa na A1 Mini não ultrapassa 80 °C (capability do fabricante).
+doc_type: component
+domain:
+- hardware
+- fff
+- process
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- abs-asa-default-on-a1-mini
+- hot-yank-petg-from-smooth-pei
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources: []
+related:
+- material.pla
+- material.petg
+- process.fff.first-layer
+- defect.fff.adhesion-failure
+- defect.fff.warping
+- printer.bambu-lab-a1-mini
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["placa PEI", "mesa PEI", "build plate PEI"]
-aliases_en: ["PEI sheet", "PEI build plate", "smooth PEI", "textured PEI"]
-tags: ["pei", "build-surface", "adhesion", "fff"]
+aliases_pt_br:
+- placa PEI
+- mesa PEI
+- build plate PEI
+aliases_en:
+- PEI sheet
+- PEI build plate
+- smooth PEI
+- textured PEI
+tags:
+- pei
+- build-surface
+- adhesion
+- fff
 ---
-
 # Placa PEI (build surface) em FFF
 
 Hub pai: [Componentes e hardware](INDEX.md)
@@ -71,7 +106,7 @@ PETG pode **aderir tão forte** ao PEI liso que a remoção arranca o coating ou
 1. Usar **textured** quando disponível.
 2. Remover **após esfriar** (contração ajuda a soltar).
 3. Não forçar a quente com alicate na folha.
-4. Bed no range do material, cap **≤ 80 °C** na A1 Mini — subir bed “além do necessário” não é alavanca ilimitada nesta máquina.
+4. Bed no range do material, cap **≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) ** na A1 Mini — subir bed “além do necessário” não é alavanca ilimitada nesta máquina.
 5. Se soldou: esfriar, flexionar a base magnética (se o design permitir) com cuidado; se o coating falhou, trocar a folha — não improvisar com cola permanente como “solução”.
 
 PLA raramente solda com a mesma agressividade, mas over-squish + smooth suja/limpa errado ainda danifica superfície.
@@ -80,7 +115,7 @@ PLA raramente solda com a mesma agressividade, mas over-squish + smooth suja/lim
 
 | Constraint | Implicação |
 |---|---|
-| Bed max **80 °C** | Receitas de outros printers com bed 90–110 °C **não** transferem |
+| Bed max **80 °C (fonte oficial/fabricante/heuristic; ver sources) ** | Receitas de outros printers com bed 90–110 °C **não** transferem |
 | Ideal: PLA, PETG, TPU, PVA | PEI + esses materiais é o caminho suportado pelo fabricante |
 | Frame aberto | Corrente de ar fria a mesa “fria localmente” → adesão irregular; não é falha do PEI |
 | Volume 180³ mm | Brim/raft consomem envelope — planejar margem |
@@ -120,7 +155,6 @@ Fonte de capabilities: [bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tec
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

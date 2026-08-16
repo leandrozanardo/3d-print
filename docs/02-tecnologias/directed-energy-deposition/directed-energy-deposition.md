@@ -1,30 +1,55 @@
 ---
-id: "tech.directed-energy-deposition"
-title: "Directed energy deposition (DED, WAAM)"
-summary: "Categoria em que uma fonte de energia focalizada (laser, arco, feixe de elétrons) funde material (pó ou arame) no momento da deposição. Usada para reparo, features grandes e near-net-shape metálico. Distinta de powder bed fusion: sem leito completo; forte interação térmica e usinagem posterior frequente."
-doc_type: "technology"
-domain: ["technologies"]
-technology: ["directed-energy-deposition"]
-process: ["ded", "waam"]
-applies_to: ["directed-energy-deposition", "waam", "metal-repair"]
-not_for: ["desktop-polymer-fff", "fine-jewelry-detail-as-primary"]
+id: tech.directed-energy-deposition
+title: Directed energy deposition (DED, WAAM)
+summary: 'Categoria em que uma fonte de energia focalizada (laser, arco, feixe de
+  elétrons) funde material (pó ou arame) no momento da deposição. Usada para reparo,
+  features grandes e near-net-shape metálico. Distinta de powder bed fusion: sem leito
+  completo; forte interação térmica e usinagem posterior frequente.'
+doc_type: technology
+domain:
+- technologies
+technology:
+- directed-energy-deposition
+process:
+- ded
+- waam
+applies_to:
+- directed-energy-deposition
+- waam
+- metal-repair
+not_for:
+- desktop-polymer-fff
+- fine-jewelry-detail-as-primary
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["tech.powder-bed-fusion", "fund.anisotropy", "fund.terminology"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["deposição com energia direcionada", "DED", "WAAM"]
-aliases_en: ["directed energy deposition", "DED", "WAAM", "laser cladding AM"]
-tags: ["ded", "waam", "metal"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- tech.powder-bed-fusion
+- fund.anisotropy
+- fund.terminology
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- deposição com energia direcionada
+- DED
+aliases_en:
+- directed energy deposition
+- DED
+- laser cladding AM
+tags:
+- ded
+- waam
+- metal
 supersedes: []
 ---
-
 # Directed energy deposition (DED, WAAM)
 
 Hub pai: [Tecnologias](../INDEX.md) · pasta [directed-energy-deposition](./)

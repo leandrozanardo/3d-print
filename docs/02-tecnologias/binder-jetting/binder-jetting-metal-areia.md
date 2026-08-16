@@ -1,28 +1,62 @@
 ---
-id: "tech.binder-jetting-variants"
-title: "Binder jetting — variantes metal e areia"
-summary: "Binder jetting (BJ) deposita aglutinante líquido seletivamente sobre um leito de pó. Em metal, a peça “verde” tipicamente passa por cura, desaglutinação e sinterização (com encolhimento significativo); em areia, o foco é moldes e machos para fundição, muitas vezes sem a mesma rota de densificação metálica. A categoria é distinta de powder bed fusion: não há fusão seletiva por laser/feixe na impressão — a energia térmica vem depois, quando aplicável. Cobertura parcial: sem percentuais de shrink ou curvas de sinter por liga inventados."
-doc_type: "technology"
-domain: ["technologies", "metals", "casting"]
-technology: ["binder-jetting"]
-process: ["binder-jetting"]
-applies_to: ["binder-jetting", "metal-powder", "foundry-sand"]
-not_for: ["lpbf-melt-pool-tuning", "fff"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["hub.tech.binder-jetting", "tech.lpbf-ebm", "material.powder-feedstocks", "post.depowdering-metal", "hazard.metal-powder", "tech.category-comparison"]
+id: tech.binder-jetting-variants
+title: Binder jetting — variantes metal e areia
+summary: 'Binder jetting (BJ) deposita aglutinante líquido seletivamente sobre um
+  leito de pó. Em metal, a peça “verde” tipicamente passa por cura, desaglutinação
+  e sinterização (com encolhimento significativo); em areia, o foco é moldes e machos
+  para fundição, muitas vezes sem a mesma rota de densificação metálica. A categoria
+  é distinta de powder bed fusion: não há fusão seletiva por laser/feixe na impressão
+  — a energia térmica vem depois, quando aplicável. Cobertura parcial: sem percentuais
+  de shrink ou curvas de sinter por liga inventados.'
+doc_type: technology
+domain:
+- technologies
+- metals
+- casting
+technology:
+- binder-jetting
+process:
+- binder-jetting
+applies_to:
+- binder-jetting
+- metal-powder
+- foundry-sand
+not_for:
+- lpbf-melt-pool-tuning
+- fff
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- hub.tech.binder-jetting
+- tech.lpbf-ebm
+- material.powder-feedstocks
+- post.depowdering-metal
+- hazard.metal-powder
+- tech.category-comparison
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["binder jetting metálico", "binder jetting de areia", "impressão de moldes em areia"]
-aliases_en: ["metal binder jetting", "sand binder jetting", "BJ metal", "BJ sand"]
-tags: ["binder-jetting", "metal", "sand", "sintering"]
+aliases_pt_br:
+- binder jetting metálico
+- binder jetting de areia
+- impressão de moldes em areia
+aliases_en:
+- metal binder jetting
+- sand binder jetting
+- BJ metal
+- BJ sand
+tags:
+- binder-jetting
+- metal
+- sand
+- sintering
 ---
-
 # Binder jetting — variantes metal e areia
 
 Hub pai: [Binder jetting](./INDEX.md)

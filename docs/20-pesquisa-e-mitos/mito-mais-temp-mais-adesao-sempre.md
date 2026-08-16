@@ -1,28 +1,54 @@
 ---
-id: "myth.more-temp-more-adhesion"
-title: "Mito — mais temperatura sempre aumenta adesão"
-summary: "Subir nozzle/mesa ‘no máximo’ não garante adesão: molhabilidade tem janela; excesso causa stringing, elephant foot, degradação, odores e falhas cosméticas. Adesão mesa↔peça e bonding Z são problemas distintos. Status: overgeneralization perigosa. Prefira first layer, limpeza, Z/mesh e range do TDS/preset."
-doc_type: "research"
-domain: ["research", "fff", "thermal"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "first-layer", "layer-bonding"]
-not_for: ["max-temp-as-default-fix", "ignore-tds-sds"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.ellis-print-tuning-guide"]
-related: ["fund.heat-transfer-fff", "fund.wetting-first-layer", "process.fff.first-layer", "myth.enclosure-required-pla", "hub.pesquisa"]
+id: myth.more-temp-more-adhesion
+title: Mito — mais temperatura sempre aumenta adesão
+summary: 'Subir nozzle/mesa ‘no máximo’ não garante adesão: molhabilidade tem janela;
+  excesso causa stringing, elephant foot, degradação, odores e falhas cosméticas.
+  Adesão mesa↔peça e bonding Z são problemas distintos. Status: overgeneralization
+  perigosa. Prefira first layer, limpeza, Z/mesh e range do TDS/preset.'
+doc_type: research
+domain:
+- research
+- fff
+- thermal
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- first-layer
+- layer-bonding
+not_for:
+- max-temp-as-default-fix
+- ignore-tds-sds
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- fund.heat-transfer-fff
+- fund.wetting-first-layer
+- process.fff.first-layer
+- myth.enclosure-required-pla
+- hub.pesquisa
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["mais temperatura mais adesão", "subir temp para grudar"]
-aliases_en: ["higher temperature better adhesion myth", "max temp adhesion"]
-tags: ["myth", "temperature", "adhesion", "fff"]
+aliases_pt_br:
+- mais temperatura mais adesão
+- subir temp para grudar
+aliases_en:
+- higher temperature better adhesion myth
+- max temp adhesion
+tags:
+- myth
+- temperature
+- adhesion
+- fff
 ---
-
 # Mito — mais temperatura sempre aumenta adesão
 
 Hub pai: [Pesquisa e mitos](./INDEX.md)

@@ -1,28 +1,42 @@
 ---
-id: "manufacturer.qidi"
-title: "Fabricante — QIDI"
-summary: "Página canônica do fabricante QIDI no catálogo fix-my-print. Segmento: consumer-prosumer. Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census com coverage cataloged. Não declara portfólio mundial completo do fabricante além das fontes citadas."
-doc_type: "manufacturer"
-domain: ["printers"]
+id: manufacturer.qidi
+title: Fabricante — QIDI
+summary: 'Página canônica do fabricante QIDI no catálogo fix-my-print. Segmento: consumer-prosumer.
+  Lista modelos descobertos no snapshot market-snapshot-2026-08-16-census com coverage
+  cataloged. Não declara portfólio mundial completo do fabricante além das fontes
+  citadas.'
+doc_type: manufacturer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["catalog"]
-not_for: ["complete-oem-portfolio-without-source"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-sources: ["source.qidi-official-products"]
-related: ["hub.impressoras", "meta.printer-progress", "meta.printer-global-catalog"]
-prerequisites: ["meta.printer-inclusion-criteria"]
+applies_to:
+- catalog
+not_for:
+- complete-oem-portfolio-without-source
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+sources:
+- source.qidi-official-products
+related:
+- hub.impressoras
+- meta.printer-progress
+- meta.printer-global-catalog
+prerequisites:
+- meta.printer-inclusion-criteria
 supersedes: []
-aliases_pt_br: ["QIDI"]
-aliases_en: ["QIDI"]
-tags: ["manufacturer", "qidi"]
+aliases_pt_br:
+- QIDI
+aliases_en:
+- QIDI
+tags:
+- manufacturer
+- qidi
 ---
-
 # Fabricante — QIDI
 
 Hub: [Impressoras](INDEX.md) · Progresso: [_meta/progresso.md](_meta/progresso.md)

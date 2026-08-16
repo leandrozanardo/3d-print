@@ -1,28 +1,54 @@
 ---
-id: "myth.pla-food-safe"
-title: "Mito — PLA é food-safe"
-summary: "O claim ‘PLA é food-safe’ mistura biopolímero de origem (frequentemente derivados de amido) com segurança de contato alimentar da peça impressa. FFF cria poros e camadas que retêm bactérias; aditivos, corantes, nozzle de latão (risco de chumbo em ligas), migração e ausência de certificação do sistema completo invalidam a generalização. Status do mito: enganoso na forma absoluta. Esta página não certifica nenhum filamento para food-contact."
-doc_type: "research"
-domain: ["research", "safety", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material.pla"]
-not_for: ["certifying-food-contact"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.fda-am-medical-devices-entry"]
-related: ["material.pla", "app.qualification-limits", "app.food-contact-limits", "hazard.food-medical-claims", "hub.pesquisa"]
+id: myth.pla-food-safe
+title: Mito — PLA é food-safe
+summary: 'O claim ‘PLA é food-safe’ mistura biopolímero de origem (frequentemente
+  derivados de amido) com segurança de contato alimentar da peça impressa. FFF cria
+  poros e camadas que retêm bactérias; aditivos, corantes, nozzle de latão (risco
+  de chumbo em ligas), migração e ausência de certificação do sistema completo invalidam
+  a generalização. Status do mito: enganoso na forma absoluta. Esta página não certifica
+  nenhum filamento para food-contact.'
+doc_type: research
+domain:
+- research
+- safety
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material.pla
+not_for:
+- certifying-food-contact
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.fda-am-medical-devices-entry
+related:
+- material.pla
+- app.qualification-limits
+- app.food-contact-limits
+- hazard.food-medical-claims
+- hub.pesquisa
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["PLA food safe", "PLA seguro para alimentos", "PLA atóxico"]
-aliases_en: ["PLA food safe myth", "food-contact PLA"]
-tags: ["myth", "pla", "food-safety"]
+aliases_pt_br:
+- PLA food safe
+- PLA seguro para alimentos
+- PLA atóxico
+aliases_en:
+- PLA food safe myth
+- food-contact PLA
+tags:
+- myth
+- pla
+- food-safety
 ---
-
 # Mito — PLA é food-safe
 
 Hub pai: [Pesquisa e mitos](./INDEX.md)

@@ -1,31 +1,75 @@
 ---
-id: "setting.flow-pressure-advance"
-title: "Flow e pressure advance"
-summary: "Flow (extrusion multiplier) escala o volume comando→filamento; pressure advance (PA) / linear advance compensa pressão no melt zone em aceleração/desaceleração para cantos nítidos e menos blob. Conceitos distintos: não ‘suba flow’ para consertar PA, nem o inverso. Em ecossistemas Bambu, calibrações assistidas podem encapsular esses efeitos — trate nomes de UI como mapeamento, não como física nova. Método: Ellis/Teaching Tech; valores não são universais entre hotends."
-doc_type: "setting"
-domain: ["slicing", "fff", "calibration"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "printer.bambu-lab-a1-mini"]
-not_for: ["copy-pa-between-hotends", "flow-to-fix-moisture", "eternal-ui-path-pinning"]
-settings: ["setting.flow", "setting.pressure-advance"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration", "source.marlin-docs", "source.klipper-docs"]
-related: ["setting.retraction", "setting.speeds", "setting.temperatures", "defect.fff.under-extrusion", "defect.fff.stringing", "firmware.klipper-marlin-concepts", "hub.slicers.settings"]
-prerequisites: ["process.fff.first-layer"]
+id: setting.flow-pressure-advance
+title: Flow e pressure advance
+summary: 'Flow (extrusion multiplier) escala o volume comando→filamento; pressure
+  advance (PA) / linear advance compensa pressão no melt zone em aceleração/desaceleração
+  para cantos nítidos e menos blob. Conceitos distintos: não ‘suba flow’ para consertar
+  PA, nem o inverso. Em ecossistemas Bambu, calibrações assistidas podem encapsular
+  esses efeitos — trate nomes de UI como mapeamento, não como física nova. Método:
+  Ellis/Teaching Tech; valores não são universais entre hotends.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- calibration
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- printer.bambu-lab-a1-mini
+not_for:
+- copy-pa-between-hotends
+- flow-to-fix-moisture
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+- source.marlin-docs
+- source.klipper-docs
+related:
+- setting.retraction
+- setting.speeds
+- setting.temperatures
+- defect.fff.under-extrusion
+- defect.fff.stringing
+- firmware.klipper-marlin-concepts
+- hub.slicers.settings
+prerequisites:
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["fluxo", "extrusion multiplier", "pressure advance", "linear advance", "compensação de pressão"]
-aliases_en: ["flow rate", "extrusion multiplier", "pressure advance", "linear advance"]
-tags: ["setting", "flow", "pressure-advance", "calibration"]
+aliases_pt_br:
+- fluxo
+- extrusion multiplier
+- pressure advance
+- linear advance
+- compensação de pressão
+aliases_en:
+- flow rate
+- extrusion multiplier
+- pressure advance
+- linear advance
+tags:
+- setting
+- flow
+- pressure-advance
+- calibration
+setting_tags:
+- flow
+- pressure-advance
 ---
-
 # Flow e pressure advance
 
 Hub pai: [Settings](INDEX.md)

@@ -1,33 +1,75 @@
 ---
-id: "defect.fff.under-extrusion"
-title: "Subextrusão (under-extrusion) em FFF"
-summary: "Subextrusão aparece como gaps entre perímetros, infill fraco, paredes translúcidas ou tops incompletos. Na A1 Mini causas comuns: clog parcial, filamento úmido, nozzle frio, limite volumétrico em alta velocidade, atrito de path/AMS — não ‘flow 1,10’ como primeira resposta. Seque e limpe o caminho antes de calibrar flow. Diferencie de vase mode intencional e de first layer alta."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["intentional-vase-thin-wall", "flow-above-1.05-to-hide-clog"]
-symptoms: ["symptom.gaps", "symptom.weak-infill", "symptom.translucent-walls"]
-causes: ["cause.partial-clog", "cause.moisture", "cause.cold-nozzle", "cause.volumetric-limit", "cause.path-friction"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.speeds", "setting.temperatures", "setting.line-width"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["material.drying-storage", "defect.fff.stringing", "material.composites-fiber", "setting.speeds", "process.fff.first-layer"]
-prerequisites: ["tech.fff"]
+id: defect.fff.under-extrusion
+title: Subextrusão (under-extrusion) em FFF
+summary: 'Subextrusão aparece como gaps entre perímetros, infill fraco, paredes translúcidas
+  ou tops incompletos. Na A1 Mini causas comuns: clog parcial, filamento úmido, nozzle
+  frio, limite volumétrico em alta velocidade, atrito de path/AMS — não ‘flow 1,10’
+  como primeira resposta. Seque e limpe o caminho antes de calibrar flow. Diferencie
+  de vase mode intencional e de first layer alta.'
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- intentional-vase-thin-wall
+- flow-above-1.05-to-hide-clog
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- material.drying-storage
+- defect.fff.stringing
+- material.composites-fiber
+- setting.speeds
+- process.fff.first-layer
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["subextrusão", "sub-extrusão", "falta de extrusão"]
-aliases_en: ["under-extrusion", "underextrusion", "gaps in walls"]
-tags: ["under-extrusion", "troubleshooting", "fff"]
+aliases_pt_br:
+- subextrusão
+- sub-extrusão
+- falta de extrusão
+aliases_en:
+- under-extrusion
+- underextrusion
+- gaps in walls
+tags:
+- under-extrusion
+- troubleshooting
+- fff
+symptom_tags:
+- gaps
+- weak-infill
+- translucent-walls
+cause_tags:
+- partial-clog
+- moisture
+- cold-nozzle
+- volumetric-limit
+- path-friction
+setting_tags:
+- speeds
+- temperatures
+- line-width
 ---
-
 # Subextrusão (under-extrusion) em FFF
 
 Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.md)
@@ -58,7 +100,7 @@ Gaps / paredes ocas? Verifique **secagem** e **purge/clog** antes de subir flow.
 | Alta | Umidade | [Secagem](../../05-materiais/fff/secagem-e-armazenamento.md) |
 | Alta | Clog parcial / resíduo | Purge, cold pull, nozzle |
 | Alta | Speed > volumetric | [Velocidades](../../08-slicers-e-configuracoes/settings/velocidades.md) ↓ |
-| Média | Temp baixa | +5 °C no range — [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md) |
+| Média | Temp baixa | +5 °C (fonte oficial / fabricante / heuristic; ver `sources`)  no range — [temperaturas](../../08-slicers-e-configuracoes/settings/temperaturas.md) |
 | Média | Path/AMS fricção | Desembaraçar PTFE/path |
 | Média | Nozzle gasto (CF/GF) | Trocar hardened |
 | Baixa-primeira | Flow “baixo” sem medir | Calibrar só após path limpo |
@@ -72,7 +114,7 @@ Filamento seco / sem pops?
         ├─ NÃO → cold pull / nozzle; purge PLA↔PETG
         └─ SIM → só em alta velocidade?
               ├─ SIM → −20% speed / ↓ max volumetric
-              └─ NÃO → +5 °C; cupom single-wall; flow 0,95–1,00
+              └─ NÃO → +5 °C (fonte oficial/fabricante/heuristic; ver sources) ; cupom single-wall; flow 0,95–1,00
 AMS envolvido? → checar kink/tangle antes de flow no Studio
 ```
 

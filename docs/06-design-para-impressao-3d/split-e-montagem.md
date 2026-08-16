@@ -1,29 +1,58 @@
 ---
-id: "design.split-assembly"
-title: "Split e montagem (DfAM FFF)"
-summary: "Dividir (split) uma peça em partes imprimíveis melhora orientação, reduz suporte, cabe no envelope e alinha carga às paredes — ao custo de juntas, tolerâncias e montagem. Escolha plano de corte, features de alinhamento (pinos, meias-madeiras, parafusos) e folgas experimentais. Não use split para contornar claims regulatórios."
-doc_type: "design"
-domain: ["dfam", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["regulated-assembly-without-qualification", "zero-tolerance-fits-without-coupons"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.ellis-print-tuning-guide"]
-related: ["design.orientation-fff", "design.tolerances-fff", "design.overhangs-self-supporting", "design.holes-threads-inserts", "design.strength-anisotropy", "hub.dfam"]
-prerequisites: ["tech.fff"]
+id: design.split-assembly
+title: Split e montagem (DfAM FFF)
+summary: Dividir (split) uma peça em partes imprimíveis melhora orientação, reduz
+  suporte, cabe no envelope e alinha carga às paredes — ao custo de juntas, tolerâncias
+  e montagem. Escolha plano de corte, features de alinhamento (pinos, meias-madeiras,
+  parafusos) e folgas experimentais. Não use split para contornar claims regulatórios.
+doc_type: design
+domain:
+- dfam
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- regulated-assembly-without-qualification
+- zero-tolerance-fits-without-coupons
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- design.orientation-fff
+- design.tolerances-fff
+- design.overhangs-self-supporting
+- design.holes-threads-inserts
+- design.strength-anisotropy
+- hub.dfam
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["dividir peça FFF", "split para impressão", "montagem multipart"]
-aliases_en: ["part split DfAM", "multi-part print assembly", "print then assemble"]
-tags: ["dfam", "split", "assembly", "fff"]
+aliases_pt_br:
+- dividir peça FFF
+- split para impressão
+- montagem multipart
+aliases_en:
+- part split DfAM
+- multi-part print assembly
+- print then assemble
+tags:
+- dfam
+- split
+- assembly
+- fff
 ---
-
 # Split e montagem (DfAM FFF)
 
 Hub pai: [Design para impressão 3D](INDEX.md)

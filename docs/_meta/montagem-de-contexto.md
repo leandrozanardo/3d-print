@@ -1,19 +1,24 @@
 ---
-id: "meta.context-assembly"
-title: "Montagem de contexto"
-summary: "Como combinar summary, hard constraints, procedimentos e fontes em Markdown puro para resposta prudente de IA, com limites de profundidade de relações e anti-loop."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-related: ["meta.query-routing", "meta.link-policy"]
-tags: ["context", "rag"]
+id: meta.context-assembly
+title: Montagem de contexto
+summary: Como combinar summary, hard constraints, procedimentos e fontes em Markdown
+  puro para resposta prudente de IA, com limites de profundidade de relações e anti-loop.
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+related:
+- meta.query-routing
+- meta.link-policy
+tags:
+- context
+- rag
 ---
-
 # Montagem de contexto
 
 Somente Markdown — sem vector store obrigatório.

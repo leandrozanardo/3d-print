@@ -1,28 +1,55 @@
 ---
-id: "quality.accuracy-vs-precision"
-title: "Precisão vs repetibilidade (exatidão e dispersão)"
-summary: "Em metrologia de peças FFF, separe exatidão (quão perto do nominal) de repetibilidade/precisão (quão próximas as réplicas ficam entre si). Uma peça ‘no alvo’ uma vez não prova processo estável; um processo repetível mas enviesado precisa de compensação sistemática (flow, hole compensation, elephant foot), não de ajustes aleatórios. Meça com método definido, após cooling, e registre condições (máquina, material, perfil)."
-doc_type: "guide"
-domain: ["quality", "metrology", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["cnc-cmm-equivalence-claim", "medical-device-validation"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.ellis-print-tuning-guide", "source.teaching-tech-calibration"]
-related: ["quality.test-coupons", "design.tolerances-fff", "process.fff.first-layer"]
-prerequisites: ["tech.fff"]
+id: quality.accuracy-vs-precision
+title: Precisão vs repetibilidade (exatidão e dispersão)
+summary: Em metrologia de peças FFF, separe exatidão (quão perto do nominal) de repetibilidade/precisão
+  (quão próximas as réplicas ficam entre si). Uma peça ‘no alvo’ uma vez não prova
+  processo estável; um processo repetível mas enviesado precisa de compensação sistemática
+  (flow, hole compensation, elephant foot), não de ajustes aleatórios. Meça com método
+  definido, após cooling, e registre condições (máquina, material, perfil).
+doc_type: guide
+domain:
+- quality
+- metrology
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- cnc-cmm-equivalence-claim
+- medical-device-validation
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- quality.test-coupons
+- design.tolerances-fff
+- process.fff.first-layer
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["precisão vs repetibilidade", "exatidão dimensional", "dispersão entre peças"]
-aliases_en: ["accuracy vs precision", "repeatability", "dimensional bias"]
-tags: ["metrology", "quality", "fff"]
+aliases_pt_br:
+- precisão vs repetibilidade
+- exatidão dimensional
+- dispersão entre peças
+aliases_en:
+- accuracy vs precision
+- repeatability
+- dimensional bias
+tags:
+- metrology
+- quality
+- fff
 ---
-
 # Precisão vs repetibilidade
 
 Hub pai: [Qualidade e metrologia](INDEX.md)

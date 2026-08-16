@@ -1,18 +1,32 @@
 ---
-id: "source.niosh-am-entry"
-title: "Fonte — NIOSH Additive Manufacturing"
-summary: "Ponto de entrada para orientações do NIOSH (CDC) sobre saúde e segurança em manufatura aditiva: emissões, controles, e práticas gerais. Não substitui SDS/TDS do produto nem legislação local."
-doc_type: "source"
-domain: ["sources", "safety"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["hazard.metal-powder", "material.powder-feedstocks", "source.epa-3d-printing-research", "hub.seguranca"]
-aliases_en: ["NIOSH additive manufacturing", "CDC NIOSH AM"]
-tags: ["source", "safety", "niosh", "emissions"]
+id: source.niosh-am-entry
+title: Fonte — NIOSH Additive Manufacturing
+summary: 'Ponto de entrada para orientações do NIOSH (CDC) sobre saúde e segurança
+  em manufatura aditiva: emissões, controles, e práticas gerais. Não substitui SDS/TDS
+  do produto nem legislação local.'
+doc_type: source
+domain:
+- sources
+- safety
+knowledge_status: draft
+evidence_status: limited
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- hazard.metal-powder
+- material.powder-feedstocks
+- source.epa-3d-printing-research
+- hub.seguranca
+aliases_en:
+- NIOSH additive manufacturing
+- CDC NIOSH AM
+tags:
+- source
+- safety
+- niosh
+- emissions
 technology: []
 process: []
 applies_to: []
@@ -21,8 +35,11 @@ sources: []
 prerequisites: []
 supersedes: []
 aliases_pt_br: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — NIOSH Additive Manufacturing
 
 | Campo | Valor |

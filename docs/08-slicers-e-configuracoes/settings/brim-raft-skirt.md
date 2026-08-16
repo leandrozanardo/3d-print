@@ -1,32 +1,75 @@
 ---
-id: "setting.brim-raft-skirt"
-title: "Brim, raft e skirt"
-summary: "Três saliências de mesa distintas: skirt (purge/prime sem ancorar a peça), brim (anel ligado à peça para âncora de borda contra warp), raft (cama sacrificial sob a peça). Conceito primeiro; no Bambu Studio: Brim/Raft/Skirt (nomes variam). Em A1 Mini aberta, brim é a alavanca usual contra empenamento; raft é último recurso (cicatriz + tempo). Não use raft para ‘consertar’ first layer sem diagnosticar Z/mesa."
-doc_type: "setting"
-domain: ["slicing", "fff", "adhesion"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "printer.bambu-lab-a1-mini"]
-not_for: ["resin-raft-as-identical", "raft-before-first-layer-diagnosis", "eternal-ui-path-pinning"]
-settings: ["setting.brim", "setting.raft", "setting.skirt"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.ellis-print-tuning-guide"]
-related: ["process.fff.first-layer", "defect.fff.warping", "setting.supports", "setting.temperatures", "setting.cooling", "hub.slicers.settings"]
-prerequisites: ["process.fff.first-layer"]
+id: setting.brim-raft-skirt
+title: Brim, raft e skirt
+summary: 'Três saliências de mesa distintas: skirt (purge/prime sem ancorar a peça),
+  brim (anel ligado à peça para âncora de borda contra warp), raft (cama sacrificial
+  sob a peça). Conceito primeiro; no Bambu Studio: Brim/Raft/Skirt (nomes variam).
+  Em A1 Mini aberta, brim é a alavanca usual contra empenamento; raft é último recurso
+  (cicatriz + tempo). Não use raft para ‘consertar’ first layer sem diagnosticar Z/mesa.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- adhesion
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- printer.bambu-lab-a1-mini
+not_for:
+- resin-raft-as-identical
+- raft-before-first-layer-diagnosis
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- process.fff.first-layer
+- defect.fff.warping
+- setting.supports
+- setting.temperatures
+- setting.cooling
+- hub.slicers.settings
+prerequisites:
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["brim", "raft", "skirt", "saia", "aba de adesão"]
-aliases_en: ["brim", "raft", "skirt", "mouse ears"]
-tags: ["setting", "brim", "raft", "skirt", "adhesion"]
+aliases_pt_br:
+- brim
+- raft
+- skirt
+- saia
+- aba de adesão
+aliases_en:
+- brim
+- raft
+- skirt
+- mouse ears
+tags:
+- setting
+- brim
+- raft
+- skirt
+- adhesion
+setting_tags:
+- brim
+- raft
+- skirt
 ---
-
 # Brim, raft e skirt
 
 Hub pai: [Settings](INDEX.md)
@@ -79,7 +122,7 @@ Skirt: use para prime/diagnóstico, independente do warp.
 - Raft: último recurso após brim + ambiente + bed
 - Remoção: espátula com cuidado; não alavancar contra mesa texturizada com força destrutiva
 
-Larguras numéricas: partir do preset / legado operacional validado na máquina — não fixar “sempre X mm” como lei universal nesta página. Legado de referência: [brim-raft-saia](../../projeto/fatiamento/brim-raft-saia.md).
+Larguras numéricas: partir do preset / legado operacional validado na máquina — não fixar “com frequência (exceto casos calibrados) X mm” como lei universal nesta página. Legado de referência: [brim-raft-saia](../../projeto/fatiamento/brim-raft-saia.md).
 
 ## Efeitos
 

@@ -1,28 +1,68 @@
 ---
-id: "material.alsi10mg-lpbf"
-title: "AlSi10Mg (alumínio) para LPBF — safety-critical"
-summary: "AlSi10Mg é liga de alumínio fundível amplamente usada em Laser Powder Bed Fusion (LPBF/SLM/DMLS) para peças leves com geometria complexa. Esta página é orientação de engenharia e consciência de risco: pó de alumínio fino é combustível/reativo — facility qualificada, SDS, inertização, aterramento e EPI são pré-requisitos. PROIBIDO como projeto DIY/garage. Sem parâmetros de laser, PSD inventada ou ‘receita caseira’. Decisões: quando a liga faz sentido vs alternativas; cadeia build→stress relief→HIP/usinagem; falhas típicas."
-doc_type: "material"
-domain: ["materials", "metals"]
-technology: ["powder-bed-fusion"]
-process: ["lpbf"]
-applies_to: ["lpbf", "metal-powder", "alsi10mg"]
-not_for: ["diy-garage-metal-printing", "household-vacuum-cleanup", "universal-laser-parameters", "ebm-alsi10mg-assumptions"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research", "source.iso-astm-52900-entry"]
-related: ["hub.materiais.po", "material.powder-feedstocks", "tech.lpbf-ebm", "hazard.metal-powder", "defect.pbf", "post.depowdering-metal"]
-prerequisites: ["hazard.metal-powder", "tech.lpbf-ebm"]
+id: material.alsi10mg-lpbf
+title: AlSi10Mg (alumínio) para LPBF — safety-critical
+summary: 'AlSi10Mg é liga de alumínio fundível amplamente usada em Laser Powder Bed
+  Fusion (LPBF/SLM/DMLS) para peças leves com geometria complexa. Esta página é orientação
+  de engenharia e consciência de risco: pó de alumínio fino é combustível/reativo
+  — facility qualificada, SDS, inertização, aterramento e EPI são pré-requisitos.
+  PROIBIDO como projeto DIY/garage. Sem parâmetros de laser, PSD inventada ou ‘receita
+  caseira’. Decisões: quando a liga faz sentido vs alternativas; cadeia build→stress
+  relief→HIP/usinagem; falhas típicas.'
+doc_type: material
+domain:
+- materials
+- metals
+technology:
+- powder-bed-fusion
+process:
+- lpbf
+applies_to:
+- lpbf
+- metal-powder
+- alsi10mg
+not_for:
+- diy-garage-metal-printing
+- household-vacuum-cleanup
+- universal-laser-parameters
+- ebm-alsi10mg-assumptions
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+- source.iso-astm-52900-entry
+related:
+- hub.materiais.po
+- material.powder-feedstocks
+- tech.lpbf-ebm
+- hazard.metal-powder
+- defect.pbf
+- post.depowdering-metal
+prerequisites:
+- hazard.metal-powder
+- tech.lpbf-ebm
 supersedes: []
-aliases_pt_br: ["AlSi10Mg", "alumínio LPBF", "alumínio SLM", "pó alumínio AM"]
-aliases_en: ["AlSi10Mg", "aluminum LPBF", "AlSi10Mg SLM", "aluminum AM powder"]
-tags: ["alsi10mg", "aluminum", "lpbf", "safety-critical", "powder"]
+aliases_pt_br:
+- AlSi10Mg
+- alumínio LPBF
+- alumínio SLM
+- pó alumínio AM
+aliases_en:
+- AlSi10Mg
+- aluminum LPBF
+- AlSi10Mg SLM
+- aluminum AM powder
+tags:
+- alsi10mg
+- aluminum
+- lpbf
+- safety-critical
+- powder
 ---
-
 # AlSi10Mg (alumínio) para LPBF — safety-critical
 
 Hub pai: [Materiais em pó](INDEX.md) · overview: [feedstocks](feedstocks-polimeros-e-metais.md)

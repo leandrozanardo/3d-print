@@ -1,30 +1,73 @@
 ---
-id: "defect.resin.suction-delamination"
-title: "Sucção (cupping) e delaminação em resina"
-summary: "Falha atômica em vat: cavidades tipo ‘copo’, shells fechados ou grandes áreas planas geram vácuo/sucção no peel do filme — camadas falham, buracos, delaminação entre camadas ou arrancamento mesmo com suporte tipado. Mecanismos: área de peel alta + selamento de fluido + lift inadequado + eventualmente subexposição. Mitigações de design (furos de alívio), orientação, lift e tipagem; não confundir com FFF delamination. PPE ao inspecionar tanque."
-doc_type: "troubleshooting"
-domain: ["troubleshooting", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-z-bonding-delamination", "universal-hole-diameter-recipes"]
-symptoms: ["symptom.cupping-failure", "symptom.layer-gap-resin", "symptom.hollow-print-collapse"]
-causes: ["cause.suction-cupping", "cause.sealed-cavity", "cause.aggressive-peel", "cause.underexposure-interlayer"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["defect.resin.index", "defect.resin.island-loose-support", "defect.resin.over-under-exposure", "defect.resin.nothing-on-plate", "setting.resin-exposure-supports", "tech.sla-dlp-msla"]
-prerequisites: ["hazard.resin-ppe-disposal", "tech.sla-dlp-msla"]
+id: defect.resin.suction-delamination
+title: Sucção (cupping) e delaminação em resina
+summary: 'Falha atômica em vat: cavidades tipo ‘copo’, shells fechados ou grandes
+  áreas planas geram vácuo/sucção no peel do filme — camadas falham, buracos, delaminação
+  entre camadas ou arrancamento mesmo com suporte tipado. Mecanismos: área de peel
+  alta + selamento de fluido + lift inadequado + eventualmente subexposição. Mitigações
+  de design (furos de alívio), orientação, lift e tipagem; não confundir com FFF delamination.
+  PPE ao inspecionar tanque.'
+doc_type: troubleshooting
+domain:
+- troubleshooting
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-z-bonding-delamination
+- universal-hole-diameter-recipes
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- defect.resin.index
+- defect.resin.island-loose-support
+- defect.resin.over-under-exposure
+- defect.resin.nothing-on-plate
+- setting.resin-exposure-supports
+- tech.sla-dlp-msla
+prerequisites:
+- hazard.resin-ppe-disposal
+- tech.sla-dlp-msla
 supersedes: []
-aliases_pt_br: ["sucção resina", "cupping", "delaminação MSLA", "vácuo no FEP", "camadas faltando oco"]
-aliases_en: ["resin suction", "cupping", "MSLA delamination", "vacuum peel failure"]
-tags: ["troubleshooting", "resin", "suction", "cupping", "delamination"]
+aliases_pt_br:
+- sucção resina
+- cupping
+- delaminação MSLA
+- vácuo no FEP
+- camadas faltando oco
+aliases_en:
+- resin suction
+- cupping
+- MSLA delamination
+- vacuum peel failure
+tags:
+- troubleshooting
+- resin
+- suction
+- cupping
+- delamination
+symptom_tags:
+- cupping-failure
+- layer-gap-resin
+- hollow-print-collapse
+cause_tags:
+- suction-cupping
+- sealed-cavity
+- aggressive-peel
+- underexposure-interlayer
 ---
-
 # Sucção (cupping) e delaminação em resina
 
 Hub pai: [Problemas — resina](INDEX.md) · [Índice de falhas](indice-falhas-resina.md)

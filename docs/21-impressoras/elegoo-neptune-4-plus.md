@@ -1,28 +1,51 @@
 ---
-id: "printer.elegoo-neptune-4-plus"
-title: "Elegoo Neptune 4 Plus"
-summary: "Elegoo Neptune 4 Plus é um modelo do fabricante Elegoo registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.elegoo-neptune-4-plus
+title: Elegoo Neptune 4 Plus
+summary: 'Elegoo Neptune 4 Plus é um modelo do fabricante Elegoo registrado no catálogo
+  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
+  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
+  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
+  known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["elegoo"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.elegoo-official-products"]
-related: ["manufacturer.elegoo", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- elegoo
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.elegoo-official-products
+related:
+- manufacturer.elegoo
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Elegoo Neptune 4 Plus"]
-tags: ["printer", "cataloged", "elegoo"]
+aliases_en:
+- Elegoo Neptune 4 Plus
+tags:
+- printer
+- cataloged
+- elegoo
+manufacturer_id: elegoo
+model_name: Neptune 4 Plus
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # Elegoo Neptune 4 Plus
 

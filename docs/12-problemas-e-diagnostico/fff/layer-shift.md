@@ -1,33 +1,69 @@
 ---
-id: "defect.fff.layer-shift"
-title: "Layer shift (deslocamento de camada) em FFF"
-summary: "Layer shift é um degrau XY permanente a partir de certa altura: o sistema de movimento perde passos ou a peça é empurrada. Na A1 Mini, confirme adesão primeiro — peel-then-push imita shift e leva a ajuste errado de belt. Causas: colisão, cabo, suporte solto, speed/accel em peças altas, tensão de correia/folga. Diferencie de gaps (subextrusão) e de warp."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["gaps-without-xy-step", "belt-panic-before-adhesion-check"]
-symptoms: ["symptom.layer-shift", "symptom.xy-step"]
-causes: ["cause.collision", "cause.peel-then-push", "cause.belt", "cause.accel", "cause.cable-snag"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.speeds"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
+id: defect.fff.layer-shift
+title: Layer shift (deslocamento de camada) em FFF
+summary: 'Layer shift é um degrau XY permanente a partir de certa altura: o sistema
+  de movimento perde passos ou a peça é empurrada. Na A1 Mini, confirme adesão primeiro
+  — peel-then-push imita shift e leva a ajuste errado de belt. Causas: colisão, cabo,
+  suporte solto, speed/accel em peças altas, tensão de correia/folga. Diferencie de
+  gaps (subextrusão) e de warp.'
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- gaps-without-xy-step
+- belt-panic-before-adhesion-check
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
 sources: []
-related: ["defect.fff.warping", "process.fff.first-layer", "setting.speeds", "defect.fff.under-extrusion"]
-prerequisites: ["tech.fff"]
+related:
+- defect.fff.warping
+- process.fff.first-layer
+- setting.speeds
+- defect.fff.under-extrusion
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["layer shift", "deslocamento de camada", "degrau XY"]
-aliases_en: ["layer shift", "shifted layers", "skipped steps"]
-tags: ["layer-shift", "troubleshooting", "fff"]
+aliases_pt_br:
+- layer shift
+- deslocamento de camada
+- degrau XY
+aliases_en:
+- layer shift
+- shifted layers
+- skipped steps
+tags:
+- layer-shift
+- troubleshooting
+- fff
+symptom_tags:
+- layer-shift
+- xy-step
+cause_tags:
+- collision
+- peel-then-push
+- belt
+- accel
+- cable-snag
+setting_tags:
+- speeds
 ---
-
 # Layer shift (deslocamento de camada) em FFF
 
 Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.md)

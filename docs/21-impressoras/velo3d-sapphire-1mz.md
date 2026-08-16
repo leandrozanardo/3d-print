@@ -1,28 +1,51 @@
 ---
-id: "printer.velo3d-sapphire-1mz"
-title: "Velo3D Sapphire 1MZ"
-summary: "Velo3D Sapphire 1MZ é um modelo do fabricante Velo3D registrado no catálogo fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e known issues ainda são lacunas explícitas — não inventadas."
-doc_type: "printer"
-domain: ["printers"]
+id: printer.velo3d-sapphire-1mz
+title: Velo3D Sapphire 1MZ
+summary: 'Velo3D Sapphire 1MZ é um modelo do fabricante Velo3D registrado no catálogo
+  fix-my-print (snapshot market-snapshot-2026-08-16-census). Nesta página o nível
+  de cobertura é cataloged: identidade e lifecycle confirmados por listagem oficial
+  acessada em 2026-08-16. Especificações técnicas detalhadas, manuais, materiais e
+  known issues ainda são lacunas explícitas — não inventadas.'
+doc_type: printer
+domain:
+- printers
 technology: []
 process: []
-applies_to: ["velo3d"]
-not_for: ["treat-as-documented-specs", "invented-compatibility"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
-lifecycle: "current"
-coverage_level: "cataloged"
-sources: ["source.velo3d-official-products"]
-related: ["manufacturer.velo3d", "hub.impressoras", "meta.printer-global-catalog"]
-prerequisites: ["hub.impressoras"]
+applies_to:
+- velo3d
+not_for:
+- treat-as-documented-specs
+- invented-compatibility
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+lifecycle: unknown
+coverage_level: discovered
+sources:
+- source.velo3d-official-products
+related:
+- manufacturer.velo3d
+- hub.impressoras
+- meta.printer-global-catalog
+prerequisites:
+- hub.impressoras
 supersedes: []
 aliases_pt_br: []
-aliases_en: ["Velo3D Sapphire 1MZ"]
-tags: ["printer", "cataloged", "velo3d"]
+aliases_en:
+- Velo3D Sapphire 1MZ
+tags:
+- printer
+- cataloged
+- velo3d
+manufacturer_id: velo3d
+model_name: Velo3D Sapphire 1MZ
+family_status: unknown
+lifecycle_observed_at: '2026-08-16'
+regions: []
+availability_evidence: pending-revalidation
 ---
 # Velo3D Sapphire 1MZ
 

@@ -1,19 +1,26 @@
 ---
-id: "meta.inventory"
-title: "Inventário existente de docs/"
-summary: "Auditoria factual de 2026-08-15: ~101 Markdown em docs/, corpus operacional em docs/projeto/ (EN), ebook CC BY-SA, printers A1 Mini, arquivo AsciiDoc. Sem front matter canônico, validador de links OK, cobertura limitada a FFF/A1 Mini."
-doc_type: "audit"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "1-month"
-related: ["meta.migration", "meta.coverage", "meta.contradictions"]
-tags: ["inventory", "audit"]
+id: meta.inventory
+title: Inventário existente de docs/
+summary: 'Auditoria factual de 2026-08-15: ~101 Markdown em docs/, corpus operacional
+  em docs/projeto/ (EN), ebook CC BY-SA, printers A1 Mini, arquivo AsciiDoc. Sem front
+  matter canônico, validador de links OK, cobertura limitada a FFF/A1 Mini.'
+doc_type: audit
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 1-month
+related:
+- meta.migration
+- meta.coverage
+- meta.contradictions
+tags:
+- inventory
+- audit
 ---
-
 # Inventário existente
 
 **Data da auditoria:** 2026-08-15  

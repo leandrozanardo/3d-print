@@ -1,31 +1,61 @@
 ---
-id: "slicer.bambu-studio"
-title: "Bambu Studio"
-summary: "Bambu Studio é o slicer oficial do ecossistema Bambu Lab usado nesta base com a A1 Mini. Trabalha com famílias de perfil (máquina, filamento, processo) e assistências de calibração/firmware acopladas ao produto. Conceitos semânticos (layer height, wall loops, brim, supports, cooling) importam mais que dumps de números; paths de UI e presets mudam por versão — sempre declarar versão ao diagnosticar."
-doc_type: "slicer"
-domain: ["slicers", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["bambu-studio", "printer.bambu-lab-a1-mini"]
-not_for: ["universal-setting-dump", "x1c-profile-paste-to-a1-mini"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.bambu-wiki-a1-mini"]
-related: ["printer.bambu-lab-a1-mini", "process.fff.first-layer", "design.supports-fff", "cal.fff-order", "material.pla", "material.petg"]
-prerequisites: ["printer.bambu-lab-a1-mini"]
+id: slicer.bambu-studio
+title: Bambu Studio
+summary: Bambu Studio é o slicer oficial do ecossistema Bambu Lab usado nesta base
+  com a A1 Mini. Trabalha com famílias de perfil (máquina, filamento, processo) e
+  assistências de calibração/firmware acopladas ao produto. Conceitos semânticos (layer
+  height, wall loops, brim, supports, cooling) importam mais que dumps de números;
+  paths de UI e presets mudam por versão — sempre declarar versão ao diagnosticar.
+doc_type: slicer
+domain:
+- slicers
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- bambu-studio
+- printer.bambu-lab-a1-mini
+not_for:
+- universal-setting-dump
+- x1c-profile-paste-to-a1-mini
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.bambu-wiki-a1-mini
+related:
+- printer.bambu-lab-a1-mini
+- process.fff.first-layer
+- design.supports-fff
+- cal.fff-order
+- material.pla
+- material.petg
+prerequisites:
+- printer.bambu-lab-a1-mini
 supersedes: []
-aliases_pt_br: ["Bambu Studio", "Studio Bambu"]
-aliases_en: ["Bambu Studio", "BambuSlicer lineage"]
-tags: ["slicer", "bambu", "profiles"]
+aliases_pt_br:
+- Bambu Studio
+- Studio Bambu
+aliases_en:
+- Bambu Studio
+- BambuSlicer lineage
+tags:
+- slicer
+- bambu
+- profiles
 ---
-
 # Bambu Studio
 
 Hub pai: [Slicers e configurações](INDEX.md)
@@ -38,7 +68,7 @@ Hub pai: [Slicers e configurações](INDEX.md)
 
 - Qualquer receita operacional A1 Mini nesta base
 - Diagnóstico “mudei um número e piorou” (versão + família de perfil)
-- Escolha de process profile (0,20 mm Standard vs Draft vs Fine, etc.)
+- Escolha de process profile (0,20 mm (fonte oficial / fabricante / heuristic; ver `sources`)  Standard vs Draft vs Fine, etc.)
 - Preview de suportes, brim e first layer antes de imprimir
 
 ## Conceitos semânticos (não dump de settings)
@@ -51,7 +81,7 @@ Use estes conceitos ao raciocinar; o **path exato no menu muda por versão**:
 | Filament profile | Temps, cooling defaults, flow/PA se existirem no preset |
 | Process / quality profile | Layer height, paredes, infill, velocidades, first layer |
 | First layer / initial layer | Adesão e squish — ver [primeira camada](../10-processo-de-impressao/fff/primeira-camada.md) |
-| Bed / nozzle temperature | Sempre dentro do range do filamento **e** bed ≤ 80 °C na A1 Mini |
+| Bed / nozzle temperature | em geral (condicional) dentro do range do filamento **e** bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources)  na A1 Mini |
 | Part cooling / fan | Overhangs vs Z-bond / warp — ver [cooling de peça](../04-componentes-e-hardware/cooling-de-peca-fff.md) |
 | Brim / raft / skirt | Âncora de borda; raft = último recurso |
 | Supports (normal/tree) | Acesso, cicatrizes — ver [suportes](../06-design-para-impressao-3d/suportes-fff.md) |
@@ -62,8 +92,8 @@ Use estes conceitos ao raciocinar; o **path exato no menu muda por versão**:
 
 ## Famílias de perfil (como decidir)
 
-1. **Máquina:** selecione o modelo **A1 Mini** (não X1C/P1S/A1 full sem revisão). Volume operacional 180 × 180 × 180 mm; deixe margem para brim/suportes.
-2. **Nozzle:** default desta base [0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); trocar diâmetro = nova família de processo.
+1. **Máquina:** selecione o modelo **A1 Mini** (não X1C/P1S/A1 full sem revisão). Volume operacional 180 × 180 × 180 mm (fonte oficial/fabricante/heuristic; ver sources) ; deixe margem para brim/suportes.
+2. **Nozzle:** default desta base [0,4 mm (fonte oficial/fabricante/heuristic; ver sources) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); trocar diâmetro = nova família de processo.
 3. **Filamento:** preset da marca/tipo quando existir; senão, partida do genérico PLA/PETG do Studio **e** TDS do bobina.
 4. **Processo:** comece pelo preset de qualidade “padrão” do pacote; só specialize (0,12 Fine, 0,28 Draft, etc.) com objetivo claro (detalhe vs tempo).
 5. **Placa:** declare smooth vs textured no fluxo se o Studio/firmware exigir — impacta expectativa de adesão ([PEI](../04-componentes-e-hardware/placa-pei-fff.md)).
@@ -91,7 +121,7 @@ Objetivo da peça (cosmético / encaixe / resistência)?
   → Orientar malha (design.orientation-fff)
   → Preset A1 Mini + filamento Ideal
   → Preview: first layer contínua? overhangs sem suporte impossível?
-  → PLA vs PETG: textured preferida para PETG; bed ≤ 80 °C
+  → PLA vs PETG: textured preferida para PETG; bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) 
   → Imprimir cupom/peça; uma variável por ajuste
 ```
 
@@ -114,7 +144,6 @@ Objetivo da peça (cosmético / encaixe / resistência)?
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 - [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md)
 
 ## Lacunas

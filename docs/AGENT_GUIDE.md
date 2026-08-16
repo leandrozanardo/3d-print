@@ -1,19 +1,27 @@
 ---
-id: "docs.agent-guide"
-title: "AGENT_GUIDE — Como a IA deve usar esta base"
-summary: "Leitura obrigatória para qualquer IA: roteamento por intenção, perguntas mínimas, estrutura de resposta, precedência de segurança, status de conhecimento, proibições e relação com o corpus legado em docs/projeto/."
-doc_type: "guide"
-domain: ["portal", "agents"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "1-month"
-related: ["meta.query-routing", "meta.context-assembly", "docs.portal"]
-tags: ["agent", "rag"]
+id: docs.agent-guide
+title: AGENT_GUIDE — Como a IA deve usar esta base
+summary: 'Leitura obrigatória para qualquer IA: roteamento por intenção, perguntas
+  mínimas, estrutura de resposta, precedência de segurança, status de conhecimento,
+  proibições e relação com o corpus legado em docs/projeto/.'
+doc_type: guide
+domain:
+- portal
+- agents
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 1-month
+related:
+- meta.query-routing
+- meta.context-assembly
+- docs.portal
+tags:
+- agent
+- rag
 ---
-
 # AGENT_GUIDE
 
 Leia este arquivo antes de responder com base em `docs/`.

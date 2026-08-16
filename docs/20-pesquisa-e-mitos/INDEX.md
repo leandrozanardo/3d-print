@@ -47,7 +47,7 @@ Ver matriz em [_meta/cobertura.md](../_meta/cobertura.md). Este hub existe para 
 | [Mito — PLA food-safe](mito-pla-food-safe.md) | `myth.pla-food-safe` | draft |
 | [Mito — 100% infill mais forte](mito-100-infill-mais-forte.md) | `myth.100-infill-stronger` | draft |
 | [Mito — enclosure obrigatório para PLA](mito-enclosure-obrigatorio-pla.md) | `myth.enclosure-required-pla` | draft |
-| [Mito — mais temp = sempre mais adesão](mito-mais-temp-mais-adesao-sempre.md) | `myth.more-temp-more-adhesion` | draft |
+| [Mito — mais temp implica mais adesão (claim absoluto)](mito-mais-temp-mais-adesao-sempre.md) <!-- filename histórico; em geral ver página --> | `myth.more-temp-more-adhesion` | draft |
 
 ## Relações com outros conceitos
 

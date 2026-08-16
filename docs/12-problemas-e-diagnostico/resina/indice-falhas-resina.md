@@ -1,28 +1,61 @@
 ---
-id: "defect.resin.index"
-title: "Índice de falhas — resina (vat)"
-summary: "Mapa de sintomas comuns em SLA/DLP/MSLA: falha de aderência à plataforma, print colado no FEP, camadas faltantes, suporte arrancado, elefante/bleeding por superexposição, nuvens/cure incompleta e irritação por manuseio. Cada linha aponta mecanismo, teste barato e página relacionada. Segurança primeiro: luva, SDS, ventilação. Não copie tempos de exposição de fóruns sem calibrador."
-doc_type: "troubleshooting"
-domain: ["troubleshooting", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-defect-matrix", "medical-device-failures"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["tech.sla-dlp-msla", "setting.resin-exposure-supports", "post.resin-wash-cure", "hazard.resin-ppe-disposal", "material.resin-families", "defect.resin.nothing-on-plate", "defect.resin.island-loose-support", "defect.resin.suction-delamination", "defect.resin.over-under-exposure"]
-prerequisites: ["hazard.resin-ppe-disposal", "tech.sla-dlp-msla"]
+id: defect.resin.index
+title: Índice de falhas — resina (vat)
+summary: 'Mapa de sintomas comuns em SLA/DLP/MSLA: falha de aderência à plataforma,
+  print colado no FEP, camadas faltantes, suporte arrancado, elefante/bleeding por
+  superexposição, nuvens/cure incompleta e irritação por manuseio. Cada linha aponta
+  mecanismo, teste barato e página relacionada. Segurança primeiro: luva, SDS, ventilação.
+  Não copie tempos de exposição de fóruns sem calibrador.'
+doc_type: troubleshooting
+domain:
+- troubleshooting
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-defect-matrix
+- medical-device-failures
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- tech.sla-dlp-msla
+- setting.resin-exposure-supports
+- post.resin-wash-cure
+- hazard.resin-ppe-disposal
+- material.resin-families
+- defect.resin.nothing-on-plate
+- defect.resin.island-loose-support
+- defect.resin.suction-delamination
+- defect.resin.over-under-exposure
+prerequisites:
+- hazard.resin-ppe-disposal
+- tech.sla-dlp-msla
 supersedes: []
-aliases_pt_br: ["falhas impressão resina", "troubleshooting MSLA", "print não gruda na plataforma"]
-aliases_en: ["resin print failures", "MSLA troubleshooting", "FEP stuck print"]
-tags: ["troubleshooting", "resin", "index"]
+aliases_pt_br:
+- falhas impressão resina
+- troubleshooting MSLA
+- print não gruda na plataforma
+aliases_en:
+- resin print failures
+- MSLA troubleshooting
+- FEP stuck print
+tags:
+- troubleshooting
+- resin
+- index
 ---
-
 # Índice de falhas — resina
 
 Hub pai: [Problemas e diagnóstico](../INDEX.md) · pasta [resina](INDEX.md)

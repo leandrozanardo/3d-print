@@ -1,28 +1,60 @@
 ---
-id: "tech.ded-waam"
-title: "DED e WAAM — deposição por energia dirigida"
-summary: "Directed energy deposition (DED) funde material (pó ou arame) no ponto onde uma fonte de energia focada (laser, arco, feixe de elétrons) cria um melt pool sobre substrato ou peça em construção. WAAM (Wire Arc Additive Manufacturing) é uma rota DED baseada em arco elétrico e arame — produtiva para grandes estruturas metálicas e reparo, com menor resolução tipicamente frente a LPBF. Cobertura parcial e honestamente limitada: sem WFS, corrente ou estratégias de path inventadas."
-doc_type: "technology"
-domain: ["technologies", "metals"]
-technology: ["directed-energy-deposition"]
-process: ["ded", "waam"]
-applies_to: ["directed-energy-deposition", "metal-wire", "metal-powder-feed"]
-not_for: ["polymer-fff", "fine-lattice-lpbf-replacement"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["hub.tech.directed-energy-deposition", "tech.lpbf-ebm", "post.depowdering-metal", "hazard.metal-powder", "tech.category-comparison"]
+id: tech.ded-waam
+title: DED e WAAM — deposição por energia dirigida
+summary: 'Directed energy deposition (DED) funde material (pó ou arame) no ponto onde
+  uma fonte de energia focada (laser, arco, feixe de elétrons) cria um melt pool sobre
+  substrato ou peça em construção. WAAM (Wire Arc Additive Manufacturing) é uma rota
+  DED baseada em arco elétrico e arame — produtiva para grandes estruturas metálicas
+  e reparo, com menor resolução tipicamente frente a LPBF. Cobertura parcial e honestamente
+  limitada: sem WFS, corrente ou estratégias de path inventadas.'
+doc_type: technology
+domain:
+- technologies
+- metals
+technology:
+- directed-energy-deposition
+process:
+- ded
+- waam
+applies_to:
+- directed-energy-deposition
+- metal-wire
+- metal-powder-feed
+not_for:
+- polymer-fff
+- fine-lattice-lpbf-replacement
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- hub.tech.directed-energy-deposition
+- tech.lpbf-ebm
+- post.depowdering-metal
+- hazard.metal-powder
+- tech.category-comparison
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["DED", "WAAM", "deposição a arco com arame", "cladding a laser"]
-aliases_en: ["DED", "WAAM", "Wire Arc Additive Manufacturing", "laser metal deposition", "LMD"]
-tags: ["ded", "waam", "metal", "repair"]
+aliases_pt_br:
+- WAAM
+- deposição a arco com arame
+- cladding a laser
+aliases_en:
+- WAAM
+- Wire Arc Additive Manufacturing
+- laser metal deposition
+- LMD
+tags:
+- ded
+- waam
+- metal
+- repair
 ---
-
 # DED e WAAM — deposição por energia dirigida
 
 Hub pai: [Directed energy deposition](./INDEX.md)

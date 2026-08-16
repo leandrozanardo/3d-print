@@ -1,29 +1,60 @@
 ---
-id: "material.resin-families"
-title: "Famílias de resina (fotopolímeros)"
-summary: "‘Resina’ em vat photopolymerization é família ampla: standard/cosmo, tough/abs-like, flexible, castable, water-washable, high-temp, filled, e rótulos ‘dental/medical’ que NÃO autorizam uso clínico DIY. Propriedades e toxicologia vêm do SDS/TDS do SKU, não do marketing. Escolha pela função + capacidade de PPE/lavagem/cura; nunca por claim food-safe improvisado. Compatível conceitualmente com SLA/DLP/MSLA."
-doc_type: "material"
-domain: ["materials", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-filament", "diy-clinical-dental", "food-contact"]
-materials: ["material.resin-families"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["tech.sla-dlp-msla", "setting.resin-exposure-supports", "post.resin-wash-cure", "hazard.resin-ppe-disposal", "hazard.food-medical-claims", "defect.resin.index"]
-prerequisites: ["tech.sla-dlp-msla"]
+id: material.resin-families
+title: Famílias de resina (fotopolímeros)
+summary: '‘Resina’ em vat photopolymerization é família ampla: standard/cosmo, tough/abs-like,
+  flexible, castable, water-washable, high-temp, filled, e rótulos ‘dental/medical’
+  que NÃO autorizam uso clínico DIY. Propriedades e toxicologia vêm do SDS/TDS do
+  SKU, não do marketing. Escolha pela função + capacidade de PPE/lavagem/cura; nunca
+  por claim food-safe improvisado. Compatível conceitualmente com SLA/DLP/MSLA.'
+doc_type: material
+domain:
+- materials
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-filament
+- diy-clinical-dental
+- food-contact
+materials:
+- material.resin-families
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- tech.sla-dlp-msla
+- setting.resin-exposure-supports
+- post.resin-wash-cure
+- hazard.resin-ppe-disposal
+- hazard.food-medical-claims
+- defect.resin.index
+prerequisites:
+- tech.sla-dlp-msla
 supersedes: []
-aliases_pt_br: ["tipos de resina 3D", "fotopolímero", "resina standard tough"]
-aliases_en: ["resin families", "photopolymer resin types", "ABS-like resin"]
-tags: ["resin", "materials", "photopolymer"]
+aliases_pt_br:
+- tipos de resina 3D
+- fotopolímero
+- resina standard tough
+aliases_en:
+- resin families
+- photopolymer resin types
+tags:
+- resin
+- materials
+- photopolymer
 ---
-
 # Famílias de resina
 
 Hub pai: [Materiais — resina](INDEX.md)

@@ -1,17 +1,35 @@
 ---
-id: "hub.problemas.fff"
-title: "Problemas e diagnóstico FFF"
-summary: "Hub de falhas FFF: índice por sintoma, empenamento, stringing, subextrusão, layer shift, elephant foot, delaminação, ringing, Z-banding e pillowing. Sempre uma variável por teste; secar antes de torres."
-doc_type: "hub"
-domain: ["troubleshooting", "fff"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-related: ["hub.problemas", "troubleshoot.fff-symptom-index", "defect.fff.warping", "defect.fff.stringing", "defect.fff.under-extrusion", "defect.fff.layer-shift", "defect.fff.elephant-foot", "defect.fff.delamination", "defect.fff.ringing-ghosting", "defect.fff.z-banding", "defect.fff.pillowing"]
-tags: ["hub", "troubleshooting", "fff"]
+id: hub.problemas.fff
+title: Problemas e diagnóstico FFF
+summary: 'Hub de falhas FFF: índice por sintoma, empenamento, stringing, subextrusão,
+  layer shift, elephant foot, delaminação, ringing, Z-banding e pillowing. Sempre
+  uma variável por teste; secar antes de torres.'
+doc_type: hub
+domain:
+- troubleshooting
+- fff
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+related:
+- hub.problemas
+- troubleshoot.fff-symptom-index
+- defect.fff.warping
+- defect.fff.stringing
+- defect.fff.under-extrusion
+- defect.fff.layer-shift
+- defect.fff.elephant-foot
+- defect.fff.delamination
+- defect.fff.ringing-ghosting
+- defect.fff.z-banding
+- defect.fff.pillowing
+tags:
+- hub
+- troubleshooting
+- fff
 technology: []
 process: []
 applies_to: []
@@ -22,7 +40,6 @@ supersedes: []
 aliases_pt_br: []
 aliases_en: []
 ---
-
 # Problemas e diagnóstico FFF
 
 Voltar: [Problemas](../INDEX.md)

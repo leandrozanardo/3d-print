@@ -1,31 +1,65 @@
 ---
-id: "component.part-cooling"
-title: "Cooling de peça (part cooling) em FFF"
-summary: "Part cooling é o fluxo de ar dirigido à peça (não o fan do heatsink do hotend) para solidificar overhangs, pontes e detalhes. PLA tolera/exige cooling alto após a base; PETG e peças estruturais pedem fan mais moderado para preservar união entre camadas e reduzir warp. Em A1 Mini (frame aberto) o cooling do ambiente (draft) soma ao fan — controle os dois. Ajuste no Bambu Studio por perfil e valide; não use um % universal."
-doc_type: "component"
-domain: ["hardware", "fff", "process"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["confuse-with-hotend-heatsink-fan", "max-fan-as-default-for-petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.pla", "material.petg", "defect.fff.warping", "process.fff.first-layer", "process.open-frame-env", "component.hotend", "slicer.bambu-studio"]
-prerequisites: ["tech.fff"]
+id: component.part-cooling
+title: Cooling de peça (part cooling) em FFF
+summary: Part cooling é o fluxo de ar dirigido à peça (não o fan do heatsink do hotend)
+  para solidificar overhangs, pontes e detalhes. PLA tolera/exige cooling alto após
+  a base; PETG e peças estruturais pedem fan mais moderado para preservar união entre
+  camadas e reduzir warp. Em A1 Mini (frame aberto) o cooling do ambiente (draft)
+  soma ao fan — controle os dois. Ajuste no Bambu Studio por perfil e valide; não
+  use um % universal.
+doc_type: component
+domain:
+- hardware
+- fff
+- process
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- confuse-with-hotend-heatsink-fan
+- max-fan-as-default-for-petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- material.pla
+- material.petg
+- defect.fff.warping
+- process.fff.first-layer
+- process.open-frame-env
+- component.hotend
+- slicer.bambu-studio
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["cooling de peça", "ventilador de peça", "part cooling"]
-aliases_en: ["part cooling", "part cooling fan", "layer fan"]
-tags: ["cooling", "fan", "fff"]
+aliases_pt_br:
+- cooling de peça
+- ventilador de peça
+aliases_en:
+- part cooling fan
+- layer fan
+tags:
+- cooling
+- fan
+- fff
 ---
-
 # Cooling de peça (part cooling) em FFF
 
 Hub pai: [Componentes e hardware](INDEX.md)
@@ -84,7 +118,6 @@ Em [frame aberto](../10-processo-de-impressao/fff/ambiente-frame-aberto.md), ar-
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

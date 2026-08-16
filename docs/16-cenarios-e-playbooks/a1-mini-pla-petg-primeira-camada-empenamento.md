@@ -1,28 +1,49 @@
 ---
-id: "scenario.a1-mini-pla-petg-first-layer-warp"
-title: "Playbook — A1 Mini + PLA/PETG: primeira camada e empenamento"
-summary: "Cenário ponta a ponta para validar a arquitetura da base: selecionar PLA ou PETG na A1 Mini com nozzle 0,4 mm, obter primeira camada correta, prevenir/diagnosticar empenamento e saber quando parar. Não substitui TDS do filamento nem perfis oficiais do Bambu Studio."
-doc_type: "scenario"
-domain: ["scenarios", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["abs-asa-default", "food-medical-certification"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "process.fff.first-layer", "defect.fff.warping"]
-prerequisites: ["printer.bambu-lab-a1-mini", "process.fff.first-layer"]
-aliases_pt_br: ["playbook vertical A1 Mini"]
-aliases_en: ["A1 mini first layer warping playbook"]
-tags: ["playbook", "scenario"]
+id: scenario.a1-mini-pla-petg-first-layer-warp
+title: 'Playbook — A1 Mini + PLA/PETG: primeira camada e empenamento'
+summary: 'Cenário ponta a ponta para validar a arquitetura da base: selecionar PLA
+  ou PETG na A1 Mini com nozzle 0,4 mm, obter primeira camada correta, prevenir/diagnosticar
+  empenamento e saber quando parar. Não substitui TDS do filamento nem perfis oficiais
+  do Bambu Studio.'
+doc_type: scenario
+domain:
+- scenarios
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- abs-asa-default
+- food-medical-certification
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.bambu-a1-mini-tech-specs
+related:
+- printer.bambu-lab-a1-mini
+- process.fff.first-layer
+- defect.fff.warping
+prerequisites:
+- printer.bambu-lab-a1-mini
+- process.fff.first-layer
+aliases_pt_br:
+- playbook vertical A1 Mini
+aliases_en:
+- A1 mini first layer warping playbook
+tags:
+- playbook
+- scenario
 supersedes: []
 ---
-
 # Playbook — A1 Mini + PLA/PETG: primeira camada e empenamento
 
 Hub pai: [Cenários](INDEX.md)
@@ -39,7 +60,7 @@ Imprimir com confiabilidade básica na [A1 Mini](../21-impressoras/bambu-lab-a1-
 
 ## Hard constraints
 
-- Nozzle de referência: [0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md)
+- Nozzle de referência: [0,4 mm (fonte oficial / fabricante / heuristic; ver `sources`) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md)
 - Bed ≤ 80 °C
 - Não certificar food/medical
 - Materiais Not Recommended do fabricante: fora deste playbook como default
@@ -79,7 +100,7 @@ Imprimir com confiabilidade básica na [A1 Mini](../21-impressoras/bambu-lab-a1-
 - [ ] Placa limpa; PETG preferir textured
 - [ ] Draft controlado
 - [ ] Preview: first layer contínua, sem buracos óbvios
-- [ ] Bed/nozzle dentro do range; bed ≤ 80 °C
+- [ ] Bed/nozzle dentro do range; bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) 
 
 ## Checklist pós
 

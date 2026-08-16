@@ -1,31 +1,65 @@
 ---
-id: "design.orientation-fff"
-title: "Orientação de peça em FFF"
-summary: "Orientação em FFF define quais faces tocam a mesa, a direção das camadas (anisotropia), a quantidade de overhangs/suportes e a qualidade cosmética. Não existe orientação universal: priorize carga mecânica, área de contato estável, minimização de suporte em faces críticas e envelope da máquina. Na A1 Mini (180³ mm, bed-slinger aberto), bases longas e altas aumentam risco de warp e vibração — valide no preview do Bambu Studio."
-doc_type: "design"
-domain: ["dfam", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["isotropic-strength-assumption", "resin-orientation-rules-as-fff"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["design.supports-fff", "process.fff.first-layer", "defect.fff.warping", "material.pla", "material.petg", "kinematics.bed-slinger", "slicer.bambu-studio"]
-prerequisites: ["tech.fff"]
+id: design.orientation-fff
+title: Orientação de peça em FFF
+summary: 'Orientação em FFF define quais faces tocam a mesa, a direção das camadas
+  (anisotropia), a quantidade de overhangs/suportes e a qualidade cosmética. Não existe
+  orientação universal: priorize carga mecânica, área de contato estável, minimização
+  de suporte em faces críticas e envelope da máquina. Na A1 Mini (180³ mm, bed-slinger
+  aberto), bases longas e altas aumentam risco de warp e vibração — valide no preview
+  do Bambu Studio.'
+doc_type: design
+domain:
+- dfam
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- isotropic-strength-assumption
+- resin-orientation-rules-as-fff
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- design.supports-fff
+- process.fff.first-layer
+- defect.fff.warping
+- material.pla
+- material.petg
+- kinematics.bed-slinger
+- slicer.bambu-studio
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["orientação FFF", "orientação de impressão", "pose da peça"]
-aliases_en: ["print orientation", "part orientation FFF"]
-tags: ["dfam", "orientation", "fff"]
+aliases_pt_br:
+- orientação FFF
+- orientação de impressão
+- pose da peça
+aliases_en:
+- print orientation
+- part orientation FFF
+tags:
+- dfam
+- orientation
+- fff
 ---
-
 # Orientação de peça em FFF
 
 Hub pai: [Design para impressão 3D](INDEX.md)

@@ -50,3 +50,14 @@ docs/ebook/imagens/ummontedealicates.png
 3ds/plan/*
 !3ds/plan/_template.md
 !3ds/plan/_exemplo-dry-run.md
+
+.tmp/
+
+# Node / TypeScript workspace
+node_modules/
+packages/*/dist/
+apps/*/dist/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+.pnpm-store/

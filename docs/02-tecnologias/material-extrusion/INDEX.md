@@ -1,19 +1,31 @@
 ---
-id: "hub.tech.material-extrusion"
-title: "Material extrusion"
-summary: "Hub da categoria material extrusion (ISO/ASTM): feedstock dispensado por bico. Em desktop, o processo dominante é FFF com filamento termoplástico. Inclui navegação para FFF, escopo da categoria, riscos e lacunas."
-doc_type: "hub"
-domain: ["technologies"]
-technology: ["material-extrusion"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-related: ["hub.tecnologias", "tech.fff", "fund.terminology"]
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-tags: ["hub", "material-extrusion", "fff"]
+id: hub.tech.material-extrusion
+title: Material extrusion
+summary: 'Hub da categoria material extrusion (ISO/ASTM): feedstock dispensado por
+  bico. Em desktop, o processo dominante é FFF com filamento termoplástico. Inclui
+  navegação para FFF, escopo da categoria, riscos e lacunas.'
+doc_type: hub
+domain:
+- technologies
+technology:
+- material-extrusion
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+related:
+- hub.tecnologias
+- tech.fff
+- fund.terminology
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+tags:
+- hub
+- material-extrusion
+- fff
 process: []
 applies_to: []
 not_for: []
@@ -22,7 +34,6 @@ supersedes: []
 aliases_pt_br: []
 aliases_en: []
 ---
-
 # Material extrusion
 
 Voltar: [Tecnologias](../INDEX.md)

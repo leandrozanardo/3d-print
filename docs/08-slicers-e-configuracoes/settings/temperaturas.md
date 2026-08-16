@@ -1,32 +1,74 @@
 ---
-id: "setting.temperatures"
-title: "Temperaturas (nozzle e bed)"
-summary: "Temperaturas de nozzle e mesa definem viscosidade do melt, adesão à placa e solda entre camadas. Não existem temperaturas universais sagradas: use faixa do TDS/perfil do filamento como ponto de partida, torres/cupons, e respeite o teto da máquina (A1 Mini: bed max 80 °C nas tech specs). No Bambu Studio: Nozzle / Bed temperature e overrides de first layer. Subir temp não seca filamento úmido."
-doc_type: "setting"
-domain: ["slicing", "fff", "process"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "printer.bambu-lab-a1-mini"]
-not_for: ["universal-temp-gospel", "wet-filament-fixed-by-heat-alone", "exceed-machine-bed-cap"]
-settings: ["setting.temperatures", "setting.bed-temperature", "setting.nozzle-temperature"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-materials: ["material.pla", "material.petg", "material.tpu"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.pla", "material.petg", "material.drying-storage", "process.fff.first-layer", "setting.cooling", "defect.fff.stringing", "defect.fff.delamination"]
-prerequisites: ["tech.fff"]
+id: setting.temperatures
+title: Temperaturas (nozzle e bed)
+summary: 'Temperaturas de nozzle e mesa definem viscosidade do melt, adesão à placa
+  e solda entre camadas. Não existem temperaturas universais sagradas: use faixa do
+  TDS/perfil do filamento como ponto de partida, torres/cupons, e respeite o teto
+  da máquina (A1 Mini: bed max 80 °C nas tech specs). No Bambu Studio: Nozzle / Bed
+  temperature e overrides de first layer. Subir temp não seca filamento úmido.'
+doc_type: setting
+domain:
+- slicing
+- fff
+- process
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- printer.bambu-lab-a1-mini
+not_for:
+- universal-temp-gospel
+- wet-filament-fixed-by-heat-alone
+- exceed-machine-bed-cap
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+materials:
+- material.pla
+- material.petg
+- material.tpu
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- material.pla
+- material.petg
+- material.drying-storage
+- process.fff.first-layer
+- setting.cooling
+- defect.fff.stringing
+- defect.fff.delamination
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["temperatura do bico", "temperatura da mesa", "nozzle temp", "bed temp"]
-aliases_en: ["nozzle temperature", "bed temperature", "hotend temperature"]
-tags: ["setting", "temperature", "slicer"]
+aliases_pt_br:
+- temperatura do bico
+- temperatura da mesa
+- nozzle temp
+- bed temp
+aliases_en:
+- nozzle temperature
+- bed temperature
+- hotend temperature
+tags:
+- setting
+- temperature
+- slicer
+setting_tags:
+- temperatures
+- bed-temperature
+- nozzle-temperature
 ---
-
 # Temperaturas (nozzle e bed)
 
 Hub pai: [Settings](INDEX.md)
@@ -67,9 +109,9 @@ Bed máximo **80 °C** — [`source.bambu-a1-mini-tech-specs`](../../22-fontes/b
 
 | Material (Ideal A1 Mini) | Nozzle (ordem) | Bed (ordem) |
 |---|---|---|
-| [PLA](../../05-materiais/fff/pla.md) | ~190–220 °C | ~35–60 °C |
-| [PETG](../../05-materiais/fff/petg.md) | ~220–250 °C | ~70–80 °C (≤80) |
-| [TPU](../../05-materiais/fff/tpu.md) | ~210–230 °C | ~30–60 °C |
+| [PLA](../../05-materiais/fff/pla.md) | ~190–220 °C (fonte oficial/fabricante/heuristic; ver sources)  | ~35–60 °C (fonte oficial/fabricante/heuristic; ver sources)  |
+| [PETG](../../05-materiais/fff/petg.md) | ~220–250 °C (fonte oficial/fabricante/heuristic; ver sources)  | ~70–80 °C (fonte oficial/fabricante/heuristic; ver sources)  (≤80) |
+| [TPU](../../05-materiais/fff/tpu.md) | ~210–230 °C (fonte oficial/fabricante/heuristic; ver sources)  | ~30–60 °C |
 
 Para ABS/ASA/PC/PA: **não** há receita canônica nesta máquina — ver páginas de material e Not Recommended nas specs.
 
@@ -82,7 +124,7 @@ Para ABS/ASA/PC/PA: **não** há receita canônica nesta máquina — ver págin
 ## Calibração
 
 1. Secar se necessário  
-2. Torre de temperatura ou cupons (−5 °C passos)  
+2. Torre de temperatura ou cupons (−5 °C (fonte oficial/fabricante/heuristic; ver sources)  passos)  
 3. Uma variável por vez  
 4. Registrar marca/cor/speed  
 
@@ -105,7 +147,6 @@ Para ABS/ASA/PC/PA: **não** há receita canônica nesta máquina — ver págin
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../../22-fontes/bambu-a1-mini-tech-specs.md)
 - TDS do filamento
 - Páginas canônicas PLA/PETG/TPU
 

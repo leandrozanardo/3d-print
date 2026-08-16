@@ -1,34 +1,78 @@
 ---
-id: "defect.fff.ringing-ghosting"
-title: "Ringing / ghosting em FFF"
-summary: "Ringing (ghosting) são ecos ondulados nas paredes após cantos ou mudanças bruscas de direção, causados por vibração/ressonância do sistema mecânico em aceleração. Na A1 Mini, priorize reduzir velocidade de parede externa e verificar mesa/correias antes de caçar accel de fórum. Diferencie de Z-banding (faixas horizontais periódicas) e de textura de umidade. Sem números mágicos de Hz — use método de teste e presets da máquina."
-doc_type: "troubleshooting"
-domain: ["fff", "quality", "troubleshooting"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini"]
-not_for: ["z-banding-misdiagnosis", "copy-accel-from-other-printer"]
-symptoms: ["symptom.ringing", "symptom.ghosting"]
-causes: ["cause.vibration", "cause.high-accel", "cause.loose-mechanics", "cause.high-outer-speed"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-settings: ["setting.speed", "setting.acceleration"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide", "source.bambu-a1-mini-tech-specs"]
-related: ["defect.fff.z-banding", "defect.fff.layer-shift", "scenario.tall-thin-parts", "scenario.speed-vs-quality", "maint.a1-mini-preventive"]
-prerequisites: ["tech.fff"]
+id: defect.fff.ringing-ghosting
+title: Ringing / ghosting em FFF
+summary: Ringing (ghosting) são ecos ondulados nas paredes após cantos ou mudanças
+  bruscas de direção, causados por vibração/ressonância do sistema mecânico em aceleração.
+  Na A1 Mini, priorize reduzir velocidade de parede externa e verificar mesa/correias
+  antes de caçar accel de fórum. Diferencie de Z-banding (faixas horizontais periódicas)
+  e de textura de umidade. Sem números mágicos de Hz — use método de teste e presets
+  da máquina.
+doc_type: troubleshooting
+domain:
+- fff
+- quality
+- troubleshooting
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+not_for:
+- z-banding-misdiagnosis
+- copy-accel-from-other-printer
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- defect.fff.z-banding
+- defect.fff.layer-shift
+- scenario.tall-thin-parts
+- scenario.speed-vs-quality
+- maint.a1-mini-preventive
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["ringing", "ghosting", "eco de vibração", "ondulação após canto"]
-aliases_en: ["ringing", "ghosting", "echoing", "vibration artifacts"]
-tags: ["ringing", "ghosting", "troubleshooting", "fff"]
+aliases_pt_br:
+- ringing
+- ghosting
+- eco de vibração
+- ondulação após canto
+aliases_en:
+- ringing
+- ghosting
+- echoing
+- vibration artifacts
+tags:
+- ringing
+- ghosting
+- troubleshooting
+- fff
+symptom_tags:
+- ringing
+- ghosting
+cause_tags:
+- vibration
+- high-accel
+- loose-mechanics
+- high-outer-speed
+setting_tags:
+- speed
+- acceleration
 ---
-
 # Ringing / ghosting em FFF
 
 Hub pai: [Problemas FFF](INDEX.md) · [Índice por sintoma](indice-por-sintoma.md)

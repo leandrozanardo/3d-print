@@ -1,28 +1,65 @@
 ---
-id: "tech.sls-mjf"
-title: "SLS e MJF — powder bed fusion de polímeros"
-summary: "SLS (Selective Laser Sintering) e MJF (Multi Jet Fusion) são processos industriais de powder bed fusion para polímeros em pó — tipicamente poliamidas (ex.: PA12). Em SLS, um laser sinteriza/funde seletivamente; em MJF, agentes de fusão/detalhamento são jateados e uma fonte de energia infravermelha completa a fusão. Ambos dispensam suporte estrutural clássico de FFF porque o leito não sinterizado apoia a peça, mas exigem depowdering, reciclagem controlada de pó e higiene industrial. Esta página é visão de engenharia com profundidade parcial: não fornece receita de energia, temperatura de câmara ou percentuais de refresh sem datasheet do sistema."
-doc_type: "technology"
-domain: ["technologies", "polymers"]
-technology: ["powder-bed-fusion"]
-process: ["sls", "mjf"]
-applies_to: ["powder-bed-fusion", "polymer-powder"]
-not_for: ["fff-filament", "metal-lpbf-parameters", "home-diy-powder-printing"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hub.tech.powder-bed-fusion", "tech.lpbf-ebm", "material.powder-feedstocks", "defect.pbf", "post.depowdering-metal", "tech.category-comparison"]
-prerequisites: ["hub.tech.powder-bed-fusion"]
+id: tech.sls-mjf
+title: SLS e MJF — powder bed fusion de polímeros
+summary: 'SLS (Selective Laser Sintering) e MJF (Multi Jet Fusion) são processos industriais
+  de powder bed fusion para polímeros em pó — tipicamente poliamidas (ex.: PA12).
+  Em SLS, um laser sinteriza/funde seletivamente; em MJF, agentes de fusão/detalhamento
+  são jateados e uma fonte de energia infravermelha completa a fusão. Ambos dispensam
+  suporte estrutural clássico de FFF porque o leito não sinterizado apoia a peça,
+  mas exigem depowdering, reciclagem controlada de pó e higiene industrial. Esta página
+  é visão de engenharia com profundidade parcial: não fornece receita de energia,…'
+doc_type: technology
+domain:
+- technologies
+- polymers
+technology:
+- powder-bed-fusion
+process:
+- sls
+- mjf
+applies_to:
+- powder-bed-fusion
+- polymer-powder
+not_for:
+- fff-filament
+- metal-lpbf-parameters
+- home-diy-powder-printing
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hub.tech.powder-bed-fusion
+- tech.lpbf-ebm
+- material.powder-feedstocks
+- defect.pbf
+- post.depowdering-metal
+- tech.category-comparison
+prerequisites:
+- hub.tech.powder-bed-fusion
 supersedes: []
-aliases_pt_br: ["SLS", "MJF", "sinterização seletiva a laser", "fusão multi-jato"]
-aliases_en: ["SLS", "Selective Laser Sintering", "MJF", "Multi Jet Fusion"]
-tags: ["sls", "mjf", "powder-bed-fusion", "polymer"]
+aliases_pt_br:
+- SLS
+- MJF
+- sinterização seletiva a laser
+- fusão multi-jato
+aliases_en:
+- SLS
+- Selective Laser Sintering
+- MJF
+- Multi Jet Fusion
+tags:
+- sls
+- mjf
+- powder-bed-fusion
+- polymer
 ---
-
 # SLS e MJF — powder bed fusion de polímeros
 
 Hub pai: [Powder bed fusion](./INDEX.md) · [Tecnologias](../INDEX.md)

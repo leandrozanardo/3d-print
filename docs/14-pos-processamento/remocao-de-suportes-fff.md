@@ -1,28 +1,53 @@
 ---
-id: "post.support-removal-fff"
-title: "Remoção de suportes FFF"
-summary: "Remover suportes FFF é pós-processo: planeje interface, densidade e orientação no slicer para facilitar; na bancada use corte controlado, não alavanca cega. Suporte difícil de remover quase sempre é decisão de DfAM/slicer, não ‘falta de força’. PLA costuma ser mais quebradiço na remoção; PETG pode grudar mais na interface. Proteja olhos e dedos; não confunda com lavagem de resina."
-doc_type: "guide"
-domain: ["post-processing", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material.pla", "material.petg", "printer.bambu-lab-a1-mini"]
-not_for: ["resin-support-workflow", "soluble-support-as-default-without-hardware"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
+id: post.support-removal-fff
+title: Remoção de suportes FFF
+summary: 'Remover suportes FFF é pós-processo: planeje interface, densidade e orientação
+  no slicer para facilitar; na bancada use corte controlado, não alavanca cega. Suporte
+  difícil de remover quase sempre é decisão de DfAM/slicer, não ‘falta de força’.
+  PLA costuma ser mais quebradiço na remoção; PETG pode grudar mais na interface.
+  Proteja olhos e dedos; não confunda com lavagem de resina.'
+doc_type: guide
+domain:
+- post-processing
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material.pla
+- material.petg
+- printer.bambu-lab-a1-mini
+not_for:
+- resin-support-workflow
+- soluble-support-as-default-without-hardware
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
 sources: []
-related: ["post.sanding-finishing", "scenario.miniatures", "scenario.functional-brackets", "design.tolerances-fff"]
-prerequisites: ["tech.fff"]
+related:
+- post.sanding-finishing
+- scenario.miniatures
+- scenario.functional-brackets
+- design.tolerances-fff
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["remover suportes FFF", "desbastar suporte", "interface de suporte"]
-aliases_en: ["FFF support removal", "breakaway supports", "support interface"]
-tags: ["post-processing", "supports", "fff"]
+aliases_pt_br:
+- remover suportes FFF
+- desbastar suporte
+aliases_en:
+- FFF support removal
+- breakaway supports
+tags:
+- post-processing
+- supports
+- fff
 ---
-
 # Remoção de suportes FFF
 
 Hub pai: [Pós-processamento](INDEX.md)

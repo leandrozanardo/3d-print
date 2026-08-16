@@ -1,28 +1,36 @@
 ---
-id: "hub.fontes"
-title: "Fontes"
-summary: "Registro de proveniência para afirmações técnicas. Hub de navegação; a cobertura profunda depende da matriz em _meta/cobertura.md."
-doc_type: "hub"
-domain: ["hub"]
+id: hub.fontes
+title: Fontes
+summary: Registro de proveniência para afirmações técnicas. Hub de navegação; a cobertura
+  profunda depende da matriz em _meta/cobertura.md.
+doc_type: hub
+domain:
+- hub
 technology: []
 process: []
 applies_to: []
-not_for: ["complete-coverage-claim"]
-knowledge_status: "draft"
-evidence_status: "unknown"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
+not_for:
+- complete-coverage-claim
+knowledge_status: draft
+evidence_status: unknown
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
 sources: []
-related: ["meta.coverage", "meta.knowledge-map", "meta.printer-global-catalog"]
-prerequisites: ["meta.architecture"]
+related:
+- meta.coverage
+- meta.knowledge-map
+- meta.printer-global-catalog
+prerequisites:
+- meta.architecture
 supersedes: []
-aliases_pt_br: ["Fontes"]
+aliases_pt_br:
+- Fontes
 aliases_en: []
-tags: ["hub"]
+tags:
+- hub
 ---
-
 # Fontes
 
 ## Escopo
@@ -56,6 +64,17 @@ Piloto: [bambu-lab-official-products.md](bambu-lab-official-products.md) · [pru
 |---|---|
 | [Bambu A1 mini tech specs](bambu-a1-mini-tech-specs.md) | `source.bambu-a1-mini-tech-specs` |
 | [Bambu Wiki A1 mini](bambu-wiki-a1-mini.md) | `source.bambu-wiki-a1-mini` |
+| [HP MJF 1200 product page](hp-mjf-1200-product-page.md) | `source.hp-mjf-1200-product-page` |
+| [EOS metal printers listing](eos-official-metal-printers.md) | `source.eos-official-metal-printers` |
+| [Bambu P1S US store](bambu-p1s-us-store.md) | `source.bambu-p1s-us-store` |
+| [Bambu A1 mini wiki nozzle clog](bambu-a1-mini-wiki-nozzle-clog.md) | `source.bambu-a1-mini-wiki-nozzle-clog` |
+| [Bambu A1 mini wiki blob](bambu-a1-mini-wiki-blob.md) | `source.bambu-a1-mini-wiki-blob` |
+| [Bambu A1 mini wiki clump detect](bambu-a1-mini-wiki-clump-detect.md) | `source.bambu-a1-mini-wiki-clump-detect` |
+| [CEAD official](cead-official-products.md) | `source.cead-official-products` |
+| [ExOne official](exone-official-products.md) | `source.exone-official-products` |
+| [RegenHU official](regenhu-official-products.md) | `source.regenhu-official-products` |
+| [VORON official](voron-official-products.md) | `source.voron-official-products` |
+| [Rat Rig official](ratrig-official-products.md) | `source.ratrig-official-products` |
 | [Ellis Print Tuning Guide](ellis-print-tuning-guide.md) | `source.ellis-print-tuning-guide` |
 | [Teaching Tech Calibration](teaching-tech-calibration.md) | `source.teaching-tech-calibration` |
 | [ISO/ASTM 52900 entrada](iso-astm-52900-entry.md) | `source.iso-astm-52900-entry` |

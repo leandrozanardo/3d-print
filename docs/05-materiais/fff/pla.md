@@ -1,30 +1,58 @@
 ---
-id: "material.pla"
-title: "PLA (ácido poliláctico) em FFF"
-summary: "PLA é a família de filamento de menor barreira de entrada em FFF desktop: boa adesão em PEI, baixo empenamento relativo, alta tolerância a cooling e excelente para detalhe cosmético. É anisotrópico, amolece em temperaturas modestas e não é automaticamente food-safe nem estruturalmente certificado. Na A1 Mini é o material primário com nozzle 0,4 mm e Bambu Studio."
-doc_type: "material"
-domain: ["materials", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "nozzle-0.4mm"]
-not_for: ["sustained-heat-above-softening", "food-contact-without-certification", "chemical-tanks"]
-materials: ["material.pla"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["material.petg", "process.fff.first-layer", "defect.fff.warping", "printer.bambu-lab-a1-mini"]
-prerequisites: ["tech.fff"]
-aliases_pt_br: ["PLA", "poliácido láctico", "ácido poliláctico"]
-aliases_en: ["PLA", "polylactic acid"]
-tags: ["material", "pla", "fff"]
+id: material.pla
+title: PLA (ácido poliláctico) em FFF
+summary: 'PLA é a família de filamento de menor barreira de entrada em FFF desktop:
+  boa adesão em PEI, baixo empenamento relativo, alta tolerância a cooling e excelente
+  para detalhe cosmético. É anisotrópico, amolece em temperaturas modestas e não é
+  automaticamente food-safe nem estruturalmente certificado. Na A1 Mini é o material
+  primário com nozzle 0,4 mm e Bambu Studio.'
+doc_type: material
+domain:
+- materials
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- nozzle-0.4mm
+not_for:
+- sustained-heat-above-softening
+- food-contact-without-certification
+- chemical-tanks
+materials:
+- material.pla
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- material.petg
+- process.fff.first-layer
+- defect.fff.warping
+- printer.bambu-lab-a1-mini
+prerequisites:
+- tech.fff
+aliases_pt_br:
+- PLA
+- poliácido láctico
+- ácido poliláctico
+aliases_en:
+- PLA
+- polylactic acid
+tags:
+- material
+- pla
+- fff
 supersedes: []
 ---
-
 # PLA (ácido poliláctico) em FFF
 
 Hub pai: [Materiais](../INDEX.md) · Família FFF

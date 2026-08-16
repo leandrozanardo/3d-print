@@ -1,28 +1,58 @@
 ---
-id: "scenario.speed-vs-quality"
-title: "Playbook — impressão rápida vs qualidade"
-summary: "Velocidade e qualidade competem: reduzir tempo via altura de camada, velocidade de parede, infill e quantidade de peças por plate — cada alavanca tem custo em detalhe, adesão ou resistência. Na A1 Mini, profiles ‘rápidos’ não anulam física de first layer, cooling e anisotropia. Defina o critério de aceite antes; use cupom; não troque todas as variáveis juntas. Segurança e claims food/medical não entram no trade-off."
-doc_type: "scenario"
-domain: ["scenarios", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["quality-critical-medical", "ignore-first-layer-for-speed"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.ellis-print-tuning-guide"]
-related: ["scenario.miniatures", "scenario.functional-brackets", "process.fff.first-layer", "quality.test-coupons", "econ.fff-cost-waste"]
-prerequisites: ["process.fff.first-layer"]
+id: scenario.speed-vs-quality
+title: Playbook — impressão rápida vs qualidade
+summary: 'Velocidade e qualidade competem: reduzir tempo via altura de camada, velocidade
+  de parede, infill e quantidade de peças por plate — cada alavanca tem custo em detalhe,
+  adesão ou resistência. Na A1 Mini, profiles ‘rápidos’ não anulam física de first
+  layer, cooling e anisotropia. Defina o critério de aceite antes; use cupom; não
+  troque todas as variáveis juntas. Segurança e claims food/medical não entram no
+  trade-off.'
+doc_type: scenario
+domain:
+- scenarios
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- quality-critical-medical
+- ignore-first-layer-for-speed
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- scenario.miniatures
+- scenario.functional-brackets
+- process.fff.first-layer
+- quality.test-coupons
+- econ.fff-cost-waste
+prerequisites:
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["rápido vs qualidade", "trade-off velocidade", "perfil draft"]
-aliases_en: ["speed vs quality", "draft vs fine", "fast printing tradeoffs"]
-tags: ["playbook", "speed", "quality"]
+aliases_pt_br:
+- rápido vs qualidade
+- trade-off velocidade
+- perfil draft
+aliases_en:
+- speed vs quality
+- draft vs fine
+- fast printing tradeoffs
+tags:
+- playbook
+- speed
+- quality
 ---
-
 # Playbook — impressão rápida vs qualidade
 
 Hub pai: [Cenários](INDEX.md)

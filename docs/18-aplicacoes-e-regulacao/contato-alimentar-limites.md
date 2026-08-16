@@ -1,28 +1,56 @@
 ---
-id: "app.food-contact-limits"
-title: "Contato alimentar — limites (sem certificação)"
-summary: "Contato alimentar (food-contact) em peças AM desktop exige avaliação de material, processo, migração, limpeza e regulação da jurisdição — não o nome do polímero no spool. Esta página delimita riscos (porosidade, biofilm, aditivos, nozzle) e aponta a política da base: sem certificação DIY. Link obrigatório à página de claims food/médico. Não é guia para ‘tornar seguro’."
-doc_type: "guide"
-domain: ["applications", "regulation", "safety"]
-technology: ["material-extrusion", "vat-photopolymerization"]
+id: app.food-contact-limits
+title: Contato alimentar — limites (sem certificação)
+summary: 'Contato alimentar (food-contact) em peças AM desktop exige avaliação de
+  material, processo, migração, limpeza e regulação da jurisdição — não o nome do
+  polímero no spool. Esta página delimita riscos (porosidade, biofilm, aditivos, nozzle)
+  e aponta a política da base: sem certificação DIY. Link obrigatório à página de
+  claims food/médico. Não é guia para ‘tornar seguro’.'
+doc_type: guide
+domain:
+- applications
+- regulation
+- safety
+technology:
+- material-extrusion
+- vat-photopolymerization
 process: []
-applies_to: ["food-contact-questions", "desktop-am"]
-not_for: ["diy-food-certification", "nsf-anvisa-self-issue", "medical-device-advice"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.fda-am-medical-devices-entry"]
-related: ["hazard.food-medical-claims", "myth.pla-food-safe", "app.qualification-limits", "econ.when-not-to-print", "hub.aplicacoes"]
+applies_to:
+- food-contact-questions
+- desktop-am
+not_for:
+- diy-food-certification
+- nsf-anvisa-self-issue
+- medical-device-advice
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.fda-am-medical-devices-entry
+related:
+- hazard.food-medical-claims
+- myth.pla-food-safe
+- app.qualification-limits
+- econ.when-not-to-print
+- hub.aplicacoes
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["contato alimentar impressão 3D", "food-contact limites", "utensílio FFF"]
-aliases_en: ["food contact AM limits", "food-safe 3D print boundaries"]
-tags: ["regulation", "food-contact", "claims", "safety"]
+aliases_pt_br:
+- contato alimentar impressão 3D
+- food-contact limites
+- utensílio FFF
+aliases_en:
+- food contact AM limits
+- food-safe 3D print boundaries
+tags:
+- regulation
+- food-contact
+- claims
+- safety
 ---
-
 # Contato alimentar — limites (sem certificação)
 
 Hub pai: [Aplicações e regulação](./INDEX.md)

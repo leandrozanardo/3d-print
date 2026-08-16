@@ -1,19 +1,24 @@
 ---
-id: "meta.templates"
-title: "Templates de conteúdo"
-summary: "Templates por tipo: tecnologia, material, impressora, componente, setting, troubleshooting, calibração, cenário/playbook e pesquisa/mito. Não forçar um único molde genérico."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-related: ["meta.editorial-guide", "meta.ontology"]
-tags: ["templates"]
+id: meta.templates
+title: Templates de conteúdo
+summary: 'Templates por tipo: tecnologia, material, impressora, componente, setting,
+  troubleshooting, calibração, cenário/playbook e pesquisa/mito. Não forçar um único
+  molde genérico.'
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+related:
+- meta.editorial-guide
+- meta.ontology
+tags:
+- templates
 ---
-
 # Templates de conteúdo
 
 Todos os templates abaixo começam com front matter completo + summary 100–250 palavras + applies/not-for.

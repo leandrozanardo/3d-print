@@ -1,31 +1,64 @@
 ---
-id: "design.overhangs-self-supporting"
-title: "Overhangs e ângulos autoportantes (FFF)"
-summary: "Overhangs são faces que avançam sem suporte sólido abaixo. Em FFF, ângulos ‘autoportantes’ são heurística (frequentemente citada ~45° com nozzle 0,4 mm), não lei: material, cooling, largura de linha, velocidade e comprimento da saliência mudam o limite. Prefira orientação e geometria (chanfros, filetes) a suporte excessivo; valide no preview e em cupom."
-doc_type: "design"
-domain: ["dfam", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "material.pla", "material.petg"]
-not_for: ["universal-45-degree-law", "resin-overhang-rules-as-fff"]
-materials: ["material.pla", "material.petg"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
+id: design.overhangs-self-supporting
+title: Overhangs e ângulos autoportantes (FFF)
+summary: 'Overhangs são faces que avançam sem suporte sólido abaixo. Em FFF, ângulos
+  ‘autoportantes’ são heurística (frequentemente citada ~45° com nozzle 0,4 mm), não
+  lei: material, cooling, largura de linha, velocidade e comprimento da saliência
+  mudam o limite. Prefira orientação e geometria (chanfros, filetes) a suporte excessivo;
+  valide no preview e em cupom.'
+doc_type: design
+domain:
+- dfam
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+not_for:
+- universal-45-degree-law
+- resin-overhang-rules-as-fff
+materials:
+- material.pla
+- material.petg
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
 sources: []
-related: ["design.orientation-fff", "design.supports-fff", "component.part-cooling", "design.split-assembly", "hub.dfam"]
-prerequisites: ["tech.fff"]
+related:
+- design.orientation-fff
+- design.supports-fff
+- component.part-cooling
+- design.split-assembly
+- hub.dfam
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["ângulos autoportantes", "overhang FFF", "balanço sem suporte"]
-aliases_en: ["self-supporting angles", "FFF overhangs", "bridging vs overhang"]
-tags: ["dfam", "overhang", "supports", "fff"]
+aliases_pt_br:
+- ângulos autoportantes
+- overhang FFF
+- balanço sem suporte
+aliases_en:
+- self-supporting angles
+- FFF overhangs
+- bridging vs overhang
+tags:
+- dfam
+- overhang
+- supports
+- fff
 ---
-
 # Overhangs e ângulos autoportantes (FFF)
 
 Hub pai: [Design para impressão 3D](INDEX.md)

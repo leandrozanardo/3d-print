@@ -1,28 +1,72 @@
 ---
-id: "tech.lpbf-ebm"
-title: "LPBF e EBM — powder bed fusion de metais"
-summary: "LPBF (Laser Powder Bed Fusion; também chamado SLM/DMLS no mercado) e EBM (Electron Beam Melting) fundem seletivamente pó metálico em leito. LPBF usa laser sob atmosfera controlada (tipicamente argônio/nitrogênio); EBM usa feixe de elétrons em vácuo, com leito pré-aquecido elevado. Ambos produzem peças densas para aeroespacial, médico e tooling, mas exigem facility qualificada: controle de O₂, manuseio de pó combustível/reativo, suporte metálico, stress relief, HIP/usinagem conforme requisito. Esta página é visão de engenharia parcial — não é procedimento de operação nem substitui SDS, NFPA locais e manuais do OEM."
-doc_type: "technology"
-domain: ["technologies", "metals"]
-technology: ["powder-bed-fusion"]
-process: ["lpbf", "ebm"]
-applies_to: ["powder-bed-fusion", "metal-powder"]
-not_for: ["fff-filament", "polymer-sls-as-metal", "garage-metal-pbf"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hub.tech.powder-bed-fusion", "tech.sls-mjf", "material.powder-feedstocks", "defect.pbf", "post.depowdering-metal", "hazard.metal-powder", "tech.ded-waam"]
-prerequisites: ["hub.tech.powder-bed-fusion", "hazard.metal-powder"]
+id: tech.lpbf-ebm
+title: LPBF e EBM — powder bed fusion de metais
+summary: 'LPBF (Laser Powder Bed Fusion; também chamado SLM/DMLS no mercado) e EBM
+  (Electron Beam Melting) fundem seletivamente pó metálico em leito. LPBF usa laser
+  sob atmosfera controlada (tipicamente argônio/nitrogênio); EBM usa feixe de elétrons
+  em vácuo, com leito pré-aquecido elevado. Ambos produzem peças densas para aeroespacial,
+  médico e tooling, mas exigem facility qualificada: controle de O₂, manuseio de pó
+  combustível/reativo, suporte metálico, stress relief, HIP/usinagem conforme requisito.
+  Esta página é visão de engenharia parcial — não é procedimento de operação nem…'
+doc_type: technology
+domain:
+- technologies
+- metals
+technology:
+- powder-bed-fusion
+process:
+- lpbf
+- ebm
+applies_to:
+- powder-bed-fusion
+- metal-powder
+not_for:
+- fff-filament
+- polymer-sls-as-metal
+- garage-metal-pbf
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hub.tech.powder-bed-fusion
+- tech.sls-mjf
+- material.powder-feedstocks
+- defect.pbf
+- post.depowdering-metal
+- hazard.metal-powder
+- tech.ded-waam
+prerequisites:
+- hub.tech.powder-bed-fusion
+- hazard.metal-powder
 supersedes: []
-aliases_pt_br: ["LPBF", "SLM", "DMLS", "EBM", "fusão a laser de leito de pó", "fusão por feixe de elétrons"]
-aliases_en: ["LPBF", "Laser Powder Bed Fusion", "SLM", "DMLS", "EBM", "Electron Beam Melting"]
-tags: ["lpbf", "ebm", "metal", "powder-bed-fusion", "safety-critical"]
+aliases_pt_br:
+- LPBF
+- SLM
+- DMLS
+- EBM
+- fusão a laser de leito de pó
+- fusão por feixe de elétrons
+aliases_en:
+- LPBF
+- Laser Powder Bed Fusion
+- SLM
+- DMLS
+- EBM
+- Electron Beam Melting
+tags:
+- lpbf
+- ebm
+- metal
+- powder-bed-fusion
+- safety-critical
 ---
-
 # LPBF e EBM — powder bed fusion de metais
 
 Hub pai: [Powder bed fusion](./INDEX.md)

@@ -1,28 +1,41 @@
 ---
-id: "hub.impressoras"
-title: "Impressoras"
-summary: "Hub do catálogo de impressoras fix-my-print: páginas por modelo com lifecycle e coverage_level. Snapshot 2026-08-16 inclui censo multi-OEM em nível cataloged (identidade + listagem oficial). Não declara cobertura mundial completa nem specs inventadas."
-doc_type: "hub"
-domain: ["hub"]
+id: hub.impressoras
+title: Impressoras
+summary: 'Hub do catálogo de impressoras fix-my-print: páginas por modelo com lifecycle
+  e coverage_level. Snapshot 2026-08-16 inclui censo multi-OEM em nível cataloged
+  (identidade + listagem oficial). Não declara cobertura mundial completa nem specs
+  inventadas.'
+doc_type: hub
+domain:
+- hub
 technology: []
 process: []
 applies_to: []
-not_for: ["complete-coverage-claim"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "per-batch"
+not_for:
+- complete-coverage-claim
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: per-batch
 sources: []
-related: ["meta.coverage", "meta.knowledge-map", "meta.printer-progress", "meta.printer-inclusion-criteria", "meta.printer-global-catalog"]
-prerequisites: ["meta.architecture"]
+related:
+- meta.coverage
+- meta.knowledge-map
+- meta.printer-progress
+- meta.printer-inclusion-criteria
+- meta.printer-global-catalog
+prerequisites:
+- meta.architecture
 supersedes: []
-aliases_pt_br: ["Impressoras"]
-aliases_en: ["printers hub"]
-tags: ["hub"]
+aliases_pt_br:
+- Impressoras
+aliases_en:
+- printers hub
+tags:
+- hub
 ---
-
 # Impressoras
 
 ## Escopo
@@ -52,24 +65,25 @@ Páginas por modelo com capabilities reais quando documentadas; entradas `catalo
 
 | Página | ID | coverage | Notas |
 |---|---|---|---|
-| [Bambu Lab A1 Mini](bambu-lab-a1-mini.md) | `printer.bambu-lab-a1-mini` | cataloged + conteúdo profundo draft | Única com specs citadas em profundidade |
+| [Bambu Lab A1 Mini](bambu-lab-a1-mini.md) | `printer.bambu-lab-a1-mini` | `troubleshooting-mapped` | Specs + wiki oficial clog/blob |
+| [Bambu Lab A1](bambu-lab-a1.md) | `printer.bambu-lab-a1` | `documented` | Compra US confirmada |
+| [Bambu Lab P1S](bambu-lab-p1s.md) | `printer.bambu-lab-p1s` | `documented` | Specs do bloco da loja US |
 
 ## Fabricantes (páginas)
 
-Use o padrão `manufacturer-<id>.md`. Entrada do piloto:
+Use o padrão `manufacturer-<id>.md`. Entrada do piloto e ausentes:
 
 - [Bambu Lab](manufacturer-bambu-lab.md)
 - [Prusa Research](manufacturer-prusa-research.md)
 - [Formlabs](manufacturer-formlabs.md)
+- [CEAD](manufacturer-cead.md)
+- [ExOne](manufacturer-exone.md)
+- [RegenHU](manufacturer-regenhu.md)
+- [VORON Design](manufacturer-voron.md)
+- [Rat Rig](manufacturer-ratrig.md)
 
 Demais OEMs do snapshot: ver [catálogo global](_meta/catalogo-global.md) e [progresso](_meta/progresso.md).
 
-## Entradas recomendadas
-
-- Portal: [docs/INDEX.md](../INDEX.md)
-- Guia da IA: [docs/AGENT_GUIDE.md](../AGENT_GUIDE.md)
-- Fontes: [22-fontes/INDEX.md](../22-fontes/INDEX.md)
-
 ## Lacunas
 
-Quase todos os modelos estão em `cataloged` sem extração de specs/manuais/known-issues. Não promover a `documented` sem DoD.
+Maioria dos modelos permanece `discovered` até revalidação produto-a-produto. Não promover a `documented` sem DoD.

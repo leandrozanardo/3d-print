@@ -1,19 +1,24 @@
 ---
-id: "meta.source-policy"
-title: "Política de fontes"
-summary: "Hierarquia de proveniência: normas e segurança, fabricante, código oficial, TDS/SDS, literatura primária, experimento controlado, guia metodológico; comunidade só para hipóteses. Registro canônico em docs/22-fontes/."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["meta.evidence-policy", "meta.contradictions"]
-tags: ["sources"]
+id: meta.source-policy
+title: Política de fontes
+summary: 'Hierarquia de proveniência: normas e segurança, fabricante, código oficial,
+  TDS/SDS, literatura primária, experimento controlado, guia metodológico; comunidade
+  só para hipóteses. Registro canônico em docs/22-fontes/.'
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- meta.evidence-policy
+- meta.contradictions
+tags:
+- sources
 ---
-
 # Política de fontes
 
 ## Proibição

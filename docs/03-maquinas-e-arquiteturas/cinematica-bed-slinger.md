@@ -1,29 +1,56 @@
 ---
-id: "kinematics.bed-slinger"
-title: "Cinemática bed-slinger (mesa móvel em Y)"
-summary: "Bed-slinger é a arquitetura FFF em que a mesa (bed) se move no eixo Y enquanto o gantry tipicamente move X (e Z sobe o head ou a mesa, conforme o desenho). A A1 Mini é bed-slinger compacta de frame aberto. Implica inércia da peça+mesa, sensibilidade a aceleração em Y, e envelope limitado pelo movimento da base. Não confundir com CoreXY de mesa fixa: perfis de velocidade e ringing mudam."
-doc_type: "architecture"
-domain: ["machines", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["bed-slinger", "printer.bambu-lab-a1-mini"]
-not_for: ["corexy-identical-tuning", "industrial-gantry-assumptions"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "process.open-frame-env", "design.orientation-fff", "cal.fff-order", "slicer.bambu-studio"]
-prerequisites: ["tech.fff"]
+id: kinematics.bed-slinger
+title: Cinemática bed-slinger (mesa móvel em Y)
+summary: 'Bed-slinger é a arquitetura FFF em que a mesa (bed) se move no eixo Y enquanto
+  o gantry tipicamente move X (e Z sobe o head ou a mesa, conforme o desenho). A A1
+  Mini é bed-slinger compacta de frame aberto. Implica inércia da peça+mesa, sensibilidade
+  a aceleração em Y, e envelope limitado pelo movimento da base. Não confundir com
+  CoreXY de mesa fixa: perfis de velocidade e ringing mudam.'
+doc_type: architecture
+domain:
+- machines
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- bed-slinger
+- printer.bambu-lab-a1-mini
+not_for:
+- corexy-identical-tuning
+- industrial-gantry-assumptions
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources: []
+related:
+- printer.bambu-lab-a1-mini
+- process.open-frame-env
+- design.orientation-fff
+- cal.fff-order
+- slicer.bambu-studio
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["bed-slinger", "mesa móvel Y", "cartesianas de mesa móvel"]
-aliases_en: ["bed slinger", "moving bed Y", "bed-slinger kinematics"]
-tags: ["kinematics", "bed-slinger", "fff"]
+aliases_pt_br:
+- bed-slinger
+- mesa móvel Y
+- cartesianas de mesa móvel
+aliases_en:
+- bed slinger
+- moving bed Y
+- bed-slinger kinematics
+tags:
+- kinematics
+- bed-slinger
+- fff
 ---
-
 # Cinemática bed-slinger (mesa móvel em Y)
 
 Hub pai: [Máquinas e arquiteturas](INDEX.md)
@@ -77,7 +104,6 @@ A [Bambu Lab A1 Mini](../21-impressoras/bambu-lab-a1-mini.md) é bed-slinger: vo
 
 ## Fontes
 
-- [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)
 
 ## Lacunas
 

@@ -1,30 +1,70 @@
 ---
-id: "defect.resin.nothing-on-plate"
-title: "Nada na placa (raft no FEP / falha total de aderência)"
-summary: "Falha atômica em vat: ao final do job (ou cedo no Z) a plataforma sobe limpa ou só com restos, enquanto o raft/peça ficou no filme (FEP/nFEP) ou não se formou. Mecanismos dominantes: bottom exposure insuficiente, nivelamento ruim, filme danificado/sujo, lift inadequado, resina fria/homogeneização ruim ou LCD/máscara comprometidos. Diferencie de peça incompleta com raft ainda na plataforma. PPE e SDS antes de qualquer inspeção."
-doc_type: "troubleshooting"
-domain: ["troubleshooting", "resin"]
-technology: ["vat-photopolymerization"]
-process: ["sla", "dlp", "msla"]
-applies_to: ["vat-photopolymerization"]
-not_for: ["fff-first-layer-adhesion", "copy-forum-exposure-times"]
-symptoms: ["symptom.empty-build-plate", "symptom.raft-stuck-on-fep"]
-causes: ["cause.low-bottom-exposure", "cause.leveling", "cause.film-condition", "cause.lift-profile", "cause.cold-resin"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["defect.resin.index", "defect.resin.over-under-exposure", "defect.resin.suction-delamination", "setting.resin-exposure-supports", "hazard.resin-ppe-disposal", "tech.sla-dlp-msla"]
-prerequisites: ["hazard.resin-ppe-disposal", "tech.sla-dlp-msla"]
+id: defect.resin.nothing-on-plate
+title: Nada na placa (raft no FEP / falha total de aderência)
+summary: 'Falha atômica em vat: ao final do job (ou cedo no Z) a plataforma sobe limpa
+  ou só com restos, enquanto o raft/peça ficou no filme (FEP/nFEP) ou não se formou.
+  Mecanismos dominantes: bottom exposure insuficiente, nivelamento ruim, filme danificado/sujo,
+  lift inadequado, resina fria/homogeneização ruim ou LCD/máscara comprometidos. Diferencie
+  de peça incompleta com raft ainda na plataforma. PPE e SDS antes de qualquer inspeção.'
+doc_type: troubleshooting
+domain:
+- troubleshooting
+- resin
+technology:
+- vat-photopolymerization
+process:
+- sla
+- dlp
+- msla
+applies_to:
+- vat-photopolymerization
+not_for:
+- fff-first-layer-adhesion
+- copy-forum-exposure-times
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- defect.resin.index
+- defect.resin.over-under-exposure
+- defect.resin.suction-delamination
+- setting.resin-exposure-supports
+- hazard.resin-ppe-disposal
+- tech.sla-dlp-msla
+prerequisites:
+- hazard.resin-ppe-disposal
+- tech.sla-dlp-msla
 supersedes: []
-aliases_pt_br: ["nada na plataforma", "print no FEP", "falha total MSLA", "raft ficou no filme"]
-aliases_en: ["nothing on the plate", "print stuck to FEP", "failed adhesion MSLA", "empty build plate"]
-tags: ["troubleshooting", "resin", "adhesion", "FEP"]
+aliases_pt_br:
+- nada na plataforma
+- print no FEP
+- falha total MSLA
+- raft ficou no filme
+aliases_en:
+- nothing on the plate
+- print stuck to FEP
+- failed adhesion MSLA
+- empty build plate
+tags:
+- troubleshooting
+- resin
+- adhesion
+- FEP
+symptom_tags:
+- empty-build-plate
+- raft-stuck-on-fep
+cause_tags:
+- low-bottom-exposure
+- leveling
+- film-condition
+- lift-profile
+- cold-resin
 ---
-
 # Nada na placa (raft no FEP / falha total de aderência)
 
 Hub pai: [Problemas — resina](INDEX.md) · [Índice de falhas](indice-falhas-resina.md)

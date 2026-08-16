@@ -1,28 +1,62 @@
 ---
-id: "hazard.voc-ufp-ventilation"
-title: "VOC, UFP e ventilação na impressão 3D"
-summary: "Impressão FFF e processos correlatos emitem compostos orgânicos voláteis (VOC) e partículas ultrafinas (UFP) em graus que dependem de material, temperatura e ambiente. Evidência de agências (NIOSH, EPA) sustenta tratar emissões como risco ocupacional/ambiental a gerenciar — não como ‘cheiro inofensivo’. Controles preferem eliminação/substituição e ventilação/exaustão antes de improvisar. Esta página não fornece limites de exposição medidos para a A1 Mini doméstica nem autoriza operação sem juízo de risco."
-doc_type: "guide"
-domain: ["safety", "environment"]
-technology: ["material-extrusion", "vat-photopolymerization"]
-process: ["fff"]
-applies_to: ["fff", "indoor-printing", "post-solvent-use"]
-not_for: ["claim-zero-emissions-pla", "respirator-selection-without-sds", "food-safe-by-ventilation"]
-knowledge_status: "draft"
-evidence_status: "strong"
-safety_level: "high"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["hazard.resin-ppe-disposal", "hazard.food-medical-claims", "material.pla", "material.petg", "post.painting"]
+id: hazard.voc-ufp-ventilation
+title: VOC, UFP e ventilação na impressão 3D
+summary: Impressão FFF e processos correlatos emitem compostos orgânicos voláteis
+  (VOC) e partículas ultrafinas (UFP) em graus que dependem de material, temperatura
+  e ambiente. Evidência de agências (NIOSH, EPA) sustenta tratar emissões como risco
+  ocupacional/ambiental a gerenciar — não como ‘cheiro inofensivo’. Controles preferem
+  eliminação/substituição e ventilação/exaustão antes de improvisar. Esta página não
+  fornece limites de exposição medidos para a A1 Mini doméstica nem autoriza operação
+  sem juízo de risco.
+doc_type: guide
+domain:
+- safety
+- environment
+technology:
+- material-extrusion
+- vat-photopolymerization
+process:
+- fff
+applies_to:
+- fff
+- indoor-printing
+- post-solvent-use
+not_for:
+- claim-zero-emissions-pla
+- respirator-selection-without-sds
+- food-safe-by-ventilation
+knowledge_status: draft
+evidence_status: strong
+safety_level: high
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- hazard.resin-ppe-disposal
+- hazard.food-medical-claims
+- material.pla
+- material.petg
+- post.painting
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["emissões impressão 3D", "partículas ultrafinas", "ventilação FFF"]
-aliases_en: ["VOC", "UFP", "ultrafine particles", "3D printing ventilation"]
-tags: ["safety", "voc", "ufp", "ventilation"]
+aliases_pt_br:
+- emissões impressão 3D
+- partículas ultrafinas
+- ventilação FFF
+aliases_en:
+- VOC
+- UFP
+- ultrafine particles
+- 3D printing ventilation
+tags:
+- safety
+- voc
+- ufp
+- ventilation
 ---
-
 # VOC, UFP e ventilação
 
 Hub pai: [Segurança e meio ambiente](INDEX.md)

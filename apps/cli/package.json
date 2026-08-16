@@ -1,0 +1,30 @@
+{
+  "name": "@fix-my-print/cli",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Fix My Print Node CLI",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "fix-my-print": "./dist/bin.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest --config jest.config.cjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@fix-my-print/formats": "0.0.0",
+    "@fix-my-print/geometry": "0.0.0",
+    "@fix-my-print/knowledge-compiler": "0.0.0",
+    "@fix-my-print/repo-guard": "0.0.0",
+    "commander": "14.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "30.0.0",
+    "@types/node": "24.2.0",
+    "jest": "30.0.5",
+    "ts-jest": "29.4.1",
+    "typescript": "5.9.2"
+  }
+}

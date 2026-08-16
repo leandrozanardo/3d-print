@@ -1,30 +1,59 @@
 ---
-id: "fund.digital-workflow"
-title: "Workflow digital: do CAD à peça"
-summary: "Cadeia CAD → malha/B-rep → reparo → orientação → slice → toolpath/G-code → impressão → pós → validação. Explica onde cada formato (STL, 3MF, G-code) entra, quais decisões são irreversíveis e como evitar otimizar o passo errado — com ênfase no fluxo FFF desktop desta base."
-doc_type: "concept"
-domain: ["fundamentals", "workflow"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "digital-pipeline"]
-not_for: ["cam-only-machining", "injection-molding-tooling-design"]
+id: fund.digital-workflow
+title: 'Workflow digital: do CAD à peça'
+summary: Cadeia CAD → malha/B-rep → reparo → orientação → slice → toolpath/G-code
+  → impressão → pós → validação. Explica onde cada formato (STL, 3MF, G-code) entra,
+  quais decisões são irreversíveis e como evitar otimizar o passo errado — com ênfase
+  no fluxo FFF desktop desta base.
+doc_type: concept
+domain:
+- fundamentals
+- workflow
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- digital-pipeline
+not_for:
+- cam-only-machining
+- injection-molding-tooling-design
 materials: []
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.bambu-wiki-a1-mini", "source.niosh-am-entry"]
-related: ["fund.terminology", "fund.layers-resolution-accuracy", "hub.modelos"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["fluxo digital", "pipeline CAD impressão", "do modelo à peça"]
-aliases_en: ["digital workflow", "CAD to part", "AM process chain"]
-tags: ["fundamentals", "workflow", "stl", "3mf", "gcode"]
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.bambu-wiki-a1-mini
+- source.niosh-am-entry
+related:
+- fund.terminology
+- fund.layers-resolution-accuracy
+- hub.modelos
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- fluxo digital
+- pipeline CAD impressão
+- do modelo à peça
+aliases_en:
+- digital workflow
+- CAD to part
+- AM process chain
+tags:
+- fundamentals
+- workflow
+- stl
+- 3mf
+- gcode
 supersedes: []
 ---
-
 # Workflow digital: do CAD à peça
 
 Hub pai: [Fundamentos](INDEX.md)

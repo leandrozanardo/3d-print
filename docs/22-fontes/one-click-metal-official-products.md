@@ -1,28 +1,40 @@
 ---
-id: "source.one-click-metal-official-products"
-title: "Fonte — One Click Metal listagem oficial de impressoras"
-summary: "Registro de proveniência da listagem oficial de produtos de One Click Metal, acessada em 2026-08-16. Sustenta descoberta/catalogação de modelos; não substitui datasheets por SKU."
-doc_type: "source"
-domain: ["sources", "printers"]
+id: source.one-click-metal-official-products
+title: Fonte — One Click Metal listagem oficial de impressoras
+summary: Registro de proveniência da listagem oficial de produtos de One Click Metal,
+  acessada em 2026-08-16. Sustenta descoberta/catalogação de modelos; não substitui
+  datasheets por SKU.
+doc_type: source
+domain:
+- sources
+- printers
 technology: []
 process: []
 applies_to: []
-not_for: ["use-as-complete-spec-sheet"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
+not_for:
+- use-as-complete-spec-sheet
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
 sources: []
-related: ["manufacturer.one-click-metal", "hub.impressoras"]
+related:
+- manufacturer.one-click-metal
+- hub.impressoras
 prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
-tags: ["source", "catalog"]
+tags:
+- source
+- catalog
+source_type: manufacturer-product-listing
+language: en
+version: web-page-public
+last_verified: '2026-08-16'
 ---
-
 # Fonte — One Click Metal listagem oficial
 
 | Campo | Valor |

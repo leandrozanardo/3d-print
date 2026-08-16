@@ -1,19 +1,24 @@
 ---
-id: "meta.query-routing"
-title: "Roteamento de consultas"
-summary: "Algoritmo para a IA classificar intenção, aplicar safety, recuperar página canônica, prerequisites e relações sem carregar hubs inteiros desnecessariamente."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-related: ["meta.context-assembly", "meta.knowledge-map"]
-tags: ["routing", "rag"]
+id: meta.query-routing
+title: Roteamento de consultas
+summary: Algoritmo para a IA classificar intenção, aplicar safety, recuperar página
+  canônica, prerequisites e relações sem carregar hubs inteiros desnecessariamente.
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+related:
+- meta.context-assembly
+- meta.knowledge-map
+tags:
+- routing
+- rag
 ---
-
 # Roteamento de consultas
 
 ## Algoritmo

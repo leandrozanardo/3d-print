@@ -1,5 +1,7 @@
 # Premium 3D Print Engineering Engine Implementation Plan
 
+> **HISTORICAL / SUPERSEDED (2026-08-16):** This Python-first plan must not be executed in parallel with the Fix My Print Lovable + TypeScript/WASM master plan. Keep for audit history only. Authoritative execution path: Phase 00+ under `project_plans/execution/` and `project_plans/adrs/`.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Evolve the existing hybrid wiki+CLI into a local, deterministic, explainable 3D print engineering engine (A1 Mini + PLA/PETG first) without a big-bang rewrite or SaaS.

@@ -1,19 +1,23 @@
 ---
-id: "meta.link-policy"
-title: "Política de links"
-summary: "Regras de interconexão: breadcrumb, prerequisites, relações causais, links relativos Markdown, proibição de órfãos e links decorativos; validação via validate-wiki."
-doc_type: "policy"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-related: ["meta.ontology", "meta.editorial-guide"]
-tags: ["links"]
+id: meta.link-policy
+title: Política de links
+summary: 'Regras de interconexão: breadcrumb, prerequisites, relações causais, links
+  relativos Markdown, proibição de órfãos e links decorativos; validação via validate-wiki.'
+doc_type: policy
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+related:
+- meta.ontology
+- meta.editorial-guide
+tags:
+- links
 ---
-
 # Política de links
 
 ## Obrigatório em página canônica

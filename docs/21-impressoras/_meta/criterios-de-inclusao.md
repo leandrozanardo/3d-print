@@ -1,28 +1,43 @@
 ---
-id: "meta.printer-inclusion-criteria"
-title: "Critérios de inclusão do catálogo de impressoras"
-summary: "Define o que conta como impressora catalogável no fix-my-print: identidade verificável, lifecycle, região, fabricante/fonte oficial e nível de cobertura. Impede declarar cobertura mundial sem denominador e evita duplicar SKUs, bundles e rebrands."
-doc_type: "policy"
-domain: ["printers", "meta"]
+id: meta.printer-inclusion-criteria
+title: Critérios de inclusão do catálogo de impressoras
+summary: 'Define o que conta como impressora catalogável no fix-my-print: identidade
+  verificável, lifecycle, região, fabricante/fonte oficial e nível de cobertura. Impede
+  declarar cobertura mundial sem denominador e evita duplicar SKUs, bundles e rebrands.'
+doc_type: policy
+domain:
+- printers
+- meta
 technology: []
 process: []
-applies_to: ["catalog-maintainers", "ai-agents"]
-not_for: ["complete-market-claim-without-denominator"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-16"
-review_cycle: "per-batch"
+applies_to:
+- catalog-maintainers
+- ai-agents
+not_for:
+- complete-market-claim-without-denominator
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-16'
+review_cycle: per-batch
 sources: []
-related: ["meta.printer-progress", "hub.impressoras", "meta.source-policy"]
-prerequisites: ["meta.source-policy"]
+related:
+- meta.printer-progress
+- hub.impressoras
+- meta.source-policy
+prerequisites:
+- meta.source-policy
 supersedes: []
-aliases_pt_br: ["critérios de inclusão impressoras"]
-aliases_en: ["printer catalog inclusion criteria"]
-tags: ["catalog", "printers", "governance"]
+aliases_pt_br:
+- critérios de inclusão impressoras
+aliases_en:
+- printer catalog inclusion criteria
+tags:
+- catalog
+- printers
+- governance
 ---
-
 # Critérios de inclusão do catálogo de impressoras
 
 Hub: [Impressoras](../INDEX.md) · Ledger: [progresso.md](progresso.md)

@@ -1,26 +1,32 @@
 ---
-id: "meta.migration"
-title: "Plano de migração"
-summary: "Migração não destrutiva do corpus legado para a taxonomia 01–23. Categorias keep/split/merge/rewrite/move/archive/deprecate/delete-candidate. Nenhuma deleção sem confirmação do usuário."
-doc_type: "plan"
-domain: ["meta"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "1-month"
-related: ["meta.inventory", "meta.coverage", "meta.editorial-decisions"]
-tags: ["migration"]
+id: meta.migration
+title: Plano de migração
+summary: Migração não destrutiva do corpus legado para a taxonomia 01–23. Categorias
+  keep/split/merge/rewrite/move/archive/deprecate/delete-candidate. Nenhuma deleção
+  sem confirmação do usuário.
+doc_type: plan
+domain:
+- meta
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 1-month
+related:
+- meta.inventory
+- meta.coverage
+- meta.editorial-decisions
+tags:
+- migration
 ---
-
 # Plano de migração
 
 ## Princípios
 
 1. Sem big-bang destrutivo
 2. Inventariar → classificar → destino canônico → corrigir facts → front matter → split/merge → links → validar → log
-3. **Nunca delete** nesta iniciativa sem listar aqui e obter confirmação explícita do usuário
+3. **Não (regra de segurança) delete** nesta iniciativa sem listar aqui e obter confirmação explícita do usuário
 4. Preferir `git mv` quando mover
 5. Ebook CC BY-SA: não copiar trechos sem atribuição/ShareAlike
 

@@ -1,28 +1,59 @@
 ---
-id: "hazard.metal-powder"
-title: "Pós metálicos e risco de explosão / incêndio"
-summary: "Pós metálicos finos usados em AM (especialmente Al, Ti e algumas ligas reativas) apresentam risco de incêndio e explosão de nuvem de pó, além de inalação e contaminação cruzada. Controles de engenharia (inertização, aterramento, ventilação, limpeza adequada), administrativos (SOP, treinamento, hot-work) e EPI são obrigatórios em facility séria. Esta página é orientação de consciência de risco baseada em princípios de higiene industrial — não substitui NFPA locais, SDS, PPR e avaliação de risco do site. Ambiente doméstico/garage para pó metálico AM: inadequado."
-doc_type: "safety"
-domain: ["safety", "metals"]
-technology: ["powder-bed-fusion", "binder-jetting", "directed-energy-deposition"]
+id: hazard.metal-powder
+title: Pós metálicos e risco de explosão / incêndio
+summary: 'Pós metálicos finos usados em AM (especialmente Al, Ti e algumas ligas reativas)
+  apresentam risco de incêndio e explosão de nuvem de pó, além de inalação e contaminação
+  cruzada. Controles de engenharia (inertização, aterramento, ventilação, limpeza
+  adequada), administrativos (SOP, treinamento, hot-work) e EPI são obrigatórios em
+  facility séria. Esta página é orientação de consciência de risco baseada em princípios
+  de higiene industrial — não substitui NFPA locais, SDS, PPR e avaliação de risco
+  do site. Ambiente doméstico/garage para pó metálico AM: inadequado.'
+doc_type: safety
+domain:
+- safety
+- metals
+technology:
+- powder-bed-fusion
+- binder-jetting
+- directed-energy-deposition
 process: []
-applies_to: ["metal-powder", "powder-handling"]
-not_for: ["household-vacuum-cleanup", "diy-metal-powder-printing"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research"]
-related: ["material.powder-feedstocks", "post.depowdering-metal", "tech.lpbf-ebm", "tech.ded-waam", "tech.binder-jetting-variants"]
+applies_to:
+- metal-powder
+- powder-handling
+not_for:
+- household-vacuum-cleanup
+- diy-metal-powder-printing
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+related:
+- material.powder-feedstocks
+- post.depowdering-metal
+- tech.lpbf-ebm
+- tech.ded-waam
+- tech.binder-jetting-variants
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["explosão de pó metálico", "risco de pó AM", "combustível metálico fino"]
-aliases_en: ["metal powder explosion", "combustible dust", "AM powder hazard"]
-tags: ["safety", "critical", "powder", "explosion"]
+aliases_pt_br:
+- explosão de pó metálico
+- risco de pó AM
+- combustível metálico fino
+aliases_en:
+- metal powder explosion
+- combustible dust
+- AM powder hazard
+tags:
+- safety
+- critical
+- powder
+- explosion
 ---
-
 # Pós metálicos e risco de explosão / incêndio
 
 Hub pai: [Segurança e meio ambiente](../INDEX.md)

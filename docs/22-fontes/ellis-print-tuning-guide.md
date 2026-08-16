@@ -1,17 +1,24 @@
 ---
-id: "source.ellis-print-tuning-guide"
-title: "Fonte — Ellis Print Tuning Guide"
-summary: "Guia metodológico de calibração FFF (pressure advance/flow/retract e leitura de falhas de superfície). Usar para método e ordem de testes, não como perfil universal A1 Mini."
-doc_type: "source"
-domain: ["sources"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-related: ["process.fff.first-layer", "defect.fff.warping"]
-tags: ["source", "calibration"]
+id: source.ellis-print-tuning-guide
+title: Fonte — Ellis Print Tuning Guide
+summary: Guia metodológico de calibração FFF (pressure advance/flow/retract e leitura
+  de falhas de superfície). Usar para método e ordem de testes, não como perfil universal
+  A1 Mini.
+doc_type: source
+domain:
+- sources
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+related:
+- process.fff.first-layer
+- defect.fff.warping
+tags:
+- source
+- calibration
 technology: []
 process: []
 applies_to: []
@@ -21,8 +28,11 @@ prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — Ellis Print Tuning Guide
 
 | Campo | Valor |

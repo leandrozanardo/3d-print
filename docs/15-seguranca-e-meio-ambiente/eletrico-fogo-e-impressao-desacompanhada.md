@@ -1,28 +1,60 @@
 ---
-id: "hazard.electrical-fire-unattended"
-title: "Elétrico, fogo e impressão desacompanhada"
-summary: "Impressoras FFF aquecem nozzle/bed, movem eixos e consomem energia contínua — há risco de falha elétrica, ignição de material acumulado (blob/skirt) e agravamento se a máquina roda sem supervisão. Esta página prioriza controles práticos: instalação elétrica adequada, área limpa, detecção de fumaça, plano de parada e política de jobs desacompanhados. Não garante ‘impressão segura 100%’; NIOSH/EPA cobrem sobretudo emissões/química — não substituem código elétrico local nem SDS."
-doc_type: "guide"
-domain: ["safety", "environment", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "indoor-printing"]
-not_for: ["guarantee-unattended-safe", "disable-smoke-alarm", "home-electrical-rewire-advice"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "critical"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry", "source.epa-3d-printing-research", "source.bambu-wiki-a1-mini"]
-related: ["hazard.voc-ufp-ventilation", "maint.a1-mini-preventive", "printer.bambu-lab-a1-mini", "hub.seguranca"]
+id: hazard.electrical-fire-unattended
+title: Elétrico, fogo e impressão desacompanhada
+summary: 'Impressoras FFF aquecem nozzle/bed, movem eixos e consomem energia contínua
+  — há risco de falha elétrica, ignição de material acumulado (blob/skirt) e agravamento
+  se a máquina roda sem supervisão. Esta página prioriza controles práticos: instalação
+  elétrica adequada, área limpa, detecção de fumaça, plano de parada e política de
+  jobs desacompanhados. Não garante ‘impressão segura 100%’; NIOSH/EPA cobrem sobretudo
+  emissões/química — não substituem código elétrico local nem SDS.'
+doc_type: guide
+domain:
+- safety
+- environment
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- indoor-printing
+not_for:
+- guarantee-unattended-safe
+- disable-smoke-alarm
+- home-electrical-rewire-advice
+knowledge_status: draft
+evidence_status: mixed
+safety_level: critical
+confidence: high
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+- source.epa-3d-printing-research
+- source.bambu-wiki-a1-mini
+related:
+- hazard.voc-ufp-ventilation
+- maint.a1-mini-preventive
+- printer.bambu-lab-a1-mini
+- hub.seguranca
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["impressão sozinha", "risco de fogo impressora 3D", "segurança elétrica FFF"]
-aliases_en: ["unattended 3D printing", "printer fire risk", "electrical safety FFF"]
-tags: ["safety", "fire", "electrical", "unattended"]
+aliases_pt_br:
+- impressão sozinha
+- risco de fogo impressora 3D
+- segurança elétrica FFF
+aliases_en:
+- unattended 3D printing
+- printer fire risk
+- electrical safety FFF
+tags:
+- safety
+- fire
+- electrical
+- unattended
 ---
-
 # Elétrico, fogo e impressão desacompanhada
 
 Hub pai: [Segurança e meio ambiente](INDEX.md)

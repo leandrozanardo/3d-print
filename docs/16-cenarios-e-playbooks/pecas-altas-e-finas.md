@@ -1,28 +1,59 @@
 ---
-id: "scenario.tall-thin-parts"
-title: "Playbook — peças altas e finas"
-summary: "Torres, hastes e peças esbeltas em FFF sofrem com momento na base, vibração (ringing), risco de tombamento e falha de adesão amplificada pela altura. Mitigações: brim/âncora, baixar velocidade de parede externa, verificar mecânica, fatiar em partes com encaixe, evitar TPU mole em torre livre. Envelope A1 Mini 180 mm de Z ainda exige margem. Sem números mágicos de accel — parta do preset e valide. Relaciona warping, layer shift e ringing."
-doc_type: "scenario"
-domain: ["scenarios", "fff", "design"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "tall-geometry", "material.pla", "material.petg"]
-not_for: ["ignore-first-layer-on-towers", "max-speed-on-skinny-posts"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-a1-mini-tech-specs", "source.ellis-print-tuning-guide"]
-related: ["defect.fff.warping", "defect.fff.layer-shift", "defect.fff.ringing-ghosting", "design.orientation-fff", "hub.cenarios"]
-prerequisites: ["process.fff.first-layer"]
+id: scenario.tall-thin-parts
+title: Playbook — peças altas e finas
+summary: 'Torres, hastes e peças esbeltas em FFF sofrem com momento na base, vibração
+  (ringing), risco de tombamento e falha de adesão amplificada pela altura. Mitigações:
+  brim/âncora, baixar velocidade de parede externa, verificar mecânica, fatiar em
+  partes com encaixe, evitar TPU mole em torre livre. Envelope A1 Mini 180 mm de Z
+  ainda exige margem. Sem números mágicos de accel — parta do preset e valide. Relaciona
+  warping, layer shift e ringing.'
+doc_type: scenario
+domain:
+- scenarios
+- fff
+- design
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- tall-geometry
+- material.pla
+- material.petg
+not_for:
+- ignore-first-layer-on-towers
+- max-speed-on-skinny-posts
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 3-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- defect.fff.warping
+- defect.fff.layer-shift
+- defect.fff.ringing-ghosting
+- design.orientation-fff
+- hub.cenarios
+prerequisites:
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["torre fina", "peça esbelta", "haste alta FFF"]
-aliases_en: ["tall thin parts", "skinny towers", "slender prints"]
-tags: ["playbook", "tall-parts", "stability"]
+aliases_pt_br:
+- torre fina
+- peça esbelta
+- haste alta FFF
+aliases_en:
+- tall thin parts
+- skinny towers
+- slender prints
+tags:
+- playbook
+- tall-parts
+- stability
 ---
-
 # Playbook — peças altas e finas
 
 Hub pai: [Cenários](INDEX.md)

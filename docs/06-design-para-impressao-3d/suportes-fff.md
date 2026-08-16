@@ -1,31 +1,65 @@
 ---
-id: "design.supports-fff"
-title: "Suportes em FFF (normal vs tree)"
-summary: "Suportes em FFF sustentam overhangs e pontes que a geometria/orientação não resolvem. Normal (grid/retilíneo) e tree (árvore) trocam previsibilidade, consumo de material, tempo e padrão de cicatriz. Decida primeiro se dá para reorientar ou redesenhar; depois tipo de suporte, densidade, interface e acesso para remoção. Cicatrizes em faces A são falha de planejamento, não só de setting."
-doc_type: "design"
-domain: ["dfam", "fff", "slicers"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "printer.bambu-lab-a1-mini", "slicer.bambu-studio"]
-not_for: ["zero-scar-guarantee", "support-as-substitute-for-bad-orientation"]
-printers: ["printer.bambu-lab-a1-mini"]
-slicers: ["slicer.bambu-studio"]
-materials: ["material.pla", "material.petg"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["design.orientation-fff", "slicer.bambu-studio", "process.fff.first-layer", "material.pla", "material.petg", "component.part-cooling"]
-prerequisites: ["design.orientation-fff"]
+id: design.supports-fff
+title: Suportes em FFF (normal vs tree)
+summary: Suportes em FFF sustentam overhangs e pontes que a geometria/orientação não
+  resolvem. Normal (grid/retilíneo) e tree (árvore) trocam previsibilidade, consumo
+  de material, tempo e padrão de cicatriz. Decida primeiro se dá para reorientar ou
+  redesenhar; depois tipo de suporte, densidade, interface e acesso para remoção.
+  Cicatrizes em faces A são falha de planejamento, não só de setting.
+doc_type: design
+domain:
+- dfam
+- fff
+- slicers
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- printer.bambu-lab-a1-mini
+- slicer.bambu-studio
+not_for:
+- zero-scar-guarantee
+- support-as-substitute-for-bad-orientation
+printers:
+- printer.bambu-lab-a1-mini
+slicers:
+- slicer.bambu-studio
+materials:
+- material.pla
+- material.petg
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- design.orientation-fff
+- slicer.bambu-studio
+- process.fff.first-layer
+- material.pla
+- material.petg
+- component.part-cooling
+prerequisites:
+- design.orientation-fff
 supersedes: []
-aliases_pt_br: ["suportes FFF", "support FFF", "suporte árvore"]
-aliases_en: ["supports", "tree supports", "normal supports", "organic supports"]
-tags: ["supports", "dfam", "fff"]
+aliases_pt_br:
+- suportes FFF
+- support FFF
+- suporte árvore
+aliases_en:
+- supports
+- tree supports
+- normal supports
+- organic supports
+tags:
+- supports
+- dfam
+- fff
 ---
-
 # Suportes em FFF (normal vs tree)
 
 Hub pai: [Design para impressão 3D](INDEX.md)
@@ -51,7 +85,7 @@ Hub pai: [Design para impressão 3D](INDEX.md)
 | Remoção | Às vezes “tijolo” difícil em cavidades | Ramos quebram; cuidado com galhos dentro de furos |
 | Melhor para | Bases largas, engenharia previsível | Miniaturas, detalhes, menos volume de suporte |
 
-**Regra prática:** peça técnica com faces planas inferiores → comece **normal**; figura/miniatura/overhangs pontuais → avalie **tree**. Sempre inspecionar preview de contato.
+**Regra prática:** peça técnica com faces planas inferiores → comece **normal**; figura/miniatura/overhangs pontuais → avalie **tree**. Quando aplicável inspecionar preview de contato.
 
 Paths e nomes exatos variam por versão do [Bambu Studio](../08-slicers-e-configuracoes/bambu-studio.md) — declare a versão ao diagnosticar.
 

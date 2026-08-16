@@ -1,7 +1,7 @@
 ---
 id: "meta.continuation"
 title: "Continuação — estado da base"
-summary: "Batch 2026-08-16-census: catálogo com 66 fabricantes e 353 modelos em coverage cataloged; piloto Bambu/Prusa/Formlabs. Nenhum DoD documented completo. Próximo = aprofundar specs/manuais/known-issues do piloto."
+summary: "Remediação wiki enterprise v2 restaurada (2026-08-16): stubs honestos discovered/unknown; piloto Bambu A1/A1 mini/P1S e Formlabs 3/4* revalidados; HP MJF 1200 announced; OEMs CEAD/ExOne/RegenHU/Voron/RatRig; gate strict+fail-on-warnings verde."
 doc_type: "continuation"
 domain: ["meta"]
 knowledge_status: "draft"
@@ -18,33 +18,34 @@ tags: ["continuation"]
 
 ## Wave atual
 
-**Printer catalog census** — `market-snapshot-2026-08-16-census`.
+**Wiki enterprise remediation v2** (restauração local sem commit).
 
 ## Batch concluído
 
-- Gate semântico `--strict` (batch anterior) mantido
-- Censo oficial multi-OEM → páginas `manufacturer.*` + `printer.*` em `cataloged`
-- Ledger/catálogo global atualizados
-- **Não** concluído: DoD `documented` / known-issues / specs por modelo em massa
+- Contrato v2 (`wiki_contract` + gates cataloged/documented/DoD + `--fail-on-warnings`)
+- Stubs de impressora rebaixados para `discovered` / `lifecycle: unknown` (exceto revalidados)
+- Bambu A1 Mini `troubleshooting-mapped`; A1 e P1S `documented`
+- Formlabs Form 4* `current`/`cataloged`; Form 3* `legacy-supported`/`cataloged`
+- HP MJF 1200 `announced`; split de fonte EOS metal; OEMs faltantes adicionados
+- CI `wiki-ci.yml`, README, LICENSE, ledgers em `project_plans/wiki_enterprise_remediation_v2/`
 
 ## Validações
 
-Rodar ao final:
-
 ```text
-python -m core validate-wiki docs --json
-python -m core validate-wiki docs --strict --json
-python -m pytest tests -q
+python -m core validate-wiki docs --strict --fail-on-warnings --json
+python -m pytest -q
 ```
+
+Esperado: `ok` com 0 errors / 0 warnings; pytest all green.
 
 ## Próximo batch
 
-Aprofundar piloto **Bambu → Prusa → Formlabs** para `documented` sem inventar números.
+Aprofundar SKUs industriais ainda `discovered` (specs/manuais/known-issues) sem inventar evidência. Reopen superfícies OEM do ledger `07-oem-surfaces-ledger.md`.
 
 Ler: [progresso.md](../21-impressoras/_meta/progresso.md) · [catalogo-global.md](../21-impressoras/_meta/catalogo-global.md)
 
 ## Blockers
 
 - Auto-`reviewed`/`verified` proibido
-- JS truncando listagens de alguns OEMs
 - Mercado sem denominador fechado
+- Maioria do catálogo ainda aguarda revalidação por produto

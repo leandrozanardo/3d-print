@@ -1,28 +1,62 @@
 ---
-id: "scenario.functional-brackets"
-title: "Playbook — peças funcionais e brackets"
-summary: "Cenário para brackets, clips e peças de carga leve em FFF: orientar anisotropia, paredes suficientes, bosses/inserts corretos e validar com ensaio — não com ‘infill 100%’. PLA para baixa exigência; PETG seco quando tenacidade importa. A1 Mini open-frame: controle de warp na base. Sem claims estruturais certificados, food ou medical."
-doc_type: "scenario"
-domain: ["scenarios", "fff", "design"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["printer.bambu-lab-a1-mini", "material.pla", "material.petg", "functional-parts"]
-not_for: ["human-load-bearing-certification", "pressure-vessels", "medical-braces-diy"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "3-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["design.strength-anisotropy", "design.holes-threads-inserts", "design.tolerances-fff", "material.pla", "material.petg", "quality.test-coupons", "defect.fff.warping"]
-prerequisites: ["design.strength-anisotropy", "process.fff.first-layer"]
+id: scenario.functional-brackets
+title: Playbook — peças funcionais e brackets
+summary: 'Cenário para brackets, clips e peças de carga leve em FFF: orientar anisotropia,
+  paredes suficientes, bosses/inserts corretos e validar com ensaio — não com ‘infill
+  100%’. PLA para baixa exigência; PETG seco quando tenacidade importa. A1 Mini open-frame:
+  controle de warp na base. Sem claims estruturais certificados, food ou medical.'
+doc_type: scenario
+domain:
+- scenarios
+- fff
+- design
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- printer.bambu-lab-a1-mini
+- material.pla
+- material.petg
+- functional-parts
+not_for:
+- human-load-bearing-certification
+- pressure-vessels
+- medical-braces-diy
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
+sources:
+- source.ellis-print-tuning-guide
+- source.teaching-tech-calibration
+related:
+- design.strength-anisotropy
+- design.holes-threads-inserts
+- design.tolerances-fff
+- material.pla
+- material.petg
+- quality.test-coupons
+- defect.fff.warping
+prerequisites:
+- design.strength-anisotropy
+- process.fff.first-layer
 supersedes: []
-aliases_pt_br: ["brackets impressos", "peças funcionais FFF", "clips estruturais"]
-aliases_en: ["functional brackets", "load-bearing prints", "clips"]
-tags: ["playbook", "functional", "brackets"]
+aliases_pt_br:
+- brackets impressos
+- peças funcionais FFF
+- clips estruturais
+aliases_en:
+- functional brackets
+- load-bearing prints
+- clips
+tags:
+- playbook
+- functional
+- brackets
 ---
-
 # Playbook — peças funcionais e brackets
 
 Hub pai: [Cenários](INDEX.md)
@@ -44,7 +78,7 @@ Se risco a pessoa/patrimônio alto → **não** trate como hobby print.
 ## Hard constraints
 
 - Sem food/medical ([claims](../15-seguranca-e-meio-ambiente/claims-food-contact-e-medico.md))
-- Bed A1 Mini ≤ 80 °C
+- Bed A1 Mini ≤ 80 °C (fonte oficial / fabricante / heuristic; ver `sources`) 
 - Validação com [cupom/ensaio](../11-qualidade-e-metrologia/cupons-e-ensaios.md) antes do uso
 
 ## Seleção material

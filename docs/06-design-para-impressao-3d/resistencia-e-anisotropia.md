@@ -1,28 +1,62 @@
 ---
-id: "design.strength-anisotropy"
-title: "Resistência e anisotropia em FFF"
-summary: "Peças FFF são anisotrópicas: a união entre camadas (eixo Z) costuma ser o elo fraco sob tração e flexão. Resistência útil depende mais de orientação, número de paredes, continuidade de toolpath e material do que de ‘100% infill’ sozinho. PLA e PETG têm assinaturas distintas de falha; nenhum é certificado estrutural sem ensaio. Oriente carga no plano XY quando possível, valide com cupom e não confunda marketing de filamento ‘tough’ com garantia de peça."
-doc_type: "guide"
-domain: ["design", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "material.pla", "material.petg", "printer.bambu-lab-a1-mini"]
-not_for: ["isotropic-metal-assumptions", "certified-load-bearing-without-test", "food-medical-implants"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide"]
-related: ["design.tolerances-fff", "design.holes-threads-inserts", "material.pla", "material.petg", "quality.test-coupons", "scenario.functional-brackets"]
-prerequisites: ["tech.fff"]
+id: design.strength-anisotropy
+title: Resistência e anisotropia em FFF
+summary: 'Peças FFF são anisotrópicas: a união entre camadas (eixo Z) costuma ser
+  o elo fraco sob tração e flexão. Resistência útil depende mais de orientação, número
+  de paredes, continuidade de toolpath e material do que de ‘100% infill’ sozinho.
+  PLA e PETG têm assinaturas distintas de falha; nenhum é certificado estrutural sem
+  ensaio. Oriente carga no plano XY quando possível, valide com cupom e não confunda
+  marketing de filamento ‘tough’ com garantia de peça.'
+doc_type: guide
+domain:
+- design
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- material.pla
+- material.petg
+- printer.bambu-lab-a1-mini
+not_for:
+- isotropic-metal-assumptions
+- certified-load-bearing-without-test
+- food-medical-implants
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- design.tolerances-fff
+- design.holes-threads-inserts
+- material.pla
+- material.petg
+- quality.test-coupons
+- scenario.functional-brackets
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["anisotropia FFF", "resistência entre camadas", "orientação de carga"]
-aliases_en: ["FFF anisotropy", "layer adhesion strength", "print orientation strength"]
-tags: ["dfam", "strength", "anisotropy", "fff"]
+aliases_pt_br:
+- anisotropia FFF
+- resistência entre camadas
+- orientação de carga
+aliases_en:
+- FFF anisotropy
+- layer adhesion strength
+- print orientation strength
+tags:
+- dfam
+- strength
+- anisotropy
+- fff
 ---
-
 # Resistência e anisotropia em FFF
 
 Hub pai: [Design para impressão 3D](INDEX.md)

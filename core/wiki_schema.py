@@ -128,10 +128,11 @@ HARD_ABSOLUTE_PATTERNS: tuple[str, ...] = (
     r"\bcompletely\s+safe\b",
     r"\bguaranteed\b",
 )
+# Soft absolute claims — lookbehinds avoid "nem sempre" / "não sempre" false positives.
 SOFT_ABSOLUTE_PATTERNS: tuple[str, ...] = (
-    r"\bsempre\b",
-    r"\bnunca\b",
-    r"\balways\b",
+    r"(?<![Nn]em )(?<![Nn]ão )(?<![Nn]ao )\bsempre\b",
+    r"(?<![Nn]em )\bnunca\b",
+    r"(?<![Nn]ot )\balways\b",
     r"\bnever\b",
     r"\bgarantido\b",
     r"\bgarantia\b",

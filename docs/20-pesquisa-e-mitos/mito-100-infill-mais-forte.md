@@ -1,28 +1,51 @@
 ---
-id: "myth.100-infill-mais-forte"
-title: "Mito — 100% infill é sempre mais forte"
-summary: "O claim ‘100% de preenchimento (infill) deixa a peça mais forte’ ignora que, em FFF, resistência sob carga é dominada por paredes perimetrais, orientação das fibras/cordões, adesão entre camadas e modo de falha. Acima de certo ponto, mais infill aumenta massa e tempo com ganho mecânico marginal, e pode piorar warping ou tensões internas. Status: enganoso como regra universal; às vezes útil, frequentemente subótimo."
-doc_type: "research"
-domain: ["research", "fff", "slicing"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff"]
-not_for: ["isotropic-metal-pbf-density"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "high"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
+id: myth.100-infill-mais-forte
+title: Mito — 100% infill é sempre mais forte
+summary: 'O claim ‘100% de preenchimento (infill) deixa a peça mais forte’ ignora
+  que, em FFF, resistência sob carga é dominada por paredes perimetrais, orientação
+  das fibras/cordões, adesão entre camadas e modo de falha. Acima de certo ponto,
+  mais infill aumenta massa e tempo com ganho mecânico marginal, e pode piorar warping
+  ou tensões internas. Status: enganoso como regra universal; às vezes útil, frequentemente
+  subótimo.'
+doc_type: research
+domain:
+- research
+- fff
+- slicing
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+not_for:
+- isotropic-metal-pbf-density
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 12-months
 sources: []
-related: ["tech.fff", "hub.pesquisa", "scenario.a1-mini-pla-petg-first-layer-warp"]
-prerequisites: ["tech.fff"]
+related:
+- tech.fff
+- hub.pesquisa
+- scenario.a1-mini-pla-petg-first-layer-warp
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["100% preenchimento", "infill sólido sempre melhor"]
-aliases_en: ["100% infill stronger myth", "solid infill fallacy"]
-tags: ["myth", "infill", "fff", "strength"]
+aliases_pt_br:
+- 100% preenchimento
+- infill sólido sempre melhor
+aliases_en:
+- 100% infill stronger myth
+- solid infill fallacy
+tags:
+- myth
+- infill
+- fff
+- strength
 ---
-
 # Mito — 100% infill é sempre mais forte
 
 Hub pai: [Pesquisa e mitos](./INDEX.md)
@@ -71,3 +94,9 @@ Sem paper único canônico pinado nesta página; claim rejeitado por mecânica d
 
 - Curvas experimentais A1 Mini PLA/PETG paredes vs infill: ainda não publicadas como `experiment.*`
 - Settings catalog com paths Bambu Studio: wave futura
+
+## Status editorial (remediação v2)
+
+- `confidence` reduzido de `high` para `medium` porque não há paper/experimento canônico pinado.
+- Conclusões desta página são **heurística de engenharia FFF** e mecânica de falha estabelecida na prática, não resultado de experimento controlado nesta base.
+- Quando existir `experiment.*` local (paredes vs infill), promover evidência e reavaliar confidence.

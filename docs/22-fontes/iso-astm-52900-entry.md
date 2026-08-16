@@ -1,17 +1,23 @@
 ---
-id: "source.iso-astm-52900-entry"
-title: "Fonte — ISO/ASTM 52900 (entrada)"
-summary: "Ponto de entrada para a terminologia oficial de manufatura aditiva. O texto normativo completo é pago; esta base usa a norma para categorias e termos, sem reproduzir o texto normativo."
-doc_type: "source"
-domain: ["sources"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "24-months"
-related: ["tech.fff"]
-tags: ["source", "standard"]
+id: source.iso-astm-52900-entry
+title: Fonte — ISO/ASTM 52900 (entrada)
+summary: Ponto de entrada para a terminologia oficial de manufatura aditiva. O texto
+  normativo completo é pago; esta base usa a norma para categorias e termos, sem reproduzir
+  o texto normativo.
+doc_type: source
+domain:
+- sources
+knowledge_status: draft
+evidence_status: limited
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 24-months
+related:
+- tech.fff
+tags:
+- source
+- standard
 technology: []
 process: []
 applies_to: []
@@ -21,8 +27,11 @@ prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
+source_type: discovery-only
+language: unknown
+version: unknown
+last_verified: '2026-08-16'
 ---
-
 # Fonte — ISO/ASTM 52900 (entrada)
 
 | Campo | Valor |

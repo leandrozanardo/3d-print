@@ -1,31 +1,60 @@
 ---
-id: "setting.line-width"
-title: "Largura de linha (line width)"
-summary: "Largura de linha é a largura horizontal alvo do cordão extrudado. Afeta sobreposição de perímetros, adesão entre walls, preenchimento de tops e aparência. No Bambu Studio aparece como Line width (e subcampos por tipo de linha); nomes de UI mudam — busque o conceito. Valores costumam orbitar o diâmetro do nozzle (± margem); extremos demais causam under/over-extrusion aparente. Validar com cupom e preview."
-doc_type: "setting"
-domain: ["slicing", "fff", "quality"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "slicer.bambu-studio", "nozzle-0.4mm"]
-not_for: ["resin-pixel-size", "eternal-ui-path-pinning"]
-settings: ["setting.line-width"]
-slicers: ["slicer.bambu-studio"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.ellis-print-tuning-guide"]
-related: ["setting.layer-height", "setting.walls-shells", "setting.infill", "defect.fff.under-extrusion"]
-prerequisites: ["tech.fff"]
+id: setting.line-width
+title: Largura de linha (line width)
+summary: Largura de linha é a largura horizontal alvo do cordão extrudado. Afeta sobreposição
+  de perímetros, adesão entre walls, preenchimento de tops e aparência. No Bambu Studio
+  aparece como Line width (e subcampos por tipo de linha); nomes de UI mudam — busque
+  o conceito. Valores costumam orbitar o diâmetro do nozzle (± margem); extremos demais
+  causam under/over-extrusion aparente. Validar com cupom e preview.
+doc_type: setting
+domain:
+- slicing
+- fff
+- quality
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- slicer.bambu-studio
+- nozzle-0.4mm
+not_for:
+- resin-pixel-size
+- eternal-ui-path-pinning
+slicers:
+- slicer.bambu-studio
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.ellis-print-tuning-guide
+related:
+- setting.layer-height
+- setting.walls-shells
+- setting.infill
+- defect.fff.under-extrusion
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["largura de linha", "largura de extrusão"]
-aliases_en: ["line width", "extrusion width"]
-tags: ["setting", "line-width", "slicer"]
+aliases_pt_br:
+- largura de linha
+- largura de extrusão
+aliases_en:
+- line width
+- extrusion width
+tags:
+- setting
+- line-width
+- slicer
+setting_tags:
+- line-width
 ---
-
 # Largura de linha (line width)
 
 Hub pai: [Settings](INDEX.md)

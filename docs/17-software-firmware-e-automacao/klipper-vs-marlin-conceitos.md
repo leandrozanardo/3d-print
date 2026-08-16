@@ -1,28 +1,54 @@
 ---
-id: "firmware.klipper-marlin-concepts"
-title: "Klipper vs Marlin — conceitos"
-summary: "Marlin e Klipper são stacks de firmware/controle amplamente usados em impressoras FFF abertas. Marlin concentra muita lógica no MCU; Klipper desloca planejamento de trajetória para um host (PC/SBC) e usa o MCU como executor de steps em tempo real, expondo configuração em arquivos de texto e macros. Esta página compara arquitetura em alto nível para orientação — sem afirmar internals proprietários de Bambu Lab nem recomendar ‘jailbreak’."
-doc_type: "guide"
-domain: ["firmware", "software"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "open-firmware"]
-not_for: ["bambu-proprietary-internals", "warranty-void-howto"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.marlin-docs", "source.klipper-docs"]
-related: ["firmware.gcode-basics", "hub.software", "printer.bambu-lab-a1-mini", "setting.flow-pressure-advance"]
-prerequisites: ["firmware.gcode-basics"]
+id: firmware.klipper-marlin-concepts
+title: Klipper vs Marlin — conceitos
+summary: Marlin e Klipper são stacks de firmware/controle amplamente usados em impressoras
+  FFF abertas. Marlin concentra muita lógica no MCU; Klipper desloca planejamento
+  de trajetória para um host (PC/SBC) e usa o MCU como executor de steps em tempo
+  real, expondo configuração em arquivos de texto e macros. Esta página compara arquitetura
+  em alto nível para orientação — sem afirmar internals proprietários de Bambu Lab
+  nem recomendar ‘jailbreak’.
+doc_type: guide
+domain:
+- firmware
+- software
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- open-firmware
+not_for:
+- bambu-proprietary-internals
+- warranty-void-howto
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.marlin-docs
+- source.klipper-docs
+related:
+- firmware.gcode-basics
+- hub.software
+- printer.bambu-lab-a1-mini
+- setting.flow-pressure-advance
+prerequisites:
+- firmware.gcode-basics
 supersedes: []
-aliases_pt_br: ["Klipper versus Marlin", "firmwares FFF abertos"]
-aliases_en: ["Klipper vs Marlin", "FFF firmware concepts"]
-tags: ["klipper", "marlin", "firmware"]
+aliases_pt_br:
+- Klipper versus Marlin
+- firmwares FFF abertos
+aliases_en:
+- Klipper vs Marlin
+- FFF firmware concepts
+tags:
+- klipper
+- marlin
+- firmware
 ---
-
 # Klipper vs Marlin — conceitos
 
 Hub pai: [Software, firmware e automação](./INDEX.md)

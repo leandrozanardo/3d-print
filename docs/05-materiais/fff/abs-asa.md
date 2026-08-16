@@ -1,30 +1,64 @@
 ---
-id: "material.abs-asa"
-title: "ABS e ASA em FFF"
-summary: "ABS e ASA são termoplásticos de engenharia com melhor resistência térmica e usinabilidade/acabamento que PLA típico; ASA costuma ser preferido para UV externo. Ambos contraem bastante, emitem VOC (incluindo estireno em ABS) e pedem ar parado / câmara. Na A1 Mini o fabricante lista ABS e ASA como Not Recommended — esta página explica por quê, riscos de segurança e quando migrar de máquina; não fornece receita completa de impressão para A1 Mini."
-doc_type: "material"
-domain: ["materials", "fff"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "enclosed-or-controlled-chamber-printers"]
-not_for: ["printer.bambu-lab-a1-mini-as-default", "unventilated-rooms", "full-a1-mini-print-recipe"]
-materials: ["material.abs-asa"]
-printers: ["printer.bambu-lab-a1-mini"]
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.bambu-a1-mini-tech-specs"]
-related: ["printer.bambu-lab-a1-mini", "defect.fff.warping", "material.petg", "material.drying-storage", "hub.seguranca"]
-prerequisites: ["tech.fff"]
+id: material.abs-asa
+title: ABS e ASA em FFF
+summary: ABS e ASA são termoplásticos de engenharia com melhor resistência térmica
+  e usinabilidade/acabamento que PLA típico; ASA costuma ser preferido para UV externo.
+  Ambos contraem bastante, emitem VOC (incluindo estireno em ABS) e pedem ar parado
+  / câmara. Na A1 Mini o fabricante lista ABS e ASA como Not Recommended — esta página
+  explica por quê, riscos de segurança e quando migrar de máquina; não fornece receita
+  completa de impressão para A1 Mini.
+doc_type: material
+domain:
+- materials
+- fff
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- enclosed-or-controlled-chamber-printers
+not_for:
+- printer.bambu-lab-a1-mini-as-default
+- unventilated-rooms
+- full-a1-mini-print-recipe
+materials:
+- material.abs-asa
+printers:
+- printer.bambu-lab-a1-mini
+knowledge_status: draft
+evidence_status: mixed
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources: []
+related:
+- printer.bambu-lab-a1-mini
+- defect.fff.warping
+- material.petg
+- material.drying-storage
+- hub.seguranca
+prerequisites:
+- tech.fff
 supersedes: []
-aliases_pt_br: ["ABS", "ASA", "acrilonitrila butadieno estireno"]
-aliases_en: ["ABS", "ASA", "acrylonitrile butadiene styrene", "acrylonitrile styrene acrylate"]
-tags: ["material", "abs", "asa", "fff", "voc", "enclosure"]
+aliases_pt_br:
+- ABS
+- ASA
+- acrilonitrila butadieno estireno
+aliases_en:
+- ABS
+- ASA
+- acrylonitrile butadiene styrene
+- acrylonitrile styrene acrylate
+tags:
+- material
+- abs
+- asa
+- fff
+- voc
+- enclosure
 ---
-
 # ABS e ASA em FFF
 
 Hub pai: [Materiais FFF](INDEX.md) · [Materiais](../INDEX.md)

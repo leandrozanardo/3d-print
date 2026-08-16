@@ -1,28 +1,58 @@
 ---
-id: "post.annealing-fff"
-title: "Annealing em FFF"
-summary: "Annealing (recozimento) de peças FFF é tratamento térmico pós-impressão que pode aliviar tensões e, em alguns polímeros/processos, melhorar estabilidade dimensional ou resistência — com risco real de empenar, encolher, amolecer ou destruir a peça. Escopo desta página: conceitos, limitações e quando NÃO fazer. Não há receita de temperatura/tempo universal; TDS do filamento e ensaio controlado mandam. Sem garantias de ‘peça de engenharia’ ou food-safe. A1 Mini imprime; annealing é forno/controle externo — não um botão do slicer."
-doc_type: "guide"
-domain: ["postprocessing", "fff", "materials"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "thermoplastic-parts"]
-not_for: ["guarantee-strength-boost", "pla-anneal-as-default", "food-safe-by-heat", "uncontrolled-kitchen-oven-as-lab"]
-knowledge_status: "draft"
-evidence_status: "limited"
-safety_level: "high"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "6-months"
-sources: ["source.niosh-am-entry"]
-related: ["material.pla", "material.petg", "material.abs-asa", "hazard.electrical-fire-unattended", "hub.pos"]
+id: post.annealing-fff
+title: Annealing em FFF
+summary: 'Annealing (recozimento) de peças FFF é tratamento térmico pós-impressão
+  que pode aliviar tensões e, em alguns polímeros/processos, melhorar estabilidade
+  dimensional ou resistência — com risco real de empenar, encolher, amolecer ou destruir
+  a peça. Escopo desta página: conceitos, limitações e quando NÃO fazer. Não há receita
+  de temperatura/tempo universal; TDS do filamento e ensaio controlado mandam. Sem
+  garantias de ‘peça de engenharia’ ou food-safe. A1 Mini imprime; annealing é forno/controle
+  externo — não um botão do slicer.'
+doc_type: guide
+domain:
+- postprocessing
+- fff
+- materials
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- thermoplastic-parts
+not_for:
+- guarantee-strength-boost
+- pla-anneal-as-default
+- food-safe-by-heat
+- uncontrolled-kitchen-oven-as-lab
+knowledge_status: draft
+evidence_status: limited
+safety_level: high
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 6-months
+sources:
+- source.niosh-am-entry
+related:
+- material.pla
+- material.petg
+- material.abs-asa
+- hazard.electrical-fire-unattended
+- hub.pos
 prerequisites: []
 supersedes: []
-aliases_pt_br: ["recozimento FFF", "annealing impressão 3D"]
-aliases_en: ["FFF annealing", "heat treatment printed parts"]
-tags: ["annealing", "postprocessing", "fff", "thermal"]
+aliases_pt_br:
+- recozimento FFF
+- annealing impressão 3D
+aliases_en:
+- FFF annealing
+- heat treatment printed parts
+tags:
+- annealing
+- postprocessing
+- fff
+- thermal
 ---
-
 # Annealing em FFF
 
 Hub pai: [Pós-processamento](INDEX.md)

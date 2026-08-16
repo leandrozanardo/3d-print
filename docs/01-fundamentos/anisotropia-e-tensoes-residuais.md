@@ -1,30 +1,59 @@
 ---
-id: "fund.anisotropy"
-title: "Anisotropia e tensões residuais"
-summary: "Por que peças aditivas raramente são isotrópicas: bonding entre camadas, orientação de fibras/cordões e tensões residuais de solidificação e gradientes térmicos. Orienta decisões de orientação, design e diagnóstico sem inventar valores de resistência universais."
-doc_type: "concept"
-domain: ["fundamentals", "mechanics"]
-technology: ["material-extrusion"]
-process: ["fff"]
-applies_to: ["fff", "structural-parts", "orientation-decisions"]
-not_for: ["certified-structural-allowables", "aerospace-qualification"]
-materials: ["material.pla", "material.petg"]
+id: fund.anisotropy
+title: Anisotropia e tensões residuais
+summary: 'Por que peças aditivas raramente são isotrópicas: bonding entre camadas,
+  orientação de fibras/cordões e tensões residuais de solidificação e gradientes térmicos.
+  Orienta decisões de orientação, design e diagnóstico sem inventar valores de resistência
+  universais.'
+doc_type: concept
+domain:
+- fundamentals
+- mechanics
+technology:
+- material-extrusion
+process:
+- fff
+applies_to:
+- fff
+- structural-parts
+- orientation-decisions
+not_for:
+- certified-structural-allowables
+- aerospace-qualification
+materials:
+- material.pla
+- material.petg
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.ellis-print-tuning-guide", "source.iso-astm-52900-entry"]
-related: ["fund.layers-resolution-accuracy", "defect.fff.warping", "material.pla"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["anisotropia", "tensões residuais", "resistência entre camadas"]
-aliases_en: ["anisotropy", "residual stress", "interlayer strength", "Z strength"]
-tags: ["fundamentals", "mechanics", "anisotropy", "fff"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.ellis-print-tuning-guide
+- source.iso-astm-52900-entry
+related:
+- fund.layers-resolution-accuracy
+- defect.fff.warping
+- material.pla
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- anisotropia
+- tensões residuais
+aliases_en:
+- anisotropy
+- residual stress
+- interlayer strength
+- Z strength
+tags:
+- fundamentals
+- mechanics
+- anisotropy
+- fff
 supersedes: []
 ---
-
 # Anisotropia e tensões residuais
 
 Hub pai: [Fundamentos](INDEX.md)

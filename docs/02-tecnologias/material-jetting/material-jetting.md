@@ -1,30 +1,51 @@
 ---
-id: "tech.material-jetting"
-title: "Material jetting"
-summary: "Categoria em que gotas de material de construção (fotopolímeros, ceras, etc.) são depositadas seletivamente, frequentemente com material de suporte removível. Forte em multi-material, cores e superfícies lisas; custo e materiais proprietários são limitações típicas. Não confundir com binder jetting."
-doc_type: "technology"
-domain: ["technologies"]
-technology: ["material-jetting"]
-process: ["material-jetting"]
-applies_to: ["material-jetting"]
-not_for: ["fff-filament-pipeline", "binder-on-powder-as-same"]
+id: tech.material-jetting
+title: Material jetting
+summary: Categoria em que gotas de material de construção (fotopolímeros, ceras, etc.)
+  são depositadas seletivamente, frequentemente com material de suporte removível.
+  Forte em multi-material, cores e superfícies lisas; custo e materiais proprietários
+  são limitações típicas. Não confundir com binder jetting.
+doc_type: technology
+domain:
+- technologies
+technology:
+- material-jetting
+process:
+- material-jetting
+applies_to:
+- material-jetting
+not_for:
+- fff-filament-pipeline
+- binder-on-powder-as-same
 materials: []
 printers: []
-knowledge_status: "draft"
-evidence_status: "mixed"
-safety_level: "caution"
-confidence: "medium"
-last_reviewed: "2026-08-15"
-review_cycle: "12-months"
-sources: ["source.iso-astm-52900-entry", "source.niosh-am-entry"]
-related: ["tech.vat-photopolymerization", "tech.binder-jetting", "fund.terminology"]
-prerequisites: ["fund.terminology"]
-aliases_pt_br: ["jetting de material", "PolyJet-like"]
-aliases_en: ["material jetting", "PolyJet", "inkjet AM"]
-tags: ["material-jetting", "multi-material"]
+knowledge_status: draft
+evidence_status: mixed
+safety_level: caution
+confidence: medium
+last_reviewed: '2026-08-15'
+review_cycle: 12-months
+sources:
+- source.iso-astm-52900-entry
+- source.niosh-am-entry
+related:
+- tech.vat-photopolymerization
+- tech.binder-jetting
+- fund.terminology
+prerequisites:
+- fund.terminology
+aliases_pt_br:
+- jetting de material
+- PolyJet-like
+aliases_en:
+- material jetting
+- PolyJet
+- inkjet AM
+tags:
+- material-jetting
+- multi-material
 supersedes: []
 ---
-
 # Material jetting
 
 Hub pai: [Tecnologias](../INDEX.md) · pasta [material-jetting](./)

@@ -1,28 +1,40 @@
 ---
-id: "source.colibrium-official-products"
-title: "Fonte — Colibrium Additive listagem oficial de impressoras"
-summary: "Registro de proveniência da listagem oficial de produtos de Colibrium Additive, acessada em 2026-08-16. Sustenta descoberta/catalogação de modelos; não substitui datasheets por SKU."
-doc_type: "source"
-domain: ["sources", "printers"]
+id: source.colibrium-official-products
+title: Fonte — Colibrium Additive listagem oficial de impressoras
+summary: Registro de proveniência da listagem oficial de produtos de Colibrium Additive,
+  acessada em 2026-08-16. Sustenta descoberta/catalogação de modelos; não substitui
+  datasheets por SKU.
+doc_type: source
+domain:
+- sources
+- printers
 technology: []
 process: []
 applies_to: []
-not_for: ["use-as-complete-spec-sheet"]
-knowledge_status: "draft"
-evidence_status: "manufacturer-specific"
-safety_level: "normal"
-confidence: "medium"
-last_reviewed: "2026-08-16"
-review_cycle: "3-months"
+not_for:
+- use-as-complete-spec-sheet
+knowledge_status: draft
+evidence_status: manufacturer-specific
+safety_level: normal
+confidence: medium
+last_reviewed: '2026-08-16'
+review_cycle: 3-months
 sources: []
-related: ["manufacturer.colibrium", "hub.impressoras"]
+related:
+- manufacturer.colibrium
+- hub.impressoras
 prerequisites: []
 supersedes: []
 aliases_pt_br: []
 aliases_en: []
-tags: ["source", "catalog"]
+tags:
+- source
+- catalog
+source_type: manufacturer-product-listing
+language: en
+version: web-page-public
+last_verified: '2026-08-16'
 ---
-
 # Fonte — Colibrium Additive listagem oficial
 
 | Campo | Valor |
