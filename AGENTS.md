@@ -1,37 +1,26 @@
-# Agent contract — absolute repository boundary
+# Agent contract — boundary is outside only
 
-**NON-NEGOTIABLE.** Every agent and subagent in this workspace is bound to the open `fix-my-print` project root only. Parent folders and anything outside that root must never be altered.
+You are **inside** the `fix-my-print` project. Work here is allowed.
 
-## Root identity
+## Inside (allowed)
 
-1. Resolve the project root by walking parents until `package.json` with `"name": "fix-my-print"`.
-2. That directory is the **only** permitted read/write scope for implementation work.
-3. Anything outside that root is a hard violation: respond with `REPO_BOUNDARY_VIOLATION` and stop.
+- Read/write/build/test anything under this repository root
+  (`package.json` name `"fix-my-print"`).
 
-## Enforcement surfaces
+## Outside (blocked)
 
-| Surface                                           | Role                                    |
-| ------------------------------------------------- | --------------------------------------- |
-| `.cursor/rules/repo-boundary.mdc`                 | Project rule (`alwaysApply: true`)      |
-| `~/.cursor/rules/absolute-workspace-boundary.mdc` | Cursor user rule for all projects       |
-| `@fix-my-print/repo-guard`                        | Runtime path proof for CLI and packages |
+- Never touch parent folders, sibling projects, home, or system paths.
+- Escape attempt → `REPO_BOUNDARY_VIOLATION` and stop.
 
-## Forbidden without exception
+## Enforcement
 
-- Mutating files outside this repository or in any parent folder
-- Treating a wider Cursor workspace as permission to touch sibling projects
-- Bypassing Cursor rules or `repo-guard`
+| Surface | Role |
+| --- | --- |
+| `.cursor/rules/repo-boundary.mdc` | Always-on project rule |
+| `@fix-my-print/repo-guard` | Runtime path proof for CLI/packages |
 
 ## In-repo constraints
 
 - Never mutate `3ds/original/**`
 - Path writes must pass `@fix-my-print/repo-guard`
-- Python toolkit retired under mission MIGRATION-AND-RETIREMENT (see `project_plans/execution/phase-14/DELETION_MANIFEST.json`)
-
-## Product recovery context
-
-After REAL-3MF-PRODUCT-RECOVERY (`978e61c`), continue from:
-
-- `project_plans/execution/product-recovery/CHAT_CONTEXT.md` — frozen chat + decisions (transcript `1b17dd9a-04cb-4ace-bb20-5a4aa27dd453`)
-- `project_plans/execution/product-recovery/IMPROVEMENTS_ROADMAP.md` — deferred gaps (P0–P2)
-- `project_plans/execution/product-recovery/TRACEABILITY.md` — acceptance matrix
+- Python deletion only with `APPROVED: RETIRE PYTHON` + deletion manifest

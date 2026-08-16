@@ -244,6 +244,8 @@ function formatBytes(size: number): string {
 
 function userErrorMessage(code: string, technical: string): string {
   if (/EMPTY_FILE/i.test(code + technical)) return "O arquivo está vazio.";
+  if (/NO_FILE_BUFFER/i.test(code + technical))
+    return "O arquivo não está mais na memória. Envie o arquivo novamente.";
   if (/UNSUPPORTED_FORMAT|FORMAT/i.test(code + technical))
     return "Formato não suportado. Envie um arquivo 3MF ou STL.";
   if (/ZIP|ARCHIVE|BOMB|UNSAFE/i.test(code + technical))
@@ -367,8 +369,27 @@ export default function App() {
   );
 
   const onOptimize = useCallback(() => {
-    if (!pendingBytes || !state.fileName) return;
-    const worker = ensureWorker();
+    // Never fail silently — "nothing happens" on click was a user-facing bug.
+    if (!pendingBytes || !state.fileName) {
+      dispatch({
+        type: "failure",
+        code: "NO_FILE_BUFFER",
+        message:
+          "O arquivo não está mais na memória (página recarregou ou o servidor de desenvolvimento reiniciou). Envie o arquivo novamente.",
+      });
+      return;
+    }
+    let worker: Worker;
+    try {
+      worker = ensureWorker();
+    } catch {
+      dispatch({
+        type: "failure",
+        code: "WORKER_CRASHED",
+        message: "Não foi possível iniciar o motor de geometria. Recarregue a página e tente de novo.",
+      });
+      return;
+    }
     const jobId = newJobId();
     jobIdRef.current = jobId;
     dispatch({ type: "start", jobId });

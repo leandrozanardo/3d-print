@@ -36,7 +36,7 @@ npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js help
 
 ## Safety
 
-Never mutate `3ds/original/` or any path above this project folder. Cursor rules enforce an absolute workspace boundary (`alwaysApply`). Path writes must pass `@fix-my-print/repo-guard`. No slicer-accurate time/material claims without a real slicer adapter.
+Work inside this repo is allowed. Never mutate paths **outside** this project (parents/siblings/home/system) or `3ds/original/`. Cursor project rule + `@fix-my-print/repo-guard` enforce that. No slicer-accurate time/material claims without a real slicer adapter.
 
 ## License
 

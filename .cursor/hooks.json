@@ -1,4 +1,0 @@
-{
-  "version": 1,
-  "hooks": { "preToolUse": [{ "command": "node .cursor/hooks/repo-boundary.mjs" }] }
-}

@@ -1,4 +1,0 @@
-'use strict';
-console.error('deprecated: use repo-boundary.cjs');
-process.stdout.write(JSON.stringify({permission:'deny',agentMessage:'REPO_BOUNDARY_VIOLATION: use repo-boundary.cjs'})+'\n');
-process.exit(0);

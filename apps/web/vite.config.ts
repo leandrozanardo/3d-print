@@ -25,6 +25,18 @@ const workspaceSrc = {
  */
 export default defineConfig({
   plugins: [react()],
+  // Bind IPv4 explicitly — bare "localhost" is [::1]-only on some Windows setups,
+  // and pnpm's extra "--" was previously stripping CLI --host/--port.
+  server: {
+    host: "127.0.0.1",
+    port: 5173,
+    strictPort: true,
+  },
+  preview: {
+    host: "127.0.0.1",
+    port: 4173,
+    strictPort: true,
+  },
   resolve: {
     alias: {
       buffer: "buffer/",
