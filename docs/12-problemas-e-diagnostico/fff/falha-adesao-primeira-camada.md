@@ -43,6 +43,7 @@ sources:
 related:
 - process.fff.first-layer
 - defect.fff.warping
+- defect.fff.spaghetti
 - surface.pei
 - material.pla
 - material.petg

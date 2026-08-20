@@ -42,6 +42,7 @@ related:
 - setting.speeds
 - setting.layer-height
 - defect.fff.warping
+- defect.fff.spaghetti
 - hub.slicers.settings
 prerequisites:
 - tech.fff

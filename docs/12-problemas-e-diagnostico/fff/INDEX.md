@@ -1,7 +1,7 @@
 ---
 id: hub.problemas.fff
 title: Problemas e diagnóstico FFF
-summary: 'Hub de falhas FFF: índice por sintoma, empenamento, stringing, subextrusão,
+summary: 'Hub de falhas FFF: índice por sintoma, empenamento, spaghetti, stringing, subextrusão,
   layer shift, elephant foot, delaminação, ringing, Z-banding e pillowing. Sempre
   uma variável por teste; secar antes de torres.'
 doc_type: hub
@@ -26,6 +26,7 @@ related:
 - defect.fff.ringing-ghosting
 - defect.fff.z-banding
 - defect.fff.pillowing
+- defect.fff.spaghetti
 tags:
 - hub
 - troubleshooting
@@ -49,6 +50,7 @@ Voltar: [Problemas](../INDEX.md)
 | [Índice por sintoma](indice-por-sintoma.md) | `troubleshoot.fff-symptom-index` |
 | [Empenamento (warping)](empenamento.md) | `defect.fff.warping` |
 | [Falha de adesão na primeira camada](falha-adesao-primeira-camada.md) | `defect.fff.adhesion-failure` |
+| [Spaghetti](spaghetti.md) | `defect.fff.spaghetti` |
 | [Stringing](stringing.md) | `defect.fff.stringing` |
 | [Subextrusão](subextrusao.md) | `defect.fff.under-extrusion` |
 | [Layer shift](layer-shift.md) | `defect.fff.layer-shift` |

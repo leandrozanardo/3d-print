@@ -41,6 +41,7 @@ sources:
 related:
 - process.fff.first-layer
 - defect.fff.warping
+- defect.fff.spaghetti
 - setting.supports
 - setting.temperatures
 - setting.cooling

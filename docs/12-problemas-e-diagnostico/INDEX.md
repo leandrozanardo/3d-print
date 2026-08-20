@@ -56,6 +56,7 @@ Hub: [fff/INDEX.md](fff/INDEX.md)
 | [Índice por sintoma](fff/indice-por-sintoma.md) | `troubleshoot.fff-symptom-index` |
 | [Empenamento](fff/empenamento.md) | `defect.fff.warping` |
 | [Falha adesão 1ª camada](fff/falha-adesao-primeira-camada.md) | `defect.fff.adhesion-failure` |
+| [Spaghetti](fff/spaghetti.md) | `defect.fff.spaghetti` |
 | [Stringing](fff/stringing.md) | `defect.fff.stringing` |
 | [Subextrusão](fff/subextrusao.md) | `defect.fff.under-extrusion` |
 | [Layer shift](fff/layer-shift.md) | `defect.fff.layer-shift` |

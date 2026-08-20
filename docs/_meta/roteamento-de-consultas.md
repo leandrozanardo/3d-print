@@ -39,6 +39,7 @@ tags:
 | Entrada | Começar em |
 |---|---|
 | “cantos levantando” | defect warping + first-layer se camada 1 falhou |
+| “spaghetti / novelo / imprimindo no ar” | `defect.fff.spaghetti` (momento: 1ª camada vs mid-print) |
 | “qual material” | purpose/scenario → material family |
 | “A1 Mini cabe?” | printer page + envelope |
 | “o que mudar no Studio” | setting semântico → mapping Bambu Studio (quando existir) |

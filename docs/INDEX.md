@@ -40,7 +40,7 @@ Esta é a entrada humana da base canônica. Para agentes de IA, leia primeiro [A
 - Nozzle: [0,4 mm](04-componentes-e-hardware/nozzle-0-4-mm-fff.md)
 - Materiais: [PLA](05-materiais/fff/pla.md) · [PETG](05-materiais/fff/petg.md)
 - Processo: [Primeira camada (FFF)](10-processo-de-impressao/fff/primeira-camada.md)
-- Diagnóstico: [Empenamento / warping](12-problemas-e-diagnostico/fff/empenamento.md)
+- Diagnóstico: [Empenamento / warping](12-problemas-e-diagnostico/fff/empenamento.md) · [Spaghetti](12-problemas-e-diagnostico/fff/spaghetti.md)
 - Playbook: [Fatia vertical A1 Mini](16-cenarios-e-playbooks/a1-mini-pla-petg-primeira-camada-empenamento.md)
 
 ## Entradas industriais (cobertura parcial)

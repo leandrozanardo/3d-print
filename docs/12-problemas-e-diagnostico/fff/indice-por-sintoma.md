@@ -2,8 +2,8 @@
 id: troubleshoot.fff-symptom-index
 title: Índice por sintoma (FFF)
 summary: Mapa rápido sintoma → página canônica FFF. Escolha uma linha, abra a página,
-  corrija uma causa por vez. Priorize segurança e adesão antes de cosmética. Cobre
-  empenamento, primeira camada, stringing, subextrusão, layer shift, elephant foot,
+  corrija uma causa por vez. Priorize segurança e adesão antes de cosmética.   Cobre
+  empenamento, spaghetti, primeira camada, stringing, subextrusão, layer shift, elephant foot,
   delaminação, ringing, Z-banding e pillowing; aponta legado quando ainda não migrado.
 doc_type: troubleshooting
 domain:
@@ -37,6 +37,7 @@ related:
 - defect.fff.ringing-ghosting
 - defect.fff.z-banding
 - defect.fff.pillowing
+- defect.fff.spaghetti
 prerequisites:
 - tech.fff
 supersedes: []
@@ -73,6 +74,7 @@ Hub pai: [Problemas FFF](INDEX.md) · [Problemas](../INDEX.md)
 | Sintoma | Causas plausíveis (ordem) | Página |
 |---|---|---|
 | Não grudou / soltou nas camadas 1–3 | placa suja, Z alto, bed frio, speed first layer | [Primeira camada](../../10-processo-de-impressao/fff/primeira-camada.md) · [Falha de adesão](falha-adesao-primeira-camada.md) |
+| Novelo de filamento no ar (spaghetti) | adesão, warp, suporte, Z hop | [Spaghetti](spaghetti.md) |
 | Cantos sobem **depois** de base OK | draft, shrink, brim, fan cedo, PETG bed | [Empenamento](empenamento.md) |
 | Cabelos / teia entre torres | úmido, temp alta, retract, travel | [Stringing](stringing.md) |
 | Gaps, paredes translúcidas, infill fraco | clog parcial, úmido, frio, volumetric, path | [Subextrusão](subextrusao.md) |
@@ -87,6 +89,8 @@ Hub pai: [Problemas FFF](INDEX.md) · [Problemas](../INDEX.md)
 ## Árvore rápida
 
 ```text
+Novelo de filamento no ar?
+  ├─ SIM → spaghetti.md (first-layer vs mid-print)
 Falhou na mesa (camadas 1–3)?
   ├─ SIM → primeira camada (+ empenamento se só cantos depois)
   └─ NÃO → cosmético vs estrutural?

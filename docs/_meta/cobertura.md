@@ -76,6 +76,7 @@ Legenda: `none` | `hub-only` | `draft` | `partial` | `deep` | `verified`
 | PETG | `material.petg` | draft |
 | Primeira camada | `process.fff.first-layer` | draft |
 | Empenamento | `defect.fff.warping` | draft |
+| Spaghetti | `defect.fff.spaghetti` | draft |
 | Playbook vertical | `scenario.a1-mini-pla-petg-first-layer-warp` | draft |
 | FFF overview | `tech.fff` | draft |
 

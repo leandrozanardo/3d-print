@@ -157,3 +157,11 @@ export {
   type OptimizationDecision,
   type ProcessStageCallback,
 } from "./processModel";
+
+export {
+  assessSpaghettiRisk,
+  SPAGHETTI_KNOWLEDGE_ID,
+  SPAGHETTI_SOURCE_ID,
+  type SpaghettiWarning,
+  type SpaghettiWarningCode,
+} from "./spaghettiRisk";

@@ -3,13 +3,69 @@
  * Note: product-recovery lock requires optimization.candidateCount === 24 (legacy field).
  * V2 volume is reported via exactCandidateCount / quickCandidateCount.
  */
+import * as crypto from "node:crypto";
 import * as fs from "node:fs";
 import * as path from "node:path";
+
+import { exportBinaryStl } from "@fix-my-print/geometry";
 
 import { BAMBU_A1_MINI, processModel } from "../src/index";
 
 const ROOT = path.resolve(__dirname, "../../..");
 const CUBE = path.join(ROOT, "packages/formats/fixtures/cube.stl");
+const PROCESS_MODEL_SRC = path.join(__dirname, "../src/processModel.ts");
+
+function sha256Hex(bytes: Uint8Array): string {
+  return crypto.createHash("sha256").update(bytes).digest("hex");
+}
+
+/** Axis-aligned box STL (mm) with outward winding. */
+function boxStl(sx: number, sy: number, sz: number): Uint8Array {
+  const hx = sx / 2;
+  const hy = sy / 2;
+  const hz = sz / 2;
+  const corners: Array<[number, number, number]> = [
+    [-hx, -hy, -hz],
+    [hx, -hy, -hz],
+    [hx, hy, -hz],
+    [-hx, hy, -hz],
+    [-hx, -hy, hz],
+    [hx, -hy, hz],
+    [hx, hy, hz],
+    [-hx, hy, hz],
+  ];
+  const facesIdx = [
+    [0, 2, 1],
+    [0, 3, 2],
+    [4, 5, 6],
+    [4, 6, 7],
+    [0, 1, 5],
+    [0, 5, 4],
+    [1, 2, 6],
+    [1, 6, 5],
+    [2, 3, 7],
+    [2, 7, 6],
+    [3, 0, 4],
+    [3, 4, 7],
+  ];
+  const verts: number[] = [];
+  const faces: number[][] = [];
+  let vi = 0;
+  for (const tri of facesIdx) {
+    for (const idx of tri) {
+      const p = corners[idx]!;
+      verts.push(p[0], p[1], p[2]);
+    }
+    faces.push([vi, vi + 1, vi + 2]);
+    vi += 3;
+  }
+  return exportBinaryStl({ vertices: Float64Array.from(verts), faces });
+}
+
+/** Tall tower — V2 should lay it down so Z height drops sharply. */
+function tallTowerStl(): Uint8Array {
+  return boxStl(10, 10, 80);
+}
 
 describe("processModel V2 contract", () => {
   const cubeExists = fs.existsSync(CUBE);
@@ -18,6 +74,7 @@ describe("processModel V2 contract", () => {
     "returns decisionKind, normalized analysis, V2 candidate counts, and goal weights",
     async () => {
       const bytes = new Uint8Array(fs.readFileSync(CUBE));
+      const inputSha = sha256Hex(bytes);
       const result = await processModel({
         jobId: "v2-contract",
         fileName: "cube.stl",
@@ -30,13 +87,12 @@ describe("processModel V2 contract", () => {
       expect(result.engineVersion).toMatch(/2\.0\.0/);
       expect(result.normalized).toBeDefined();
       expect(result.repair).toBeDefined();
-      expect([
-        "not-needed",
-        "committed",
-        "abstained",
-        "rejected",
-        "unavailable",
-      ]).toContain(result.repair.status);
+      // Real safeRepair always records attempts; skip-repair mutant forces empty abstained.
+      expect(result.repair.operationsAttempted.length).toBeGreaterThan(0);
+      expect(result.repair.status).not.toBe("abstained");
+      expect(["not-needed", "committed", "rejected", "unavailable"]).toContain(
+        result.repair.status,
+      );
       expect([
         "orientation-improved",
         "repair-and-orientation-improved",
@@ -54,6 +110,51 @@ describe("processModel V2 contract", () => {
       expect(result.optimization.bestV2Cost).toBeLessThanOrEqual(
         result.optimization.bestLegacyCost + 1e-9,
       );
+      // Optimized bytes must differ from raw input (kills swap-output mutant).
+      expect(result.output.sha256).not.toBe(inputSha);
+      expect(result.output.bytes.byteLength).toBeGreaterThan(84);
     },
   );
+
+  it("applies chosen orientation matrix for a tall tower", async () => {
+    const bytes = tallTowerStl();
+    const result = await processModel({
+      jobId: "v2-orient",
+      fileName: "tall-tower.stl",
+      bytes,
+      printer: BAMBU_A1_MINI,
+      goal: "minimize-height",
+      repairMode: "safe",
+    } as Parameters<typeof processModel>[0]);
+
+    expect(result.before.dimensionsMm[2]).toBeGreaterThan(70);
+    // Laying the tower down must shrink Z; identity-skip mutant keeps ~80mm height.
+    expect(result.after.dimensionsMm[2]).toBeLessThan(25);
+    expect(result.after.bounds.min[2]).toBeCloseTo(0, 5);
+  }, 60_000);
+
+  it("does not flag spaghetti on a stable face-down block", async () => {
+    const bytes = boxStl(20, 20, 20);
+    const result = await processModel({
+      jobId: "v2-stable-block",
+      fileName: "block.stl",
+      bytes,
+      printer: BAMBU_A1_MINI,
+      goal: "balanced",
+      repairMode: "safe",
+    } as Parameters<typeof processModel>[0]);
+
+    expect(result.warnings.filter((w) => w.code.startsWith("SPAGHETTI_"))).toEqual([]);
+  }, 60_000);
+
+  it("keeps output reopen validation in processModel source", () => {
+    const src = fs.readFileSync(PROCESS_MODEL_SRC, "utf8");
+    expect(src).toContain("OUTPUT_REOPEN_FAILED");
+    expect(src).toContain('parseThreeMf(outputBytes, { fileName: "output.3mf" })');
+  });
+
+  it("assesses spaghetti risk on the selected orientation", () => {
+    const src = fs.readFileSync(PROCESS_MODEL_SRC, "utf8");
+    expect(src).toContain("assessSpaghettiRisk(orient.selected.metrics)");
+  });
 });

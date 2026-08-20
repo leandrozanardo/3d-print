@@ -208,6 +208,10 @@ Estereolitografia — vat photopolymerization com laser (uso amplo do termo). Ve
 
 Formato de malha triangular legado para intercâmbio 3D. Sem metadados ricos de 3MF; qualidade depende da tessellação.
 
+## Spaghetti {#term-spaghetti}
+
+Novelo de filamento no ar quando o nozzle segue o G-code após a peça descolar, um overhang colapsar ou o bico derrubar o modelo. Distinto de stringing (fios finos com a peça no lugar). Página: [spaghetti](../12-problemas-e-diagnostico/fff/spaghetti.md).
+
 ## Stringing {#term-stringing}
 
 Fios finos entre regiões por vazamento do nozzle em deslocamentos. Hipóteses: umidade, temperatura alta, retract inadequado — validar no contexto.

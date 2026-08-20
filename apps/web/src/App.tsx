@@ -807,7 +807,23 @@ export default function App() {
                         : "Arquivo sanitizado e validado"}
               </h2>
               <span className="validation-badge" data-testid="validation-badge">
+                Arquivo validado
+              </span>
+              <span className="validation-badge" data-testid="structure-badge">
                 Estrutura 3MF validada
+              </span>
+              <span className="validation-badge" data-testid="watertight-badge">
+                {state.success.after.watertight === true
+                  ? "Malhas estanques"
+                  : state.success.after.watertight === false
+                    ? "Há malhas abertas"
+                    : "Estanqueidade desconhecida"}
+              </span>
+              <span className="validation-badge" data-testid="reopen-badge">
+                Reabertura confirmada
+              </span>
+              <span className="validation-badge" data-testid="reslice-badge">
+                Requer nova fatiação
               </span>
             </div>
             <div className="metrics-grid">
@@ -911,6 +927,20 @@ export default function App() {
                   : "não"}
               </li>
             </ul>
+            {state.success.warnings.some((w) => w.code.startsWith("SPAGHETTI_")) ? (
+              <div className="print-risks" data-testid="print-risks" role="note">
+                <strong>Riscos de spaghetti na orientação escolhida</strong>
+                <ul>
+                  {state.success.warnings
+                    .filter((warning) => warning.code.startsWith("SPAGHETTI_"))
+                    .map((warning) => (
+                      <li key={warning.code} data-code={warning.code}>
+                        {warning.message}
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            ) : null}
             {state.success.preservation.notes.length > 0 ? (
               <div
                 className="preservation-warning"
@@ -960,9 +990,9 @@ export default function App() {
         <section id="como-funciona" className="how-section">
           <h2>Como funciona</h2>
           <p>
-            O processamento ocorre no seu navegador. Comparamos 24 orientações ortogonais
-            com estimativa geométrica de suporte (não é fatiamento) e geramos um novo 3MF
-            Core válido.
+            O processamento ocorre no seu navegador. Comparamos orientações com estimativa
+            geométrica de suporte (não é fatiamento), avisamos risco de spaghetti na
+            orientação escolhida e geramos um novo 3MF Core válido.
           </p>
         </section>
 

@@ -32,6 +32,7 @@ import {
 } from "@fix-my-print/optimizer";
 
 import { sha256Hex } from "./sha256";
+import { assessSpaghettiRisk } from "./spaghettiRisk";
 
 export type OptimizationGoal = "balanced" | "minimize-height" | "maximize-bed-contact";
 
@@ -515,6 +516,8 @@ export async function processModel(
   const costAfter = orient.selected.totalCost;
   const relativeImprovement =
     costBefore > 1e-12 ? Math.max(0, (costBefore - costAfter) / costBefore) : 0;
+  const spaghettiWarnings = assessSpaghettiRisk(orient.selected.metrics); // Bambu spaghetti modes from selected-orientation metrics
+  warnings = [...warnings, ...spaghettiWarnings];
 
   progress("preparing-preview", 0.97, "Preparando comparação");
   const preview = rawToPreview(finalAssembly);
@@ -570,7 +573,11 @@ export async function processModel(
         "Geometric proxies only — not slicer support/time/material",
         "Requires re-slicing before print",
       ],
-      explanationCodes: [decisionKind, repair.status],
+      explanationCodes: [
+        decisionKind,
+        repair.status,
+        ...spaghettiWarnings.map((w) => w.code),
+      ],
     },
     preservation,
     warnings,

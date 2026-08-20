@@ -41,6 +41,7 @@ sources:
 - source.teaching-tech-calibration
 related:
 - defect.fff.warping
+- defect.fff.spaghetti
 - material.pla
 - material.petg
 - printer.bambu-lab-a1-mini

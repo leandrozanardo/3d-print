@@ -64,6 +64,7 @@ Piloto: [bambu-lab-official-products.md](bambu-lab-official-products.md) · [pru
 |---|---|
 | [Bambu A1 mini tech specs](bambu-a1-mini-tech-specs.md) | `source.bambu-a1-mini-tech-specs` |
 | [Bambu Wiki A1 mini](bambu-wiki-a1-mini.md) | `source.bambu-wiki-a1-mini` |
+| [Bambu Wiki spaghetti](bambu-wiki-spaghetti.md) | `source.bambu-wiki-spaghetti` |
 | [HP MJF 1200 product page](hp-mjf-1200-product-page.md) | `source.hp-mjf-1200-product-page` |
 | [EOS metal printers listing](eos-official-metal-printers.md) | `source.eos-official-metal-printers` |
 | [Bambu P1S US store](bambu-p1s-us-store.md) | `source.bambu-p1s-us-store` |

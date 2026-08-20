@@ -49,6 +49,7 @@ related:
 - defect.fff.under-extrusion
 - defect.fff.delamination
 - defect.fff.elephant-foot
+- defect.fff.spaghetti
 - troubleshoot.fff-symptom-index
 prerequisites:
 - process.fff.first-layer

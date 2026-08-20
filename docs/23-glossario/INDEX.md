@@ -59,7 +59,7 @@ Wave 1: [glossario-inicial.md](glossario-inicial.md) publicado como `draft`.
 
 ### Índice rápido de termos (glossário inicial)
 
-3MF · A1 Mini · Anisotropia · Bambu Studio · Bed-slinger · Brim · DED · Direct drive · DLP · Elephant foot · Empenamento (warping) · FDM · FFF · G-code · Infill · Input shaping · Layer shift · LPBF · Material extrusion · MJF · MSLA · Nozzle · Overhang · PEI · Perimeter/wall · PETG · PLA · Pressure advance · Primeira camada · Raft · SDS · SLA · SLS · STL · Stringing · Support · TDS · Tg · UFP · VOC · WAAM
+3MF · A1 Mini · Anisotropia · Bambu Studio · Bed-slinger · Brim · DED · Direct drive · DLP · Elephant foot · Empenamento (warping) · FDM · FFF · G-code · Infill · Input shaping · Layer shift · LPBF · Material extrusion · MJF · MSLA · Nozzle · Overhang · PEI · Perimeter/wall · PETG · PLA · Pressure advance · Primeira camada · Raft · SDS · SLA · SLS · STL · Spaghetti · Stringing · Support · TDS · Tg · UFP · VOC · WAAM
 
 ## Relações com outros conceitos
 
