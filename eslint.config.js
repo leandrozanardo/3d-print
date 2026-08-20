@@ -11,6 +11,7 @@ export default tseslint.config(
       "**/node_modules/**",
       "**/.tmp/**",
       "**/3ds/**",
+      "**/artifacts/**",
       "docs/**",
       "core/**",
       "**/jest.config.cjs",

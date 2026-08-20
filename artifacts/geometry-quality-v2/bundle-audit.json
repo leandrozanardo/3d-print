@@ -1,0 +1,9 @@
+{
+  "worker": "geometryWorker-BPwAa9RD.js",
+  "size": 184618,
+  "hasNodeFs": false,
+  "hasNodePath": false,
+  "hasNodeModule": false,
+  "hasBufferImport": false,
+  "hasPython": false
+}

@@ -11,8 +11,7 @@ describe("ManifoldGeometryAdapter", () => {
       readFileSync(path.resolve(__dirname, "../../formats/fixtures/cube.stl")),
     );
     const { mesh } = parseMesh(buf);
-    const adapter = new ManifoldGeometryAdapter();
-    await adapter.ensureReady();
+    const adapter = await createProductionGeometryAdapter();
     const facts = adapter.inspect(mesh);
     expect(facts.faceCount).toBe(12);
     expect(facts.vertexCount).toBeGreaterThan(0);

@@ -25,7 +25,6 @@
     "@fix-my-print/formats-3mf": "workspace:*",
     "@fix-my-print/geometry": "workspace:*",
     "@fix-my-print/optimizer": "workspace:*",
-    "buffer": "6.0.3",
     "fflate": "0.8.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",

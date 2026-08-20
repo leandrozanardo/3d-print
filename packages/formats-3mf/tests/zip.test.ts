@@ -78,7 +78,9 @@ describe("@fix-my-print/formats-3mf", () => {
     zip.addFile("3D/3dmodel.model", Buffer.from("<model/>"));
     const opened = openZipReadOnly(zip.toBuffer());
     expect(opened.members.map((m) => m.path)).toEqual(["3D/3dmodel.model"]);
-    expect(opened.readMember("3D/3dmodel.model").toString("utf8")).toBe("<model/>");
+    expect(new TextDecoder("utf-8").decode(opened.readMember("3D/3dmodel.model"))).toBe(
+      "<model/>",
+    );
   });
 
   it("inspects synthetic minimal 3MF zip in memory", () => {

@@ -1,15 +1,16 @@
 import type { DetectedFormat } from "./types";
+import { decodeLatin1, decodeUtf8 } from "./text";
 
 function headText(buffer: Uint8Array, maxBytes: number): string {
   const head = buffer.subarray(0, Math.min(buffer.byteLength, maxBytes));
-  return Buffer.from(head).toString("utf8");
+  return decodeUtf8(head);
 }
 
 function looksLikePly(buffer: Uint8Array): DetectedFormat | null {
   if (buffer.byteLength < 3) {
     return null;
   }
-  const magic = Buffer.from(buffer.subarray(0, 4)).toString("latin1");
+  const magic = decodeLatin1(buffer.subarray(0, 4));
   if (!magic.startsWith("ply")) {
     return null;
   }
@@ -82,7 +83,7 @@ export function detectFormat(buffer: Uint8Array): DetectedFormat {
   }
 
   const head = buffer.subarray(0, Math.min(buffer.byteLength, 256));
-  const text = Buffer.from(head).toString("latin1").trimStart().toLowerCase();
+  const text = decodeLatin1(head).trimStart().toLowerCase();
   if (text.startsWith("solid")) {
     if (buffer.byteLength >= 84) {
       const view = new DataView(buffer.buffer, buffer.byteOffset, buffer.byteLength);

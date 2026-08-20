@@ -15,7 +15,7 @@ import type {
   ThreeMfParseOptions,
 } from "./types";
 import { parseUnit, unitToMillimeters, type ThreeMfUnit } from "./units";
-import { openZipReadOnly } from "./zip";
+import { openZipReadOnly, utf8FromBytes } from "./zip";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -199,7 +199,7 @@ export function parseThreeMf(
       opened.members.map((m) => m.path),
       modelPath,
     ) ?? modelPath;
-  const xml = opened.readMember(resolvedModel).toString("utf8");
+  const xml = utf8FromBytes(opened.readMember(resolvedModel));
   const parsed = parseSafeXml(xml, {
     maxBytes: options.maxXmlBytes ?? DEFAULT_THREEMF_LIMITS.maxXmlBytes,
     maxDepth: options.maxXmlDepth ?? DEFAULT_THREEMF_LIMITS.maxXmlDepth,

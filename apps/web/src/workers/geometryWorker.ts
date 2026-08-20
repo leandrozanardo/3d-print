@@ -1,9 +1,5 @@
 /// <reference lib="webworker" />
 
-// Provide Buffer for format parsers that still decode via Node-style APIs.
-import { Buffer } from "buffer";
-(globalThis as unknown as { Buffer: typeof Buffer }).Buffer = Buffer;
-
 import { processModel, type PrinterProfile } from "@fix-my-print/engine";
 import { EngineException } from "@fix-my-print/contracts";
 

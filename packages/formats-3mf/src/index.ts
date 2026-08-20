@@ -1,5 +1,6 @@
 export {
   openZipReadOnly,
+  utf8FromBytes,
   DEFAULT_ZIP_LIMITS,
   isUnsafeEntryPath,
   type ZipOpenLimits,

@@ -2,94 +2,22 @@
 
 | Requirement ID | Implementation | Test | Command | Evidence | Status |
 | --- | --- | --- | --- | --- | --- |
-| FMT-001 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| FMT-002 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| FMT-003 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| FMT-004 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| FMT-005 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| FMT-006 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-001 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-002 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-003 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-004 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-005 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-006 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-007 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-008 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-009 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-010 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-011 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-012 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-013 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-014 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-015 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-016 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-017 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| RPR-018 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-001 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-002 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-003 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-004 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-005 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-006 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-007 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-008 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-009 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-010 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-011 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-012 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-013 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-014 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-015 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-016 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-017 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-018 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-019 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-020 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-021 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-022 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-023 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-024 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| OPT-025 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-001 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-002 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-003 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-004 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-005 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-006 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-007 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-008 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-009 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-010 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-011 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| ENG-012 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-001 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-002 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-003 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-004 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-005 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-006 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-007 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-008 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-009 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-010 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-011 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-012 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-013 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| WEB-014 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-001 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-002 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-003 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-004 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-005 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-006 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-007 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-008 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-009 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-010 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-011 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-012 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-013 | TBD | TBD | TBD | TBD | NOT_STARTED |
-| QA-014 | TBD | TBD | TBD | TBD | NOT_STARTED |
+| FMT-001 | `formats-3mf/src/instances.ts` | `instances-two-cubes.test.ts` | `pnpm --filter @fix-my-print/formats-3mf test -- instances-two-cubes` | instances API | PASS |
+| FMT-002 | `geometry/src/repair/assemblyAnalysis.ts` | `instances-two-cubes.test.ts` | same | per-part watertight | PASS |
+| FMT-003 | fixtures two cubes | `instances-two-cubes.test.ts` | same | partCount=2 | PASS |
+| FMT-004 | `formats-3mf/src/write.ts` | `multiobject-roundtrip.test.ts` | `pnpm --filter @fix-my-print/formats-3mf test -- multiobject` | multi mesh write | PASS |
+| FMT-005 | write+parse+instances | `multiobject-roundtrip.test.ts` | same | reopen multi | PASS |
+| FMT-006 | UI badges + engine fields | E2E V2 | `test:e2e:geometry-quality-v2` | structure vs watertight copy | PASS |
+| RPR-001–018 | `geometry/src/repair/*` | `safe-repair.test.ts` | `pnpm --filter @fix-my-print/geometry test -- safe-repair` | transactional repair | PASS |
+| RPR-013 | `geometry-manifold/{common,browser,node}.ts` | package build | `pnpm --filter @fix-my-print/geometry-manifold build` | browser entry no node: | PASS |
+| OPT-001–025 | `optimizer/src/evaluateOrientationsV2.ts` + helpers | `orientation-v2.test.ts` | `pnpm --filter @fix-my-print/optimizer test -- orientation-v2` | non-ortho + goals | PASS |
+| ENG-001–012 | `engine/src/processModel.ts` | `process-model-v2.test.ts` | `pnpm --filter @fix-my-print/engine test -- process-model-v2` | pipeline V2 | PASS |
+| ENG-011 | formats TextDecoder + zip Uint8Array; worker no Buffer | bundle audit | `node scripts/audit-geometry-quality-v2-bundle.mjs` | `bundle-audit.json` | PASS |
+| WEB-001–014 | `apps/web` App + worker + protocol v3 | E2E V2 + a11y/network | `test:e2e:geometry-quality-v2` | UI honest decisionKind | PASS |
+| QA-001 | unit suites above | unit | `test:geometry-quality-v2` | PASS | PASS |
+| QA-004–008 | `e2e/geometry-quality-v2/*` | Playwright | `test:e2e:geometry-quality-v2` | 5 passed | PASS |
+| QA-011 | `scripts/mutation-geometry-quality-v2.mjs` | mutation | `test:mutation:geometry-quality-v2` | 10/10 killed | PASS |
+| QA-013 | bundle audit script | audit | `audit-geometry-quality-v2-bundle.mjs` | no node/buffer | PASS |
+| Fireproof | `scripts/compare-one-piece-fireproof.mjs` | fireproof | `node scripts/compare-one-piece-fireproof.mjs` | `PASS_ALREADY_BEST_SANITIZED` | PASS |
 
-Status values: `NOT_STARTED` | `PASS` | `FAIL` | `BLOCKED` | `NOT_APPLICABLE`
+Status values: `PASS` | `FAIL` | `BLOCKED` | `NOT_APPLICABLE`

@@ -1,20 +1,20 @@
 {
-  "createdAt": "2026-08-16T09:48:47.850Z",
+  "createdAt": "2026-08-16T10:15:30.340Z",
   "algorithm": "sha256",
   "version": "geometry-quality-v2.0.0",
   "files": {
     "project_plans/execution/geometry-quality-v2/ACCEPTANCE_CONTRACT.md": "4361b8ad7f889f25d3933227a0cfd1fe757ce2a547f375552cb8bbfcab58ec07",
     "packages/formats-3mf/tests/instances-two-cubes.test.ts": "0c31aae04b21c1b9e57c79bb198b87680c14eb04a2f916df223df023d13eabc3",
     "packages/formats-3mf/tests/multiobject-roundtrip.test.ts": "380f5f4897ca7035e69d9591bd7594010d8a2b8cfb225d6f74c6ec3589a09e00",
-    "packages/geometry/tests/safe-repair.test.ts": "13d9d1bfdcee5ed7c7a6bebf8020d4d091d0dd8c924f5333d18b18b7aca2dd44",
+    "packages/geometry/tests/safe-repair.test.ts": "630951d8175b08f2e7f56f265d4dfba7b80242453db9a2d79917b2d1f8ca7c8d",
     "packages/optimizer/tests/orientation-v2.test.ts": "820efd2a4b0ebae9c31bed479bd0808abcc6a4ff2f3949efbdfdc7747814b81a",
-    "packages/engine/tests/process-model-v2.test.ts": "888b454171f68dfef6a794d8f79d9a8de1bcf0c632d3c2e33db5467aebfb0dff",
+    "packages/engine/tests/process-model-v2.test.ts": "552193e760c9099b1ffdc63b2fab4aad29ead86c54754bc4af150c74ea0ad6e8",
     "apps/web/e2e/geometry-quality-v2/public-repair.spec.ts": "3f410dc2d3770ecf49859c62821ed76693cbdc5eec811a6afc1d196547df10c7",
     "apps/web/e2e/geometry-quality-v2/public-non-orthogonal.spec.ts": "15f9185601819e2c0a04492e24ad7d2e2b33a5bb7d8c98b56d5a725e556d2579",
     "apps/web/e2e/geometry-quality-v2/public-multiobject.spec.ts": "4eb799fe57239460a9e3de86df25cb015f8d2252f028ecd5b3b369a08cd40dab",
     "apps/web/e2e/geometry-quality-v2/public-goal.spec.ts": "cab7069af6310adb998039d8bb59c5fb8315fda6c1d4239c062ef14959d01808",
     "apps/web/e2e/geometry-quality-v2/private-one-piece-v2.spec.ts": "93d42473ad3146a63c057d29a0560bf046c7a1ec1ddae1bff4ce891be0063a15",
-    "scripts/mutation-geometry-quality-v2.mjs": "613686cec06bb5e6b2d4b5a60d60422845561cf380ea25ced341816362855f4f",
+    "scripts/mutation-geometry-quality-v2.mjs": "2b6943c61915727dd66f65beb006d497691c55c32bb9f88d3013167ebda572f9",
     "scripts/create-geometry-quality-v2-lock.mjs": "060fb70b03570452b78c0b353b124551f78adb3cda94b62aeca43a49d8e5378e",
     "scripts/verify-geometry-quality-v2-lock.mjs": "aea28bca7ac6ce34682c7ba2bdcf8a46d03888a6f672bdfa334d12f7a226b870"
   }

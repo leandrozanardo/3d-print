@@ -18,7 +18,67 @@ function run(filter, testArg) {
   );
 }
 
+const ABSTAINED_STUB = `const repairResult = {
+      status: "abstained",
+      mode: repairMode,
+      mesh: raw,
+      operationsAttempted: [],
+      operationsCommitted: [],
+      reasonCodes: ["MUTANT_REPAIR_DISABLED"],
+      before: {
+        vertexCount: 0,
+        faceCount: 0,
+        componentCount: 0,
+        boundaryEdgeCount: 0,
+        nonManifoldEdgeCount: 0,
+        degenerateFaceCount: 0,
+        windingConsistent: null,
+        watertight: false,
+        area: null,
+        volume: null,
+        bounds: { min: [0, 0, 0], max: [0, 0, 0] },
+        issues: [],
+      },
+      candidate: null,
+      after: {
+        vertexCount: 0,
+        faceCount: 0,
+        componentCount: 0,
+        boundaryEdgeCount: 0,
+        nonManifoldEdgeCount: 0,
+        degenerateFaceCount: 0,
+        windingConsistent: null,
+        watertight: false,
+        area: null,
+        volume: null,
+        bounds: { min: [0, 0, 0], max: [0, 0, 0] },
+        issues: [],
+      },
+      fidelity: null,
+      validator: null,
+      durationMs: 0,
+      counts: {
+        weldedVertices: 0,
+        removedDegenerateFaces: 0,
+        removedDuplicateFaces: 0,
+        removedUnreferencedVertices: 0,
+        flippedFaces: 0,
+        filledLoops: 0,
+        filledTriangles: 0,
+      },
+    }; // mutant: skip safeRepair / force abstained`;
+
 const mutants = [
+  {
+    id: "disable-repair-call",
+    file: "packages/engine/src/processModel.ts",
+    apply: (src) =>
+      src.replace(
+        /const repairResult = await safeRepair\(raw, \{ mode: repairMode \}\);/,
+        ABSTAINED_STUB,
+      ),
+    killTest: () => run("@fix-my-print/engine", "process-model-v2"),
+  },
   {
     id: "force-watertight-true",
     file: "packages/geometry/src/topology.ts",
@@ -44,6 +104,84 @@ const mutants = [
         'const goal = "balanced"; void options.goal;',
       ),
     killTest: () => run("@fix-my-print/optimizer", "orientation-v2"),
+  },
+  {
+    id: "swap-output-for-input",
+    file: "packages/engine/src/processModel.ts",
+    apply: (src) =>
+      src.replace(
+        /progress\("validating-output", 0\.9, "Reabrindo e validando"\);/,
+        'outputBytes = request.bytes; // mutant: swap output for input\n  progress("validating-output", 0.9, "Reabrindo e validando");',
+      ),
+    killTest: () => run("@fix-my-print/engine", "process-model-v2"),
+  },
+  {
+    id: "skip-orientation-matrix",
+    file: "packages/engine/src/processModel.ts",
+    apply: (src) =>
+      src.replace(
+        /const rotated = geometry\.transform\(raw, \{ type: "matrix", m: selectedMatrix \}\);/,
+        "const rotated = raw; // mutant: skip orientation matrix (identity)",
+      ),
+    killTest: () => run("@fix-my-print/engine", "process-model-v2"),
+  },
+  {
+    id: "weld-merge-cross-object",
+    file: "packages/formats-3mf/src/instances.ts",
+    apply: (src) =>
+      src.replace(
+        /return \{\s*unit: "millimeter",\s*instances,\s*globalBounds,\s*\};/,
+        `return {
+    unit: "millimeter",
+    // mutant: weld/merge meshes of different objects into one instance
+    instances:
+      instances.length <= 1
+        ? instances
+        : [
+            {
+              ...instances[0]!,
+              id: "merged-cross-object",
+              sourceObjectId: "merged",
+              name: "merged",
+              positions: Float64Array.from(allPos),
+              indices: Uint32Array.from(allIdx),
+              bounds: globalBounds,
+            },
+          ],
+    globalBounds,
+  };`,
+      ),
+    killTest: () => run("@fix-my-print/formats-3mf", "instances-two-cubes"),
+  },
+  {
+    id: "ignore-fidelity-gate",
+    file: "packages/geometry/src/repair/safeRepair.ts",
+    apply: (src) =>
+      src.replace(
+        /if \(!fidelity\.passed\) \{/,
+        "if (false && !fidelity.passed) { // mutant: ignore fidelity gate",
+      ),
+    killTest: () => run("@fix-my-print/geometry", "safe-repair"),
+  },
+  {
+    id: "writer-first-mesh-only",
+    file: "packages/formats-3mf/src/write.ts",
+    apply: (src) =>
+      src.replace(
+        /const meshes = scene\.meshes\.filter\(\(m\) => m\.indices\.length >= 3\);/,
+        "const meshes = scene.meshes.filter((m) => m.indices.length >= 3).slice(0, 1); // mutant: first mesh only",
+      ),
+    killTest: () => run("@fix-my-print/formats-3mf", "multiobject-roundtrip"),
+  },
+  {
+    id: "remove-output-reopen",
+    file: "packages/engine/src/processModel.ts",
+    apply: (src) =>
+      src.replace(
+        /\s*\/\/ Reopen output for structural confirmation\.\s*const reopened = parseThreeMf\(outputBytes, \{ fileName: "output\.3mf" \}\);\s*const reResolved = resolveThreeMfInstances\(reopened\);\s*if \(reResolved\.instances\.length < 1\) \{\s*throw new EngineException\(\s*createEngineError\("MESH_PARSE_FAILED", "OUTPUT_REOPEN_FAILED", \{\s*retryable: false,\s*\}\),\s*\);\s*\}/,
+        "\n    // mutant: removed output reopen validation\n",
+      ),
+    killTest: () => run("@fix-my-print/engine", "process-model-v2"),
   },
 ];
 
@@ -73,6 +211,11 @@ for (const mutant of mutants) {
       mutant: mutant.id,
       killedBy: dead ? "focused-v2-test" : null,
       exitCode,
+      ...(dead
+        ? {}
+        : {
+            stderrTail: (result.stderr || result.stdout || "").slice(-800),
+          }),
     });
   } finally {
     fs.writeFileSync(abs, original, "utf8");

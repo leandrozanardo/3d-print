@@ -7,6 +7,7 @@ import {
   assertVertexBudget,
   meshFailed,
 } from "./budgets";
+import { decodeUtf8 } from "./text";
 
 export function parseBinaryStl(
   buffer: Uint8Array,
@@ -57,7 +58,7 @@ export function parseAsciiStl(
   if (buffer.byteLength === 0) {
     meshFailed("empty STL");
   }
-  const text = Buffer.from(buffer).toString("utf8");
+  const text = decodeUtf8(buffer);
   if (!/^\s*solid/i.test(text)) {
     meshFailed("ASCII STL missing solid header");
   }

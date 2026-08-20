@@ -1,6 +1,11 @@
 {
   "matrix": [
     {
+      "mutant": "disable-repair-call",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
       "mutant": "force-watertight-true",
       "killedBy": "focused-v2-test",
       "exitCode": 1
@@ -14,8 +19,38 @@
       "mutant": "ignore-goal",
       "killedBy": "focused-v2-test",
       "exitCode": 1
+    },
+    {
+      "mutant": "swap-output-for-input",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
+      "mutant": "skip-orientation-matrix",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
+      "mutant": "weld-merge-cross-object",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
+      "mutant": "ignore-fidelity-gate",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
+      "mutant": "writer-first-mesh-only",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
+    },
+    {
+      "mutant": "remove-output-reopen",
+      "killedBy": "focused-v2-test",
+      "exitCode": 1
     }
   ],
-  "killed": 3,
-  "required": 3
+  "killed": 10,
+  "required": 10
 }

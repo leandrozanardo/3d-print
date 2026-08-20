@@ -97,6 +97,26 @@ describe("safeRepair", () => {
     expect(result.reasonCodes).toContain("INVALID_COORDINATES");
   });
 
+  it("rejects via fidelity gate when bounds delta policy is impossible", async () => {
+    const mesh = unitCube();
+    mesh.faces = mesh.faces.slice(0, 10); // drop top — fillable with widened holes
+    const result = await safeRepair(mesh, {
+      mode: "safe",
+      policy: {
+        maxHoleDiameterMm: 5,
+        maxHolePerimeterMm: 20,
+        maxHoleAreaFraction: 0.5,
+        maxSampleDistanceMm: 2,
+        maxSampleP95Mm: 1,
+        maxBoundsDeltaMm: -1, // any non-negative delta fails fidelity
+        maxAreaRelativeDelta: 0.5,
+      },
+    });
+    expect(result.status).toBe("rejected");
+    expect(result.reasonCodes.some((c) => c.startsWith("FIDELITY_"))).toBe(true);
+    expect(result.mesh.faces.length).toBe(10); // rolled back to original
+  });
+
   it("is idempotent when applied twice", async () => {
     const mesh = unitCube();
     mesh.faces = mesh.faces.slice(0, 10);

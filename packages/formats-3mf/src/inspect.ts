@@ -2,7 +2,12 @@ import { createEngineError, EngineException } from "@fix-my-print/contracts";
 
 import { parseModelXml } from "./model";
 import { asArray, attr, parseSafeXml } from "./safeXml";
-import { DEFAULT_ZIP_LIMITS, openZipReadOnly, type ZipOpenLimits } from "./zip";
+import {
+  DEFAULT_ZIP_LIMITS,
+  openZipReadOnly,
+  utf8FromBytes,
+  type ZipOpenLimits,
+} from "./zip";
 
 const MODEL_HINTS = ["3d/3dmodel.model", "3dmodel.model", "model.model"] as const;
 
@@ -183,7 +188,7 @@ function rethrowUnsafeXml(err: unknown): void {
  * Does not extract members to the filesystem.
  */
 export function inspect3mf(
-  buffer: Buffer | Uint8Array,
+  buffer: Uint8Array,
   limits: ThreeMfInspectLimits = DEFAULT_THREEMF_LIMITS,
 ): ThreeMfInspectReport {
   if (buffer.byteLength === 0) {
@@ -229,7 +234,7 @@ export function inspect3mf(
   const contentTypesPath = findMemberIgnoreCase(memberPaths, "[Content_Types].xml");
   if (contentTypesPath) {
     try {
-      const xml = opened.readMember(contentTypesPath).toString("utf8");
+      const xml = utf8FromBytes(opened.readMember(contentTypesPath));
       modelPath = collectModelFromContentTypes(xml, memberPaths, limits);
       metadataNotes.push(`content types: ${contentTypesPath}`);
     } catch (err) {
@@ -248,7 +253,7 @@ export function inspect3mf(
     const rootRels = findMemberIgnoreCase(memberPaths, "_rels/.rels");
     if (rootRels) {
       try {
-        const xml = opened.readMember(rootRels).toString("utf8");
+        const xml = utf8FromBytes(opened.readMember(rootRels));
         modelPath = collectModelFromRels(xml, rootRels, memberPaths, limits);
       } catch (err) {
         rethrowUnsafeXml(err);
@@ -282,7 +287,7 @@ export function inspect3mf(
   if (hasModel && modelPath) {
     const resolvedModel = findMemberIgnoreCase(memberPaths, modelPath)!;
     try {
-      const xml = opened.readMember(resolvedModel).toString("utf8");
+      const xml = utf8FromBytes(opened.readMember(resolvedModel));
       const facts = parseModelXml(xml, {
         maxXmlBytes: limits.maxXmlBytes,
         maxXmlDepth: limits.maxXmlDepth,

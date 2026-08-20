@@ -7,6 +7,7 @@ import {
   assertVertexBudget,
   meshFailed,
 } from "./budgets";
+import { decodeUtf8 } from "./text";
 
 function resolveIndex(raw: number, count: number, kind: string): number {
   if (!Number.isInteger(raw) || raw === 0) {
@@ -43,7 +44,7 @@ export function parseObj(
     meshFailed("empty OBJ");
   }
 
-  const text = Buffer.from(buffer).toString("utf8");
+  const text = decodeUtf8(buffer);
   const positions: number[] = [];
   const faces: number[][] = [];
 

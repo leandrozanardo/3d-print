@@ -7,6 +7,7 @@ import {
   assertVertexBudget,
   meshFailed,
 } from "./budgets";
+import { decodeLatin1, decodeUtf8 } from "./text";
 
 interface PlyProperty {
   name: string;
@@ -111,13 +112,14 @@ function readScalar(
 }
 
 function parseHeader(buffer: Uint8Array): PlyHeader {
-  const text = Buffer.from(buffer).toString("latin1");
+  const text = decodeLatin1(buffer);
   const endMatch = /end_header(?:\r\n|\n|\r)/i.exec(text);
   if (!endMatch || endMatch.index === undefined) {
     meshFailed("PLY missing end_header");
   }
   const headerText = text.slice(0, endMatch.index + endMatch[0].length);
-  const headerByteLength = Buffer.byteLength(headerText, "latin1");
+  // latin1 is 1 byte per code unit — length equals byte length.
+  const headerByteLength = headerText.length;
 
   const lines = headerText.split(/\r?\n/);
   if (!/^ply\s*$/i.test(lines[0]?.trim() ?? "")) {
@@ -489,7 +491,7 @@ export function parsePly(
   }
   const header = parseHeader(buffer);
   if (header.format === "ascii") {
-    const body = Buffer.from(buffer.subarray(header.headerByteLength)).toString("utf8");
+    const body = decodeUtf8(buffer.subarray(header.headerByteLength));
     return parseAsciiBody(body, header, budgets);
   }
   return parseBinaryBody(buffer, header, budgets);

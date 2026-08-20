@@ -19,6 +19,11 @@ export interface ZipMember {
   uncompressedSize: number;
 }
 
+/** Decode ZIP member bytes as UTF-8 without Node Buffer. */
+export function utf8FromBytes(data: Uint8Array): string {
+  return new TextDecoder("utf-8").decode(data);
+}
+
 export function isUnsafeEntryPath(entryPath: string): boolean {
   const normalized = entryPath.replace(/\\/g, "/");
   if (normalized.startsWith("/") || /^[a-zA-Z]:/.test(normalized)) {
@@ -28,19 +33,15 @@ export function isUnsafeEntryPath(entryPath: string): boolean {
   return parts.some((p) => p === ".." || p === "");
 }
 
-function toBuffer(data: Uint8Array): Buffer {
-  return Buffer.from(data.buffer, data.byteOffset, data.byteLength);
-}
-
 /**
  * Open a ZIP/3MF buffer read-only using fflate (works in Node and browser workers).
- * Does not extract to disk.
+ * Does not extract to disk. Returns Uint8Array members (no Node Buffer).
  */
 export function openZipReadOnly(
-  buffer: Buffer | Uint8Array,
+  buffer: Uint8Array,
   limits: ZipOpenLimits = DEFAULT_ZIP_LIMITS,
-): { members: ZipMember[]; readMember(path: string): Buffer } {
-  const input = buffer instanceof Uint8Array ? buffer : Uint8Array.from(buffer);
+): { members: ZipMember[]; readMember(path: string): Uint8Array } {
+  const input = buffer;
 
   const members: ZipMember[] = [];
   let totalUncompressed = 0;
@@ -119,7 +120,7 @@ export function openZipReadOnly(
 
   return {
     members: Object.freeze(members) as ZipMember[],
-    readMember(memberPath: string): Buffer {
+    readMember(memberPath: string): Uint8Array {
       const normalized = memberPath.replace(/\\/g, "/");
       if (isUnsafeEntryPath(normalized)) {
         throw new EngineException(
@@ -135,7 +136,7 @@ export function openZipReadOnly(
           createEngineError("MESH_PARSE_FAILED", `member not found: ${normalized}`),
         );
       }
-      return toBuffer(data);
+      return data;
     },
   };
 }

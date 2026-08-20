@@ -36,12 +36,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      buffer: "buffer/",
       ...workspaceSrc,
     },
   },
   optimizeDeps: {
-    include: ["buffer", "fflate", "three"],
+    include: ["fflate", "three"],
   },
   worker: {
     format: "es",

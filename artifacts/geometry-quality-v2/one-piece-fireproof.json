@@ -1,0 +1,427 @@
+{
+  "schemaVersion": "geometry-quality-v2.fireproof.1",
+  "generatedAt": "2026-08-16T10:25:48.338Z",
+  "engineVersion": "2.0.0-geometry-quality",
+  "printer": {
+    "id": "bambu-a1-mini",
+    "name": "Bambu Lab A1 Mini",
+    "bedWidthMm": 180,
+    "bedDepthMm": 180,
+    "maxHeightMm": 180
+  },
+  "goal": "balanced",
+  "repairMode": "safe",
+  "note": "ZIP/byte size reduction is NOT geometric improvement evidence",
+  "hashes": {
+    "original": "5866bbb230db7fe3afe92981195431a52d67ba0a5d33babd26d2d1eb1989ab27",
+    "originalExpected": "5866bbb230db7fe3afe92981195431a52d67ba0a5d33babd26d2d1eb1989ab27",
+    "originalMatchesExpected": true,
+    "optimizedFile": "4c3f6029a14de3f3368075ea1978f7a00b53f3a603134b422f68f51ce753254e",
+    "engineOutput": "4c3f6029a14de3f3368075ea1978f7a00b53f3a603134b422f68f51ce753254e",
+    "engineOutputMatchesOptimizedFile": true
+  },
+  "bytes": {
+    "original": 6844854,
+    "optimizedFile": 5500036,
+    "engineOutput": 5500036,
+    "byteDiffPctInformationalOnly": -19.64713929617783
+  },
+  "partCount": 1,
+  "topologyPerPart": {
+    "original": [
+      {
+        "id": "inst-0-1",
+        "name": null,
+        "topology": {
+          "vertexCount": 189611,
+          "faceCount": 379222,
+          "componentCount": 5,
+          "boundaryEdgeCount": 0,
+          "nonManifoldEdgeCount": 0,
+          "degenerateFaceCount": 0,
+          "windingConsistent": true,
+          "watertight": true,
+          "area": 26859.25264334256,
+          "volume": 86308.25626291105,
+          "bounds": {
+            "min": [
+              133.7816315,
+              120.1166511,
+              0
+            ],
+            "max": [
+              206.2183685,
+              199.88332889999998,
+              119.9051666
+            ]
+          },
+          "issues": []
+        }
+      }
+    ],
+    "after": [
+      {
+        "id": "inst-0-1",
+        "name": "one+Piece",
+        "topology": {
+          "vertexCount": 189611,
+          "faceCount": 379222,
+          "componentCount": 5,
+          "boundaryEdgeCount": 0,
+          "nonManifoldEdgeCount": 0,
+          "degenerateFaceCount": 0,
+          "windingConsistent": true,
+          "watertight": true,
+          "area": 26859.252636885503,
+          "volume": 86308.25603635529,
+          "bounds": {
+            "min": [
+              0,
+              0,
+              0
+            ],
+            "max": [
+              72.436737,
+              79.766678,
+              119.905167
+            ]
+          },
+          "issues": []
+        }
+      }
+    ]
+  },
+  "before": {
+    "vertexCount": 189611,
+    "triangleCount": 379222,
+    "bounds": {
+      "min": [
+        133.7816315,
+        120.1166511,
+        0
+      ],
+      "max": [
+        206.2183685,
+        199.88332889999998,
+        119.9051666
+      ]
+    },
+    "dimensionsMm": [
+      72.436737,
+      79.76667779999998,
+      119.9051666
+    ],
+    "watertight": true,
+    "watertightReason": null,
+    "area": 26859.25264334256,
+    "volume": 86308.25626291105,
+    "issues": []
+  },
+  "normalized": {
+    "vertexCount": 189611,
+    "triangleCount": 379222,
+    "bounds": {
+      "min": [
+        133.7816315,
+        120.1166511,
+        0
+      ],
+      "max": [
+        206.2183685,
+        199.88332889999998,
+        119.9051666
+      ]
+    },
+    "dimensionsMm": [
+      72.436737,
+      79.76667779999998,
+      119.9051666
+    ],
+    "watertight": true,
+    "watertightReason": null,
+    "area": 26859.25264334256,
+    "volume": 86308.25626291105,
+    "issues": []
+  },
+  "after": {
+    "vertexCount": 189611,
+    "triangleCount": 379222,
+    "bounds": {
+      "min": [
+        0,
+        0,
+        0
+      ],
+      "max": [
+        72.436737,
+        79.76667779999998,
+        119.9051666
+      ]
+    },
+    "dimensionsMm": [
+      72.436737,
+      79.76667779999998,
+      119.9051666
+    ],
+    "watertight": true,
+    "watertightReason": null,
+    "area": 26859.25264334256,
+    "volume": 86308.25626290168,
+    "issues": []
+  },
+  "repair": {
+    "status": "not-needed",
+    "mode": "safe",
+    "operationsAttempted": [
+      "inspect"
+    ],
+    "operationsCommitted": [],
+    "reasonCodes": [
+      "ALREADY_CLEAN"
+    ],
+    "before": {
+      "vertexCount": 189611,
+      "faceCount": 379222,
+      "componentCount": 5,
+      "boundaryEdgeCount": 0,
+      "nonManifoldEdgeCount": 0,
+      "degenerateFaceCount": 0,
+      "windingConsistent": true,
+      "watertight": true,
+      "area": 26859.25264334256,
+      "volume": 86308.25626291105,
+      "bounds": {
+        "min": [
+          133.7816315,
+          120.1166511,
+          0
+        ],
+        "max": [
+          206.2183685,
+          199.88332889999998,
+          119.9051666
+        ]
+      },
+      "issues": []
+    },
+    "candidate": null,
+    "after": {
+      "vertexCount": 189611,
+      "faceCount": 379222,
+      "componentCount": 5,
+      "boundaryEdgeCount": 0,
+      "nonManifoldEdgeCount": 0,
+      "degenerateFaceCount": 0,
+      "windingConsistent": true,
+      "watertight": true,
+      "area": 26859.25264334256,
+      "volume": 86308.25626291105,
+      "bounds": {
+        "min": [
+          133.7816315,
+          120.1166511,
+          0
+        ],
+        "max": [
+          206.2183685,
+          199.88332889999998,
+          119.9051666
+        ]
+      },
+      "issues": []
+    },
+    "fidelity": null,
+    "validator": null,
+    "durationMs": 376,
+    "counts": {
+      "weldedVertices": 0,
+      "removedDegenerateFaces": 0,
+      "removedDuplicateFaces": 0,
+      "removedUnreferencedVertices": 0,
+      "flippedFaces": 0,
+      "filledLoops": 0,
+      "filledTriangles": 0
+    }
+  },
+  "bestV1": {
+    "cost": 0.4182367924932495
+  },
+  "bestV2": {
+    "cost": 0.4182367924932495,
+    "selectedOrientationId": "up+z-yaw0"
+  },
+  "candidateCounts": {
+    "lockedV1": 24,
+    "legacy": 24,
+    "quick": 77,
+    "exact": 32
+  },
+  "weights": {
+    "supportSeverityCost": 0.3,
+    "supportHeightCost": 0.2,
+    "instabilityCost": 0.2,
+    "heightCost": 0.15,
+    "contactDeficitCost": 0.1,
+    "cosmeticDownwardCost": 0.05
+  },
+  "costVector": {
+    "before": {
+      "supportSeverityCost": 0.1326866989546157,
+      "supportHeightCost": 0.0012140048572069726,
+      "instabilityCost": 0.8372983527382847,
+      "heightCost": 0.7438054959171925,
+      "contactDeficitCost": 0.8670703781707326,
+      "cosmeticDownwardCost": 0.013610258633445107
+    },
+    "after": {
+      "supportSeverityCost": 0.13268669828362512,
+      "supportHeightCost": 0.0012140048339937249,
+      "instabilityCost": 0.8372983540250608,
+      "heightCost": 0.7438054965691084,
+      "contactDeficitCost": 0.8670703789367774,
+      "cosmeticDownwardCost": 0.013610259462367777
+    },
+    "totals": {
+      "beforeIdentity": 0.40646685634180746,
+      "afterIdentity": 0.40646685660906084,
+      "processModelBefore": 0.4182367924932495,
+      "processModelAfter": 0.4182367924932495
+    }
+  },
+  "qualityIndex": {
+    "before": 58,
+    "after": 58
+  },
+  "orientation": {
+    "id": "up+z-yaw0",
+    "algorithm": "orientation-v2.0.0",
+    "decisionKind": "already-best-or-sanitized",
+    "alreadyOptimal": true,
+    "meaningfulImprovement": false,
+    "relativeImprovement": 0,
+    "matrix": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "quaternion": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "dimensions": {
+    "beforeMm": [
+      72.436737,
+      79.76667779999998,
+      119.9051666
+    ],
+    "normalizedMm": [
+      72.436737,
+      79.76667779999998,
+      119.9051666
+    ],
+    "afterMm": [
+      72.436737,
+      79.76667779999998,
+      119.9051666
+    ]
+  },
+  "minZ": 0,
+  "fitA1Mini": {
+    "before": true,
+    "normalized": true,
+    "after": true
+  },
+  "outputReopen": {
+    "validationOk": true,
+    "validationIssues": [],
+    "reopenOk": true,
+    "partCount": 1,
+    "reopenError": null
+  },
+  "repeatability": {
+    "orientationIdMatch": true,
+    "costAfterMatch": true,
+    "qualityIndexMatch": true,
+    "outputShaMatch": true,
+    "decisionKindMatch": true,
+    "runA": {
+      "orientationId": "up+z-yaw0",
+      "costAfter": 0.4182367924932495,
+      "qualityIndexAfter": 58,
+      "outputSha256": "4c3f6029a14de3f3368075ea1978f7a00b53f3a603134b422f68f51ce753254e",
+      "decisionKind": "already-best-or-sanitized",
+      "durationMs": 13167
+    },
+    "runB": {
+      "orientationId": "up+z-yaw0",
+      "costAfter": 0.4182367924932495,
+      "qualityIndexAfter": 58,
+      "outputSha256": "4c3f6029a14de3f3368075ea1978f7a00b53f3a603134b422f68f51ce753254e",
+      "decisionKind": "already-best-or-sanitized",
+      "durationMs": 12954
+    },
+    "deterministic": true
+  },
+  "originalUnchanged": {
+    "shaBefore": "5866bbb230db7fe3afe92981195431a52d67ba0a5d33babd26d2d1eb1989ab27",
+    "shaAfter": "5866bbb230db7fe3afe92981195431a52d67ba0a5d33babd26d2d1eb1989ab27",
+    "matchesExpected": true,
+    "unchanged": true
+  },
+  "optimizedFile": {
+    "path": "3ds/upgraded/one+Piece-otimizado.3mf",
+    "existedBeforeRun": true,
+    "regeneratedFromProcessModel": false
+  },
+  "preservation": {
+    "preserved": [
+      "Core geometry (flattened)",
+      "Original unit: millimeter",
+      "Object names when available → one+Piece"
+    ],
+    "removed": [
+      "VENDOR_CONFIGURATION",
+      "DERIVED_SLICE_DATA",
+      "GCODE_OR_TOOLPATH",
+      "THUMBNAIL",
+      "Non-core OPC parts"
+    ],
+    "policy": "geometry-only-core-3mf",
+    "notes": [
+      "Output is a Core 3MF with effective geometry after orientation.",
+      "Slicer-specific project settings and G-code were not preserved as valid.",
+      "Re-slice the model in your slicer before printing."
+    ]
+  },
+  "warnings": [],
+  "limitations": [
+    "Geometric proxies only — not slicer support/time/material",
+    "Requires re-slicing before print",
+    "ZIP/byte size is informational only and must not drive PASS/FAIL",
+    "Geometric proxies only — not slicer time/material guarantees"
+  ],
+  "durationMs": {
+    "runA": 13167,
+    "runB": 12954
+  },
+  "verdict": {
+    "code": "PASS_ALREADY_BEST_SANITIZED",
+    "reason": "decisionKind=already-best-or-sanitized"
+  }
+}

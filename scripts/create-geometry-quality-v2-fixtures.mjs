@@ -19,11 +19,34 @@ function box(sx, sy, sz, ox = 0, oy = 0, oz = 0) {
   const y1 = oy + sy;
   const z1 = oz + sz;
   const positions = Float64Array.from([
-    x0, y0, z0, x1, y0, z0, x1, y1, z0, x0, y1, z0, x0, y0, z1, x1, y0, z1, x1, y1, z1, x0, y1, z1,
+    x0,
+    y0,
+    z0,
+    x1,
+    y0,
+    z0,
+    x1,
+    y1,
+    z0,
+    x0,
+    y1,
+    z0,
+    x0,
+    y0,
+    z1,
+    x1,
+    y0,
+    z1,
+    x1,
+    y1,
+    z1,
+    x0,
+    y1,
+    z1,
   ]);
   const indices = Uint32Array.from([
-    0, 1, 2, 0, 2, 3, 4, 6, 5, 4, 7, 6, 0, 4, 5, 0, 5, 1, 1, 5, 6, 1, 6, 2, 2, 6, 7, 2, 7, 3, 3, 7,
-    4, 3, 4, 0,
+    0, 1, 2, 0, 2, 3, 4, 6, 5, 4, 7, 6, 0, 4, 5, 0, 5, 1, 1, 5, 6, 1, 6, 2, 2, 6, 7, 2, 7,
+    3, 3, 7, 4, 3, 4, 0,
   ]);
   return { positions, indices };
 }
