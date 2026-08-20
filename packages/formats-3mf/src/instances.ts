@@ -9,6 +9,7 @@ import {
 import { composeTransforms, transformPoint } from "./transform";
 import type { ThreeMfDocument } from "./types";
 import { unitToMillimeters } from "./units";
+import { lookupThreeMfObject } from "./parse";
 
 /** One resolved mesh occurrence reachable from <build> (millimeter space). */
 export interface CanonicalMeshInstance {
@@ -60,15 +61,20 @@ function appendTransformedMesh(
   }
 }
 
+function objectStackKey(partPath: string, objectId: string): string {
+  return `${partPath.toLowerCase()}#${objectId}`;
+}
+
 function collectLeaves(
   document: ThreeMfDocument,
   objectId: string,
   parent: Matrix4,
-  scale: number,
   stack: Set<string>,
   depth: number,
   path: string[],
   out: LeafAcc[],
+  fromPartPath: string,
+  refPath: string | null,
 ): void {
   if (depth > 64) {
     throw new EngineException(
@@ -81,7 +87,14 @@ function collectLeaves(
       ),
     );
   }
-  if (stack.has(objectId)) {
+  const { part, object } = lookupThreeMfObject(
+    document,
+    fromPartPath,
+    objectId,
+    refPath,
+  );
+  const key = objectStackKey(part.path, objectId);
+  if (stack.has(key)) {
     throw new EngineException(
       createEngineError(
         "MESH_PARSE_FAILED",
@@ -92,15 +105,8 @@ function collectLeaves(
       ),
     );
   }
-  const object = document.objects.get(objectId);
-  if (!object) {
-    throw new EngineException(
-      createEngineError("MESH_PARSE_FAILED", `MISSING_OBJECT: ${objectId}`, {
-        retryable: false,
-      }),
-    );
-  }
-  stack.add(objectId);
+  stack.add(key);
+  const scale = unitToMillimeters(part.unit);
   const nextPath = [...path, objectId];
   if (object.mesh && object.mesh.indices.length > 0) {
     const leaf: LeafAcc = {
@@ -126,14 +132,15 @@ function collectLeaves(
       document,
       component.objectId,
       childMatrix,
-      scale,
       stack,
       depth + 1,
       nextPath,
       out,
+      part.path,
+      component.path,
     );
   }
-  stack.delete(objectId);
+  stack.delete(key);
 }
 
 /**
@@ -145,7 +152,6 @@ export function resolveThreeMfInstances(
   options: { fileName?: string } = {},
 ): ResolvedThreeMfInstances {
   void options.fileName;
-  const scale = unitToMillimeters(document.unit);
   const leaves: LeafAcc[] = [];
   document.buildItems.forEach((item, buildItemIndex) => {
     const rootTransform = item.transform.length ? item.transform : IDENTITY_MATRIX4;
@@ -154,11 +160,12 @@ export function resolveThreeMfInstances(
       document,
       item.objectId,
       rootTransform,
-      scale,
       new Set(),
       0,
       [`build:${buildItemIndex}`],
       buildLeaves,
+      document.modelPath,
+      item.path,
     );
     for (const leaf of buildLeaves) {
       leaves.push({

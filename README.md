@@ -12,26 +12,29 @@ Knowledge base and toolkit for 3D printing (product **fix-my-print**).
 
 ## Node (only operational runtime)
 
+Requires Node.js ≥ 20 (`npm` comes with it). `pnpm` does **not** need to be installed globally.
+
 ```text
-START.cmd
+npm start
 ```
 
-Or:
+Or double-click `START.cmd` (Windows) / `./START.sh` (Unix). Then open http://127.0.0.1:5173/
+
+Optional (so `pnpm start` works in the terminal): once, in an elevated PowerShell if Corepack cannot write shims:
 
 ```text
-npx --yes pnpm@10.12.1 start
+corepack enable
+corepack prepare pnpm@10.12.1 --activate
 ```
 
-Then open http://127.0.0.1:5173/
-
-Other commands:
+Other commands (after Corepack, or via the wrapper):
 
 ```text
-npx --yes pnpm@10.12.1 install
-npx --yes pnpm@10.12.1 test
-npx --yes pnpm@10.12.1 run typecheck
-npx --yes pnpm@10.12.1 run build:web
-npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js help
+node scripts/run-pnpm.mjs install
+node scripts/run-pnpm.mjs test
+node scripts/run-pnpm.mjs run typecheck
+node scripts/run-pnpm.mjs run build:web
+node scripts/run-pnpm.mjs --filter @fix-my-print/cli exec node dist/bin.js help
 ```
 
 ## Safety

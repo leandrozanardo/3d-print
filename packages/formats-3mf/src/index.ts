@@ -39,6 +39,7 @@ export type {
   SourceMetadata,
   ThreeMfBuildItem,
   ThreeMfDocument,
+  ThreeMfModelPart,
   ThreeMfObjectNode,
   ThreeMfParseOptions,
   ThreeMfValidationResult,

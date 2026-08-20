@@ -52,6 +52,8 @@ export interface ThreeMfObjectMesh {
 export interface ThreeMfComponentRef {
   readonly objectId: string;
   readonly transform: readonly number[];
+  /** Production extension: objectid is scoped to this package part when set. */
+  readonly path: string | null;
 }
 
 export interface ThreeMfObjectNode {
@@ -64,6 +66,15 @@ export interface ThreeMfObjectNode {
 export interface ThreeMfBuildItem {
   readonly objectId: string;
   readonly transform: readonly number[];
+  /** Production extension: objectid is scoped to this package part when set. */
+  readonly path: string | null;
+}
+
+/** One 3MF .model part. Object ids are unique only within a part. */
+export interface ThreeMfModelPart {
+  readonly path: string;
+  readonly unit: ThreeMfUnit;
+  readonly objects: ReadonlyMap<string, ThreeMfObjectNode>;
 }
 
 export interface ThreeMfDocument {
@@ -71,6 +82,7 @@ export interface ThreeMfDocument {
   readonly modelPath: string;
   readonly members: readonly { path: string; kind: ArchiveMemberKind }[];
   readonly objects: ReadonlyMap<string, ThreeMfObjectNode>;
+  readonly parts: ReadonlyMap<string, ThreeMfModelPart>;
   readonly buildItems: readonly ThreeMfBuildItem[];
   readonly warnings: readonly ProductWarning[];
 }

@@ -15,6 +15,7 @@ import {
   type WorkerResponse,
 } from "./workers/protocol";
 import GeometryWorker from "./workers/geometryWorker?worker";
+import { formatProcessFailure } from "./processFailure";
 
 const ModelViewer = lazy(async () => {
   const mod = await import("./components/ModelViewer");
@@ -67,6 +68,7 @@ type State = {
   errorTitle: string | null;
   errorMessage: string | null;
   errorCode: string | null;
+  errorDetail: string | null;
   success: SuccessPayload | null;
   previewPositions: Float32Array | null;
   previewIndices: Uint32Array | null;
@@ -85,7 +87,7 @@ type Action =
   | { type: "start"; jobId: string }
   | { type: "progress"; ratio: number; message: string }
   | { type: "success"; payload: SuccessPayload; downloadUrl: string }
-  | { type: "failure"; code: string; message: string }
+  | { type: "failure"; code: string; message: string; detail: string }
   | { type: "cancelled" }
   | { type: "clear-file" }
   | { type: "reset-result" }
@@ -104,6 +106,7 @@ const initialState: State = {
   errorTitle: null,
   errorMessage: null,
   errorCode: null,
+  errorDetail: null,
   success: null,
   previewPositions: null,
   previewIndices: null,
@@ -129,6 +132,7 @@ function reducer(state: State, action: Action): State {
         errorTitle: null,
         errorMessage: null,
         errorCode: null,
+        errorDetail: null,
         previewPositions: null,
         previewIndices: null,
         ratio: 0,
@@ -154,6 +158,7 @@ function reducer(state: State, action: Action): State {
         errorTitle: null,
         errorMessage: null,
         errorCode: null,
+        errorDetail: null,
         success: null,
       };
     case "progress":
@@ -180,6 +185,7 @@ function reducer(state: State, action: Action): State {
         errorTitle: "Não foi possível processar o arquivo",
         errorMessage: action.message,
         errorCode: action.code,
+        errorDetail: action.detail,
         stageMessage: action.message,
       };
     case "cancelled":
@@ -204,6 +210,7 @@ function reducer(state: State, action: Action): State {
         errorTitle: null,
         errorMessage: null,
         errorCode: null,
+        errorDetail: null,
         stageMessage: "Envie um modelo 3MF ou STL para começar.",
       };
     case "reset-result":
@@ -255,18 +262,17 @@ function formatBytes(size: number): string {
   return `${(size / (1024 * 1024)).toFixed(2)} MB`;
 }
 
-function userErrorMessage(code: string, technical: string): string {
-  if (/EMPTY_FILE/i.test(code + technical)) return "O arquivo está vazio.";
-  if (/NO_FILE_BUFFER/i.test(code + technical))
-    return "O arquivo não está mais na memória. Envie o arquivo novamente.";
-  if (/UNSUPPORTED_FORMAT|FORMAT/i.test(code + technical))
-    return "Formato não suportado. Envie um arquivo 3MF ou STL.";
-  if (/ZIP|ARCHIVE|BOMB|UNSAFE/i.test(code + technical))
-    return "O pacote 3MF é inválido ou inseguro.";
-  if (/BUILD_VOLUME|EXCEEDS/i.test(code + technical))
-    return "O modelo não cabe no volume da impressora com nenhuma orientação.";
-  if (/CANCEL/i.test(code + technical)) return "Processamento cancelado.";
-  return "Ocorreu um erro ao processar o modelo. Tente outro arquivo ou ajuste as dimensões.";
+function toFailureAction(
+  code: string,
+  technical: string,
+): Extract<Action, { type: "failure" }> {
+  const formatted = formatProcessFailure(code, technical);
+  return {
+    type: "failure",
+    code,
+    message: formatted.message,
+    detail: formatted.technicalLine,
+  };
 }
 
 const MAX_FILE_BYTES = 80 * 1024 * 1024;
@@ -320,11 +326,7 @@ export default function App() {
       }
       if (data.type === "processFailure") {
         if (jobIdRef.current && data.jobId !== jobIdRef.current) return;
-        dispatch({
-          type: "failure",
-          code: data.code,
-          message: userErrorMessage(data.code, data.message),
-        });
+        dispatch(toFailureAction(data.code, data.message));
         return;
       }
       if (data.type === "cancelled") {
@@ -333,11 +335,9 @@ export default function App() {
       }
     };
     worker.onerror = () => {
-      dispatch({
-        type: "failure",
-        code: "WORKER_CRASHED",
-        message: "O motor de geometria falhou. Tente novamente.",
-      });
+      dispatch(
+        toFailureAction("WORKER_CRASHED", "O motor de geometria falhou. Tente novamente."),
+      );
     };
     workerRef.current = worker;
     return worker;
@@ -350,27 +350,20 @@ export default function App() {
       revokeDownload();
       dispatch({ type: "reading" });
       if (file.size === 0) {
-        dispatch({
-          type: "failure",
-          code: "EMPTY_FILE",
-          message: userErrorMessage("EMPTY_FILE", ""),
-        });
+        dispatch(toFailureAction("EMPTY_FILE", "EMPTY_FILE"));
         return;
       }
       if (file.size > MAX_FILE_BYTES) {
-        dispatch({
-          type: "failure",
-          code: "FILE_TOO_LARGE",
-          message: `Arquivo acima do limite de ${formatBytes(MAX_FILE_BYTES)}.`,
-        });
+        dispatch(
+          toFailureAction(
+            "FILE_TOO_LARGE",
+            `Arquivo acima do limite de ${formatBytes(MAX_FILE_BYTES)}.`,
+          ),
+        );
         return;
       }
       if (!/\.(3mf|stl)$/i.test(file.name)) {
-        dispatch({
-          type: "failure",
-          code: "UNSUPPORTED_FORMAT",
-          message: userErrorMessage("UNSUPPORTED_FORMAT", ""),
-        });
+        dispatch(toFailureAction("UNSUPPORTED_FORMAT", "UNSUPPORTED_FORMAT"));
         return;
       }
       const buffer = await file.arrayBuffer();
@@ -387,24 +380,24 @@ export default function App() {
   const onOptimize = useCallback(() => {
     // Never fail silently — "nothing happens" on click was a user-facing bug.
     if (!pendingBytes || !state.fileName) {
-      dispatch({
-        type: "failure",
-        code: "NO_FILE_BUFFER",
-        message:
+      dispatch(
+        toFailureAction(
+          "NO_FILE_BUFFER",
           "O arquivo não está mais na memória (página recarregou ou o servidor de desenvolvimento reiniciou). Envie o arquivo novamente.",
-      });
+        ),
+      );
       return;
     }
     let worker: Worker;
     try {
       worker = ensureWorker();
     } catch {
-      dispatch({
-        type: "failure",
-        code: "WORKER_CRASHED",
-        message:
+      dispatch(
+        toFailureAction(
+          "WORKER_CRASHED",
           "Não foi possível iniciar o motor de geometria. Recarregue a página e tente de novo.",
-      });
+        ),
+      );
       return;
     }
     const jobId = newJobId();
@@ -771,11 +764,8 @@ export default function App() {
             {state.ui === "failure" ? (
               <div className="error-alert" data-testid="error-alert" role="alert">
                 <h2>{state.errorTitle}</h2>
-                <p>{state.errorMessage}</p>
-                <details data-testid="error-details">
-                  <summary>Detalhes técnicos</summary>
-                  <p>{state.errorCode}</p>
-                </details>
+                <p data-testid="error-message">{state.errorMessage}</p>
+                <p data-testid="error-technical" className="error-technical">{state.errorDetail}</p>
                 <button
                   type="button"
                   data-testid="retry-button"

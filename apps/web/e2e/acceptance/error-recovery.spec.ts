@@ -20,6 +20,7 @@ test("invalid archive shows recoverable error", async ({ page, browserName }) =>
   await page.getByTestId("file-input").setInputFiles(tmp);
   await page.getByTestId("optimize-button").click();
   await expect(page.getByTestId("error-alert")).toBeVisible({ timeout: 60_000 });
+  await expect(page.getByTestId("error-technical")).toContainText("MISSING_MODEL");
   const cube = path.join(root, "packages/formats/fixtures/cube.stl");
   await page.getByTestId("retry-button").click();
   await page.getByTestId("file-input").setInputFiles(cube);

@@ -252,4 +252,30 @@ describe("orientation V2 engine", () => {
     expect(sawQuick).toBe(true);
     expect(result.cancelled).toBe(true);
   });
+
+  it("never selects a rotation that exceeds volume when identity already fits", async () => {
+    const mesh = boxMesh(170, 170, 4);
+    const volume = { x: 180, y: 180, z: 180 };
+    const result = await evaluateOrientationsV2(mesh, volume, { goal: "balanced" });
+    const applied = transformMesh(mesh, result.selected.matrix);
+    let minX = Infinity;
+    let minY = Infinity;
+    let minZ = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    let maxZ = -Infinity;
+    const v = applied.vertices;
+    for (let i = 0; i + 2 < v.length; i += 3) {
+      minX = Math.min(minX, v[i]!);
+      minY = Math.min(minY, v[i + 1]!);
+      minZ = Math.min(minZ, v[i + 2]!);
+      maxX = Math.max(maxX, v[i]!);
+      maxY = Math.max(maxY, v[i + 1]!);
+      maxZ = Math.max(maxZ, v[i + 2]!);
+    }
+    expect(maxX - minX).toBeLessThanOrEqual(180 + 1e-6);
+    expect(maxY - minY).toBeLessThanOrEqual(180 + 1e-6);
+    expect(maxZ - minZ).toBeLessThanOrEqual(180 + 1e-6);
+    expect(result.selected.metrics.fitsBuildVolume).toBe(true);
+  });
 });

@@ -11,11 +11,12 @@ import type {
   ProductWarning,
   ThreeMfBuildItem,
   ThreeMfDocument,
+  ThreeMfModelPart,
   ThreeMfObjectNode,
   ThreeMfParseOptions,
 } from "./types";
 import { parseUnit, unitToMillimeters, type ThreeMfUnit } from "./units";
-import { openZipReadOnly, utf8FromBytes } from "./zip";
+import { isUnsafeEntryPath, openZipReadOnly, utf8FromBytes } from "./zip";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -101,7 +102,43 @@ function readTriangle(
   return [v1, v2, v3];
 }
 
-function parseObjectNode(obj: Record<string, unknown>): ThreeMfObjectNode {
+function normalizePartPath(raw: string): string {
+  return raw.replace(/\\/g, "/").replace(/^\//, "");
+}
+
+function parseExternalPath(
+  raw: string | undefined,
+  allowExternalPath: boolean,
+): string | null {
+  if (!raw) {
+    return null;
+  }
+  if (!allowExternalPath) {
+    throw new EngineException(
+      createEngineError(
+        "MESH_PARSE_FAILED",
+        "MISSING_OBJECT: path attribute is only valid on the root model",
+        { retryable: false },
+      ),
+    );
+  }
+  const normalized = normalizePartPath(raw);
+  if (!normalized || isUnsafeEntryPath(normalized)) {
+    throw new EngineException(
+      createEngineError(
+        "REPO_BOUNDARY_VIOLATION",
+        `unsafe production path: ${raw}`,
+        { retryable: false },
+      ),
+    );
+  }
+  return normalized;
+}
+
+function parseObjectNode(
+  obj: Record<string, unknown>,
+  allowExternalPath: boolean,
+): ThreeMfObjectNode {
   const objectId = attr(obj, "id");
   if (!objectId) {
     throw new EngineException(
@@ -168,10 +205,71 @@ function parseObjectNode(obj: Record<string, unknown>): ThreeMfObjectNode {
     return {
       objectId: refId,
       transform: parseTransformAttribute(attr(component, "transform")),
+      path: parseExternalPath(attr(component, "path"), allowExternalPath),
     };
   });
 
   return { objectId, name, mesh, components };
+}
+
+function parseModelResources(
+  xml: string,
+  limits: { maxXmlBytes: number; maxXmlDepth: number },
+  allowExternalPath: boolean,
+): {
+  unit: ThreeMfUnit;
+  objects: Map<string, ThreeMfObjectNode>;
+  itemNodes: Record<string, unknown>[];
+} {
+  const parsed = parseSafeXml(xml, {
+    maxBytes: limits.maxXmlBytes,
+    maxDepth: limits.maxXmlDepth,
+  });
+  if (!isRecord(parsed) || !isRecord(parsed.model)) {
+    throw new EngineException(
+      createEngineError("MESH_PARSE_FAILED", "INVALID_MODEL_XML", {
+        retryable: false,
+      }),
+    );
+  }
+
+  const model = parsed.model;
+  const unit: ThreeMfUnit = parseUnit(attr(model, "unit"));
+  const resources = isRecord(model.resources) ? model.resources : undefined;
+  const objectNodes = asArray(
+    resources?.object as Record<string, unknown> | Record<string, unknown>[] | undefined,
+  );
+  const objects = new Map<string, ThreeMfObjectNode>();
+  for (const node of objectNodes) {
+    if (!isRecord(node)) continue;
+    const parsedObject = parseObjectNode(node, allowExternalPath);
+    if (objects.has(parsedObject.objectId)) {
+      throw new EngineException(
+        createEngineError(
+          "MESH_PARSE_FAILED",
+          `MISSING_OBJECT: duplicate object id ${parsedObject.objectId}`,
+          { retryable: false },
+        ),
+      );
+    }
+    objects.set(parsedObject.objectId, parsedObject);
+  }
+
+  const build = isRecord(model.build) ? model.build : undefined;
+  const itemNodes = asArray(
+    build?.item as Record<string, unknown> | Record<string, unknown>[] | undefined,
+  );
+  return { unit, objects, itemNodes };
+}
+
+function getPart(
+  parts: ReadonlyMap<string, ThreeMfModelPart>,
+  wanted: string,
+): ThreeMfModelPart | undefined {
+  const direct = parts.get(wanted);
+  if (direct) return direct;
+  const hit = findMemberIgnoreCase([...parts.keys()], wanted);
+  return hit ? parts.get(hit) : undefined;
 }
 
 /**
@@ -194,51 +292,59 @@ export function parseThreeMf(
 
   const { modelPath, members } = resolveModelPath(bytes, fileName);
   const opened = openZipReadOnly(bytes, DEFAULT_THREEMF_LIMITS);
+  const zipMemberPaths = opened.members.map((m) => m.path);
   const resolvedModel =
-    findMemberIgnoreCase(
-      opened.members.map((m) => m.path),
-      modelPath,
-    ) ?? modelPath;
-  const xml = utf8FromBytes(opened.readMember(resolvedModel));
-  const parsed = parseSafeXml(xml, {
-    maxBytes: options.maxXmlBytes ?? DEFAULT_THREEMF_LIMITS.maxXmlBytes,
-    maxDepth: options.maxXmlDepth ?? DEFAULT_THREEMF_LIMITS.maxXmlDepth,
+    findMemberIgnoreCase(zipMemberPaths, modelPath) ?? modelPath;
+  const limits = {
+    maxXmlBytes: options.maxXmlBytes ?? DEFAULT_THREEMF_LIMITS.maxXmlBytes,
+    maxXmlDepth: options.maxXmlDepth ?? DEFAULT_THREEMF_LIMITS.maxXmlDepth,
+  };
+  const rootXml = utf8FromBytes(opened.readMember(resolvedModel));
+  const rootParsed = parseModelResources(rootXml, limits, true);
+
+  const parts = new Map<string, ThreeMfModelPart>();
+  parts.set(resolvedModel, {
+    path: resolvedModel,
+    unit: rootParsed.unit,
+    objects: rootParsed.objects,
   });
-  if (!isRecord(parsed) || !isRecord(parsed.model)) {
-    throw new EngineException(
-      createEngineError("MESH_PARSE_FAILED", "INVALID_MODEL_XML", {
-        retryable: false,
-      }),
-    );
+
+  const referencedPaths = new Set<string>();
+  for (const object of rootParsed.objects.values()) {
+    for (const component of object.components) {
+      if (component.path) referencedPaths.add(component.path);
+    }
+  }
+  for (const item of rootParsed.itemNodes) {
+    if (!isRecord(item)) continue;
+    const itemPath = parseExternalPath(attr(item, "path"), true);
+    if (itemPath) referencedPaths.add(itemPath);
   }
 
-  const model = parsed.model;
-  const unit: ThreeMfUnit = parseUnit(attr(model, "unit"));
-  const resources = isRecord(model.resources) ? model.resources : undefined;
-  const objectNodes = asArray(
-    resources?.object as Record<string, unknown> | Record<string, unknown>[] | undefined,
-  );
-  const objects = new Map<string, ThreeMfObjectNode>();
-  for (const node of objectNodes) {
-    if (!isRecord(node)) continue;
-    const parsedObject = parseObjectNode(node);
-    if (objects.has(parsedObject.objectId)) {
+  for (const rawPath of referencedPaths) {
+    const member = findMemberIgnoreCase(zipMemberPaths, rawPath);
+    if (!member) {
       throw new EngineException(
         createEngineError(
           "MESH_PARSE_FAILED",
-          `MISSING_OBJECT: duplicate object id ${parsedObject.objectId}`,
+          `MISSING_OBJECT: production part not found: ${rawPath}`,
           { retryable: false },
         ),
       );
     }
-    objects.set(parsedObject.objectId, parsedObject);
+    if (member.toLowerCase() === resolvedModel.toLowerCase()) {
+      continue;
+    }
+    const childXml = utf8FromBytes(opened.readMember(member));
+    const child = parseModelResources(childXml, limits, false);
+    parts.set(member, {
+      path: member,
+      unit: child.unit,
+      objects: child.objects,
+    });
   }
 
-  const build = isRecord(model.build) ? model.build : undefined;
-  const itemNodes = asArray(
-    build?.item as Record<string, unknown> | Record<string, unknown>[] | undefined,
-  );
-  const buildItems: ThreeMfBuildItem[] = itemNodes.map((item) => {
+  const buildItems: ThreeMfBuildItem[] = rootParsed.itemNodes.map((item) => {
     const objectId = attr(item, "objectid");
     if (!objectId) {
       throw new EngineException(
@@ -251,11 +357,15 @@ export function parseThreeMf(
         ),
       );
     }
-    if (!objects.has(objectId)) {
+    const itemPath = parseExternalPath(attr(item, "path"), true);
+    const target = getPart(parts, itemPath ?? resolvedModel);
+    if (!target || !target.objects.has(objectId)) {
       throw new EngineException(
         createEngineError(
           "MESH_PARSE_FAILED",
-          `MISSING_OBJECT: build references unknown id ${objectId}`,
+          itemPath
+            ? `MISSING_OBJECT: ${objectId} in ${itemPath}`
+            : `MISSING_OBJECT: build references unknown id ${objectId}`,
           { retryable: false },
         ),
       );
@@ -263,6 +373,7 @@ export function parseThreeMf(
     return {
       objectId,
       transform: parseTransformAttribute(attr(item, "transform")),
+      path: itemPath,
     };
   });
 
@@ -288,10 +399,11 @@ export function parseThreeMf(
   }
 
   return {
-    unit,
+    unit: rootParsed.unit,
     modelPath: resolvedModel,
     members: classified,
-    objects,
+    objects: rootParsed.objects,
+    parts,
     buildItems,
     warnings,
   };
@@ -324,14 +436,42 @@ function appendTransformedMesh(
   }
 }
 
+function objectStackKey(partPath: string, objectId: string): string {
+  return `${partPath.toLowerCase()}#${objectId}`;
+}
+
+export function lookupThreeMfObject(
+  document: ThreeMfDocument,
+  fromPartPath: string,
+  objectId: string,
+  refPath: string | null,
+): { part: ThreeMfModelPart; object: ThreeMfObjectNode } {
+  const partPath = refPath ?? fromPartPath;
+  const part = getPart(document.parts, partPath);
+  const object = part?.objects.get(objectId);
+  if (!part || !object) {
+    throw new EngineException(
+      createEngineError(
+        "MESH_PARSE_FAILED",
+        refPath
+          ? `MISSING_OBJECT: ${objectId} in ${refPath}`
+          : `MISSING_OBJECT: ${objectId}`,
+        { retryable: false },
+      ),
+    );
+  }
+  return { part, object };
+}
+
 function flattenObject(
   document: ThreeMfDocument,
   objectId: string,
   parent: Matrix4,
   acc: Accumulator,
-  scale: number,
   stack: Set<string>,
   depth: number,
+  fromPartPath: string,
+  refPath: string | null,
 ): void {
   if (depth > 64) {
     throw new EngineException(
@@ -344,7 +484,14 @@ function flattenObject(
       ),
     );
   }
-  if (stack.has(objectId)) {
+  const { part, object } = lookupThreeMfObject(
+    document,
+    fromPartPath,
+    objectId,
+    refPath,
+  );
+  const key = objectStackKey(part.path, objectId);
+  if (stack.has(key)) {
     throw new EngineException(
       createEngineError(
         "MESH_PARSE_FAILED",
@@ -355,15 +502,8 @@ function flattenObject(
       ),
     );
   }
-  const object = document.objects.get(objectId);
-  if (!object) {
-    throw new EngineException(
-      createEngineError("MESH_PARSE_FAILED", `MISSING_OBJECT: ${objectId}`, {
-        retryable: false,
-      }),
-    );
-  }
-  stack.add(objectId);
+  stack.add(key);
+  const scale = unitToMillimeters(part.unit);
   if (object.mesh && object.mesh.indices.length > 0) {
     appendTransformedMesh(acc, object.mesh.positions, object.mesh.indices, parent, scale);
   }
@@ -374,12 +514,13 @@ function flattenObject(
       component.objectId,
       childMatrix,
       acc,
-      scale,
       stack,
       depth + 1,
+      part.path,
+      component.path,
     );
   }
-  stack.delete(objectId);
+  stack.delete(key);
 }
 
 /**
@@ -389,7 +530,6 @@ export function flattenThreeMf(
   document: ThreeMfDocument,
   options: { fileName?: string } = {},
 ): CanonicalScene {
-  const scale = unitToMillimeters(document.unit);
   const acc: Accumulator = { positions: [], indices: [] };
   for (const item of document.buildItems) {
     flattenObject(
@@ -397,9 +537,10 @@ export function flattenThreeMf(
       item.objectId,
       item.transform.length ? item.transform : IDENTITY_MATRIX4,
       acc,
-      scale,
       new Set(),
       0,
+      document.modelPath,
+      item.path,
     );
   }
   if (acc.indices.length === 0) {

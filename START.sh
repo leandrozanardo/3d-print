@@ -3,4 +3,4 @@ set -euo pipefail
 cd "$(dirname "$0")"
 echo "Starting Fix My Print web UI..."
 echo "Open http://127.0.0.1:5173/ when Vite is ready."
-exec npx --yes pnpm@10.12.1 start
+exec npm start

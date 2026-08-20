@@ -116,6 +116,21 @@ describe("processModel V2 contract", () => {
     },
   );
 
+  it("does not reject a 170mm plate that already fits A1 Mini", async () => {
+    const bytes = boxStl(170, 170, 4);
+    const result = await processModel({
+      jobId: "v2-fits-plate",
+      fileName: "plate.stl",
+      bytes,
+      printer: BAMBU_A1_MINI,
+      goal: "balanced",
+      repairMode: "none",
+    } as Parameters<typeof processModel>[0]);
+    expect(result.after.dimensionsMm[0]).toBeLessThanOrEqual(180);
+    expect(result.after.dimensionsMm[1]).toBeLessThanOrEqual(180);
+    expect(result.after.dimensionsMm[2]).toBeLessThanOrEqual(180);
+  }, 60_000);
+
   it("applies chosen orientation matrix for a tall tower", async () => {
     const bytes = tallTowerStl();
     const result = await processModel({
@@ -147,6 +162,26 @@ describe("processModel V2 contract", () => {
     expect(result.warnings.filter((w) => w.code.startsWith("SPAGHETTI_"))).toEqual([]);
   }, 60_000);
 
+  it("packs MakerWorld Bambu 3MF that is scattered in CAD space onto A1 Mini", async () => {
+    const file = path.join(ROOT, "3ds/temp/ToothSqeez_ExterGear_SeigaihaPattern.3mf");
+    expect(fs.existsSync(file)).toBe(true);
+    const bytes = new Uint8Array(fs.readFileSync(file));
+    const result = await processModel({
+      jobId: "tooth-squeezer",
+      fileName: "ToothSqeez_ExterGear_SeigaihaPattern.3mf",
+      bytes,
+      printer: BAMBU_A1_MINI,
+      goal: "balanced",
+      repairMode: "none",
+    } as Parameters<typeof processModel>[0]);
+    expect(result.partCount).toBe(6);
+    expect(result.warnings.some((w) => w.code === "PACKED_ON_BED")).toBe(true);
+    expect(result.after.dimensionsMm[0]).toBeLessThanOrEqual(180);
+    expect(result.after.dimensionsMm[1]).toBeLessThanOrEqual(180);
+    expect(result.after.dimensionsMm[2]).toBeLessThanOrEqual(180);
+    expect(result.output.bytes.byteLength).toBeGreaterThan(1000);
+  }, 180_000);
+
   it("keeps output reopen validation in processModel source", () => {
     const src = fs.readFileSync(PROCESS_MODEL_SRC, "utf8");
     expect(src).toContain("OUTPUT_REOPEN_FAILED");
@@ -155,6 +190,6 @@ describe("processModel V2 contract", () => {
 
   it("assesses spaghetti risk on the selected orientation", () => {
     const src = fs.readFileSync(PROCESS_MODEL_SRC, "utf8");
-    expect(src).toContain("assessSpaghettiRisk(orient.selected.metrics)");
+    expect(src).toContain("assessSpaghettiRisk(selected.metrics)");
   });
 });

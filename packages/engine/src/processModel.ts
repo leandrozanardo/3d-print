@@ -23,16 +23,19 @@ import {
 } from "@fix-my-print/geometry";
 import {
   evaluateOrientationsV2,
+  fits,
   ORIENTATION_COUNT,
   ORIENTATION_SCORE_VERSION,
   ORIENTATION_V2_VERSION,
   qualityIndexFromCost,
   type GoalWeights,
+  type OrientationCandidateV2,
   type OrientationDecisionKind,
 } from "@fix-my-print/optimizer";
 
 import { sha256Hex } from "./sha256";
 import { assessSpaghettiRisk } from "./spaghettiRisk";
+import { assemblyFitsBed, packMeshesOnBed } from "./packOnBed";
 
 export type OptimizationGoal = "balanced" | "minimize-height" | "maximize-bed-contact";
 
@@ -176,6 +179,48 @@ function rawToPreview(mesh: RawMesh): { positions: Float32Array; indices: Uint32
     indices[o++] = face[2]!;
   }
   return { positions, indices };
+}
+
+function meshFromCanonical(part: CanonicalMesh): RawMesh {
+  const faces: number[][] = [];
+  for (let i = 0; i < part.indices.length; i += 3) {
+    faces.push([part.indices[i]!, part.indices[i + 1]!, part.indices[i + 2]!]);
+  }
+  return { vertices: part.positions, faces };
+}
+
+function formatXyzMm(size: readonly [number, number, number]): string {
+  return `${size[0].toFixed(1)}×${size[1].toFixed(1)}×${size[2].toFixed(1)} mm`;
+}
+
+/** Rotate every part by the same matrix, then translate the assembly min to the origin. */
+function placeOnBed(
+  parts: CanonicalMesh[],
+  matrix: readonly number[],
+  geometry: GeometryPort,
+): { parts: CanonicalMesh[]; analysis: ReturnType<typeof toAnalysis> } {
+  const oriented = parts.map((part) => {
+    const rotated = geometry.transform(meshFromCanonical(part), {
+      type: "matrix",
+      m: matrix,
+    });
+    return rawToCanonicalMesh(part.id, part.name, rotated);
+  });
+  const assembly = meshesToAssemblyRaw(oriented);
+  const min = inspectMesh(assembly, geometry).bounds.min;
+  const translated = oriented.map((part) => {
+    const moved = geometry.transform(meshFromCanonical(part), {
+      type: "translate",
+      dx: -min[0],
+      dy: -min[1],
+      dz: -min[2],
+    });
+    return rawToCanonicalMesh(part.id, part.name, moved);
+  });
+  return {
+    parts: translated,
+    analysis: toAnalysis(inspectMesh(meshesToAssemblyRaw(translated), geometry)),
+  };
 }
 
 function rawToCanonicalMesh(
@@ -323,7 +368,10 @@ export async function processModel(
       if (partMeshes.length === 0) {
         throw new Error("empty");
       }
-    } catch {
+    } catch (err) {
+      if (err instanceof EngineException) {
+        throw err;
+      }
       const scene = flattenThreeMf(document, { fileName: request.fileName });
       const raw = canonicalToRawMesh(scene);
       partMeshes = [rawToCanonicalMesh("flattened-0", request.fileName, raw)];
@@ -344,12 +392,22 @@ export async function processModel(
     );
   }
 
-  const assemblyBefore = meshesToAssemblyRaw(partMeshes);
-  if (assemblyBefore.faces.length === 0) {
+  const assemblyBeforeUnpacked = meshesToAssemblyRaw(partMeshes);
+  if (assemblyBeforeUnpacked.faces.length === 0) {
     throw new EngineException(
       createEngineError("MESH_PARSE_FAILED", "EMPTY_GEOMETRY", { retryable: false }),
     );
   }
+  if (!assemblyFitsBed(partMeshes, volume)) {
+    partMeshes = packMeshesOnBed(partMeshes, volume, geometry);
+    warnings.push({
+      code: "PACKED_ON_BED",
+      message:
+        "Parts were re-laid on the bed because CAD/world placement exceeded the printer volume.",
+    });
+  }
+
+  const assemblyBefore = meshesToAssemblyRaw(partMeshes);
 
   progress("analyzing-topology", 0.32, "Analisando peças");
   ensure();
@@ -397,57 +455,28 @@ export async function processModel(
 
   progress("applying-optimization", 0.72, "Aplicando orientação");
   ensure();
-  const selectedMatrix = orient.selected.matrix;
-  const orientedParts = repairedParts.map((part) => {
-    const raw: RawMesh = {
-      vertices: part.positions,
-      faces: (() => {
-        const faces: number[][] = [];
-        for (let i = 0; i < part.indices.length; i += 3) {
-          faces.push([part.indices[i]!, part.indices[i + 1]!, part.indices[i + 2]!]);
-        }
-        return faces;
-      })(),
-    };
-    const rotated = geometry.transform(raw, { type: "matrix", m: selectedMatrix });
-    return rawToCanonicalMesh(part.id, part.name, rotated);
-  });
-
-  // Single assembly translation to bed (preserve relative poses).
-  const orientedAssembly = meshesToAssemblyRaw(orientedParts);
-  const bedFacts = inspectMesh(orientedAssembly, geometry);
-  const min = bedFacts.bounds.min;
-  const translatedParts = orientedParts.map((part) => {
-    const raw: RawMesh = {
-      vertices: part.positions,
-      faces: (() => {
-        const faces: number[][] = [];
-        for (let i = 0; i < part.indices.length; i += 3) {
-          faces.push([part.indices[i]!, part.indices[i + 1]!, part.indices[i + 2]!]);
-        }
-        return faces;
-      })(),
-    };
-    const moved = geometry.transform(raw, {
-      type: "translate",
-      dx: -min[0],
-      dy: -min[1],
-      dz: -min[2],
-    });
-    return rawToCanonicalMesh(part.id, part.name, moved);
-  });
-
-  const finalAssembly = meshesToAssemblyRaw(translatedParts);
-  const after = toAnalysis(inspectMesh(finalAssembly, geometry));
-
-  const size = after.dimensionsMm;
-  if (size[0] > volume.x || size[1] > volume.y || size[2] > volume.z) {
-    throw new EngineException(
-      createEngineError("MESH_PARSE_FAILED", "MODEL_EXCEEDS_BUILD_VOLUME", {
-        retryable: true,
-      }),
-    );
+  let selected: OrientationCandidateV2 = orient.selected;
+  let placed = placeOnBed(repairedParts, selected.matrix, geometry);
+  if (!fits(placed.analysis.dimensionsMm, volume)) {
+    const identityPlaced = placeOnBed(repairedParts, orient.original.matrix, geometry);
+    if (fits(identityPlaced.analysis.dimensionsMm, volume)) {
+      selected = orient.original;
+      placed = identityPlaced;
+      orient.alreadyOptimal = true;
+      orient.decisionKind = "already-best-or-sanitized";
+      orient.meaningfulImprovement = false;
+    } else {
+      throw new EngineException(
+        createEngineError(
+          "CONSTRAINT_FAILED",
+          `MODEL_EXCEEDS_BUILD_VOLUME: model ${formatXyzMm(identityPlaced.analysis.dimensionsMm)} vs printer ${formatXyzMm([volume.x, volume.y, volume.z])}`,
+          { retryable: true },
+        ),
+      );
+    }
   }
+  const translatedParts = placed.parts;
+  const after = placed.analysis;
 
   progress("serializing", 0.82, "Gerando 3MF");
   ensure();
@@ -470,7 +499,7 @@ export async function processModel(
     outputBytes = written.bytes;
     preservation = written.preservation;
   } else {
-    outputBytes = geometry.exportModel(finalAssembly, "stl-binary");
+    outputBytes = geometry.exportModel(meshesToAssemblyRaw(translatedParts), "stl-binary");
     preservation = {
       preserved: ["STL binary mesh"],
       removed: [],
@@ -513,14 +542,14 @@ export async function processModel(
   const repairCommitted = repair.status === "committed";
   const decisionKind = mergeDecisionKind(repairCommitted, orient.decisionKind);
   const costBefore = orient.original.totalCost;
-  const costAfter = orient.selected.totalCost;
+  const costAfter = selected.totalCost;
   const relativeImprovement =
     costBefore > 1e-12 ? Math.max(0, (costBefore - costAfter) / costBefore) : 0;
-  const spaghettiWarnings = assessSpaghettiRisk(orient.selected.metrics); // Bambu spaghetti modes from selected-orientation metrics
+  const spaghettiWarnings = assessSpaghettiRisk(selected.metrics);
   warnings = [...warnings, ...spaghettiWarnings];
 
   progress("preparing-preview", 0.97, "Preparando comparação");
-  const preview = rawToPreview(finalAssembly);
+  const preview = rawToPreview(meshesToAssemblyRaw(translatedParts));
   progress("completed", 1, "Concluído");
 
   return {
@@ -543,19 +572,19 @@ export async function processModel(
     repair,
     optimization: {
       algorithm: ORIENTATION_V2_VERSION,
-      orientationId: orient.selected.id,
+      orientationId: selected.id,
       scoreBefore: 1 - costBefore,
       scoreAfter: 1 - costAfter,
       candidateCount: ORIENTATION_COUNT,
       alreadyOptimal: orient.alreadyOptimal && !repairCommitted,
       decisionKind,
       quaternion: [
-        orient.selected.quat.w,
-        orient.selected.quat.x,
-        orient.selected.quat.y,
-        orient.selected.quat.z,
+        selected.quat.w,
+        selected.quat.x,
+        selected.quat.y,
+        selected.quat.z,
       ],
-      matrix: orient.selected.matrix,
+      matrix: selected.matrix,
       goal: request.goal,
       weights: orient.weights,
       legacyCandidateCount: orient.legacyCandidateCount,
