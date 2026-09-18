@@ -72,3 +72,6 @@ artifacts/product-recovery/playwright/
 artifacts/product-recovery/downloads/*.3mf
 artifacts/product-recovery/validation/*.3mf
 
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
