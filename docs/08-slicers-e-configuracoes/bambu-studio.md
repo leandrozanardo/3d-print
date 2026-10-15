@@ -31,10 +31,13 @@ knowledge_status: draft
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: medium
-last_reviewed: '2026-08-15'
+last_reviewed: '2026-10-15'
 review_cycle: 3-months
 sources:
 - source.bambu-wiki-a1-mini
+- source.bambu-forum-a1-mini-patterns
+- source.makerworld-profile-patterns
+- source.ellis-print-tuning-guide
 related:
 - printer.bambu-lab-a1-mini
 - process.fff.first-layer
@@ -68,8 +71,9 @@ Hub pai: [Slicers e configurações](INDEX.md)
 
 - Qualquer receita operacional A1 Mini nesta base
 - Diagnóstico “mudei um número e piorou” (versão + família de perfil)
-- Escolha de process profile (0,20 mm (fonte oficial / fabricante / heuristic; ver `sources`)  Standard vs Draft vs Fine, etc.)
+- Escolha de process profile (0,12 Fine / 0,16–0,20 Standard / Draft — conforme pacote A1 Mini)
 - Preview de suportes, brim e first layer antes de imprimir
+- Remap de 3MF MakerWorld → máquina A1 Mini ([playbook](../projeto/workflow/makerworld-para-receita.md))
 
 ## Conceitos semânticos (não dump de settings)
 
@@ -81,7 +85,9 @@ Use estes conceitos ao raciocinar; o **path exato no menu muda por versão**:
 | Filament profile | Temps, cooling defaults, flow/PA se existirem no preset |
 | Process / quality profile | Layer height, paredes, infill, velocidades, first layer |
 | First layer / initial layer | Adesão e squish — ver [primeira camada](../10-processo-de-impressao/fff/primeira-camada.md) |
-| Bed / nozzle temperature | em geral (condicional) dentro do range do filamento **e** bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources)  na A1 Mini |
+| Bed / nozzle temperature | dentro do range do filamento **e** bed ≤ 80 °C na A1 Mini (manufacturer) |
+| Avoid crossing walls / combing | reduz viagens que puxam stringing (community heuristic — validar) |
+| Wall order (inner/outer) | afeta overhangs e “air printing” em pontes (community hypothesis) |
 | Part cooling / fan | Overhangs vs Z-bond / warp — ver [cooling de peça](../04-componentes-e-hardware/cooling-de-peca-fff.md) |
 | Brim / raft / skirt | Âncora de borda; raft = último recurso |
 | Supports (normal/tree) | Acesso, cicatrizes — ver [suportes](../06-design-para-impressao-3d/suportes-fff.md) |
@@ -92,8 +98,8 @@ Use estes conceitos ao raciocinar; o **path exato no menu muda por versão**:
 
 ## Famílias de perfil (como decidir)
 
-1. **Máquina:** selecione o modelo **A1 Mini** (não X1C/P1S/A1 full sem revisão). Volume operacional 180 × 180 × 180 mm (fonte oficial/fabricante/heuristic; ver sources) ; deixe margem para brim/suportes.
-2. **Nozzle:** default desta base [0,4 mm (fonte oficial/fabricante/heuristic; ver sources) ](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); trocar diâmetro = nova família de processo.
+1. **Máquina:** selecione o modelo **A1 Mini** (não X1C/P1S/A1 full sem revisão). Volume operacional 180 × 180 × 180 mm ([source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md)); deixe margem para brim/suportes.
+2. **Nozzle:** default desta base [0,4 mm](../04-componentes-e-hardware/nozzle-0-4-mm-fff.md); trocar diâmetro = nova família de processo.
 3. **Filamento:** preset da marca/tipo quando existir; senão, partida do genérico PLA/PETG do Studio **e** TDS do bobina.
 4. **Processo:** comece pelo preset de qualidade “padrão” do pacote; só specialize (0,12 Fine, 0,28 Draft, etc.) com objetivo claro (detalhe vs tempo).
 5. **Placa:** declare smooth vs textured no fluxo se o Studio/firmware exigir — impacta expectativa de adesão ([PEI](../04-componentes-e-hardware/placa-pei-fff.md)).
@@ -121,9 +127,21 @@ Objetivo da peça (cosmético / encaixe / resistência)?
   → Orientar malha (design.orientation-fff)
   → Preset A1 Mini + filamento Ideal
   → Preview: first layer contínua? overhangs sem suporte impossível?
-  → PLA vs PETG: textured preferida para PETG; bed ≤ 80 °C (fonte oficial/fabricante/heuristic; ver sources) 
+  → PLA vs PETG: textured preferida para PETG; bed ≤ 80 °C
   → Imprimir cupom/peça; uma variável por ajuste
 ```
+
+## Heurísticas comunitárias (Studio)
+
+Classe: `supported heuristic` / `community hypothesis` — **validate on printer**. Detalhe: [forum patterns](../22-fontes/bambu-forum-a1-mini-patterns.md).
+
+| Objetivo | Ajuste típico | Nota |
+|---|---|---|
+| Menos stringing PETG | Avoid Crossing Walls; secar filamento primeiro | Não comece por retração Bowden |
+| Melhor superfície | Outer wall mais lenta que inner | Antes de mexer PA |
+| Leve + rígido | +wall loops; infill moderado | Evitar 100% global |
+| Menos desperdício | Preview suporte/brim; raft off default | Ver playbook MakerWorld |
+| MakerWorld 3MF | Remap printer=A1 Mini + plate | [makerworld-para-receita](../projeto/workflow/makerworld-para-receita.md) |
 
 ## Segurança e limites
 
@@ -140,11 +158,14 @@ Objetivo da peça (cosmético / encaixe / resistência)?
 ## Veja também
 
 - Wiki de procedimento: [bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md)
-- Legado operacional (EN/migração): [projeto/](../projeto/INDEX.md) até páginas canônicas cobrirem cada setting
+- Optimization wiki: [projeto/](../projeto/INDEX.md)
+- Playbook: [makerworld-para-receita](../projeto/workflow/makerworld-para-receita.md)
 
 ## Fontes
 
 - [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md)
+- [source.bambu-forum-a1-mini-patterns](../22-fontes/bambu-forum-a1-mini-patterns.md)
+- [source.makerworld-profile-patterns](../22-fontes/makerworld-profile-patterns.md)
 
 ## Lacunas
 

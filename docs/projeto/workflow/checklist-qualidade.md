@@ -4,10 +4,13 @@
 
 Gate before declaring an optimization **done**. Fail any item → return to troubleshooting/profile pages. Covers **pre-print preview** and **post-print** reality. Uncertain items stay marked **validate on printer** until measured.
 
+For MakerWorld/Handy imports, complete [makerworld-para-receita](makerworld-para-receita.md) before this gate.
+
 ## When to use
 
 | Trigger | Action |
 |---|---|
+| After MakerWorld remap | [makerworld-para-receita](makerworld-para-receita.md) then this list |
 | After Bambu Studio preview | Pre-print list |
 | After first test print | Post-print list |
 | Before closing `3ds/plan/<name>.md` | Both |
@@ -28,12 +31,14 @@ Gate before declaring an optimization **done**. Fail any item → return to trou
 
 ### Recipe
 
+- [ ] Printer profile is **A1 Mini** (not leftover X1/P1 from MakerWorld)  
 - [ ] Named profile chosen and linked (`perfis-a1-mini/…`)  
 - [ ] Material PLA or PETG explicit (+ dry state for PETG)  
-- [ ] Supports: type + top Z + interface reviewed  
-- [ ] Walls/infill match purpose  
-- [ ] Brim/skirt/raft decided  
-- [ ] Seam placed if cosmetic  
+- [ ] Supports: type + top Z + interface reviewed; show faces paint-off  
+- [ ] Walls/infill match purpose (walls before blind high infill)  
+- [ ] Brim/skirt/raft decided — raft off unless required (waste)  
+- [ ] Seam placed if cosmetic; outer wall slower if finish-critical  
+- [ ] PETG: Avoid Crossing Walls considered after dry  
 - [ ] Temps/cooling/speeds match material page  
 - [ ] Spiral vase: single contour confirmed (if applicable)  
 

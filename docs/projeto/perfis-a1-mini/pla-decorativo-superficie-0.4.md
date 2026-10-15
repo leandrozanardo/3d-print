@@ -42,13 +42,14 @@ Strength needed?
 ## A1 Mini rules
 
 1. Seam on hidden edge ([costura](../qualidade-e-acabamento/costura-e-superficie.md)).
-2. Avoid support on show faces — reorient or paint-off.
-3. Ironing only critical flat tops; default **off**.
-4. Low infill unless stiffness needed for thin shells.
-5. Outer wall slower than inner; drop speed before PA experiments.
+2. Avoid support on show faces — reorient or paint-off (waste + scars).
+3. Ironing only critical flat tops; default **off** (time/filament cost).
+4. Low infill unless stiffness needed for thin shells; prefer +walls for stiffness.
+5. Outer wall slower than inner; drop speed before PA experiments (`supported heuristic`).
 6. Flow calibrated ~0.95–1.00 before chasing ringing.
 7. Keep Bambu flow dynamics / PA defaults unless understood — **validate**.
 8. Brim off by default for clean base edge; on if peel risk.
+9. MakerWorld imports: remap to A1 Mini + this profile — [makerworld-para-receita](../workflow/makerworld-para-receita.md).
 
 ## Bambu Studio fields (PLA)
 

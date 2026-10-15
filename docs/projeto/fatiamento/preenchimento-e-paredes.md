@@ -44,12 +44,13 @@ pick shells by purpose
 ### Non-negotiables
 
 1. Top/bottom shells: ≥4–6 on visible flat faces.
-2. 100% infill only for local need (weight/solid boss) — expensive.
+2. 100% infill only for local need (weight/solid boss) — expensive **and** can worsen warp / first-layer ripples (forum hypothesis on large solid pads).
 3. PETG functional: walls ≥3.
 4. Thin regions: Detect thin walls ON when needed.
-5. Wall order: outer-first for surface-critical décor when available.
+5. Wall order: outer-first for surface-critical décor when available; try inner-first if bridges “print in air” (community hypothesis — preview toolpaths).
 6. Line width ~0.42 mm default; widen for tools, not mini faces.
 7. Document wall/infill in `plan.md`.
+8. Light + stiff recipe: raise walls before raising global infill (CNC Kitchen / project heuristic).
 
 ### Symptom → first fix
 
@@ -57,7 +58,7 @@ pick shells by purpose
 |---|---|
 | Weak flex | +walls |
 | Soft top / pillow | +top shells / denser top |
-| Heavy & slow | −infill, keep walls |
+| Heavy & slow / filament waste | −infill, keep walls |
 | Gaps in thin art | Detect thin walls / thicken mesh |
 | Delam (PETG) | ↓ cooling; +temp carefully; dry |
 | Sparse look through walls | +walls before +infill |

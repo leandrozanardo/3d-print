@@ -12,11 +12,12 @@ This wiki synthesizes general FFF knowledge and A1 Mini-specific practice. It do
 
 ## A1 Mini rules
 
-- Prefer official Bambu wiki for hardware/maintenance procedures.
-- Prefer Ellis / Teaching Tech for calibration method (towers, flow, retract).
-- Prefer CNC Kitchen / walls-vs-infill literature for strength decisions.
+- Prefer official Bambu wiki for hardware/maintenance procedures (`manufacturer-specific`).
+- Prefer Ellis / Teaching Tech for calibration **method** (towers, flow, retract) → `supported heuristic`.
+- Prefer CNC Kitchen / walls-vs-infill literature for strength decisions → `supported heuristic`.
 - Adapt Prusa KB / FixMyPrint taxonomies to A1 Mini (direct drive, 180³ bed, PEI).
-- Dual-track: community baseline + **validate on printer**.
+- Community forum / MakerWorld: start as `community hypothesis`; promote to `supported heuristic` only with method or repeated scoped consensus — never hard safety. Always **validate on printer**.
+- Dual-track entry: [makerworld-para-receita](workflow/makerworld-para-receita.md).
 
 ## Local corpus
 
@@ -27,16 +28,17 @@ This wiki synthesizes general FFF knowledge and A1 Mini-specific practice. It do
 
 ## External sources (absorbed knowledge)
 
-| Source | URL | Absorbed here |
-|---|---|---|
-| Bambu Lab Wiki (A1 Mini) | https://wiki.bambulab.com/ | Volume, plates, maintenance, AMS Lite, filament path, hotend care |
-| Bambu Lab Forum | https://forum.bambulab.com/ | First layer, PETG stringing, tree vs normal, Z-hop, humidity |
-| Ellis Print Tuning Guide | https://github.com/AndrewEllis93/Print-Tuning-Guide | Calibration order (PA/flow/retract), surface-fault reading |
-| Teaching Tech | https://teachingtechyt.github.io/calibration.html | Temp/retract/extrusion towers, first principles |
-| CNC Kitchen (concepts) | https://www.cnckitchen.com/ | Walls vs infill strength; layer anisotropy |
-| Prusa Knowledge Base | https://help.prusa3d.com/ | Failure taxonomy adapted to A1 Mini |
-| MakerWorld / Bambu presets | https://makerworld.com/ | Official profiles as baseline before customizing |
-| r/FixMyPrint (patterns) | https://www.reddit.com/r/FixMyPrint/ | Symptom → common cause (synthesis, no personal data) |
+| Source | URL | Absorbed here | Class |
+|---|---|---|---|
+| Bambu Lab Wiki (A1 Mini) | https://wiki.bambulab.com/en/a1-mini/manual | Volume, plates, maintenance, AMS Lite, filament path, hotend care | manufacturer-specific |
+| Bambu A1 mini FAQ | https://wiki.bambulab.com/en/a1-mini/manual/faq | Materials Ideal/NR, temps max, nozzle, when to calibrate | manufacturer-specific |
+| Bambu Lab Forum (patterns) | https://forum.bambulab.com/ · [source](../22-fontes/bambu-forum-a1-mini-patterns.md) | PEI wash, PETG stringing/cooling, Avoid Crossing Walls, no X1C paste | community hypothesis → heuristic |
+| Ellis Print Tuning Guide | https://ellis3dp.com/Print-Tuning-Guide/ | Calibration order (PA/flow/retract), surface-fault reading | supported heuristic (method) |
+| Teaching Tech | https://teachingtechyt.github.io/calibration.html | Temp/retract/extrusion towers, first principles | supported heuristic (method) |
+| CNC Kitchen (concepts) | https://www.cnckitchen.com/ | Walls vs infill strength; layer anisotropy | supported heuristic |
+| Prusa Knowledge Base | https://help.prusa3d.com/ | Failure taxonomy adapted to A1 Mini | mixed |
+| MakerWorld / Bambu presets | https://makerworld.com/ · [source](../22-fontes/makerworld-profile-patterns.md) | Remap profiles; creator notes; baseline before customizing | community / ecosystem |
+| r/FixMyPrint (patterns) | https://www.reddit.com/r/FixMyPrint/ | Symptom → common cause (synthesis, no personal data) | community hypothesis |
 
 ## Minimum attribution (ebook extracts)
 

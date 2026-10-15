@@ -11,7 +11,7 @@ knowledge_status: draft
 evidence_status: mixed
 safety_level: caution
 confidence: high
-last_reviewed: '2026-08-15'
+last_reviewed: '2026-10-15'
 review_cycle: 12-months
 related:
 - meta.evidence-policy
@@ -34,9 +34,20 @@ Conhecimento interno da LLM **não** é fonte final. Não inventar URL, DOI, tem
 5. Artigo científico primário ou revisão sistemática
 6. Experimento controlado e reproduzível
 7. Guia técnico reconhecido com método claro (Ellis, Teaching Tech)
-8. Comunidade (fórum/Reddit) — só hipóteses, sintomas raros, descoberta
+8. Comunidade (fórum/Reddit/MakerWorld) — descoberta e sintomas; ver promoção abaixo
 
 Use cada fonte apenas para claims que ela sustenta. Norma ≠ datasheet ≠ paper ≠ marketing.
+
+## Promoção hipótese → heuristic (lote 2B)
+
+Comunidade **não** sobe automaticamente na hierarquia. Só pode ser citada como **supported heuristic** quando:
+
+1. Há método reproduzível (ex.: Ellis/Teaching Tech) **ou** consenso repetido em threads independentes com o **mesmo escopo** (máquina/material), e
+2. O claim declara escopo (ex.: A1 Mini 0.4 mm + PETG seco), e
+3. O texto exige **validate on printer** / validar na A1 Mini, e
+4. **Nunca** vira hard safety rule (paradas térmicas/elétricas/VOC continuam norma/fabricante/SDS).
+
+Caso contrário permanece `community hypothesis`. Registrar a fonte em [docs/22-fontes/](../22-fontes/INDEX.md) com limites explícitos.
 
 ## Registro
 

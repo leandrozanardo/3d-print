@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Read|Grep|Glob|Search|Shell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"D:\\Projetos\\3d-print\\.cursor\\hooks\\graft-hooks.cjs\" cursor-post-tool"
+          }
+        ]
+      }
+    ]
+  }
+}

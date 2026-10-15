@@ -33,7 +33,7 @@ coverage_level: troubleshooting-mapped
 evidence_status: manufacturer-specific
 safety_level: caution
 confidence: high
-last_reviewed: '2026-08-16'
+last_reviewed: '2026-10-15'
 review_cycle: 6-months
 sources:
 - source.bambu-a1-mini-tech-specs
@@ -42,6 +42,8 @@ sources:
 - source.bambu-a1-mini-wiki-nozzle-clog
 - source.bambu-a1-mini-wiki-blob
 - source.bambu-a1-mini-wiki-clump-detect
+- source.bambu-forum-a1-mini-patterns
+- source.makerworld-profile-patterns
 related:
 - nozzle.0.4mm-fff
 - material.pla
@@ -49,6 +51,7 @@ related:
 - tech.fff
 - manufacturer.bambu-lab
 - hub.impressoras
+- slicer.bambu-studio
 prerequisites:
 - tech.fff
 supersedes: []
@@ -127,11 +130,11 @@ Valores oficiais da página de Technical Specifications ([source.bambu-a1-mini-t
 | Capability | Valor oficial | Papel |
 |---|---|---|
 | Build volume | 180 × 180 × 180 mm | envelope máximo; deixar margem operacional |
-| Nozzle incluso | 0,4 mm (fonte oficial/fabricante/heuristic; ver sources)  | também lista 0,2 / 0,6 / 0,8 mm (fonte oficial/fabricante/heuristic; ver sources)  |
-| Max hotend temp | 300 °C (fonte oficial/fabricante/heuristic; ver sources)  | capability ≠ compatibilidade de polímero |
-| Max bed temp | 80 °C (fonte oficial/fabricante/heuristic; ver sources)  | limite duro desta máquina |
-| Max toolhead speed | 500 mm (fonte oficial/fabricante/heuristic; ver sources) /s (fonte oficial/fabricante/heuristic; ver sources)  | marketing/capability |
-| Max acceleration | 10 000 mm (fonte oficial/fabricante/heuristic; ver sources) /s² (fonte oficial/fabricante/heuristic; ver sources)  | marketing/capability |
+| Nozzle incluso | 0,4 mm stainless | opções 0,2 / 0,6 / 0,8; hardened para CF/GF (FAQ) |
+| Max hotend temp | 300 °C ([source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md) FAQ) | capability ≠ compatibilidade de polímero |
+| Max bed temp | 80 °C | limite duro desta máquina |
+| Max toolhead speed | 500 mm/s | marketing/capability (tech specs) |
+| Max acceleration | 10 000 mm/s² | marketing/capability (tech specs / product page) |
 
 ## Tecnologia
 
@@ -175,7 +178,9 @@ Posição do fabricante nas tech specs:
 | Classe | Materiais |
 |---|---|
 | Ideal | PLA, PETG, TPU, PVA |
-| Not Recommended | ABS, ASA, PC, PA, PET, CF/GF reinforced |
+| Not Recommended | ABS, ASA, PC, PA, PET; CF/GF abrasive no nozzle stainless (FAQ: hardened steel se insistir) |
+
+FAQ (2026-10-15): frame aberto → ABS/ASA/PC/PA/PET tendem a warp, detach e fraqueza em Z. AMS lite: não usar TPU/TPE/PVA absorvente nem CF/GF frágeis no AMS — spool externo.
 
 Páginas canônicas relacionadas: [PLA](../05-materiais/fff/pla.md), [PETG](../05-materiais/fff/petg.md). TDS/SDS do filamento não são substituídos por esta página.
 
@@ -204,24 +209,36 @@ Pesquisa oficial Bambu Wiki (acesso 2026-08-16). Comunidade não misturada como 
 | Nozzle clumping detection / HMS | sensor de força; falsos positivos possíveis | [wiki detection](https://wiki.bambulab.com/en/a1-mini/manual/nozzle-warp-detection) | inspecionar nozzle/placa; não desligar detecção permanentemente sem causa |
 | Empenamento / corrente de ar (frame aberto) | hipótese de processo | playbook local + limites bed 80 °C | isolar ambiente; validar cupom |
 
-### Evidência comunitária (separada)
+### Evidência comunitária (classificada — não root-cause de hardware)
 
-- Não usada como root-cause primária nesta revisão.
-- Relatos de fórum/Reddit: não pinados (lacuna consciente).
+Síntese pinada em [source.bambu-forum-a1-mini-patterns](../22-fontes/bambu-forum-a1-mini-patterns.md). **Nunca** hard safety.
+
+| Padrão | Classe | Ação operacional |
+|---|---|---|
+| PEI: sabão + água quente; evitar óleo dos dedos; IPA sozinho redistribui gordura | supported heuristic | Ver [falha-adesao](../projeto/troubleshooting/falha-adesao.md) |
+| PETG: secar antes de caçar stringing; cooling alto prejudica bond | supported heuristic | [stringing](../projeto/qualidade-e-acabamento/stringing-e-retract.md) |
+| Avoid Crossing Walls / wall order em PETG | community hypothesis → validate | Bambu Studio Quality → Advanced |
+| Não colar cooling/speed de X1C | supported heuristic | Preset **A1 Mini** only |
+| Textured bed ~+5 °C vs smooth | community hypothesis | Cupom de adesão |
+
+Playbook MakerWorld → receita: [projeto/workflow/makerworld-para-receita.md](../projeto/workflow/makerworld-para-receita.md).
 
 ### Validação da solução
 
 1. Reproduzir sintoma em cupom pequeno.
-2. Seguir árvore oficial wiki correspondente.
-3. Registrar se a correção restaurou extrusão/adesão sem novo blob.
-4. Parar se houver risco térmico/elétrico além do guia oficial.
+2. Seguir árvore oficial wiki correspondente para hardware.
+3. Para processo/qualidade: uma variável + classe de evidência.
+4. Registrar se a correção restaurou extrusão/adesão sem novo blob.
+5. Parar se houver risco térmico/elétrico além do guia oficial.
 
 
 ## Fontes
 
 - [source.bambu-a1-mini-tech-specs](../22-fontes/bambu-a1-mini-tech-specs.md) — capabilities oficiais
-- [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md) — onboarding
+- [source.bambu-wiki-a1-mini](../22-fontes/bambu-wiki-a1-mini.md) — onboarding / FAQ
 - [source.bambu-lab-official-products](../22-fontes/bambu-lab-official-products.md) — descoberta de catálogo
+- [source.bambu-forum-a1-mini-patterns](../22-fontes/bambu-forum-a1-mini-patterns.md) — padrões comunitários
+- [source.makerworld-profile-patterns](../22-fontes/makerworld-profile-patterns.md) — remap de 3MF
 - Loja US (evidência de compra): https://us.store.bambulab.com/products/a1-mini
 
 ## Lacunas
@@ -230,10 +247,13 @@ Pesquisa oficial Bambu Wiki (acesso 2026-08-16). Comunidade não misturada como 
 - Firmware version + release notes datados
 - Service manual / error code map completo
 - Hardware revision por serial
-- AMS lite como página atômica
-- Troubleshooting-mapped com pesquisa oficial + comunitária classificada
+- AMS lite como página atômica canônica
 - Medições locais (volumetric max / resonance) nesta unidade
 
-## Relação com legado
+## Relação com legado / optimization wiki
 
-Conteúdo operacional anterior em inglês: [projeto/hardware/a1-mini-visao-geral.md](../projeto/hardware/a1-mini-visao-geral.md). Esta página é a candidata canônica pt-BR.
+- Hardware legado EN: [projeto/hardware/a1-mini-visao-geral.md](../projeto/hardware/a1-mini-visao-geral.md)
+- Optimization hub: [projeto/INDEX.md](../projeto/INDEX.md)
+- Playbook MakerWorld: [projeto/workflow/makerworld-para-receita.md](../projeto/workflow/makerworld-para-receita.md)
+
+Esta página é a candidata canônica pt-BR para identidade/limits; receitas operacionais vivem em `docs/projeto/`.

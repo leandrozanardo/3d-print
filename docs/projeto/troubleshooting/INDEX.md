@@ -73,5 +73,8 @@ What failed?
 
 ## Sources
 
-- Prusa KB · FixMyPrint taxonomy · Bambu forum patterns
+- Prusa KB · FixMyPrint taxonomy
+- [Bambu forum A1 mini patterns](../../22-fontes/bambu-forum-a1-mini-patterns.md) (hypothesis/heuristic — validate)
+- Official wiki troubleshooting links on [bambu-lab-a1-mini](../../21-impressoras/bambu-lab-a1-mini.md)
 - Project matrix synthesis
+- Entry playbook: [makerworld-para-receita](../workflow/makerworld-para-receita.md)

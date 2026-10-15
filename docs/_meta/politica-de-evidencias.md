@@ -10,7 +10,7 @@ knowledge_status: draft
 evidence_status: mixed
 safety_level: normal
 confidence: high
-last_reviewed: '2026-08-15'
+last_reviewed: '2026-10-15'
 review_cycle: 12-months
 related:
 - meta.source-policy
@@ -57,3 +57,13 @@ Todo valor relevante deve incluir:
 - papel: ponto inicial | limite | nominal | medido
 
 Marcar incerteza operacional herdada do corpus legado com linguagem equivalente a **validate on printer** (validar na impressora), sem fingir metrologia.
+
+## Comunidade operacional (A1 Mini)
+
+| Classe | Quando usar |
+|---|---|
+| `community hypothesis` | Relato isolado ou sem método |
+| `supported heuristic` | Método claro **ou** consenso escopado + validate on printer |
+| `manufacturer-specific fact` | Wiki/FAQ/specs Bambu |
+
+Não promover hipótese comunitária a `established` / hard safety. Ver [politica-de-fontes](politica-de-fontes.md) § promoção.

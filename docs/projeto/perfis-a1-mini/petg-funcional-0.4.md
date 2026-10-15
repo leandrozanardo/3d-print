@@ -41,16 +41,18 @@ Plate?
 
 ## A1 Mini rules
 
-1. **Dry always** before print and before retract towers.
+1. **Dry always** before print and before retract towers (`supported heuristic`).
 2. Speeds **lower** than PLA; outer wall 40–70 mm/s order.
 3. Support top Z **larger** than PLA (0.25–0.30 mm order).
-4. Careful with smooth PEI (weld / coating tear).
-5. Never use PLA filament/process profile for PETG.
-6. Expect more stringing — tune after dry ([stringing](../qualidade-e-acabamento/stringing-e-retract.md)).
-7. Moderate cooling (40–60%): high fan → weak layers; low → sag/string.
-8. Purge thoroughly when switching PLA ↔ PETG (manual or AMS).
-9. Open frame: block AC drafts.
-10. Uncertain nozzle/bed/retract → **validate on printer**.
+4. Careful with smooth PEI (weld / coating tear); textured preferred.
+5. Do not use PLA filament/process profile for PETG.
+6. Expect more stringing — tune after dry ([stringing](../qualidade-e-acabamento/stringing-e-retract.md)); try **Avoid Crossing Walls** before Bowden-style retract.
+7. Moderate cooling (40–60%): high fan → weak layers (forum heuristic); low → sag/string.
+8. Do **not** paste X1C PETG cooling/speed onto A1 Mini.
+9. Purge thoroughly when switching PLA ↔ PETG (manual or AMS).
+10. Open frame: block AC drafts; bed ≤ 80 °C (manufacturer).
+11. Uncertain nozzle/bed/retract → **validate on printer**.
+12. MakerWorld path: [makerworld-para-receita](../workflow/makerworld-para-receita.md).
 
 ## Bambu Studio fields (PETG)
 

@@ -6,6 +6,8 @@ Mission: turn models into reliable parts on **Bambu Lab A1 Mini** (**0.4 mm** no
 
 Open [`playbook.md`](../../playbook.md), point at a file under `3ds/original/`, follow the SOP. This wiki is the decision graph; the playbook orchestrates.
 
+**MakerWorld / Handy 3MF:** start at [workflow/makerworld-para-receita](workflow/makerworld-para-receita.md) (official constraints + community heuristics → named A1 Mini recipe).
+
 ```bash
 npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate-wiki ../../docs --strict
 ```
@@ -22,7 +24,7 @@ npx --yes pnpm@10.12.1 --filter @fix-my-print/cli exec node dist/bin.js validate
 | Quality | [qualidade-e-acabamento/INDEX](qualidade-e-acabamento/INDEX.md) | Seam, stringing, first layer, post |
 | Troubleshooting | [troubleshooting/INDEX](troubleshooting/INDEX.md) | Symptom → cause → fix |
 | A1 Mini profiles | [perfis-a1-mini/INDEX](perfis-a1-mini/INDEX.md) | Named 0.4 mm recipes |
-| Workflow | [workflow/INDEX](workflow/INDEX.md) | CLI, checklist, `3ds/plan/*.md` |
+| Workflow | [workflow/INDEX](workflow/INDEX.md) | MakerWorld→recipe, CLI, checklist, `3ds/plan/*.md` |
 
 ## Meta & sources
 

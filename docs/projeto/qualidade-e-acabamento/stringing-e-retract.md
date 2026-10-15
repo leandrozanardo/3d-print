@@ -22,12 +22,14 @@ Hairs between towers: **wet filament**, **hot nozzle**, bad **retract**, or trav
 ## Decision tree / attack order
 
 ```text
-1 Dry filament? ──NO──► dry → retest
+1 Dry filament? ──NO──► dry → retest          (supported heuristic — PETG #1)
 2 Still hairs? ──YES──► nozzle −5 °C
-3 Still? ──► retract length ±0.2 mm / speed (tower) from Bambu preset
-4 Still? ──► travel avoidance / combing On
-5 Still? ──► Z-hop on/off (can WORSE stringing) — validate
-6 Wipe/coast ──► leave Bambu defaults until retract/temp settled
+3 Still? ──► Avoid Crossing Walls / combing On (community heuristic — forum)
+4 Still? ──► retract length ±0.2 mm / speed (tower) from Bambu preset
+5 Still? ──► wall order inner/outer trial on bridges (hypothesis)
+6 Still? ──► Z-hop on/off (can WORSE stringing) — validate
+7 Wipe/coast ──► leave Bambu defaults until retract/temp settled
+8 Do NOT paste X1C retract/cooling onto A1 Mini
 ```
 
 ## A1 Mini rules
@@ -36,10 +38,11 @@ Hairs between towers: **wet filament**, **hot nozzle**, bad **retract**, or trav
 2. Direct drive lengths are short — Bowden 5–8 mm will grind/jam.  
 3. One variable per test.  
 4. Prefer filament-profile retract over process hacks.  
-5. Z-hop is optional and may increase strings — **validate**.  
-6. PETG: expect more hairs even when “tuned”; cosmetics secondary on functional parts.  
-7. AMS: wet slot or low wipe looks like bad retract.  
-8. Uncertain retract → tower coupon — **validate on printer**.
+5. Enable **Avoid Crossing Walls** (Quality → Advanced) before aggressive retract — forum pattern; **validate**.  
+6. Z-hop is optional and may increase strings — **validate**.  
+7. PETG: expect more hairs even when “tuned”; cosmetics secondary on functional parts. High part cooling to “fix” overhangs often kills layer bond (forum heuristic).  
+8. AMS: wet slot or low wipe looks like bad retract.  
+9. Uncertain retract → tower coupon — **validate on printer**.
 
 ## Retract starting ranges (order of magnitude)
 
@@ -63,11 +66,13 @@ Brand + humidity dominate — treat as **validate on printer**.
 
 ## Suggested presets (PETG)
 
-| Field | Action | Why |
-|---|---|---|
-| Dry | Mandatory 65–70 °C order | #1 cause |
-| Temp | Tower; don’t run crazy hot | Ooze |
-| Retract | Bambu PETG then ±0.2 | After dry |
+| Field | Action | Why | Class |
+|---|---|---|---|
+| Dry | Mandatory ~65–70 °C order | #1 cause | supported heuristic |
+| Avoid crossing walls | On | Less travel ooze | community heuristic |
+| Cooling | Keep moderate; don’t max fan on structural | Layer bond | supported heuristic |
+| Temp | Tower; don’t run crazy hot | Ooze | method (Ellis/TT) |
+| Retract | Bambu PETG then ±0.2 | After dry | validate |
 | Cooling | Mid — don’t max to “kill strings” | Weak layers |
 | Z-hop | Often worse | **validate** |
 | Speed | Lower outer/travel chaos | Less ooze time |

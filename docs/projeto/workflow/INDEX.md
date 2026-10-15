@@ -10,6 +10,7 @@ Never mutate originals. Cite wiki pages in every plan.
 
 | Trigger | Action |
 |---|---|
+| MakerWorld / Handy 3MF or STL | Start at [makerworld-para-receita](makerworld-para-receita.md) |
 | Every optimization run | Follow [otimizar-modelo](otimizar-modelo.md) |
 | Training agents/humans | [dry-run-exemplo](dry-run-exemplo.md) |
 | Gate before done | [checklist-qualidade](checklist-qualidade.md) |
@@ -19,7 +20,8 @@ Never mutate originals. Cite wiki pages in every plan.
 ## Decision tree (pipeline)
 
 ```text
-playbook + 3ds/original/<file>
+MakerWorld / 3ds/original/<file>
+  → [makerworld-para-receita](makerworld-para-receita.md) remap + intent
   → inspect (core)
   → classify geometry + purpose
   → pick profile (PLA/PETG)
@@ -44,6 +46,7 @@ playbook + 3ds/original/<file>
 
 | Page | Role |
 |---|---|
+| [MakerWorld → recipe](makerworld-para-receita.md) | Community + official path to near-perfection |
 | [Optimize model](otimizar-modelo.md) | Full pipeline + CLI |
 | [Quality checklist](checklist-qualidade.md) | Pre/post gate |
 | [When to edit mesh](quando-editar-malha.md) | Mode B mesh bounds |
